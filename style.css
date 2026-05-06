@@ -129,6 +129,12 @@ a {
   font-weight: 800;
 }
 
+.brand-logo {
+  height: 1.45rem; /* This matches your previous 1.45rem font-size exactly */
+  width: auto;     /* Keeps the proportions correct */
+  display: block;  /* Removes weird baseline spacing */
+}
+
 .brand-lockup {
   display: inline-flex;
   align-items: center;
