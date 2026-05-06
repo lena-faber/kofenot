@@ -132,7 +132,7 @@ a {
 /* Make the tagline look professional and technical */
 .brand-lockup span:last-child {
   color: var(--muted); /* Use that #bdbdbd you defined earlier */
-  font-size: 0.105rem;   /* Smaller than the logo */
+  font-size: 1.05rem;   /* Smaller than the logo */
   font-weight: 400;     /* Normal weight, not bold */
   letter-spacing: 0.02em;
   text-transform: none; /* Keep it readable */
