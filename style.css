@@ -135,10 +135,8 @@ a {
   font-size: 1.05rem;   /* Smaller than the logo */
   font-weight: 400;     /* Normal weight, not bold */
   letter-spacing: 0.02em;
-  text-transform: none; /* Keep it readable */
-  
+  text-transform: none; /* Keep it readable */ 
 }
-
 
 .brand-lockup {
   display: inline-flex;
@@ -243,7 +241,7 @@ a {
   grid-column: 1;
   grid-row: 1;
   width: min(34rem, 100%);
-  padding: calc(1.4rem + 60px) 0 0 0;
+  padding: calc(1.4rem + 70px) 0 0 0;
   text-align: left;
 }
 
