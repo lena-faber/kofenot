@@ -479,21 +479,4 @@ function Home() {
         </DialogContent>
       </Dialog>
 
-      {/* Stripe Checkout Fallback Modal */}
-      <Dialog open={!!checkoutUrl} onOpenChange={(o) => !o && setCheckoutUrl(null)}>
-        <DialogContent className="max-w-md bg-black neon-border p-8 text-center">
-          <h3 className="text-2xl font-black neon-text">Secure checkout</h3>
-          <p className="mt-3 text-sm text-muted-foreground">
-            Stripe checkout opens in its own secure payment window.
-          </p>
-          <Button
-            onClick={() => checkoutUrl && (window.location.href = checkoutUrl)}
-            className="mt-6 bg-[color:var(--neon)] text-black hover:bg-[color:var(--neon-dim)] font-bold"
-          >
-            Continue to checkout <ArrowRight className="ml-2 h-4 w-4" />
-          </Button>
-        </DialogContent>
-      </Dialog>
-    </>
-  );
-}
+     
