@@ -382,7 +382,7 @@ function Home() {
           {[
             { vol: "2-Unit Gift Box", price: "$30", detail: "US shipping included", sub: "Credited toward OEM order", cta: "Buy now", action: "url" as const, source: "price-2pack", url: "https://buy.stripe.com/fZufZg5YqbWA3g4gcsdUY0B" },
             { vol: "From 20 2-Unit Gift Boxes", price: "$480", detail: "Event-ready bulk", sub: "", cta: "Buy now", action: "url" as const, source: "price-20pack", url: "https://buy.stripe.com/00w3cu4Um8Ko7wk0dudUY0C" },
-            { vol: "Min Order 1 pack", price: "Bulk OEM", detail: "100-Unit Pack or 400 Units Master Case (25 lb)", sub: "Ships raw for custom branding", cta: "Request Pricing", action: "quote" as const, source: "price-oem", featured: true },
+            { vol: "1 pack or 1 case min", price: "Bulk OEM", detail: "100-Unit Pack or 400 Units Master Case (25 lb)", sub: "Ships raw for custom branding", cta: "Request Pricing", action: "quote" as const, source: "price-oem", featured: true },
             { vol: "OEM Manufacturing • Private Label • Licensing", price: "Enterprise", detail: "", sub: "", cta: "Request Quote", action: "quote" as const, source: "price-enterprise" },
           ].map((p, i) => (
             <Reveal key={p.vol} delay={i * 0.05}>
