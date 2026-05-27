@@ -395,19 +395,22 @@ Ideal for corporate gifting", sub: "Expedited shipping available", cta: "Buy now
                 {p.sub && <p className="text-xs text-muted-foreground mt-2">{p.sub}</p>}
                 <div className="flex-1" />
                 <Button
-                  onClick={() => {
-                    if (p.action === "url" && "url" in p && p.url) {
-                      openCheckout(p.url);
-                    } else if (p.action === "quote") {
-
-                      openQuote(p.source);
-                    }
-                  }}
-                  className="mt-5 bg-[color:var(--neon)] text-black hover:bg-[color:var(--neon-dim)] font-bold"
-                >
-
-                  {p.cta}
-                </Button>
+  onClick={() => {
+    // If it's the $30 card, open in new tab
+    if (p.source === "price-2pack" && p.url) {
+      window.open(p.url, "_blank", "noopener,noreferrer");
+    } 
+    // Otherwise, use your original logic
+    else if (p.action === "url" && p.url) {
+      openCheckout(p.url);
+    } else if (p.action === "quote") {
+      openQuote(p.source);
+    }
+  }}
+  className="mt-5 bg-[color:var(--neon)] text-black hover:bg-[color:var(--neon-dim)] font-bold"
+>
+  {p.cta}
+</Button>
               </div>
             </Reveal>
           ))}
