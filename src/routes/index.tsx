@@ -111,7 +111,7 @@ function Home() {
           <Reveal delay={0.05}>
             <h1 className="mt-8 text-6xl md:text-7xl lg:text-8xl font-black italic leading-[0.95] tracking-tight neon-text drop-shadow-[0_0_30px_rgba(0,255,0,0.35)]">
               Ultimate<br />
-             Laptop/Phone<br />
+             Laptop<br />
               Wedge
             </h1>
           </Reveal>
@@ -130,7 +130,7 @@ function Home() {
             <div className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-3 max-w-xl">
               {[
                 { big: "1 oz", small: "Flat-Folding", greenSmall: false },
-                { big: "365 days", small: "Visibility", greenSmall: false },
+                { big: "365 days", small: "Presence", greenSmall: false },
                 { big: "3-in-1", small: "Laptops Phones Tablets", greenSmall: false },
               ].map((p) => (
                 <div
