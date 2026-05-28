@@ -146,36 +146,37 @@ function Home() {
             </div>
           </Reveal>
 
-          {/* Stat cards */}
+          {/* Stat cards and promo */}
           <Reveal delay={0.2}>
-            <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-3 max-w-xl">
-              {[
-                { big: "1 oz", small: "Flat-Folding", greenSmall: false },
-                { big: "365 days", small: "Presence", greenSmall: false },
-                { big: "3-in-1", small: "Laptops Phones Tablets", greenSmall: false },
-              ].map((p) => (
-                <div
-                  key={p.big}
-                  className="group px-1 py-2 text-center bg-black/40 backdrop-blur-sm border border-[rgba(0,255,0,0.4)] hover:border-[color:var(--neon)] transition-colors"
-                >
-                  <div className="text-2xl md:text-[26px] font-black leading-tight neon-text">
-                    {p.big}
-                  </div>
-                  {p.small && (
-                    <div className={`mt-0.5 text-[11px] uppercase tracking-[0.2em] font-bold leading-snug ${p.greenSmall ? "neon-text" : "text-white"}`}>
-                      {p.small}
+            <div className="mt-12 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 max-w-xl">
+                {[
+                  { big: "1 oz", small: "Flat-Folding", greenSmall: false },
+                  { big: "365 days", small: "Presence", greenSmall: false },
+                  { big: "3-in-1", small: "Laptops Phones Tablets", greenSmall: false },
+                ].map((p) => (
+                  <div
+                    key={p.big}
+                    className="group px-1 py-2 text-center bg-black/40 backdrop-blur-sm border border-[rgba(0,255,0,0.4)] hover:border-[color:var(--neon)] transition-colors"
+                  >
+                    <div className="text-2xl md:text-[26px] font-black leading-tight neon-text">
+                      {p.big}
                     </div>
-                  )}
-                </div>
-              ))}
+                    {p.small && (
+                      <div className={`mt-0.5 text-[11px] uppercase tracking-[0.2em] font-bold leading-snug ${p.greenSmall ? "neon-text" : "text-white"}`}>
+                        {p.small}
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+
+              <div className="hidden lg:block max-w-xs bg-black/85 backdrop-blur-sm border border-white/10 p-5 pointer-events-auto">
+                <div className="text-white font-bold text-base leading-snug">A promo product with real staying power</div>
+                <p className="mt-2 text-sm text-muted-foreground leading-snug">Daily utility keeps the product and your branding in constant view.</p>
+              </div>
             </div>
           </Reveal>
-
-          {/* Floating right-side overlay */}
-          <div className="hidden lg:block absolute bottom-5 right-6 z-20 max-w-xs bg-black/85 backdrop-blur-sm border border-white/10 p-5 pointer-events-auto">
-            <div className="text-white font-bold text-base leading-snug">A promo product with real staying power</div>
-            <p className="mt-2 text-sm text-muted-foreground leading-snug">Daily utility keeps the product and your branding in constant view.</p>
-          </div>
         </div>
 
         {/* MARQUEE */}
