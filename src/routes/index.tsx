@@ -133,7 +133,7 @@ function Home() {
 
           {/* CTAs */}
           <Reveal delay={0.15}>
-            <div className="relative z-20 mt-8 flex flex-wrap items-center gap-5 pointer-events-auto">
+            <div className="relative z-20 mt-8 flex flex-wrap items-center gap-5 pointer-events-auto lg:absolute lg:bottom-5 lg:left-6 lg:mt-0">
               <button
                 onClick={() => setVideoOpen(true)}
                 className="group flex items-center gap-4 text-white font-black uppercase tracking-[0.18em] text-base md:text-lg transition hover:text-red-100"
@@ -148,7 +148,7 @@ function Home() {
 
           {/* Stat cards */}
           <Reveal delay={0.2}>
-            <div className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-3 max-w-xl lg:absolute lg:bottom-5 lg:left-6 lg:mt-0">
+            <div className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-3 max-w-xl lg:absolute lg:bottom-32 lg:left-6 lg:mt-0">
               {[
                 { big: "1 oz", small: "Flat-Folding", greenSmall: false },
                 { big: "365 days", small: "Presence", greenSmall: false },
@@ -172,7 +172,7 @@ function Home() {
           </Reveal>
 
           {/* Floating right-side overlay */}
-          <div className="hidden lg:block absolute bottom-5 right-6 z-20 max-w-xs bg-black/85 backdrop-blur-sm border border-white/10 p-5 pointer-events-auto">
+          <div className="hidden lg:block absolute bottom-32 right-6 z-20 max-w-xs bg-black/85 backdrop-blur-sm border border-white/10 p-5 pointer-events-auto">
             <div className="text-white font-bold text-base leading-snug">A promo product with real staying power</div>
             <p className="mt-2 text-sm text-muted-foreground leading-snug">Daily utility keeps the product and your branding in constant view.</p>
           </div>
