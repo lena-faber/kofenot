@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { useLeads } from "@/components/lead-provider";
 
-import corp from "@/assets/kofeenot-corp.jpeg";
+import corp from "@/assets/kofenot-corp.jpeg";
 import giftBox from "@/assets/kofeenot-gift.jpg";
 import masterCase from "@/assets/kofeenot-pack.jpeg";
 import deadSpill from "@/assets/dead-spill.jpg";
