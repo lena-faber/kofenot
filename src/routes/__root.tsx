@@ -13,6 +13,23 @@ import { SiteHeader, SiteFooter } from "@/components/site-chrome";
 
 import appCss from "../styles.css?url";
 
+const siteTitle = "KofeNot™ | Make Your Laptop Coffee Shop-Friendly™";
+const siteDescription =
+  "KofeNot™ is a pocket-size laptop stand that lifts your screen, improves typing angle, helps reduce neck strain, and keeps your laptop safer around coffee, drinks, and small desks.";
+const siteUrl = "https://kofenot.com/";
+const productJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  name: "KofeNot™ Pocket Laptop Stand",
+  description: siteDescription,
+  brand: {
+    "@type": "Brand",
+    name: "KofeNot™",
+  },
+  category: "Laptop stand",
+  url: siteUrl,
+};
+
 function NotFoundComponent() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
@@ -75,12 +92,16 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Kofeᵉ̬Not — Make Your Laptop Coffeeshop-Friendly™ | OEM / White-Label Promo Wedge" },
-      { name: "description", content: "A 1 oz custom-logo laptop wedge that tilts the screen, deflects spills, and keeps your brand visible on every desk. OEM / white-label ready. FOB California." },
-      { property: "og:title", content: "Kofeᵉ̬Not — Promo Wedge for Agencies" },
-      { property: "og:description", content: "A $3 wedge that prevents $1,000+ laptop losses. Branded, always-visible, OEM-ready." },
+      { title: siteTitle },
+      { name: "description", content: siteDescription },
+      { property: "og:title", content: siteTitle },
+      { property: "og:description", content: siteDescription },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: siteUrl },
+      { property: "og:site_name", content: "KofeNot™" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: siteTitle },
+      { name: "twitter:description", content: siteDescription },
     ],
     links: [
       {
@@ -100,6 +121,10 @@ function RootShell({ children }: { children: React.ReactNode }) {
     <html lang="en">
       <head>
         <HeadContent />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(productJsonLd) }}
+        />
       </head>
       <body>
         {children}
