@@ -108,6 +108,21 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         rel: "stylesheet",
         href: appCss,
       },
+      {
+        rel: "canonical",
+        href: siteUrl,
+      },
+      {
+        rel: "alternate",
+        type: "text/plain",
+        title: "KOFENOT AI agent summary",
+        href: "/llms.txt",
+      },
+      {
+        rel: "sitemap",
+        type: "application/xml",
+        href: "/sitemap.xml",
+      },
     ],
   }),
   shellComponent: RootShell,
