@@ -13,18 +13,18 @@ import { SiteHeader, SiteFooter } from "@/components/site-chrome";
 
 import appCss from "../styles.css?url";
 
-const siteTitle = "KofeNot™ | Make Your Laptop Coffee Shop-Friendly™";
+const siteTitle = "KOFENOT™ | Make Your Laptop Coffee Shop-Friendly™";
 const siteDescription =
-  "KofeNot™ is a pocket-size laptop stand that lifts your screen, improves typing angle, helps reduce neck strain, and keeps your laptop safer around coffee, drinks, and small desks.";
+  "KOFENOT: Make Your Laptop Coffee Shop-Friendly™. KOFENOT™ is the ultimate laptop wedge that lifts your laptop at the hinge for spill deflection and improved posture. 1 oz. Flat-folding. It features a discreet, public-facing area for custom logo printing. Patent- and trademark-protected. California-based. Available for white-label programs, trade shows, conferences, promotional products, and corporate gifts. Licensing available.";
 const siteUrl = "https://kofenot.com/";
 const productJsonLd = {
   "@context": "https://schema.org",
   "@type": "Product",
-  name: "KofeNot™ Pocket Laptop Stand",
+  name: "KOFENOT™ Pocket Laptop Wedge",
   description: siteDescription,
   brand: {
     "@type": "Brand",
-    name: "KofeNot™",
+    name: "KOFENOT™",
   },
   category: "Laptop stand",
   url: siteUrl,
@@ -98,7 +98,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:description", content: siteDescription },
       { property: "og:type", content: "website" },
       { property: "og:url", content: siteUrl },
-      { property: "og:site_name", content: "KofeNot™" },
+      { property: "og:site_name", content: "KOFENOT™" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: siteTitle },
       { name: "twitter:description", content: siteDescription },
