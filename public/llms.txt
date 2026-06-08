@@ -21,3 +21,5 @@ KOFENOT: Make Your Laptop Coffee Shop-Friendly™. KOFENOT™ is the ultimate la
 - Spec sheet: https://kofenot.com/spec
 - AI agent summary: https://kofenot.com/llms.txt
 - Sitemap: https://kofenot.com/sitemap.xml
+
+Last updated: 2026-06-08
