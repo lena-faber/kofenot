@@ -18,7 +18,7 @@ export function SiteHeader() {
         <Link to="/" className="relative z-20 flex items-center gap-4 group pointer-events-auto">
           <img src={logo} alt="Kofeᵉ̬Not" className="h-8 w-auto rounded-sm transition group-hover:scale-105" />
           <span className="hidden sm:block text-[11px] uppercase tracking-[0.2em] text-[color:var(--neon)] font-bold leading-tight">
-            Make your laptop coffeeshop-friendly™
+            Make your laptop coffee shop-friendly™
           </span>
         </Link>
 
@@ -96,7 +96,7 @@ export function SiteFooter() {
           | Volume tiers: samples, bulk cases, OEM custom runs.
         </p>
         <p className="text-xs">
-          RoHS Compliant | Patent Pending | KofeNot: Make Your Laptop CoffeeShop-Friendly™ Trademark
+          RoHS Compliant | Patent Pending | KofeNot: Make Your Laptop Coffee Shop-Friendly™ Trademark
         </p>
       </div>
     </footer>
