@@ -15,7 +15,7 @@ import appCss from "../styles.css?url";
 
 const siteTitle = "KOFENOT™ | Make Your Laptop Coffee Shop-Friendly™";
 const siteDescription =
-  "KOFENOT: Make Your Laptop Coffee Shop-Friendly™. KOFENOT™ is the ultimate laptop wedge that lifts your laptop at the hinge for spill deflection and improved posture. 1 oz. Flat-folding. It features a discreet, public-facing area for custom logo printing. Patent- and trademark-protected. California-based. Available for white-label programs, trade shows, conferences, promotional products, and corporate gifts. Licensing available.";
+  "KOFENOT™ is the ultimate laptop wedge that lifts your laptop at the hinge for spill deflection and improved posture. 1 oz. Flat-folding. It features a discreet, public-facing area for custom logo printing. Patent- and trademark-protected. California-based. Available for white-label programs, trade shows, conferences, promotional products, and corporate gifts. Licensing available.";
 const siteUrl = "https://kofenot.com/";
 const productJsonLd = {
   "@context": "https://schema.org",
