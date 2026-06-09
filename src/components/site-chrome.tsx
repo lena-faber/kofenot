@@ -7,7 +7,6 @@ import { useLeads } from "./lead-provider";
 import {
   DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuItem,
 } from "@/components/ui/dropdown-menu";
-import logo from "@/assets/kofeenot-logo.jpg";
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
@@ -16,7 +15,9 @@ export function SiteHeader() {
     <header className="sticky top-0 z-[100] isolate pointer-events-auto bg-black/40 backdrop-blur-md text-white border-b border-white/5">
       <div className="relative z-10 mx-auto max-w-[1320px] px-4 lg:px-6 h-16 flex items-center justify-between gap-4 pointer-events-auto">
         <Link to="/" className="relative z-20 flex items-center gap-4 group pointer-events-auto">
-          <img src={logo} alt="Kofeᵉ̬Not" className="h-8 w-auto rounded-sm transition group-hover:scale-105" />
+          <span className="text-xl font-black tracking-[0.18em] text-white transition group-hover:text-[color:var(--neon)]">
+            KOFENOT
+          </span>
           <span className="hidden sm:block text-[11px] uppercase tracking-[0.2em] text-[color:var(--neon)] font-bold leading-tight">
             Make your laptop coffeeshop-friendly™
           </span>
