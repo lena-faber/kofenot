@@ -198,7 +198,7 @@ function Home() {
       {/* WHY */}
       <section id="why" className="mx-auto max-w-[1320px] px-4 lg:px-6 py-20">
         <Reveal>
-          <h2 className="text-4xl md:text-5xl font-black tracking-tight">Why Promo Buyers Choose <span className="neon-text">KOFEᴉ̬NOT</span></h2>
+          <h2 className="text-4xl md:text-5xl font-black tracking-tight">Why Promo Buyers Choose <span className="neon-text">KOFEᵉ̬NOT</span></h2>
           <p className="text-muted-foreground mt-3">Six reasons this scales fast</p>
         </Reveal>
         <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -334,7 +334,7 @@ function Home() {
           <Reveal delay={0.1}>
             <div className="panel rounded-sm overflow-hidden h-full flex flex-col">
               <div className="bg-black flex-1 flex items-center justify-center min-h-0">
-                <img src={brand} alt="Branded Kofeᴉ̬not" className="w-full h-full object-contain" />
+                <img src={brand} alt="Branded Kofeᵉ̬not" className="w-full h-full object-contain" />
               </div>
               <div className="p-4 text-center text-xs uppercase tracking-[0.18em] text-muted-foreground">
                 Ships Blank / Ready for Decoration
@@ -384,7 +384,7 @@ function Home() {
       {/* PRICING */}
       <section id="pricing" className="mx-auto max-w-[1320px] px-4 lg:px-6 py-20 border-t border-[rgba(0,255,0,0.12)]">
         <Reveal>
-          <h2 className="text-4xl md:text-5xl font-black tracking-tight">Retail • Café • <span className="neon-text">OEM</span></h2>
+          <h2 className="text-4xl md:text-5xl font-black tracking-tight">Retail • Café • <span className="neon-text">Wholesale</span></h2>
           <p className="text-muted-foreground mt-3">24-48h dispatch • FOB SF Bay Area, CA, US</p>
         </Reveal>
         <div className="mt-10 grid md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -400,23 +400,24 @@ function Home() {
               url: "https://buy.stripe.com/fZufZg5YqbWA3g4gcsdUY0B",
             },
             {
-              vol: "1 pack or 1 case min",
-              price: "Bulk OEM",
-              detail: "100-Unit Pack or 400 Units Master Case (25 lb)",
-              sub: "Ships raw for custom branding",
-              cta: "Request Pricing",
+              vol: "KOFENOT™ (1 unit in Hanging Pack)",
+              price: "Retail Pack",
+              detail: "Single KOFENOT™ laptop wedge in retail-ready hanging packaging for cafés, counters, events, and gift shops.",
+              sub: "Compact 1 oz flat-folding unit • ready to merchandise",
+              cta: "Request Retail Pack Info",
               action: "quote" as const,
-              source: "price-oem",
+              source: "price-hanging-pack",
               featured: true,
             },
             {
-              vol: "OEM Manufacturing • Private Label • Licensing",
-              price: "Enterprise",
-              detail: "Full Pantone color matching • Custom logo molding & tooling • Bespoke retail-ready packaging",
-              sub: "Global DDP freight & Logistics",
-              cta: "Request Quote",
-              action: "quote" as const,
-              source: "price-enterprise",
+              vol: "Wholesale",
+              price: "Pack / Case / OEM",
+              detail: "For distributors, promo agencies, corporate gifts, trade shows, conferences, white-label programs, private label, and licensing.",
+              sub: "Includes 100-unit packs, 400-unit master cases, custom logo decoration, packaging, tooling, and logistics options.",
+              cta: "Download Product CSV",
+              action: "url" as const,
+              source: "price-wholesale-csv",
+              url: "/kofenot-wholesale.csv",
             },
           ].map((p, i) => (
             <Reveal key={p.vol} delay={i * 0.05}>
@@ -433,7 +434,7 @@ function Home() {
                       return;
                     }
                     if (p.action === "url" && p.url) {
-                      setCheckoutUrl(p.url);
+                      window.open(p.url, "_blank", "noopener,noreferrer");
                       return;
                     }
                     openQuote(p.source);
@@ -449,8 +450,8 @@ function Home() {
 
         <div className="mt-8 grid md:grid-cols-2 gap-4 items-stretch">
           {[
-            { img: giftBox, c: "KOFEᴉ̬NOT in gift box" },
-            { img: masterCase, c: "KOFEᴉ̬NOT pack in master case" },
+            { img: giftBox, c: "KOFEᵉ̬NOT in gift box" },
+            { img: masterCase, c: "KOFEᵉ̬NOT pack in master case" },
           ].map((g) => (
             <div key={g.c} className="panel rounded-sm overflow-hidden flex flex-col">
               <div className="bg-black flex-1">
