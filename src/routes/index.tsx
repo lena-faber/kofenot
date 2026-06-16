@@ -400,9 +400,9 @@ function Home() {
               url: "https://buy.stripe.com/fZufZg5YqbWA3g4gcsdUY0B",
             },
             {
-              vol: "KOFENOT™ (1 unit in Hanging Pack)",
-              price: "Retail Pack",
-              detail: "Single KOFENOT™ laptop wedge in retail-ready hanging packaging for cafés, counters, events, and gift shops.",
+              vol: "1 unit in Hanging Pack",
+              price: "$15",
+              detail: "Single KOFENOT™ laptop wedge in retail-ready hanging retail packaging for cafés, counters, events, and gift shops.",
               sub: "Compact 1 oz flat-folding unit • ready to merchandise",
               cta: "Buy now",
               action: "url" as const,
