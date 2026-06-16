@@ -404,9 +404,10 @@ function Home() {
               price: "Retail Pack",
               detail: "Single KOFENOT™ laptop wedge in retail-ready hanging packaging for cafés, counters, events, and gift shops.",
               sub: "Compact 1 oz flat-folding unit • ready to merchandise",
-              cta: "Request Retail Pack Info",
-              action: "quote" as const,
+              cta: "Buy now",
+              action: "url" as const,
               source: "price-hanging-pack",
+              url: "https://buy.stripe.com/fZu7sKfz0gcQ7wk6BSdUY0E",
               featured: true,
             },
             {
