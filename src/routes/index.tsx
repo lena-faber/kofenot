@@ -411,8 +411,8 @@ function Home() {
               featured: true,
             },
             {
-              vol: "Wholesale",
-              price: "Pack / Case / OEM",
+              vol: "Pack / Case / OEM",
+              price: "Wholesale",
               detail: "For distributors, promo agencies, corporate gifts, trade shows, conferences, white-label programs, private label, and licensing.",
               sub: "Includes 100-unit packs, 400-unit master cases, custom logo decoration, packaging, tooling, and logistics options.",
               cta: "Download Product CSV",
