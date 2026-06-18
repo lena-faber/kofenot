@@ -1,5 +1,5 @@
-sku,product_name,packaging,unit_count,case_count,weight,decoration,notes
-KOFENOT-HP-1,KOFENOT™ Laptop Wedge,Hanging Pack,1,,,Retail-ready single unit,Placeholder details for hanging pack product
-KOFENOT-WH-PACK,KOFENOT™ Laptop Wedge Wholesale Pack,Bulk Pack,100,,1 oz per unit,Ships blank for decoration,Placeholder details for wholesale pack
-KOFENOT-WH-CASE,KOFENOT™ Laptop Wedge Master Case,Master Case,400,1,25 lb,Ships blank for decoration,Placeholder details for master case
-KOFENOT-OEM,KOFENOT™ OEM / White-Label Program,Custom,,Custom,,Custom logo printing / tooling / packaging,Placeholder details for OEM and licensing programs
+sku,product_name,packaging,unit_count,total_price,unit_price,weight,decoration,checkout_url,notes
+KOFENOT-RAW-SAMPLE,KOFENOT™ Raw Sample,Single raw unit,1,10.00,10.00,1 oz,Unbranded,https://buy.stripe.com/9B614m9aC2m0eYM2lCdUY0F,Evaluation sample
+KOFENOT-WH-PACK,KOFENOT™ Raw 100-Pack,Bulk pack,100,600.00,6.00,1 oz per unit,Ships blank for decoration,https://buy.stripe.com/8x25kC4UmgcQ7wkaS8dUY0I,For teams pilots and smaller campaigns
+KOFENOT-WH-CASE,KOFENOT™ Raw 400-Unit Master Case,Master case,400,2000.00,5.00,25 lb per master case,Ships blank for decoration,https://buy.stripe.com/9B6fZgfz07Gk5ocbWcdUY0J,For distributors and larger campaigns
+KOFENOT-CUSTOM,KOFENOT™ Custom Branding Program,Custom,Custom,Quote,Quote,Varies,Logo application and packaging,mailto:info@kofenot.com,Quoted separately
