@@ -8,55 +8,77 @@ export function HomeWholesaleBridge() {
   const pathname = useRouterState({ select: (state) => state.location.pathname });
 
   useEffect(() => {
-    if (pathname !== "/") return;
-
-    const headings = Array.from(document.querySelectorAll("h2"));
-    const howHeading = headings.find((node) => node.textContent?.trim().startsWith("How It Works"));
-    howHeading?.closest("section")?.setAttribute("id", "how-it-works");
-
-    headings
-      .filter((node) => {
-        const text = node.textContent?.replace(/\s+/g, " ").trim() ?? "";
-        return text.startsWith("Why Promo Buyers Choose") || text.startsWith("Break Through Swag Noise");
-      })
-      .map((node) => node.closest("section"))
-      .filter((section): section is HTMLElement => section instanceof HTMLElement)
-      .forEach((section) => section.remove());
-
-    const specsHeading = headings.find((node) => node.textContent?.replace(/\s+/g, " ").trim() === "Technical Specifications");
-    const specsSection = specsHeading?.closest("section");
-    if (specsSection) {
-      const keep = new Set(["Material", "Weight Per Unit", "Folded Size", "Branding Area", "Construction", "Compatible Devices"]);
-      specsSection.querySelectorAll("tr").forEach((row) => {
-        const label = row.querySelector("td")?.textContent?.trim() ?? "";
-        if (!keep.has(label)) row.remove();
-      });
-
-      const specButton = Array.from(specsSection.querySelectorAll("button")).find((node) =>
-        node.textContent?.includes("Download spec sheet"),
+    if (pathname === "/") {
+      const promoHeading = Array.from(document.querySelectorAll("div")).find(
+        (node) => node.textContent?.trim() === "A promo product with real staying power",
       );
-      const specAnchor = specButton?.closest("a");
-      if (specButton && specAnchor) {
-        specButton.textContent = "View Full Spec Sheet";
-        specAnchor.setAttribute("href", "/spec");
-        specAnchor.removeAttribute("download");
+      promoHeading?.parentElement?.remove();
+
+      const headings = Array.from(document.querySelectorAll("h2"));
+      const howHeading = headings.find((node) => node.textContent?.trim().startsWith("How It Works"));
+      howHeading?.closest("section")?.setAttribute("id", "how-it-works");
+
+      headings
+        .filter((node) => {
+          const text = node.textContent?.replace(/\s+/g, " ").trim() ?? "";
+          return text.startsWith("Why Promo Buyers Choose") || text.startsWith("Break Through Swag Noise");
+        })
+        .map((node) => node.closest("section"))
+        .filter((section): section is HTMLElement => section instanceof HTMLElement)
+        .forEach((section) => section.remove());
+
+      const specsHeading = headings.find((node) => node.textContent?.replace(/\s+/g, " ").trim() === "Technical Specifications");
+      const specsSection = specsHeading?.closest("section");
+      if (specsSection) {
+        const keep = new Set(["Material", "Weight Per Unit", "Folded Size", "Branding Area", "Construction", "Compatible Devices"]);
+        specsSection.querySelectorAll("tr").forEach((row) => {
+          const label = row.querySelector("td")?.textContent?.trim() ?? "";
+          if (!keep.has(label)) row.remove();
+        });
+
+        const specButton = Array.from(specsSection.querySelectorAll("button")).find((node) =>
+          node.textContent?.includes("Download spec sheet"),
+        );
+        const specAnchor = specButton?.closest("a");
+        if (specButton && specAnchor) {
+          specButton.textContent = "View Full Spec Sheet";
+          specAnchor.setAttribute("href", "/spec");
+          specAnchor.removeAttribute("download");
+        }
+      }
+
+      const wholesaleButton = Array.from(document.querySelectorAll("button")).find((node) =>
+        node.textContent?.includes("Download Product CSV"),
+      );
+      if (wholesaleButton) {
+        wholesaleButton.textContent = "View Wholesale Pricing";
+        const redirect = (event: Event) => {
+          event.preventDefault();
+          event.stopPropagation();
+          window.location.assign("/wholesale");
+        };
+        wholesaleButton.addEventListener("click", redirect, true);
+        return () => wholesaleButton.removeEventListener("click", redirect, true);
       }
     }
 
-    const wholesaleButton = Array.from(document.querySelectorAll("button")).find((node) =>
-      node.textContent?.includes("Download Product CSV"),
-    );
-    if (wholesaleButton) {
-      wholesaleButton.textContent = "View Wholesale Pricing";
-      const redirect = (event: Event) => {
-        event.preventDefault();
-        event.stopPropagation();
-        window.location.assign("/wholesale");
-      };
-      wholesaleButton.addEventListener("click", redirect, true);
-      return () => wholesaleButton.removeEventListener("click", redirect, true);
+    if (pathname === "/wholesale") {
+      const message = document.getElementById("wholesale-staying-power");
+      const hero = document.querySelector("main > main > section:first-child");
+      if (message && hero) hero.insertAdjacentElement("afterend", message);
     }
   }, [pathname]);
+
+  if (pathname === "/wholesale") {
+    return (
+      <section id="wholesale-staying-power" className="border-b border-[rgba(0,255,0,0.18)] bg-[rgba(0,255,0,0.035)]">
+        <div className="mx-auto max-w-[1320px] px-4 py-10 lg:px-6">
+          <h2 className="text-3xl font-black tracking-tight md:text-4xl">A promotional product with real staying power</h2>
+          <p className="mt-3 max-w-3xl text-lg text-muted-foreground">Daily utility keeps KofeNot™—and your branding—in constant view.</p>
+        </div>
+      </section>
+    );
+  }
 
   if (pathname !== "/") return null;
 
