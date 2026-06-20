@@ -113,7 +113,6 @@ function Home() {
               WEDGE
             </h1>
           </Reveal>
-         
 
           {/* CTAs */}
           <Reveal delay={0.1}>
