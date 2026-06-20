@@ -10,10 +10,22 @@ export function HomeWholesaleBridge() {
   useEffect(() => {
     if (pathname !== "/") return;
 
-    const howHeading = Array.from(document.querySelectorAll("h2")).find((node) =>
+    const headings = Array.from(document.querySelectorAll("h2"));
+
+    const howHeading = headings.find((node) =>
       node.textContent?.trim().startsWith("How It Works"),
     );
     howHeading?.closest("section")?.setAttribute("id", "how-it-works");
+
+    const sectionsToRemove = headings
+      .filter((node) => {
+        const text = node.textContent?.replace(/\s+/g, " ").trim() ?? "";
+        return text.startsWith("Why Promo Buyers Choose") || text.startsWith("Break Through Swag Noise");
+      })
+      .map((node) => node.closest("section"))
+      .filter((section): section is HTMLElement => section instanceof HTMLElement);
+
+    sectionsToRemove.forEach((section) => section.remove());
 
     const wholesaleButton = Array.from(document.querySelectorAll("button")).find((node) =>
       node.textContent?.includes("Download Product CSV"),
