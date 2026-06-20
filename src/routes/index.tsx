@@ -103,8 +103,6 @@ function Home() {
           </span>
         </div>
 
-        
-
           {/* Headline */}
           <Reveal delay={0.05}>
             <h1 className="mt-4 text-6xl md:text-7xl lg:text-8xl font-black italic leading-[0.9] tracking-tight neon-text drop-shadow-[0_0_30px_rgba(0,255,0,0.35)]">
