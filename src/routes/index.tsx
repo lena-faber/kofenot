@@ -103,15 +103,7 @@ function Home() {
           </span>
         </div>
 
-        <div className="relative z-10 mx-auto max-w-[1320px] px-4 lg:px-6 pt-5 pb-8 lg:pt-6 lg:pb-8 pointer-events-auto flex flex-col lg:min-h-[620px]">
-          {/* Eyebrow */}
-          <Reveal>
-            <div className="inline-block px-5 py-2 border border-white/15 bg-black/40 backdrop-blur-sm">
-              <span className="text-[11px] uppercase tracking-[0.22em] font-black text-white">
-                OEM / White-Label Ready • IP Holder • FOB California
-              </span>
-            </div>
-          </Reveal>
+        
 
           {/* Headline */}
           <Reveal delay={0.05}>
