@@ -103,9 +103,7 @@ function Home() {
           </span>
         </div>
 
-<div className="relative z-10 mx-auto max-w-[1320px] px-4 lg:px-6 pt-5 pb-8 lg:pt-6 lg:pb-8 pointer-events-auto flex flex-col lg:min-h-[620px]">
-          {/* Eyebrow */}
-          
+
         
           {/* Headline */}
           <Reveal delay={0.05}>
