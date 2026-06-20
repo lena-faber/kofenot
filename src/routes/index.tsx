@@ -171,10 +171,7 @@ function Home() {
                 ))}
               </div>
 
-              <div className="hidden lg:block max-w-xs bg-black/85 backdrop-blur-sm border border-white/10 p-5 pointer-events-auto">
-                <div className="text-white font-bold text-base leading-snug">A promo product with real staying power</div>
-                <p className="mt-2 text-sm text-muted-foreground leading-snug">Daily utility keeps the product and your branding in constant view.</p>
-              </div>
+              
             </div>
           </Reveal>
         </div>
