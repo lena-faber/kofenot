@@ -11,21 +11,37 @@ export function HomeWholesaleBridge() {
     if (pathname !== "/") return;
 
     const headings = Array.from(document.querySelectorAll("h2"));
-
-    const howHeading = headings.find((node) =>
-      node.textContent?.trim().startsWith("How It Works"),
-    );
+    const howHeading = headings.find((node) => node.textContent?.trim().startsWith("How It Works"));
     howHeading?.closest("section")?.setAttribute("id", "how-it-works");
 
-    const sectionsToRemove = headings
+    headings
       .filter((node) => {
         const text = node.textContent?.replace(/\s+/g, " ").trim() ?? "";
         return text.startsWith("Why Promo Buyers Choose") || text.startsWith("Break Through Swag Noise");
       })
       .map((node) => node.closest("section"))
-      .filter((section): section is HTMLElement => section instanceof HTMLElement);
+      .filter((section): section is HTMLElement => section instanceof HTMLElement)
+      .forEach((section) => section.remove());
 
-    sectionsToRemove.forEach((section) => section.remove());
+    const specsHeading = headings.find((node) => node.textContent?.replace(/\s+/g, " ").trim() === "Technical Specifications");
+    const specsSection = specsHeading?.closest("section");
+    if (specsSection) {
+      const keep = new Set(["Material", "Weight Per Unit", "Folded Size", "Branding Area", "Construction", "Compatible Devices"]);
+      specsSection.querySelectorAll("tr").forEach((row) => {
+        const label = row.querySelector("td")?.textContent?.trim() ?? "";
+        if (!keep.has(label)) row.remove();
+      });
+
+      const specButton = Array.from(specsSection.querySelectorAll("button")).find((node) =>
+        node.textContent?.includes("Download spec sheet"),
+      );
+      const specAnchor = specButton?.closest("a");
+      if (specButton && specAnchor) {
+        specButton.textContent = "View Full Spec Sheet";
+        specAnchor.setAttribute("href", "/spec");
+        specAnchor.removeAttribute("download");
+      }
+    }
 
     const wholesaleButton = Array.from(document.querySelectorAll("button")).find((node) =>
       node.textContent?.includes("Download Product CSV"),
@@ -50,11 +66,7 @@ export function HomeWholesaleBridge() {
         <p className="text-xs font-black uppercase tracking-[0.24em] text-[color:var(--neon)]">Ready to order in volume?</p>
         <h2 className="mt-3 text-4xl font-black tracking-tight md:text-5xl">Shop raw wholesale packs.</h2>
         <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">Compare the raw sample, 100-pack, and 400-unit master case, or request a separately quoted custom-branding program.</p>
-        <Link to="/wholesale" className="mt-7 inline-block">
-          <Button className="h-12 bg-[color:var(--neon)] px-8 font-black text-black hover:bg-[color:var(--neon-dim)]">
-            View Wholesale Pricing <ArrowRight className="ml-2 h-4 w-4" />
-          </Button>
-        </Link>
+        <Link to="/wholesale" className="mt-7 inline-block"><Button className="h-12 bg-[color:var(--neon)] px-8 font-black text-black hover:bg-[color:var(--neon-dim)]">View Wholesale Pricing <ArrowRight className="ml-2 h-4 w-4" /></Button></Link>
       </div>
     </section>
   );
