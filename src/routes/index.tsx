@@ -195,32 +195,6 @@ function Home() {
         </div>
       </section>
 
-      {/* WHY */}
-      <section id="why" className="mx-auto max-w-[1320px] px-4 lg:px-6 py-20">
-        <Reveal>
-          <h2 className="text-4xl md:text-5xl font-black tracking-tight">Why Promo Buyers Choose <span className="neon-text">KOFEᵉ̬NOT</span></h2>
-          <p className="text-muted-foreground mt-3">Six reasons this scales fast</p>
-        </Reveal>
-        <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {[
-            { icon: Zap, t: "Easy Math", d: "A $3 unit prevents $1,000+ hardware losses. Easy approval for IT, procurement, and HR." },
-            { icon: Check, t: "Easy to Deploy", d: "No magnets. No adhesives. No setup. One-motion install works with most laptops, phones, and tablets." },
-            { icon: Eye, t: "Easy to See", d: "Logo stays visible during daily use faced outwards. Not buried in packaging, drawers, or swag bags." },
-            { icon: RotateCcw, t: "Easy to Reorder", d: "Simple volume scaling: samples → events → OEM. Built for repeat agency and enterprise orders." },
-            { icon: Truck, t: "Easy to Ship", d: "Flat-folding pocket-size design. Lightweight bulk deployment. Fast California dispatch for events and onboarding." },
-            { icon: Shield, t: "Deflects Spills", d: "Hinge-first incline redirects liquid away from keyboard electronics. Buys a golden minute critical reaction time during spills." },
-          ].map((f, i) => (
-            <Reveal key={f.t} delay={i * 0.05}>
-              <div className="panel panel-hover rounded-sm p-6 h-full transition-all hover:-translate-y-1">
-                <f.icon className="h-6 w-6 text-[color:var(--neon)] mb-3" />
-                <h3 className="text-lg font-bold">{f.t}</h3>
-                <p className="text-sm text-muted-foreground mt-2 leading-relaxed whitespace-pre-line">{f.d}</p>
-              </div>
-            </Reveal>
-          ))}
-        </div>
-      </section>
-
       {/* THREE WINS */}
       <section className="mx-auto max-w-[1320px] px-4 lg:px-6 py-20 border-t border-[rgba(0,255,0,0.12)]">
         <Reveal>
@@ -284,63 +258,6 @@ function Home() {
               <div className="p-3 text-xs uppercase tracking-[0.18em] text-muted-foreground text-center">{g.c}</div>
             </div>
           ))}
-        </div>
-      </section>
-
-      {/* BRANDING */}
-      <section className="mx-auto max-w-[1320px] px-4 lg:px-6 py-20 border-t border-[rgba(0,255,0,0.12)]">
-        <Reveal>
-          <h2 className="text-4xl md:text-5xl font-black tracking-tight">Built for <span className="neon-text">Branded Bulk Deployment</span></h2>
-          <p className="text-muted-foreground mt-3">Logo-ready • bulk pricing • FOB California</p>
-        </Reveal>
-        <div className="mt-10 grid md:grid-cols-2 gap-6 items-stretch">
-          <Reveal>
-            <div className="relative bg-[#080808] border border-[#1a1a1a] border-l-2 border-l-[color:var(--neon)] rounded-sm p-10 md:p-12 h-full flex flex-col overflow-hidden">
-              <div className="flex items-center gap-3 mb-10">
-                <span className="h-px w-8 bg-[color:var(--neon)]" />
-                <span className="text-[color:var(--neon)] text-[10px] uppercase tracking-[0.3em] font-mono">Standard Specification</span>
-              </div>
-
-              <h3 className="text-white text-3xl md:text-4xl font-black leading-[1.05] tracking-tight uppercase mb-12">
-                Branding That <span className="text-[color:var(--neon)]">Gets Seen</span>, Heard, and Felt
-              </h3>
-
-              <div className="flex-1">
-                {[
-                  { t: "2.0\" × 1.6\" Branding Zone", d: "Built for custom logo application." },
-                  { t: "Always Visible", d: "Your logo stays outward-facing during laptop use." },
-                  { t: "Your Brand in Every Snap", d: "Every snap shut catches attention from new eyes nearby." },
-                ].map((i, idx) => (
-                  <div key={i.t} className={`flex gap-6 py-6 border-t border-[#1a1a1a] ${idx === 2 ? "border-b" : ""}`}>
-                    <div className="text-[color:var(--neon)] text-xs font-mono shrink-0 pt-1">{String(idx + 1).padStart(2, "0")}</div>
-                    <div>
-                      <h4 className="text-white text-base font-bold tracking-tight uppercase">{i.t}</h4>
-                      <p className="text-muted-foreground text-sm leading-relaxed mt-1.5">{i.d}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-
-              <div className="mt-10 flex justify-between items-center">
-                <div className="text-[9px] text-zinc-600 uppercase tracking-[0.3em] font-mono">System Code: BR-ND-001</div>
-                <div className="flex gap-1">
-                  <div className="w-1 h-1 bg-[color:var(--neon)]" />
-                  <div className="w-1 h-1 bg-[color:var(--neon)]/40" />
-                  <div className="w-1 h-1 bg-[color:var(--neon)]/10" />
-                </div>
-              </div>
-            </div>
-          </Reveal>
-          <Reveal delay={0.1}>
-            <div className="panel rounded-sm overflow-hidden h-full flex flex-col">
-              <div className="bg-black flex-1 flex items-center justify-center min-h-0">
-                <img src={brand} alt="Branded Kofeᵉ̬not" className="w-full h-full object-contain" />
-              </div>
-              <div className="p-4 text-center text-xs uppercase tracking-[0.18em] text-muted-foreground">
-                Ships Blank / Ready for Decoration
-              </div>
-            </div>
-          </Reveal>
         </div>
       </section>
 
@@ -463,34 +380,7 @@ function Home() {
           ))}
         </div>
       </section>
-
-      {/* CTA */}
-      <section className="mx-auto max-w-[1320px] px-4 lg:px-6 py-16">
-        <Reveal>
-          <div className="neon-border bg-[rgba(0,255,0,0.04)] rounded-sm text-center p-10 md:p-16 neon-glow">
-            <h2 className="text-4xl md:text-5xl font-black tracking-tight">Break Through <span className="neon-text">Swag Noise</span></h2>
-            <p className="text-muted-foreground mt-3">With Product People Actually Use</p>
-            <p className="text-muted-foreground">Scale from sample to OEM production fast</p>
-            <p className="mt-5 text-lg">Built for promo agencies, cafés, and OEM runs</p>
-            <div className="relative z-20 mt-8 flex flex-wrap justify-center gap-3 pointer-events-auto">
-              <Button
-                onClick={() => openQuote("bottom-cta")}
-                className="bg-[color:var(--neon)] text-black hover:bg-[color:var(--neon-dim)] font-bold h-12 px-8"
-              >
-                Request sample + quote <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-              <Button
-                variant="outline"
-                onClick={() => openSample("bottom-cta")}
-                className="border-[rgba(0,255,0,0.45)] hover:bg-[rgba(0,255,0,0.08)] hover:text-[color:var(--neon)] h-12 px-8"
-              >
-                Buy a sample
-              </Button>
-            </div>
-          </div>
-        </Reveal>
-      </section>
-
+      
       {/* Counters */}
       <section className="mx-auto max-w-[1320px] px-4 lg:px-6 pb-16">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
