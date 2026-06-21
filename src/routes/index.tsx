@@ -133,7 +133,7 @@ function Home() {
             key={p.big}
             className="group border border-[rgba(0,255,0,0.4)] bg-black/40 px-1 py-2 text-center backdrop-blur-sm transition-colors hover:border-[color:var(--neon)]"
           >
-            <div className="text-2xl font-black leading-tight neon-text md:text-[26px]">
+            <div className="text-xl font-black leading-tight neon-text md:text-[26px]">
               {p.big}
             </div>
 
