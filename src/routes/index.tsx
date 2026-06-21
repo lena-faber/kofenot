@@ -130,7 +130,7 @@ function Home() {
             greenSmall: false,
           },
           {
-            big: "3-in-1",
+            big: "3 mode",
             small: "Laptops • Phones • Tablets",
             greenSmall: false,
           },
@@ -159,7 +159,7 @@ function Home() {
 
     <Reveal delay={0.08}>
   <p
-    className="mt-4 text-right text-3xl text-white lg:absolute lg:right-12 lg:top-44 lg:mt-0 lg:-rotate-3"
+    className="mt-4 text-right text-4xl text-white lg:absolute lg:right-12 lg:top-44 lg:mt-0 lg:-rotate-3"
     style={{ fontFamily: '"Caveat", cursive' }}
   >
     Coffee happens. <span className="neon-text">Be ready.</span>
@@ -179,7 +179,7 @@ function Home() {
 
     <Reveal delay={0.08}>
   <p className="mt-4 text-xl font-black uppercase tracking-[0.18em] md:text-2xl">
-    Coffee happens. <span className="neon-text">Doubles as Phone Stand.</span>
+    Doubles as <span className="neon-text">Phone Stand.</span>
   </p>
       
 </Reveal>
