@@ -162,7 +162,27 @@ function Home() {
     className="mt-4 text-right text-6xl text-white lg:absolute lg:right-12 lg:top-44 lg:mt-0 lg:-rotate-3"
     style={{ fontFamily: '"Caveat", cursive' }}
   >
-    Coffee happens. <span className="neon-text">Be ready.</span>
+    
+Coffee happens.{" "}
+<motion.span
+  className="neon-text inline-block"
+  animate={{
+    opacity: [0.8, 1, 0.8],
+    filter: [
+      "drop-shadow(0 0 3px #00ff00)",
+      "drop-shadow(0 0 10px #00ff00)",
+      "drop-shadow(0 0 3px #00ff00)",
+    ],
+  }}
+  transition={{
+    duration: 2.5,
+    repeat: Infinity,
+    ease: "easeInOut",
+  }}
+>
+  Be ready.
+</motion.span>
+    
   </p>
 </Reveal>
 
