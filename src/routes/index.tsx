@@ -103,7 +103,6 @@ function Home() {
     <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/40 to-black/60" />
   </div>
 
-  {/* Vertical trademark label */}
   <div className="pointer-events-none absolute bottom-10 right-0 top-20 z-20 hidden items-center border-l border-white/20 bg-black/45 px-2 backdrop-blur-sm lg:flex">
     <span className="rotate-180 text-[11px] font-black uppercase tracking-[0.35em] text-white [writing-mode:vertical-rl]">
       Trademark • Patent pending
@@ -111,46 +110,56 @@ function Home() {
   </div>
 
   <div className="relative z-10 mx-auto flex min-h-[620px] max-w-[1320px] flex-col px-4 pb-8 pt-5 pointer-events-auto lg:px-6 lg:pb-8 lg:pt-6">
-    {/* Desktop stat tabs — upper right */}
-    <Reveal delay={0.05}>
-      <div className="grid grid-cols-2 gap-3 lg:absolute lg:right-12 lg:top-4 lg:w-[760px] lg:grid-cols-4 lg:gap-6">
+    {/* Stat tabs */}
+    <Reveal delay={0.2}>
+      <div className="grid grid-cols-1 gap-3 sm:grid-cols-4 lg:absolute lg:right-12 lg:top-4 lg:mt-0 lg:max-w-xl">
         {[
           {
             big: "0",
             small: "Magnets • Adhesives • Clips",
+            greenSmall: false,
           },
           {
             big: "1 oz",
             small: "Pocket-Size • Flat-Folding",
+            greenSmall: false,
           },
           {
             big: "2 wins",
             small: "Spill Deflection • Better Posture",
+            greenSmall: false,
           },
           {
             big: "3-in-1",
             small: "Laptops • Phones • Tablets",
+            greenSmall: false,
           },
-        ].map((item) => (
+        ].map((p) => (
           <div
-            key={item.big}
-            className="group flex min-h-[150px] flex-col items-center justify-center border border-[rgba(0,255,0,0.4)] bg-black/60 px-4 py-5 text-center backdrop-blur-sm transition-colors hover:border-[color:var(--neon)]"
+            key={p.big}
+            className="group border border-[rgba(0,255,0,0.4)] bg-black/40 px-1 py-2 text-center backdrop-blur-sm transition-colors hover:border-[color:var(--neon)]"
           >
-            <div className="text-4xl font-black leading-none neon-text">
-              {item.big}
+            <div className="text-2xl font-black leading-tight neon-text md:text-[26px]">
+              {p.big}
             </div>
 
-            <div className="mt-4 text-sm font-black uppercase leading-relaxed tracking-[0.2em] text-white">
-              {item.small}
-            </div>
+            {p.small && (
+              <div
+                className={`mt-0.5 text-[11px] font-bold uppercase leading-snug tracking-[0.2em] ${
+                  p.greenSmall ? "neon-text" : "text-white"
+                }`}
+              >
+                {p.small}
+              </div>
+            )}
           </div>
         ))}
       </div>
     </Reveal>
 
     {/* Headline */}
-    <Reveal delay={0.1}>
-      <h1 className="mt-8 text-6xl font-black italic leading-[0.9] tracking-tight neon-text drop-shadow-[0_0_30px_rgba(0,255,0,0.35)] md:text-7xl lg:mt-4 lg:text-8xl">
+    <Reveal delay={0.05}>
+      <h1 className="mt-4 text-6xl font-black italic leading-[0.9] tracking-tight neon-text drop-shadow-[0_0_30px_rgba(0,255,0,0.35)] md:text-7xl lg:text-8xl">
         ULTIMATE
         <br />
         LAPTOP
@@ -159,9 +168,9 @@ function Home() {
       </h1>
     </Reveal>
 
-    {/* Video button */}
-    <Reveal delay={0.15}>
-      <div className="relative z-20 mt-6 flex flex-wrap items-center gap-4 pointer-events-auto">
+    {/* CTA */}
+    <Reveal delay={0.1}>
+      <div className="relative z-20 mt-4 flex flex-wrap items-center gap-4 pointer-events-auto">
         <button
           onClick={() => setVideoOpen(true)}
           className="group flex items-center gap-4 text-base font-black uppercase tracking-[0.18em] text-white transition hover:text-red-100 md:text-lg"
@@ -169,17 +178,16 @@ function Home() {
           <span className="flex h-16 w-24 items-center justify-center rounded-2xl bg-red-600 shadow-[0_0_34px_rgba(220,38,38,0.55)] transition group-hover:scale-105 group-hover:bg-red-500">
             <Play className="ml-1 h-8 w-8 fill-white text-white" />
           </span>
-
           Watch 2-Sec Setup
         </button>
       </div>
     </Reveal>
 
-    {/* Mobile-only product note */}
-    <Reveal delay={0.2}>
-      <div className="mt-4 inline-block lg:hidden">
+    {/* Mobile Chip */}
+    <Reveal delay={0.15}>
+      <div className="mt-3 inline-block lg:hidden">
         <span className="text-[11px] font-black uppercase tracking-[0.22em] text-white">
-          No Magnets • No Adhesives • No Clips
+          No Magnets • No Adhesives
         </span>
       </div>
     </Reveal>
