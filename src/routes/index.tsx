@@ -198,7 +198,7 @@ Coffee happens.{" "}
     </Reveal>
 
     <Reveal delay={0.08}>
-  <p className="ml-7 mt-4 text-xl font-black uppercase tracking-[0.18em] md:text-2xl">
+  <p className="ml-7 mt-4 text-lg font-black uppercase tracking-[0.18em] md:text-xl">
     Doubles as <span className="neon-text">Phone Stand</span>
   </p>
       
