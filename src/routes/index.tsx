@@ -6,7 +6,6 @@ import { Play, ArrowRight, Sparkles, Zap, Eye, RotateCcw, Truck, Shield, Check }
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { useLeads } from "@/components/lead-provider";
-@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&display=swap");
 
 import corp from "@/assets/kofenot-corp.jpeg";
 import giftBox from "@/assets/kofeenot-gift.jpg";
