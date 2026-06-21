@@ -145,7 +145,7 @@ function Home() {
                 {[
                   { big: "1 oz", small: "Pocket-Size • Flat-Folding", greenSmall: false },
       { big: "2 wins", small: "Spill Deflection • Better Posture", greenSmall: false },
-                  { big: "3-in-1", small: "Laptops Phones Tablets", greenSmall: false },
+                  { big: "3-in-1", small: "Laptops • Phones • Tablets", greenSmall: false },
                 ].map((p) => (
                   <div
                     key={p.big}
