@@ -28,7 +28,7 @@ function Wholesale() {
         <div className="max-w-3xl">
           <p className="text-xs font-black uppercase tracking-[0.24em] text-[color:var(--neon)]">Wholesale inventory • FOB California</p>
           <h1 className="mt-5 text-6xl font-black leading-[.88] tracking-tight md:text-8xl">BREAK THROUGH<br /><span className="neon-text">SWAG NOISE.</span></h1>
-          <p className="mt-7 max-w-2xl text-xl leading-relaxed text-white">Give people something they will actually keep on their desks and use. Order raw KofeNot™ inventory directly, or email us for a custom-branded program.</p>
+          <p className="mt-7 max-w-2xl text-xl leading-relaxed text-white">Give +people something they will actually keep on their desks and use. Order raw KofeNot™ inventory directly, or email us for a custom-branded program.</p>
           <div className="mt-8 flex flex-wrap gap-3"><a href="#packs"><Button className="h-12 bg-[color:var(--neon)] px-7 font-black text-black hover:bg-[color:var(--neon-dim)]">View wholesale packs <ArrowRight className="ml-2 h-4 w-4" /></Button></a><a href={brandingEmail}><Button variant="outline" className="h-12 border-[rgba(0,255,0,0.55)] px-7 hover:bg-[rgba(0,255,0,0.08)] hover:text-[color:var(--neon)]"><Mail className="mr-2 h-4 w-4" /> Request custom branding</Button></a></div>
           <div className="mt-8 flex flex-wrap gap-x-7 gap-y-2 text-sm text-muted-foreground"><span className="flex items-center gap-2"><Check className="h-4 w-4 text-[color:var(--neon)]" /> No account required</span><span className="flex items-center gap-2"><Check className="h-4 w-4 text-[color:var(--neon)]" /> Secure Stripe checkout</span><span className="flex items-center gap-2"><Check className="h-4 w-4 text-[color:var(--neon)]" /> Shipping and tax calculated by Stripe</span></div>
         </div>
@@ -50,7 +50,7 @@ function Wholesale() {
             ))}
           </div>
         </div>
-      </section>
+     
     
     <section id="why-wholesale" className="mx-auto max-w-[1320px] px-4 py-20 lg:px-6">
       <p className="text-xs font-black uppercase tracking-[0.24em] text-[color:var(--neon)]">Why buyers choose KofeNot</p><h2 className="mt-3 text-5xl font-black tracking-tight md:text-6xl">Useful beats disposable.</h2>
