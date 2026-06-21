@@ -165,7 +165,7 @@ function Home() {
     
 Coffee happens.{" "}
 <motion.span
-  className="neon-text inline-block"
+  className="neon-text inline-block text-2xl"
   animate={{
     opacity: [0.8, 1, 0.8],
     filter: [
