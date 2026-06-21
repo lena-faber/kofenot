@@ -144,7 +144,7 @@ function Home() {
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 max-w-xl">
                 {[
                   { big: "1 oz", small: "Flat-Folding", greenSmall: false },
-      { big: "365 days", small: "Presence", greenSmall: false },
+      { big: "2 wins", small: "Spill Deflection + Better Posture", greenSmall: false },
                   { big: "3-in-1", small: "Laptops Phones Tablets", greenSmall: false },
                 ].map((p) => (
                   <div
