@@ -99,7 +99,7 @@ function Home() {
 
         <div className="absolute right-0 top-20 bottom-10 z-20 hidden lg:flex items-center border-l border-white/20 bg-black/45 px-2 backdrop-blur-sm pointer-events-none">
           <span className="[writing-mode:vertical-rl] rotate-180 text-[11px] uppercase tracking-[0.35em] font-black text-white">
-            No Magnets • No Adhesives
+            Trademark • Patent pending
           </span>
         </div>
 
@@ -166,22 +166,6 @@ function Home() {
             </div>
           </Reveal>
         </div>
-
-        {/* MARQUEE */}
-        <div className="relative z-10 border-y border-[rgba(0,255,0,0.18)] bg-black/60 overflow-hidden">
-          <div className="marquee flex gap-12 whitespace-nowrap py-3 text-sm uppercase tracking-[0.25em] text-muted-foreground">
-            {Array.from({ length: 2 }).map((_, k) => (
-              <div key={k} className="flex gap-12 shrink-0">
-                {["Promo Agencies", "Tech Conferences", "Cafés & Co-Working", "Enterprise IT", "OEM Runs", "White-Label Programs", "Private Label", "Branded Bulk"].map((t) => (
-                  <span key={t} className="flex items-center gap-3">
-                    <span className="text-[color:var(--neon)]">◆</span>{t}
-                  </span>
-                ))}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* TWO WINS */}
       <section className="mx-auto max-w-[1320px] px-4 lg:px-6 py-20 border-t border-[rgba(0,255,0,0.12)]">
