@@ -36,6 +36,22 @@ function Wholesale() {
       </div>
     </section>
 
+    {/* MARQUEE */}
+        <div className="relative z-10 border-y border-[rgba(0,255,0,0.18)] bg-black/60 overflow-hidden">
+          <div className="marquee flex gap-12 whitespace-nowrap py-3 text-sm uppercase tracking-[0.25em] text-muted-foreground">
+            {Array.from({ length: 2 }).map((_, k) => (
+              <div key={k} className="flex gap-12 shrink-0">
+                {["Promo Agencies", "Tech Conferences", "Cafés & Co-Working", "Enterprise IT", "OEM Runs", "White-Label Programs", "Private Label", "Branded Bulk"].map((t) => (
+                  <span key={t} className="flex items-center gap-3">
+                    <span className="text-[color:var(--neon)]">◆</span>{t}
+                  </span>
+                ))}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    
     <section id="why-wholesale" className="mx-auto max-w-[1320px] px-4 py-20 lg:px-6">
       <p className="text-xs font-black uppercase tracking-[0.24em] text-[color:var(--neon)]">Why buyers choose KofeNot</p><h2 className="mt-3 text-5xl font-black tracking-tight md:text-6xl">Useful beats disposable.</h2>
       <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">{[
