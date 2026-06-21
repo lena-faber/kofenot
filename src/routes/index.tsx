@@ -159,7 +159,7 @@ function Home() {
 
     <Reveal delay={0.08}>
   <p
-    className="mt-4 text-right text-8xl text-white lg:absolute lg:right-12 lg:top-44 lg:mt-0 lg:-rotate-3"
+    className="mt-4 text-right text-7xl text-white lg:absolute lg:right-12 lg:top-44 lg:mt-0 lg:-rotate-3"
     style={{ fontFamily: '"Caveat", cursive' }}
   >
     Coffee happens. <span className="neon-text">Be ready.</span>
@@ -168,7 +168,7 @@ function Home() {
 
     {/* Headline */}
     <Reveal delay={0.05}>
-      <h1 className="ml-7 mt-4 text-6xl font-black italic leading-[0.9] tracking-tight neon-text drop-shadow-[0_0_30px_rgba(0,255,0,0.35)] md:text-7xl lg:text-8xl">
+      <h1 className="ml-6 mt-4 text-6xl font-black italic leading-[0.9] tracking-tight neon-text drop-shadow-[0_0_30px_rgba(0,255,0,0.35)] md:text-7xl lg:text-8xl">
         ULTIMATE
         <br />
         LAPTOP
