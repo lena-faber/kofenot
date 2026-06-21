@@ -151,35 +151,6 @@ function Home() {
       </div>
     </Reveal>
 
-    <Reveal delay={0.08}>
-  <p
-    className="mt-4 text-right text-6xl text-white lg:absolute lg:right-12 lg:top-44 lg:mt-0 lg:-rotate-3"
-    style={{ fontFamily: '"Caveat", cursive' }}
-  >
-    
-Coffee happens.{" "}
-<motion.span
-  className="neon-text inline-block text-7xl"
-  animate={{
-    opacity: [0.8, 1, 0.8],
-    filter: [
-      "drop-shadow(0 0 3px #00ff00)",
-      "drop-shadow(0 0 10px #00ff00)",
-      "drop-shadow(0 0 3px #00ff00)",
-    ],
-  }}
-  transition={{
-    duration: 2.5,
-    repeat: Infinity,
-    ease: "easeInOut",
-  }}
->
-  Be ready.
-</motion.span>
-    
-  </p>
-</Reveal>
-
     {/* Headline */}
     <Reveal delay={0.05}>
       <h1 className="ml-6 mt-4 text-6xl font-black italic leading-[0.9] tracking-tight neon-text drop-shadow-[0_0_30px_rgba(0,255,0,0.35)] md:text-7xl lg:text-8xl">
