@@ -166,7 +166,8 @@ function Home() {
             </div>
           </Reveal>
         </div>
-
+      </section>
+        
       {/* TWO WINS */}
       <section className="mx-auto max-w-[1320px] px-4 lg:px-6 py-20 border-t border-[rgba(0,255,0,0.12)]">
         <Reveal>
