@@ -153,7 +153,7 @@ function Home() {
 
     {/* Headline */}
     <Reveal delay={0.05}>
-      <h1 className="ml-6 mt-4 text-10xl font-black italic leading-[0.9] tracking-tight neon-text drop-shadow-[0_0_30px_rgba(0,255,0,0.35)] md:text-7xl lg:text-8xl">
+      <h1 className="ml-6 mt-4 text-9xl font-black italic leading-[0.9] tracking-tight neon-text drop-shadow-[0_0_30px_rgba(0,255,0,0.35)] md:text-7xl lg:text-8xl">
         ULTIMATE
         <br />
         LAPTOP
