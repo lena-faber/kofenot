@@ -182,10 +182,10 @@ function Home() {
         </div>
       </section>
 
-      {/* THREE WINS */}
+      {/* TWO WINS */}
       <section className="mx-auto max-w-[1320px] px-4 lg:px-6 py-20 border-t border-[rgba(0,255,0,0.12)]">
         <Reveal>
-          <h2 className="text-4xl md:text-5xl font-black tracking-tight">One Small Wedge. <span className="neon-text">Three Big Wins</span></h2>
+          <h2 className="text-4xl md:text-5xl font-black tracking-tight">One Small Wedge. <span className="neon-text">Two Big Wins</span></h2>
         </Reveal>
         <div className="mt-10 grid md:grid-cols-3 gap-5">
           {[
