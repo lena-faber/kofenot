@@ -178,7 +178,7 @@ function Home() {
     </Reveal>
 
     <Reveal delay={0.08}>
-  <p className="mt-4 text-xl font-black uppercase tracking-[0.18em] md:text-2xl">
+  <p className="ml-7 mt-4 text-xl font-black uppercase tracking-[0.18em] md:text-2xl">
     Doubles as <span className="neon-text">Phone Stand</span>
   </p>
       
@@ -186,7 +186,7 @@ function Home() {
 
     {/* CTA */}
     <Reveal delay={0.1}>
-      <div className="relative z-20 mt-4 flex flex-wrap items-center gap-4 pointer-events-auto">
+      <div className="relative z-20 ml-7 mt-4 flex flex-wrap items-center gap-4 pointer-events-auto">
         <button
           onClick={() => setVideoOpen(true)}
           className="group flex items-center gap-4 text-base font-black uppercase tracking-[0.18em] text-[#00ff00] transition hover:text-red-100 md:text-sm"
