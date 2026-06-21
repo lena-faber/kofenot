@@ -162,8 +162,10 @@ function Home() {
     </Reveal>
 
     <Reveal delay={0.08}>
-  <p className="ml-7 mt-4 text-lg font-black uppercase tracking-[0.18em] md:text-xl">
-    Coffee Happens. <span className="neon-text">Be Ready</span>
+  <p className="ml-7 mt-4 text-lg font-semibold italic uppercase tracking-[0.18em] text-white md:text-xl">
+  COFFEE HAPPENS. BE READY.
+</p>
+    Coffee Happens. Be Ready
   </p>
       
 </Reveal>
