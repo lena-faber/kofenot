@@ -181,6 +181,9 @@ function Home() {
   <p className="mt-4 text-xl font-black uppercase tracking-[0.18em] text-white md:text-2xl">
     Coffee happens. <span className="neon-text">Be ready.</span>
   </p>
+      <p className="mt-4 text-xl font-black uppercase tracking-[0.18em] text-white md:text-2xl">
+    Deflect spills. <span className="neon-text"Improve posture. </span>
+  </p>
 </Reveal>
 
     {/* CTA */}
