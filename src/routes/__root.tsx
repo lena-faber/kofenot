@@ -37,7 +37,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 });
 
 function RootShell({ children }: { children: React.ReactNode }) {
-  return <html lang="en"><head><HeadContent /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productJsonLd) }} /></head><body>{children}<Scripts /></body></html>;
+  return <html lang="en"><head><link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+<link
+  href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&display=swap"
+  rel="stylesheet"
+/><HeadContent /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productJsonLd) }} /></head><body>{children}<Scripts /></body></html>;
 }
 
 function RootComponent() {
