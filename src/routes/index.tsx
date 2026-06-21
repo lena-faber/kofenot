@@ -168,6 +168,12 @@ function Home() {
       </h1>
     </Reveal>
 
+    <Reveal delay={0.08}>
+  <p className="mt-4 text-xl font-black uppercase tracking-[0.18em] text-white md:text-2xl">
+    Coffee happens. <span className="neon-text">Be ready.</span>
+  </p>
+</Reveal>
+
     {/* CTA */}
     <Reveal delay={0.1}>
       <div className="relative z-20 mt-4 flex flex-wrap items-center gap-4 pointer-events-auto">
