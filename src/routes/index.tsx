@@ -6,6 +6,7 @@ import { Play, ArrowRight, Sparkles, Zap, Eye, RotateCcw, Truck, Shield, Check }
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { useLeads } from "@/components/lead-provider";
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&display=swap");
 
 import corp from "@/assets/kofenot-corp.jpeg";
 import giftBox from "@/assets/kofeenot-gift.jpg";
@@ -159,12 +160,11 @@ function Home() {
 
     <Reveal delay={0.08}>
   <p
-    className="mt-4 text-right text-2xl italic text-white lg:absolute lg:right-12 lg:top-44 lg:mt-0 lg:-rotate-3"
-    style={{ fontFamily: '"Comic Sans MS", "Bradley Hand", cursive' }}
+    className="mt-4 text-right text-3xl text-white lg:absolute lg:right-12 lg:top-44 lg:mt-0 lg:-rotate-3"
+    style={{ fontFamily: '"Caveat", cursive' }}
   >
     Coffee happens. <span className="neon-text">Be ready.</span>
   </p>
-      
 </Reveal>
 
     {/* Headline */}
