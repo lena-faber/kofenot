@@ -100,7 +100,7 @@ function Home() {
       alt=""
       className="absolute inset-0 h-full w-full object-cover object-center"
     />
-    <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/90 via-10% to-transparent" />
+    <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/80 via-5% to-transparent" />
   </div>
   
   <div className="relative z-10 mx-auto flex min-h-[620px] max-w-[1320px] flex-col px-4 pb-8 pt-5 pointer-events-auto lg:px-6 lg:pb-8 lg:pt-6">
