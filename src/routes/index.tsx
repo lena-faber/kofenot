@@ -102,13 +102,7 @@ function Home() {
     />
     <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/80 via-15% to-transparent" />
   </div>
-
-  <div className="pointer-events-none absolute bottom-10 right-0 top-20 z-20 hidden items-center border-l border-white/20 bg-black/45 px-2 backdrop-blur-sm lg:flex">
-    <span className="rotate-180 text-[11px] font-black uppercase tracking-[0.35em] text-white [writing-mode:vertical-rl]">
-      Trademark • Patent pending
-    </span>
-  </div>
-
+  
   <div className="relative z-10 mx-auto flex min-h-[620px] max-w-[1320px] flex-col px-4 pb-8 pt-5 pointer-events-auto lg:px-6 lg:pb-8 lg:pt-6">
     {/* Stat tabs */}
     <Reveal delay={0.2}>
