@@ -157,6 +157,15 @@ function Home() {
       </div>
     </Reveal>
 
+    <Reveal delay={0.08}>
+  <p
+    className="mt-4 text-right text-2xl italic text-white lg:absolute lg:right-12 lg:top-44 lg:mt-0 lg:-rotate-3"
+    style={{ fontFamily: '"Comic Sans MS", "Bradley Hand", cursive' }}
+  >
+    Coffee happens. <span className="neon-text">Be ready.</span>
+  </p>
+</Reveal>
+
     {/* Headline */}
     <Reveal delay={0.05}>
       <h1 className="mt-4 text-6xl font-black italic leading-[0.9] tracking-tight neon-text drop-shadow-[0_0_30px_rgba(0,255,0,0.35)] md:text-7xl lg:text-8xl">
