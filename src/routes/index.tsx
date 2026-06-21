@@ -115,7 +115,7 @@ function Home() {
           },
           {
             big: "1 oz",
-            small: "Pocket-Size • Flat-Folding",
+            small: "Pocket-Size Flat-Folding",
             greenSmall: false,
           },
           {
@@ -124,8 +124,8 @@ function Home() {
             greenSmall: false,
           },
           {
-            big: "3 mode",
-            small: "Laptops • Phones • Tablets",
+            big: "3 modes",
+            small: "Laptops Phones Tablets",
             greenSmall: false,
           },
         ].map((p) => (
