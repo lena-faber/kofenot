@@ -204,7 +204,7 @@ function Home() {
     <Reveal delay={0.15}>
       <div className="mt-3 inline-block lg:hidden">
         <span className="text-[11px] font-black uppercase tracking-[0.22em] text-white">
-          No Magnets • No Adhesives
+          Trademark • Patent Pending
         </span>
       </div>
     </Reveal>
