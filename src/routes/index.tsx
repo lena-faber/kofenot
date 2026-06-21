@@ -179,7 +179,7 @@ function Home() {
       <div className="relative z-20 mt-4 flex flex-wrap items-center gap-4 pointer-events-auto">
         <button
           onClick={() => setVideoOpen(true)}
-          className="group flex items-center gap-4 text-base font-black uppercase tracking-[0.18em] text-white transition hover:text-red-100 md:text-lg"
+          className="group flex items-center gap-4 text-base font-black uppercase tracking-[0.18em] text-white transition hover:text-red-100 md:text-sm"
         >
           <span className="flex h-16 w-24 items-center justify-center rounded-2xl bg-red-600 shadow-[0_0_34px_rgba(220,38,38,0.55)] transition group-hover:scale-105 group-hover:bg-red-500">
             <Play className="ml-1 h-8 w-8 fill-white text-white" />
