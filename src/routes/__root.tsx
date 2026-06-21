@@ -27,7 +27,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" }, { name: "viewport", content: "width=device-width, initial-scale=1" }, { title: siteTitle }, { name: "description", content: siteDescription }, { property: "og:title", content: siteTitle }, { property: "og:description", content: siteDescription }, { property: "og:type", content: "website" }, { property: "og:url", content: siteUrl }, { property: "og:site_name", content: "KOFENOT™" }, { name: "twitter:card", content: "summary_large_image" }, { name: "twitter:title", content: siteTitle }, { name: "twitter:description", content: siteDescription },
     ],
     links: [
-      { rel: "stylesheet", href: appCss }, { rel: "canonical", href: siteUrl }, { rel: "alternate", type: "text/plain", title: "KOFENOT AI agent summary", href: "/llms.txt" }, { rel: "sitemap", type: "application/xml", href: "/sitemap.xml" },
+      { rel: "stylesheet", href: appCss }, {
+  rel: "stylesheet",
+  href: "https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&display=swap",
+},{ rel: "canonical", href: siteUrl }, { rel: "alternate", type: "text/plain", title: "KOFENOT AI agent summary", href: "/llms.txt" }, { rel: "sitemap", type: "application/xml", href: "/sitemap.xml" },
     ],
   }),
   shellComponent: RootShell,
