@@ -175,7 +175,7 @@ function Home() {
           </div>
 
           <div>
-            <div className="text-xl font-black uppercase text-white">
+            <div className="text-sm font-black uppercase text-white">
               1 OZ
             </div>
             <div className="mt-1 text-base leading-6 text-white/80">
