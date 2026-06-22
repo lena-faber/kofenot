@@ -104,52 +104,7 @@ function Home() {
   </div>
   
   <div className="relative z-10 mx-auto flex min-h-[620px] max-w-[1320px] flex-col px-4 pb-8 pt-5 pointer-events-auto lg:px-6 lg:pb-8 lg:pt-6">
-    {/* Stat tabs */}
-    <Reveal delay={0.2}>
-      <div className="grid grid-cols-1 gap-3 sm:grid-cols-4 lg:absolute lg:right-0 lg:top-55 lg:mt-0 lg:max-w-xl">
-        {[
-          {
-            big: "0",
-            small: "Attachments",
-            greenSmall: false,
-          },
-          {
-            big: "1 oz",
-            small: "Pocket-Size Flat-Folding",
-            greenSmall: false,
-          },
-          {
-            big: "2 wins",
-            small: "Anti-Spill • Better Posture",
-            greenSmall: false,
-          },
-          {
-            big: "3 modes",
-            small: "Laptops Phones Tablets",
-            greenSmall: false,
-          },
-        ].map((p) => (
-          <div
-            key={p.big}
-            className="group border border-[rgba(0,255,0,0.4)] bg-black/40 px-1 py-2 text-center backdrop-blur-sm transition-colors hover:border-[color:var(--neon)]"
-          >
-            <div className="text-xl font-black leading-tight neon-text md:text-[20px]">
-              {p.big}
-            </div>
 
-            {p.small && (
-              <div
-                className={`mt-0.5 text-[12px] font-bold uppercase leading-snug tracking-[0.2em] ${
-                  p.greenSmall ? "neon-text" : "text-white"
-                }`}
-              >
-                {p.small}
-              </div>
-            )}
-          </div>
-        ))}
-      </div>
-    </Reveal>
 
     {/* Headline */}
 <Reveal delay={0.08}>
