@@ -8,12 +8,17 @@ export function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-[100] isolate bg-black/70 text-white backdrop-blur-md">
-      <div className="mx-auto flex h-16 max-w-[1320px] items-center px-4 lg:px-6">
-        <Link to="/" className="text-xl font-black tracking-[0.18em] text-[color:var(--neon)]">
-          KOFENOT
+      <div className="mx-auto flex h-16 max-w-[1320px] items-center gap-4 px-4 lg:px-6">
+        <Link to="/" className="flex shrink-0 items-center gap-4 group">
+          <span className="text-xl font-black tracking-[0.18em] text-[color:var(--neon)] group-hover:text-[color:var(--neon-dim)]">
+            KOFENOT
+          </span>
+          <span className="whitespace-nowrap text-[11px] font-bold uppercase tracking-[0.2em] text-[color:var(--neon)]">
+            Make your laptop coffeeshop-friendly™
+          </span>
         </Link>
 
-        <nav className="ml-10 hidden items-center gap-6 text-sm md:flex">
+        <nav className="ml-8 hidden items-center gap-6 text-sm md:flex">
           <a href="/#why">Why KOFENOT</a>
           <a href="/#how-it-works">How It Works</a>
           <a href="/#specs">Specifications</a>
@@ -22,7 +27,7 @@ export function SiteHeader() {
 
         <a
           href="/#pricing"
-          className="ml-auto hidden items-center justify-center rounded-md bg-[color:var(--neon)] px-8 py-3 font-bold text-black sm:inline-flex"
+          className="ml-auto hidden shrink-0 items-center justify-center rounded-md bg-[color:var(--neon)] px-8 py-3 font-bold text-black hover:bg-[color:var(--neon-dim)] sm:inline-flex"
         >
           Buy Now
         </a>
@@ -39,10 +44,18 @@ export function SiteHeader() {
 
       {open && (
         <nav className="grid gap-4 border-t border-[rgba(0,255,0,0.18)] bg-black px-4 py-4 text-sm md:hidden">
-          <a href="/#why" onClick={() => setOpen(false)}>Why KOFENOT</a>
-          <a href="/#how-it-works" onClick={() => setOpen(false)}>How It Works</a>
-          <a href="/#specs" onClick={() => setOpen(false)}>Specifications</a>
-          <Link to="/wholesale" onClick={() => setOpen(false)}>Wholesale</Link>
+          <a href="/#why" onClick={() => setOpen(false)}>
+            Why KOFENOT
+          </a>
+          <a href="/#how-it-works" onClick={() => setOpen(false)}>
+            How It Works
+          </a>
+          <a href="/#specs" onClick={() => setOpen(false)}>
+            Specifications
+          </a>
+          <Link to="/wholesale" onClick={() => setOpen(false)}>
+            Wholesale
+          </Link>
           <a
             href="/#pricing"
             onClick={() => setOpen(false)}
