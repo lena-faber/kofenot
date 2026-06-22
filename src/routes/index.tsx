@@ -177,6 +177,58 @@ function Home() {
   <Play className="h-7 w-7 shrink-0 fill-white text-white" />
   <span className="whitespace-nowrap">2-sec setup</span>
 </button>
+
+{/* Bottom hero tabs */}
+<Reveal delay={0.2}>
+  <div className="mt-auto grid w-full grid-cols-1 border-t border-white/20 bg-black/75 backdrop-blur-md sm:grid-cols-2 lg:grid-cols-4">
+    {[
+      {
+        big: "0",
+        title: "Attachments",
+        lines: ["No magnets.", "No adhesives.", "No clips."],
+      },
+      {
+        big: "1 OZ",
+        title: "",
+        lines: ["Pocket-size.", "Flat-folding.", "Ultra-light."],
+      },
+      {
+        big: "2 WINS",
+        title: "",
+        lines: ["Anti-spill.", "Better posture.", "More comfort."],
+      },
+      {
+        big: "3 MODES",
+        title: "",
+        lines: ["Laptops.", "Phones.", "Tablets."],
+      },
+    ].map((tab) => (
+      <div
+        key={tab.big}
+        className="flex min-h-[140px] items-center gap-5 border-b border-r border-white/15 px-5 py-5 last:border-r-0 sm:border-b-0"
+      >
+        <div className="flex h-20 w-20 shrink-0 items-center justify-center rounded-full border-2 border-[color:var(--neon)] text-center text-2xl font-black leading-none neon-text">
+          {tab.big}
+        </div>
+
+        <div>
+          {tab.title && (
+            <div className="mb-1 text-lg font-black uppercase text-white">
+              {tab.title}
+            </div>
+          )}
+
+          <div className="text-base leading-6 text-white/80">
+            {tab.lines.map((line) => (
+              <div key={line}>{line}</div>
+            ))}
+          </div>
+        </div>
+      </div>
+    ))}
+  </div>
+</Reveal>
+    
   </div>
 </section>
         
