@@ -152,6 +152,12 @@ function Home() {
     </Reveal>
 
     {/* Headline */}
+<Reveal delay={0.08}>
+  <p className="ml-6 mt-10 text-lg font-semibold italic uppercase tracking-[0.18em] text-white md:text-xl">
+  COFFEE HAPPENS. BE READY.
+  </p>
+</Reveal>
+    
     <Reveal delay={0.05}>
      <h1 className="mt-4 text-[64px] md:text-[96px] lg:text-[128px] font-black italic leading-[0.9] tracking-tight neon-text">
         ULTIMATE <br />
@@ -161,12 +167,7 @@ function Home() {
       </h1>
     </Reveal>
 
-    <Reveal delay={0.08}>
-  <p className="ml-6 mt-10 text-lg font-semibold italic uppercase tracking-[0.18em] text-white md:text-xl">
-  COFFEE HAPPENS. BE READY.
-  </p>
-      
-</Reveal>
+    
 
     {/* CTA */}
   <button
