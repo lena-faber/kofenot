@@ -153,7 +153,7 @@ function Home() {
 
     {/* Headline */}
     <Reveal delay={0.05}>
-     <h1 className="ml-6 mt-4 text-[64px] md:text-[96px] lg:text-[128px] font-black italic leading-[0.9] tracking-tight neon-text">
+     <h1 className="mt-4 text-[64px] md:text-[96px] lg:text-[128px] font-black italic leading-[0.9] tracking-tight neon-text">
         ULTIMATE <br />
         LAPTOP
         <br />
@@ -162,7 +162,7 @@ function Home() {
     </Reveal>
 
     <Reveal delay={0.08}>
-  <p className="ml-7 mt-4 text-lg font-semibold italic uppercase tracking-[0.18em] text-white md:text-xl">
+  <p className="mt-4 text-lg font-semibold italic uppercase tracking-[0.18em] text-white md:text-xl">
   COFFEE HAPPENS. BE READY.
   </p>
       
