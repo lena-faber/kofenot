@@ -294,7 +294,6 @@ function Home() {
                 ["Material", "High-Impact RoHS-Compliant ABS"],
                 ["Weight Per Unit", "1 oz"],
                 ["Folded Size", "3.4\" L × 2.4\" W × 0.4\" H"],      
-                ["Construction", "Pure mechanical design • zero adhesives • zero magnets"],
                 ["Production Status", "FOB California • OEM ready"],
                 ["IP Status", "Utility patent pending • KofeNot™: Make Your Laptop Coffee-Shop Friendly™ trademark pending"],
               ].map(([k, v]) => (
