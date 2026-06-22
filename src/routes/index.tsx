@@ -154,7 +154,7 @@ function Home() {
   <div className="absolute inset-x-0 bottom-0 z-20">
     <Reveal delay={0.2}>
       <div className="grid min-h-[120px] grid-cols-4 border-t border-white/20 bg-black/60 backdrop-blur-sm">
-        <div className="flex items-center gap-7 border-r border-white/20 px-9 pt-0">
+        <div className="flex items-center gap-7 border-r border-white/20 px-9 pt-0 pb-3">
           <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full border-2 border-[color:var(--neon)] text-4xl font-black neon-text">
             0
           </div>
@@ -194,8 +194,7 @@ function Home() {
               2 WINS
             </div>
             <div className="mt-1 text-base leading-6 text-white/80">
-              <div>Anti-spill.</div>
-              <div>Better posture.</div>
+              <div>Spill Antidote. Better posture.</div>
             </div>
           </div>
         </div>
@@ -210,8 +209,7 @@ function Home() {
               3 MODES
             </div>
             <div className="mt-1 text-base leading-6 text-white/80">
-              <div>Laptops.</div>
-              <div>Phones & Tablets.</div>
+              <div>Laptops/Phones/Tablets</div>
             </div>
           </div>
         </div>
