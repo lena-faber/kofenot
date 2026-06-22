@@ -179,12 +179,12 @@ function Home() {
               1 OZ
             </div>
             <div className="mt-1 text-base leading-6 text-white/80">
-              <div>Pocket-flat-folding</div>
+              <div>Pocket-Flat-Folding</div>
             </div>
           </div>
         </div>
 
-        <div className="flex items-center gap-7 border-r border-white/20 px-9">
+        <div className="flex items-center gap-7 border-r border-white/20 px-3">
           <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full border-2 border-[color:var(--neon)] text-[color:var(--neon)]">
             <Trophy className="h-8 w-8 stroke-[1.5]" />
           </div>
@@ -194,12 +194,12 @@ function Home() {
               2 WINS
             </div>
             <div className="mt-1 text-base leading-6 text-white/80">
-              <div>Spill Antidote. Better posture.</div>
+              <div>Spill Antidote. Better Posture.</div>
             </div>
           </div>
         </div>
 
-        <div className="flex items-center gap-7 px-9">
+        <div className="flex items-center gap-7 px-3">
           <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full border-2 border-[color:var(--neon)] text-[color:var(--neon)]">
             <Laptop className="h-8 w-8 stroke-[1.5]" />
           </div>
@@ -209,7 +209,7 @@ function Home() {
               3 MODES
             </div>
             <div className="mt-1 text-base leading-6 text-white/80">
-              <div>Laptops/Phones/Tablets</div>
+              <div>Laptops / Phones / Tablets</div>
             </div>
           </div>
         </div>
