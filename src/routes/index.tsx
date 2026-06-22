@@ -174,7 +174,7 @@ function Home() {
   className="group inline-flex h-10 w-fit items-center gap-4 rounded-xl bg-red-600 px-6 text-sm font-black uppercase tracking-[0.18em] text-white shadow-[0_0_34px_rgba(220,38,38,0.55)] transition hover:bg-red-500"
 >
   <Play className="h-7 w-7 shrink-0 fill-white text-white" />
-  <span className="whitespace-nowrap">2-sec setup. You'll Get It.</span>
+  <span className="whitespace-nowrap">2-sec setup</span>
 </button>
   </div>
 </section>
