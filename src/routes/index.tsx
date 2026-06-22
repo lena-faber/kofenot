@@ -153,9 +153,9 @@ function Home() {
   {/* Bottom tabs */}
   <div className="absolute inset-x-0 bottom-0 z-20">
     <Reveal delay={0.2}>
-      <div className="grid h-[100px] grid-cols-4 border-t border-white/20 bg-black/60 backdrop-blur-sm">
+      <div className="grid h-[90px] grid-cols-4 border-t border-white/20 bg-black/30 backdrop-blur-sm">
         <div className="flex items-center gap-7 border-r border-white/20 px-9 h-full">
-          <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full border-2 border-[color:var(--neon)] text-4xl font-black neon-text">
+          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border-2 border-[color:var(--neon)] text-4xl font-black neon-text">
             0
           </div>
           <div>
@@ -169,8 +169,8 @@ function Home() {
         </div>
 
         <div className="flex items-center gap-7 border-r border-white/20 px-9">
-          <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full border-2 border-[color:var(--neon)] text-[color:var(--neon)]">
-            <Feather className="h-8 w-8 stroke-[1.5]" />
+          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border-2 border-[color:var(--neon)] text-[color:var(--neon)]">
+            <Feather className="h-7 w-7 stroke-[1.5]" />
           </div>
           <div>
             <div className="text-sm font-black uppercase text-white">
@@ -183,8 +183,8 @@ function Home() {
         </div>
 
         <div className="flex items-center gap-7 border-r border-white/20 px-3">
-          <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full border-2 border-[color:var(--neon)] text-[color:var(--neon)]">
-            <Trophy className="h-8 w-8 stroke-[1.5]" />
+          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border-2 border-[color:var(--neon)] text-[color:var(--neon)]">
+            <Trophy className="h-7 w-7 stroke-[1.5]" />
           </div>
           <div>
             <div className="text-sm font-black uppercase text-white">
@@ -197,8 +197,8 @@ function Home() {
         </div>
 
         <div className="flex items-center gap-7 px-3">
-          <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full border-2 border-[color:var(--neon)] text-[color:var(--neon)]">
-            <Laptop className="h-8 w-8 stroke-[1.5]" />
+          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border-2 border-[color:var(--neon)] text-[color:var(--neon)]">
+            <Laptop className="h-7 w-7 stroke-[1.5]" />
           </div>
           <div>
             <div className="text-sm font-black uppercase text-white">
