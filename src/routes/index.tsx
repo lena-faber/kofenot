@@ -135,45 +135,43 @@ function Home() {
 
 {/* Bottom hero tabs */}
 <Reveal delay={0.2}>
-  <div className="mt-auto grid w-full grid-cols-1 border-t border-white/20 bg-black/75 backdrop-blur-md sm:grid-cols-2 lg:grid-cols-4">
+  <div className="absolute inset-x-0 bottom-0 z-20 grid min-h-[150px] grid-cols-4 border-t border-white/20 bg-black/80 backdrop-blur-sm">
     {[
       {
-        big: "0",
-        title: "Attachments",
+        icon: <span className="text-6xl font-black">0</span>,
+        title: "0 ATTACHMENTS",
         lines: ["No magnets.", "No adhesives.", "No clips."],
       },
       {
-        big: "1 OZ",
-        title: "",
+        icon: <Feather className="h-14 w-14 stroke-[1.5]" />,
+        title: "1 OZ",
         lines: ["Pocket-size.", "Flat-folding.", "Ultra-light."],
       },
       {
-        big: "2 WINS",
-        title: "",
+        icon: <Trophy className="h-14 w-14 stroke-[1.5]" />,
+        title: "2 WINS",
         lines: ["Anti-spill.", "Better posture.", "More comfort."],
       },
       {
-        big: "3 MODES",
-        title: "",
+        icon: <Laptop className="h-14 w-14 stroke-[1.5]" />,
+        title: "3 MODES",
         lines: ["Laptops.", "Phones.", "Tablets."],
       },
     ].map((tab) => (
       <div
-        key={tab.big}
-        className="flex min-h-[140px] items-center gap-5 border-b border-r border-white/15 px-5 py-5 last:border-r-0 sm:border-b-0"
+        key={tab.title}
+        className="flex items-center gap-6 border-r border-white/20 px-8 last:border-r-0"
       >
-        <div className="flex h-20 w-20 shrink-0 items-center justify-center rounded-full border-2 border-[color:var(--neon)] text-center text-2xl font-black leading-none neon-text">
-          {tab.big}
+        <div className="flex h-24 w-24 shrink-0 items-center justify-center rounded-full border-2 border-[color:var(--neon)] text-[color:var(--neon)]">
+          {tab.icon}
         </div>
 
         <div>
-          {tab.title && (
-            <div className="mb-1 text-lg font-black uppercase text-white">
-              {tab.title}
-            </div>
-          )}
+          <div className="text-xl font-black uppercase text-white">
+            {tab.title}
+          </div>
 
-          <div className="text-base leading-6 text-white/80">
+          <div className="mt-1 text-base leading-6 text-white/80">
             {tab.lines.map((line) => (
               <div key={line}>{line}</div>
             ))}
