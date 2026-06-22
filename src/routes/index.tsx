@@ -110,7 +110,7 @@ function Home() {
         {[
           {
             big: "0",
-            small: "Magnets Adhesives Clips",
+            small: "Attachments",
             greenSmall: false,
           },
           {
