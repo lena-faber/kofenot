@@ -34,21 +34,6 @@ import {
   Laptop,
 } from "lucide-react";
 
-import {
-  Play,
-  ArrowRight,
-  Sparkles,
-  Zap,
-  Eye,
-  RotateCcw,
-  Truck,
-  Shield,
-  Check,
-  Feather,
-  Trophy,
-  Laptop,
-} from "lucide-react";
-
 export const Route = createFileRoute("/")({
   component: Home,
 });
