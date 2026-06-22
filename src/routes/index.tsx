@@ -153,7 +153,7 @@ function Home() {
   {/* Bottom tabs */}
   <div className="absolute inset-x-0 bottom-0 z-20">
     <Reveal delay={0.2}>
-      <div className="grid min-h-[150px] grid-cols-4 border-t border-white/20 bg-black/80 backdrop-blur-sm">
+      <div className="grid min-h-[120px] grid-cols-4 border-t border-white/20 bg-black/60 backdrop-blur-sm">
         <div className="flex items-center gap-7 border-r border-white/20 px-9">
           <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full border-2 border-[color:var(--neon)] text-4xl font-black neon-text">
             0
