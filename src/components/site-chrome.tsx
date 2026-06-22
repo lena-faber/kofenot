@@ -16,7 +16,13 @@ export function SiteHeader() {
 <a href="/#how-it-works">How It Works</a>
 <a href="/#specs">Specifications</a>
 <Link to="/wholesale">Wholesale</Link>
-<a href="/#pricing">Buy Now</a>
+
+        <a
+  href="/#pricing"
+  className="hidden sm:inline-flex items-center justify-center rounded-md bg-[color:var(--neon)] px-5 py-2 font-bold text-black hover:bg-[color:var(--neon-dim)]"
+>
+  Buy Now
+</a>
 </nav>
       <div className="flex items-center gap-2"><Button onClick={() => openQuote("header")} className="bg-[color:var(--neon)] text-black hover:bg-[color:var(--neon-dim)] font-bold hidden sm:inline-flex">Buy Now</Button><button className="md:hidden p-2 border border-[rgba(0,255,0,0.25)]" onClick={() => setOpen(v => !v)} aria-label="Toggle menu">{open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}</button></div>
     </div>
