@@ -106,7 +106,7 @@ function Home() {
   <div className="relative z-10 mx-auto flex min-h-[620px] max-w-[1320px] flex-col px-4 pb-8 pt-5 pointer-events-auto lg:px-6 lg:pb-8 lg:pt-6">
     {/* Stat tabs */}
     <Reveal delay={0.2}>
-      <div className="grid grid-cols-1 gap-3 sm:grid-cols-4 lg:absolute lg:right-12 lg:top-60 lg:mt-0 lg:max-w-xl">
+      <div className="grid grid-cols-1 gap-3 sm:grid-cols-4 lg:absolute lg:right-12 lg:top-40 lg:mt-0 lg:max-w-xl">
         {[
           {
             big: "0",
