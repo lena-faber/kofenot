@@ -212,8 +212,7 @@ function Home() {
             </div>
             <div className="mt-1 text-base leading-6 text-white/80">
               <div>Laptops.</div>
-              <div>Phones.</div>
-              <div>Tablets.</div>
+              <div>Phones & Tablets.</div>
             </div>
           </div>
         </div>
