@@ -31,7 +31,7 @@ import {
   Check,
   Feather,
   Trophy,
-  Laptop,
+  MonitorSmartphone,
 } from "lucide-react";
 
 export const Route = createFileRoute("/")({
@@ -191,14 +191,14 @@ function Home() {
               2 WINS
             </div>
             <div className="mt-1 text-base leading-6 text-white/80">
-              <div>Spill Antidote. Better Posture.</div>
+              <div>Spill Antidote / Better Posture.</div>
             </div>
           </div>
         </div>
 
         <div className="flex items-center gap-7 px-3">
           <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border-2 border-[color:var(--neon)] text-[color:var(--neon)]">
-            <Laptop className="h-7 w-7 stroke-[1.5]" />
+            <MonitorSmartphone className="h-7 w-7 stroke-[1.5]" />
           </div>
           <div>
             <div className="text-sm font-black uppercase text-white">
