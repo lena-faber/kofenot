@@ -160,11 +160,9 @@ function Home() {
           </div>
           <div>
             <div className="text-sm font-black uppercase text-white">
-              0
+              0 attachments
             </div>
-            <div className="mt-1 text-base leading-6 text-white/80">
-              <div>Attachments</div>
-            </div>
+            
           </div>
         </div>
 
