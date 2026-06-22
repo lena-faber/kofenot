@@ -123,7 +123,7 @@ function Home() {
   {/* Hero content */}
   <div className="relative z-10 mx-auto min-h-[calc(100svh-4rem)] max-w-[1480px] px-9 pb-[170px] pt-7 lg:px-10">
     <Reveal delay={0.08}>
-      <p className="mt-2 text-lg font-semibold italic uppercase tracking-[0.18em] text-white md:text-xl">
+      <p className="ml-6 mt-2 text-lg font-semibold italic uppercase tracking-[0.18em] text-white md:text-xl">
         COFFEE HAPPENS. BE READY.
       </p>
     </Reveal>
@@ -142,7 +142,7 @@ function Home() {
       <button
         type="button"
         onClick={() => setVideoOpen(true)}
-        className="group mt-10 inline-flex h-16 w-fit items-center gap-5 rounded-lg bg-red-600 px-7 text-lg font-black uppercase tracking-[0.18em] text-white shadow-[0_0_34px_rgba(220,38,38,0.55)] transition hover:bg-red-500"
+        className="group ml-6 mt-10 inline-flex h-10 w-fit items-center gap-5 rounded-lg bg-red-600 px-7 text-lg font-black uppercase tracking-[0.18em] text-white shadow-[0_0_34px_rgba(220,38,38,0.55)] transition hover:bg-red-500"
       >
         <Play className="h-8 w-8 shrink-0 fill-white text-white" />
         <span className="whitespace-nowrap">2-SEC SETUP</span>
