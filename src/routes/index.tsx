@@ -153,12 +153,11 @@ function Home() {
   {/* Bottom tabs */}
   <div className="absolute inset-x-0 bottom-0 z-20">
     <Reveal delay={0.2}>
-      <div className="grid min-h-[120px] grid-cols-4 border-t border-white/20 bg-black/60 backdrop-blur-sm">
-        <div className="flex items-center gap-7 border-r border-white/20 px-9 pt-0 pb-3">
+      <div className="grid h-[100px] grid-cols-4 border-t border-white/20 bg-black/60 backdrop-blur-sm">
+        <div className="flex items-center gap-7 border-r border-white/20 px-9 h-full">
           <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full border-2 border-[color:var(--neon)] text-4xl font-black neon-text">
             0
           </div>
-
           <div>
             <div className="text-sm font-black uppercase text-white">
               0
@@ -173,7 +172,6 @@ function Home() {
           <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full border-2 border-[color:var(--neon)] text-[color:var(--neon)]">
             <Feather className="h-8 w-8 stroke-[1.5]" />
           </div>
-
           <div>
             <div className="text-sm font-black uppercase text-white">
               1 OZ
@@ -188,7 +186,6 @@ function Home() {
           <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full border-2 border-[color:var(--neon)] text-[color:var(--neon)]">
             <Trophy className="h-8 w-8 stroke-[1.5]" />
           </div>
-
           <div>
             <div className="text-sm font-black uppercase text-white">
               2 WINS
@@ -203,7 +200,6 @@ function Home() {
           <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full border-2 border-[color:var(--neon)] text-[color:var(--neon)]">
             <Laptop className="h-8 w-8 stroke-[1.5]" />
           </div>
-
           <div>
             <div className="text-sm font-black uppercase text-white">
               3 MODES
