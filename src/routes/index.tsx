@@ -163,7 +163,7 @@ function Home() {
               0
             </div>
             <div className="mt-1 text-base leading-6 text-white/80">
-              <div>No Magnets, No Clips, No Adhesives</div>
+              <div>No Magnets, Clips, Adhesives</div>
             </div>
             
           </div>
