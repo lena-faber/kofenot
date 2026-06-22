@@ -139,7 +139,7 @@ function Home() {
 
             {p.small && (
               <div
-                className={`mt-0.5 text-[9px] font-bold uppercase leading-snug tracking-[0.2em] ${
+                className={`mt-0.5 text-[12px] font-bold uppercase leading-snug tracking-[0.2em] ${
                   p.greenSmall ? "neon-text" : "text-white"
                 }`}
               >
