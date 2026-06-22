@@ -133,54 +133,6 @@ function Home() {
   <span className="whitespace-nowrap">2-sec setup</span>
 </button>
 
-{/* Bottom hero tabs */}
-<Reveal delay={0.2}>
-  <div className="absolute inset-x-0 bottom-0 z-20 grid min-h-[150px] grid-cols-4 border-t border-white/20 bg-black/80 backdrop-blur-sm">
-    {[
-      {
-        icon: <span className="text-6xl font-black">0</span>,
-        title: "0 ATTACHMENTS",
-        lines: ["No magnets.", "No adhesives.", "No clips."],
-      },
-      {
-        icon: <Feather className="h-14 w-14 stroke-[1.5]" />,
-        title: "1 OZ",
-        lines: ["Pocket-size.", "Flat-folding.", "Ultra-light."],
-      },
-      {
-        icon: <Trophy className="h-14 w-14 stroke-[1.5]" />,
-        title: "2 WINS",
-        lines: ["Anti-spill.", "Better posture.", "More comfort."],
-      },
-      {
-        icon: <Laptop className="h-14 w-14 stroke-[1.5]" />,
-        title: "3 MODES",
-        lines: ["Laptops.", "Phones.", "Tablets."],
-      },
-    ].map((tab) => (
-      <div
-        key={tab.title}
-        className="flex items-center gap-6 border-r border-white/20 px-8 last:border-r-0"
-      >
-        <div className="flex h-24 w-24 shrink-0 items-center justify-center rounded-full border-2 border-[color:var(--neon)] text-[color:var(--neon)]">
-          {tab.icon}
-        </div>
-
-        <div>
-          <div className="text-xl font-black uppercase text-white">
-            {tab.title}
-          </div>
-
-          <div className="mt-1 text-base leading-6 text-white/80">
-            {tab.lines.map((line) => (
-              <div key={line}>{line}</div>
-            ))}
-          </div>
-        </div>
-      </div>
-    ))}
-  </div>
-</Reveal>
     
   </div>
 </section>
