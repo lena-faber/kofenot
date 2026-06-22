@@ -162,7 +162,7 @@ function Home() {
     </Reveal>
 
     <Reveal delay={0.08}>
-  <p className="ml-6 mt-4 text-lg font-semibold italic uppercase tracking-[0.18em] text-white md:text-xl">
+  <p className="ml-6 mt-6 text-lg font-semibold italic uppercase tracking-[0.18em] text-white md:text-xl">
   COFFEE HAPPENS. BE READY.
   </p>
       
