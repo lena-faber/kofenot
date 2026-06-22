@@ -13,10 +13,10 @@ export function SiteHeader() {
       <Link to="/" className="flex items-center gap-4 group"><span className="text-xl font-black tracking-[0.18em] text-[color:var(--neon)] group-hover:text-[color:var(--neon-dim)]">KOFENOT</span><span className="hidden sm:block text-[11px] uppercase tracking-[0.2em] text-[color:var(--neon)] font-bold">Make your laptop coffeeshop-friendly™</span></Link>
       <nav className="hidden md:flex items-center gap-6 text-sm">
   <a href="/#why">Why KOFENOT</a>
-  <a href="/#how-it-works">How It Works</a>
-  <a href="/#specs">Specifications</a>
-  <Link to="/wholesale">Wholesale</Link>
-  <a href="/#pricing">Buy Now</a>
+<a href="/#how-it-works">How It Works</a>
+<a href="/#specs">Specifications</a>
+<Link to="/wholesale">Wholesale</Link>
+<a href="/#pricing">Buy Now</a>
 </nav>
       <div className="flex items-center gap-2"><Button onClick={() => openQuote("header")} className="bg-[color:var(--neon)] text-black hover:bg-[color:var(--neon-dim)] font-bold hidden sm:inline-flex">Request a Quote</Button><button className="md:hidden p-2 border border-[rgba(0,255,0,0.25)]" onClick={() => setOpen(v => !v)} aria-label="Toggle menu">{open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}</button></div>
     </div>
