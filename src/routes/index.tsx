@@ -203,7 +203,7 @@ function Home() {
           </div>
           <div>
             <div className="text-sm font-black uppercase text-white">
-              3 DEVICES FIT
+              3 DEVICES
             </div>
             <div className="mt-1 text-base leading-6 text-white/80">
               <div>Laptops / Phones / Tablets</div>
@@ -293,11 +293,8 @@ function Home() {
               {[
                 ["Material", "High-Impact RoHS-Compliant ABS"],
                 ["Weight Per Unit", "1 oz"],
-                ["Folded Size", "3.4\" L × 2.4\" W × 0.4\" H"],
-                ["Branding Area", "2.0\" L × 1.6\" W • front-facing flat branding surface"],
+                ["Folded Size", "3.4\" L × 2.4\" W × 0.4\" H"],      
                 ["Construction", "Pure mechanical design • zero adhesives • zero magnets"],
-                ["Compatible Devices", "Most laptops, tablets, phones"],
-                ["Ergonomics", "Posture support • spill deflection"],
                 ["Production Status", "FOB California • OEM ready"],
                 ["IP Status", "Utility patent pending • KofeNot™: Make Your Laptop Coffee-Shop Friendly™ trademark pending"],
               ].map(([k, v]) => (
