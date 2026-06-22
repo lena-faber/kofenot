@@ -160,10 +160,10 @@ function Home() {
           </div>
           <div>
             <div className="text-sm font-black uppercase text-white">
-              No
+              0
             </div>
             <div className="mt-1 text-base leading-6 text-white/80">
-              <div>Magnets, Clips, Adhesives</div>
+              <div>No Magnets, No Clips, No Adhesives</div>
             </div>
             
           </div>
