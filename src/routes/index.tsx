@@ -2,7 +2,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState, useEffect, useRef } from "react";
 import { motion, useInView } from "motion/react";
-import { Play, ArrowRight, Sparkles, Zap, Eye, RotateCcw, Truck, Shield, Check } from "lucide-react";
+
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { useLeads } from "@/components/lead-provider";
