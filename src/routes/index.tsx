@@ -202,7 +202,7 @@ function Home() {
           </div>
           <div>
             <div className="text-sm font-black uppercase text-white">
-              3 MODES
+              3 DEVICES
             </div>
             <div className="mt-1 text-base leading-6 text-white/80">
               <div>Laptops / Phones / Tablets</div>
