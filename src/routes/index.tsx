@@ -155,7 +155,7 @@ function Home() {
     <Reveal delay={0.2}>
       <div className="grid min-h-[150px] grid-cols-4 border-t border-white/20 bg-black/80 backdrop-blur-sm">
         <div className="flex items-center gap-7 border-r border-white/20 px-9">
-          <div className="flex h-24 w-24 shrink-0 items-center justify-center rounded-full border-2 border-[color:var(--neon)] text-4xl font-black neon-text">
+          <div className="flex h-20 w-20 shrink-0 items-center justify-center rounded-full border-2 border-[color:var(--neon)] text-4xl font-black neon-text">
             0
           </div>
 
@@ -170,8 +170,8 @@ function Home() {
         </div>
 
         <div className="flex items-center gap-7 border-r border-white/20 px-9">
-          <div className="flex h-24 w-24 shrink-0 items-center justify-center rounded-full border-2 border-[color:var(--neon)] text-[color:var(--neon)]">
-            <Feather className="h-14 w-14 stroke-[1.5]" />
+          <div className="flex h-20 w-20 shrink-0 items-center justify-center rounded-full border-2 border-[color:var(--neon)] text-[color:var(--neon)]">
+            <Feather className="h-10 w-10 stroke-[1.5]" />
           </div>
 
           <div>
@@ -186,8 +186,8 @@ function Home() {
         </div>
 
         <div className="flex items-center gap-7 border-r border-white/20 px-9">
-          <div className="flex h-24 w-24 shrink-0 items-center justify-center rounded-full border-2 border-[color:var(--neon)] text-[color:var(--neon)]">
-            <Trophy className="h-14 w-14 stroke-[1.5]" />
+          <div className="flex h-20 w-20 shrink-0 items-center justify-center rounded-full border-2 border-[color:var(--neon)] text-[color:var(--neon)]">
+            <Trophy className="h-10 w-10 stroke-[1.5]" />
           </div>
 
           <div>
@@ -202,8 +202,8 @@ function Home() {
         </div>
 
         <div className="flex items-center gap-7 px-9">
-          <div className="flex h-24 w-24 shrink-0 items-center justify-center rounded-full border-2 border-[color:var(--neon)] text-[color:var(--neon)]">
-            <Laptop className="h-14 w-14 stroke-[1.5]" />
+          <div className="flex h-20 w-20 shrink-0 items-center justify-center rounded-full border-2 border-[color:var(--neon)] text-[color:var(--neon)]">
+            <Laptop className="h-10 w-10 stroke-[1.5]" />
           </div>
 
           <div>
