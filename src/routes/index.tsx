@@ -151,28 +151,6 @@ function Home() {
       </div>
     </Reveal>
 
-    <button
-  onClick={() => setVideoOpen(true)}
-  className="group flex h-14 items-center gap-4 rounded-xl bg-red-600 px-6 text-sm font-black uppercase tracking-[0.18em] text-white shadow-[0_0_34px_rgba(220,38,38,0.55)] transition hover:bg-red-500"
->
-  <Play className="h-7 w-7 fill-white text-white" />
-  <span>See It in 2 Seconds</span>
-</button>
-
-    <Reveal delay={0.1}>
-  <div className="relative z-20 mt-4 flex pointer-events-auto lg:absolute lg:right-12 lg:top-36">
-    <button
-      onClick={() => setVideoOpen(true)}
-      className="group flex items-center gap-4 text-base font-black uppercase tracking-[0.18em] text-[#00ff00] transition md:text-sm"
-    >
-      <span className="flex h-16 w-24 items-center justify-center rounded-1xl bg-red-600 transition group-hover:scale-105 group-hover:bg-red-500">
-        <Play className="ml-1 h-8 w-8 fill-white text-[#00ff00]" />
-      </span>
-      See It In 2 seconds
-    </button>
-  </div>
-</Reveal>
-
     {/* Headline */}
     <Reveal delay={0.05}>
      <h1 className="ml-6 mt-4 text-[64px] md:text-[96px] lg:text-[128px] font-black italic leading-[0.9] tracking-tight neon-text">
