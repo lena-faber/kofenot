@@ -155,18 +155,16 @@ function Home() {
     <Reveal delay={0.2}>
       <div className="grid min-h-[150px] grid-cols-4 border-t border-white/20 bg-black/80 backdrop-blur-sm">
         <div className="flex items-center gap-7 border-r border-white/20 px-9">
-          <div className="flex h-24 w-24 shrink-0 items-center justify-center rounded-full border-2 border-[color:var(--neon)] text-6xl font-black neon-text">
+          <div className="flex h-24 w-24 shrink-0 items-center justify-center rounded-full border-2 border-[color:var(--neon)] text-4xl font-black neon-text">
             0
           </div>
 
           <div>
             <div className="text-xl font-black uppercase text-white">
-              0 ATTACHMENTS
+              0
             </div>
             <div className="mt-1 text-base leading-6 text-white/80">
-              <div>No magnets.</div>
-              <div>No adhesives.</div>
-              <div>No clips.</div>
+              <div>Attachments</div>
             </div>
           </div>
         </div>
@@ -183,7 +181,6 @@ function Home() {
             <div className="mt-1 text-base leading-6 text-white/80">
               <div>Pocket-size.</div>
               <div>Flat-folding.</div>
-              <div>Ultra-light.</div>
             </div>
           </div>
         </div>
@@ -200,7 +197,6 @@ function Home() {
             <div className="mt-1 text-base leading-6 text-white/80">
               <div>Anti-spill.</div>
               <div>Better posture.</div>
-              <div>More comfort.</div>
             </div>
           </div>
         </div>
