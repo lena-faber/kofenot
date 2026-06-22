@@ -117,7 +117,7 @@ function Home() {
     />
 
     <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/50 to-transparent" />
-    <div className="absolute inset-x-0 bottom-0 h-52 bg-gradient-to-t from-black to-transparent" />
+    
   </div>
 
   {/* Hero content */}
