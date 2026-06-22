@@ -18,9 +18,9 @@ export function SiteHeader() {
 <Link to="/wholesale">Wholesale</Link>
 <a href="/#pricing">Buy Now</a>
 </nav>
-      <div className="flex items-center gap-2"><Button onClick={() => openQuote("header")} className="bg-[color:var(--neon)] text-black hover:bg-[color:var(--neon-dim)] font-bold hidden sm:inline-flex">Request a Quote</Button><button className="md:hidden p-2 border border-[rgba(0,255,0,0.25)]" onClick={() => setOpen(v => !v)} aria-label="Toggle menu">{open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}</button></div>
+      <div className="flex items-center gap-2"><Button onClick={() => openQuote("header")} className="bg-[color:var(--neon)] text-black hover:bg-[color:var(--neon-dim)] font-bold hidden sm:inline-flex">Buy Now</Button><button className="md:hidden p-2 border border-[rgba(0,255,0,0.25)]" onClick={() => setOpen(v => !v)} aria-label="Toggle menu">{open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}</button></div>
     </div>
-    {open && <div className="md:hidden border-t border-[rgba(0,255,0,0.18)] bg-black"><div className="px-4 py-4 grid gap-4 text-sm"><a href="/#why" onClick={() => setOpen(false)}>Why It Sells</a><a href="/#how-it-works" onClick={() => setOpen(false)}>How It Works</a><a href="/#specs" onClick={() => setOpen(false)}>Specs</a><Link to="/wholesale" onClick={() => setOpen(false)} className="text-[color:var(--neon)] font-bold">Wholesale</Link><Link to="/spec" onClick={() => setOpen(false)}>Spec Sheet</Link><Button onClick={() => { setOpen(false); openQuote("mobile-nav"); }} className="bg-[color:var(--neon)] text-black font-bold">Request a Quote</Button></div></div>}
+    {open && <div className="md:hidden border-t border-[rgba(0,255,0,0.18)] bg-black"><div className="px-4 py-4 grid gap-4 text-sm"><a href="/#why" onClick={() => setOpen(false)}>Why It Sells</a><a href="/#how-it-works" onClick={() => setOpen(false)}>How It Works</a><a href="/#specs" onClick={() => setOpen(false)}>Specs</a><Link to="/wholesale" onClick={() => setOpen(false)} className="text-[color:var(--neon)] font-bold">Wholesale</Link><Link to="/spec" onClick={() => setOpen(false)}>Spec Sheet</Link><Button onClick={() => { setOpen(false); openQuote("mobile-nav"); }} className="bg-[color:var(--neon)] text-black font-bold">Buy Now</Button></div></div>}
   </header>;
 }
 
