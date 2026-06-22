@@ -179,8 +179,7 @@ function Home() {
               1 OZ
             </div>
             <div className="mt-1 text-base leading-6 text-white/80">
-              <div>Pocket-size.</div>
-              <div>Flat-folding.</div>
+              <div>Pocket-flat-folding</div>
             </div>
           </div>
         </div>
