@@ -19,6 +19,21 @@ import fidget from "@/assets/kofeenot-fidget.jpg";
 import brand from "@/assets/kofeenot-brand.jpg";
 import demoVideo from "@/assets/kofeenot-demo.mp4";
 
+import {
+  Play,
+  ArrowRight,
+  Sparkles,
+  Zap,
+  Eye,
+  RotateCcw,
+  Truck,
+  Shield,
+  Check,
+  Feather,
+  Trophy,
+  Laptop,
+} from "lucide-react";
+
 export const Route = createFileRoute("/")({
   component: Home,
 });
@@ -85,12 +100,12 @@ function Home() {
 
   return (
     <>
-      {/* HERO */}
+{/* HERO */}
 <section
   ref={heroRef}
-  className="relative isolate -mt-16 overflow-hidden bg-black pt-16"
+  className="relative isolate -mt-16 min-h-[100svh] overflow-hidden bg-black pt-16"
 >
-  {/* Background product image */}
+  {/* Background image */}
   <div
     className="pointer-events-none absolute inset-0 z-0"
     aria-hidden="true"
@@ -100,40 +115,114 @@ function Home() {
       alt=""
       className="absolute inset-0 h-full w-full object-cover object-center"
     />
-    <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/80 via-5% to-transparent" />
+
+    <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/50 to-transparent" />
+    <div className="absolute inset-x-0 bottom-0 h-52 bg-gradient-to-t from-black to-transparent" />
   </div>
-  
-  <div className="relative z-10 mx-auto flex min-h-[620px] max-w-[1320px] flex-col px-4 pb-8 pt-5 pointer-events-auto lg:px-6 lg:pb-8 lg:pt-6">
 
+  {/* Hero content */}
+  <div className="relative z-10 mx-auto min-h-[calc(100svh-4rem)] max-w-[1480px] px-9 pb-[170px] pt-7 lg:px-10">
+    <Reveal delay={0.08}>
+      <p className="mt-2 text-lg font-semibold italic uppercase tracking-[0.18em] text-white md:text-xl">
+        COFFEE HAPPENS. BE READY.
+      </p>
+    </Reveal>
 
-    {/* Headline */}
-<Reveal delay={0.08}>
-  <p className="ml-6 mt-10 text-lg font-semibold italic uppercase tracking-[0.18em] text-white md:text-xl">
-  COFFEE HAPPENS. BE READY.
-  </p>
-</Reveal>
-    
     <Reveal delay={0.05}>
-     <h1 className="mt-4 text-[64px] md:text-[96px] lg:text-[128px] font-black italic leading-[0.9] tracking-tight neon-text">
-        ULTIMATE <br />
+      <h1 className="mt-6 text-[64px] font-black italic leading-[0.9] tracking-tight neon-text md:text-[96px] lg:text-[128px]">
+        ULTIMATE
+        <br />
         LAPTOP
         <br />
         WEDGE
       </h1>
     </Reveal>
 
-    
+    <Reveal delay={0.15}>
+      <button
+        type="button"
+        onClick={() => setVideoOpen(true)}
+        className="group mt-10 inline-flex h-16 w-fit items-center gap-5 rounded-lg bg-red-600 px-7 text-lg font-black uppercase tracking-[0.18em] text-white shadow-[0_0_34px_rgba(220,38,38,0.55)] transition hover:bg-red-500"
+      >
+        <Play className="h-8 w-8 shrink-0 fill-white text-white" />
+        <span className="whitespace-nowrap">2-SEC SETUP</span>
+      </button>
+    </Reveal>
+  </div>
 
-    {/* CTA */}
-  <button
-  onClick={() => setVideoOpen(true)}
-  className="group ml-7 mt-10 inline-flex h-12 w-fit items-center gap-4 rounded-xl bg-red-600 pl-3 pr-6 text-sm font-black uppercase tracking-[0.18em] text-white shadow-[0_0_34px_rgba(220,38,38,0.55)] transition hover:bg-red-500"
->
-  <Play className="h-7 w-7 shrink-0 fill-white text-white" />
-  <span className="whitespace-nowrap">2-sec setup</span>
-</button>
+  {/* Bottom tabs */}
+  <div className="absolute inset-x-0 bottom-0 z-20">
+    <Reveal delay={0.2}>
+      <div className="grid min-h-[150px] grid-cols-4 border-t border-white/20 bg-black/80 backdrop-blur-sm">
+        <div className="flex items-center gap-7 border-r border-white/20 px-9">
+          <div className="flex h-24 w-24 shrink-0 items-center justify-center rounded-full border-2 border-[color:var(--neon)] text-6xl font-black neon-text">
+            0
+          </div>
 
-    
+          <div>
+            <div className="text-xl font-black uppercase text-white">
+              0 ATTACHMENTS
+            </div>
+            <div className="mt-1 text-base leading-6 text-white/80">
+              <div>No magnets.</div>
+              <div>No adhesives.</div>
+              <div>No clips.</div>
+            </div>
+          </div>
+        </div>
+
+        <div className="flex items-center gap-7 border-r border-white/20 px-9">
+          <div className="flex h-24 w-24 shrink-0 items-center justify-center rounded-full border-2 border-[color:var(--neon)] text-[color:var(--neon)]">
+            <Feather className="h-14 w-14 stroke-[1.5]" />
+          </div>
+
+          <div>
+            <div className="text-xl font-black uppercase text-white">
+              1 OZ
+            </div>
+            <div className="mt-1 text-base leading-6 text-white/80">
+              <div>Pocket-size.</div>
+              <div>Flat-folding.</div>
+              <div>Ultra-light.</div>
+            </div>
+          </div>
+        </div>
+
+        <div className="flex items-center gap-7 border-r border-white/20 px-9">
+          <div className="flex h-24 w-24 shrink-0 items-center justify-center rounded-full border-2 border-[color:var(--neon)] text-[color:var(--neon)]">
+            <Trophy className="h-14 w-14 stroke-[1.5]" />
+          </div>
+
+          <div>
+            <div className="text-xl font-black uppercase text-white">
+              2 WINS
+            </div>
+            <div className="mt-1 text-base leading-6 text-white/80">
+              <div>Anti-spill.</div>
+              <div>Better posture.</div>
+              <div>More comfort.</div>
+            </div>
+          </div>
+        </div>
+
+        <div className="flex items-center gap-7 px-9">
+          <div className="flex h-24 w-24 shrink-0 items-center justify-center rounded-full border-2 border-[color:var(--neon)] text-[color:var(--neon)]">
+            <Laptop className="h-14 w-14 stroke-[1.5]" />
+          </div>
+
+          <div>
+            <div className="text-xl font-black uppercase text-white">
+              3 MODES
+            </div>
+            <div className="mt-1 text-base leading-6 text-white/80">
+              <div>Laptops.</div>
+              <div>Phones.</div>
+              <div>Tablets.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </Reveal>
   </div>
 </section>
         
