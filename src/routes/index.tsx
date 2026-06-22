@@ -19,21 +19,6 @@ import fidget from "@/assets/kofeenot-fidget.jpg";
 import brand from "@/assets/kofeenot-brand.jpg";
 import demoVideo from "@/assets/kofeenot-demo.mp4";
 
-import {
-  Play,
-  ArrowRight,
-  Sparkles,
-  Zap,
-  Eye,
-  RotateCcw,
-  Truck,
-  Shield,
-  Check,
-  Feather,
-  Trophy,
-  Laptop,
-} from "lucide-react";
-
 export const Route = createFileRoute("/")({
   component: Home,
 });
