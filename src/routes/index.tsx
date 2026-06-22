@@ -151,7 +151,7 @@ function Home() {
   </div>
 
   {/* Bottom tabs */}
-  <div className="absolute inset-x-0 bottom-5 z-20">
+  <div className="absolute inset-x-0 bottom-10 z-20">
     <Reveal delay={0.2}>
       <div className="grid h-[90px] grid-cols-4 border-t border-white/20 bg-black/10 backdrop-blur-sm">
         <div className="flex items-center gap-7 border-r border-white/20 px-9 h-full">
