@@ -142,7 +142,7 @@ function Home() {
       <button
         type="button"
         onClick={() => setVideoOpen(true)}
-        className="group ml-6 mt-10 inline-flex h-10 w-fit items-center gap-5 rounded-lg bg-red-600 px-7 text-lg font-black uppercase tracking-[0.18em] text-white shadow-[0_0_34px_rgba(220,38,38,0.55)] transition hover:bg-red-500"
+        className="group ml-6 mt-10 inline-flex h-8 w-fit items-center gap-5 rounded-lg bg-red-600 px-7 text-sm font-black uppercase tracking-[0.18em] text-white shadow-[0_0_34px_rgba(220,38,38,0.55)] transition hover:bg-red-500"
       >
         <Play className="h-8 w-8 shrink-0 fill-white text-white" />
         <span className="whitespace-nowrap">2-SEC SETUP</span>
@@ -155,12 +155,12 @@ function Home() {
     <Reveal delay={0.2}>
       <div className="grid min-h-[150px] grid-cols-4 border-t border-white/20 bg-black/80 backdrop-blur-sm">
         <div className="flex items-center gap-7 border-r border-white/20 px-9">
-          <div className="flex h-20 w-20 shrink-0 items-center justify-center rounded-full border-2 border-[color:var(--neon)] text-4xl font-black neon-text">
+          <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full border-2 border-[color:var(--neon)] text-4xl font-black neon-text">
             0
           </div>
 
           <div>
-            <div className="text-xl font-black uppercase text-white">
+            <div className="text-sm font-black uppercase text-white">
               0
             </div>
             <div className="mt-1 text-base leading-6 text-white/80">
@@ -170,8 +170,8 @@ function Home() {
         </div>
 
         <div className="flex items-center gap-7 border-r border-white/20 px-9">
-          <div className="flex h-20 w-20 shrink-0 items-center justify-center rounded-full border-2 border-[color:var(--neon)] text-[color:var(--neon)]">
-            <Feather className="h-10 w-10 stroke-[1.5]" />
+          <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full border-2 border-[color:var(--neon)] text-[color:var(--neon)]">
+            <Feather className="h-8 w-8 stroke-[1.5]" />
           </div>
 
           <div>
