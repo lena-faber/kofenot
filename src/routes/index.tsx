@@ -243,7 +243,7 @@ function Home() {
       </section>
 
       {/* HOW IT WORKS */}
-      <section id="how-it-works" className="mx-auto max-w-[1320px] px-4 lg:px-6 py-20 border-t border-[rgba(0,255,0,0.12)]">
+      <section id="how-it-works" className="mx-auto max-w-[1320px] px-4 lg:px-6 pt-8 border-t border-[rgba(0,255,0,0.12)]">
         <Reveal>
           <h2 className="text-4xl md:text-5xl font-black tracking-tight">
             How It Works: <span className="neon-text">Open › Rest › Snap</span>
