@@ -216,7 +216,7 @@ function Home() {
 </section>
         
       {/* TWO WINS */}
-      <section id="why" className="mx-auto max-w-[1320px] px-4 lg:px-6 py-20 border-t border-[rgba(0,255,0,0.12)]">
+      <section id="why" className="mx-auto max-w-[1320px] px-4 lg:px-6 pt-10 pb-10 border-t border-[rgba(0,255,0,0.12)]">
         <Reveal>
           <h2 className="text-4xl md:text-5xl font-black tracking-tight">One Small Wedge. <span className="neon-text">Two Big Wins</span></h2>
         </Reveal>
@@ -243,7 +243,7 @@ function Home() {
       </section>
 
       {/* HOW IT WORKS */}
-      <section id="how-it-works" className="mx-auto max-w-[1320px] px-4 lg:px-6 pt-8 border-t border-[rgba(0,255,0,0.12)]">
+      <section id="how-it-works" className="mx-auto max-w-[1320px] px-4 lg:px-6 pt-10 pb-10 border-t border-[rgba(0,255,0,0.12)]">
         <Reveal>
           <h2 className="text-4xl md:text-5xl font-black tracking-tight">
             How It Works: <span className="neon-text">Open › Rest › Snap</span>
@@ -282,7 +282,7 @@ function Home() {
       </section>
 
       {/* SPECS */}
-      <section id="specs" className="mx-auto max-w-[1320px] px-4 lg:px-6 py-20 border-t border-[rgba(0,255,0,0.12)]">
+      <section id="specs" className="mx-auto max-w-[1320px] px-4 lg:px-6 pt-10 pb-10 border-t border-[rgba(0,255,0,0.12)]">
         <Reveal>
           <h2 className="text-4xl md:text-5xl font-black tracking-tight">Technical <span className="neon-text">Specifications</span></h2>
           <p className="text-muted-foreground mt-3">Patent-Pending Geometry</p>
@@ -315,7 +315,7 @@ function Home() {
       </section>
 
       {/* PRICING */}
-      <section id="pricing" className="mx-auto max-w-[1320px] px-4 lg:px-6 py-20 border-t border-[rgba(0,255,0,0.12)]">
+      <section id="pricing" className="mx-auto max-w-[1320px] px-4 lg:px-6 pt-10 pb-10 border-t border-[rgba(0,255,0,0.12)]">
         <Reveal>
           <h2 className="text-4xl md:text-5xl font-black tracking-tight">Retail • Café • <span className="neon-text">Wholesale</span></h2>
           <p className="text-muted-foreground mt-3">24-48h dispatch • FOB SF Bay Area, CA, US</p>
