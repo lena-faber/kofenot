@@ -19,7 +19,7 @@ export function SiteHeader() {
           </span>
         </Link>
 
-        <nav className="ml-8 hidden items-center gap-6 text-sm md:flex">
+        <nav className="ml-auto hidden items-center gap-6 text-sm md:flex">
           <a
             href="/#why"
             className="transition-colors hover:text-[color:var(--neon)]"
