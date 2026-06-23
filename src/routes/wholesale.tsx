@@ -37,7 +37,7 @@ const offers = [
     description:
       "Review the product, fit, finish, and branding surface before a volume order.",
     checkout: "https://buy.stripe.com/9B614m9aC2m0eYM2lCdUY0F",
-    cta: "Order raw sample",
+    cta: "Buy raw sample",
   },
   {
     label: "Pilot / Team Pack",
