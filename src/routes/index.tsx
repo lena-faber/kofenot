@@ -284,7 +284,7 @@ function Home() {
       {/* SPECS */}
       <section id="specs" className="mx-auto max-w-[1320px] px-4 lg:px-6 pt-10 pb-10 border-t border-[rgba(0,255,0,0.12)]">
         <Reveal>
-          <h2 className="text-4xl md:text-5xl font-black tracking-tight">Technical <span className="neon-text">Specifications</span></h2>
+          <h2 className="text-4xl md:text-5xl font-black tracking-tight"><span className="neon-text">Specifications</span></h2>
           <p className="text-muted-foreground mt-3">Patent-Pending Geometry</p>
         </Reveal>
         <div className="mt-10 panel rounded-sm overflow-hidden">
