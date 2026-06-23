@@ -273,7 +273,7 @@ function Wholesale() {
           </h2>
           <p className="mt-4 max-w-3xl text-lg text-muted-foreground">
             These are raw, unbranded KofeNot™ units. Branding and custom
-            packaging are quoted separately.
+            packaging are quoted separately. Large-volume orders may qualify for substantial discounts.
           </p>
 
           <div className="mt-10 grid gap-4 lg:grid-cols-3">
