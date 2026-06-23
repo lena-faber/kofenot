@@ -8,7 +8,7 @@ export function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-[100] isolate border-b border-white/5 bg-black/70 text-white backdrop-blur-md">
-      <div className="ml-2 flex h-16 max-w-[1320px] items-center gap-3 px-4 lg:px-6">
+      <div className="ml-auto flex h-16 max-w-[1320px] items-center gap-3 px-4 lg:px-6">
         <Link to="/" className="group flex shrink-0 items-center gap-4">
           <span className="text-xl font-black tracking-[0.18em] text-[color:var(--neon)] group-hover:text-[color:var(--neon-dim)]">
             KOFENOT
