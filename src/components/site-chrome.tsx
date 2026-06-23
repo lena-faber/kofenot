@@ -38,7 +38,7 @@ export function SiteHeader() {
             href="/#specs"
             className="transition-colors hover:text-[color:var(--neon)]"
           >
-            Specifications
+            Specs
           </a>
 
           <Link
