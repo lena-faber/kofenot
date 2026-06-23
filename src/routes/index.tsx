@@ -216,7 +216,7 @@ function Home() {
 </section>
         
       {/* TWO WINS */}
-      <section id="why" className="mx-auto max-w-[1320px] px-4 lg:px-6 pt-10 pb-10 border-t border-[rgba(0,255,0,0.12)]">
+      <section id="why" className="mx-auto max-w-[1320px] px-4 lg:px-6 pt-20 pb-10 border-t border-[rgba(0,255,0,0.12)]">
         <Reveal>
           <h2 className="text-4xl md:text-5xl font-black tracking-tight">One Small Wedge. <span className="neon-text">Two Big Wins</span></h2>
         </Reveal>
