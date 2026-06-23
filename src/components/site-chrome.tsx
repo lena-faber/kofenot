@@ -7,64 +7,105 @@ export function SiteHeader() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-[100] isolate bg-black/70 text-white backdrop-blur-md">
-      <div className="mx-auto flex h-16 max-w-[1320px] items-center gap-4 px-4 lg:px-6">
-        <Link to="/" className="flex shrink-0 items-center gap-4 group">
+    <header className="sticky top-0 z-[100] isolate border-b border-white/5 bg-black/70 text-white backdrop-blur-md">
+      <div className="mx-auto flex h-16 max-w-[1320px] items-center gap-3 px-4 lg:px-6">
+        <Link to="/" className="group flex shrink-0 items-center gap-4">
           <span className="text-xl font-black tracking-[0.18em] text-[color:var(--neon)] group-hover:text-[color:var(--neon-dim)]">
             KOFENOT
           </span>
-          <span className="whitespace-nowrap text-[11px] font-bold uppercase tracking-[0.2em] text-[color:var(--neon)]">
+
+          <span className="hidden whitespace-nowrap text-[11px] font-bold uppercase tracking-[0.2em] text-[color:var(--neon)] sm:block">
             Make your laptop coffeeshop-friendly™
           </span>
         </Link>
 
         <nav className="ml-8 hidden items-center gap-6 text-sm md:flex">
-          <a href="/#why">Why KOFENOT</a>
-          <a href="/#how-it-works">How It Works</a>
-          <a href="/#specs">Specifications</a>
-          <Link to="/wholesale">Wholesale</Link>
-        </nav>
-
-        <a
-          href="/#pricing"
-          className="ml-auto hidden shrink-0 items-center justify-center rounded-md bg-[color:var(--neon)] px-8 py-3 font-bold text-black hover:bg-[color:var(--neon-dim)] sm:inline-flex"
-        >
-          Buy Now
-        </a>
-
-        <button
-          type="button"
-          className="ml-auto border border-[rgba(0,255,0,0.25)] p-2 md:hidden"
-          onClick={() => setOpen((value) => !value)}
-          aria-label="Toggle menu"
-        >
-          {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-        </button>
-      </div>
-
-      {open && (
-        <nav className="grid gap-4 border-t border-[rgba(0,255,0,0.18)] bg-black px-4 py-4 text-sm md:hidden">
-          <a href="/#why" onClick={() => setOpen(false)}>
+          <a
+            href="/#why"
+            className="transition-colors hover:text-[color:var(--neon)]"
+          >
             Why KOFENOT
           </a>
-          <a href="/#how-it-works" onClick={() => setOpen(false)}>
+
+          <a
+            href="/#how-it-works"
+            className="transition-colors hover:text-[color:var(--neon)]"
+          >
             How It Works
           </a>
-          <a href="/#specs" onClick={() => setOpen(false)}>
+
+          <a
+            href="/#specs"
+            className="transition-colors hover:text-[color:var(--neon)]"
+          >
             Specifications
           </a>
-          <Link to="/wholesale" onClick={() => setOpen(false)}>
+
+          <Link
+            to="/wholesale"
+            className="transition-colors hover:text-[color:var(--neon)]"
+          >
             Wholesale
           </Link>
+        </nav>
+
+        <div className="ml-auto flex shrink-0 items-center gap-2">
           <a
             href="/#pricing"
-            onClick={() => setOpen(false)}
-            className="flex justify-center rounded-md bg-[color:var(--neon)] px-5 py-2 font-bold text-black"
+            className="inline-flex items-center justify-center whitespace-nowrap rounded-md bg-[color:var(--neon)] px-4 py-2 text-sm font-bold text-black transition-colors hover:bg-[color:var(--neon-dim)] sm:px-6"
           >
             Buy Now
           </a>
-        </nav>
-      )}
+
+          <button
+            type="button"
+            className="inline-flex items-center justify-center border border-[rgba(0,255,0,0.25)] p-2 transition-colors hover:border-[color:var(--neon)] hover:text-[color:var(--neon)] md:hidden"
+            onClick={() => setOpen((value) => !value)}
+            aria-label={open ? "Close menu" : "Open menu"}
+            aria-expanded={open}
+          >
+            <span
+              className={`transition-transform duration-300 ${
+                open ? "rotate-90" : "rotate-0"
+              }`}
+            >
+              {open ? (
+                <X className="h-5 w-5" />
+              ) : (
+                <Menu className="h-5 w-5" />
+              )}
+            </span>
+          </button>
+        </div>
+      </div>
+
+      <div
+        className={`grid bg-black transition-[grid-template-rows,opacity] duration-300 ease-out md:hidden ${
+          open
+            ? "grid-rows-[1fr] opacity-100"
+            : "pointer-events-none grid-rows-[0fr] opacity-0"
+        }`}
+      >
+        <div className="overflow-hidden">
+          <nav className="grid gap-4 border-t border-[rgba(0,255,0,0.18)] px-4 py-4 text-sm">
+            <a href="/#why" onClick={() => setOpen(false)}>
+              Why KOFENOT
+            </a>
+
+            <a href="/#how-it-works" onClick={() => setOpen(false)}>
+              How It Works
+            </a>
+
+            <a href="/#specs" onClick={() => setOpen(false)}>
+              Specifications
+            </a>
+
+            <Link to="/wholesale" onClick={() => setOpen(false)}>
+              Wholesale
+            </Link>
+          </nav>
+        </div>
+      </div>
     </header>
   );
 }
