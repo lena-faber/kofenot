@@ -42,7 +42,7 @@ function Wholesale() {
       </section>
 
       <nav className="sticky top-16 z-40 border-y border-[rgba(0,255,0,0.18)] bg-black/85 backdrop-blur-md">
-        <div className="mx-auto flex max-w-[1320px] gap-5 overflow-x-auto px-4 py-3 text-sm font-bold uppercase tracking-[0.16em] lg:px-6"><a href="#overview" className="hover:text-[color:var(--neon)]">Overview</a><span>•</span><a href="#pricing" className="hover:text-[color:var(--neon)]">Pricing</a><span>•</span><a href="#faq" className="hover:text-[color:var(--neon)]">FAQ</a><span>•</span><a href="#order" className="hover:text-[color:var(--neon)]">Order</a></div>
+        <div className="mx-auto flex max-w-[1320px] gap-5 overflow-x-auto px-4 py-3 text-sm font-bold uppercase tracking-[0.16em] lg:px-6"><a href="#overview" className="hover:text-[color:var(--neon)]">Overview</a><span>•</span><a href="#pricing" className="hover:text-[color:var(--neon)]">Pricing</a><span>•</span><a href="#faq" className="hover:text-[color:var(--neon)]">FAQ</a><span>•</span><a href="#order" className="hover:text-[color:var(--neon)]">Order</a><span>•</span><Link to="/referrals" className="hover:text-[color:var(--neon)]">Referral Program</Link></div>
       </nav>
 
       <section id="overview" className="mx-auto max-w-[1320px] px-4 py-20 lg:px-6">
