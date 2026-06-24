@@ -123,7 +123,7 @@ function Referrals() {
         <div className="mt-10 grid gap-4 md:grid-cols-3">
           {steps.map(([step, text]) => (
             <article key={step} className="panel panel-hover rounded-sm p-7">
-              <div className="text-xs font-black uppercase tracking-[0.22em] text-[color:var(--neon)]">
+              <div className="text-xs uppercase tracking-[0.22em] text-[color:var(--neon)]">
                 {step}
               </div>
               <p className="mt-6 text-2xl font-black leading-tight">{text}</p>
