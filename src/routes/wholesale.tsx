@@ -1,10 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, Check, Coffee, Display, ShoppingBag, Store } from "lucide-react";
+import { ArrowRight, Check, Coffee, ShoppingBag, Store } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import coffeeShop from "@/assets/kofenot-coffee-shop.jpeg";
 import pack from "@/assets/kofeenot-pack.jpeg";
 import giftBox from "@/assets/kofenot-gift-box.jpeg";
-import brand from "@/assets/kofeenot-brand.jpg";
 
 export const Route = createFileRoute("/wholesale")({
   head: () => ({
@@ -67,7 +66,7 @@ function Wholesale() {
       </section>
 
       <section className="mx-auto max-w-[1320px] px-4 py-10 lg:px-6">
-        <div className="flex items-end justify-between gap-5"><div><p className="text-xs font-black uppercase tracking-[0.24em] text-[color:var(--neon)]">Display ideas</p><h2 className="mt-3 text-5xl font-black tracking-tight">Counter, shelf, and coffee-bar concepts.</h2></div><Display className="hidden h-10 w-10 text-[color:var(--neon)] md:block" /></div>
+        <div className="flex items-end justify-between gap-5"><div><p className="text-xs font-black uppercase tracking-[0.24em] text-[color:var(--neon)]">Display ideas</p><h2 className="mt-3 text-5xl font-black tracking-tight">Counter, shelf, and coffee-bar concepts.</h2></div><Store className="hidden h-10 w-10 text-[color:var(--neon)] md:block" /></div>
         <div className="mt-8 grid gap-4 md:grid-cols-3">{[{ img: coffeeShop, label: "Coffee shop counter" }, { img: pack, label: "Wholesale pack" }, { img: giftBox, label: "Retail-ready packaging" }].map((item) => <figure key={item.label} className="panel overflow-hidden rounded-sm"><img src={item.img} alt={item.label} className="aspect-square w-full object-cover" /><figcaption className="p-3 text-center text-xs uppercase tracking-[0.18em] text-muted-foreground">{item.label}</figcaption></figure>)}</div>
         <p className="mt-5 text-sm font-bold text-muted-foreground">Display concepts shown for illustration. Packaging and merchandising options available.</p>
       </section>
