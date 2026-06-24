@@ -7,6 +7,7 @@ const navLinks = [
   { label: "Home", to: "/" },
   { label: "Wholesale", to: "/wholesale" },
   { label: "Custom", to: "/custom" },
+  { label: "Referral Program", to: "/referrals" },
 ] as const;
 
 export function SiteHeader() {
@@ -25,7 +26,7 @@ export function SiteHeader() {
           </span>
         </Link>
 
-        <nav className="ml-auto hidden items-center gap-7 text-sm md:flex">
+        <nav className="ml-auto hidden items-center gap-5 text-sm md:flex">
           {navLinks.map((item) => (
             <Link
               key={item.label}
@@ -81,6 +82,7 @@ export function SiteHeader() {
 const footerLinks = [
   { label: "About", href: "/#why" },
   { label: "Contact", href: "mailto:info@kofenot.com" },
+  { label: "Referral Program", href: "/referrals" },
   { label: "Patent & Trademark", href: "/spec" },
   { label: "Shipping", href: "/#faq" },
   { label: "Returns", href: "/#faq" },
