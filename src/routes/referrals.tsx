@@ -85,10 +85,10 @@ function Referrals() {
 
         <div className="relative mx-auto flex min-h-[calc(86svh-4rem)] max-w-[1320px] items-center px-4 py-20 lg:px-6">
           <div className="max-w-4xl">
-            <p className="text-xs font-black uppercase tracking-[0.24em] text-[color:var(--neon)]">
+            <p className="text-xs uppercase tracking-[0.24em] text-[color:var(--neon)]">
               Referral partner program
             </p>
-            <h1 className="mt-5 text-6xl font-black leading-[.88] tracking-tight md:text-8xl">
+            <h1 className="mt-5 text-6xl leading-[.88] tracking-tight md:text-8xl">
               Earn by Introducing <span className="neon-text">KOFENOT™</span>
             </h1>
             <div className="mt-7 max-w-3xl space-y-4 text-xl leading-relaxed text-white">
@@ -97,12 +97,11 @@ function Referrals() {
                 gifts, trade shows, employee welcome kits, coffee shops, coworking
                 spaces, conferences, or promotional campaigns?
               </p>
-              <p className="text-2xl font-black text-[color:var(--neon)]">
+              <p className="text-2xl text-[color:var(--neon)]">
                 Introduce us.
               </p>
               <p>
-                If your introduction results in a qualifying first order within
-                12 months, we&apos;ll pay you 5% of the first order value.
+                Receive 10% of the first order, capped at $5,000.
               </p>
             </div>
             <a href="#contact" className="mt-8 inline-block">
