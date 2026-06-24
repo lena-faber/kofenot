@@ -3,11 +3,10 @@ import { Outlet, Link, createRootRouteWithContext, useRouter, HeadContent, Scrip
 import { Toaster } from "sonner";
 import { LeadProvider } from "@/components/lead-provider";
 import { SiteHeader, SiteFooter } from "@/components/site-chrome";
-import { HomeWholesaleBridge } from "@/components/home-wholesale-bridge";
 import appCss from "../styles.css?url";
 
 const siteTitle = "KOFENOT™ | Make Your Laptop Coffee Shop-Friendly™";
-const siteDescription = "KOFENOT™ is the ultimate laptop wedge that lifts your laptop at the hinge for spill deflection and improved posture. 1 oz. Flat-folding. It features a discreet, public-facing area for custom logo printing. Patent- and trademark-protected. California-based. Available for white-label programs, trade shows, conferences, promotional products, and corporate gifts. Licensing available.";
+const siteDescription = "KOFENOT™ is the ultimate laptop wedge that lifts your laptop at the hinge for spill deflection and improved posture. 1 oz. Flat-folding. Available for retail, wholesale resale, custom logo programs, events, coffee shops, coworking spaces, promotional products, and corporate gifts.";
 const siteUrl = "https://kofenot.com/";
 const productJsonLd = { "@context": "https://schema.org", "@type": "Product", name: "KOFENOT™ Pocket Laptop Wedge", description: siteDescription, brand: { "@type": "Brand", name: "KOFENOT™" }, category: "Laptop stand", url: siteUrl };
 
@@ -27,10 +26,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" }, { name: "viewport", content: "width=device-width, initial-scale=1" }, { title: siteTitle }, { name: "description", content: siteDescription }, { property: "og:title", content: siteTitle }, { property: "og:description", content: siteDescription }, { property: "og:type", content: "website" }, { property: "og:url", content: siteUrl }, { property: "og:site_name", content: "KOFENOT™" }, { name: "twitter:card", content: "summary_large_image" }, { name: "twitter:title", content: siteTitle }, { name: "twitter:description", content: siteDescription },
     ],
     links: [
-      { rel: "stylesheet", href: appCss }, {
-  rel: "stylesheet",
-  href: "https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&display=swap",
-},{ rel: "canonical", href: siteUrl }, { rel: "alternate", type: "text/plain", title: "KOFENOT AI agent summary", href: "/llms.txt" }, { rel: "sitemap", type: "application/xml", href: "/sitemap.xml" },
+      { rel: "stylesheet", href: appCss }, { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&display=swap" }, { rel: "canonical", href: siteUrl }, { rel: "alternate", type: "text/plain", title: "KOFENOT AI agent summary", href: "/llms.txt" }, { rel: "sitemap", type: "application/xml", href: "/sitemap.xml" },
     ],
   }),
   shellComponent: RootShell,
@@ -45,5 +41,5 @@ function RootShell({ children }: { children: React.ReactNode }) {
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
-  return <QueryClientProvider client={queryClient}><LeadProvider><div className="min-h-screen flex flex-col"><SiteHeader /><main className="flex-1"><Outlet /></main><HomeWholesaleBridge /><SiteFooter /></div><Toaster theme="dark" position="bottom-right" richColors /></LeadProvider></QueryClientProvider>;
+  return <QueryClientProvider client={queryClient}><LeadProvider><div className="min-h-screen flex flex-col"><SiteHeader /><main className="flex-1"><Outlet /></main><SiteFooter /></div><Toaster theme="dark" position="bottom-right" richColors /></LeadProvider></QueryClientProvider>;
 }
