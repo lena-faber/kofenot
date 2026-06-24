@@ -1,25 +1,33 @@
 # KOFENOT™
 
-KOFENOT™ is the ultimate laptop wedge that lifts your laptop at the hinge for spill deflection and improved posture. 1 oz. Flat-folding. It features a discreet, public-facing area for custom logo printing. Patent- and trademark-protected. California-based. Available for white-label programs, trade shows, conferences, promotional products, and corporate gifts. Licensing available.
+KOFENOT™ is a pocket-size laptop wedge that lifts a laptop at the hinge for spill deflection and improved posture. It is 1 oz, flat-folding, travel-ready, and uses no magnets or adhesives.
+
+## Site Structure
+
+- Home: consumer sales page for the $15 retail KOFENOT hanging pack.
+- Wholesale: for coffee shops, coworking spaces, gift shops, and retailers that want to resell KOFENOT. Wholesale pricing uses placeholder $X tiers until exact prices are finalized.
+- Custom: for businesses, events, conferences, coffee shops, coworking spaces, promotional product companies, and corporate gifts that want custom logo printing.
 
 ## Key Facts
 
 - Product: pocket-size laptop wedge / laptop stand.
 - Main use: lifts a laptop at the hinge for spill deflection and improved posture.
+- Retail price: $15.
 - Weight: 1 oz.
 - Form: flat-folding and travel-ready.
 - Attachment: no magnets and no adhesives.
 - Compatibility: laptops, tablets, and phones.
-- Branding: discreet, public-facing custom logo printing area.
-- Commercial programs: white-label programs, trade shows, conferences, promotional products, corporate gifts, and licensing.
+- Branding: custom logo printing programs available on the Custom page.
 - Business location: California-based.
 - IP status: patent- and trademark-protected.
 
 ## Important URLs
 
 - Homepage: https://kofenot.com/
+- Wholesale: https://kofenot.com/wholesale
+- Custom: https://kofenot.com/custom
 - Spec sheet: https://kofenot.com/spec
 - AI agent summary: https://kofenot.com/llms.txt
 - Sitemap: https://kofenot.com/sitemap.xml
 
-Last updated: 2026-06-08
+Last updated: 2026-06-23
