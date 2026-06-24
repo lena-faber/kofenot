@@ -23,7 +23,7 @@ export const Route = createFileRoute("/referrals")({
       {
         name: "description",
         content:
-          "Introduce KOFENOT to qualified large buyers, distributors, corporate gifting agencies, coworking operators, coffee chains, trade show suppliers, and event organizers.",
+          "Introduce KOFENOT to large buyers, distributors, corporate gifting agencies, coworking operators, coffee chains, trade show suppliers, and event organizers.",
       },
     ],
   }),
@@ -45,11 +45,11 @@ const introductions = [
 ];
 
 const steps = [
-  ["Step 1", "Introduce a qualified buyer."],
+  ["Step 1", "Introduce a buyer."],
   ["Step 2", "We handle the conversations, pricing, samples, and fulfillment."],
   [
     "Step 3",
-    "If the buyer places their first order within 12 months, you receive 5% of the first order value.",
+    " Receive 10% of the first order, capped at $5,000.",
   ],
 ];
 
