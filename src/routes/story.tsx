@@ -10,11 +10,11 @@ import corporate from "@/assets/kofenot-corp-gift.jpeg";
 export const Route = createFileRoute("/story")({
   head: () => ({
     meta: [
-      { title: "The Story of KOFENOT | Press Release" },
+      { title: "The Story Behind KOFENOT" },
       {
         name: "description",
         content:
-          "The KOFENOT story and press release: one dead laptop, one dead car, Silicon Valley neighbors, and the invention of a pocket-flat laptop wedge.",
+          "The story behing KOFENOT: one dead laptop, one dead car, Silicon Valley neighbors, and the invention of a pocket-flat laptop wedge.",
       },
     ],
   }),
@@ -26,8 +26,7 @@ const downloadHref = "/kofenot-press-release.pdf";
 const sections = [
   {
     id: "laptop",
-    kicker: "One Dead Laptop. One Dead Car.",
-    title: "One-way ticket to Silicon Valley.",
+    title: "One Dead Laptop. One Dead Car. One-way ticket to Silicon Valley..",
     body: [
       "A cup of coffee on a Palisades Tahoe Tuesday afternoon ended the short life of a new Macbook Pro of a ski instructor, Lena Faber. At her lunch time she was building a Web3 space-time infrastructure for human history. Because ones she was a journalist.",
       "On a Thursday heavy storm, an elderly driver's hit her car from the side. And action: Lena’s car flew down a steep hill like in a movie, bouncing over obstacles along the way. The car was killed, the driver got zero injury. Because once she was a car racer.",
@@ -45,13 +44,12 @@ const sections = [
       "It had to work with laptops, phones, and tablets.",
       "It could not use pins. It could not use magnets. It could not use adhesives.",
       "One ounce limit. Flat-folding. Multifunctional.",
-      "The kind of tsimple thing that seems obvious once it exists.",
+      "The kind of simple thing that seems obvious once it exists.",
     ],
   },
   {
     id: "snap",
-    kicker: "Folding Cars and Flying Wedge",
-    title: "Not just close. Snap.",
+    title: "Folding Cars and Flying Wedge",
     body: [
       "This day came soon. One engineer saw Lena’s struggling to beautify a piece of plastic, realized she had absolutely no idea how to prepare files for injection molding and offered help.",
       "Lena raised the bar: the thing had to make a satisfyingly loud snap when it closed.",
@@ -65,8 +63,7 @@ const sections = [
   },
   {
     id: "village",
-    kicker: "SIilicon Valley, Unfiltered",
-    title: "No question asked. No paper signed.",
+    title: "SIilicon Valley, Unfiltered.",
     body: [
       "Then came manufacturing… Felt like online gambling. Hours of video calls with the sales girl from a massive Chinese factory, accustomed to handling far larger orders yet explaining Lena all the nuts and bolts of manufacturing. Shipping at times when noone garantee the product would arrive at all. Disclaimer: It did!",
       "Meanwile, Lena was still a few thousand dollars short of paying a balance to the factory. .",
@@ -112,10 +109,10 @@ function Story() {
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-black/80" />
           <div className="absolute left-4 top-24 max-w-[620px] sm:left-8 lg:left-[max(2rem,calc((100vw-1320px)/2))]">
-            <p className="text-xs font-black uppercase tracking-[0.24em] text-[color:var(--neon)]">The Story / Press Release</p>
+            <p className="text-xs font-black uppercase tracking-[0.24em] text-[color:var(--neon)]">Kill a laptop. Kill a car. Start a company
+</p>
             <h1 className="mt-4 text-5xl font-black leading-[0.9] tracking-tight md:text-7xl lg:text-8xl">
-              Kill a laptop.<br />Kill a car.<br />Start a company
-            </h1>
+              KOFENOT™.<br /> It Took a Village.
             <a href={downloadHref} download className="mt-7 inline-block">
               <Button className="h-12 bg-[color:var(--neon)] px-7 font-black text-black hover:bg-[color:var(--neon-dim)]">
                 Download <Download className="ml-2 h-4 w-4" />
