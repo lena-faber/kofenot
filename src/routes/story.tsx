@@ -29,41 +29,58 @@ const sections = [
     kicker: "One Dead Laptop. One Dead Car.",
     title: "One-way ticket to Silicon Valley.",
     body: [
-      "A cup of coffee on a Palisades Tahoe Tuesday afternoon ended the short life of a new MacBook Pro owned by ski instructor Lena Faber. At lunch, she was building a Web3 space-time infrastructure for human history, because once she was a journalist.",
-      "On a stormy Thursday, an elderly driver hit her car from the side. Lena's car flew down a steep hill like a movie scene, bouncing over obstacles along the way. The car was destroyed. The driver walked away with zero injury, because once she was a car racer.",
-      "On Friday night, she bought a new car, moved to Silicon Valley, and paused her ambitious venture The Here(TM) to first launch the not-so-ambitious KOFENOT, inspired by an upside-down coffee cup she kept placing under her new laptop hinge to deflect future spills.",
+      "A cup of coffee on a Palisades Tahoe Tuesday afternoon ended the short life of a new Macbook Pro of a ski instructor, Lena Faber. At her lunch time she was building a Web3 space-time infrastructure for human history. Because ones she was a journalist.",
+      "On a Thursday heavy storm, an elderly driver's hit her car from the side. And action: Lena’s car flew down a steep hill like in a movie, bouncing over obstacles along the way. The car was killed, the driver got zero injury. Because once she was a car racer.",
+      "On Friday night she bought a new car, moved to Silicon Valley, posed ambitious The Here™ to first launch not so ambitious KOFENOT, inspired by an upside down coffee cup, which she always placed under her new laptop hinge to deflect future spills.",
       "The problem was carrying a coffee cup in a laptop bag.",
     ],
   },
   {
     id: "obsession",
     kicker: "One Ounce of Obsession",
-    title: "The simple thing that seems obvious once it exists.",
+    title: "The kind of tsimple thing that seems obvious once it exists.",
     body: [
-      "When her upside-down eureka started to grab attention, she sketched a wedge, filed a utility patent, and 3D printed an ugly prototype, knowing that one day it had to look elegant. It had to feel good in the hand. It had to work with laptops, phones, and tablets.",
-      "It could not use pins. It could not use magnets. It could not use adhesives. One ounce limit. Flat-folding. Multifunctional.",
+      "When her upside-down eureca started to grab attention, she scetched a wedge, filed a utility patent, and 3D printed an ugly prototype, knowing that one day",
+      "It had to look elegant. It had to feel good in the hand.",
+      "It had to work with laptops, phones, and tablets.",
+      "It could not use pins. It could not use magnets. It could not use adhesives.",
+      "One ounce limit. Flat-folding. Multifunctional.",
+      "The kind of tsimple thing that seems obvious once it exists.",
     ],
   },
   {
     id: "snap",
-    kicker: "Folding Cars and Flying Wedges",
+    kicker: "Folding Cars and Flying Wedge",
     title: "Not just close. Snap.",
     body: [
-      "One engineer saw Lena struggling to beautify a piece of plastic, realized she had absolutely no idea how to prepare files for injection molding, and offered help.",
-      "Lena raised the bar: the thing had to make a satisfyingly loud snap when it closed. It had to tempt people to open and close it again. It had to be a fidget.",
-      "It took countless 3D prints to figure out the precise geometry of the opening and closing mechanism. No pins. No magnets. No adhesives. Just mechanics. Oh, and snap.",
-      "She did not know yet that the person patiently helping her was one of Silicon Valley's most senior industrial engineers, in charge of designing flying cars.",
+      "This day came soon. One engineer saw Lena’s struggling to beautify a piece of plastic, realized she had absolutely no idea how to prepare files for injection molding and offered help.",
+      "Lena raised the bar: the thing had to make a satisfyingly loud snap when it closed.",
+      "Not just close. Snap.",
+      "It had to tempt people to open and close it again. It had to be a fidget.",
+      "The engineer laughed. And draw it for manufacturing. I takes countless 3D prints to figure out the the precise geometry of the opening and closing mechanism. Lena didn't want to hear about pins. No magnets. no adhesives either. Just mechanics. Oh, and snap!",
+      "She didn't know yet that the person patiently helping her was one of the Valley's most senior industrial engineer in charge of designing flying-cars…",
+      "Done. People stare at KOFENOT™ as if it were a Rubik's Cube, turn it around in their hands, open and close it a few times, and then ask the same question: \"How does this thing work?” Including engineers.",
+      "That was the first hint that maybe the invention wasn’t quite as simple as it looked to Lena.",
     ],
   },
   {
     id: "village",
-    kicker: "Silicon Valley, Unfiltered",
-    title: "No questions asked. No paper signed.",
+    kicker: "SIilicon Valley, Unfiltered",
+    title: "No question asked. No paper signed.",
     body: [
-      "Then came manufacturing. It felt like online gambling: hours of video calls with a massive Chinese factory, a balance still due, shipping that no one could guarantee, and a product that somehow did arrive.",
-      "When Lena was still a few thousand dollars short, new friends in her Los Gatos neighborhood sent the money by Zelle. Later, a friend from the Appalachian Trail did the same.",
-      "Then packaging became the bottleneck. The owner of a huge Santa Clara printing facility looked at KOFENOT, punched two holes in a piece of hard paper, and said: you figure out the rest, I will print a bunch.",
-      "A friend stored inventory in his garage. Another friend stored more inventory in his office. KOFENOT may have one inventor. But it has many fingerprints.",
+      "Then came manufacturing… Felt like online gambling. Hours of video calls with the sales girl from a massive Chinese factory, accustomed to handling far larger orders yet explaining Lena all the nuts and bolts of manufacturing. Shipping at times when noone garantee the product would arrive at all. Disclaimer: It did!",
+      "Meanwile, Lena was still a few thousand dollars short of paying a balance to the factory. .",
+      "She mentioned the situation to her new friends in her new Los Gatos neighborhood.",
+      "The next minute her phone dinged - a few thousands dropped to her Zelle…",
+      "No question asked. No paper signed. Just people who believed she would figure it out.",
+      "More obstacle later, and during a regular phone call from a friend she'd known since hiking the Appalachian Trail realized she still needed more money.",
+      "And next minute the same ding.",
+      "No question asked. No paper signed. Just trust accumulated over thousands of miles of trail.",
+      "Then packaging became the bottleneck. An owner of a huge Santa Clara printing facility looked at the KOFENOT, punched two holes in the piece of hard paper: you figure out the rest, I’ll print a bunch.",
+      "No money asked, no paper signed…",
+      "A friend storing her inventory at his garage. A friend storing more inventory in his office.",
+      "KOFENOT™ may have one inventor. But it has many fingerprints.",
+      "It feels like something an entire Silicon Valley neighborhood quietly decided should exist.",
     ],
   },
 ];
@@ -97,7 +114,7 @@ function Story() {
           <div className="absolute left-4 top-24 max-w-[620px] sm:left-8 lg:left-[max(2rem,calc((100vw-1320px)/2))]">
             <p className="text-xs font-black uppercase tracking-[0.24em] text-[color:var(--neon)]">The Story / Press Release</p>
             <h1 className="mt-4 text-5xl font-black leading-[0.9] tracking-tight md:text-7xl lg:text-8xl">
-              KILL A LAPTOP.<br />KILL A CAR.<br />START A COMPANY.
+              Kill a laptop.<br />Kill a car.<br />Start a company
             </h1>
             <a href={downloadHref} download className="mt-7 inline-block">
               <Button className="h-12 bg-[color:var(--neon)] px-7 font-black text-black hover:bg-[color:var(--neon-dim)]">
@@ -185,11 +202,11 @@ function Story() {
         <div className="mx-auto grid max-w-[1320px] gap-8 px-4 py-20 lg:grid-cols-[0.9fr_1.1fr] lg:px-6">
           <div>
             <p className="text-xs font-black uppercase tracking-[0.24em] text-[color:var(--neon)]">Code. Coffee. Laptops.</p>
-            <h2 className="mt-3 text-5xl font-black tracking-tight md:text-6xl">Created by a founder, not a consumer products company.</h2>
+            <h2 className="mt-3 text-5xl font-black tracking-tight md:text-6xl">Code. Coffee. Laptops.</h2>
           </div>
           <div className="flex flex-col justify-center gap-5 text-lg leading-relaxed text-white/90">
-            <p>Every day, thousands of people work exactly the way KOFENOT was designed for: laptop open, coffee nearby, one small wedge changing the angle of the risk.</p>
-            <p>What makes KOFENOT unusual is that it was created by a startup founder building a much larger technology venture.</p>
+            <p>Every day, thousands of people work exactly the way KOFENOT™ was designed for.</p>
+            <p>What makes KOFENOT™ unusual is that it was not created by a consumer products company. It was created by a startup founder building a much larger technology venture.</p>
             <a href={downloadHref} download className="mt-3 inline-flex w-fit items-center text-sm font-black uppercase tracking-[0.18em] text-[color:var(--neon)] hover:underline">
               Download press release <ArrowRight className="ml-2 h-4 w-4" />
             </a>
@@ -199,7 +216,7 @@ function Story() {
 
       <section className="mx-auto max-w-[1320px] px-4 py-20 text-center lg:px-6">
         <MapPin className="mx-auto h-9 w-9 text-[color:var(--neon)]" />
-        <h2 className="mx-auto mt-5 max-w-4xl text-5xl font-black tracking-tight md:text-6xl">KOFENOT may have one inventor. But it has many fingerprints.</h2>
+        <h2 className="mx-auto mt-5 max-w-4xl text-5xl font-black tracking-tight md:text-6xl">KOFENOT™ may have one inventor. But it has many fingerprints.</h2>
       </section>
     </main>
   );
