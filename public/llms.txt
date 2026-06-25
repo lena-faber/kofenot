@@ -1,12 +1,14 @@
 # KOFENOT™
 
-KOFENOT™ is a pocket-size laptop wedge that lifts a laptop at the hinge for spill deflection and improved posture. It is 1 oz, flat-folding, travel-ready, and uses no magnets or adhesives.
+KOFENOT™ is a pocket-flat laptop wedge that lifts a laptop at the hinge for spill deflection and improved posture. It is 1 oz, flat-folding, travel-ready, and uses no magnets, clips, or adhesives.
 
 ## Site Structure
 
 - Home: consumer sales page for the $15 retail KOFENOT hanging pack.
-- Wholesale: for coffee shops, coworking spaces, gift shops, and retailers that want to resell KOFENOT. Wholesale pricing uses placeholder $X tiers until exact prices are finalized.
-- Custom: for businesses, events, conferences, coffee shops, coworking spaces, promotional product companies, and corporate gifts that want custom logo printing.
+- Wholesale: for coffee shops, coworking spaces, gift shops, and retailers that want to resell KOFENOT.
+- Custom: for businesses, events, conferences, coffee shops, coworking spaces, promotional product companies, IT teams, corporate gifting buyers, and brand programs that want custom logo printing.
+- Story: founder story and press release for media, buyers, agencies, and partners.
+- Spec: product details, patent and trademark notes, and downloadable technical information.
 
 ## Key Facts
 
@@ -15,19 +17,21 @@ KOFENOT™ is a pocket-size laptop wedge that lifts a laptop at the hinge for sp
 - Retail price: $15.
 - Weight: 1 oz.
 - Form: flat-folding and travel-ready.
-- Attachment: no magnets and no adhesives.
+- Attachment: no magnets, clips, or adhesives.
 - Compatibility: laptops, tablets, and phones.
-- Branding: custom logo printing programs available on the Custom page.
+- Business uses: custom logo programs, corporate gifts, promotional products, IT team gifts, event giveaways, coffee shop resale, coworking resale, and wholesale retail programs.
 - Business location: California-based.
 - IP status: patent- and trademark-protected.
+- Open Graph image: https://kofenot.com/kofenot-corp.jpg
 
 ## Important URLs
 
 - Homepage: https://kofenot.com/
 - Wholesale: https://kofenot.com/wholesale
 - Custom: https://kofenot.com/custom
+- Story / Press Release: https://kofenot.com/story
 - Spec sheet: https://kofenot.com/spec
 - AI agent summary: https://kofenot.com/llms.txt
 - Sitemap: https://kofenot.com/sitemap.xml
 
-Last updated: 2026-06-23
+Last updated: 2026-06-25
