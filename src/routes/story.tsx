@@ -14,7 +14,7 @@ export const Route = createFileRoute("/story")({
       {
         name: "description",
         content:
-          "The KOFENOT story and press release: one dead laptop, one dead car, Silicon Valley neighbors, and the invention of a 1 oz flat-folding laptop wedge for spill deflection, posture, devices, and custom branding.",
+          "The KOFENOT story and press release: one dead laptop, one dead car, Silicon Valley neighbors, and the invention of a pocket-flat laptop wedge.",
       },
     ],
   }),
@@ -75,19 +75,10 @@ const facts = [
   { icon: Fingerprint, label: "Made by", value: "A village" },
 ];
 
-const productCopy =
-  "KOFENOT™ is a 1 oz, flat-folding laptop wedge that lifts a laptop at the hinge to improve posture while helping deflect spills away from the keyboard. It also serves as a stand for phones and tablets and features a front-facing area for custom branding, making it suitable for corporate gifts, conferences, trade shows, and promotional campaigns.";
-
-const availabilityCopy =
-  "KOFENOT is available online at kofenot.com and in the JP Graphics store at 3310 Woodward Ave, Santa Clara, CA 95054.";
-
-function StoryImage({ src, alt, caption, className = "" }: { src: string; alt: string; caption: string; className?: string }) {
+function StoryImage({ src, alt, className = "" }: { src: string; alt: string; className?: string }) {
   return (
     <figure className={`overflow-hidden border-y border-[rgba(0,255,0,0.18)] bg-black ${className}`}>
       <img src={src} alt={alt} className="h-full w-full object-cover" />
-      <figcaption className="mx-auto max-w-[1320px] px-4 py-3 text-xs font-black uppercase tracking-[0.18em] text-muted-foreground lg:px-6">
-        {caption}
-      </figcaption>
     </figure>
   );
 }
@@ -120,10 +111,9 @@ function Story() {
       <nav className="sticky top-16 z-40 border-y border-[rgba(0,255,0,0.18)] bg-black/85 backdrop-blur-md">
         <div className="mx-auto flex max-w-[1320px] gap-5 overflow-x-auto px-4 py-3 text-sm font-bold uppercase tracking-[0.16em] lg:px-6">
           <a href="#laptop" className="hover:text-[color:var(--neon)]">Laptop</a><span>•</span>
-          <a href="#coffee-shop" className="hover:text-[color:var(--neon)]">Coffee Shop</a><span>•</span>
           <a href="#obsession" className="hover:text-[color:var(--neon)]">Obsession</a><span>•</span>
-          <a href="#devices" className="hover:text-[color:var(--neon)]">Devices</a><span>•</span>
-          <a href="#market" className="hover:text-[color:var(--neon)]">Market</a><span>•</span>
+          <a href="#snap" className="hover:text-[color:var(--neon)]">Snap</a><span>•</span>
+          <a href="#village" className="hover:text-[color:var(--neon)]">Village</a><span>•</span>
           <a href={downloadHref} download className="hover:text-[color:var(--neon)]">Download</a>
         </div>
       </nav>
@@ -153,7 +143,6 @@ function Story() {
       <StoryImage
         src={coffeeShop}
         alt="KOFENOT in a coffee shop setting where laptops and coffee share the same table"
-        caption="Coffee shop: the environment where the problem exists and where KOFENOT belongs."
         className="h-[58svh] min-h-[380px]"
       />
 
@@ -172,22 +161,8 @@ function Story() {
       <StoryImage
         src={threeDevices}
         alt="KOFENOT used with a laptop, phone, and tablet"
-        caption="Three devices: after the invention, show everything it does."
         className="h-[58svh] min-h-[380px]"
       />
-
-      <section id="product" className="border-y border-[rgba(0,255,0,0.18)] bg-[rgba(0,255,0,0.025)]">
-        <div className="mx-auto grid max-w-[1320px] gap-8 px-4 py-20 lg:grid-cols-[0.9fr_1.1fr] lg:px-6">
-          <div>
-            <p className="text-xs font-black uppercase tracking-[0.24em] text-[color:var(--neon)]">Product summary</p>
-            <h2 className="mt-3 text-5xl font-black tracking-tight md:text-6xl">One wedge. Three device categories. Built for branding.</h2>
-          </div>
-          <div className="flex flex-col justify-center gap-5 text-lg leading-relaxed text-white/90">
-            <p>{productCopy}</p>
-            <p>{availabilityCopy}</p>
-          </div>
-        </div>
-      </section>
 
       <section className="mx-auto max-w-[980px] px-4 lg:px-6">
         <article id={sections[3].id} className="border-t border-[rgba(0,255,0,0.18)] py-14">
@@ -199,20 +174,10 @@ function Story() {
         </article>
       </section>
 
-      <section id="market" className="border-y border-[rgba(0,255,0,0.18)] bg-black">
-        <div className="mx-auto max-w-[1320px] px-4 py-20 lg:px-6">
-          <p className="text-xs font-black uppercase tracking-[0.24em] text-[color:var(--neon)]">Expo / corporate</p>
-          <h2 className="mt-3 max-w-4xl text-5xl font-black tracking-tight md:text-6xl">From idea to market.</h2>
-          <div className="mt-10 grid gap-4 md:grid-cols-2">
-            <figure className="overflow-hidden border border-[rgba(0,255,0,0.22)] bg-black">
-              <img src={expo} alt="KOFENOT at an expo or trade show" className="aspect-[4/3] w-full object-cover" />
-              <figcaption className="p-3 text-xs font-black uppercase tracking-[0.18em] text-muted-foreground">Trade shows and conferences</figcaption>
-            </figure>
-            <figure className="overflow-hidden border border-[rgba(0,255,0,0.22)] bg-black">
-              <img src={corporate} alt="KOFENOT as a corporate gift and custom branding product" className="aspect-[4/3] w-full object-cover" />
-              <figcaption className="p-3 text-xs font-black uppercase tracking-[0.18em] text-muted-foreground">Corporate gifts and promotional campaigns</figcaption>
-            </figure>
-          </div>
+      <section className="border-y border-[rgba(0,255,0,0.18)] bg-black">
+        <div className="grid md:grid-cols-2">
+          <img src={expo} alt="KOFENOT at an expo or trade show" className="h-[48svh] min-h-[340px] w-full object-cover" />
+          <img src={corporate} alt="KOFENOT as a corporate gift and custom branding product" className="h-[48svh] min-h-[340px] w-full object-cover" />
         </div>
       </section>
 
@@ -235,7 +200,6 @@ function Story() {
       <section className="mx-auto max-w-[1320px] px-4 py-20 text-center lg:px-6">
         <MapPin className="mx-auto h-9 w-9 text-[color:var(--neon)]" />
         <h2 className="mx-auto mt-5 max-w-4xl text-5xl font-black tracking-tight md:text-6xl">KOFENOT may have one inventor. But it has many fingerprints.</h2>
-        <p className="mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-white/90">{availabilityCopy}</p>
       </section>
     </main>
   );
