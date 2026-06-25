@@ -112,7 +112,7 @@ function Story() {
             <p className="text-xs font-black uppercase tracking-[0.24em] text-[color:var(--neon)]">Kill a laptop. Kill a car. Start a company
 </p>
             <h1 className="mt-4 text-5xl font-black leading-[0.9] tracking-tight md:text-7xl lg:text-8xl">
-              KOFENOT™.<br /> It Took a Village.
+              KOFENOT™.<br /> It Took a Village.<h1>
             <a href={downloadHref} download className="mt-7 inline-block">
               <Button className="h-12 bg-[color:var(--neon)] px-7 font-black text-black hover:bg-[color:var(--neon-dim)]">
                 Download <Download className="ml-2 h-4 w-4" />
