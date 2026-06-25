@@ -5,7 +5,7 @@ import inventor from "@/assets/kofenot-inventor.jpg";
 import coffeeShop from "@/assets/kofenot-coffee-shop.jpeg";
 import threeDevices from "@/assets/kofeenot-triad.jpg";
 import expo from "@/assets/kofenot-expo.jpeg";
-import corporate from "@/assets/kofenot-corp-gift.jpeg";
+import corporate from "@/assets/kofenot-corp-gift.jpeg"; 
 
 export const Route = createFileRoute("/story")({
   head: () => ({
