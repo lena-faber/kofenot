@@ -17,7 +17,7 @@ export const Route = createFileRoute("/story")({
   component: Story,
 });
 
-const downloadHref = "/kofenot-press-release.txt";
+const downloadHref = "/kofenot-press-release.pdf";
 
 const sections = [
   {
@@ -55,7 +55,7 @@ const sections = [
       "Then came manufacturing. It felt like online gambling: hours of video calls with a massive Chinese factory, a balance still due, shipping that no one could guarantee, and a product that somehow did arrive.",
       "When Lena was still a few thousand dollars short, new friends in her Los Gatos neighborhood sent the money by Zelle. Later, a friend from the Appalachian Trail did the same.",
       "Then packaging became the bottleneck. The owner of a huge Santa Clara printing facility looked at KOFENOT, punched two holes in a piece of hard paper, and said: you figure out the rest, I will print a bunch.",
-      "A friend stored inventory in his garage. Another friend stored more inventory in his office. KOFENOT may have one inventor, but it has many fingerprints.",
+      "A friend stored inventory in his garage. Another friend stored more inventory in his office. KOFENOT may have one inventor. But it has many fingerprints.",
     ],
   },
 ];
@@ -148,7 +148,7 @@ function Story() {
 
       <section className="mx-auto max-w-[1320px] px-4 py-20 text-center lg:px-6">
         <MapPin className="mx-auto h-9 w-9 text-[color:var(--neon)]" />
-        <h2 className="mx-auto mt-5 max-w-4xl text-5xl font-black tracking-tight md:text-6xl">KOFENOT may have one inventor. It has many fingerprints.</h2>
+        <h2 className="mx-auto mt-5 max-w-4xl text-5xl font-black tracking-tight md:text-6xl">KOFENOT may have one inventor. But it has many fingerprints.</h2>
       </section>
     </main>
   );
