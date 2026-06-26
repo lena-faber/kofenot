@@ -230,7 +230,7 @@ function Story() {
       <section className="mx-auto max-w-[1320px] px-4 py-20 text-center lg:px-6">
         <MapPin className="mx-auto h-9 w-9 text-[color:var(--neon)]" />
         <h2 className="mx-auto mt-5 max-w-4xl text-5xl font-black tracking-tight md:text-6xl">
-          KOFENOT™ may have one inventor. But it has many fingerprints.
+          KOFENOT™ may have one inventor. But it took a village to lounch it.
         </h2>
       </section>
     </main>
