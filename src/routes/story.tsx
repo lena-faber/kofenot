@@ -37,7 +37,7 @@ function Story() {
         </div>
         <div className="relative z-10 mx-auto flex min-h-[calc(100svh-4rem)] max-w-[1480px] items-end px-9 pb-20 pt-7 lg:px-10">
           <div>
-            <h1 className="text-[56px] font-black leading-[0.9] tracking-tight md:text-[86px] lg:text-[112px]">
+            <h1 className="text-6xl font-black leading-[0.9] tracking-tight md:text-[86px] lg:text-[112px]">
               KILL A LAPTOP.<br />KILL A CAR.<br />START A COMPANY.
             </h1>
             <a href={downloadHref} download className="mt-7 inline-block">
