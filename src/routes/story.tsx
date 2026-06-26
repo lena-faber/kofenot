@@ -313,11 +313,9 @@ function ProductSection() {
         }
       >
         <div>
-          <p className="text-xs font-black uppercase tracking-[0.24em] text-[color:var(--neon)]">
-            Code. Coffee. Laptops.
-          </p>
+         
           <h2 className="mt-3 text-5xl font-black tracking-tight md:text-6xl">
-            Code. Coffee. Laptops.
+            Code. Coffee. Repeat.
           </h2>
         </div>
         <div className="flex flex-col justify-center gap-5 text-lg leading-relaxed text-white/90">
