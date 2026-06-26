@@ -33,7 +33,7 @@ export const Route = createFileRoute("/story")({
 const downloadHref = "/kofenot-press-release.pdf";
 
 const facts = [
-  { icon: Laptop, label: "Built for", value: "Code. Coffee. Laptops." },
+  { icon: Laptop, label: "Built for", value: "Code. Coffee. Repeat." },
   { icon: Hammer, label: "Designed with", value: "Pure mechanics" },
   { icon: Sparkles, label: "Must do", value: "Snap shut" },
   { icon: Fingerprint, label: "Made by", value: "A village" },
@@ -220,7 +220,7 @@ function Hero() {
       <div className="mx-auto max-w-[1320px] px-4 py-10 lg:px-6">
         
         <h1 className="mt-4 text-5xl font-black leading-[0.9] tracking-tight md:text-7xl lg:text-8xl">
-          KILL A LAPTOP. KILL A CAR. START A COMPANY.
+          KILL A LAPTOP.</br>KILL A CAR.</br>START A COMPANY.
         </h1>
         <a href={downloadHref} download className="mt-7 inline-block">
           <Button className="h-12 bg-[color:var(--neon)] px-7 font-black text-black hover:bg-[color:var(--neon-dim)]">
