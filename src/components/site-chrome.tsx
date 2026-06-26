@@ -1,7 +1,9 @@
 "use client";
 import { useState } from "react";
-import { Link } from "@tanstack/react-router";
+import { Link, useLocation } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
+
+const sampleCheckoutUrl = "https://buy.stripe.com/9B614m9aC2m0eYM2lCdUY0F";
 
 const navLinks = [
   { label: "Home", to: "/" },
@@ -13,6 +15,10 @@ const navLinks = [
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
+  const location = useLocation();
+  const isSamplePage = ["/wholesale", "/custom"].includes(location.pathname);
+  const ctaHref = isSamplePage ? sampleCheckoutUrl : "/#pricing";
+  const ctaLabel = isSamplePage ? "Buy Sample" : "Buy Now";
 
   return (
     <header className="sticky top-0 z-[100] isolate border-b border-white/5 bg-black/35 text-white backdrop-blur-md">
@@ -41,10 +47,10 @@ export function SiteHeader() {
 
         <div className="ml-auto flex shrink-0 items-center gap-2 md:ml-4">
           <a
-            href="/#pricing"
+            href={ctaHref}
             className="inline-flex items-center justify-center whitespace-nowrap rounded-md bg-[color:var(--neon)] px-4 py-2 text-sm font-bold text-black transition-colors hover:bg-[color:var(--neon-dim)] sm:px-6"
           >
-            Buy Now
+            {ctaLabel}
           </a>
 
           <button
