@@ -218,11 +218,9 @@ function Hero() {
         />
       </div>
       <div className="mx-auto max-w-[1320px] px-4 py-10 lg:px-6">
-        <p className="text-xs font-black uppercase tracking-[0.24em] text-[color:var(--neon)]">
-          Kill a laptop. Kill a car. Start a company
-        </p>
+        
         <h1 className="mt-4 text-5xl font-black leading-[0.9] tracking-tight md:text-7xl lg:text-8xl">
-          It TOOK A VILLAGE.
+          KILL A LAPTOP. KILL A CAR. START A COMPANY.
         </h1>
         <a href={downloadHref} download className="mt-7 inline-block">
           <Button className="h-12 bg-[color:var(--neon)] px-7 font-black text-black hover:bg-[color:var(--neon-dim)]">
