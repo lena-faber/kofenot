@@ -39,7 +39,7 @@ function Custom() {
     <main>
       <section className="relative isolate -mt-16 min-h-[86svh] overflow-hidden bg-black pt-16">
         <img src={corpGift} alt="Custom KOFENOT corporate gift concept" className="absolute inset-0 h-full w-full object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/92 via-black/68 to-black/15" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/50 to-transparent" />
         <div className="relative mx-auto flex min-h-[calc(86svh-4rem)] max-w-[1320px] items-center px-4 py-20 lg:px-6">
           <div className="max-w-3xl">
             <p className="text-xs font-black uppercase tracking-[0.24em] text-[color:var(--neon)]">Custom logo programs</p>
