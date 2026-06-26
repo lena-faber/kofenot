@@ -20,7 +20,18 @@ export const Route = createFileRoute("/custom")({
 });
 
 const quoteEmail = "mailto:info@kofenot.com?subject=KOFENOT%20Custom%20Quote&body=Company%3A%0AUse%20case%3A%0AQuantity%3A%0ALogo%20or%20design%20needs%3A%0ANeed-by%20date%3A%0AShipping%20destination%3A%0A";
-const pricing = [["30", "$X"], ["100", "$X"], ["400", "$X"], ["1000+", "Contact"]];
+const pricing = [
+  {
+    product: "Raw 100-Pack",
+    price: "$600.00 USD",
+    url: "https://buy.stripe.com/8x25kC4UmgcQ7wkaS8dUY0I",
+  },
+  {
+    product: "KofeNot™ Raw 400-Unit Master Case",
+    price: "$2,000.00 USD",
+    url: "https://buy.stripe.com/9B6fZgfz07Gk5ocbWcdUY0J",
+  },
+];
 const audiences = [
   { icon: Coffee, title: "Coffee Shops", copy: "Brand a useful laptop accessory for loyal cafe customers and counter retail." },
   { icon: Presentation, title: "Conferences & Trade Shows", copy: "Give attendees a desk tool they can use during and after the event." },
@@ -81,7 +92,32 @@ function Custom() {
 
       <section id="pricing" className="mx-auto max-w-[900px] px-4 py-20 lg:px-6">
         <h2 className="text-5xl font-black tracking-tight">Custom <span className="neon-text">Pricing</span></h2>
-        <div className="mt-8 overflow-hidden border border-[rgba(0,255,0,0.22)]"><table className="w-full text-left text-lg"><thead className="bg-[rgba(0,255,0,0.08)]"><tr><th className="px-5 py-4 text-[color:var(--neon)]">Qty</th><th className="px-5 py-4 text-[color:var(--neon)]">Custom Print</th></tr></thead><tbody>{pricing.map(([qty, price]) => <tr key={qty} className="border-t border-[rgba(0,255,0,0.18)]"><td className="px-5 py-4 font-black">{qty}</td><td className="px-5 py-4 font-black">{price}</td></tr>)}</tbody></table></div>
+        <div className="mt-8 overflow-hidden border border-[rgba(0,255,0,0.22)]">
+          <table className="w-full text-left text-lg">
+            <thead className="bg-[rgba(0,255,0,0.08)]">
+              <tr>
+                <th className="px-5 py-4 text-[color:var(--neon)]">Product</th>
+                <th className="px-5 py-4 text-[color:var(--neon)]">Price</th>
+                <th className="px-5 py-4 text-[color:var(--neon)]">Order</th>
+              </tr>
+            </thead>
+            <tbody>
+              {pricing.map((item) => (
+                <tr key={item.product} className="border-t border-[rgba(0,255,0,0.18)]">
+                  <td className="px-5 py-4 font-black">{item.product}</td>
+                  <td className="px-5 py-4 font-black">{item.price}</td>
+                  <td className="px-5 py-4">
+                    <a href={item.url}>
+                      <Button className="h-10 bg-[color:var(--neon)] px-5 font-black text-black hover:bg-[color:var(--neon-dim)]">
+                        Buy
+                      </Button>
+                    </a>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </section>
 
       <section id="faq" className="mx-auto max-w-[900px] px-4 py-20 lg:px-6"><h2 className="text-5xl font-black tracking-tight">FAQ</h2><div className="mt-7 divide-y divide-[rgba(0,255,0,0.18)] border-y border-[rgba(0,255,0,0.18)]">{faq.map(([q, a]) => <div key={q} className="grid gap-2 py-6 md:grid-cols-[.8fr_1.2fr]"><h3 className="text-lg font-black uppercase">{q}</h3><p className="text-sm text-muted-foreground">{a}</p></div>)}</div></section>
