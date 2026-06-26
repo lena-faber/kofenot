@@ -185,7 +185,7 @@ function Hero() {
           alt="KOFENOT inventor Lena Faber working outside with a laptop and coffee"
           className="absolute inset-0 h-full w-full object-cover object-center"
         />
-        <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black via-black/70 to-transparent pt-28">
+        <div className="absolute inset-x-0 bottom-0 pt-28">
           <div className="mx-auto max-w-[1320px] px-4 pb-10 lg:px-6">
             <h1 className="text-5xl font-black leading-[0.9] tracking-tight md:text-7xl lg:text-8xl">
               KILL A LAPTOP.<br />KILL A CAR.<br />START A COMPANY.
