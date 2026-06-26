@@ -42,7 +42,6 @@ const facts = [
 const sections = [
   {
     id: "laptop",
-    nav: "Laptop",
     title: "One Dead Laptop. One Dead Car. One-way ticket to Silicon Valley..",
     body: [
       "A cup of coffee on a Palisades Tahoe Tuesday afternoon ended the short life " +
@@ -68,7 +67,6 @@ const sections = [
   },
   {
     id: "obsession",
-    nav: "Obsession",
     title: "One Ounce of Obsession",
     body: [
       "When her upside-down eureka started to grab attention, she sketched " +
@@ -87,7 +85,6 @@ const sections = [
   },
   {
     id: "snap",
-    nav: "Snap",
     title: "Folding Cars and Flying Wedge",
     body: [
       "This day came soon. One engineer saw Lena’s struggling to beautify " +
@@ -113,7 +110,6 @@ const sections = [
   },
   {
     id: "village",
-    nav: "Village",
     title: "Silicon Valley, Unfiltered.",
     body: [
       "Then came manufacturing… Felt like online gambling. Hours of video calls " +
@@ -161,7 +157,6 @@ const productCopy = [
 function Story() {
   return (
     <main>
-      <StoryNav />
       <Hero />
       <Facts />
 
@@ -181,52 +176,27 @@ function Story() {
   );
 }
 
-function StoryNav() {
-  return (
-    <nav className="sticky top-16 z-40 border-y border-[rgba(0,255,0,0.18)] bg-black/85 backdrop-blur-md">
-      <div
-        className={
-          "mx-auto flex max-w-[1320px] gap-5 overflow-x-auto px-4 py-3 " +
-          "text-sm font-bold uppercase tracking-[0.16em] lg:px-6"
-        }
-      >
-        {sections.map((section, index) => (
-          <span key={section.id} className="flex items-center gap-5">
-            <a href={`#${section.id}`} className="hover:text-[color:var(--neon)]">
-              {section.nav}
-            </a>
-            {index < sections.length - 1 ? <span>•</span> : null}
-          </span>
-        ))}
-        <span>•</span>
-        <a href={downloadHref} download className="hover:text-[color:var(--neon)]">
-          Download
-        </a>
-      </div>
-    </nav>
-  );
-}
-
 function Hero() {
   return (
-    <section className="-mt-16 overflow-hidden bg-black pt-16">
-      <div className="h-[74svh] min-h-[560px] w-full overflow-hidden bg-black">
+    <section className="relative -mt-16 overflow-hidden bg-black pt-16">
+      <div className="relative h-[74svh] min-h-[560px] w-full overflow-hidden bg-black">
         <img
           src={inventor}
           alt="KOFENOT inventor Lena Faber working outside with a laptop and coffee"
-          className="h-full w-full object-cover object-center"
+          className="absolute inset-0 h-full w-full object-cover object-center"
         />
-      </div>
-      <div className="mx-auto max-w-[1320px] px-4 py-10 lg:px-6">
-        
-        <h1 className="mt-4 text-5xl font-black leading-[0.9] tracking-tight md:text-7xl lg:text-8xl">
-          KILL A LAPTOP.</br>KILL A CAR.</br>START A COMPANY.
-        </h1>
-        <a href={downloadHref} download className="mt-7 inline-block">
-          <Button className="h-12 bg-[color:var(--neon)] px-7 font-black text-black hover:bg-[color:var(--neon-dim)]">
-            Download <Download className="ml-2 h-4 w-4" />
-          </Button>
-        </a>
+        <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black via-black/70 to-transparent pt-28">
+          <div className="mx-auto max-w-[1320px] px-4 pb-10 lg:px-6">
+            <h1 className="text-5xl font-black leading-[0.9] tracking-tight md:text-7xl lg:text-8xl">
+              KILL A LAPTOP.<br />KILL A CAR.<br />START A COMPANY.
+            </h1>
+            <a href={downloadHref} download className="mt-7 inline-block">
+              <Button className="h-12 bg-[color:var(--neon)] px-7 font-black text-black hover:bg-[color:var(--neon-dim)]">
+                Download <Download className="ml-2 h-4 w-4" />
+              </Button>
+            </a>
+          </div>
+        </div>
       </div>
     </section>
   );
@@ -311,7 +281,6 @@ function ProductSection() {
         }
       >
         <div>
-         
           <h2 className="mt-3 text-5xl font-black tracking-tight md:text-6xl">
             Code. Coffee. Repeat.
           </h2>
