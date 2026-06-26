@@ -89,7 +89,7 @@ function Referrals() {
               Referral partner program
             </p>
             <h1 className="mt-5 text-6xl leading-[.88] tracking-tight md:text-8xl">
-              Earn by Introducing <span className="neon-text">KOFENOT™</span>
+              INTRODUCE US <span className="neon-text"></span>
             </h1>
             <div className="mt-7 max-w-3xl space-y-4 text-xl leading-relaxed text-white">
               <p>
