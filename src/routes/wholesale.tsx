@@ -33,10 +33,9 @@ function Wholesale() {
         <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/50 to-transparent" />
         <div className="relative mx-auto flex min-h-[calc(86svh-4rem)] max-w-[1320px] items-center px-4 py-20 lg:px-6">
           <div className="max-w-3xl">
-            <p className="text-xs font-black uppercase tracking-[0.24em] text-[color:var(--neon)]">Wholesale</p>
             <h1 className="mt-5 text-6xl font-black leading-[.88] tracking-tight md:text-8xl">SELL KOFENOT<br /><span className="neon-text">WHERE COFFEE HAPPENS.</span></h1>
             <p className="mt-7 max-w-2xl text-xl leading-relaxed text-white">For coffee shops, coworking spaces, and retailers that want a useful, counter-ready product for laptop customers.</p>
-            <div className="mt-8 flex flex-wrap gap-3"><a href="#order"><Button className="h-12 bg-[color:var(--neon)] px-7 font-black text-black hover:bg-[color:var(--neon-dim)]">Order Wholesale <ArrowRight className="ml-2 h-4 w-4" /></Button></a><Link to="/custom"><Button variant="outline" className="h-12 border-[rgba(0,255,0,0.55)] px-7 hover:bg-[rgba(0,255,0,0.08)] hover:text-[color:var(--neon)]">Need custom logo?</Button></Link></div>
+            <div className="mt-8 flex flex-wrap gap-3"><a href={wholesaleEmail><Button className="h-12 bg-[color:var(--neon)] px-7 font-black text-black hover:bg-[color:var(--neon-dim)]">Order Wholesale <ArrowRight className="ml-2 h-4 w-4" /></Button></a><Link to="/custom"><Button variant="outline" className="h-12 border-[rgba(0,255,0,0.55)] px-7 hover:bg-[rgba(0,255,0,0.08)] hover:text-[color:var(--neon)]">Need custom logo?</Button></Link></div>
           </div>
         </div>
       </section>
