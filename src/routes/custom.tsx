@@ -69,9 +69,7 @@ function Custom() {
             { img: expo, label: "Conferences & trade shows" },
             { img: corpGift, label: "Corporate gifts" },
             { img: coffeeShop, label: "Coffee shops" },
-            { img: corp1, label: "Business programs" },
-            { img: corp2, label: "Client gifts" },
-            { img: corp3, label: "Team distribution" },
+            
           ].map((item) => <figure key={item.label} className="panel overflow-hidden rounded-sm"><img src={item.img} alt={item.label} className="aspect-square w-full object-cover" /><figcaption className="p-3 text-center text-xs uppercase tracking-[0.18em] text-muted-foreground">{item.label}</figcaption></figure>)}</div>
         </div>
       </section>
