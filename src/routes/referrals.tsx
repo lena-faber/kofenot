@@ -116,7 +116,7 @@ function Referrals() {
             <div className="text-xs uppercase tracking-[0.22em] text-[color:var(--neon)]">
               Step 1
             </div>
-            <p className="mt-6 text-2xl font-black leading-tight">
+            <p className="mt-6 text-xl leading-tight">
               Introduce a buyer.
             </p>
           </article>
@@ -124,7 +124,7 @@ function Referrals() {
             <div className="text-xs uppercase tracking-[0.22em] text-[color:var(--neon)]">
               Step 2
             </div>
-            <p className="mt-6 text-2xl font-black leading-tight">
+            <p className="mt-6 text-xl leading-tight">
               We handle the conversations, pricing, samples, and fulfillment.
             </p>
           </article>
@@ -132,7 +132,7 @@ function Referrals() {
             <div className="text-xs uppercase tracking-[0.22em] text-[color:var(--neon)]">
               Step 3
             </div>
-            <p className="mt-6 text-2xl font-black leading-tight">
+            <p className="mt-6 text-xl leading-tight">
               Receive 10% of the first order, capped at $5,000.
             </p>
           </article>
