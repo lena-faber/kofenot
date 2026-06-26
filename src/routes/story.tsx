@@ -222,7 +222,7 @@ function Hero() {
           Kill a laptop. Kill a car. Start a company
         </p>
         <h1 className="mt-4 text-5xl font-black leading-[0.9] tracking-tight md:text-7xl lg:text-8xl">
-          KOFENOT™.<br />It Took a Village.
+          It TOOK A VILLAGE.
         </h1>
         <a href={downloadHref} download className="mt-7 inline-block">
           <Button className="h-12 bg-[color:var(--neon)] px-7 font-black text-black hover:bg-[color:var(--neon-dim)]">
