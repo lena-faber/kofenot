@@ -191,9 +191,7 @@ function Hero() {
               KILL A LAPTOP.<br />KILL A CAR.<br />START A COMPANY.
             </h1>
             <a href={downloadHref} download className="mt-7 inline-block">
-              <Button className="h-12 bg-[color:var(--neon)] px-7 font-black text-black hover:bg-[color:var(--neon-dim)]">
-                Download <Download className="ml-2 h-4 w-4" />
-              </Button>
+             
             </a>
           </div>
         </div>
