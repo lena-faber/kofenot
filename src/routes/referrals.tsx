@@ -44,15 +44,6 @@ const introductions = [
   { icon: Store, title: "Technology companies" },
 ];
 
-const steps = [
-  ["Step 1", "Introduce a buyer."],
-  ["Step 2", "We handle the conversations, pricing, samples, and fulfillment."],
-  [
-    "Step 3",
-    " Receive 10% of the first order, capped at $5,000.",
-  ],
-];
-
 const faqs = [
   ["Do I need to sell KOFENOT?", "No. A qualified introduction is enough."],
   [
@@ -121,14 +112,30 @@ function Referrals() {
           A warm introduction. We handle the rest.
         </h2>
         <div className="mt-10 grid gap-4 md:grid-cols-3">
-          {steps.map(([step, text]) => (
-            <article key={step} className="panel panel-hover rounded-sm p-7">
-              <div className="text-xs uppercase tracking-[0.22em] text-[color:var(--neon)]">
-                {step}
-              </div>
-              <p className="mt-6 text-2xl font-black leading-tight">{text}</p>
-            </article>
-          ))}
+          <article className="panel panel-hover rounded-sm p-7">
+            <div className="text-xs uppercase tracking-[0.22em] text-[color:var(--neon)]">
+              Step 1
+            </div>
+            <p className="mt-6 text-2xl font-black leading-tight">
+              Introduce a buyer.
+            </p>
+          </article>
+          <article className="panel panel-hover rounded-sm p-7">
+            <div className="text-xs uppercase tracking-[0.22em] text-[color:var(--neon)]">
+              Step 2
+            </div>
+            <p className="mt-6 text-2xl font-black leading-tight">
+              We handle the conversations, pricing, samples, and fulfillment.
+            </p>
+          </article>
+          <article className="panel panel-hover rounded-sm p-7">
+            <div className="text-xs uppercase tracking-[0.22em] text-[color:var(--neon)]">
+              Step 3
+            </div>
+            <p className="mt-6 text-2xl font-black leading-tight">
+              Receive 10% of the first order, capped at $5,000.
+            </p>
+          </article>
         </div>
       </section>
 
