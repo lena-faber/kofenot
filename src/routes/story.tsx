@@ -183,32 +183,26 @@ function Story() {
 
 function Hero() {
   return (
-    <section className="relative isolate -mt-16 overflow-hidden bg-black pt-16">
-      <div className="relative h-[74svh] min-h-[560px] w-full overflow-hidden">
+    <section className="-mt-16 overflow-hidden bg-black pt-16">
+      <div className="h-[74svh] min-h-[560px] w-full overflow-hidden bg-black">
         <img
           src={inventor}
           alt="KOFENOT inventor Lena Faber working outside with a laptop and coffee"
-          className="absolute inset-0 h-full w-full object-cover object-center"
+          className="h-full w-full object-cover object-center"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-black/80" />
-        <div
-          className={
-            "absolute left-4 top-24 max-w-[620px] sm:left-8 " +
-            "lg:left-[max(2rem,calc((100vw-1320px)/2))]"
-          }
-        >
-          <p className="text-xs font-black uppercase tracking-[0.24em] text-[color:var(--neon)]">
-            Kill a laptop. Kill a car. Start a company
-          </p>
-          <h1 className="mt-4 text-5xl font-black leading-[0.9] tracking-tight md:text-7xl lg:text-8xl">
-            KOFENOT™.<br />It Took a Village.
-          </h1>
-          <a href={downloadHref} download className="mt-7 inline-block">
-            <Button className="h-12 bg-[color:var(--neon)] px-7 font-black text-black hover:bg-[color:var(--neon-dim)]">
-              Download <Download className="ml-2 h-4 w-4" />
-            </Button>
-          </a>
-        </div>
+      </div>
+      <div className="mx-auto max-w-[1320px] px-4 py-10 lg:px-6">
+        <p className="text-xs font-black uppercase tracking-[0.24em] text-[color:var(--neon)]">
+          Kill a laptop. Kill a car. Start a company
+        </p>
+        <h1 className="mt-4 text-5xl font-black leading-[0.9] tracking-tight md:text-7xl lg:text-8xl">
+          KOFENOT™.<br />It Took a Village.
+        </h1>
+        <a href={downloadHref} download className="mt-7 inline-block">
+          <Button className="h-12 bg-[color:var(--neon)] px-7 font-black text-black hover:bg-[color:var(--neon-dim)]">
+            Download <Download className="ml-2 h-4 w-4" />
+          </Button>
+        </a>
       </div>
     </section>
   );
