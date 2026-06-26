@@ -15,7 +15,7 @@ export function SiteHeader() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-[100] isolate border-b border-white/5 bg-black/75 text-white backdrop-blur-md">
+    <header className="sticky top-0 z-[100] isolate border-b border-white/5 bg-black/45 text-white backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-[1320px] items-center gap-3 px-4 lg:px-6">
         <Link to="/" className="group flex shrink-0 items-center gap-4" onClick={() => setOpen(false)}>
           <span className="text-xl font-black tracking-[0.18em] text-[color:var(--neon)] group-hover:text-[color:var(--neon-dim)]">
