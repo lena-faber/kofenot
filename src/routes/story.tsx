@@ -158,29 +158,6 @@ const productCopy = [
     "3310 Woodward Ave, Santa Clara, CA 95054",
 ];
 
-function Story() {
-  return (
-    <main>
-      <Hero />
-      <StoryNav />
-      <Facts />
-
-      <StorySection section={sections[0]} />
-      <StoryImage image={sections[0].image} />
-
-      <StorySection section={sections[1]} />
-      <StoryImage image={sections[1].image} />
-
-      <StorySection section={sections[2]} />
-      <MarketImages />
-
-      <StorySection section={sections[3]} />
-      <ProductSection />
-      <FingerprintClose />
-    </main>
-  );
-}
-
 function Hero() {
   return (
     <section className="-mt-16 overflow-hidden bg-black pt-16">
@@ -348,5 +325,28 @@ function FingerprintClose() {
         KOFENOT™ may have one inventor. But it has many fingerprints.
       </h2>
     </section>
+  );
+}
+
+function Story() {
+  return (
+    <main>
+      <Hero />
+      <StoryNav />
+      <Facts />
+
+      <StorySection section={sections[0]} />
+      <StoryImage image={sections[0].image} />
+
+      <StorySection section={sections[1]} />
+      <StoryImage image={sections[1].image} />
+
+      <StorySection section={sections[2]} />
+      <MarketImages />
+
+      <StorySection section={sections[3]} />
+      <ProductSection />
+      <FingerprintClose />
+    </main>
   );
 }
