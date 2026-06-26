@@ -15,14 +15,13 @@ export const Route = createFileRoute("/wholesale")({
   component: Wholesale,
 });
 
-const wholesaleEmail = "mailto:info@kofenot.com?subject=KOFENOT%20Wholesale%20Order&body=Business%3A%0AQuantity%3A%0AShipping%20destination%3A%0ATimeline%3A%0A";
+const wholesaleCheckoutUrl = "https://buy.stripe.com/00w28qgD40dScQEgcsdUY0G";
 
-const pricing = [["30", "$X"], ["100", "$X"], ["400", "$X"], ["1000+", "Contact"]];
 const faq = [
   ["Who is wholesale for?", "Coffee shops, coworking spaces, gift shops, retailers, and counters where laptop users already work."],
   ["Is this custom printed?", "No. Wholesale is for resale inventory. Custom logo programs live on the Custom page."],
-  ["Can I start with 30 units?", "Yes. Use the 30-unit placeholder tier until final wholesale pricing is confirmed."],
-  ["How do I order?", "Email quantity, business name, destination, and timeline. We will confirm availability and terms."],
+  ["Can I start with 30 units?", "Yes. The minimum wholesale quantity is 30 units."],
+  ["How do I order?", "Use the wholesale checkout link for the 30-unit minimum order."],
 ];
 
 function Wholesale() {
@@ -35,7 +34,7 @@ function Wholesale() {
           <div className="max-w-3xl">
             <h1 className="mt-5 text-6xl font-black leading-[.88] tracking-tight md:text-8xl">SELL KOFENOT<br /><span className="neon-text">WHERE COFFEE HAPPENS.</span></h1>
             <p className="mt-7 max-w-2xl text-xl leading-relaxed text-white">For coffee shops, coworking spaces, and retailers that want a useful, counter-ready product for laptop customers.</p>
-            <div className="mt-8 flex flex-wrap gap-3"><a href={wholesaleEmail}><Button className="h-12 bg-[color:var(--neon)] px-7 font-black text-black hover:bg-[color:var(--neon-dim)]">Order Wholesale <ArrowRight className="ml-2 h-4 w-4" /></Button></a><Link to="/custom"><Button variant="outline" className="h-12 border-[rgba(0,255,0,0.55)] px-7 hover:bg-[rgba(0,255,0,0.08)] hover:text-[color:var(--neon)]">Need custom logo?</Button></Link></div>
+            <div className="mt-8 flex flex-wrap gap-3"><a href={wholesaleCheckoutUrl}><Button className="h-12 bg-[color:var(--neon)] px-7 font-black text-black hover:bg-[color:var(--neon-dim)]">Order Wholesale <ArrowRight className="ml-2 h-4 w-4" /></Button></a><Link to="/custom"><Button variant="outline" className="h-12 border-[rgba(0,255,0,0.55)] px-7 hover:bg-[rgba(0,255,0,0.08)] hover:text-[color:var(--neon)]">Need custom logo?</Button></Link></div>
           </div>
         </div>
       </section>
@@ -61,7 +60,8 @@ function Wholesale() {
 
       <section id="pricing" className="mx-auto max-w-[900px] px-4 py-20 lg:px-6">
         <h2 className="text-5xl font-black tracking-tight">Wholesale <span className="neon-text">Pricing</span></h2>
-        <div className="mt-8 overflow-hidden border border-[rgba(0,255,0,0.22)]"><table className="w-full text-left text-lg"><thead className="bg-[rgba(0,255,0,0.08)]"><tr><th className="px-5 py-4 text-[color:var(--neon)]">Qty</th><th className="px-5 py-4 text-[color:var(--neon)]">Price</th></tr></thead><tbody>{pricing.map(([qty, price]) => <tr key={qty} className="border-t border-[rgba(0,255,0,0.18)]"><td className="px-5 py-4 font-black">{qty}</td><td className="px-5 py-4 font-black">{price}</td></tr>)}</tbody></table></div>
+        <div className="mt-8 overflow-hidden border border-[rgba(0,255,0,0.22)]"><table className="w-full text-left text-lg"><thead className="bg-[rgba(0,255,0,0.08)]"><tr><th className="px-5 py-4 text-[color:var(--neon)]">Minimum Quantity</th><th className="px-5 py-4 text-[color:var(--neon)]">Price</th></tr></thead><tbody><tr className="border-t border-[rgba(0,255,0,0.18)]"><td className="px-5 py-4 font-black">30</td><td className="px-5 py-4 font-black">$8 each</td></tr></tbody></table></div>
+        <a href={wholesaleCheckoutUrl} className="mt-7 inline-block"><Button className="h-12 bg-[color:var(--neon)] px-8 font-black text-black hover:bg-[color:var(--neon-dim)]">Order Wholesale <ArrowRight className="ml-2 h-4 w-4" /></Button></a>
       </section>
 
       <section className="mx-auto max-w-[1320px] px-4 py-10 lg:px-6">
@@ -72,7 +72,7 @@ function Wholesale() {
 
       <section id="faq" className="mx-auto max-w-[900px] px-4 py-20 lg:px-6"><h2 className="text-5xl font-black tracking-tight">FAQ</h2><div className="mt-7 divide-y divide-[rgba(0,255,0,0.18)] border-y border-[rgba(0,255,0,0.18)]">{faq.map(([q, a]) => <div key={q} className="grid gap-2 py-6 md:grid-cols-[.8fr_1.2fr]"><h3 className="text-lg font-black uppercase">{q}</h3><p className="text-sm text-muted-foreground">{a}</p></div>)}</div></section>
 
-      <section id="order" className="mx-auto max-w-[1320px] px-4 pb-20 lg:px-6"><div className="neon-border bg-[rgba(0,255,0,0.05)] p-8 text-center neon-glow md:p-12"><p className="text-xs font-black uppercase tracking-[0.24em] text-[color:var(--neon)]">Order wholesale</p><h2 className="mt-3 text-5xl font-black tracking-tight">Ready for resale inventory?</h2><p className="mx-auto mt-4 max-w-2xl text-muted-foreground">Send quantity, business type, destination, and timeline. We will confirm current wholesale pricing and availability.</p><a href={wholesaleEmail} className="mt-7 inline-block"><Button className="h-12 bg-[color:var(--neon)] px-8 font-black text-black hover:bg-[color:var(--neon-dim)]">Order Wholesale <ArrowRight className="ml-2 h-4 w-4" /></Button></a></div></section>
+      <section id="order" className="mx-auto max-w-[1320px] px-4 pb-20 lg:px-6"><div className="neon-border bg-[rgba(0,255,0,0.05)] p-8 text-center neon-glow md:p-12"><p className="text-xs font-black uppercase tracking-[0.24em] text-[color:var(--neon)]">Order wholesale</p><h2 className="mt-3 text-5xl font-black tracking-tight">Ready for resale inventory?</h2><p className="mx-auto mt-4 max-w-2xl text-muted-foreground">Minimum quantity is 30 units at $8 each.</p><a href={wholesaleCheckoutUrl} className="mt-7 inline-block"><Button className="h-12 bg-[color:var(--neon)] px-8 font-black text-black hover:bg-[color:var(--neon-dim)]">Order Wholesale <ArrowRight className="ml-2 h-4 w-4" /></Button></a></div></section>
     </main>
   );
 }
