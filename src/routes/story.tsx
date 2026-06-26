@@ -48,7 +48,7 @@ const sections = [
       "A cup of coffee on a Palisades Tahoe Tuesday afternoon ended the short life " +
         "of a new Macbook Pro of a ski instructor, Lena Faber. At her lunch time " +
         "she was building a Web3 space-time infrastructure for human history. " +
-        "Because ones she was a journalist.",
+        "Because once she was a journalist.",
       "On a Thursday heavy storm, an elderly driver's hit her car from the side. " +
         "And action: Lena’s car flew down a steep hill like in a movie, bouncing " +
         "over obstacles along the way. The car was killed, the driver got zero " +
@@ -71,10 +71,10 @@ const sections = [
     nav: "Obsession",
     title: "One Ounce of Obsession",
     body: [
-      "When her upside-down eureca started to grab attention, she scetched " +
+      "When her upside-down eureka started to grab attention, she sketched " +
         "a wedge, filed a utility patent, and 3D printed an ugly prototype, " +
         "knowing that one day",
-      "It had to look elegant. It had to feel good in the hand.",
+      "It had to look premium. It had to feel good in the hand.",
       "It had to work with laptops, phones, and tablets.",
       "It could not use pins. It could not use magnets. It could not use adhesives.",
       "One ounce limit. Flat-folding. Multifunctional.",
@@ -97,7 +97,7 @@ const sections = [
         "when it closed.",
       "Not just close. Snap.",
       "It had to tempt people to open and close it again. It had to be a fidget.",
-      "The engineer laughed. And draw it for manufacturing. I takes countless " +
+      "The engineer laughed. And drew it for manufacturing. I takes countless " +
         "3D prints to figure out the the precise geometry of the opening and " +
         "closing mechanism. Lena didn't want to hear about pins. No magnets. " +
         "no adhesives either. Just mechanics. Oh, and snap!",
@@ -114,15 +114,15 @@ const sections = [
   {
     id: "village",
     nav: "Village",
-    title: "SIilicon Valley, Unfiltered.",
+    title: "Silicon Valley, Unfiltered.",
     body: [
       "Then came manufacturing… Felt like online gambling. Hours of video calls " +
         "with the sales girl from a massive Chinese factory, accustomed to handling " +
         "far larger orders yet explaining Lena all the nuts and bolts of manufacturing. " +
-        "Shipping at times when noone garantee the product would arrive at all. " +
+        "Shipping at times when noone garanteed the product would arrive at all. " +
         "Disclaimer: It did!",
       "Meanwile, Lena was still a few thousand dollars short of paying a balance " +
-        "to the factory. .",
+        "to the factory.",
       "She mentioned the situation to her new friends in her new Los Gatos neighborhood.",
       "The next minute her phone dinged - a few thousands dropped to her Zelle…",
       "No question asked. No paper signed. Just people who believed she would figure it out.",
