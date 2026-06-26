@@ -35,7 +35,7 @@ function Wholesale() {
           <div className="max-w-3xl">
             <h1 className="mt-5 text-6xl font-black leading-[.88] tracking-tight md:text-8xl">SELL KOFENOT<br /><span className="neon-text">WHERE COFFEE HAPPENS.</span></h1>
             <p className="mt-7 max-w-2xl text-xl leading-relaxed text-white">For coffee shops, coworking spaces, and retailers that want a useful, counter-ready product for laptop customers.</p>
-            <div className="mt-8 flex flex-wrap gap-3"><a href={wholesaleEmail><Button className="h-12 bg-[color:var(--neon)] px-7 font-black text-black hover:bg-[color:var(--neon-dim)]">Order Wholesale <ArrowRight className="ml-2 h-4 w-4" /></Button></a><Link to="/custom"><Button variant="outline" className="h-12 border-[rgba(0,255,0,0.55)] px-7 hover:bg-[rgba(0,255,0,0.08)] hover:text-[color:var(--neon)]">Need custom logo?</Button></Link></div>
+            <div className="mt-8 flex flex-wrap gap-3"><a href={wholesaleEmail}><Button className="h-12 bg-[color:var(--neon)] px-7 font-black text-black hover:bg-[color:var(--neon-dim)]">Order Wholesale <ArrowRight className="ml-2 h-4 w-4" /></Button></a><Link to="/custom"><Button variant="outline" className="h-12 border-[rgba(0,255,0,0.55)] px-7 hover:bg-[rgba(0,255,0,0.08)] hover:text-[color:var(--neon)]">Need custom logo?</Button></Link></div>
           </div>
         </div>
       </section>
