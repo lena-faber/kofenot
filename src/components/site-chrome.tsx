@@ -1,4 +1,5 @@
 "use client";
+
 import { useState } from "react";
 import { Link, useLocation } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
@@ -13,6 +14,19 @@ const navLinks = [
   { label: "Referral Program", to: "/referrals" },
 ] as const;
 
+const footerLinks = [
+  { label: "About", href: "/#why" },
+  { label: "Contact", href: "mailto:info@kofenot.com" },
+  { label: "Referral Program", href: "/referrals" },
+  { label: "Patent & Trademark", href: "/spec" },
+  { label: "Shipping", href: "/#faq" },
+  { label: "Returns", href: "/#faq" },
+  {
+    label: "Privacy",
+    href: "mailto:info@kofenot.com?subject=KOFENOT%20Privacy",
+  },
+];
+
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
   const location = useLocation();
@@ -21,14 +35,17 @@ export function SiteHeader() {
   const ctaLabel = isSamplePage ? "Buy Sample" : "Buy Now";
 
   return (
-    <header className="sticky top-0 z-[100] isolate border-b border-white/5 bg-black/35 text-white backdrop-blur-md">
+    <header className="sticky top-0 z-[100] isolate overflow-x-hidden border-b border-white/5 bg-black/35 text-white backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-[1320px] items-center gap-3 px-4 lg:px-6">
-        <Link to="/" className="group flex shrink-0 items-center gap-4" onClick={() => setOpen(false)}>
-          <span className="text-xl font-black tracking-[0.18em] text-[color:var(--neon)] group-hover:text-[color:var(--neon-dim)]">
+        <Link
+          to="/"
+          className="group flex min-w-0 shrink items-center gap-3 sm:gap-4"
+          onClick={() => setOpen(false)}
+        >
+          <span className="shrink-0 text-xl font-black tracking-[0.18em] text-[color:var(--neon)] group-hover:text-[color:var(--neon-dim)]">
             KOFENOT
           </span>
-
-          <span className="hidden whitespace-nowrap text-[11px] font-bold uppercase tracking-[0.2em] text-[color:var(--neon)] sm:block">
+          <span className="hidden min-w-0 truncate text-[11px] font-bold uppercase tracking-[0.18em] text-[color:var(--neon)] sm:block">
             Make your laptop coffeeshop-friendly™
           </span>
         </Link>
@@ -60,7 +77,11 @@ export function SiteHeader() {
             aria-label={open ? "Close menu" : "Open menu"}
             aria-expanded={open}
           >
-            <span className={`transition-transform duration-300 ${open ? "rotate-90" : "rotate-0"}`}>
+            <span
+              className={`transition-transform duration-300 ${
+                open ? "rotate-90" : "rotate-0"
+              }`}
+            >
               {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
             </span>
           </button>
@@ -69,13 +90,19 @@ export function SiteHeader() {
 
       <div
         className={`grid bg-black transition-[grid-template-rows,opacity] duration-300 ease-out md:hidden ${
-          open ? "grid-rows-[1fr] opacity-100" : "pointer-events-none grid-rows-[0fr] opacity-0"
+          open
+            ? "grid-rows-[1fr] opacity-100"
+            : "pointer-events-none grid-rows-[0fr] opacity-0"
         }`}
       >
         <div className="overflow-hidden">
           <nav className="grid gap-4 border-t border-[rgba(0,255,0,0.18)] px-4 py-4 text-sm">
             {navLinks.map((item) => (
-              <Link key={item.label} to={item.to} onClick={() => setOpen(false)}>
+              <Link
+                key={item.label}
+                to={item.to}
+                onClick={() => setOpen(false)}
+              >
                 {item.label}
               </Link>
             ))}
@@ -86,31 +113,32 @@ export function SiteHeader() {
   );
 }
 
-const footerLinks = [
-  { label: "About", href: "/#why" },
-  { label: "Contact", href: "mailto:info@kofenot.com" },
-  { label: "Referral Program", href: "/referrals" },
-  { label: "Patent & Trademark", href: "/spec" },
-  { label: "Shipping", href: "/#faq" },
-  { label: "Returns", href: "/#faq" },
-  { label: "Privacy", href: "mailto:info@kofenot.com?subject=KOFENOT%20Privacy" },
-];
-
 export function SiteFooter() {
   return (
-    <footer className="mt-20 border-t border-[rgba(0,255,0,0.18)]">
+    <footer className="mt-20 overflow-x-hidden border-t border-[rgba(0,255,0,0.18)]">
       <div className="mx-auto max-w-[1320px] px-4 py-10 text-center text-sm text-muted-foreground lg:px-6">
         <p className="text-foreground">
-          <strong>© 2026 KOFENOT: Make Your Laptop Coffee Shop-Friendly.</strong> Patent Pending. Made in California.
+          <strong>
+            © 2026 KOFENOT: Make Your Laptop Coffee Shop-Friendly.
+          </strong>{" "}
+          Patent Pending. Made in California.
         </p>
+
         <nav className="mt-5 flex flex-wrap justify-center gap-x-6 gap-y-2">
           {footerLinks.map((link) => (
-            <a key={link.label} href={link.href} className="text-[color:var(--neon)] hover:underline">
+            <a
+              key={link.label}
+              href={link.href}
+              className="text-[color:var(--neon)] hover:underline"
+            >
               {link.label}
             </a>
           ))}
         </nav>
-        <p className="mt-4 text-xs">RoHS Compliant | Patent Pending | KOFENOT™ Trademark</p>
+
+        <p className="mt-4 text-xs">
+          RoHS Compliant | Patent Pending | KOFENOT™ Trademark
+        </p>
       </div>
     </footer>
   );
