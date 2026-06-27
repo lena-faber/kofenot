@@ -44,56 +44,67 @@ const introductions = [
   { icon: Store, title: "Technology companies" },
 ];
 
+const steps = [
+  ["Step 1", "Introduce a buyer."],
+  ["Step 2", "We handle the conversations, pricing, samples, and fulfillment."],
+  ["Step 3", "Receive 10% of the first order, capped at $5,000."],
+];
+
 const faqs = [
   ["Do I need to sell KOFENOT?", "No. A qualified introduction is enough."],
   [
     "Do I receive recurring commissions?",
     "No. The referral fee is a one-time payment based on the first qualifying order.",
   ],
-  [
-    "How long is my referral protected?",
-    "12 months from the date of introduction.",
-  ],
+  ["How long is my referral protected?", "12 months from the date of introduction."],
   ["Is there a minimum order size?", "We evaluate opportunities individually."],
 ];
 
-const inputClass =
-  "h-12 border border-[rgba(0,255,0,0.3)] bg-black px-4 text-base text-white outline-none focus:border-[color:var(--neon)]";
+const inputClass = [
+  "h-12",
+  "border border-[rgba(0,255,0,0.3)]",
+  "bg-black px-4",
+  "text-base text-white",
+  "outline-none focus:border-[color:var(--neon)]",
+].join(" ");
 
-const labelClass =
-  "grid gap-2 text-sm font-bold uppercase tracking-[0.14em] text-muted-foreground";
+const textareaClass = [
+  "resize-none",
+  "border border-[rgba(0,255,0,0.3)]",
+  "bg-black p-4",
+  "text-base text-white",
+  "outline-none focus:border-[color:var(--neon)]",
+].join(" ");
+
+const labelClass = [
+  "grid gap-2",
+  "text-sm font-bold uppercase",
+  "tracking-[0.14em] text-muted-foreground",
+].join(" ");
 
 function Referrals() {
   return (
-    <main>
-      <section className="relative isolate -mt-16 min-h-[86svh] overflow-hidden bg-black pt-16">
+    <main className="page-shell">
+      <section className="page-hero">
         <img
           src={referralHero}
           alt="KOFENOT business referral opportunity"
           className="absolute inset-0 h-full w-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/50 to-transparent" />
+        <div className="hero-overlay" />
 
-        <div className="relative mx-auto flex min-h-[calc(86svh-4rem)] max-w-[1320px] items-center px-4 py-20 lg:px-6">
+        <div className="page-hero-inner">
           <div className="max-w-4xl">
-            <p className="text-xs uppercase tracking-[0.24em] text-[color:var(--neon)]">
-              Referral partner program
-            </p>
-            <h1 className="mt-5 text-6xl leading-[.88] tracking-tight md:text-8xl">
-              INTRODUCE US <span className="neon-text"></span>
-            </h1>
-            <div className="mt-7 max-w-3xl space-y-4 text-xl leading-relaxed text-white">
+            <p className="section-kicker">Referral partner program</p>
+            <h1 className="hero-title">INTRODUCE US</h1>
+            <div className="hero-copy space-y-4">
               <p>
                 Know a company that could use branded KOFENOT™ units for corporate
                 gifts, trade shows, employee welcome kits, coffee shops, coworking
                 spaces, conferences, or promotional campaigns?
               </p>
-              <p className="text-2xl text-[color:var(--neon)]">
-                Introduce us.
-              </p>
-              <p>
-                Receive 10% of the first order, capped at $5,000.
-              </p>
+              <p className="text-2xl text-[color:var(--neon)]">Introduce us.</p>
+              <p>Receive 10% of the first order, capped at $5,000.</p>
             </div>
             <a href="#contact" className="mt-8 inline-block">
               <Button className="h-12 bg-[color:var(--neon)] px-7 font-black text-black hover:bg-[color:var(--neon-dim)]">
@@ -104,55 +115,26 @@ function Referrals() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-[1320px] px-4 py-20 lg:px-6">
-        <p className="text-xs font-black uppercase tracking-[0.24em] text-[color:var(--neon)]">
-          How it works
-        </p>
-        <h2 className="mt-3 text-5xl font-black tracking-tight md:text-6xl">
-          A warm introduction. We handle the rest.
-        </h2>
+      <section className="page-section">
+        <p className="section-kicker">How it works</p>
+        <h2 className="section-title">A warm introduction. We handle the rest.</h2>
         <div className="mt-10 grid gap-4 md:grid-cols-3">
-          <article className="panel panel-hover rounded-sm p-7">
-            <div className="text-xs uppercase tracking-[0.22em] text-[color:var(--neon)]">
-              Step 1
-            </div>
-            <p className="mt-6 text-xl leading-tight">
-              Introduce a buyer.
-            </p>
-          </article>
-          <article className="panel panel-hover rounded-sm p-7">
-            <div className="text-xs uppercase tracking-[0.22em] text-[color:var(--neon)]">
-              Step 2
-            </div>
-            <p className="mt-6 text-xl leading-tight">
-              We handle the conversations, pricing, samples, and fulfillment.
-            </p>
-          </article>
-          <article className="panel panel-hover rounded-sm p-7">
-            <div className="text-xs uppercase tracking-[0.22em] text-[color:var(--neon)]">
-              Step 3
-            </div>
-            <p className="mt-6 text-xl leading-tight">
-              Receive 10% of the first order, capped at $5,000.
-            </p>
-          </article>
+          {steps.map(([label, text]) => (
+            <article key={label} className="panel panel-hover rounded-sm p-7">
+              <div className="section-kicker">{label}</div>
+              <p className="mt-6 text-xl leading-tight">{text}</p>
+            </article>
+          ))}
         </div>
       </section>
 
-      <section className="border-y border-[rgba(0,255,0,0.18)] bg-[rgba(0,255,0,0.025)]">
-        <div className="mx-auto max-w-[1320px] px-4 py-20 lg:px-6">
-          <p className="text-xs font-black uppercase tracking-[0.24em] text-[color:var(--neon)]">
-            Ideal introductions
-          </p>
-          <h2 className="mt-3 text-5xl font-black tracking-tight md:text-6xl">
-            High-value buyers and channels.
-          </h2>
+      <section className="section-band">
+        <div className="page-section">
+          <p className="section-kicker">Ideal introductions</p>
+          <h2 className="section-title">High-value buyers and channels.</h2>
           <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {introductions.map((item) => (
-              <article
-                key={item.title}
-                className="panel panel-hover rounded-sm p-6"
-              >
+              <article key={item.title} className="panel panel-hover rounded-sm p-6">
                 <item.icon className="h-7 w-7 text-[color:var(--neon)]" />
                 <h3 className="mt-5 text-xl font-black uppercase leading-tight">
                   {item.title}
@@ -163,8 +145,8 @@ function Referrals() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-[900px] px-4 py-20 lg:px-6">
-        <h2 className="text-5xl font-black tracking-tight">FAQ</h2>
+      <section className="page-section-narrow">
+        <h2 className="section-title">FAQ</h2>
         <div className="mt-7 divide-y divide-[rgba(0,255,0,0.18)] border-y border-[rgba(0,255,0,0.18)]">
           {faqs.map(([question, answer]) => (
             <div
@@ -178,16 +160,11 @@ function Referrals() {
         </div>
       </section>
 
-      <section
-        id="contact"
-        className="mx-auto max-w-[1320px] px-4 pb-20 lg:px-6"
-      >
+      <section id="contact" className="mx-auto max-w-[1320px] px-4 pb-20 lg:px-6">
         <div className="grid gap-8 lg:grid-cols-[.9fr_1.1fr]">
           <div className="neon-border bg-[rgba(0,255,0,0.05)] p-8 neon-glow md:p-10">
             <Handshake className="h-9 w-9 text-[color:var(--neon)]" />
-            <h2 className="mt-6 text-5xl font-black tracking-tight">
-              Let&apos;s Talk
-            </h2>
+            <h2 className="section-title">Let&apos;s Talk</h2>
             <p className="mt-4 text-lg text-muted-foreground">
               Tell us who you know and how KOFENOT might fit their business.
             </p>
@@ -233,7 +210,7 @@ function Referrals() {
                 name="message"
                 required
                 rows={6}
-                className="resize-none border border-[rgba(0,255,0,0.3)] bg-black p-4 text-base text-white outline-none focus:border-[color:var(--neon)]"
+                className={textareaClass}
               />
             </label>
 
