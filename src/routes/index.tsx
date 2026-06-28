@@ -18,6 +18,7 @@ import corp from "@/assets/kofenot-corp.jpeg";
 import deadSpill from "@/assets/dead-spill.jpg";
 import demoVideo from "@/assets/kofeenot-demo.mp4";
 import testimonialVideo from "@/assets/kofenot-testimonials.mp4";
+import testimonialPoster from "@/assets/kofenot-testimonials.jpg";
 import fidget from "@/assets/kofeenot-fidget.jpg";
 import giftBox from "@/assets/kofenot-gift-box.jpeg";
 import mechanics from "@/assets/kofeenot-mechanics.jpg";
@@ -416,6 +417,7 @@ function ReviewsSection() {
           <div className="aspect-video bg-black">
             <video
               src={testimonialVideo}
+              poster={testimonialPoster}
               controls
               playsInline
               className="h-full w-full"
