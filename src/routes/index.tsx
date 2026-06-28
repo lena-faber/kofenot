@@ -318,6 +318,7 @@ function BenefitsSection() {
   return (
     <section id="benefits" className="page-section border-t border-[rgba(0,255,0,0.12)]">
       <Reveal>
+        <p className="section-kicker">Why KOFENOT</p>
         <h2 className="section-title">
           One Small Wedge. <span className="neon-text">Two Big Wins</span>
         </h2>
