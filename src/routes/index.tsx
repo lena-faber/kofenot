@@ -429,15 +429,15 @@ function ReviewsSection() {
               <button
                 type="button"
                 onClick={() => setTestimonialPlaying(true)}
-                className="group absolute inset-0 z-10 flex items-center justify-center"
+                className="absolute inset-0 z-10 flex items-center justify-center bg-transparent hover:bg-transparent focus:bg-transparent active:bg-transparent"
                 aria-label="Play testimonial video"
               >
                 <img
                   src={testimonialPoster}
                   alt="KOFENOT testimonial video cover"
-                  className="absolute inset-0 h-full w-full object-cover"
+                  className="absolute inset-0 h-full w-full object-cover opacity-100 brightness-100 contrast-100 saturate-100"
                 />
-                <Play className="relative z-10 h-24 w-24 fill-red-600 text-red-600 transition group-hover:scale-110 md:h-32 md:w-32" />
+                <Play className="relative z-10 h-28 w-28 fill-red-600 text-red-600 md:h-36 md:w-36" />
               </button>
             )}
           </div>
