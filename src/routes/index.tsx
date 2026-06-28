@@ -393,36 +393,7 @@ function HowItWorksSection() {
   );
 }
 
-function WhySection() {
-  return (
-    <section id="why" className="page-section border-t border-[rgba(0,255,0,0.12)] py-10">
-      <Reveal>
-        <h2 className="section-title">
-          Why <span className="neon-text">KOFENOT</span>
-        </h2>
-        <p className="mt-3 max-w-3xl text-muted-foreground">
-          Pocket-flat, one ounce, no magnets, no adhesives, and made for the real
-          risk of coffee near laptops.
-        </p>
-      </Reveal>
-      <div className="mt-8 grid gap-4 md:grid-cols-2">
-        <article className="panel rounded-sm p-6">
-          <h3 className="text-xl font-black">Patent-Pending Geometry</h3>
-          <p className="mt-3 text-sm text-muted-foreground">
-            The small wedge lifts the rear hinge without attaching to the laptop.
-          </p>
-        </article>
-        <article className="panel rounded-sm p-6">
-          <h3 className="text-xl font-black">Easy to Carry</h3>
-          <p className="mt-3 text-sm text-muted-foreground">
-            Flat-folding 1 oz profile fits into a pocket, pouch, backpack, or
-            laptop sleeve.
-          </p>
-        </article>
-      </div>
-    </section>
-  );
-}
+
 
 function ReviewsSection() {
   return (
