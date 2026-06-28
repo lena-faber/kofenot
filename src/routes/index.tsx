@@ -221,7 +221,6 @@ function Home() {
 
       <BenefitsSection />
       <HowItWorksSection />
-      <DevicesSection />
       <WhySection />
       <ReviewsSection />
       <FaqSection />
@@ -346,6 +345,24 @@ function BenefitsSection() {
           </Reveal>
         ))}
       </div>
+      <div className="mt-5 grid gap-5 md:grid-cols-3">
+        {devices.map((item, index) => (
+          <Reveal key={item.caption} delay={index * 0.08}>
+            <article className="panel overflow-hidden rounded-sm">
+              <div className="aspect-square overflow-hidden bg-black">
+                <img
+                  src={item.img}
+                  alt={item.caption}
+                  className="h-full w-full object-cover"
+                />
+              </div>
+              <div className="p-3 text-center text-xs uppercase tracking-[0.18em] text-muted-foreground">
+                {item.caption}
+              </div>
+            </article>
+          </Reveal>
+        ))}
+      </div>
     </section>
   );
 }
@@ -370,34 +387,6 @@ function HowItWorksSection() {
               <div className="absolute right-7 top-7 h-1 w-12 bg-[color:var(--neon)]" />
             </article>
           </Reveal>
-        ))}
-      </div>
-    </section>
-  );
-}
-
-function DevicesSection() {
-  return (
-    <section id="devices" className="page-section border-t border-[rgba(0,255,0,0.12)] py-10">
-      <Reveal>
-        <h2 className="section-title">
-          <span className="neon-text">3 Devices</span>
-        </h2>
-      </Reveal>
-      <div className="mt-8 grid gap-4 md:grid-cols-3">
-        {devices.map((item) => (
-          <article key={item.caption} className="panel overflow-hidden rounded-sm">
-            <div className="aspect-square overflow-hidden bg-black">
-              <img
-                src={item.img}
-                alt={item.caption}
-                className="h-full w-full object-cover"
-              />
-            </div>
-            <div className="p-3 text-center text-xs uppercase tracking-[0.18em] text-muted-foreground">
-              {item.caption}
-            </div>
-          </article>
         ))}
       </div>
     </section>
