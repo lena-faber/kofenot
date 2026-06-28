@@ -146,6 +146,7 @@ function Reveal({ children, delay = 0 }: { children: React.ReactNode; delay?: nu
 
 function Home() {
   const [videoOpen, setVideoOpen] = useState(false);
+  const [testimonialVideoOpen, setTestimonialVideoOpen] = useState(false);
   const [checkoutUrl, setCheckoutUrl] = useState<string | null>(null);
   const heroRef = useRef<HTMLDivElement>(null);
 
@@ -223,8 +224,7 @@ function Home() {
 
       <BenefitsSection />
       <HowItWorksSection />
-      
-      <ReviewsSection />
+      <ReviewsSection openVideo={() => setTestimonialVideoOpen(true)} />
       <FaqSection />
       <PricingSection openCheckout={openCheckout} />
       <StatsSection />
@@ -233,6 +233,18 @@ function Home() {
         <DialogContent className="max-w-3xl bg-black p-2 neon-border">
           <video
             src={demoVideo}
+            controls
+            autoPlay
+            playsInline
+            className="w-full rounded-sm"
+          />
+        </DialogContent>
+      </Dialog>
+
+      <Dialog open={testimonialVideoOpen} onOpenChange={setTestimonialVideoOpen}>
+        <DialogContent className="max-w-4xl bg-black p-2 neon-border">
+          <video
+            src={testimonialVideo}
             controls
             autoPlay
             playsInline
@@ -395,11 +407,7 @@ function HowItWorksSection() {
   );
 }
 
-
-
-function ReviewsSection() {
-  const [testimonialPlaying, setTestimonialPlaying] = useState(false);
-
+function ReviewsSection({ openVideo }: { openVideo: () => void }) {
   return (
     <section id="reviews" className="page-section border-t border-[rgba(0,255,0,0.12)] py-10">
       <Reveal>
@@ -416,31 +424,19 @@ function ReviewsSection() {
       </div>
       <Reveal delay={0.1}>
         <div className="panel mt-5 overflow-hidden rounded-sm">
-          <div className="relative aspect-video bg-black">
-            {testimonialPlaying ? (
-              <video
-                src={testimonialVideo}
-                controls
-                autoPlay
-                playsInline
-                className="h-full w-full object-cover"
-              />
-            ) : (
-              <button
-                type="button"
-                onClick={() => setTestimonialPlaying(true)}
-                className="absolute inset-0 z-10 flex items-center justify-center bg-transparent hover:bg-transparent focus:bg-transparent active:bg-transparent"
-                aria-label="Play testimonial video"
-              >
-                <img
-                  src={testimonialPoster}
-                  alt="KOFENOT testimonial video cover"
-                  className="absolute inset-0 h-full w-full object-cover opacity-100 brightness-100 contrast-100 saturate-100"
-                />
-                <Play className="relative z-10 h-28 w-28 fill-red-600 text-red-600 md:h-36 md:w-36" />
-              </button>
-            )}
-          </div>
+          <button
+            type="button"
+            onClick={openVideo}
+            className="relative block aspect-video w-full overflow-hidden bg-transparent hover:bg-transparent focus:bg-transparent active:bg-transparent"
+            aria-label="Play testimonial video"
+          >
+            <img
+              src={testimonialPoster}
+              alt="KOFENOT testimonial video cover"
+              className="absolute inset-0 h-full w-full object-cover opacity-100 brightness-100 contrast-100 saturate-100"
+            />
+            <Play className="relative z-10 h-28 w-28 fill-red-600 text-red-600 md:h-36 md:w-36" />
+          </button>
         </div>
       </Reveal>
     </section>
