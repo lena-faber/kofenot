@@ -17,6 +17,7 @@ import { Dialog, DialogContent } from "@/components/ui/dialog";
 import corp from "@/assets/kofenot-corp.jpeg";
 import deadSpill from "@/assets/dead-spill.jpg";
 import demoVideo from "@/assets/kofeenot-demo.mp4";
+import testimonialVideo from "@/assets/kofenot-testimonials.mp4";
 import fidget from "@/assets/kofeenot-fidget.jpg";
 import giftBox from "@/assets/kofenot-gift-box.jpeg";
 import mechanics from "@/assets/kofeenot-mechanics.jpg";
@@ -414,7 +415,7 @@ function ReviewsSection() {
         <div className="panel mt-5 overflow-hidden rounded-sm">
           <div className="aspect-video bg-black">
             <video
-              src={demoVideo}
+              src={testimonialVideo}
               controls
               playsInline
               className="h-full w-full"
