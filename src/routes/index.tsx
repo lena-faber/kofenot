@@ -427,7 +427,7 @@ function ReviewsSection({ openVideo }: { openVideo: () => void }) {
           <button
             type="button"
             onClick={openVideo}
-            className="relative block aspect-video w-full overflow-hidden bg-transparent hover:bg-transparent focus:bg-transparent active:bg-transparent"
+            className="relative flex aspect-video w-full items-center justify-center overflow-hidden bg-transparent hover:bg-transparent focus:bg-transparent active:bg-transparent"
             aria-label="Play testimonial video"
           >
             <img
