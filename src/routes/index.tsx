@@ -221,7 +221,7 @@ function Home() {
 
       <BenefitsSection />
       <HowItWorksSection />
-      <WhySection />
+      
       <ReviewsSection />
       <FaqSection />
       <PricingSection openCheckout={openCheckout} />
