@@ -398,6 +398,8 @@ function HowItWorksSection() {
 
 
 function ReviewsSection() {
+  const [testimonialPlaying, setTestimonialPlaying] = useState(false);
+
   return (
     <section id="reviews" className="page-section border-t border-[rgba(0,255,0,0.12)] py-10">
       <Reveal>
@@ -414,14 +416,30 @@ function ReviewsSection() {
       </div>
       <Reveal delay={0.1}>
         <div className="panel mt-5 overflow-hidden rounded-sm">
-          <div className="aspect-video bg-black">
-            <video
-              src={testimonialVideo}
-              poster={testimonialPoster}
-              controls
-              playsInline
-              className="h-full w-full"
-            />
+          <div className="relative aspect-video bg-black">
+            {testimonialPlaying ? (
+              <video
+                src={testimonialVideo}
+                controls
+                autoPlay
+                playsInline
+                className="h-full w-full object-cover"
+              />
+            ) : (
+              <button
+                type="button"
+                onClick={() => setTestimonialPlaying(true)}
+                className="group absolute inset-0 z-10 flex items-center justify-center"
+                aria-label="Play testimonial video"
+              >
+                <img
+                  src={testimonialPoster}
+                  alt="KOFENOT testimonial video cover"
+                  className="absolute inset-0 h-full w-full object-cover"
+                />
+                <Play className="relative z-10 h-24 w-24 fill-red-600 text-red-600 transition group-hover:scale-110 md:h-32 md:w-32" />
+              </button>
+            )}
           </div>
         </div>
       </Reveal>
