@@ -27,6 +27,7 @@ import tilt from "@/assets/kofeenot-tilt.jpg";
 export const Route = createFileRoute("/")({ component: Home });
 
 const retailCheckoutUrl = "https://buy.stripe.com/fZu7sKfz0gcQ7wk6BSdUY0E";
+const testimonialVideoUrl = "https://www.youtube.com/embed/6EPgYbq7hvA";
 
 const benefits = [
   {
@@ -410,6 +411,19 @@ function ReviewsSection() {
           </blockquote>
         ))}
       </div>
+      <Reveal delay={0.1}>
+        <div className="panel mt-5 overflow-hidden rounded-sm">
+          <div className="aspect-video bg-black">
+            <iframe
+              src={testimonialVideoUrl}
+              title="KOFENOT testimonial video"
+              className="h-full w-full"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            />
+          </div>
+        </div>
+      </Reveal>
     </section>
   );
 }
