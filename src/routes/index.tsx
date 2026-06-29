@@ -146,7 +146,6 @@ function Reveal({ children, delay = 0 }: { children: React.ReactNode; delay?: nu
 
 function Home() {
   const [videoOpen, setVideoOpen] = useState(false);
-  const [testimonialVideoOpen, setTestimonialVideoOpen] = useState(false);
   const [checkoutUrl, setCheckoutUrl] = useState<string | null>(null);
   const heroRef = useRef<HTMLDivElement>(null);
 
@@ -224,7 +223,7 @@ function Home() {
 
       <BenefitsSection />
       <HowItWorksSection />
-      <ReviewsSection openVideo={() => setTestimonialVideoOpen(true)} />
+      <ReviewsSection openCheckout={openCheckout} />
       <FaqSection />
       <PricingSection openCheckout={openCheckout} />
       <StatsSection />
@@ -233,18 +232,6 @@ function Home() {
         <DialogContent className="max-w-3xl bg-black p-2 neon-border">
           <video
             src={demoVideo}
-            controls
-            autoPlay
-            playsInline
-            className="w-full rounded-sm"
-          />
-        </DialogContent>
-      </Dialog>
-
-      <Dialog open={testimonialVideoOpen} onOpenChange={setTestimonialVideoOpen}>
-        <DialogContent className="max-w-4xl bg-black p-2 neon-border">
-          <video
-            src={testimonialVideo}
             controls
             autoPlay
             playsInline
@@ -407,7 +394,7 @@ function HowItWorksSection() {
   );
 }
 
-function ReviewsSection({ openVideo }: { openVideo: () => void }) {
+function ReviewsSection({ openCheckout }: { openCheckout: () => void }) {
   return (
     <section id="reviews" className="page-section border-t border-[rgba(0,255,0,0.12)] py-10">
       <Reveal>
@@ -423,20 +410,34 @@ function ReviewsSection({ openVideo }: { openVideo: () => void }) {
         ))}
       </div>
       <Reveal delay={0.1}>
-        <div className="panel mt-5 overflow-hidden rounded-sm">
-          <button
-            type="button"
-            onClick={openVideo}
-            className="relative flex aspect-video w-full items-center justify-center overflow-hidden bg-transparent hover:bg-transparent focus:bg-transparent active:bg-transparent"
-            aria-label="Play testimonial video"
-          >
-            <img
-              src={testimonialPoster}
-              alt="KOFENOT testimonial video cover"
-              className="absolute inset-0 h-full w-full object-cover opacity-100 brightness-100 contrast-100 saturate-100"
+        <div className="mt-5 grid gap-5 lg:grid-cols-[7fr_3fr]">
+          <div className="panel overflow-hidden rounded-sm">
+            <video
+              src={testimonialVideo}
+              poster={testimonialPoster}
+              controls
+              playsInline
+              className="aspect-video w-full bg-black object-cover"
             />
-            <Play className="relative z-10 h-28 w-28 fill-red-600 text-red-600 md:h-36 md:w-36" />
-          </button>
+          </div>
+          <aside className="panel flex flex-col justify-center rounded-sm p-6">
+            <div className="text-2xl leading-none text-[color:var(--neon)]">
+              ★★★★★
+            </div>
+            <p className="mt-3 text-lg font-black uppercase text-white">
+              Tested by real users
+            </p>
+            <p className="mt-2 text-sm font-bold uppercase tracking-[0.18em] text-muted-foreground">
+              Watch 180 seconds
+            </p>
+            <Button
+              onClick={openCheckout}
+              className="mt-6 h-12 bg-[color:var(--neon)] font-black text-black hover:bg-[color:var(--neon-dim)]"
+            >
+              Buy Now
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Button>
+          </aside>
         </div>
       </Reveal>
     </section>
