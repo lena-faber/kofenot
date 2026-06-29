@@ -395,6 +395,8 @@ function HowItWorksSection() {
 }
 
 function ReviewsSection({ openCheckout }: { openCheckout: () => void }) {
+  const [testimonialPlaying, setTestimonialPlaying] = useState(false);
+
   return (
     <section id="reviews" className="page-section border-t border-[rgba(0,255,0,0.12)] py-10">
       <Reveal>
@@ -404,14 +406,30 @@ function ReviewsSection({ openCheckout }: { openCheckout: () => void }) {
       </Reveal>
       <Reveal delay={0.1}>
         <div className="mt-8 grid gap-5 lg:grid-cols-[7fr_3fr]">
-          <div className="panel overflow-hidden rounded-sm">
-            <video
-              src={testimonialVideo}
-              poster={testimonialPoster}
-              controls
-              playsInline
-              className="aspect-video w-full bg-black object-cover"
-            />
+          <div className="overflow-hidden rounded-sm bg-black">
+            {testimonialPlaying ? (
+              <video
+                src={testimonialVideo}
+                controls
+                autoPlay
+                playsInline
+                className="aspect-video w-full object-cover"
+              />
+            ) : (
+              <button
+                type="button"
+                onClick={() => setTestimonialPlaying(true)}
+                className="relative flex aspect-video w-full items-center justify-center overflow-hidden bg-transparent hover:bg-transparent focus:bg-transparent active:bg-transparent"
+                aria-label="Play testimonial video"
+              >
+                <img
+                  src={testimonialPoster}
+                  alt="KOFENOT testimonial video cover"
+                  className="absolute inset-0 h-full w-full object-cover opacity-100 brightness-100 contrast-100 saturate-100"
+                />
+                <Play className="relative z-10 h-28 w-28 fill-red-600 text-red-600 md:h-36 md:w-36" />
+              </button>
+            )}
           </div>
           <aside className="panel flex flex-col justify-center rounded-sm p-6">
             <div className="text-2xl leading-none text-[color:var(--neon)]">
