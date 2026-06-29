@@ -402,15 +402,8 @@ function ReviewsSection({ openCheckout }: { openCheckout: () => void }) {
           Reviews / <span className="neon-text">Testimonials</span>
         </h2>
       </Reveal>
-      <div className="mt-8 grid gap-4 md:grid-cols-3">
-        {testimonials.map((quote) => (
-          <blockquote key={quote} className="panel rounded-sm p-6 text-lg font-semibold">
-            “{quote}”
-          </blockquote>
-        ))}
-      </div>
       <Reveal delay={0.1}>
-        <div className="mt-5 grid gap-5 lg:grid-cols-[7fr_3fr]">
+        <div className="mt-8 grid gap-5 lg:grid-cols-[7fr_3fr]">
           <div className="panel overflow-hidden rounded-sm">
             <video
               src={testimonialVideo}
@@ -430,6 +423,13 @@ function ReviewsSection({ openCheckout }: { openCheckout: () => void }) {
             <p className="mt-2 text-sm font-bold uppercase tracking-[0.18em] text-muted-foreground">
               Watch 180 seconds
             </p>
+            <div className="mt-5 space-y-3 border-y border-[rgba(0,255,0,0.18)] py-4">
+              {testimonials.map((quote) => (
+                <blockquote key={quote} className="text-sm font-semibold leading-snug text-white">
+                  “{quote}”
+                </blockquote>
+              ))}
+            </div>
             <Button
               onClick={openCheckout}
               className="mt-6 h-12 bg-[color:var(--neon)] font-black text-black hover:bg-[color:var(--neon-dim)]"
