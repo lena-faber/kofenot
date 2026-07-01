@@ -146,27 +146,10 @@ function Reveal({ children, delay = 0 }: { children: React.ReactNode; delay?: nu
 
 function Home() {
   const [videoOpen, setVideoOpen] = useState(false);
-  const [checkoutUrl, setCheckoutUrl] = useState<string | null>(null);
   const heroRef = useRef<HTMLDivElement>(null);
 
   const openCheckout = () => {
-    const width = Math.min(920, window.screen.availWidth - 48);
-    const height = Math.min(760, window.screen.availHeight - 48);
-    const left = Math.max(0, Math.round((window.screen.availWidth - width) / 2));
-    const top = Math.max(0, Math.round((window.screen.availHeight - height) / 2));
-
-    const checkoutWindow = window.open(
-      retailCheckoutUrl,
-      "kofeenot_stripe_checkout",
-      `popup=yes,width=${width},height=${height},left=${left},top=${top},noopener,noreferrer`,
-    );
-
-    if (checkoutWindow) {
-      checkoutWindow.focus();
-      return;
-    }
-
-    setCheckoutUrl(retailCheckoutUrl);
+    window.location.href = retailCheckoutUrl;
   };
 
   return (
@@ -237,22 +220,6 @@ function Home() {
             playsInline
             className="w-full rounded-sm"
           />
-        </DialogContent>
-      </Dialog>
-
-      <Dialog open={!!checkoutUrl} onOpenChange={(open) => !open && setCheckoutUrl(null)}>
-        <DialogContent className="max-w-md bg-black p-8 text-center neon-border">
-          <h3 className="text-2xl font-black neon-text">Secure checkout</h3>
-          <p className="mt-3 text-sm text-muted-foreground">
-            Stripe checkout opens in its own secure payment window.
-          </p>
-          <Button
-            onClick={() => checkoutUrl && (window.location.href = checkoutUrl)}
-            className="mt-6 bg-[color:var(--neon)] font-bold text-black hover:bg-[color:var(--neon-dim)]"
-          >
-            Continue to checkout
-            <ArrowRight className="ml-2 h-4 w-4" />
-          </Button>
         </DialogContent>
       </Dialog>
     </main>
