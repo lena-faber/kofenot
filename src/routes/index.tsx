@@ -449,17 +449,17 @@ function FaqSection() {
 function PricingSection({ openCheckout }: { openCheckout: (url?: string) => void }) {
   const purchaseOptions = [
     {
-      eyebrow: "Retail Price",
+      eyebrow: "1-Unit Retail Box",
       price: "$15",
-      title: "One KOFENOT™ laptop wedge in retail-ready hanging pack.",
-      items: ["1 oz flat-folding unit", "No magnets, clips, or adhesives", "Coffee-shop ready"],
+      title: "One KOFENOT™ laptop wedge in retail-ready hanging box.",
+      items: ["free shipping in the US", "free shipping in the US", "Coffee-shop ready"],
       url: retailCheckoutUrl,
     },
     {
-      eyebrow: "2-Unit Box",
-      price: "$30",
+      eyebrow: "2-Unit Retail Box",
+      price: "$25",
       title: "Two KOFENOT™ laptop wedges in retail-ready box.",
-      items: ["Two 1 oz flat-folding units", "No magnets, clips, or adhesives", "Coffee-shop ready"],
+      items: ["Tfree shipping in the US", "No magnets, clips, or adhesives", "Coffee-shop ready"],
       url: twoUnitCheckoutUrl,
     },
   ];
