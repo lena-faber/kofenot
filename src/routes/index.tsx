@@ -35,9 +35,9 @@ const benefitRows = [
   [
     {
       img: deadSpill,
-      label: "Dead spill → full replacement:",
+      label: "One spill → totall loss:",
       text:
-        "Flat laptops trap liquid through the keyboard into the motherboard.",
+        "Flat laptops let liquid go straight through the keyboard into critical parts.",
     },
     { img: tilt, caption: "Phone and tablet desk angle" },
     {
