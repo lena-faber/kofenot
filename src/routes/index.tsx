@@ -39,7 +39,8 @@ const whyKofenotCards = [
   },
   {
     image: tilt,
-    title: "Phone and tablet desk angle",
+    title: "Golde minute that save your laptop",
+    body: "KOFENOT™ keeps your laptop tilted, helping spills drain away from the keyboard from the very first second.",
   },
   {
     image: safeSpill,
