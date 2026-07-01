@@ -192,7 +192,7 @@ function Wholesale() {
                     Minimum Quantity
                   </th>
                   <th className="px-5 py-4 text-[color:var(--neon)]">Price</th>
-                  <th className="px-5 py-4 text-[color:var(--neon)]">Order</th>
+                  <th className="px-5 py-4 text-[color:var(--neon)]">Buy</th>
                 </tr>
               </thead>
               <tbody>
@@ -207,7 +207,7 @@ function Wholesale() {
                     <td className="px-5 py-4">
                       <a href={option.url}>
                         <Button className="h-10 bg-[color:var(--neon)] px-5 font-black text-black hover:bg-[color:var(--neon-dim)]">
-                          Order
+                          Buy
                           <ArrowRight className="ml-2 h-4 w-4" />
                         </Button>
                       </a>
