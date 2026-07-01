@@ -115,9 +115,9 @@ function Custom() {
           <div className="max-w-3xl">
             <p className="section-kicker">Custom logo programs</p>
             <h1 className="hero-title">
-              PUT YOUR LOGO
+              PUT YOUR LOGO ON
               <br />
-              <span className="neon-text">ON KOFENOT.</span>
+              <span className="neon-text">KOFENOT</span>
             </h1>
             <p className="hero-copy">
               For businesses, events, conferences, coffee shops, coworking spaces,
