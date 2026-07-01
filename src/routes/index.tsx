@@ -18,7 +18,6 @@ import corp from "@/assets/kofenot-corp.jpeg";
 import deadSpill from "@/assets/dead-spill.jpg";
 import demoVideo from "@/assets/kofeenot-demo.mp4";
 import testimonialVideo from "@/assets/kofenot-testimonials.mp4";
-import testimonialPoster from "@/assets/kofenot-testimonials.jpg";
 import fidget from "@/assets/kofeenot-fidget.jpg";
 import giftBox from "@/assets/kofenot-gift-box.jpeg";
 import neck from "@/assets/kofeenot-neck.jpg";
@@ -310,9 +309,11 @@ function ReviewsSection({ openCheckout }: { openCheckout: (url?: string) => void
             />
             {testimonialCoverVisible ? (
               <>
-                <img
-                  src={testimonialPoster}
-                  alt="KOFENOT testimonial video cover"
+                <video
+                  src={testimonialVideo}
+                  muted
+                  playsInline
+                  preload="auto"
                   className="absolute inset-0 z-10 h-full w-full object-cover opacity-100 brightness-100 contrast-100 saturate-100"
                 />
                 <button
