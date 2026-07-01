@@ -265,6 +265,17 @@ function HowItWorksSection() {
 
 function ReviewsSection({ openCheckout }: { openCheckout: (url?: string) => void }) {
   const [testimonialPlaying, setTestimonialPlaying] = useState(false);
+  const testimonialVideoRef = useRef<HTMLVideoElement>(null);
+
+  const playTestimonial = () => {
+    const video = testimonialVideoRef.current;
+    if (!video) return;
+
+    video.muted = false;
+    video.controls = true;
+    setTestimonialPlaying(true);
+    void video.play();
+  };
 
   return (
     <section id="reviews" className="page-section border-t border-[rgba(0,255,0,0.12)] py-10">
@@ -276,32 +287,26 @@ function ReviewsSection({ openCheckout }: { openCheckout: (url?: string) => void
 
       <Reveal delay={0.1}>
         <div className="mt-8 grid gap-5 lg:grid-cols-[7fr_3fr]">
-          <div className="overflow-hidden rounded-sm bg-black">
-            {testimonialPlaying ? (
-              <video
-                src={testimonialVideo}
-                controls
-                autoPlay
-                playsInline
-                className="aspect-video w-full object-cover"
-              />
-            ) : (
+          <div className="relative aspect-video overflow-hidden rounded-sm bg-black">
+            <video
+              ref={testimonialVideoRef}
+              src={testimonialVideo}
+              controls={testimonialPlaying}
+              muted={!testimonialPlaying}
+              playsInline
+              preload="auto"
+              className="absolute inset-0 h-full w-full object-cover opacity-100 brightness-100 contrast-100 saturate-100"
+            />
+            {!testimonialPlaying ? (
               <button
                 type="button"
-                onClick={() => setTestimonialPlaying(true)}
-                className="relative flex aspect-video w-full items-center justify-center overflow-hidden bg-transparent hover:bg-transparent focus:bg-transparent active:bg-transparent"
+                onClick={playTestimonial}
+                className="absolute inset-0 flex items-center justify-center bg-transparent hover:bg-transparent focus:bg-transparent active:bg-transparent"
                 aria-label="Play testimonial video"
               >
-                <video
-                  src={testimonialVideo}
-                  muted
-                  playsInline
-                  preload="metadata"
-                  className="absolute inset-0 h-full w-full object-cover opacity-100 brightness-100 contrast-100 saturate-100"
-                />
-                <Play className="relative z-10 h-28 w-28 fill-red-600 text-red-600 md:h-36 md:w-36" />
+                <Play className="h-28 w-28 fill-red-600 text-red-600 md:h-36 md:w-36" />
               </button>
-            )}
+            ) : null}
           </div>
 
           <aside className="panel flex flex-col justify-center rounded-sm p-6">
