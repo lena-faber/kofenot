@@ -33,6 +33,12 @@ export const Route = createFileRoute("/referrals")({
 const referralEmail =
   "mailto:info@kofenot.com?subject=KOFENOT%20Referral%20Partner&body=Name%3A%0AEmail%3A%0ACompany%3A%0AWho%20I%20can%20introduce%3A%0A";
 
+const steps = [
+  ["Step 1", "Introduce a buyer."],
+  ["Step 2", "We handle the conversations, pricing, samples, and fulfillment."],
+  ["Step 3", "Receive 10% of the first order, capped at $5,000."],
+];
+
 const introductions = [
   { icon: Gift, title: "Corporate gifting agencies" },
   { icon: Megaphone, title: "Promotional products distributors" },
@@ -42,12 +48,6 @@ const introductions = [
   { icon: Building2, title: "Coworking operators" },
   { icon: Network, title: "Marketing agencies" },
   { icon: Store, title: "Technology companies" },
-];
-
-const steps = [
-  ["Step 1", "Introduce a buyer."],
-  ["Step 2", "We handle the conversations, pricing, samples, and fulfillment."],
-  ["Step 3", "Receive 10% of the first order, capped at $5,000."],
 ];
 
 const faqs = [
@@ -85,154 +85,196 @@ const labelClass = [
 function Referrals() {
   return (
     <main className="page-shell">
-      <section className="page-hero">
-        <img
-          src={referralHero}
-          alt="KOFENOT business referral opportunity"
-          className="absolute inset-0 h-full w-full object-cover"
-        />
-        <div className="hero-overlay" />
+      <HeroSection />
+      <HowItWorksSection />
+      <IntroductionsSection />
+      <FaqSection />
+      <ContactSection />
+      <FooterNote />
+    </main>
+  );
+}
 
-        <div className="page-hero-inner">
-          <div className="max-w-4xl">
-            <p className="section-kicker">Referral partner program</p>
-            <h1 className="hero-title">INTRODUCE US</h1>
-            <div className="hero-copy space-y-4">
-              <p>
-                Know a company that could use branded KOFENOT™ units for corporate
-                gifts, trade shows, employee welcome kits, coffee shops, coworking
-                spaces, conferences, or promotional campaigns?
-              </p>
-              <p className="text-2xl text-[color:var(--neon)]">Introduce us.</p>
-              <p>Receive 10% of the first order, capped at $5,000.</p>
-            </div>
-            <a href="#contact" className="mt-8 inline-block">
-              <Button className="h-12 bg-[color:var(--neon)] px-7 font-black text-black hover:bg-[color:var(--neon-dim)]">
-                Become a Referral Partner
-              </Button>
-            </a>
+function HeroSection() {
+  return (
+    <section className="page-hero">
+      <img
+        src={referralHero}
+        alt="KOFENOT business referral opportunity"
+        className="absolute inset-0 h-full w-full object-cover"
+      />
+      <div className="hero-overlay" />
+
+      <div className="page-hero-inner">
+        <div className="max-w-4xl">
+          <p className="section-kicker">Referral partner program</p>
+          <h1 className="hero-title">INTRODUCE US</h1>
+          <div className="hero-copy space-y-4">
+            <p>
+              Know a company that could use branded KOFENOT™ units for corporate
+              gifts, trade shows, employee welcome kits, coffee shops, coworking
+              spaces, conferences, or promotional campaigns?
+            </p>
+            <p className="text-2xl text-[color:var(--neon)]">Introduce us.</p>
+            <p>Receive 10% of the first order, capped at $5,000.</p>
           </div>
+          <a href="#contact" className="mt-8 inline-block">
+            <Button className="h-12 bg-[color:var(--neon)] px-7 font-black text-black hover:bg-[color:var(--neon-dim)]">
+              Become a Referral Partner
+            </Button>
+          </a>
         </div>
-      </section>
+      </div>
+    </section>
+  );
+}
 
-      <section className="page-section">
-        <p className="section-kicker">How it works</p>
-        <h2 className="section-title">A warm introduction. We handle the rest.</h2>
-        <div className="mt-10 grid gap-4 md:grid-cols-3">
-          {steps.map(([label, text]) => (
-            <article key={label} className="panel panel-hover rounded-sm p-7">
-              <div className="section-kicker">{label}</div>
-              <p className="mt-6 text-xl leading-tight">{text}</p>
+function HowItWorksSection() {
+  return (
+    <section className="page-section">
+      <p className="section-kicker">How it works</p>
+      <h2 className="section-title">A warm introduction. We handle the rest.</h2>
+      <div className="mt-10 grid gap-4 md:grid-cols-3">
+        {steps.map(([label, text]) => (
+          <article key={label} className="panel panel-hover rounded-sm p-7">
+            <div className="section-kicker">{label}</div>
+            <p className="mt-6 text-xl leading-tight">{text}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+function IntroductionsSection() {
+  return (
+    <section className="section-band">
+      <div className="page-section">
+        <p className="section-kicker">Ideal introductions</p>
+        <h2 className="section-title">High-value buyers and channels.</h2>
+        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {introductions.map((item) => (
+            <article key={item.title} className="panel panel-hover rounded-sm p-6">
+              <item.icon className="h-7 w-7 text-[color:var(--neon)]" />
+              <h3 className="mt-5 text-xl font-black uppercase leading-tight">
+                {item.title}
+              </h3>
             </article>
           ))}
         </div>
-      </section>
+      </div>
+    </section>
+  );
+}
 
-      <section className="section-band">
-        <div className="page-section">
-          <p className="section-kicker">Ideal introductions</p>
-          <h2 className="section-title">High-value buyers and channels.</h2>
-          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {introductions.map((item) => (
-              <article key={item.title} className="panel panel-hover rounded-sm p-6">
-                <item.icon className="h-7 w-7 text-[color:var(--neon)]" />
-                <h3 className="mt-5 text-xl font-black uppercase leading-tight">
-                  {item.title}
-                </h3>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="page-section-narrow">
-        <h2 className="section-title">FAQ</h2>
-        <div className="mt-7 divide-y divide-[rgba(0,255,0,0.18)] border-y border-[rgba(0,255,0,0.18)]">
-          {faqs.map(([question, answer]) => (
-            <div
-              key={question}
-              className="grid gap-2 py-6 md:grid-cols-[.85fr_1.15fr]"
-            >
-              <h3 className="text-lg font-black uppercase">Q: {question}</h3>
-              <p className="text-sm text-muted-foreground">A: {answer}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section id="contact" className="mx-auto max-w-[1320px] px-4 pb-20 lg:px-6">
-        <div className="grid gap-8 lg:grid-cols-[.9fr_1.1fr]">
-          <div className="neon-border bg-[rgba(0,255,0,0.05)] p-8 neon-glow md:p-10">
-            <Handshake className="h-9 w-9 text-[color:var(--neon)]" />
-            <h2 className="section-title">Let&apos;s Talk</h2>
-            <p className="mt-4 text-lg text-muted-foreground">
-              Tell us who you know and how KOFENOT might fit their business.
-            </p>
-            <a
-              href={referralEmail}
-              className="mt-7 inline-flex items-center gap-2 text-sm font-black uppercase tracking-[0.18em] text-[color:var(--neon)] hover:underline"
-            >
-              info@kofenot.com
-              <Send className="h-4 w-4" />
-            </a>
-          </div>
-
-          <form
-            action={referralEmail}
-            method="post"
-            encType="text/plain"
-            className="panel rounded-sm p-6 md:p-8"
+function FaqSection() {
+  return (
+    <section className="page-section-narrow">
+      <h2 className="section-title">FAQ</h2>
+      <div className="mt-7 divide-y divide-[rgba(0,255,0,0.18)] border-y border-[rgba(0,255,0,0.18)]">
+        {faqs.map(([question, answer]) => (
+          <div
+            key={question}
+            className="grid gap-2 py-6 md:grid-cols-[.85fr_1.15fr]"
           >
-            <div className="grid gap-5 md:grid-cols-2">
-              <label className={labelClass}>
-                Name
-                <input name="name" required className={inputClass} />
-              </label>
-              <label className={labelClass}>
-                Email
-                <input
-                  name="email"
-                  type="email"
-                  required
-                  className={inputClass}
-                />
-              </label>
-            </div>
+            <h3 className="text-lg font-black uppercase">Q: {question}</h3>
+            <p className="text-sm text-muted-foreground">A: {answer}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
 
-            <label className={`mt-5 ${labelClass}`}>
-              Company
-              <input name="company" className={inputClass} />
-            </label>
+function ContactSection() {
+  return (
+    <section id="contact" className="mx-auto max-w-[1320px] px-4 pb-20 lg:px-6">
+      <div className="grid gap-8 lg:grid-cols-[.9fr_1.1fr]">
+        <ContactIntro />
+        <ReferralForm />
+      </div>
+    </section>
+  );
+}
 
-            <label className={`mt-5 ${labelClass}`}>
-              Message
-              <textarea
-                name="message"
-                required
-                rows={6}
-                className={textareaClass}
-              />
-            </label>
+function FooterNote() {
+  return (
+    <section className="mx-auto max-w-[1320px] px-4 pb-16 text-center lg:px-6">
+      <div className="border-t border-[rgba(0,255,0,0.18)] pt-8">
+        <Users className="mx-auto h-7 w-7 text-[color:var(--neon)]" />
+        <p className="mx-auto mt-4 max-w-3xl text-sm text-muted-foreground">
+          KOFENOT™ is available for custom branding, white-label programs,
+          trade shows, conferences, promotional products, and corporate gifting.
+        </p>
+      </div>
+    </section>
+  );
+}
 
-            <Button
-              type="submit"
-              className="mt-6 h-12 w-full bg-[color:var(--neon)] font-black text-black hover:bg-[color:var(--neon-dim)]"
-            >
-              Submit
-            </Button>
-          </form>
-        </div>
-      </section>
+function ContactIntro() {
+  return (
+    <div className="neon-border bg-[rgba(0,255,0,0.05)] p-8 neon-glow md:p-10">
+      <Handshake className="h-9 w-9 text-[color:var(--neon)]" />
+      <h2 className="section-title">Let&apos;s Talk</h2>
+      <p className="mt-4 text-lg text-muted-foreground">
+        Tell us who you know and how KOFENOT might fit their business.
+      </p>
+      <a
+        href={referralEmail}
+        className="mt-7 inline-flex items-center gap-2 text-sm font-black uppercase tracking-[0.18em] text-[color:var(--neon)] hover:underline"
+      >
+        info@kofenot.com
+        <Send className="h-4 w-4" />
+      </a>
+    </div>
+  );
+}
 
-      <section className="mx-auto max-w-[1320px] px-4 pb-16 text-center lg:px-6">
-        <div className="border-t border-[rgba(0,255,0,0.18)] pt-8">
-          <Users className="mx-auto h-7 w-7 text-[color:var(--neon)]" />
-          <p className="mx-auto mt-4 max-w-3xl text-sm text-muted-foreground">
-            KOFENOT™ is available for custom branding, white-label programs,
-            trade shows, conferences, promotional products, and corporate gifting.
-          </p>
-        </div>
-      </section>
-    </main>
+function ReferralForm() {
+  return (
+    <form
+      action={referralEmail}
+      method="post"
+      encType="text/plain"
+      className="panel rounded-sm p-6 md:p-8"
+    >
+      <div className="grid gap-5 md:grid-cols-2">
+        <label className={labelClass}>
+          Name
+          <input name="name" required className={inputClass} />
+        </label>
+        <label className={labelClass}>
+          Email
+          <input
+            name="email"
+            type="email"
+            required
+            className={inputClass}
+          />
+        </label>
+      </div>
+
+      <label className={`mt-5 ${labelClass}`}>
+        Company
+        <input name="company" className={inputClass} />
+      </label>
+
+      <label className={`mt-5 ${labelClass}`}>
+        Message
+        <textarea
+          name="message"
+          required
+          rows={6}
+          className={textareaClass}
+        />
+      </label>
+
+      <Button
+        type="submit"
+        className="mt-6 h-12 w-full bg-[color:var(--neon)] font-black text-black hover:bg-[color:var(--neon-dim)]"
+      >
+        Submit
+      </Button>
+    </form>
   );
 }
