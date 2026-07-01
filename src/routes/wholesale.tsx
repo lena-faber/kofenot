@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Check, Coffee, ShoppingBag, Store } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
-import coffeeShop from "@/assets/kofenot-coffee-shop.jpeg";
+import coffeeShop from "@/assets/coffee-shop.jpg";
 import pack from "@/assets/kofeenot-pack.jpeg";
 import giftBox from "@/assets/kofenot-gift-box.jpeg";
 
@@ -22,7 +22,8 @@ export const Route = createFileRoute("/wholesale")({
   component: Wholesale,
 });
 
-const wholesaleCheckoutUrl = "https://buy.stripe.com/00w28qgD40dScQEgcsdUY0G";
+const retailPackCheckoutUrl = "https://buy.stripe.com/00w28qgD40dScQEgcsdUY0G";
+const individualBoxCheckoutUrl = "https://buy.stripe.com/3cI7sK86y1hWeYMgcsdUY0L";
 
 const overviewCards = [
   {
@@ -55,6 +56,21 @@ const displayIdeas = [
   { img: giftBox, label: "Retail-ready packaging" },
 ];
 
+const wholesaleOptions = [
+  {
+    format: "Retail pack",
+    minimum: "30 units minimum",
+    price: "$8 each",
+    url: retailPackCheckoutUrl,
+  },
+  {
+    format: "Individual box",
+    minimum: "30 units minimum",
+    price: "$8 each",
+    url: individualBoxCheckoutUrl,
+  },
+];
+
 const faq = [
   [
     "Who is wholesale for?",
@@ -65,7 +81,7 @@ const faq = [
     "No. Wholesale is for resale inventory. Custom logo programs live on the Custom page.",
   ],
   ["Can I start with 30 units?", "Yes. The minimum wholesale quantity is 30 units."],
-  ["How do I order?", "Use the wholesale checkout link for the 30-unit minimum order."],
+  ["How do I order?", "Choose Retail pack or Individual box and use its wholesale checkout link."],
 ];
 
 function Wholesale() {
@@ -91,9 +107,9 @@ function Wholesale() {
               counter-ready product for laptop customers.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <a href={wholesaleCheckoutUrl}>
+              <a href={retailPackCheckoutUrl}>
                 <Button className="h-12 bg-[color:var(--neon)] px-7 font-black text-black hover:bg-[color:var(--neon-dim)]">
-                  Order Wholesale
+                  Order Retail Pack
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </a>
@@ -169,26 +185,36 @@ function Wholesale() {
           <table className="responsive-table text-left text-base sm:text-lg">
             <thead className="bg-[rgba(0,255,0,0.08)]">
               <tr>
+                <th className="px-5 py-4 text-[color:var(--neon)]">Format</th>
                 <th className="px-5 py-4 text-[color:var(--neon)]">
                   Minimum Quantity
                 </th>
                 <th className="px-5 py-4 text-[color:var(--neon)]">Price</th>
+                <th className="px-5 py-4 text-[color:var(--neon)]">Order</th>
               </tr>
             </thead>
             <tbody>
-              <tr className="border-t border-[rgba(0,255,0,0.18)]">
-                <td className="px-5 py-4 font-black">30</td>
-                <td className="px-5 py-4 font-black">$8 each</td>
-              </tr>
+              {wholesaleOptions.map((option) => (
+                <tr
+                  key={option.format}
+                  className="border-t border-[rgba(0,255,0,0.18)]"
+                >
+                  <td className="px-5 py-4 font-black">{option.format}</td>
+                  <td className="px-5 py-4 font-black">{option.minimum}</td>
+                  <td className="px-5 py-4 font-black">{option.price}</td>
+                  <td className="px-5 py-4">
+                    <a href={option.url}>
+                      <Button className="h-10 bg-[color:var(--neon)] px-5 font-black text-black hover:bg-[color:var(--neon-dim)]">
+                        Order
+                        <ArrowRight className="ml-2 h-4 w-4" />
+                      </Button>
+                    </a>
+                  </td>
+                </tr>
+              ))}
             </tbody>
           </table>
         </div>
-        <a href={wholesaleCheckoutUrl} className="mt-7 inline-block">
-          <Button className="h-12 bg-[color:var(--neon)] px-8 font-black text-black hover:bg-[color:var(--neon-dim)]">
-            Order Wholesale
-            <ArrowRight className="ml-2 h-4 w-4" />
-          </Button>
-        </a>
       </section>
 
       <section className="page-section pt-10">
@@ -239,14 +265,18 @@ function Wholesale() {
           <p className="section-kicker">Order wholesale</p>
           <h2 className="section-title">Ready for resale inventory?</h2>
           <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
-            Minimum quantity is 30 units at $8 each.
+            Choose retail pack or individual box. Minimum quantity is 30 units.
           </p>
-          <a href={wholesaleCheckoutUrl} className="mt-7 inline-block">
-            <Button className="h-12 bg-[color:var(--neon)] px-8 font-black text-black hover:bg-[color:var(--neon-dim)]">
-              Order Wholesale
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
-          </a>
+          <div className="mt-7 flex flex-wrap justify-center gap-3">
+            {wholesaleOptions.map((option) => (
+              <a key={option.format} href={option.url}>
+                <Button className="h-12 bg-[color:var(--neon)] px-8 font-black text-black hover:bg-[color:var(--neon-dim)]">
+                  Order {option.format}
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </a>
+            ))}
+          </div>
         </div>
       </section>
     </main>
