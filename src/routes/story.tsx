@@ -125,112 +125,132 @@ const closingStory = [
 function Story() {
   return (
     <main className="page-shell">
-      <section className="page-hero min-h-[100svh]">
-        <div className="pointer-events-none absolute inset-0 z-0" aria-hidden="true">
-          <img
-            src={inventor}
-            alt=""
-            className="absolute inset-0 h-full w-full object-cover object-center"
-          />
-          <div className="hero-overlay" />
-        </div>
-
-        <div className="relative z-10 mx-auto flex min-h-[calc(100svh-4rem)] max-w-[1480px] items-end px-6 pb-20 pt-7 lg:px-10">
-          <h1 className="text-6xl font-black leading-[0.9] tracking-tight md:text-[86px] lg:text-[112px]">
-            KILL A LAPTOP.
-            <br />
-            KILL A CAR.
-            <br />
-            START A COMPANY.
-          </h1>
-        </div>
-      </section>
-
-      <section className="page-section">
-        <div className="grid gap-4 md:grid-cols-4">
-          {storyCards.map((item) => (
-            <article key={item.title} className="panel rounded-sm p-6">
-              <item.icon className="h-7 w-7 text-[color:var(--neon)]" />
-              <p className="mt-5 text-xs font-black uppercase tracking-[0.2em] text-muted-foreground">
-                {item.kicker}
-              </p>
-              <h2 className="mt-2 text-3xl font-black tracking-tight">
-                {item.title}
-              </h2>
-            </article>
-          ))}
-        </div>
-      </section>
-
+      <HeroSection />
+      <StoryCardsSection />
       <StoryTextSection
         id="laptop"
         title="One Dead Laptop. One Dead Car. One-way ticket to Silicon Valley."
         paragraphs={laptopStory}
       />
-
       <ImageBreak
         src={coffeeShop}
         alt="KOFENOT in a coffee shop setting where laptops and coffee share the same table"
       />
-
       <StoryTextSection
         id="obsession"
         title="One Ounce of Obsession"
         paragraphs={obsessionStory}
       />
-
       <ImageBreak
         src={threeDevices}
         alt="KOFENOT used with a laptop, phone, and tablet"
       />
-
       <StoryTextSection
         id="snap"
         title="Folding Cars and Flying Wedge"
         paragraphs={snapStory}
       />
-
-      <section className="border-y border-[rgba(0,255,0,0.18)] bg-black">
-        <div className="grid md:grid-cols-2">
-          <img
-            src={expo}
-            alt="KOFENOT at an expo or trade show"
-            className="h-[48svh] min-h-[340px] w-full object-cover"
-          />
-          <img
-            src={corporate}
-            alt="KOFENOT as a corporate gift and custom branding product"
-            className="h-[48svh] min-h-[340px] w-full object-cover"
-          />
-        </div>
-      </section>
-
+      <ExpoImagesSection />
       <StoryTextSection
         id="village"
         title="Silicon Valley, Unfiltered."
         paragraphs={villageStory}
       />
-
-      <section className="section-band">
-        <div className="mx-auto grid max-w-[1320px] gap-8 px-4 py-20 lg:grid-cols-[0.9fr_1.1fr] lg:px-6">
-          <div>
-            <h2 className="section-title">Code. Coffee. Repeat.</h2>
-          </div>
-          <div className="flex flex-col justify-center gap-5 text-lg leading-relaxed text-white/90">
-            {closingStory.map((paragraph) => (
-              <p key={paragraph}>{paragraph}</p>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="page-section text-center">
-        <MapPin className="mx-auto h-9 w-9 text-[color:var(--neon)]" />
-        <h2 className="mx-auto mt-5 max-w-4xl text-5xl font-black tracking-tight md:text-6xl">
-          KOFENOT™ may have one inventor. But it took a village to lounch it.
-        </h2>
-      </section>
+      <ClosingStorySection />
+      <VillageFinalSection />
     </main>
+  );
+}
+
+function HeroSection() {
+  return (
+    <section className="page-hero min-h-[100svh]">
+      <div className="pointer-events-none absolute inset-0 z-0" aria-hidden="true">
+        <img
+          src={inventor}
+          alt=""
+          className="absolute inset-0 h-full w-full object-cover object-center"
+        />
+        <div className="hero-overlay" />
+      </div>
+
+      <div className="relative z-10 mx-auto flex min-h-[calc(100svh-4rem)] max-w-[1480px] items-end px-6 pb-20 pt-7 lg:px-10">
+        <h1 className="text-6xl font-black leading-[0.9] tracking-tight md:text-[86px] lg:text-[112px]">
+          KILL A LAPTOP.
+          <br />
+          KILL A CAR.
+          <br />
+          START A COMPANY.
+        </h1>
+      </div>
+    </section>
+  );
+}
+
+function StoryCardsSection() {
+  return (
+    <section className="page-section">
+      <div className="grid gap-4 md:grid-cols-4">
+        {storyCards.map((item) => (
+          <article key={item.title} className="panel rounded-sm p-6">
+            <item.icon className="h-7 w-7 text-[color:var(--neon)]" />
+            <p className="mt-5 text-xs font-black uppercase tracking-[0.2em] text-muted-foreground">
+              {item.kicker}
+            </p>
+            <h2 className="mt-2 text-3xl font-black tracking-tight">
+              {item.title}
+            </h2>
+          </article>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+function ExpoImagesSection() {
+  return (
+    <section className="border-y border-[rgba(0,255,0,0.18)] bg-black">
+      <div className="grid md:grid-cols-2">
+        <img
+          src={expo}
+          alt="KOFENOT at an expo or trade show"
+          className="h-[48svh] min-h-[340px] w-full object-cover"
+        />
+        <img
+          src={corporate}
+          alt="KOFENOT as a corporate gift and custom branding product"
+          className="h-[48svh] min-h-[340px] w-full object-cover"
+        />
+      </div>
+    </section>
+  );
+}
+
+function ClosingStorySection() {
+  return (
+    <section className="section-band">
+      <div className="mx-auto grid max-w-[1320px] gap-8 px-4 py-20 lg:grid-cols-[0.9fr_1.1fr] lg:px-6">
+        <div>
+          <h2 className="section-title">Code. Coffee. Repeat.</h2>
+        </div>
+        <div className="flex flex-col justify-center gap-5 text-lg leading-relaxed text-white/90">
+          {closingStory.map((paragraph) => (
+            <p key={paragraph}>{paragraph}</p>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function VillageFinalSection() {
+  return (
+    <section className="page-section text-center">
+      <MapPin className="mx-auto h-9 w-9 text-[color:var(--neon)]" />
+      <h2 className="mx-auto mt-5 max-w-4xl text-5xl font-black tracking-tight md:text-6xl">
+        KOFENOT™ may have one inventor. But it took a village to lounch it.
+      </h2>
+    </section>
   );
 }
 
