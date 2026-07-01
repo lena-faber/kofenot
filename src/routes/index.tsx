@@ -451,14 +451,14 @@ function PricingSection({ openCheckout }: { openCheckout: (url?: string) => void
     {
       eyebrow: "1-Unit Retail Box",
       price: "$15",
-      title: "One KOFENOT™ laptop wedge in retail-ready hanging box.",
+      title: "One KOFENOT™ laptop wedge in retail box.",
       items: ["free shipping in the US", "free shipping in the US", "Coffee-shop ready"],
       url: retailCheckoutUrl,
     },
     {
       eyebrow: "2-Unit Retail Box",
       price: "$25",
-      title: "Two KOFENOT™ laptop wedges in retail-ready box.",
+      title: "Two KOFENOT™ laptop wedges in retail box.",
       items: ["Tfree shipping in the US", "No magnets, clips, or adhesives", "Coffee-shop ready"],
       url: twoUnitCheckoutUrl,
     },
