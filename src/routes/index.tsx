@@ -29,6 +29,7 @@ import tilt from "@/assets/kofeenot-tilt.jpg";
 export const Route = createFileRoute("/")({ component: Home });
 
 const retailCheckoutUrl = "https://buy.stripe.com/fZu7sKfz0gcQ7wk6BSdUY0E";
+const twoUnitCheckoutUrl = "https://buy.stripe.com/eVq00i3Qi9Os9EsbWcdUY0M";
 
 const benefits = [
   {
@@ -148,8 +149,8 @@ function Home() {
   const [videoOpen, setVideoOpen] = useState(false);
   const heroRef = useRef<HTMLDivElement>(null);
 
-  const openCheckout = () => {
-    window.location.href = retailCheckoutUrl;
+  const openCheckout = (url = retailCheckoutUrl) => {
+    window.location.href = url;
   };
 
   return (
@@ -361,7 +362,7 @@ function HowItWorksSection() {
   );
 }
 
-function ReviewsSection({ openCheckout }: { openCheckout: () => void }) {
+function ReviewsSection({ openCheckout }: { openCheckout: (url?: string) => void }) {
   const [testimonialPlaying, setTestimonialPlaying] = useState(false);
 
   return (
@@ -416,7 +417,7 @@ function ReviewsSection({ openCheckout }: { openCheckout: () => void }) {
               ))}
             </div>
             <Button
-              onClick={openCheckout}
+              onClick={() => openCheckout()}
               className="mt-6 h-12 bg-[color:var(--neon)] font-black text-black hover:bg-[color:var(--neon-dim)]"
             >
               Buy Now
@@ -445,7 +446,24 @@ function FaqSection() {
   );
 }
 
-function PricingSection({ openCheckout }: { openCheckout: () => void }) {
+function PricingSection({ openCheckout }: { openCheckout: (url?: string) => void }) {
+  const purchaseOptions = [
+    {
+      eyebrow: "Retail Price",
+      price: "$15",
+      title: "One KOFENOT™ laptop wedge in retail-ready hanging pack.",
+      items: ["1 oz flat-folding unit", "No magnets, clips, or adhesives", "Coffee-shop ready"],
+      url: retailCheckoutUrl,
+    },
+    {
+      eyebrow: "2-Unit Box",
+      price: "$30",
+      title: "Two KOFENOT™ laptop wedges in retail-ready box.",
+      items: ["Two 1 oz flat-folding units", "No magnets, clips, or adhesives", "Coffee-shop ready"],
+      url: twoUnitCheckoutUrl,
+    },
+  ];
+
   return (
     <section id="pricing" className="page-section border-t border-[rgba(0,255,0,0.12)] py-10">
       <Reveal>
@@ -456,28 +474,31 @@ function PricingSection({ openCheckout }: { openCheckout: () => void }) {
           Consumer retail page. Wholesale pricing lives on Wholesale.
         </p>
       </Reveal>
-      <div className="mt-10 grid gap-4 md:grid-cols-[.95fr_1.05fr]">
-        <article className="neon-border neon-glow flex flex-col rounded-sm bg-[rgba(0,255,0,0.06)] p-6">
-          <div className="text-xs uppercase tracking-[0.18em] text-muted-foreground">
-            Retail Price
-          </div>
-          <div className="mt-3 text-5xl font-black neon-text">$15</div>
-          <p className="mt-3 text-sm">
-            One KOFENOT™ laptop wedge in retail-ready hanging pack.
-          </p>
-          <ul className="mt-5 space-y-2 text-sm">
-            <PricingItem>1 oz flat-folding unit</PricingItem>
-            <PricingItem>No magnets, clips, or adhesives</PricingItem>
-            <PricingItem>Coffee-shop ready</PricingItem>
-          </ul>
-          <Button
-            onClick={openCheckout}
-            className="mt-7 h-12 bg-[color:var(--neon)] font-black text-black hover:bg-[color:var(--neon-dim)]"
+      <div className="mt-10 grid gap-4 lg:grid-cols-[1fr_1fr_1.1fr]">
+        {purchaseOptions.map((option) => (
+          <article
+            key={option.eyebrow}
+            className="neon-border neon-glow flex flex-col rounded-sm bg-[rgba(0,255,0,0.06)] p-6"
           >
-            Buy Now
-            <ArrowRight className="ml-2 h-4 w-4" />
-          </Button>
-        </article>
+            <div className="text-xs uppercase tracking-[0.18em] text-muted-foreground">
+              {option.eyebrow}
+            </div>
+            <div className="mt-3 text-5xl font-black neon-text">{option.price}</div>
+            <p className="mt-3 text-sm">{option.title}</p>
+            <ul className="mt-5 space-y-2 text-sm">
+              {option.items.map((item) => (
+                <PricingItem key={item}>{item}</PricingItem>
+              ))}
+            </ul>
+            <Button
+              onClick={() => openCheckout(option.url)}
+              className="mt-auto h-12 bg-[color:var(--neon)] font-black text-black hover:bg-[color:var(--neon-dim)]"
+            >
+              Buy Now
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Button>
+          </article>
+        ))}
 
         <div className="panel overflow-hidden rounded-sm">
           <img
