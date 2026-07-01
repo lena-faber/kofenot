@@ -56,10 +56,12 @@ const whyKofenotCards = [
   {
     image: threeDevices,
     title: "KOFENOT 3-device support",
+    body: "Just flip KOFENOT™ and it turnes into a phone and tablet stand.",
   },
   {
     image: fidget,
-    title: "Tactile snap-open desk fidget",
+    title: "It's a toy fidget!",
+    body: "Open and snap shut loud. Repeat",
   },
 ];
 
