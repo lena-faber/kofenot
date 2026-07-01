@@ -40,13 +40,13 @@ const whyKofenotCards = [
   {
     image: tilt,
     title: "Golde minute that save your laptop",
-    body: "KOFENOT™ keeps your laptop tilted, helping spills drain away from the keyboard from the very first second.",
+    body: "KOFENOT™ hinge incline keeps your laptop tilted, that buys reaction time during accidents.",
   },
   {
     image: safeSpill,
     title: "Safe spill",
     body:
-      "Hinge-first incline redirects liquid away from critical components and buys reaction time during accidents.",
+      "KOFENOT™ helps spills drain away from the keyboard and can can save you $$.",
   },
   {
     image: neck,
