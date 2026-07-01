@@ -449,17 +449,17 @@ function FaqSection() {
 function PricingSection({ openCheckout }: { openCheckout: (url?: string) => void }) {
   const purchaseOptions = [
     {
-      eyebrow: "1-Unit Retail Box",
+      eyebrow: "1 unit in Retail Box",
       price: "$15",
       title: "One KOFENOT™ laptop wedge in retail box.",
-      items: ["free shipping in the US", "free shipping in the US", "Coffee-shop ready"],
+      items: ["free shipping in the US", "shipped from California", "3-5 business days"],
       url: retailCheckoutUrl,
     },
     {
-      eyebrow: "2-Unit Retail Box",
+      eyebrow: "2 units in Retail Box",
       price: "$25",
       title: "Two KOFENOT™ laptop wedges in retail box.",
-      items: ["Tfree shipping in the US", "No magnets, clips, or adhesives", "Coffee-shop ready"],
+      items: ["Tfree shipping in the US", "shipped from California", "3-5 business days"],
       url: twoUnitCheckoutUrl,
     },
   ];
@@ -471,7 +471,7 @@ function PricingSection({ openCheckout }: { openCheckout: (url?: string) => void
           Buy <span className="neon-text">KOFENOT</span>
         </h2>
         <p className="mt-3 text-muted-foreground">
-          Consumer retail page. Wholesale pricing lives on Wholesale.
+          Retail Price
         </p>
       </Reveal>
       <div className="mt-10 grid gap-4 lg:grid-cols-[1fr_1fr_1.1fr]">
