@@ -265,7 +265,14 @@ function HowItWorksSection() {
 
 function ReviewsSection({ openCheckout }: { openCheckout: (url?: string) => void }) {
   const [testimonialPlaying, setTestimonialPlaying] = useState(false);
+  const [testimonialCoverVisible, setTestimonialCoverVisible] = useState(true);
   const testimonialVideoRef = useRef<HTMLVideoElement>(null);
+
+  const hideTestimonialCover = () => {
+    if (testimonialPlaying) {
+      setTestimonialCoverVisible(false);
+    }
+  };
 
   const playTestimonial = () => {
     const video = testimonialVideoRef.current;
@@ -274,6 +281,7 @@ function ReviewsSection({ openCheckout }: { openCheckout: (url?: string) => void
     video.muted = false;
     video.controls = true;
     setTestimonialPlaying(true);
+    setTestimonialCoverVisible(true);
     void video.play();
   };
 
@@ -295,13 +303,16 @@ function ReviewsSection({ openCheckout }: { openCheckout: (url?: string) => void
               muted={!testimonialPlaying}
               playsInline
               preload="auto"
+              onCanPlay={hideTestimonialCover}
+              onPlaying={hideTestimonialCover}
               className="absolute inset-0 h-full w-full object-cover opacity-100 brightness-100 contrast-100 saturate-100"
             />
-            {!testimonialPlaying ? (
+            {testimonialCoverVisible ? (
               <button
                 type="button"
                 onClick={playTestimonial}
-                className="absolute inset-0 flex items-center justify-center bg-transparent hover:bg-transparent focus:bg-transparent active:bg-transparent"
+                disabled={testimonialPlaying}
+                className="absolute inset-0 flex items-center justify-center bg-transparent hover:bg-transparent focus:bg-transparent active:bg-transparent disabled:cursor-wait"
                 aria-label="Play testimonial video"
               >
                 <Play className="h-28 w-28 fill-red-600 text-red-600 md:h-36 md:w-36" />
