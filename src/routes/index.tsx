@@ -35,7 +35,7 @@ const benefitRows = [
   [
     {
       img: deadSpill,
-      label: "One spill → totall loss:",
+      label: "One spill → total loss:",
       text:
         "Flat laptops let liquid go straight through the keyboard into critical parts.",
     },
