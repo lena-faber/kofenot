@@ -2,7 +2,8 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Check, Coffee, ShoppingBag, Store } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
-import coffeeShop from "@/assets/coffee-shop.jpg";
+import coffeeShopPricing from "@/assets/coffee-shop.jpg";
+import coffeeShopHero from "@/assets/kofenot-coffee-shop.jpeg";
 import pack from "@/assets/kofeenot-pack.jpeg";
 import giftBox from "@/assets/kofenot-gift-box.jpeg";
 
@@ -51,7 +52,7 @@ const sellingPoints = [
 ];
 
 const displayIdeas = [
-  { img: coffeeShop, label: "Coffee shop counter" },
+  { img: coffeeShopHero, label: "Coffee shop counter" },
   { img: pack, label: "Wholesale pack" },
   { img: giftBox, label: "Retail-ready packaging" },
 ];
@@ -89,7 +90,7 @@ function Wholesale() {
     <main className="page-shell">
       <section className="page-hero">
         <img
-          src={coffeeShop}
+          src={coffeeShopHero}
           alt="KOFENOT coffee shop retail display concept"
           className="absolute inset-0 h-full w-full object-cover"
         />
@@ -177,43 +178,52 @@ function Wholesale() {
         </div>
       </section>
 
-      <section id="pricing" className="page-section-narrow">
+      <section id="pricing" className="page-section">
         <h2 className="section-title">
           Wholesale <span className="neon-text">Pricing</span>
         </h2>
-        <div className="mt-8 overflow-hidden border border-[rgba(0,255,0,0.22)]">
-          <table className="responsive-table text-left text-base sm:text-lg">
-            <thead className="bg-[rgba(0,255,0,0.08)]">
-              <tr>
-                <th className="px-5 py-4 text-[color:var(--neon)]">Format</th>
-                <th className="px-5 py-4 text-[color:var(--neon)]">
-                  Minimum Quantity
-                </th>
-                <th className="px-5 py-4 text-[color:var(--neon)]">Price</th>
-                <th className="px-5 py-4 text-[color:var(--neon)]">Order</th>
-              </tr>
-            </thead>
-            <tbody>
-              {wholesaleOptions.map((option) => (
-                <tr
-                  key={option.format}
-                  className="border-t border-[rgba(0,255,0,0.18)]"
-                >
-                  <td className="px-5 py-4 font-black">{option.format}</td>
-                  <td className="px-5 py-4 font-black">{option.minimum}</td>
-                  <td className="px-5 py-4 font-black">{option.price}</td>
-                  <td className="px-5 py-4">
-                    <a href={option.url}>
-                      <Button className="h-10 bg-[color:var(--neon)] px-5 font-black text-black hover:bg-[color:var(--neon-dim)]">
-                        Order
-                        <ArrowRight className="ml-2 h-4 w-4" />
-                      </Button>
-                    </a>
-                  </td>
+        <div className="mt-8 grid gap-5 lg:grid-cols-[1.1fr_.9fr]">
+          <div className="overflow-hidden border border-[rgba(0,255,0,0.22)]">
+            <table className="responsive-table text-left text-base sm:text-lg">
+              <thead className="bg-[rgba(0,255,0,0.08)]">
+                <tr>
+                  <th className="px-5 py-4 text-[color:var(--neon)]">Format</th>
+                  <th className="px-5 py-4 text-[color:var(--neon)]">
+                    Minimum Quantity
+                  </th>
+                  <th className="px-5 py-4 text-[color:var(--neon)]">Price</th>
+                  <th className="px-5 py-4 text-[color:var(--neon)]">Order</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody>
+                {wholesaleOptions.map((option) => (
+                  <tr
+                    key={option.format}
+                    className="border-t border-[rgba(0,255,0,0.18)]"
+                  >
+                    <td className="px-5 py-4 font-black">{option.format}</td>
+                    <td className="px-5 py-4 font-black">{option.minimum}</td>
+                    <td className="px-5 py-4 font-black">{option.price}</td>
+                    <td className="px-5 py-4">
+                      <a href={option.url}>
+                        <Button className="h-10 bg-[color:var(--neon)] px-5 font-black text-black hover:bg-[color:var(--neon-dim)]">
+                          Order
+                          <ArrowRight className="ml-2 h-4 w-4" />
+                        </Button>
+                      </a>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <div className="panel overflow-hidden rounded-sm">
+            <img
+              src={coffeeShopPricing}
+              alt="KOFENOT wholesale coffee shop display"
+              className="h-full min-h-[320px] w-full object-cover"
+            />
+          </div>
         </div>
       </section>
 
