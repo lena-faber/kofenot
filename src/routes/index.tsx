@@ -305,18 +305,27 @@ function ReviewsSection({ openCheckout }: { openCheckout: (url?: string) => void
               preload="auto"
               onCanPlay={hideTestimonialCover}
               onPlaying={hideTestimonialCover}
-              className="absolute inset-0 h-full w-full object-cover opacity-100 brightness-100 contrast-100 saturate-100"
+              className="absolute inset-0 z-0 h-full w-full object-cover opacity-100 brightness-100 contrast-100 saturate-100"
             />
             {testimonialCoverVisible ? (
-              <button
-                type="button"
-                onClick={playTestimonial}
-                disabled={testimonialPlaying}
-                className="absolute inset-0 flex items-center justify-center bg-transparent hover:bg-transparent focus:bg-transparent active:bg-transparent disabled:cursor-wait"
-                aria-label="Play testimonial video"
-              >
-                <Play className="h-28 w-28 fill-red-600 text-red-600 md:h-36 md:w-36" />
-              </button>
+              <>
+                <video
+                  src={testimonialVideo}
+                  muted
+                  playsInline
+                  preload="auto"
+                  className="absolute inset-0 z-10 h-full w-full object-cover opacity-100 brightness-100 contrast-100 saturate-100"
+                />
+                <button
+                  type="button"
+                  onClick={playTestimonial}
+                  disabled={testimonialPlaying}
+                  className="absolute inset-0 z-20 flex items-center justify-center bg-transparent hover:bg-transparent focus:bg-transparent active:bg-transparent disabled:cursor-wait"
+                  aria-label="Play testimonial video"
+                >
+                  <Play className="h-28 w-28 fill-red-600 text-red-600 md:h-36 md:w-36" />
+                </button>
+              </>
             ) : null}
           </div>
 
