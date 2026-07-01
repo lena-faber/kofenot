@@ -471,7 +471,7 @@ function PricingSection({ openCheckout }: { openCheckout: (url?: string) => void
           Buy <span className="neon-text">KOFENOT</span>
         </h2>
         <p className="mt-3 text-muted-foreground">
-          Retail Price
+          Retail Price. Secure Stripe Checkout
         </p>
       </Reveal>
       <div className="mt-10 grid gap-4 lg:grid-cols-[1fr_1fr_1.1fr]">
