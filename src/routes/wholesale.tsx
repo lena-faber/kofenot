@@ -65,7 +65,7 @@ const wholesaleOptions = [
     url: retailPackCheckoutUrl,
   },
   {
-    format: "Individual box",
+    format: "IRetail box",
     minimum: "30 units minimum",
     price: "$8 each",
     url: individualBoxCheckoutUrl,
@@ -110,7 +110,7 @@ function Wholesale() {
             <div className="mt-8 flex flex-wrap gap-3">
               <a href={retailPackCheckoutUrl}>
                 <Button className="h-12 bg-[color:var(--neon)] px-7 font-black text-black hover:bg-[color:var(--neon-dim)]">
-                  Order Retail Pack
+                  Buy 30 Units
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </a>
