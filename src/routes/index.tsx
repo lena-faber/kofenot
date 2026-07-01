@@ -21,9 +21,9 @@ import testimonialVideo from "@/assets/kofenot-testimonials.mp4";
 import testimonialPoster from "@/assets/kofenot-testimonials.jpg";
 import fidget from "@/assets/kofeenot-fidget.jpg";
 import giftBox from "@/assets/kofenot-gift-box.jpeg";
-import mechanics from "@/assets/kofeenot-mechanics.jpg";
 import neck from "@/assets/kofeenot-neck.jpg";
 import safeSpill from "@/assets/safe-spill.jpeg";
+import threeDevices from "@/assets/kofenot-3-devices.jpg";
 import tilt from "@/assets/kofeenot-tilt.jpg";
 
 export const Route = createFileRoute("/")({ component: Home });
@@ -31,24 +31,31 @@ export const Route = createFileRoute("/")({ component: Home });
 const retailCheckoutUrl = "https://buy.stripe.com/fZu7sKfz0gcQ7wk6BSdUY0E";
 const twoUnitCheckoutUrl = "https://buy.stripe.com/eVq00i3Qi9Os9EsbWcdUY0M";
 
-const benefits = [
-  {
-    img: deadSpill,
-    label: "Dead spill",
-    text:
-      "Flat laptops trap liquid through the keyboard into the motherboard. One spill can mean a full replacement.",
-  },
-  {
-    img: safeSpill,
-    label: "Safe spill",
-    text:
-      "Hinge-first incline redirects liquid away from critical components and buys reaction time during accidents.",
-  },
-  {
-    img: neck,
-    label: "Better posture",
-    text: "Raised screen angle helps reduce neck strain during daily laptop use.",
-  },
+const benefitRows = [
+  [
+    {
+      img: deadSpill,
+      label: "Dead spill",
+      text:
+        "Flat laptops trap liquid through the keyboard into the motherboard. One spill can mean a full replacement.",
+    },
+    { img: tilt, caption: "Phone and tablet desk angle" },
+    {
+      img: safeSpill,
+      label: "Safe spill",
+      text:
+        "Hinge-first incline redirects liquid away from critical components and buys reaction time during accidents.",
+    },
+  ],
+  [
+    {
+      img: neck,
+      label: "Better posture",
+      text: "Raised screen angle helps reduce neck strain during daily laptop use.",
+    },
+    { img: threeDevices, caption: "KOFENOT 3-device support" },
+    { img: fidget, caption: "Tactile snap-open desk fidget" },
+  ],
 ];
 
 const steps = [
@@ -59,12 +66,6 @@ const steps = [
     "Works with open-trench hinges. Flip wedge for closed-angle hinges.",
   ],
   ["03", "Snap Shut", "A satisfying mechanical click users keep repeating."],
-];
-
-const devices = [
-  { img: mechanics, caption: "Laptop hinge-first wedge design" },
-  { img: tilt, caption: "Phone and tablet desk angle" },
-  { img: fidget, caption: "Tactile snap-open desk fidget" },
 ];
 
 const stats = [
@@ -282,6 +283,39 @@ function HeroStat({
   );
 }
 
+function BenefitCard({
+  item,
+}: {
+  item: {
+    img: string;
+    label?: string;
+    text?: string;
+    caption?: string;
+  };
+}) {
+  const altText = item.label ?? item.caption ?? "KOFENOT product image";
+
+  return (
+    <article className="panel overflow-hidden rounded-sm">
+      <div className="aspect-square overflow-hidden bg-black">
+        <img src={item.img} alt={altText} className="h-full w-full object-cover" />
+      </div>
+      {item.label && item.text ? (
+        <div className="p-5">
+          <p className="text-sm leading-relaxed">
+            <strong className="text-[color:var(--neon)]">{item.label}:</strong>{" "}
+            {item.text}
+          </p>
+        </div>
+      ) : (
+        <div className="p-3 text-center text-xs uppercase tracking-[0.18em] text-muted-foreground">
+          {item.caption}
+        </div>
+      )}
+    </article>
+  );
+}
+
 function BenefitsSection() {
   return (
     <section id="benefits" className="page-section border-t border-[rgba(0,255,0,0.12)]">
@@ -291,47 +325,18 @@ function BenefitsSection() {
           Why KOFENOT
         </h2>
       </Reveal>
-      <div className="mt-10 grid gap-5 md:grid-cols-3">
-        {benefits.map((item, index) => (
-          <Reveal key={item.label} delay={index * 0.08}>
-            <article className="panel overflow-hidden rounded-sm">
-              <div className="aspect-square overflow-hidden bg-black">
-                <img
-                  src={item.img}
-                  alt={item.label}
-                  className="h-full w-full object-cover"
-                />
-              </div>
-              <div className="p-5">
-                <p className="text-sm leading-relaxed">
-                  <strong className="text-[color:var(--neon)]">
-                    {item.label}:
-                  </strong>{" "}
-                  {item.text}
-                </p>
-              </div>
-            </article>
-          </Reveal>
-        ))}
-      </div>
-      <div className="mt-5 grid gap-5 md:grid-cols-3">
-        {devices.map((item, index) => (
-          <Reveal key={item.caption} delay={index * 0.08}>
-            <article className="panel overflow-hidden rounded-sm">
-              <div className="aspect-square overflow-hidden bg-black">
-                <img
-                  src={item.img}
-                  alt={item.caption}
-                  className="h-full w-full object-cover"
-                />
-              </div>
-              <div className="p-3 text-center text-xs uppercase tracking-[0.18em] text-muted-foreground">
-                {item.caption}
-              </div>
-            </article>
-          </Reveal>
-        ))}
-      </div>
+      {benefitRows.map((row, rowIndex) => (
+        <div
+          key={`benefit-row-${rowIndex}`}
+          className={`${rowIndex === 0 ? "mt-10" : "mt-5"} grid gap-5 md:grid-cols-3`}
+        >
+          {row.map((item, index) => (
+            <Reveal key={item.label ?? item.caption} delay={index * 0.08}>
+              <BenefitCard item={item} />
+            </Reveal>
+          ))}
+        </div>
+      ))}
     </section>
   );
 }
