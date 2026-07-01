@@ -55,7 +55,7 @@ const whyKofenotCards = [
   },
   {
     image: threeDevices,
-    title: "KOFENOT 3-device support",
+    title: "3-device support",
     body: "Just flip KOFENOT™ and it turnes into a phone and tablet stand.",
   },
   {
