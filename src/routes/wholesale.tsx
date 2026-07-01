@@ -101,7 +101,7 @@ function Wholesale() {
             <h1 className="hero-title">
               SELL KOFENOT
               <br />
-              <span className="neon-text">WHERE COFFEE HAPPENS.</span>
+              <span className="neon-text">WHERE COFFEE HAPPENS</span>
             </h1>
             <p className="hero-copy">
               For coffee shops, coworking spaces, and retailers that want a useful,
