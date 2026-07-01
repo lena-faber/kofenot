@@ -31,31 +31,35 @@ export const Route = createFileRoute("/")({ component: Home });
 const retailCheckoutUrl = "https://buy.stripe.com/fZu7sKfz0gcQ7wk6BSdUY0E";
 const twoUnitCheckoutUrl = "https://buy.stripe.com/eVq00i3Qi9Os9EsbWcdUY0M";
 
-const benefitRows = [
-  [
-    {
-      img: deadSpill,
-      label: "One spill → total loss:",
-      text:
-        "Flat laptops let liquid go straight through the keyboard into critical parts.",
-    },
-    { img: tilt, caption: "Phone and tablet desk angle" },
-    {
-      img: safeSpill,
-      label: "Safe spill",
-      text:
-        "Hinge-first incline redirects liquid away from critical components and buys reaction time during accidents.",
-    },
-  ],
-  [
-    {
-      img: neck,
-      label: "Better posture",
-      text: "Raised screen angle helps reduce neck strain during daily laptop use.",
-    },
-    { img: threeDevices, caption: "KOFENOT 3-device support" },
-    { img: fidget, caption: "Tactile snap-open desk fidget" },
-  ],
+const whyKofenotCards = [
+  {
+    image: deadSpill,
+    title: "One spill -> total loss",
+    body: "Flat laptops let liquid go straight through the keyboard into critical parts.",
+  },
+  {
+    image: tilt,
+    title: "Phone and tablet desk angle",
+  },
+  {
+    image: safeSpill,
+    title: "Safe spill",
+    body:
+      "Hinge-first incline redirects liquid away from critical components and buys reaction time during accidents.",
+  },
+  {
+    image: neck,
+    title: "Better posture",
+    body: "Raised screen angle helps reduce neck strain during daily laptop use.",
+  },
+  {
+    image: threeDevices,
+    title: "KOFENOT 3-device support",
+  },
+  {
+    image: fidget,
+    title: "Tactile snap-open desk fidget",
+  },
 ];
 
 const steps = [
@@ -283,61 +287,53 @@ function HeroStat({
   );
 }
 
-function BenefitCard({
-  item,
-}: {
-  item: {
-    img: string;
-    label?: string;
-    text?: string;
-    caption?: string;
-  };
-}) {
-  const altText = item.label ?? item.caption ?? "KOFENOT product image";
-
-  return (
-    <article className="panel overflow-hidden rounded-sm">
-      <div className="aspect-square overflow-hidden bg-black">
-        <img src={item.img} alt={altText} className="h-full w-full object-cover" />
-      </div>
-      {item.label && item.text ? (
-        <div className="p-5">
-          <p className="text-sm leading-relaxed">
-            <strong className="text-[color:var(--neon)]">{item.label}:</strong>{" "}
-            {item.text}
-          </p>
-        </div>
-      ) : (
-        <div className="p-3 text-center text-xs uppercase tracking-[0.18em] text-muted-foreground">
-          {item.caption}
-        </div>
-      )}
-    </article>
-  );
-}
-
 function BenefitsSection() {
   return (
     <section id="benefits" className="page-section border-t border-[rgba(0,255,0,0.12)]">
       <Reveal>
         <p className="section-kicker">One Small Wedge.Endless Benefits</p>
-        <h2 className="section-title">
-          Why KOFENOT
-        </h2>
+        <h2 className="section-title">Why KOFENOT</h2>
       </Reveal>
-      {benefitRows.map((row, rowIndex) => (
-        <div
-          key={`benefit-row-${rowIndex}`}
-          className={`${rowIndex === 0 ? "mt-10" : "mt-5"} grid gap-5 md:grid-cols-3`}
-        >
-          {row.map((item, index) => (
-            <Reveal key={item.label ?? item.caption} delay={index * 0.08}>
-              <BenefitCard item={item} />
-            </Reveal>
-          ))}
-        </div>
-      ))}
+
+      <div className="mt-10 grid gap-5 md:grid-cols-3">
+        {whyKofenotCards.map((card, index) => (
+          <Reveal key={card.title} delay={(index % 3) * 0.08}>
+            <WhyKofenotCard card={card} />
+          </Reveal>
+        ))}
+      </div>
     </section>
+  );
+}
+
+function WhyKofenotCard({
+  card,
+}: {
+  card: {
+    image: string;
+    title: string;
+    body?: string;
+  };
+}) {
+  return (
+    <article className="panel overflow-hidden rounded-sm">
+      <div className="aspect-square overflow-hidden bg-black">
+        <img src={card.image} alt={card.title} className="h-full w-full object-cover" />
+      </div>
+
+      {card.body ? (
+        <div className="p-5">
+          <p className="text-sm leading-relaxed">
+            <strong className="text-[color:var(--neon)]">{card.title}:</strong>{" "}
+            {card.body}
+          </p>
+        </div>
+      ) : (
+        <div className="p-3 text-center text-xs uppercase tracking-[0.18em] text-muted-foreground">
+          {card.title}
+        </div>
+      )}
+    </article>
   );
 }
 
