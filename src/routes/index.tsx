@@ -221,7 +221,7 @@ function BenefitsSection() {
     <section id="benefits" className="page-section border-t border-[rgba(0,255,0,0.12)]">
       <Reveal>
         <p className="section-kicker">One Small Wedge.Endless Benefits</p>
-        <h2 className="section-title">Why KOFENOT</h2>
+        <h2 className="section-title">Why People Buy It</h2>
       </Reveal>
 
       <div className="mt-10 grid gap-5 md:grid-cols-3">
