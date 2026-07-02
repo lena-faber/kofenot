@@ -1,3 +1,4 @@
+// Cloudflare Workers configuration.
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "kofenot",
