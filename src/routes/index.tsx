@@ -259,7 +259,7 @@ function BenefitsSection() {
 
       <div className="mt-10 grid gap-5 md:grid-cols-2 lg:flex lg:items-start lg:justify-between">
         {benefitModes.map((card, index) => (
-          <Reveal key={card.title} delay={index * 0.055}>
+          <Reveal key={card.title} delay={index * 0.055} className={card.tileClass}>
             <BenefitMosaicCard card={card} index={index} />
           </Reveal>
         ))}
@@ -533,7 +533,7 @@ function BenefitMosaicCard({
 
   return (
     <article
-      className={`group flex h-full min-h-[360px] flex-col overflow-hidden rounded-sm border bg-black transition duration-300 hover:-translate-y-2 hover:rotate-0 ${toneClass} ${card.tileClass}`}
+      className={`group flex h-full min-h-[360px] w-full flex-col overflow-hidden rounded-sm border bg-black transition duration-300 hover:-translate-y-2 hover:rotate-0 ${toneClass}`}
     >
       <div className="shrink-0 overflow-hidden bg-black">
         <img
@@ -624,10 +624,18 @@ function CountUp({ value, suffix = "" }: { value: number; suffix?: string }) {
   );
 }
 
-function Reveal({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) {
+function Reveal({
+  children,
+  delay = 0,
+  className = "",
+}: {
+  children: React.ReactNode;
+  delay?: number;
+  className?: string;
+}) {
   return (
     <motion.div
-      className="relative z-10 pointer-events-auto h-full"
+      className={`relative z-10 pointer-events-auto h-full w-full ${className}`}
       initial={{ opacity: 0, y: 24 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-60px" }}
