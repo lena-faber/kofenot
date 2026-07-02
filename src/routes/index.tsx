@@ -35,7 +35,7 @@ const benefitModes = [
     title: "Coffee is coming.",
     body: "Flat laptop: liquid dives straight into the keyboard.",
     command: "panic",
-    tileClass: "lg:col-span-3",
+    tileClass: "lg:w-[21%]",
     imageClass: "h-[360px] lg:h-[390px]",
     tone: "red",
   },
@@ -45,7 +45,7 @@ const benefitModes = [
     title: "Tilt buys time.",
     body: "KOFENOT™ creates a quick escape angle when a spill hits the desk.",
     command: "deflect",
-    tileClass: "lg:col-span-2 lg:mt-16",
+    tileClass: "lg:mt-14 lg:w-[18%]",
     imageClass: "h-[320px] lg:h-[300px]",
     tone: "neon",
   },
@@ -55,7 +55,7 @@ const benefitModes = [
     title: "Screen goes up.",
     body: "A cleaner laptop angle for desks, cafes, counters, and pop-up offices.",
     command: "lift",
-    tileClass: "lg:col-span-2 lg:mt-5",
+    tileClass: "lg:mt-4 lg:w-[18%]",
     imageClass: "h-[300px] lg:h-[330px]",
     tone: "dark",
   },
@@ -65,7 +65,7 @@ const benefitModes = [
     title: "Flip it sideways.",
     body: "Compact support for phones, tablets, and quick calls.",
     command: "switch",
-    tileClass: "lg:col-span-3 lg:mt-8",
+    tileClass: "lg:mt-8 lg:w-[22%]",
     imageClass: "h-[300px] lg:h-[340px]",
     tone: "neon",
   },
@@ -75,7 +75,7 @@ const benefitModes = [
     title: "Snap. Shut. Repeat.",
     body: "The click keeps it in hand, not forgotten in a drawer.",
     command: "click",
-    tileClass: "lg:col-span-2 lg:mt-14",
+    tileClass: "lg:mt-12 lg:w-[17%]",
     imageClass: "h-[300px] lg:h-[320px]",
     tone: "red",
   },
@@ -257,7 +257,7 @@ function BenefitsSection() {
         </div>
       </Reveal>
 
-      <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-12 lg:items-start">
+      <div className="mt-10 grid gap-5 md:grid-cols-2 lg:flex lg:items-start lg:justify-between">
         {benefitModes.map((card, index) => (
           <Reveal key={card.title} delay={index * 0.055}>
             <BenefitMosaicCard card={card} index={index} />
@@ -539,7 +539,7 @@ function BenefitMosaicCard({
         <img
           src={card.image}
           alt={card.title}
-          className={`block h-full w-full object-cover opacity-95 transition duration-500 group-hover:scale-105 group-hover:opacity-100 ${card.imageClass}`}
+          className={`block w-full object-cover opacity-95 transition duration-500 group-hover:scale-105 group-hover:opacity-100 ${card.imageClass}`}
         />
       </div>
 
