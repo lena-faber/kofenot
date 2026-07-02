@@ -32,7 +32,7 @@ const benefitModes = [
   {
     image: deadSpill,
     mode: "Spill alert",
-    title: "Coffee is coming.",
+    
     body: "Flat laptop: liquid dives straight into the keyboard.",
     command: "panic",
     tileClass: "lg:w-[21%]",
