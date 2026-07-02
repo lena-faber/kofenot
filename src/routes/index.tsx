@@ -1,5 +1,3 @@
-"use client";
-
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
 import { motion, useInView } from "motion/react";
@@ -39,14 +37,13 @@ const whyKofenotCards = [
   },
   {
     image: tilt,
-    title: "Golde minute that save your laptop",
+    title: "Golden minute that saves your laptop",
     body: "KOFENOT™ hinge incline keeps your laptop tilted, that buys reaction time during accidents.",
   },
   {
     image: safeSpill,
     title: "Safe spill",
-    body:
-      "KOFENOT™ helps spills drain away from the keyboard and can can save you $$.",
+    body: "KOFENOT™ helps spills drain away from the keyboard and can save you $$.",
   },
   {
     image: neck,
@@ -56,7 +53,7 @@ const whyKofenotCards = [
   {
     image: threeDevices,
     title: "3-device support",
-    body: "Just flip KOFENOT™ and it turnes into a phone and tablet stand.",
+    body: "Just flip KOFENOT™ and it turns into a phone and tablet stand.",
   },
   {
     image: fidget,
@@ -117,7 +114,7 @@ const purchaseOptions = [
     price: "$25",
     title: "Two KOFENOT™ laptop wedges in retail box.",
     items: [
-      "Tfree shipping in the US",
+      "free shipping in the US",
       "shipped from California",
       "3-5 business days",
     ],
