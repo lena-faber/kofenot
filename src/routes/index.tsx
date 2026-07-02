@@ -149,7 +149,7 @@ const stats = [
   { value: 3, suffix: "", label: "Device categories" },
 ];
 
-function Home() {
+export function Home() {
   const [videoOpen, setVideoOpen] = useState(false);
 
   const openCheckout = (url = retailCheckoutUrl) => {
