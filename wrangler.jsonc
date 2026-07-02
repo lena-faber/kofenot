@@ -1,4 +1,4 @@
-// Cloudflare Workers configuration.
+// Cloudflare Workers deployment configuration.
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "kofenot",
