@@ -73,9 +73,10 @@ const howItWorksSteps = [
 ];
 
 const testimonials = [
-  "Fits in my laptop sleeve and makes cafe work feel less risky.",
-  "The snap is addictive. I keep it on my desk now.",
-  "Simple, light, and useful every day.",
+  "Why doesn't Apple include this?",
+  "I immediately bought one.",
+  "This is genius.",
+  "I've never seen anything like this.",
 ];
 
 const faq = [
