@@ -35,6 +35,9 @@ const benefitModes = [
     title: "Coffee is coming.",
     body: "Flat laptop: liquid dives straight into the keyboard.",
     command: "panic",
+    tileClass: "lg:col-span-4 lg:row-span-3",
+    imageClass: "min-h-[520px] lg:min-h-full",
+    tone: "red",
   },
   {
     image: safeSpill,
@@ -42,6 +45,9 @@ const benefitModes = [
     title: "Tilt buys time.",
     body: "KOFENOT™ creates a quick escape angle when a spill hits the desk.",
     command: "deflect",
+    tileClass: "lg:col-span-2 lg:row-span-2 lg:translate-y-10",
+    imageClass: "min-h-[320px] lg:min-h-full",
+    tone: "neon",
   },
   {
     image: neck,
@@ -49,13 +55,19 @@ const benefitModes = [
     title: "Screen goes up.",
     body: "A cleaner laptop angle for desks, cafes, counters, and pop-up offices.",
     command: "lift",
+    tileClass: "lg:col-span-2 lg:row-span-2 lg:-translate-y-4",
+    imageClass: "min-h-[300px] lg:min-h-full",
+    tone: "dark",
   },
   {
     image: threeDevices,
     mode: "Stand mode",
     title: "Flip it sideways.",
-    body: "Turns into a compact support for phones, tablets, and quick calls.",
+    body: "Compact support for phones, tablets, and quick calls.",
     command: "switch",
+    tileClass: "lg:col-span-3 lg:row-span-2",
+    imageClass: "min-h-[300px] lg:min-h-full",
+    tone: "neon",
   },
   {
     image: fidget,
@@ -63,6 +75,9 @@ const benefitModes = [
     title: "Snap. Shut. Repeat.",
     body: "The click keeps it in hand, not forgotten in a drawer.",
     command: "click",
+    tileClass: "lg:col-span-1 lg:row-span-2 lg:translate-y-8",
+    imageClass: "min-h-[300px] lg:min-h-full",
+    tone: "red",
   },
 ];
 
@@ -221,93 +236,30 @@ function HeroSection({ openVideo }: { openVideo: () => void }) {
 }
 
 function BenefitsSection() {
-  const [dangerMode, saveMode, ...utilityModes] = benefitModes;
-
   return (
     <section id="benefits" className="page-section border-t border-[rgba(0,255,0,0.12)]">
       <Reveal>
         <div className="flex flex-wrap items-end justify-between gap-5">
           <div>
-            <p className="section-kicker">Live desk emergency</p>
+            <p className="section-kicker">Uneven little machine</p>
             <h2 className="section-title">
-              Coffee is <span className="text-red-500">coming.</span>
+              Not a gallery.
               <br />
-              KOFENOT is faster.
+              A desk accident map.
             </h2>
           </div>
-          <div className="rotate-[-2deg] rounded-sm border border-red-500 bg-red-600 px-5 py-3 text-sm font-black uppercase tracking-[0.2em] text-white shadow-[0_0_32px_rgba(220,38,38,0.65)]">
+          <div className="rotate-[-3deg] rounded-sm border border-red-500 bg-red-600 px-5 py-3 text-sm font-black uppercase tracking-[0.2em] text-white shadow-[0_0_32px_rgba(220,38,38,0.65)]">
             Spill alert
           </div>
         </div>
       </Reveal>
 
-      <div className="mt-10 grid gap-5 lg:grid-cols-[1.2fr_.8fr]">
-        <Reveal>
-          <article className="neon-border neon-glow relative min-h-[620px] overflow-hidden rounded-sm bg-black">
-            <img
-              src={dangerMode.image}
-              alt={dangerMode.title}
-              className="absolute inset-0 h-full w-full object-cover opacity-80"
-            />
-            <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(0,0,0,0.9),rgba(0,0,0,0.55),rgba(0,0,0,0.18))]" />
-            <div className="absolute left-0 top-8 bg-red-600 px-6 py-3 text-xs font-black uppercase tracking-[0.22em] text-white shadow-[0_0_28px_rgba(220,38,38,0.7)]">
-              {dangerMode.mode}
-            </div>
-            <div className="relative z-10 flex min-h-[620px] max-w-[620px] flex-col justify-end p-6 md:p-10">
-              <div className="mb-5 grid max-w-md grid-cols-3 overflow-hidden rounded-sm border border-white/20 text-center text-[10px] font-black uppercase tracking-[0.14em] text-white/70">
-                <div className="border-r border-white/20 bg-red-600/80 px-2 py-3 text-white">
-                  spill
-                </div>
-                <div className="border-r border-white/20 bg-white/10 px-2 py-3">
-                  tilt
-                </div>
-                <div className="bg-[color:var(--neon)] px-2 py-3 text-black">
-                  saved
-                </div>
-              </div>
-              <h3 className="text-[54px] font-black italic leading-[0.86] tracking-tight text-white md:text-[86px]">
-                Desk
-                <br />
-                Disaster
-                <br />
-                Mode
-              </h3>
-              <p className="mt-6 max-w-md text-lg font-bold leading-relaxed text-white/82">
-                One tiny wedge changes the physics of the spill. That is the product story.
-              </p>
-            </div>
-          </article>
-        </Reveal>
-
-        <div className="grid gap-4">
-          <Reveal delay={0.05}>
-            <article className="neon-border relative overflow-hidden rounded-sm bg-[color:var(--neon)] p-6 text-black shadow-[0_0_30px_rgba(0,255,0,0.24)]">
-              <div className="text-xs font-black uppercase tracking-[0.2em]">
-                {saveMode.mode}
-              </div>
-              <h3 className="mt-4 text-4xl font-black italic leading-none">
-                {saveMode.title}
-              </h3>
-              <p className="mt-4 text-base font-bold leading-relaxed">
-                {saveMode.body}
-              </p>
-              <div className="mt-6 h-2 overflow-hidden rounded-full bg-black/20">
-                <div className="h-full w-[78%] bg-black" />
-              </div>
-              <div className="mt-2 text-[10px] font-black uppercase tracking-[0.2em]">
-                reaction time loaded
-              </div>
-            </article>
+      <div className="mt-10 grid auto-rows-auto gap-4 md:grid-cols-2 lg:grid-cols-6 lg:auto-rows-[150px]">
+        {benefitModes.map((card, index) => (
+          <Reveal key={card.title} delay={index * 0.055}>
+            <BenefitMosaicCard card={card} index={index} />
           </Reveal>
-
-          <div className="grid gap-4 sm:grid-cols-3 lg:grid-cols-1">
-            {utilityModes.map((card, index) => (
-              <Reveal key={card.title} delay={(index + 1) * 0.06}>
-                <BenefitModeCard card={card} />
-              </Reveal>
-            ))}
-          </div>
-        </div>
+        ))}
       </div>
     </section>
   );
@@ -552,8 +504,9 @@ function HeroStat({
   );
 }
 
-function BenefitModeCard({
+function BenefitMosaicCard({
   card,
+  index,
 }: {
   card: {
     image: string;
@@ -561,30 +514,58 @@ function BenefitModeCard({
     title: string;
     body: string;
     command: string;
+    tileClass: string;
+    imageClass: string;
+    tone: string;
   };
+  index: number;
 }) {
+  const isHero = index === 0;
+  const toneClass =
+    card.tone === "red"
+      ? "border-red-500/80 shadow-[0_0_34px_rgba(220,38,38,0.28)]"
+      : card.tone === "neon"
+        ? "border-[color:var(--neon)] shadow-[0_0_34px_rgba(0,255,0,0.2)]"
+        : "border-white/20";
+
   return (
-    <article className="panel group grid min-h-[156px] overflow-hidden rounded-sm transition hover:-translate-y-1 hover:border-[color:var(--neon)] hover:bg-[rgba(0,255,0,0.08)] sm:grid-rows-[120px_1fr] lg:grid-cols-[132px_1fr] lg:grid-rows-1">
-      <div className="overflow-hidden bg-black">
-        <img
-          src={card.image}
-          alt={card.title}
-          className="h-full w-full object-cover transition duration-300 group-hover:scale-110"
-        />
+    <article
+      className={`group relative h-full overflow-hidden rounded-sm border bg-black transition duration-300 hover:-translate-y-2 hover:rotate-0 ${toneClass} ${card.tileClass}`}
+    >
+      <img
+        src={card.image}
+        alt={card.title}
+        className={`h-full w-full object-cover opacity-82 transition duration-500 group-hover:scale-110 group-hover:opacity-100 ${card.imageClass}`}
+      />
+      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.05),rgba(0,0,0,0.86))]" />
+      <div className="absolute left-3 top-3 rounded-sm bg-black/70 px-3 py-2 text-[10px] font-black uppercase tracking-[0.18em] text-white backdrop-blur-sm">
+        {card.mode}
       </div>
-      <div className="p-4">
-        <div className="flex items-center justify-between gap-3">
-          <div className="text-[11px] font-black uppercase tracking-[0.18em] text-[color:var(--neon)]">
-            {card.mode}
+      <div className="absolute right-3 top-3 rotate-3 rounded-sm border border-[color:var(--neon)] bg-[color:var(--neon)] px-3 py-2 text-[10px] font-black uppercase tracking-[0.16em] text-black">
+        {card.command}
+      </div>
+      <div className="absolute inset-x-0 bottom-0 p-4 md:p-5">
+        {isHero ? (
+          <div className="mb-5 grid max-w-md grid-cols-3 overflow-hidden rounded-sm border border-white/20 text-center text-[10px] font-black uppercase tracking-[0.14em] text-white/70">
+            <div className="border-r border-white/20 bg-red-600/80 px-2 py-3 text-white">
+              spill
+            </div>
+            <div className="border-r border-white/20 bg-white/10 px-2 py-3">
+              tilt
+            </div>
+            <div className="bg-[color:var(--neon)] px-2 py-3 text-black">
+              saved
+            </div>
           </div>
-          <div className="rounded-sm border border-[color:var(--neon)] px-2 py-1 text-[10px] font-black uppercase tracking-[0.16em] text-[color:var(--neon)]">
-            {card.command}
-          </div>
-        </div>
-        <h3 className="mt-3 text-2xl font-black italic leading-none text-white">
+        ) : null}
+        <h3
+          className={`font-black italic leading-none text-white ${
+            isHero ? "text-5xl md:text-7xl" : "text-2xl md:text-3xl"
+          }`}
+        >
           {card.title}
         </h3>
-        <p className="mt-3 text-sm leading-snug text-muted-foreground">
+        <p className="mt-3 max-w-xl text-sm font-semibold leading-snug text-white/78 md:text-base">
           {card.body}
         </p>
       </div>
@@ -639,7 +620,7 @@ function CountUp({ value, suffix = "" }: { value: number; suffix?: string }) {
 function Reveal({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) {
   return (
     <motion.div
-      className="relative z-10 pointer-events-auto"
+      className="relative z-10 pointer-events-auto h-full"
       initial={{ opacity: 0, y: 24 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-60px" }}
