@@ -104,7 +104,7 @@ const purchaseOptions = [
     title: "One KOFENOT™ laptop wedge in retail box.",
     items: [
       "free shipping in the US",
-      "shipped from California",
+      "In Stock. Shipps from California",
       "3-5 business days",
     ],
     url: retailCheckoutUrl,
@@ -115,7 +115,7 @@ const purchaseOptions = [
     title: "Two KOFENOT™ laptop wedges in retail box.",
     items: [
       "free shipping in the US",
-      "shipped from California",
+      "In Stock. Shipps from California",
       "3-5 business days",
     ],
     url: twoUnitCheckoutUrl,
@@ -356,7 +356,7 @@ function PricingSection({ openCheckout }: { openCheckout: (url?: string) => void
           Buy <span className="neon-text">KOFENOT</span>
         </h2>
         <p className="mt-3 text-muted-foreground">
-          Retail Price. Secure Stripe Checkout
+          Ready to Ship. Secure Stripe Checkout
         </p>
       </Reveal>
 
