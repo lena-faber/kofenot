@@ -1,4 +1,4 @@
-// Cloudflare Workers deployment configuration for KOFENOT production.
+// Cloudflare Workers deployment configuration for KOFENOT current main.
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "kofenot",
