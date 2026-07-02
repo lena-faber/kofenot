@@ -22,43 +22,42 @@ import giftBox from "@/assets/kofenot-gift-box.jpeg";
 import neck from "@/assets/kofeenot-neck.jpg";
 import safeSpill from "@/assets/safe-spill.jpeg";
 import threeDevices from "@/assets/kofenot-3-devices.jpg";
-import tilt from "@/assets/kofeenot-tilt.jpg";
 
 export const Route = createFileRoute("/")({ component: Home });
 
 const retailCheckoutUrl = "https://buy.stripe.com/fZu7sKfz0gcQ7wk6BSdUY0E";
 const twoUnitCheckoutUrl = "https://buy.stripe.com/eVq00i3Qi9Os9EsbWcdUY0M";
 
-const whyKofenotCards = [
+const benefitModes = [
   {
     image: deadSpill,
-    title: "One spill -> total loss",
-    body: "Flat laptops let liquid go straight through the keyboard into critical parts.",
-  },
-  {
-    image: tilt,
-    title: "Golden minute that saves your laptop",
-    body: "KOFENOT™ hinge incline keeps your laptop tilted, that buys reaction time during accidents.",
+    mode: "01 / Spill",
+    title: "Six seconds before disaster",
+    body: "Tilt the laptop before coffee has a straight path into the keyboard.",
   },
   {
     image: safeSpill,
-    title: "Safe spill",
-    body: "KOFENOT™ helps spills drain away from the keyboard and can save you $$.",
+    mode: "02 / Save",
+    title: "Drain away from the keys",
+    body: "KOFENOT™ creates a quick escape angle when a spill hits the desk.",
   },
   {
     image: neck,
-    title: "Better posture",
-    body: "Raised screen angle helps reduce neck strain during daily laptop use.",
+    mode: "03 / Posture",
+    title: "Raise the screen",
+    body: "A cleaner laptop angle for desks, cafes, counters, and pop-up offices.",
   },
   {
     image: threeDevices,
-    title: "3-device support",
-    body: "Just flip KOFENOT™ and it turns into a phone and tablet stand.",
+    mode: "04 / Stand",
+    title: "Phone and tablet mode",
+    body: "Flip it into a compact support for second screens and quick calls.",
   },
   {
     image: fidget,
-    title: "It's a toy fidget!",
-    body: "Open and snap shut loud. Repeat",
+    mode: "05 / Fidget",
+    title: "Snap. Shut. Repeat.",
+    body: "A tiny mechanical ritual that keeps the product in hand, not in a drawer.",
   },
 ];
 
@@ -217,19 +216,46 @@ function HeroSection({ openVideo }: { openVideo: () => void }) {
 }
 
 function BenefitsSection() {
+  const [featuredMode, ...supportModes] = benefitModes;
+
   return (
     <section id="benefits" className="page-section border-t border-[rgba(0,255,0,0.12)]">
       <Reveal>
-        <p className="section-kicker">One Small Wedge.Endless Benefits</p>
-        <h2 className="section-title">Why People Buy KOFENOT™</h2>
+        <p className="section-kicker">Accident Mode: Ready</p>
+        <h2 className="section-title">Small Wedge. Big Save.</h2>
       </Reveal>
 
-      <div className="mt-10 grid gap-5 md:grid-cols-3">
-        {whyKofenotCards.map((card, index) => (
-          <Reveal key={card.title} delay={(index % 3) * 0.08}>
-            <WhyKofenotCard card={card} />
-          </Reveal>
-        ))}
+      <div className="mt-10 grid gap-5 lg:grid-cols-[1.35fr_.9fr]">
+        <Reveal>
+          <article className="neon-border neon-glow grid h-full overflow-hidden rounded-sm bg-[rgba(0,255,0,0.06)] md:grid-cols-[1.05fr_.95fr]">
+            <div className="min-h-[360px] overflow-hidden bg-black">
+              <img
+                src={featuredMode.image}
+                alt={featuredMode.title}
+                className="h-full w-full object-cover"
+              />
+            </div>
+            <div className="flex flex-col justify-end p-7 md:p-9">
+              <div className="text-xs font-black uppercase tracking-[0.18em] text-[color:var(--neon)]">
+                {featuredMode.mode}
+              </div>
+              <h3 className="mt-5 text-4xl font-black italic leading-none neon-text md:text-5xl">
+                {featuredMode.title}
+              </h3>
+              <p className="mt-5 text-base leading-relaxed text-white/80">
+                {featuredMode.body}
+              </p>
+            </div>
+          </article>
+        </Reveal>
+
+        <div className="grid gap-4">
+          {supportModes.map((card, index) => (
+            <Reveal key={card.title} delay={index * 0.06}>
+              <BenefitModeCard card={card} />
+            </Reveal>
+          ))}
+        </div>
       </div>
     </section>
   );
@@ -474,33 +500,36 @@ function HeroStat({
   );
 }
 
-function WhyKofenotCard({
+function BenefitModeCard({
   card,
 }: {
   card: {
     image: string;
+    mode: string;
     title: string;
-    body?: string;
+    body: string;
   };
 }) {
   return (
-    <article className="panel overflow-hidden rounded-sm">
-      <div className="aspect-square overflow-hidden bg-black">
-        <img src={card.image} alt={card.title} className="h-full w-full object-cover" />
+    <article className="panel group grid min-h-[128px] grid-cols-[118px_1fr] overflow-hidden rounded-sm transition hover:border-[color:var(--neon)] hover:bg-[rgba(0,255,0,0.08)]">
+      <div className="overflow-hidden bg-black">
+        <img
+          src={card.image}
+          alt={card.title}
+          className="h-full w-full object-cover transition duration-300 group-hover:scale-105"
+        />
       </div>
-
-      {card.body ? (
-        <div className="p-5">
-          <p className="text-sm leading-relaxed">
-            <strong className="text-[color:var(--neon)]">{card.title}:</strong>{" "}
-            {card.body}
-          </p>
+      <div className="p-4">
+        <div className="text-[11px] font-black uppercase tracking-[0.18em] text-[color:var(--neon)]">
+          {card.mode}
         </div>
-      ) : (
-        <div className="p-3 text-center text-xs uppercase tracking-[0.18em] text-muted-foreground">
+        <h3 className="mt-2 text-xl font-black leading-none text-white">
           {card.title}
-        </div>
-      )}
+        </h3>
+        <p className="mt-2 text-sm leading-snug text-muted-foreground">
+          {card.body}
+        </p>
+      </div>
     </article>
   );
 }
