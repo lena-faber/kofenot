@@ -35,8 +35,8 @@ const benefitModes = [
     title: "Coffee is coming.",
     body: "Flat laptop: liquid dives straight into the keyboard.",
     command: "panic",
-    tileClass: "lg:col-span-4 lg:row-span-3",
-    imageClass: "min-h-[520px] lg:min-h-full",
+    tileClass: "lg:col-span-3",
+    imageClass: "h-[360px] lg:h-[390px]",
     tone: "red",
   },
   {
@@ -45,8 +45,8 @@ const benefitModes = [
     title: "Tilt buys time.",
     body: "KOFENOT™ creates a quick escape angle when a spill hits the desk.",
     command: "deflect",
-    tileClass: "lg:col-span-2 lg:row-span-2 lg:translate-y-10",
-    imageClass: "min-h-[320px] lg:min-h-full",
+    tileClass: "lg:col-span-2 lg:mt-16",
+    imageClass: "h-[320px] lg:h-[300px]",
     tone: "neon",
   },
   {
@@ -55,8 +55,8 @@ const benefitModes = [
     title: "Screen goes up.",
     body: "A cleaner laptop angle for desks, cafes, counters, and pop-up offices.",
     command: "lift",
-    tileClass: "lg:col-span-2 lg:row-span-2 lg:-translate-y-4",
-    imageClass: "min-h-[300px] lg:min-h-full",
+    tileClass: "lg:col-span-2 lg:mt-5",
+    imageClass: "h-[300px] lg:h-[330px]",
     tone: "dark",
   },
   {
@@ -65,8 +65,8 @@ const benefitModes = [
     title: "Flip it sideways.",
     body: "Compact support for phones, tablets, and quick calls.",
     command: "switch",
-    tileClass: "lg:col-span-3 lg:row-span-2",
-    imageClass: "min-h-[300px] lg:min-h-full",
+    tileClass: "lg:col-span-3 lg:mt-8",
+    imageClass: "h-[300px] lg:h-[340px]",
     tone: "neon",
   },
   {
@@ -75,8 +75,8 @@ const benefitModes = [
     title: "Snap. Shut. Repeat.",
     body: "The click keeps it in hand, not forgotten in a drawer.",
     command: "click",
-    tileClass: "lg:col-span-1 lg:row-span-2 lg:translate-y-8",
-    imageClass: "min-h-[300px] lg:min-h-full",
+    tileClass: "lg:col-span-2 lg:mt-14",
+    imageClass: "h-[300px] lg:h-[320px]",
     tone: "red",
   },
 ];
@@ -237,7 +237,10 @@ function HeroSection({ openVideo }: { openVideo: () => void }) {
 
 function BenefitsSection() {
   return (
-    <section id="benefits" className="page-section border-t border-[rgba(0,255,0,0.12)]">
+    <section
+      id="benefits"
+      className="mx-auto max-w-[1760px] border-t border-[rgba(0,255,0,0.12)] px-6 pb-36 pt-20 lg:px-8"
+    >
       <Reveal>
         <div className="flex flex-wrap items-end justify-between gap-5">
           <div>
@@ -254,7 +257,7 @@ function BenefitsSection() {
         </div>
       </Reveal>
 
-      <div className="mt-10 grid auto-rows-auto gap-4 md:grid-cols-2 lg:grid-cols-6 lg:auto-rows-[150px]">
+      <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-12 lg:items-start">
         {benefitModes.map((card, index) => (
           <Reveal key={card.title} delay={index * 0.055}>
             <BenefitMosaicCard card={card} index={index} />
@@ -267,7 +270,7 @@ function BenefitsSection() {
 
 function HowItWorksSection() {
   return (
-    <section id="how-it-works" className="page-section border-t border-[rgba(0,255,0,0.12)] py-10">
+    <section id="how-it-works" className="page-section border-t border-[rgba(0,255,0,0.12)] py-20">
       <Reveal>
         <h2 className="section-title">
           How It Works: <span className="neon-text">Open / Rest / Snap</span>
