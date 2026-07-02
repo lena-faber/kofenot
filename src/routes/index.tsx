@@ -533,13 +533,21 @@ function BenefitMosaicCard({
 
   return (
     <article
-      className={`group flex h-full min-h-[360px] w-full flex-col overflow-hidden rounded-sm border bg-black transition duration-300 hover:-translate-y-2 hover:rotate-0 ${toneClass}`}
+      className={`group relative flex h-full min-h-[360px] w-full flex-col overflow-visible rounded-sm border bg-black transition duration-300 hover:z-50 hover:-translate-y-2 hover:rotate-0 ${toneClass}`}
     >
-      <div className="group/image shrink-0 overflow-hidden bg-black">
+      <div className="group/image relative shrink-0 bg-black">
+        <div className="overflow-hidden">
+          <img
+            src={card.image}
+            alt={card.title}
+            className={`block w-full cursor-zoom-in object-cover opacity-95 transition duration-500 group-hover/image:opacity-100 ${card.imageClass}`}
+          />
+        </div>
         <img
           src={card.image}
-          alt={card.title}
-          className={`block w-full cursor-zoom-in object-cover opacity-95 transition-all duration-500 group-hover/image:scale-100 group-hover/image:object-contain group-hover/image:opacity-100 lg:group-hover/image:h-[560px] ${card.imageClass}`}
+          alt=""
+          aria-hidden="true"
+          className="pointer-events-none absolute left-1/2 top-1/2 z-50 hidden max-h-[78vh] w-[min(760px,82vw)] -translate-x-1/2 -translate-y-1/2 rounded-sm border border-[color:var(--neon)] bg-black object-contain p-2 opacity-0 shadow-[0_0_60px_rgba(0,255,0,0.35)] transition-opacity duration-200 group-hover/image:opacity-100 lg:block"
         />
       </div>
 
