@@ -287,7 +287,7 @@ function ReviewsSection({ openCheckout }: { openCheckout: (url?: string) => void
               muted
               playsInline
               preload="metadata"
-              className="absolute inset-0 h-full w-full object-cover opacity-100 brightness-100 contrast-100 saturate-100"
+              className="absolute inset-0 h-full w-full object-contain opacity-100 brightness-100 contrast-100 saturate-100"
             />
             <span className="absolute inset-0 bg-black/10 transition group-hover:bg-black/20" />
             <Play className="absolute left-1/2 top-1/2 h-28 w-28 -translate-x-1/2 -translate-y-1/2 fill-red-600 text-red-600 md:h-36 md:w-36" />
@@ -328,7 +328,7 @@ function ReviewsSection({ openCheckout }: { openCheckout: (url?: string) => void
             controls
             autoPlay
             playsInline
-            className="w-full rounded-sm"
+            className="max-h-[82vh] w-full rounded-sm object-contain"
           />
         </DialogContent>
       </Dialog>
