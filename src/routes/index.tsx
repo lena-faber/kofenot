@@ -559,19 +559,7 @@ function BenefitMosaicCard({
             {card.command}
           </span>
         </div>
-        {isHero ? (
-          <div className="mb-4 grid max-w-md grid-cols-3 overflow-hidden rounded-sm border border-white/20 text-center text-[10px] font-black uppercase tracking-[0.14em] text-white/70">
-            <div className="border-r border-white/20 bg-red-600/80 px-2 py-3 text-white">
-              spill
-            </div>
-            <div className="border-r border-white/20 bg-white/10 px-2 py-3">
-              tilt
-            </div>
-            <div className="bg-[color:var(--neon)] px-2 py-3 text-black">
-              saved
-            </div>
-          </div>
-        ) : null}
+        
         <h3
           className={`font-black italic leading-none text-white ${
             isHero ? "text-4xl md:text-6xl" : "text-2xl md:text-3xl"
