@@ -8,17 +8,12 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      deployments: write
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
 
       - name: Setup Bun
         uses: oven-sh/setup-bun@v2
-        with:
-          bun-version: latest
 
       - name: Install Dependencies
         run: bun install
@@ -27,8 +22,9 @@ jobs:
         run: bun run build
 
       - name: Deploy to Cloudflare Pages
-        uses: cloudflare/wrangler-action@v3
+        uses: cloudflare/pages-action@v1
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy dist --project-name=kofenot
+          projectName: kofenot
+          directory: dist
