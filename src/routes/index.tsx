@@ -32,7 +32,7 @@ const benefitModes = [
   {
     image: deadSpill,
     mode: "Spill alert",
-    
+    title: "",
     body: "Flat laptop: liquid dives straight into the keyboard.",
     command: "panic",
     tileClass: "lg:w-[21%]",
@@ -258,67 +258,12 @@ function BenefitsSection() {
 
       <div className="mt-10 grid gap-5 md:grid-cols-2 lg:flex lg:items-start lg:justify-between">
         {benefitModes.map((card, index) => (
-          <Reveal key={card.title} delay={index * 0.055} className={card.tileClass}>
+          <Reveal key={card.title || index} delay={index * 0.055} className={card.tileClass}>
             <BenefitMosaicCard card={card} index={index} />
           </Reveal>
         ))}
       </div>
     </section>
-  );
-}
-
-function BenefitMosaicCard({
-  card,
-  index,
-}: {
-  card: {
-    image: string;
-    mode: string;
-    title: string;
-    body: string;
-    command: string;
-    tileClass: string;
-    imageClass: string;
-    tone: string;
-  };
-  index: number;
-}) {
-  const isHero = index === 0;
-
-  return (
-    <article
-      className="group relative flex h-full min-h-[360px] w-full flex-col overflow-hidden bg-black transition duration-300 hover:-translate-y-2"
-    >
-      <div className="group/image relative shrink-0 bg-black overflow-hidden">
-        <img
-          src={card.image}
-          alt={card.title}
-          className={`block w-full object-cover opacity-95 transition duration-500 group-hover/image:opacity-100 ${card.imageClass}`}
-        />
-      </div>
-
-      <div className={`flex-1 bg-[#080908] p-4 md:p-5 ${isHero ? "lg:p-6" : ""}`}>
-        <div className="mb-4 flex flex-wrap items-center gap-2">
-          <span className="rounded-sm bg-black px-3 py-2 text-[10px] font-black uppercase tracking-[0.18em] text-white">
-            {card.mode}
-          </span>
-          <span className="rounded-sm border border-[color:var(--neon)] bg-[color:var(--neon)] px-3 py-2 text-[10px] font-black uppercase tracking-[0.16em] text-black">
-            {card.command}
-          </span>
-        </div>
-
-        <h3
-          className={`font-black italic leading-none text-white ${
-            isHero ? "text-4xl md:text-6xl" : "text-2xl md:text-3xl"
-          }`}
-        >
-          {card.title}
-        </h3>
-        <p className="mt-3 max-w-xl text-sm font-semibold leading-snug text-white/72 md:text-base">
-          {card.body}
-        </p>
-      </div>
-    </article>
   );
 }
 
@@ -578,34 +523,20 @@ function BenefitMosaicCard({
   index: number;
 }) {
   const isHero = index === 0;
-  const toneClass =
-    card.tone === "red"
-      ? "border-red-500/80 shadow-[0_0_34px_rgba(220,38,38,0.28)]"
-      : card.tone === "neon"
-        ? "border-[color:var(--neon)] shadow-[0_0_34px_rgba(0,255,0,0.2)]"
-        : "border-white/20";
 
   return (
     <article
-      className={`group relative flex h-full min-h-[360px] w-full flex-col overflow-visible rounded-sm border bg-black transition duration-300 hover:z-50 hover:-translate-y-2 hover:rotate-0 ${toneClass}`}
+      className="group relative flex h-full min-h-[360px] w-full flex-col overflow-hidden bg-black transition duration-300 hover:-translate-y-2"
     >
-      <div className="group/image relative shrink-0 bg-black">
-        <div className="overflow-hidden">
-          <img
-            src={card.image}
-            alt={card.title}
-            className={`block w-full cursor-zoom-in object-cover opacity-95 transition duration-500 group-hover/image:opacity-100 ${card.imageClass}`}
-          />
-        </div>
+      <div className="group/image relative shrink-0 bg-black overflow-hidden">
         <img
           src={card.image}
-          alt=""
-          aria-hidden="true"
-          className="pointer-events-none absolute left-1/2 top-1/2 z-50 hidden max-h-[78vh] w-[min(760px,82vw)] -translate-x-1/2 -translate-y-1/2 rounded-sm border border-[color:var(--neon)] bg-black object-contain p-2 opacity-0 shadow-[0_0_60px_rgba(0,255,0,0.35)] transition-opacity duration-200 group-hover/image:opacity-100 lg:block"
+          alt={card.title}
+          className={`block w-full object-cover opacity-95 transition duration-500 group-hover/image:opacity-100 ${card.imageClass}`}
         />
       </div>
 
-      <div className={`flex-1 border-t border-white/10 bg-[#080908] p-4 md:p-5 ${isHero ? "lg:p-6" : ""}`}>
+      <div className={`flex-1 bg-[#080908] p-4 md:p-5 ${isHero ? "lg:p-6" : ""}`}>
         <div className="mb-4 flex flex-wrap items-center gap-2">
           <span className="rounded-sm bg-black px-3 py-2 text-[10px] font-black uppercase tracking-[0.18em] text-white">
             {card.mode}
@@ -614,19 +545,7 @@ function BenefitMosaicCard({
             {card.command}
           </span>
         </div>
-        {isHero ? (
-          <div className="mb-4 grid max-w-md grid-cols-3 overflow-hidden rounded-sm border border-white/20 text-center text-[10px] font-black uppercase tracking-[0.14em] text-white/70">
-            <div className="border-r border-white/20 bg-red-600/80 px-2 py-3 text-white">
-              spill
-            </div>
-            <div className="border-r border-white/20 bg-white/10 px-2 py-3">
-              tilt
-            </div>
-            <div className="bg-[color:var(--neon)] px-2 py-3 text-black">
-              saved
-            </div>
-          </div>
-        ) : null}
+
         <h3
           className={`font-black italic leading-none text-white ${
             isHero ? "text-4xl md:text-6xl" : "text-2xl md:text-3xl"
