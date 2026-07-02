@@ -264,26 +264,7 @@ function HowItWorksSection() {
 }
 
 function ReviewsSection({ openCheckout }: { openCheckout: (url?: string) => void }) {
-  const [testimonialPlaying, setTestimonialPlaying] = useState(false);
-  const [testimonialCoverVisible, setTestimonialCoverVisible] = useState(true);
-  const testimonialVideoRef = useRef<HTMLVideoElement>(null);
-
-  const hideTestimonialCover = () => {
-    if (testimonialPlaying) {
-      setTestimonialCoverVisible(false);
-    }
-  };
-
-  const playTestimonial = () => {
-    const video = testimonialVideoRef.current;
-    if (!video) return;
-
-    video.muted = false;
-    video.controls = true;
-    setTestimonialPlaying(true);
-    setTestimonialCoverVisible(true);
-    void video.play();
-  };
+  const [testimonialOpen, setTestimonialOpen] = useState(false);
 
   return (
     <section id="reviews" className="page-section border-t border-[rgba(0,255,0,0.12)] py-10">
@@ -295,39 +276,22 @@ function ReviewsSection({ openCheckout }: { openCheckout: (url?: string) => void
 
       <Reveal delay={0.1}>
         <div className="mt-8 grid gap-5 lg:grid-cols-[7fr_3fr]">
-          <div className="relative aspect-video overflow-hidden rounded-sm bg-black">
+          <button
+            type="button"
+            onClick={() => setTestimonialOpen(true)}
+            className="group relative aspect-video overflow-hidden rounded-sm bg-black"
+            aria-label="Play testimonial video"
+          >
             <video
-              ref={testimonialVideoRef}
               src={testimonialVideo}
-              controls={testimonialPlaying}
-              muted={!testimonialPlaying}
+              muted
               playsInline
-              preload="auto"
-              onCanPlay={hideTestimonialCover}
-              onPlaying={hideTestimonialCover}
-              className="absolute inset-0 z-0 h-full w-full object-cover opacity-100 brightness-100 contrast-100 saturate-100"
+              preload="metadata"
+              className="absolute inset-0 h-full w-full object-cover opacity-100 brightness-100 contrast-100 saturate-100"
             />
-            {testimonialCoverVisible ? (
-              <>
-                <video
-                  src={testimonialVideo}
-                  muted
-                  playsInline
-                  preload="auto"
-                  className="absolute inset-0 z-10 h-full w-full object-cover opacity-100 brightness-100 contrast-100 saturate-100"
-                />
-                <button
-                  type="button"
-                  onClick={playTestimonial}
-                  disabled={testimonialPlaying}
-                  className="absolute inset-0 z-20 flex items-center justify-center bg-transparent hover:bg-transparent focus:bg-transparent active:bg-transparent disabled:cursor-wait"
-                  aria-label="Play testimonial video"
-                >
-                  <Play className="h-28 w-28 fill-red-600 text-red-600 md:h-36 md:w-36" />
-                </button>
-              </>
-            ) : null}
-          </div>
+            <span className="absolute inset-0 bg-black/10 transition group-hover:bg-black/20" />
+            <Play className="absolute left-1/2 top-1/2 h-28 w-28 -translate-x-1/2 -translate-y-1/2 fill-red-600 text-red-600 md:h-36 md:w-36" />
+          </button>
 
           <aside className="panel flex flex-col justify-center rounded-sm p-6">
             <div className="text-2xl leading-none text-[color:var(--neon)]">
@@ -356,6 +320,18 @@ function ReviewsSection({ openCheckout }: { openCheckout: (url?: string) => void
           </aside>
         </div>
       </Reveal>
+
+      <Dialog open={testimonialOpen} onOpenChange={setTestimonialOpen}>
+        <DialogContent className="max-w-5xl bg-black p-2 neon-border">
+          <video
+            src={testimonialVideo}
+            controls
+            autoPlay
+            playsInline
+            className="w-full rounded-sm"
+          />
+        </DialogContent>
+      </Dialog>
     </section>
   );
 }
