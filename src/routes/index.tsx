@@ -31,33 +31,38 @@ const twoUnitCheckoutUrl = "https://buy.stripe.com/eVq00i3Qi9Os9EsbWcdUY0M";
 const benefitModes = [
   {
     image: deadSpill,
-    mode: "01 / Spill",
-    title: "Six seconds before disaster",
-    body: "Tilt the laptop before coffee has a straight path into the keyboard.",
+    mode: "Spill alert",
+    title: "Coffee is coming.",
+    body: "Flat laptop: liquid dives straight into the keyboard.",
+    command: "panic",
   },
   {
     image: safeSpill,
-    mode: "02 / Save",
-    title: "Drain away from the keys",
+    mode: "Save angle",
+    title: "Tilt buys time.",
     body: "KOFENOT™ creates a quick escape angle when a spill hits the desk.",
+    command: "deflect",
   },
   {
     image: neck,
-    mode: "03 / Posture",
-    title: "Raise the screen",
+    mode: "Posture mode",
+    title: "Screen goes up.",
     body: "A cleaner laptop angle for desks, cafes, counters, and pop-up offices.",
+    command: "lift",
   },
   {
     image: threeDevices,
-    mode: "04 / Stand",
-    title: "Phone and tablet mode",
-    body: "Flip it into a compact support for second screens and quick calls.",
+    mode: "Stand mode",
+    title: "Flip it sideways.",
+    body: "Turns into a compact support for phones, tablets, and quick calls.",
+    command: "switch",
   },
   {
     image: fidget,
-    mode: "05 / Fidget",
+    mode: "Fidget mode",
     title: "Snap. Shut. Repeat.",
-    body: "A tiny mechanical ritual that keeps the product in hand, not in a drawer.",
+    body: "The click keeps it in hand, not forgotten in a drawer.",
+    command: "click",
   },
 ];
 
@@ -216,45 +221,92 @@ function HeroSection({ openVideo }: { openVideo: () => void }) {
 }
 
 function BenefitsSection() {
-  const [featuredMode, ...supportModes] = benefitModes;
+  const [dangerMode, saveMode, ...utilityModes] = benefitModes;
 
   return (
     <section id="benefits" className="page-section border-t border-[rgba(0,255,0,0.12)]">
       <Reveal>
-        <p className="section-kicker">Accident Mode: Ready</p>
-        <h2 className="section-title">Small Wedge. Big Save.</h2>
+        <div className="flex flex-wrap items-end justify-between gap-5">
+          <div>
+            <p className="section-kicker">Live desk emergency</p>
+            <h2 className="section-title">
+              Coffee is <span className="text-red-500">coming.</span>
+              <br />
+              KOFENOT is faster.
+            </h2>
+          </div>
+          <div className="rotate-[-2deg] rounded-sm border border-red-500 bg-red-600 px-5 py-3 text-sm font-black uppercase tracking-[0.2em] text-white shadow-[0_0_32px_rgba(220,38,38,0.65)]">
+            Spill alert
+          </div>
+        </div>
       </Reveal>
 
-      <div className="mt-10 grid gap-5 lg:grid-cols-[1.35fr_.9fr]">
+      <div className="mt-10 grid gap-5 lg:grid-cols-[1.2fr_.8fr]">
         <Reveal>
-          <article className="neon-border neon-glow grid h-full overflow-hidden rounded-sm bg-[rgba(0,255,0,0.06)] md:grid-cols-[1.05fr_.95fr]">
-            <div className="min-h-[360px] overflow-hidden bg-black">
-              <img
-                src={featuredMode.image}
-                alt={featuredMode.title}
-                className="h-full w-full object-cover"
-              />
+          <article className="neon-border neon-glow relative min-h-[620px] overflow-hidden rounded-sm bg-black">
+            <img
+              src={dangerMode.image}
+              alt={dangerMode.title}
+              className="absolute inset-0 h-full w-full object-cover opacity-80"
+            />
+            <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(0,0,0,0.9),rgba(0,0,0,0.55),rgba(0,0,0,0.18))]" />
+            <div className="absolute left-0 top-8 bg-red-600 px-6 py-3 text-xs font-black uppercase tracking-[0.22em] text-white shadow-[0_0_28px_rgba(220,38,38,0.7)]">
+              {dangerMode.mode}
             </div>
-            <div className="flex flex-col justify-end p-7 md:p-9">
-              <div className="text-xs font-black uppercase tracking-[0.18em] text-[color:var(--neon)]">
-                {featuredMode.mode}
+            <div className="relative z-10 flex min-h-[620px] max-w-[620px] flex-col justify-end p-6 md:p-10">
+              <div className="mb-5 grid max-w-md grid-cols-3 overflow-hidden rounded-sm border border-white/20 text-center text-[10px] font-black uppercase tracking-[0.14em] text-white/70">
+                <div className="border-r border-white/20 bg-red-600/80 px-2 py-3 text-white">
+                  spill
+                </div>
+                <div className="border-r border-white/20 bg-white/10 px-2 py-3">
+                  tilt
+                </div>
+                <div className="bg-[color:var(--neon)] px-2 py-3 text-black">
+                  saved
+                </div>
               </div>
-              <h3 className="mt-5 text-4xl font-black italic leading-none neon-text md:text-5xl">
-                {featuredMode.title}
+              <h3 className="text-[54px] font-black italic leading-[0.86] tracking-tight text-white md:text-[86px]">
+                Desk
+                <br />
+                Disaster
+                <br />
+                Mode
               </h3>
-              <p className="mt-5 text-base leading-relaxed text-white/80">
-                {featuredMode.body}
+              <p className="mt-6 max-w-md text-lg font-bold leading-relaxed text-white/82">
+                One tiny wedge changes the physics of the spill. That is the product story.
               </p>
             </div>
           </article>
         </Reveal>
 
         <div className="grid gap-4">
-          {supportModes.map((card, index) => (
-            <Reveal key={card.title} delay={index * 0.06}>
-              <BenefitModeCard card={card} />
-            </Reveal>
-          ))}
+          <Reveal delay={0.05}>
+            <article className="neon-border relative overflow-hidden rounded-sm bg-[color:var(--neon)] p-6 text-black shadow-[0_0_30px_rgba(0,255,0,0.24)]">
+              <div className="text-xs font-black uppercase tracking-[0.2em]">
+                {saveMode.mode}
+              </div>
+              <h3 className="mt-4 text-4xl font-black italic leading-none">
+                {saveMode.title}
+              </h3>
+              <p className="mt-4 text-base font-bold leading-relaxed">
+                {saveMode.body}
+              </p>
+              <div className="mt-6 h-2 overflow-hidden rounded-full bg-black/20">
+                <div className="h-full w-[78%] bg-black" />
+              </div>
+              <div className="mt-2 text-[10px] font-black uppercase tracking-[0.2em]">
+                reaction time loaded
+              </div>
+            </article>
+          </Reveal>
+
+          <div className="grid gap-4 sm:grid-cols-3 lg:grid-cols-1">
+            {utilityModes.map((card, index) => (
+              <Reveal key={card.title} delay={(index + 1) * 0.06}>
+                <BenefitModeCard card={card} />
+              </Reveal>
+            ))}
+          </div>
         </div>
       </div>
     </section>
@@ -508,25 +560,31 @@ function BenefitModeCard({
     mode: string;
     title: string;
     body: string;
+    command: string;
   };
 }) {
   return (
-    <article className="panel group grid min-h-[128px] grid-cols-[118px_1fr] overflow-hidden rounded-sm transition hover:border-[color:var(--neon)] hover:bg-[rgba(0,255,0,0.08)]">
+    <article className="panel group grid min-h-[156px] overflow-hidden rounded-sm transition hover:-translate-y-1 hover:border-[color:var(--neon)] hover:bg-[rgba(0,255,0,0.08)] sm:grid-rows-[120px_1fr] lg:grid-cols-[132px_1fr] lg:grid-rows-1">
       <div className="overflow-hidden bg-black">
         <img
           src={card.image}
           alt={card.title}
-          className="h-full w-full object-cover transition duration-300 group-hover:scale-105"
+          className="h-full w-full object-cover transition duration-300 group-hover:scale-110"
         />
       </div>
       <div className="p-4">
-        <div className="text-[11px] font-black uppercase tracking-[0.18em] text-[color:var(--neon)]">
-          {card.mode}
+        <div className="flex items-center justify-between gap-3">
+          <div className="text-[11px] font-black uppercase tracking-[0.18em] text-[color:var(--neon)]">
+            {card.mode}
+          </div>
+          <div className="rounded-sm border border-[color:var(--neon)] px-2 py-1 text-[10px] font-black uppercase tracking-[0.16em] text-[color:var(--neon)]">
+            {card.command}
+          </div>
         </div>
-        <h3 className="mt-2 text-xl font-black leading-none text-white">
+        <h3 className="mt-3 text-2xl font-black italic leading-none text-white">
           {card.title}
         </h3>
-        <p className="mt-2 text-sm leading-snug text-muted-foreground">
+        <p className="mt-3 text-sm leading-snug text-muted-foreground">
           {card.body}
         </p>
       </div>
