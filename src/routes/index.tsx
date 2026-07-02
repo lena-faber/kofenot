@@ -534,21 +534,23 @@ function BenefitMosaicCard({
     <article
       className={`group flex h-full min-h-[360px] flex-col overflow-hidden rounded-sm border bg-black transition duration-300 hover:-translate-y-2 hover:rotate-0 ${toneClass} ${layoutClass}`}
     >
-      <div className="relative shrink-0 overflow-hidden bg-black">
+      <div className="shrink-0 overflow-hidden bg-black">
         <img
           src={card.image}
           alt={card.title}
           className={`block w-full object-cover opacity-95 transition duration-500 group-hover:scale-105 group-hover:opacity-100 ${imageClass}`}
         />
-        <div className="absolute left-3 top-3 rounded-sm bg-black/72 px-3 py-2 text-[10px] font-black uppercase tracking-[0.18em] text-white backdrop-blur-sm">
-          {card.mode}
-        </div>
-        <div className="absolute right-3 top-3 rotate-3 rounded-sm border border-[color:var(--neon)] bg-[color:var(--neon)] px-3 py-2 text-[10px] font-black uppercase tracking-[0.16em] text-black">
-          {card.command}
-        </div>
       </div>
 
       <div className={`flex-1 border-t border-white/10 bg-[#080908] p-4 md:p-5 ${isHero ? "lg:p-6" : ""}`}>
+        <div className="mb-4 flex flex-wrap items-center gap-2">
+          <span className="rounded-sm bg-black px-3 py-2 text-[10px] font-black uppercase tracking-[0.18em] text-white">
+            {card.mode}
+          </span>
+          <span className="rounded-sm border border-[color:var(--neon)] bg-[color:var(--neon)] px-3 py-2 text-[10px] font-black uppercase tracking-[0.16em] text-black">
+            {card.command}
+          </span>
+        </div>
         {isHero ? (
           <div className="mb-4 grid max-w-md grid-cols-3 overflow-hidden rounded-sm border border-white/20 text-center text-[10px] font-black uppercase tracking-[0.14em] text-white/70">
             <div className="border-r border-white/20 bg-red-600/80 px-2 py-3 text-white">
