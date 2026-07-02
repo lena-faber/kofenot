@@ -36,7 +36,7 @@ const benefitModes = [
     body: "Flat laptop: liquid dives straight into the keyboard.",
     command: "panic",
     tileClass: "lg:col-span-4 lg:row-span-3",
-    imageClass: "min-h-[520px] lg:min-h-full",
+    imageClass: "min-h-[360px] lg:min-h-[330px]",
     tone: "red",
   },
   {
@@ -46,7 +46,7 @@ const benefitModes = [
     body: "KOFENOT™ creates a quick escape angle when a spill hits the desk.",
     command: "deflect",
     tileClass: "lg:col-span-2 lg:row-span-2 lg:translate-y-10",
-    imageClass: "min-h-[320px] lg:min-h-full",
+    imageClass: "min-h-[240px]",
     tone: "neon",
   },
   {
@@ -56,7 +56,7 @@ const benefitModes = [
     body: "A cleaner laptop angle for desks, cafes, counters, and pop-up offices.",
     command: "lift",
     tileClass: "lg:col-span-2 lg:row-span-2 lg:-translate-y-4",
-    imageClass: "min-h-[300px] lg:min-h-full",
+    imageClass: "min-h-[230px]",
     tone: "dark",
   },
   {
@@ -66,7 +66,7 @@ const benefitModes = [
     body: "Compact support for phones, tablets, and quick calls.",
     command: "switch",
     tileClass: "lg:col-span-3 lg:row-span-2",
-    imageClass: "min-h-[300px] lg:min-h-full",
+    imageClass: "min-h-[250px]",
     tone: "neon",
   },
   {
@@ -76,7 +76,7 @@ const benefitModes = [
     body: "The click keeps it in hand, not forgotten in a drawer.",
     command: "click",
     tileClass: "lg:col-span-1 lg:row-span-2 lg:translate-y-8",
-    imageClass: "min-h-[300px] lg:min-h-full",
+    imageClass: "min-h-[250px]",
     tone: "red",
   },
 ];
@@ -530,23 +530,25 @@ function BenefitMosaicCard({
 
   return (
     <article
-      className={`group relative h-full overflow-hidden rounded-sm border bg-black transition duration-300 hover:-translate-y-2 hover:rotate-0 ${toneClass} ${card.tileClass}`}
+      className={`group flex h-full flex-col overflow-hidden rounded-sm border bg-black transition duration-300 hover:-translate-y-2 hover:rotate-0 ${toneClass} ${card.tileClass}`}
     >
-      <img
-        src={card.image}
-        alt={card.title}
-        className={`h-full w-full object-cover opacity-82 transition duration-500 group-hover:scale-110 group-hover:opacity-100 ${card.imageClass}`}
-      />
-      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.05),rgba(0,0,0,0.86))]" />
-      <div className="absolute left-3 top-3 rounded-sm bg-black/70 px-3 py-2 text-[10px] font-black uppercase tracking-[0.18em] text-white backdrop-blur-sm">
-        {card.mode}
+      <div className={`relative overflow-hidden bg-black ${isHero ? "flex-1" : ""}`}>
+        <img
+          src={card.image}
+          alt={card.title}
+          className={`h-full w-full object-cover opacity-95 transition duration-500 group-hover:scale-105 group-hover:opacity-100 ${card.imageClass}`}
+        />
+        <div className="absolute left-3 top-3 rounded-sm bg-black/72 px-3 py-2 text-[10px] font-black uppercase tracking-[0.18em] text-white backdrop-blur-sm">
+          {card.mode}
+        </div>
+        <div className="absolute right-3 top-3 rotate-3 rounded-sm border border-[color:var(--neon)] bg-[color:var(--neon)] px-3 py-2 text-[10px] font-black uppercase tracking-[0.16em] text-black">
+          {card.command}
+        </div>
       </div>
-      <div className="absolute right-3 top-3 rotate-3 rounded-sm border border-[color:var(--neon)] bg-[color:var(--neon)] px-3 py-2 text-[10px] font-black uppercase tracking-[0.16em] text-black">
-        {card.command}
-      </div>
-      <div className="absolute inset-x-0 bottom-0 p-4 md:p-5">
+
+      <div className={`border-t border-white/10 bg-[#080908] p-4 md:p-5 ${isHero ? "lg:p-6" : ""}`}>
         {isHero ? (
-          <div className="mb-5 grid max-w-md grid-cols-3 overflow-hidden rounded-sm border border-white/20 text-center text-[10px] font-black uppercase tracking-[0.14em] text-white/70">
+          <div className="mb-4 grid max-w-md grid-cols-3 overflow-hidden rounded-sm border border-white/20 text-center text-[10px] font-black uppercase tracking-[0.14em] text-white/70">
             <div className="border-r border-white/20 bg-red-600/80 px-2 py-3 text-white">
               spill
             </div>
@@ -560,12 +562,12 @@ function BenefitMosaicCard({
         ) : null}
         <h3
           className={`font-black italic leading-none text-white ${
-            isHero ? "text-5xl md:text-7xl" : "text-2xl md:text-3xl"
+            isHero ? "text-4xl md:text-6xl" : "text-2xl md:text-3xl"
           }`}
         >
           {card.title}
         </h3>
-        <p className="mt-3 max-w-xl text-sm font-semibold leading-snug text-white/78 md:text-base">
+        <p className="mt-3 max-w-xl text-sm font-semibold leading-snug text-white/72 md:text-base">
           {card.body}
         </p>
       </div>
