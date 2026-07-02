@@ -35,7 +35,7 @@ const benefitModes = [
     title: "Coffee is coming.",
     body: "Flat laptop: liquid dives straight into the keyboard.",
     command: "panic",
-    tileClass: "lg:w-[21%]",
+    tileClass: "lg:mt-14 lg:w-[18%]",
     imageClass: "h-[360px] lg:h-[390px]",
     tone: "red",
   },
