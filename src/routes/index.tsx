@@ -35,6 +35,8 @@ const benefitModes = [
     title: "Coffee is coming.",
     body: "Flat laptop: liquid dives straight into the keyboard.",
     command: "panic",
+    tileClass: "lg:col-span-4 lg:row-span-3",
+    imageClass: "min-h-[520px] lg:min-h-full",
     tone: "red",
   },
   {
@@ -43,6 +45,8 @@ const benefitModes = [
     title: "Tilt buys time.",
     body: "KOFENOT™ creates a quick escape angle when a spill hits the desk.",
     command: "deflect",
+    tileClass: "lg:col-span-2 lg:row-span-2 lg:translate-y-10",
+    imageClass: "min-h-[320px] lg:min-h-full",
     tone: "neon",
   },
   {
@@ -51,6 +55,8 @@ const benefitModes = [
     title: "Screen goes up.",
     body: "A cleaner laptop angle for desks, cafes, counters, and pop-up offices.",
     command: "lift",
+    tileClass: "lg:col-span-2 lg:row-span-2 lg:-translate-y-4",
+    imageClass: "min-h-[300px] lg:min-h-full",
     tone: "dark",
   },
   {
@@ -59,6 +65,8 @@ const benefitModes = [
     title: "Flip it sideways.",
     body: "Compact support for phones, tablets, and quick calls.",
     command: "switch",
+    tileClass: "lg:col-span-3 lg:row-span-2",
+    imageClass: "min-h-[300px] lg:min-h-full",
     tone: "neon",
   },
   {
@@ -67,6 +75,8 @@ const benefitModes = [
     title: "Snap. Shut. Repeat.",
     body: "The click keeps it in hand, not forgotten in a drawer.",
     command: "click",
+    tileClass: "lg:col-span-1 lg:row-span-2 lg:translate-y-8",
+    imageClass: "min-h-[300px] lg:min-h-full",
     tone: "red",
   },
 ];
@@ -504,6 +514,8 @@ function BenefitMosaicCard({
     title: string;
     body: string;
     command: string;
+    tileClass: string;
+    imageClass: string;
     tone: string;
   };
   index: number;
@@ -515,30 +527,16 @@ function BenefitMosaicCard({
       : card.tone === "neon"
         ? "border-[color:var(--neon)] shadow-[0_0_34px_rgba(0,255,0,0.2)]"
         : "border-white/20";
-  const layoutClass = [
-    "lg:col-span-4 lg:row-span-3",
-    "lg:col-span-2 lg:row-span-2 lg:translate-y-10",
-    "lg:col-span-2 lg:row-span-2 lg:-translate-y-4",
-    "lg:col-span-3 lg:row-span-2",
-    "lg:col-span-1 lg:row-span-2 lg:translate-y-8",
-  ][index];
-  const imageClass = [
-    "h-[360px] lg:h-[330px]",
-    "h-[260px]",
-    "h-[250px]",
-    "h-[270px]",
-    "h-[270px]",
-  ][index];
 
   return (
     <article
-      className={`group flex h-full min-h-[360px] flex-col overflow-hidden rounded-sm border bg-black transition duration-300 hover:-translate-y-2 hover:rotate-0 ${toneClass} ${layoutClass}`}
+      className={`group flex h-full min-h-[360px] flex-col overflow-hidden rounded-sm border bg-black transition duration-300 hover:-translate-y-2 hover:rotate-0 ${toneClass} ${card.tileClass}`}
     >
       <div className="shrink-0 overflow-hidden bg-black">
         <img
           src={card.image}
           alt={card.title}
-          className={`block w-full object-cover opacity-95 transition duration-500 group-hover:scale-105 group-hover:opacity-100 ${imageClass}`}
+          className={`block h-full w-full object-cover opacity-95 transition duration-500 group-hover:scale-105 group-hover:opacity-100 ${card.imageClass}`}
         />
       </div>
 
