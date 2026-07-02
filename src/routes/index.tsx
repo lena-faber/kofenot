@@ -430,7 +430,7 @@ function HeroStats() {
             Pocket-Flat-Folding
           </HeroStat>
           <HeroStat icon={<Trophy className="h-7 w-7 stroke-[1.5]" />} title="2 WINS">
-            Spill Antidote / Better Posture
+            Spill Deflection / Better Posture
           </HeroStat>
           <HeroStat
             icon={<MonitorSmartphone className="h-7 w-7 stroke-[1.5]" />}
