@@ -275,11 +275,11 @@ function ReviewsSection({ openCheckout }: { openCheckout: (url?: string) => void
       </Reveal>
 
       <Reveal delay={0.1}>
-        <div className="mt-8 grid gap-5 lg:grid-cols-[7fr_3fr]">
+        <div className="mt-8 grid items-start gap-5 lg:grid-cols-[7fr_3fr]">
           <button
             type="button"
             onClick={() => setTestimonialOpen(true)}
-            className="group relative aspect-video overflow-hidden rounded-sm bg-black"
+            className="group relative w-full overflow-hidden rounded-sm bg-transparent"
             aria-label="Play testimonial video"
           >
             <video
@@ -287,7 +287,7 @@ function ReviewsSection({ openCheckout }: { openCheckout: (url?: string) => void
               muted
               playsInline
               preload="metadata"
-              className="absolute inset-0 h-full w-full object-contain opacity-100 brightness-100 contrast-100 saturate-100"
+              className="block h-auto w-full opacity-100 brightness-100 contrast-100 saturate-100"
             />
             <span className="absolute inset-0 bg-black/10 transition group-hover:bg-black/20" />
             <Play className="absolute left-1/2 top-1/2 h-28 w-28 -translate-x-1/2 -translate-y-1/2 fill-red-600 text-red-600 md:h-36 md:w-36" />
