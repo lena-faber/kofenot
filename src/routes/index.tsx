@@ -185,9 +185,9 @@ export function Home() {
       <HeroSection openVideo={() => setVideoOpen(true)} />
       <BenefitsSection />
       <HowItWorksSection />
-      <ReviewsSection openCheckout={openCheckout} />
-      <FaqSection />
+      <ReviewsSection openCheckout={openCheckout} />   
       <PricingSection openCheckout={openCheckout} />
+      <FaqSection />
       <StatsSection />
 
       <Dialog open={videoOpen} onOpenChange={setVideoOpen}>
