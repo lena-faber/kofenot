@@ -536,12 +536,7 @@ function BenefitMosaicCard({
     className="h-full w-full object-cover transition duration-500"
   />
 </div>
-        <img
-          src={card.image}
-          alt=""
-          aria-hidden="true"
-          className="pointer-events-none absolute left-1/2 top-1/2 z-50 hidden max-h-[78vh] w-[min(760px,82vw)] -translate-x-1/2 -translate-y-1/2 rounded-sm bg-black object-contain p-2 opacity-0 shadow-[0_0_60px_rgba(0,255,0,0.35)] transition-opacity duration-200 group-hover/image:opacity-100 lg:block"
-        />
+        
       </div>
 
       <div className={`flex-1 border-t border-white/10 bg-[#080908] p-4 md:p-5 ${isHero ? "lg:p-6" : ""}`}>
