@@ -33,11 +33,11 @@ const benefitModes = [
     image: deadSpill,
     mode: "Spill alert",
     title: "Coffee.",
-    body: "Flat laptop: liquid dives straight into the keyboard.",
-    command: "panic",
+    body: "60% of laptop damage starts with a spilled drink. Coffee leads the list.",
+  
     tileClass: "lg:mt-14 lg:w-[25%]",
     imageClass: "h-[360px] lg:h-[390px]",
-    tone: "red",
+  
   },
   {
     image: safeSpill,
