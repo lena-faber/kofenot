@@ -255,7 +255,7 @@ function BenefitsSection() {
 
 function HowItWorksSection() {
   return (
-    <section id="how-it-works" className="page-section border-t border-[rgba(0,255,0,0.12)] py-20">
+    <section id="how-it-works" className="page-section border-t border-[rgba(0,255,0,0.12)] py-10">
       <Reveal>
         <h2 className="section-title">
           How It Works: <span className="neon-text">Open / Rest / Snap</span>
