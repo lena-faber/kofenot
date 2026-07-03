@@ -439,7 +439,7 @@ function StatsSection() {
 
 function HeroStats() {
   return (
-    <div className="absolute inset-x-0 bottom-0 z-20 hidden lg:block">
+    <div className="absolute inset-x-0 bottom-20 z-20 hidden lg:block">
       <Reveal delay={0.2}>
         <div className="grid min-h-[70px] grid-cols-4 border-t border-white/20 bg-black/10 backdrop-blur-sm">
           <HeroStat icon={<span className="text-4xl font-black neon-text">0</span>} title="Zero">
