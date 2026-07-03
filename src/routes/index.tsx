@@ -229,7 +229,7 @@ function BenefitsSection() {
   return (
     <section
       id="benefits"
-      className="mx-auto max-w-[1760px] border-t border-[rgba(0,255,0,0.12)] px-6 pb-36 pt-20 lg:px-8"
+      className="mx-auto max-w-[1760px] border-t border-[rgba(0,255,0,0.12)] px-6 pb-5 pt-20 lg:px-8"
     >
       <Reveal>
         <div className="flex flex-wrap items-end justify-between gap-5">
