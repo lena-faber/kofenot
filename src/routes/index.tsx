@@ -509,35 +509,33 @@ function BenefitMosaicCard({
   index: number;
 }) {
   const isHero = index === 0;
- 
-  return (
-    <article
-  className="group relative flex h-full flex-col overflow-hidden bg-black transition duration-300 hover:-translate-y-2"
->
-      <div className="group/image relative shrink-0 bg-black">
-        <div className="aspect-square overflow-hidden">
-  <img
-    src={card.image}
-    alt={card.title}
-    className="h-full w-full object-cover transition duration-500"
-  />
-</div>
-        
+ return (
+  <article className="group relative flex h-full flex-col overflow-hidden bg-black transition duration-300 hover:-translate-y-2">
+    <div className="group/image relative shrink-0 bg-black">
+      <div className="aspect-square overflow-hidden">
+        <img
+          src={card.image}
+          alt={card.title}
+          className="h-full w-full object-cover transition duration-500"
+        />
       </div>
+    </div>
 
-        <h3
-          className={`font-black italic leading-none text-white ${
-            isHero ? "text-4xl md:text-6xl" : "text-2xl md:text-3xl"
-          }`}
-        >
-          {card.title}
-        </h3>
-        <p className="mt-3 max-w-xl text-sm font-semibold leading-snug text-white/72 md:text-base">
-          {card.body}
-        </p>
-      </div>
-    </article>
-  );
+    <div className={`flex-1 border-t border-white/10 bg-[#080908] p-4 md:p-5 ${isHero ? "lg:p-6" : ""}`}>
+      <h3
+        className={`font-black italic leading-none text-white ${
+          isHero ? "text-4xl md:text-6xl" : "text-2xl md:text-3xl"
+        }`}
+      >
+        {card.title}
+      </h3>
+
+      <p className="mt-3 max-w-xl text-sm font-semibold leading-snug text-white/72 md:text-base">
+        {card.body}
+      </p>
+    </div>
+  </article>
+);
 }
 
 function PricingItem({ children }: { children: React.ReactNode }) {
