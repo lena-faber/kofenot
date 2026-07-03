@@ -428,7 +428,7 @@ function ReviewsSection({
             controls
             preload="metadata"
             playsInline
-            className="w-full rounded-sm bg-black"
+            className="block w-full rounded-sm"
           />
 
           <TestimonialQuotes openCheckout={openCheckout} />
