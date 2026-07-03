@@ -242,7 +242,7 @@ function BenefitsSection() {
         </div>
       </Reveal>
 
-      <div className="mt-10 flex flex-wrap items-start gap-4">
+      <div className="mt-3 flex flex-wrap items-start gap-4">
         {benefitModes.map((card, index) => (
           <Reveal key={card.title} delay={index * 0.055} className={card.tileClass}>
             <BenefitMosaicCard card={card} index={index} />
@@ -262,7 +262,7 @@ function HowItWorksSection() {
         </h2>
       </Reveal>
 
-      <div className="mt-10 grid gap-5 md:grid-cols-3">
+      <div className="mt-3 grid gap-5 md:grid-cols-3">
         {howItWorksSteps.map(([number, title, description], index) => (
           <Reveal key={number} delay={index * 0.1}>
             <article className="panel relative h-full rounded-sm p-7">
@@ -292,7 +292,7 @@ function ReviewsSection({ openCheckout }: { openCheckout: (url?: string) => void
       </Reveal>
 
       <Reveal delay={0.1}>
-        <div className="mt-8 grid items-start gap-5 lg:grid-cols-[7fr_3fr]">
+        <div className="mt-3 grid items-start gap-5 lg:grid-cols-[7fr_3fr]">
           <button
             type="button"
             onClick={() => setTestimonialOpen(true)}
@@ -355,7 +355,7 @@ function FaqSection() {
   return (
     <section id="faq" className="page-section-narrow border-t border-[rgba(0,255,0,0.12)] py-5">
       <h2 className="section-title">FAQ</h2>
-      <div className="mt-7 divide-y divide-[rgba(0,255,0,0.18)] border-y border-[rgba(0,255,0,0.18)]">
+      <div className="mt-3 divide-y divide-[rgba(0,255,0,0.18)] border-y border-[rgba(0,255,0,0.18)]">
         {faq.map(([question, answer]) => (
           <div key={question} className="grid gap-2 py-6 md:grid-cols-[.8fr_1.2fr]">
             <h3 className="text-lg font-black uppercase">{question}</h3>
