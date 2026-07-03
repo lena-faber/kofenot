@@ -255,7 +255,7 @@ function BenefitsSection() {
 
 function HowItWorksSection() {
   return (
-    <section id="how-it-works" className="page-section border-t border-[rgba(0,255,0,0.12)] py-10">
+    <section id="how-it-works" className="page-section border-t border-[rgba(0,255,0,0.12)] py-5">
       <Reveal>
         <h2 className="section-title">
           How It Works: <span className="neon-text">Open / Rest / Snap</span>
@@ -284,7 +284,7 @@ function ReviewsSection({ openCheckout }: { openCheckout: (url?: string) => void
   const [testimonialOpen, setTestimonialOpen] = useState(false);
 
   return (
-    <section id="reviews" className="page-section border-t border-[rgba(0,255,0,0.12)] py-10">
+    <section id="reviews" className="page-section border-t border-[rgba(0,255,0,0.12)] py-5">
       <Reveal>
         <h2 className="section-title">
           Reviews / <span className="neon-text">Testimonials</span>
@@ -353,7 +353,7 @@ function ReviewsSection({ openCheckout }: { openCheckout: (url?: string) => void
 
 function FaqSection() {
   return (
-    <section id="faq" className="page-section-narrow border-t border-[rgba(0,255,0,0.12)] py-10">
+    <section id="faq" className="page-section-narrow border-t border-[rgba(0,255,0,0.12)] py-5">
       <h2 className="section-title">FAQ</h2>
       <div className="mt-7 divide-y divide-[rgba(0,255,0,0.18)] border-y border-[rgba(0,255,0,0.18)]">
         {faq.map(([question, answer]) => (
@@ -369,7 +369,7 @@ function FaqSection() {
 
 function PricingSection({ openCheckout }: { openCheckout: (url?: string) => void }) {
   return (
-    <section id="pricing" className="page-section border-t border-[rgba(0,255,0,0.12)] py-10">
+    <section id="pricing" className="page-section border-t border-[rgba(0,255,0,0.12)] py-5">
       <Reveal>
         <h2 className="section-title">
           Buy <span className="neon-text">KOFENOT</span>
