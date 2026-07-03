@@ -256,7 +256,7 @@ function BenefitsSection() {
         </div>
       </Reveal>
 
-      <div className="mt-10 grid gap-5 md:grid-cols-2 lg:flex lg:items-start lg:justify-between">
+      <div className="mt-10 flex flex-wrap items-start gap-4">
         {benefitModes.map((card, index) => (
           <Reveal key={card.title} delay={index * 0.055} className={card.tileClass}>
             <BenefitMosaicCard card={card} index={index} />
