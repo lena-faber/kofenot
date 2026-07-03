@@ -40,7 +40,7 @@ const benefitModes = [
   {
     image: safeSpill,
     mode: "Save your laptop",
-    title: "Tilt buys time",
+    title: "Golden minute",
     body: "KOFENOT™ creates an escape angle that helps redirect spills away from the critical components beneath the keyboard.",
     tileClass: "lg:mt-14 lg:w-[17%]",
     imageClass: "h-[320px] lg:h-[300px]",
@@ -48,7 +48,7 @@ const benefitModes = [
   {
     image: neck,
     mode: "Better posture",
-    title: "Tilt your laptop, not your neck",
+    title: "Tilt laptop, not neck",
     body: "Lifting the screen and tilting it back reduces tech-neck strain.",
     tileClass: "lg:mt-4 lg:w-[16%]",
     imageClass: "h-[300px] lg:h-[330px]",
