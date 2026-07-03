@@ -50,7 +50,7 @@ const benefitModes = [
     image: neck,
     mode: "Better posture",
     title: "Tilt your laptop, not your neck",
-    body: "Lifting the screen and tilting it back reduces "tech neck" strain.",
+    body: "Lifting the screen and tilting it back reduces tech-neck strain.",
     tileClass: "lg:mt-4 lg:w-[16%]",
     imageClass: "h-[300px] lg:h-[330px]",
   },
