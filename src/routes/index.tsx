@@ -525,16 +525,6 @@ function BenefitMosaicCard({
         
       </div>
 
-      <div className={`flex-1 border-t border-white/10 bg-[#080908] p-4 md:p-5 ${isHero ? "lg:p-6" : ""}`}>
-        <div className="mb-4 flex flex-wrap items-center gap-2">
-          <span className="rounded-sm bg-black px-3 py-2 text-[10px] font-black uppercase tracking-[0.18em] text-white">
-            {card.mode}
-          </span>
-          <span className="rounded-sm border border-[color:var(--neon)] bg-[color:var(--neon)] px-3 py-2 text-[10px] font-black uppercase tracking-[0.16em] text-black">
-            {card.command}
-          </span>
-        </div>
-        
         <h3
           className={`font-black italic leading-none text-white ${
             isHero ? "text-4xl md:text-6xl" : "text-2xl md:text-3xl"
