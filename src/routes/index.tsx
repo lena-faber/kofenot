@@ -34,10 +34,8 @@ const benefitModes = [
     mode: "Spill deflection",
     title: "Coffee",
     body: "60% of laptop damage starts with a spilled drink. Coffee leads the list.",
-  
     tileClass: "lg:mt-14 lg:w-[25%]",
-    imageClass: "h-[360px] lg:h-[390px]",
-  
+    imageClass: "h-[360px] lg:h-[390px]",  
   },
   {
     image: safeSpill,
@@ -47,7 +45,6 @@ const benefitModes = [
     command: "deflect",
     tileClass: "lg:mt-14 lg:w-[17%]",
     imageClass: "h-[320px] lg:h-[300px]",
-    tone: "neon",
   },
   {
     image: neck,
