@@ -532,8 +532,8 @@ function BenefitMosaicCard({
 
   return (
     <article
-      className={`group relative flex h-full min-h-[360px] w-full flex-col overflow-visible rounded-sm border bg-black transition duration-300 hover:z-50 hover:-translate-y-2 hover:rotate-0 ${toneClass}`}
-    >
+  className="group relative flex h-full flex-col overflow-hidden bg-black transition duration-300 hover:-translate-y-2"
+>
       <div className="group/image relative shrink-0 bg-black">
         <div className="aspect-square overflow-hidden">
   <img
