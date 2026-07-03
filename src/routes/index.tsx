@@ -42,7 +42,6 @@ const benefitModes = [
     mode: "Save your laptop",
     title: "Tilt buys time",
     body: "KOFENOT™ creates an escape angle that helps redirect spills away from the critical components beneath the keyboard.",
-    command: "deflect",
     tileClass: "lg:mt-14 lg:w-[17%]",
     imageClass: "h-[320px] lg:h-[300px]",
   },
