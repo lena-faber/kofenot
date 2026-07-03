@@ -540,7 +540,7 @@ function BenefitMosaicCard({
           src={card.image}
           alt=""
           aria-hidden="true"
-          className="pointer-events-none absolute left-1/2 top-1/2 z-50 hidden max-h-[78vh] w-[min(760px,82vw)] -translate-x-1/2 -translate-y-1/2 rounded-sm border border-[color:var(--neon)] bg-black object-contain p-2 opacity-0 shadow-[0_0_60px_rgba(0,255,0,0.35)] transition-opacity duration-200 group-hover/image:opacity-100 lg:block"
+          className="pointer-events-none absolute left-1/2 top-1/2 z-50 hidden max-h-[78vh] w-[min(760px,82vw)] -translate-x-1/2 -translate-y-1/2 rounded-sm bg-black object-contain p-2 opacity-0 shadow-[0_0_60px_rgba(0,255,0,0.35)] transition-opacity duration-200 group-hover/image:opacity-100 lg:block"
         />
       </div>
 
