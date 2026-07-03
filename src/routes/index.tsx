@@ -294,7 +294,7 @@ function BenefitsSection() {
         className="pointer-events-none absolute right-[7%] top-[105px] z-0 hidden -rotate-12 select-none text-right font-black italic uppercase leading-[0.78] tracking-tight neon-text lg:block"
         aria-hidden="true"
       >
-        <div className="text-[150px] xl:text-[190px]">$1,000+</div>
+        <div className="text-[50px] xl:text-[190px]">$1,000+</div>
         <div className="text-[66px] xl:text-[82px]">Saved</div>
         <div className="text-[40px] tracking-[0.16em] xl:text-[48px]">
           Per Spill
