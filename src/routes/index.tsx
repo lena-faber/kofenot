@@ -17,7 +17,6 @@ import corp from "@/assets/kofenot-corp.jpeg";
 import deadSpill from "@/assets/dead-spill.jpg";
 import demoVideo from "@/assets/kofeenot-demo.mp4";
 import testimonialVideo from "@/assets/kofenot-testimonials.mp4";
-import testimonialPoster from "@/assets/kofenot-testimonials.jpg";
 import fidget from "@/assets/kofeenot-fidget.jpg";
 import giftBox from "@/assets/kofenot-gift-box.jpeg";
 import neck from "@/assets/kofeenot-neck.jpg";
@@ -402,6 +401,8 @@ function StepCard({
     </article>
   );
 }
+
+
 // -----------------------------------------------------------------------------
 // REVIEWS SECTION
 // -----------------------------------------------------------------------------
@@ -426,15 +427,49 @@ function ReviewsSection({
           <video
             src={testimonialVideo}
             controls
-            preload="auto"
+            preload="metadata"
             playsInline
             className="block w-full rounded-sm"
           />
 
-          <TestimonialQuotes openCheckout={() => openCheckout()} />
+          <TestimonialQuotes openCheckout={openCheckout} />
         </div>
       </Reveal>
     </section>
+  );
+}
+
+function TestimonialQuotes({
+  openCheckout,
+}: {
+  openCheckout: (url?: string) => void;
+}) {
+  return (
+    <div className="mt-6 text-center">
+      <div className="text-2xl leading-none text-[color:var(--neon)]">
+        ★★★★★
+      </div>
+
+      <div className="mt-5 grid gap-3 md:grid-cols-4">
+        {testimonials.map((quote) => (
+          <blockquote
+            key={quote}
+            className="border border-[rgba(0,255,0,0.18)] bg-black/30 p-4 text-sm font-semibold leading-snug text-white"
+          >
+            “{quote}”
+          </blockquote>
+        ))}
+      </div>
+
+      <Button
+        type="button"
+        onClick={() => openCheckout()}
+        className="mt-6 h-12 bg-[color:var(--neon)] px-10 font-black text-black hover:bg-[color:var(--neon-dim)]"
+      >
+        Buy Now
+        <ArrowRight className="ml-2 h-4 w-4" />
+      </Button>
+    </div>
   );
 }
 
