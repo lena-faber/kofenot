@@ -12,6 +12,7 @@ import {
 
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
+
 import corp from "@/assets/kofenot-corp.jpeg";
 import deadSpill from "@/assets/dead-spill.jpg";
 import demoVideo from "@/assets/kofeenot-demo.mp4";
@@ -187,6 +188,7 @@ export function Home() {
             controls
             autoPlay
             playsInline
+            preload="metadata"
             className="w-full rounded-sm"
           />
         </DialogContent>
@@ -430,6 +432,7 @@ function ReviewsSection({
               controls
               autoPlay
               playsInline
+              preload="metadata"
               className="block w-full rounded-sm"
             />
           ) : (
@@ -458,6 +461,40 @@ function ReviewsSection({
     </section>
   );
 }
+
+function TestimonialQuotes({
+  openCheckout,
+}: {
+  openCheckout: () => void;
+}) {
+  return (
+    <div className="mt-6 text-center">
+      <div className="text-2xl leading-none text-[color:var(--neon)]">
+        ★★★★★
+      </div>
+
+      <div className="mt-5 grid gap-3 md:grid-cols-4">
+        {testimonials.map((quote) => (
+          <blockquote
+            key={quote}
+            className="border border-[rgba(0,255,0,0.18)] bg-black/30 p-4 text-sm font-semibold leading-snug text-white"
+          >
+            “{quote}”
+          </blockquote>
+        ))}
+      </div>
+
+      <Button
+        onClick={openCheckout}
+        className="mt-6 h-12 bg-[color:var(--neon)] px-10 font-black text-black hover:bg-[color:var(--neon-dim)]"
+      >
+        Buy Now
+        <ArrowRight className="ml-2 h-4 w-4" />
+      </Button>
+    </div>
+  );
+}
+
 // -----------------------------------------------------------------------------
 // PRICING SECTION
 // -----------------------------------------------------------------------------
@@ -478,7 +515,12 @@ function PricingSection({
         body="Ready to Ship. Secure Stripe Checkout"
       />
 
-      <div className={cx(layout.content, "grid gap-4 lg:grid-cols-[1fr_1fr_1.1fr]")}>
+      <div
+        className={cx(
+          layout.content,
+          "grid gap-4 lg:grid-cols-[1fr_1fr_1.1fr]",
+        )}
+      >
         {purchaseOptions.map((option) => (
           <PricingCard
             key={option.eyebrow}
@@ -548,7 +590,10 @@ function FaqSection() {
         )}
       >
         {faq.map(([question, answer]) => (
-          <div key={question} className="grid gap-2 py-6 md:grid-cols-[.8fr_1.2fr]">
+          <div
+            key={question}
+            className="grid gap-2 py-6 md:grid-cols-[.8fr_1.2fr]"
+          >
             <h3 className="text-lg font-black uppercase">{question}</h3>
             <p className={text.body}>{answer}</p>
           </div>
@@ -567,15 +612,24 @@ function HeroStats() {
     <div className="absolute inset-x-0 bottom-10 z-20 hidden lg:block">
       <Reveal delay={0.2}>
         <div className="grid min-h-[70px] grid-cols-4 border-t border-white/20 bg-black/10 backdrop-blur-sm">
-          <HeroStat icon={<span className="text-4xl font-black neon-text">0</span>} title="Zero">
+          <HeroStat
+            icon={<span className="text-4xl font-black neon-text">0</span>}
+            title="Zero"
+          >
             Magnets, Clips, Adhesives
           </HeroStat>
 
-          <HeroStat icon={<Feather className="h-7 w-7 stroke-[1.5]" />} title="1 OZ">
+          <HeroStat
+            icon={<Feather className="h-7 w-7 stroke-[1.5]" />}
+            title="1 OZ"
+          >
             Pocket-Flat-Folding
           </HeroStat>
 
-          <HeroStat icon={<Trophy className="h-7 w-7 stroke-[1.5]" />} title="2 WINS">
+          <HeroStat
+            icon={<Trophy className="h-7 w-7 stroke-[1.5]" />}
+            title="2 WINS"
+          >
             Spill Deflection / Better Posture
           </HeroStat>
 
@@ -604,14 +658,21 @@ function HeroStat({
   last?: boolean;
 }) {
   return (
-    <div className={cx("flex items-center gap-7 px-8", !last && "border-r border-white/20")}>
+    <div
+      className={cx(
+        "flex items-center gap-7 px-8",
+        !last && "border-r border-white/20",
+      )}
+    >
       <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border-2 border-[color:var(--neon)] text-[color:var(--neon)]">
         {icon}
       </div>
 
       <div>
         <div className="text-sm font-black uppercase text-white">{title}</div>
-        <div className="mt-1 text-base leading-6 text-white/80">{children}</div>
+        <div className="mt-1 text-base leading-6 text-white/80">
+          {children}
+        </div>
       </div>
     </div>
   );
@@ -661,7 +722,10 @@ function Reveal({
 }) {
   return (
     <motion.div
-      className={cx("relative z-10 pointer-events-auto h-full w-full", className)}
+      className={cx(
+        "relative z-10 pointer-events-auto h-full w-full",
+        className,
+      )}
       initial={{ opacity: 1, y: 0 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-60px" }}
