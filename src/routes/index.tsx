@@ -266,7 +266,14 @@ function BuyButton({ href }: { href: string }) {
 
 function BenefitsSection() {
   return (
-    <section id="benefits" className={cx(layout.section, layout.wide)}>
+    <section
+  id="benefits"
+  className={cx(
+    "border-t border-[rgba(0,255,0,0.12)] pt-20 pb-10",
+    layout.wide,
+  )}
+>
+      
       <SectionHeader
         eyebrow="Small Wedge. Big Difference."
         title="Why People Buy KOFENOT™"
