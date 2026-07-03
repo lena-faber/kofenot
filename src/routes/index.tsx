@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useEffect, useRef, useState } from "react";
-import { motion, useInView } from "motion/react";
+import { useState } from "react";
+import { motion } from "motion/react";
 import {
   ArrowRight,
   Check,
@@ -39,7 +39,6 @@ const layout = {
   wide: "mx-auto max-w-[1760px] px-6 lg:px-8",
   narrow: "mx-auto max-w-[980px] px-6 lg:px-8",
   content: "mt-5",
-  gridGap: "gap-5",
 };
 
 const text = {
@@ -54,7 +53,6 @@ type BenefitCard = {
   title: string;
   body: string;
   tileClass: string;
-  imageClass?: string;
 };
 
 type PurchaseOption = {
@@ -71,7 +69,7 @@ const benefitModes: BenefitCard[] = [
     mode: "Spill deflection",
     title: "Coffee",
     body: "60% of laptop damage starts with a spilled drink. Coffee leads the list.",
-    tileClass: "lg:mt-14",
+    tileClass: "lg:mt-36",
   },
   {
     image: safeSpill,
@@ -80,28 +78,28 @@ const benefitModes: BenefitCard[] = [
     body:
       "KOFENOT™ creates an escape angle that helps redirect spills away " +
       "from the critical components beneath the keyboard.",
-    tileClass: "lg:mt-14",
+    tileClass: "lg:mt-16",
   },
   {
     image: neck,
     mode: "Better posture",
     title: "Tilt laptop, not neck",
     body: "Lifting the screen and tilting it back reduces tech-neck strain.",
-    tileClass: "lg:mt-4",
+    tileClass: "lg:mt-44",
   },
   {
     image: threeDevices,
     mode: "Stand",
     title: "Flips to hold 3 devices",
     body: "Quietly turns coffee shops, airports, and gyms into your office.",
-    tileClass: "lg:mt-8",
+    tileClass: "lg:mt-24",
   },
   {
     image: fidget,
     mode: "Fidget",
     title: "Snap. Shut. Repeat.",
     body: "KOFENOT™'s satisfying snap keeps restless fingers busy.",
-    tileClass: "lg:mt-12",
+    tileClass: "lg:mt-40",
   },
 ];
 
@@ -166,13 +164,6 @@ const purchaseOptions: PurchaseOption[] = [
   },
 ];
 
-const stats = [
-  { value: 1000, suffix: "+", label: "$ saved per spill" },
-  { value: 24, suffix: "h", label: "Dispatch time" },
-  { value: 100, suffix: "%", label: "RoHS compliant" },
-  { value: 3, suffix: "", label: "Device categories" },
-];
-
 export function Home() {
   const [videoOpen, setVideoOpen] = useState(false);
 
@@ -185,10 +176,9 @@ export function Home() {
       <HeroSection openVideo={() => setVideoOpen(true)} />
       <BenefitsSection />
       <HowItWorksSection />
-      <ReviewsSection openCheckout={openCheckout} />   
+      <ReviewsSection openCheckout={openCheckout} />
       <PricingSection openCheckout={openCheckout} />
       <FaqSection />
-      <StatsSection />
 
       <Dialog open={videoOpen} onOpenChange={setVideoOpen}>
         <DialogContent className="max-w-3xl bg-black p-2 neon-border">
@@ -291,7 +281,7 @@ function BenefitsSection() {
     <section
       id="benefits"
       className={cx(
-        "border-t border-[rgba(0,255,0,0.12)] pt-20 pb-10",
+        "relative overflow-hidden border-t border-[rgba(0,255,0,0.12)] pt-20 pb-12",
         layout.wide,
       )}
     >
@@ -301,9 +291,20 @@ function BenefitsSection() {
       />
 
       <div
+        className="pointer-events-none absolute right-[7%] top-[105px] z-0 hidden -rotate-12 select-none text-right font-black italic uppercase leading-[0.78] tracking-tight neon-text lg:block"
+        aria-hidden="true"
+      >
+        <div className="text-[150px] xl:text-[190px]">$1,000+</div>
+        <div className="text-[66px] xl:text-[82px]">Saved</div>
+        <div className="text-[40px] tracking-[0.16em] xl:text-[48px]">
+          Per Spill
+        </div>
+      </div>
+
+      <div
         className={cx(
           layout.content,
-          "grid gap-4 md:grid-cols-2 lg:grid-cols-[25fr_17fr_16fr_20fr_17fr] lg:items-start",
+          "relative z-10 grid gap-4 md:grid-cols-2 lg:min-h-[620px] lg:grid-cols-[25fr_17fr_16fr_20fr_17fr] lg:items-start",
         )}
       >
         {benefitModes.map((card, index) => (
@@ -421,46 +422,19 @@ function ReviewsSection({
 
       <Reveal delay={0.1}>
         <div className={cx(layout.content, "mx-auto max-w-[980px]")}>
-          <TestimonialInlineVideo />
+          <video
+            src={testimonialVideo}
+            poster={testimonialPoster}
+            controls
+            preload="metadata"
+            playsInline
+            className="w-full rounded-sm bg-black"
+          />
 
           <TestimonialQuotes openCheckout={openCheckout} />
         </div>
       </Reveal>
     </section>
-  );
-}
-
-function TestimonialInlineVideo() {
-  const [playing, setPlaying] = useState(false);
-
-  if (playing) {
-    return (
-      <video
-        src={testimonialVideo}
-        controls
-        autoPlay
-        preload="auto"
-        playsInline
-        className="w-full rounded-sm bg-black"
-      />
-    );
-  }
-
-  return (
-    <button
-      type="button"
-      onClick={() => setPlaying(true)}
-      className="group relative block w-full overflow-hidden rounded-sm bg-black"
-      aria-label="Play testimonial video"
-    >
-      <img
-        src={testimonialPoster}
-        alt="KOFENOT testimonial video cover"
-        className="block w-full"
-      />
-
-      <Play className="absolute left-1/2 top-1/2 h-28 w-28 -translate-x-1/2 -translate-y-1/2 fill-red-600 text-red-600 transition group-hover:scale-105 md:h-36 md:w-36" />
-    </button>
   );
 }
 
@@ -494,32 +468,6 @@ function TestimonialQuotes({
         <ArrowRight className="ml-2 h-4 w-4" />
       </Button>
     </div>
-  );
-}
-
-// -----------------------------------------------------------------------------
-// FAQ SECTION
-// -----------------------------------------------------------------------------
-
-function FaqSection() {
-  return (
-    <section id="faq" className={cx(layout.section, layout.narrow)}>
-      <SectionHeader title="FAQ" />
-
-      <div
-        className={cx(
-          layout.content,
-          "divide-y divide-[rgba(0,255,0,0.18)] border-y border-[rgba(0,255,0,0.18)]",
-        )}
-      >
-        {faq.map(([question, answer]) => (
-          <div key={question} className="grid gap-2 py-6 md:grid-cols-[.8fr_1.2fr]">
-            <h3 className="text-lg font-black uppercase">{question}</h3>
-            <p className={text.body}>{answer}</p>
-          </div>
-        ))}
-      </div>
-    </section>
   );
 }
 
@@ -598,24 +546,25 @@ function PricingCard({
 }
 
 // -----------------------------------------------------------------------------
-// STATS SECTION
+// FAQ SECTION
 // -----------------------------------------------------------------------------
 
-function StatsSection() {
+function FaqSection() {
   return (
-    <section className={cx(layout.sectionLast, layout.standard)}>
-      <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
-        {stats.map((item) => (
-          <article key={item.label} className="panel rounded-sm p-6 text-center">
-            <div className="text-3xl font-black neon-text md:text-4xl">
-              <CountUp value={item.value} />
-              {item.suffix}
-            </div>
+    <section id="faq" className={cx(layout.sectionLast, layout.narrow)}>
+      <SectionHeader title="FAQ" />
 
-            <div className="mt-2 text-xs uppercase tracking-wider text-muted-foreground">
-              {item.label}
-            </div>
-          </article>
+      <div
+        className={cx(
+          layout.content,
+          "divide-y divide-[rgba(0,255,0,0.18)] border-y border-[rgba(0,255,0,0.18)]",
+        )}
+      >
+        {faq.map(([question, answer]) => (
+          <div key={question} className="grid gap-2 py-6 md:grid-cols-[.8fr_1.2fr]">
+            <h3 className="text-lg font-black uppercase">{question}</h3>
+            <p className={text.body}>{answer}</p>
+          </div>
         ))}
       </div>
     </section>
@@ -711,41 +660,6 @@ function PricingItem({ children }: { children: React.ReactNode }) {
       <Check className="h-4 w-4 text-[color:var(--neon)]" />
       {children}
     </li>
-  );
-}
-
-function CountUp({ value, suffix = "" }: { value: number; suffix?: string }) {
-  const ref = useRef<HTMLSpanElement>(null);
-  const inView = useInView(ref, { once: true, margin: "-50px" });
-  const [count, setCount] = useState(0);
-
-  useEffect(() => {
-    if (!inView) return;
-
-    const start = performance.now();
-    const duration = 1200;
-    let frame = 0;
-
-    const tick = (time: number) => {
-      const progress = Math.min(1, (time - start) / duration);
-      const eased = 1 - Math.pow(1 - progress, 3);
-
-      setCount(Math.round(value * eased));
-
-      if (progress < 1) {
-        frame = requestAnimationFrame(tick);
-      }
-    };
-
-    frame = requestAnimationFrame(tick);
-    return () => cancelAnimationFrame(frame);
-  }, [inView, value]);
-
-  return (
-    <span ref={ref}>
-      {count.toLocaleString()}
-      {suffix}
-    </span>
   );
 }
 
