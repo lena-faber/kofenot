@@ -146,14 +146,22 @@ const purchaseOptions: PurchaseOption[] = [
     eyebrow: "1 unit in Retail Box",
     price: "$15",
     title: "One KOFENOT™ laptop wedge in retail box.",
-    items: ["free shipping in the US", "In Stock. Ships from California", "3-5 business days"],
+    items: [
+      "free shipping in the US",
+      "In Stock. Ships from California",
+      "3-5 business days",
+    ],
     url: retailCheckoutUrl,
   },
   {
     eyebrow: "2 units in Retail Box",
     price: "$25",
     title: "Two KOFENOT™ laptop wedges in retail box.",
-    items: ["free shipping in the US", "In Stock. Ships from California", "3-5 business days"],
+    items: [
+      "free shipping in the US",
+      "In Stock. Ships from California",
+      "3-5 business days",
+    ],
     url: twoUnitCheckoutUrl,
   },
 ];
@@ -312,7 +320,13 @@ function BenefitsSection() {
   );
 }
 
-function BenefitCard({ card, featured }: { card: BenefitCard; featured: boolean }) {
+function BenefitCard({
+  card,
+  featured,
+}: {
+  card: BenefitCard;
+  featured: boolean;
+}) {
   return (
     <article className="group flex h-full flex-col overflow-hidden bg-black transition duration-300 hover:-translate-y-2">
       <div className="aspect-square overflow-hidden bg-black">
@@ -390,9 +404,11 @@ function StepCard({
 // REVIEWS SECTION
 // -----------------------------------------------------------------------------
 
-function ReviewsSection({ openCheckout }: { openCheckout: (url?: string) => void }) {
-  const [testimonialOpen, setTestimonialOpen] = useState(false);
-
+function ReviewsSection({
+  openCheckout,
+}: {
+  openCheckout: (url?: string) => void;
+}) {
   return (
     <section id="reviews" className={cx(layout.section, layout.standard)}>
       <SectionHeader
@@ -404,43 +420,25 @@ function ReviewsSection({ openCheckout }: { openCheckout: (url?: string) => void
       />
 
       <Reveal delay={0.1}>
-        <div className={cx(layout.content, "grid items-start gap-5 lg:grid-cols-[7fr_3fr]")}>
-          <TestimonialVideoButton onClick={() => setTestimonialOpen(true)} />
+        <div
+          className={cx(
+            layout.content,
+            "grid items-start gap-5 lg:grid-cols-[7fr_3fr]",
+          )}
+        >
+          <video
+            src={testimonialVideo}
+            poster={testimonialPoster}
+            controls
+            preload="metadata"
+            playsInline
+            className="w-full rounded-sm bg-black"
+          />
+
           <TestimonialPanel openCheckout={openCheckout} />
         </div>
       </Reveal>
-
-      <Dialog open={testimonialOpen} onOpenChange={setTestimonialOpen}>
-        <DialogContent className="max-w-5xl bg-black p-2 neon-border">
-          <video
-            src={testimonialVideo}
-            controls
-            autoPlay
-            playsInline
-            className="max-h-[82vh] w-full rounded-sm object-contain"
-          />
-        </DialogContent>
-      </Dialog>
     </section>
-  );
-}
-
-function TestimonialVideoButton({ onClick }: { onClick: () => void }) {
-  return (
-    <button
-      type="button"
-      onClick={onClick}
-      className="group relative w-full overflow-hidden rounded-sm bg-transparent"
-      aria-label="Play testimonial video"
-    >
-      <img
-        src={testimonialPoster}
-        alt="KOFENOT testimonial video cover"
-        className="block h-auto w-full opacity-100 brightness-100 contrast-100 saturate-100"
-      />
-      <span className="absolute inset-0 bg-black/10 transition group-hover:bg-black/20" />
-      <Play className="absolute left-1/2 top-1/2 h-28 w-28 -translate-x-1/2 -translate-y-1/2 fill-red-600 text-red-600 md:h-36 md:w-36" />
-    </button>
   );
 }
 
@@ -459,7 +457,10 @@ function TestimonialPanel({ openCheckout }: { openCheckout: () => void }) {
 
       <div className="mt-5 space-y-3 border-y border-[rgba(0,255,0,0.18)] py-4">
         {testimonials.map((quote) => (
-          <blockquote key={quote} className="text-sm font-semibold leading-snug text-white">
+          <blockquote
+            key={quote}
+            className="text-sm font-semibold leading-snug text-white"
+          >
             “{quote}”
           </blockquote>
         ))}
@@ -485,7 +486,12 @@ function FaqSection() {
     <section id="faq" className={cx(layout.section, layout.narrow)}>
       <SectionHeader title="FAQ" />
 
-      <div className={cx(layout.content, "divide-y divide-[rgba(0,255,0,0.18)] border-y border-[rgba(0,255,0,0.18)]")}>
+      <div
+        className={cx(
+          layout.content,
+          "divide-y divide-[rgba(0,255,0,0.18)] border-y border-[rgba(0,255,0,0.18)]",
+        )}
+      >
         {faq.map(([question, answer]) => (
           <div key={question} className="grid gap-2 py-6 md:grid-cols-[.8fr_1.2fr]">
             <h3 className="text-lg font-black uppercase">{question}</h3>
@@ -501,7 +507,11 @@ function FaqSection() {
 // PRICING SECTION
 // -----------------------------------------------------------------------------
 
-function PricingSection({ openCheckout }: { openCheckout: (url?: string) => void }) {
+function PricingSection({
+  openCheckout,
+}: {
+  openCheckout: (url?: string) => void;
+}) {
   return (
     <section id="pricing" className={cx(layout.section, layout.standard)}>
       <SectionHeader
