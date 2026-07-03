@@ -246,12 +246,8 @@ function BenefitsSection() {
           <div>
             <p className="section-kicker">Uneven little machine</p>
             <h2 className="section-title">
-              <br />
-              Accident.
+              Why People Buy KOFENOT™
             </h2>
-          </div>
-          <div className="rotate-[-3deg] rounded-sm border border-red-500 bg-red-600 px-5 py-3 text-sm font-black uppercase tracking-[0.2em] text-white shadow-[0_0_32px_rgba(220,38,38,0.65)]">
-            Spill alert
           </div>
         </div>
       </Reveal>
