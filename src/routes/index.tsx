@@ -402,7 +402,6 @@ function StepCard({
     </article>
   );
 }
-
 // -----------------------------------------------------------------------------
 // REVIEWS SECTION
 // -----------------------------------------------------------------------------
@@ -412,8 +411,6 @@ function ReviewsSection({
 }: {
   openCheckout: (url?: string) => void;
 }) {
-  const [playing, setPlaying] = useState(false);
-
   return (
     <section id="reviews" className={cx(layout.section, layout.standard)}>
       <SectionHeader
@@ -426,72 +423,18 @@ function ReviewsSection({
 
       <Reveal delay={0.1}>
         <div className={cx(layout.content, "mx-auto max-w-[980px]")}>
-          {playing ? (
-            <video
-              src={testimonialVideo}
-              controls
-              autoPlay
-              playsInline
-              preload="metadata"
-              className="block w-full rounded-sm"
-            />
-          ) : (
-            <button
-              type="button"
-              onClick={() => setPlaying(true)}
-              className="relative block w-full overflow-hidden rounded-sm bg-black"
-            >
-              <img
-                src={testimonialPoster}
-                alt="KOFENOT testimonial video"
-                className="block w-full"
-              />
-
-              <span className="absolute inset-0 flex items-center justify-center">
-                <span className="flex h-16 w-16 items-center justify-center rounded-full bg-black/75">
-                  <Play className="ml-1 h-8 w-8 fill-white text-white" />
-                </span>
-              </span>
-            </button>
-          )}
+          <video
+            src={testimonialVideo}
+            controls
+            preload="auto"
+            playsInline
+            className="block w-full rounded-sm"
+          />
 
           <TestimonialQuotes openCheckout={() => openCheckout()} />
         </div>
       </Reveal>
     </section>
-  );
-}
-
-function TestimonialQuotes({
-  openCheckout,
-}: {
-  openCheckout: () => void;
-}) {
-  return (
-    <div className="mt-6 text-center">
-      <div className="text-2xl leading-none text-[color:var(--neon)]">
-        ★★★★★
-      </div>
-
-      <div className="mt-5 grid gap-3 md:grid-cols-4">
-        {testimonials.map((quote) => (
-          <blockquote
-            key={quote}
-            className="border border-[rgba(0,255,0,0.18)] bg-black/30 p-4 text-sm font-semibold leading-snug text-white"
-          >
-            “{quote}”
-          </blockquote>
-        ))}
-      </div>
-
-      <Button
-        onClick={openCheckout}
-        className="mt-6 h-12 bg-[color:var(--neon)] px-10 font-black text-black hover:bg-[color:var(--neon-dim)]"
-      >
-        Buy Now
-        <ArrowRight className="ml-2 h-4 w-4" />
-      </Button>
-    </div>
   );
 }
 
