@@ -414,52 +414,72 @@ function ReviewsSection({
       <SectionHeader
         title={
           <>
-            Reviews / <span className="neon-text">Testimonials</span>
+            Watch <span className="neon-text">Real Reactions</span>
           </>
         }
       />
 
       <Reveal delay={0.1}>
-        <div
-          className={cx(
-            layout.content,
-            "grid items-start gap-5 lg:grid-cols-[7fr_3fr]",
-          )}
-        >
-          <video
-            src={testimonialVideo}
-            poster={testimonialPoster}
-            controls
-            preload="metadata"
-            playsInline
-            className="w-full rounded-sm bg-black"
-          />
+        <div className={cx(layout.content, "mx-auto max-w-[980px]")}>
+          <TestimonialInlineVideo />
 
-          <TestimonialPanel openCheckout={openCheckout} />
+          <TestimonialQuotes openCheckout={openCheckout} />
         </div>
       </Reveal>
     </section>
   );
 }
 
-function TestimonialPanel({ openCheckout }: { openCheckout: () => void }) {
+function TestimonialInlineVideo() {
+  const [playing, setPlaying] = useState(false);
+
+  if (playing) {
+    return (
+      <video
+        src={testimonialVideo}
+        controls
+        autoPlay
+        preload="auto"
+        playsInline
+        className="w-full rounded-sm bg-black"
+      />
+    );
+  }
+
   return (
-    <aside className="panel flex flex-col justify-center rounded-sm p-6">
-      <div className="text-2xl leading-none text-[color:var(--neon)]">★★★★★</div>
+    <button
+      type="button"
+      onClick={() => setPlaying(true)}
+      className="group relative block w-full overflow-hidden rounded-sm bg-black"
+      aria-label="Play testimonial video"
+    >
+      <img
+        src={testimonialPoster}
+        alt="KOFENOT testimonial video cover"
+        className="block w-full"
+      />
 
-      <p className="mt-3 text-lg font-black uppercase text-white">
-        Tested by real users
-      </p>
+      <Play className="absolute left-1/2 top-1/2 h-28 w-28 -translate-x-1/2 -translate-y-1/2 fill-red-600 text-red-600 transition group-hover:scale-105 md:h-36 md:w-36" />
+    </button>
+  );
+}
 
-      <p className="mt-2 text-sm font-bold uppercase tracking-[0.18em] text-muted-foreground">
-        Watch 180 seconds
-      </p>
+function TestimonialQuotes({
+  openCheckout,
+}: {
+  openCheckout: () => void;
+}) {
+  return (
+    <div className="mt-6 text-center">
+      <div className="text-2xl leading-none text-[color:var(--neon)]">
+        ★★★★★
+      </div>
 
-      <div className="mt-5 space-y-3 border-y border-[rgba(0,255,0,0.18)] py-4">
+      <div className="mt-5 grid gap-3 md:grid-cols-4">
         {testimonials.map((quote) => (
           <blockquote
             key={quote}
-            className="text-sm font-semibold leading-snug text-white"
+            className="border border-[rgba(0,255,0,0.18)] bg-black/30 p-4 text-sm font-semibold leading-snug text-white"
           >
             “{quote}”
           </blockquote>
@@ -468,12 +488,12 @@ function TestimonialPanel({ openCheckout }: { openCheckout: () => void }) {
 
       <Button
         onClick={openCheckout}
-        className="mt-6 h-12 bg-[color:var(--neon)] font-black text-black hover:bg-[color:var(--neon-dim)]"
+        className="mt-6 h-12 bg-[color:var(--neon)] px-10 font-black text-black hover:bg-[color:var(--neon-dim)]"
       >
         Buy Now
         <ArrowRight className="ml-2 h-4 w-4" />
       </Button>
-    </aside>
+    </div>
   );
 }
 
