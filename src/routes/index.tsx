@@ -455,7 +455,7 @@ function ReviewsSection({
             </button>
           )}
 
-          <TestimonialQuotes openCheckout={openCheckout} />
+          <TestimonialQuotes openCheckout={() => openCheckout()} />
         </div>
       </Reveal>
     </section>
