@@ -523,13 +523,7 @@ function BenefitMosaicCard({
   index: number;
 }) {
   const isHero = index === 0;
-  const toneClass =
-    card.tone === "red"
-      ? "border-red-500/80 shadow-[0_0_34px_rgba(220,38,38,0.28)]"
-      : card.tone === "neon"
-        ? "border-[color:var(--neon)] shadow-[0_0_34px_rgba(0,255,0,0.2)]"
-        : "border-white/20";
-
+ 
   return (
     <article
   className="group relative flex h-full flex-col overflow-hidden bg-black transition duration-300 hover:-translate-y-2"
