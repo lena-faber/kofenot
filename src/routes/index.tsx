@@ -234,7 +234,7 @@ function BenefitsSection() {
       <Reveal>
         <div className="flex flex-wrap items-end justify-between gap-5">
           <div>
-            <p className="section-kicker">Uneven little machine</p>
+            <p className="section-kicker">Small Wedge. Big Difference.</p>
             <h2 className="section-title">
               Why People Buy KOFENOT™
             </h2>
