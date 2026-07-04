@@ -70,7 +70,7 @@ const benefitModes: BenefitCard[] = [
     mode: "Spill deflection",
     title: "Coffee",
     body: "60% of laptop damage starts with a spilled drink. Coffee leads the list.",
-    tileClass: "lg:mt-36",
+    tileClass: "lg:mt-10",
   },
   {
     image: safeSpill,
