@@ -425,12 +425,12 @@ function ReviewsSection({
       <Reveal delay={0.1}>
         <div className={cx(layout.content, "mx-auto max-w-[980px]")}>
           <video
-            src={testimonialVideo}
-            controls
-            preload="metadata"
-            playsInline
-            className="block w-full rounded-sm"
-          />
+  src={`${testimonialVideo}#t=0.1`}
+  controls
+  preload="auto"
+  playsInline
+  className="block w-full rounded-sm"
+/>
 
           <TestimonialQuotes openCheckout={openCheckout} />
         </div>
