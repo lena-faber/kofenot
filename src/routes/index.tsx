@@ -263,7 +263,7 @@ function BenefitsSection() {
     <section
       id="benefits"
       className={cx(
-        "relative overflow-hidden border-t border-[rgba(0,255,0,0.12)] pt-10 pb-12",
+        "relative overflow-hidden border-t border-[rgba(0,255,0,0.12)] pt-20 pb-5",
         layout.wide,
       )}
     >
