@@ -16,6 +16,7 @@ import { Dialog, DialogContent } from "@/components/ui/dialog";
 import corp from "@/assets/kofenot-corp.jpeg";
 import deadSpill from "@/assets/dead-spill.jpg";
 import demoVideo from "@/assets/kofeenot-demo.mp4";
+import testimonialPoster from "@/assets/kofenot-testimonials.jpg";
 import testimonialVideo from "@/assets/kofenot-testimonials.mp4";
 import fidget from "@/assets/kofeenot-fidget.jpg";
 import giftBox from "@/assets/kofenot-gift-box.jpeg";
@@ -426,6 +427,7 @@ function ReviewsSection({
         <div className={cx(layout.content, "mx-auto max-w-[980px]")}>
           <video
   src={`${testimonialVideo}#t=0.1`}
+  poster={testimonialPoster}
   controls
   preload="auto"
   playsInline
