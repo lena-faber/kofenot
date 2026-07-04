@@ -173,7 +173,7 @@ export function Home() {
 
   return (
     <main className="page-shell">
-      <HeroSection openVideo={() => setVideoOpen(true)} />
+      <HeroSection openDemo={() => setVideoOpen(true)} />
       <BenefitsSection />
       <HowItWorksSection />
       <ReviewsSection openCheckout={openCheckout} />
@@ -200,7 +200,7 @@ export function Home() {
 // HERO SECTION
 // -----------------------------------------------------------------------------
 
-function HeroSection({ openVideo }: { openVideo: () => void }) {
+function HeroSection({ openDemo }: { openVideo: () => void }) {
   return (
     <section className="page-hero min-h-[100svh]">
       <HeroBackground />
@@ -225,7 +225,7 @@ function HeroSection({ openVideo }: { openVideo: () => void }) {
 
           <Reveal delay={0.15}>
             <div className="mt-8 flex flex-wrap gap-3 lg:ml-6">
-              <SetupButton onClick={openVideo} />
+              <SetupButton onClick={openDemo} />
               <BuyButton href="#pricing" />
             </div>
           </Reveal>
