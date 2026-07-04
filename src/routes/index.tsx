@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { motion } from "motion/react";
 import {
   ArrowRight,
@@ -145,22 +145,14 @@ const purchaseOptions: PurchaseOption[] = [
     eyebrow: "1 unit in Retail Box",
     price: "$15",
     title: "One KOFENOT™ laptop wedge in retail box.",
-    items: [
-      "free shipping in the US",
-      "In Stock. Ships from California",
-      "3-5 business days",
-    ],
+    items: ["free shipping in the US", "In Stock. Ships from California", "3-5 business days"],
     url: retailCheckoutUrl,
   },
   {
     eyebrow: "2 units in Retail Box",
     price: "$25",
     title: "Two KOFENOT™ laptop wedges in retail box.",
-    items: [
-      "free shipping in the US",
-      "In Stock. Ships from California",
-      "3-5 business days",
-    ],
+    items: ["free shipping in the US", "In Stock. Ships from California", "3-5 business days"],
     url: twoUnitCheckoutUrl,
   },
 ];
@@ -197,11 +189,7 @@ export function Home() {
   );
 }
 
-// -----------------------------------------------------------------------------
-// HERO SECTION
-// -----------------------------------------------------------------------------
-
-function HeroSection({ openDemo }: { openVideo: () => void }) {
+function HeroSection({ openDemo }: { openDemo: () => void }) {
   return (
     <section className="page-hero min-h-[100svh]">
       <HeroBackground />
@@ -241,11 +229,7 @@ function HeroSection({ openDemo }: { openVideo: () => void }) {
 function HeroBackground() {
   return (
     <div className="pointer-events-none absolute inset-0 z-0" aria-hidden="true">
-      <img
-        src={corp}
-        alt=""
-        className="absolute inset-0 h-full w-full object-cover object-center"
-      />
+      <img src={corp} alt="" className="absolute inset-0 h-full w-full object-cover object-center" />
       <div className="hero-overlay" />
     </div>
   );
@@ -274,10 +258,6 @@ function BuyButton({ href }: { href: string }) {
   );
 }
 
-// -----------------------------------------------------------------------------
-// BENEFITS SECTION
-// -----------------------------------------------------------------------------
-
 function BenefitsSection() {
   return (
     <section
@@ -287,10 +267,7 @@ function BenefitsSection() {
         layout.wide,
       )}
     >
-      <SectionHeader
-        eyebrow="Small Wedge. Big Difference."
-        title="Why People Buy KOFENOT™"
-      />
+      <SectionHeader eyebrow="Small Wedge. Big Difference." title="Why People Buy KOFENOT™" />
 
       <div
         className="pointer-events-none absolute right-[7%] top-[105px] z-0 hidden -rotate-12 select-none text-right font-black italic uppercase leading-[0.78] tracking-tight neon-text lg:block"
@@ -298,9 +275,7 @@ function BenefitsSection() {
       >
         <div className="text-[25px] xl:text-[86px]">$1,000+</div>
         <div className="text-[33px] xl:text-[41px]">Saved</div>
-        <div className="text-[20px] tracking-[0.16em] xl:text-[24px]">
-          Per Spill
-        </div>
+        <div className="text-[20px] tracking-[0.16em] xl:text-[24px]">Per Spill</div>
       </div>
 
       <div
@@ -310,11 +285,7 @@ function BenefitsSection() {
         )}
       >
         {benefitModes.map((card, index) => (
-          <Reveal
-            key={card.title}
-            delay={index * 0.055}
-            className={card.tileClass}
-          >
+          <Reveal key={card.title} delay={index * 0.055} className={card.tileClass}>
             <BenefitCard card={card} featured={index === 0} />
           </Reveal>
         ))}
@@ -323,30 +294,15 @@ function BenefitsSection() {
   );
 }
 
-function BenefitCard({
-  card,
-  featured,
-}: {
-  card: BenefitCard;
-  featured: boolean;
-}) {
+function BenefitCard({ card, featured }: { card: BenefitCard; featured: boolean }) {
   return (
     <article className="group flex h-full flex-col overflow-hidden bg-black transition duration-300 hover:-translate-y-2">
       <div className="aspect-square overflow-hidden bg-black">
-        <img
-          src={card.image}
-          alt={card.title}
-          className="h-full w-full object-cover transition duration-500"
-        />
+        <img src={card.image} alt={card.title} className="h-full w-full object-cover transition duration-500" />
       </div>
 
       <div className="flex-1 border-t border-white/10 bg-[#080908] p-5">
-        <h3
-          className={cx(
-            "font-black italic leading-none text-white",
-            featured ? "text-4xl md:text-5xl" : "text-2xl md:text-3xl",
-          )}
-        >
+        <h3 className={cx("font-black italic leading-none text-white", featured ? "text-4xl md:text-5xl" : "text-2xl md:text-3xl")}>
           {card.title}
         </h3>
 
@@ -357,10 +313,6 @@ function BenefitCard({
     </article>
   );
 }
-
-// -----------------------------------------------------------------------------
-// HOW IT WORKS SECTION
-// -----------------------------------------------------------------------------
 
 function HowItWorksSection() {
   return (
@@ -403,16 +355,10 @@ function StepCard({
   );
 }
 
+function ReviewsSection({ openCheckout }: { openCheckout: (url?: string) => void }) {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [isPlaying, setIsPlaying] = useState(false);
 
-// -----------------------------------------------------------------------------
-// REVIEWS SECTION
-// -----------------------------------------------------------------------------
-
-function ReviewsSection({
-  openCheckout,
-}: {
-  openCheckout: (url?: string) => void;
-}) {
   return (
     <section id="reviews" className={cx(layout.section, layout.standard)}>
       <SectionHeader
@@ -426,32 +372,33 @@ function ReviewsSection({
       <Reveal delay={0.1}>
         <div className={cx(layout.content, "mx-auto max-w-[980px]")}>
           <div className="relative">
-  <video
-    ref={videoRef}
-    src={`${testimonialVideo}#t=0.1`}
-    poster={testimonialPoster}
-    controls={isPlaying}
-    preload="auto"
-    playsInline
-    className="block w-full rounded-sm"
-  />
+            <video
+              ref={videoRef}
+              src={`${testimonialVideo}#t=0.1`}
+              poster={testimonialPoster}
+              controls={isPlaying}
+              preload="auto"
+              playsInline
+              className="block w-full rounded-sm"
+            />
 
-  {!isPlaying && (
-    <button
-      type="button"
-      onClick={() => {
-        videoRef.current?.play();
-        setIsPlaying(true);
-      }}
-      className="absolute inset-0 flex items-center justify-center"
-    >
-      <Play
-        className="h-24 w-24 fill-red-600 text-red-600 drop-shadow-[0_0_30px_rgba(220,38,38,.8)]"
-        strokeWidth={0}
-      />
-    </button>
-  )}
-</div>
+            {!isPlaying && (
+              <button
+                type="button"
+                onClick={() => {
+                  videoRef.current?.play();
+                  setIsPlaying(true);
+                }}
+                className="absolute inset-0 flex items-center justify-center"
+                aria-label="Play testimonials video"
+              >
+                <Play
+                  className="h-24 w-24 fill-red-600 text-red-600 drop-shadow-[0_0_30px_rgba(220,38,38,.8)]"
+                  strokeWidth={0}
+                />
+              </button>
+            )}
+          </div>
 
           <TestimonialQuotes openCheckout={openCheckout} />
         </div>
@@ -460,16 +407,10 @@ function ReviewsSection({
   );
 }
 
-function TestimonialQuotes({
-  openCheckout,
-}: {
-  openCheckout: (url?: string) => void;
-}) {
+function TestimonialQuotes({ openCheckout }: { openCheckout: (url?: string) => void }) {
   return (
     <div className="mt-6 text-center">
-      <div className="text-2xl leading-none text-[color:var(--neon)]">
-        ★★★★★
-      </div>
+      <div className="text-2xl leading-none text-[color:var(--neon)]">★★★★★</div>
 
       <div className="mt-5 grid gap-3 md:grid-cols-4">
         {testimonials.map((quote) => (
@@ -494,15 +435,7 @@ function TestimonialQuotes({
   );
 }
 
-// -----------------------------------------------------------------------------
-// PRICING SECTION
-// -----------------------------------------------------------------------------
-
-function PricingSection({
-  openCheckout,
-}: {
-  openCheckout: (url?: string) => void;
-}) {
+function PricingSection({ openCheckout }: { openCheckout: (url?: string) => void }) {
   return (
     <section id="pricing" className={cx(layout.section, layout.standard)}>
       <SectionHeader
@@ -514,18 +447,9 @@ function PricingSection({
         body="Ready to Ship. Secure Stripe Checkout"
       />
 
-      <div
-        className={cx(
-          layout.content,
-          "grid gap-4 lg:grid-cols-[1fr_1fr_1.1fr]",
-        )}
-      >
+      <div className={cx(layout.content, "grid gap-4 lg:grid-cols-[1fr_1fr_1.1fr]")}>
         {purchaseOptions.map((option) => (
-          <PricingCard
-            key={option.eyebrow}
-            option={option}
-            openCheckout={openCheckout}
-          />
+          <PricingCard key={option.eyebrow} option={option} openCheckout={openCheckout} />
         ))}
 
         <div className="panel overflow-hidden rounded-sm">
@@ -573,10 +497,6 @@ function PricingCard({
   );
 }
 
-// -----------------------------------------------------------------------------
-// FAQ SECTION
-// -----------------------------------------------------------------------------
-
 function FaqSection() {
   return (
     <section id="faq" className={cx(layout.sectionLast, layout.narrow)}>
@@ -589,10 +509,7 @@ function FaqSection() {
         )}
       >
         {faq.map(([question, answer]) => (
-          <div
-            key={question}
-            className="grid gap-2 py-6 md:grid-cols-[.8fr_1.2fr]"
-          >
+          <div key={question} className="grid gap-2 py-6 md:grid-cols-[.8fr_1.2fr]">
             <h3 className="text-lg font-black uppercase">{question}</h3>
             <p className={text.body}>{answer}</p>
           </div>
@@ -602,41 +519,24 @@ function FaqSection() {
   );
 }
 
-// -----------------------------------------------------------------------------
-// HERO STATS BAR
-// -----------------------------------------------------------------------------
-
 function HeroStats() {
   return (
     <div className="absolute inset-x-0 bottom-10 z-20 hidden lg:block">
       <Reveal delay={0.2}>
         <div className="grid min-h-[70px] grid-cols-4 border-t border-white/20 bg-black/10 backdrop-blur-sm">
-          <HeroStat
-            icon={<span className="text-4xl font-black neon-text">0</span>}
-            title="Zero"
-          >
+          <HeroStat icon={<span className="text-4xl font-black neon-text">0</span>} title="Zero">
             Magnets, Clips, Adhesives
           </HeroStat>
 
-          <HeroStat
-            icon={<Feather className="h-7 w-7 stroke-[1.5]" />}
-            title="1 OZ"
-          >
+          <HeroStat icon={<Feather className="h-7 w-7 stroke-[1.5]" />} title="1 OZ">
             Pocket-Flat-Folding
           </HeroStat>
 
-          <HeroStat
-            icon={<Trophy className="h-7 w-7 stroke-[1.5]" />}
-            title="2 WINS"
-          >
+          <HeroStat icon={<Trophy className="h-7 w-7 stroke-[1.5]" />} title="2 WINS">
             Spill Deflection / Better Posture
           </HeroStat>
 
-          <HeroStat
-            icon={<MonitorSmartphone className="h-7 w-7 stroke-[1.5]" />}
-            title="3 DEVICES"
-            last
-          >
+          <HeroStat icon={<MonitorSmartphone className="h-7 w-7 stroke-[1.5]" />} title="3 DEVICES" last>
             Laptops / Phones / Tablets
           </HeroStat>
         </div>
@@ -657,29 +557,18 @@ function HeroStat({
   last?: boolean;
 }) {
   return (
-    <div
-      className={cx(
-        "flex items-center gap-7 px-8",
-        !last && "border-r border-white/20",
-      )}
-    >
+    <div className={cx("flex items-center gap-7 px-8", !last && "border-r border-white/20")}>
       <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border-2 border-[color:var(--neon)] text-[color:var(--neon)]">
         {icon}
       </div>
 
       <div>
         <div className="text-sm font-black uppercase text-white">{title}</div>
-        <div className="mt-1 text-base leading-6 text-white/80">
-          {children}
-        </div>
+        <div className="mt-1 text-base leading-6 text-white/80">{children}</div>
       </div>
     </div>
   );
 }
-
-// -----------------------------------------------------------------------------
-// SHARED UI
-// -----------------------------------------------------------------------------
 
 function SectionHeader({
   eyebrow,
@@ -721,10 +610,7 @@ function Reveal({
 }) {
   return (
     <motion.div
-      className={cx(
-        "relative z-10 pointer-events-auto h-full w-full",
-        className,
-      )}
+      className={cx("relative z-10 pointer-events-auto h-full w-full", className)}
       initial={{ opacity: 1, y: 0 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-60px" }}
