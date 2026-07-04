@@ -192,6 +192,7 @@ export function Home() {
     />
   </DialogContent>
 </Dialog>
+      </main>
   );
 }
 
