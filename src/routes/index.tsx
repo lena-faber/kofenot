@@ -263,7 +263,7 @@ function BenefitsSection() {
     <section
       id="benefits"
       className={cx(
-        "relative overflow-hidden border-t border-[rgba(0,255,0,0.12)] pt-20 pb-12",
+        "relative overflow-hidden border-t border-[rgba(0,255,0,0.12)] pt-10 pb-12",
         layout.wide,
       )}
     >
@@ -274,7 +274,7 @@ function BenefitsSection() {
         aria-hidden="true"
       >
         <div className="text-[25px] xl:text-[86px]">$1,000+</div>
-        <div className="text-[33px] xl:text-[41px]">Saved</div>
+        <div className="text-[35px] xl:text-[45px]">Saved</div>
         <div className="text-[20px] tracking-[0.16em] xl:text-[24px]">Per Spill</div>
       </div>
 
