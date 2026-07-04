@@ -425,14 +425,33 @@ function ReviewsSection({
 
       <Reveal delay={0.1}>
         <div className={cx(layout.content, "mx-auto max-w-[980px]")}>
-          <video
-  src={`${testimonialVideo}#t=0.1`}
-  poster={testimonialPoster}
-  controls
-  preload="auto"
-  playsInline
-  className="block w-full rounded-sm"
-/>
+          <div className="relative">
+  <video
+    ref={videoRef}
+    src={`${testimonialVideo}#t=0.1`}
+    poster={testimonialPoster}
+    controls={isPlaying}
+    preload="auto"
+    playsInline
+    className="block w-full rounded-sm"
+  />
+
+  {!isPlaying && (
+    <button
+      type="button"
+      onClick={() => {
+        videoRef.current?.play();
+        setIsPlaying(true);
+      }}
+      className="absolute inset-0 flex items-center justify-center"
+    >
+      <Play
+        className="h-24 w-24 fill-red-600 text-red-600 drop-shadow-[0_0_30px_rgba(220,38,38,.8)]"
+        strokeWidth={0}
+      />
+    </button>
+  )}
+</div>
 
           <TestimonialQuotes openCheckout={openCheckout} />
         </div>
