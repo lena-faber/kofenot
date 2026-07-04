@@ -163,7 +163,6 @@ const purchaseOptions: PurchaseOption[] = [
     url: twoUnitCheckoutUrl,
   },
 ];
-
 export function Home() {
   const [videoOpen, setVideoOpen] = useState(false);
 
@@ -181,18 +180,18 @@ export function Home() {
       <FaqSection />
 
       <Dialog open={videoOpen} onOpenChange={setVideoOpen}>
-  <DialogContent className="max-w-3xl bg-black p-2 neon-border">
-    <video
-      src={demoVideo}
-      controls
-      autoPlay
-      playsInline
-      preload="auto"
-      className="w-full rounded-sm"
-    />
-  </DialogContent>
-</Dialog>
-      </main>
+        <DialogContent className="max-w-3xl bg-black p-2 neon-border">
+          <video
+            src={demoVideo}
+            controls
+            autoPlay
+            playsInline
+            preload="auto"
+            className="w-full rounded-sm"
+          />
+        </DialogContent>
+      </Dialog>
+    </main>
   );
 }
 
