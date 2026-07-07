@@ -3,11 +3,11 @@ import { ArrowRight, Download, Eye, FileSpreadsheet } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 
-import retailPackBack from "@/assets/kofenot-retail-pack-00.jpg";
-import retailPackSipSafe from "@/assets/kofenot-retail-pack-01.jpg";
-import productOpenView from "@/assets/kofenot-retail-pack-02.jpg";
-import retailPackFront from "@/assets/kofenot-retail-pack-03.jpg";
-import customPrintExample from "@/assets/kofenot-retail-pack-04.jpg";
+import retailPackSipSafeBack from "@/assets/kofenot-retail-pack-00.jpg";
+import retailPackDad from "@/assets/kofenot-retail-pack-01.jpg";
+import bareProduct from "@/assets/kofenot-retail-pack-02.jpg";
+import retailPackSipSafeFront from "@/assets/kofenot-retail-pack-03.jpg";
+import retailPackPlanet from "@/assets/kofenot-retail-pack-04.jpg";
 
 export const Route = createFileRoute("/retail-kit")({
   component: RetailKit,
@@ -17,55 +17,43 @@ const productDescription =
   "Pocket-size laptop wedge that improves typing comfort, helps redirect accidental spills away from the keyboard, increases airflow beneath the laptop, and doubles as a phone stand.";
 
 const csv = `Image,SKU,Product Name,Brand,Category,Description,Print Options,MSRP,Wholesale Price,Case Pack,Country of Origin,Inventory,Product URL
-kofenot-retail-pack-front.jpg,KFN-001,KOFENOT™ Laptop Wedge,KOFENOT™,Laptop Accessories,"${productDescription}","Standard, SIP SAFE, I ❤️ Dad, Planet Earth. Mixed assortments available.",15.00,,30,China,4500,https://kofenot.com
+kofenot-retail-pack-03.jpg,KFN-001,KOFENOT™ Laptop Wedge,KOFENOT™,Laptop Accessories,"${productDescription}","SIP SAFE, I 💚 Planet Earth, I ❤️ Dad. Mixed assortments available.",15.00,,30,China,4500,https://kofenot.com
 `;
 
 const retailPrints = [
   {
-    title: "Standard",
-    fileName: "kofenot-retail-pack-front.jpg",
-    image: retailPackFront,
-    description: "Main KOFENOT™ retail package.",
+    title: "SIP SAFE",
+    image: retailPackSipSafeFront,
+    description: "Retail-ready package.",
   },
   {
-    title: "SIP SAFE",
-    fileName: "kofenot-retail-pack-sip-safe.jpg",
-    image: retailPackSipSafe,
-    description: "Retail print focused on spill awareness.",
+    title: "I 💚 Planet Earth",
+    image: retailPackPlanet,
+    description: "Retail-ready package.",
   },
   {
     title: "I ❤️ Dad",
-    fileName: "kofenot-custom-print-example.jpg",
-    image: customPrintExample,
-    description: "Gift-ready retail print.",
-  },
-  {
-    title: "Planet Earth",
-    fileName: "kofenot-planet-earth.jpg",
-    image: productOpenView,
-    description: "Gift / cause-based retail print.",
+    image: retailPackDad,
+    description: "Retail-ready package.",
   },
 ];
 
 const productViews = [
   {
-    title: "Product View",
-    fileName: "kofenot-product-open-view.jpg",
-    image: productOpenView,
-    description: "KOFENOT™ shown without printed packaging.",
+    title: "Bare Product",
+    image: bareProduct,
+    description: "KOFENOT™ shown outside the retail package.",
   },
 ];
 
 const packaging = [
   {
     title: "Package Front",
-    fileName: "kofenot-retail-pack-front.jpg",
-    image: retailPackFront,
+    image: retailPackSipSafeFront,
   },
   {
     title: "Package Back",
-    fileName: "kofenot-retail-pack-back.jpg",
-    image: retailPackBack,
+    image: retailPackSipSafeBack,
   },
 ];
 
@@ -85,12 +73,10 @@ function downloadCsv() {
 
 function AssetCard({
   title,
-  fileName,
   image,
   description,
 }: {
   title: string;
-  fileName: string;
   image: string;
   description?: string;
 }) {
@@ -120,8 +106,6 @@ function AssetCard({
           </p>
         ) : null}
 
-        <p className="mt-3 break-all text-xs text-white/40">{fileName}</p>
-
         <div className="mt-4 grid grid-cols-2 gap-2">
           <a
             href={image}
@@ -135,7 +119,7 @@ function AssetCard({
 
           <a
             href={image}
-            download={fileName}
+            download
             className="inline-flex h-10 items-center justify-center rounded-sm bg-red-600 px-3 text-xs font-black uppercase tracking-[0.12em] text-white hover:bg-red-500"
           >
             <Download className="mr-2 h-4 w-4" />
@@ -154,7 +138,7 @@ function RetailKit() {
       <section className="relative overflow-hidden border-b border-[rgba(0,255,0,0.14)]">
         <div className="absolute inset-0">
           <img
-            src={retailPackFront}
+            src={retailPackSipSafeFront}
             alt=""
             className="h-full w-full object-cover object-center opacity-20"
           />
@@ -177,7 +161,7 @@ function RetailKit() {
             </p>
 
             <p className="mt-5 max-w-xl text-2xl font-black italic leading-tight text-white">
-              One product. Multiple print options.
+              One product. Three retail designs.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-3">
@@ -201,8 +185,8 @@ function RetailKit() {
 
           <div className="hidden rounded-sm bg-white p-3 shadow-2xl lg:block">
             <img
-              src={retailPackFront}
-              alt="KOFENOT retail package front"
+              src={retailPackSipSafeFront}
+              alt="KOFENOT SIP SAFE retail package"
               className="aspect-[4/5] w-full rounded-sm object-contain"
             />
           </div>
@@ -218,14 +202,46 @@ function RetailKit() {
             </h2>
 
             <div className="mt-6 grid gap-3 text-sm leading-6 text-white/75 sm:grid-cols-2">
-              <p><strong className="text-white">Product:</strong><br />KOFENOT™ Laptop Wedge</p>
-              <p><strong className="text-white">SKU:</strong><br />KFN-001</p>
-              <p><strong className="text-white">Brand:</strong><br />KOFENOT™</p>
-              <p><strong className="text-white">Category:</strong><br />Laptop Accessories</p>
-              <p><strong className="text-white">MSRP:</strong><br />$15.00</p>
-              <p><strong className="text-white">Case Pack:</strong><br />30 units</p>
-              <p><strong className="text-white">Inventory:</strong><br />4,500 units</p>
-              <p><strong className="text-white">Country:</strong><br />China</p>
+              <p>
+                <strong className="text-white">Product:</strong>
+                <br />
+                KOFENOT™ Laptop Wedge
+              </p>
+              <p>
+                <strong className="text-white">SKU:</strong>
+                <br />
+                KFN-001
+              </p>
+              <p>
+                <strong className="text-white">Brand:</strong>
+                <br />
+                KOFENOT™
+              </p>
+              <p>
+                <strong className="text-white">Category:</strong>
+                <br />
+                Laptop Accessories
+              </p>
+              <p>
+                <strong className="text-white">MSRP:</strong>
+                <br />
+                $15.00
+              </p>
+              <p>
+                <strong className="text-white">Case Pack:</strong>
+                <br />
+                30 units
+              </p>
+              <p>
+                <strong className="text-white">Inventory:</strong>
+                <br />
+                4,500 units
+              </p>
+              <p>
+                <strong className="text-white">Country:</strong>
+                <br />
+                China
+              </p>
             </div>
           </div>
 
@@ -240,11 +256,11 @@ function RetailKit() {
 
             <div className="mt-6 rounded-sm border border-white/10 bg-black/25 p-5">
               <h3 className="text-lg font-black italic text-white">
-                Available Retail Prints
+                Available Retail Designs
               </h3>
 
               <p className="mt-3 text-sm leading-6 text-white/70">
-                Standard · SIP SAFE · I ❤️ Dad · Planet Earth
+                SIP SAFE · I 💚 Planet Earth · I ❤️ Dad
               </p>
 
               <p className="mt-3 text-sm font-bold text-[color:var(--neon)]">
@@ -269,18 +285,18 @@ function RetailKit() {
         id="retail-prints"
         className="mx-auto max-w-[1320px] border-t border-[rgba(0,255,0,0.14)] px-6 py-14 lg:px-10"
       >
-        <p className="section-kicker">Available Retail Prints</p>
+        <p className="section-kicker">Available Retail Designs</p>
 
         <h2 className="section-title">
-          One Product. <span className="neon-text">Four Designs.</span>
+          One Product. <span className="neon-text">Three Designs.</span>
         </h2>
 
         <p className="mt-4 max-w-3xl text-white/70">
-          KOFENOT™ is sold as one product family with multiple retail-ready
-          print options.
+          KOFENOT™ is available in three retail-ready editions. Mixed
+          assortments are available.
         </p>
 
-        <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {retailPrints.map((item) => (
             <AssetCard key={item.title} {...item} />
           ))}
@@ -292,11 +308,11 @@ function RetailKit() {
         <p className="section-kicker">Product View</p>
 
         <h2 className="section-title">
-          KOFENOT™ <span className="neon-text">Outside the Package</span>
+          <span className="neon-text">Bare Product</span>
         </h2>
 
         <p className="mt-4 max-w-3xl text-white/70">
-          Physical product shown without printed packaging.
+          KOFENOT™ shown outside the retail package.
         </p>
 
         <div className="mt-8 max-w-sm">
