@@ -5,6 +5,7 @@ import {
   Check,
   Coffee,
   Download,
+  Eye,
   Gift,
   Handshake,
   PackageCheck,
@@ -24,6 +25,13 @@ import brand from "@/assets/kofeenot-brand.jpg";
 import corpGift from "@/assets/kofenot-corp-gift.jpeg";
 import expo from "@/assets/kofenot-expo.jpeg";
 
+import retailSipSafe from "@/assets/kofenot-retail-sip-safe.jpeg";
+import retailPlanet from "@/assets/kofenot-retail-planet-earth.jpeg";
+import retailDad from "@/assets/kofenot-retail-dad.jpeg";
+import bareKofenot from "@/assets/kofenot-bare.jpeg";
+import packageFront from "@/assets/kofenot-package-front.jpeg";
+import packageBack from "@/assets/kofenot-package-back.jpeg";
+
 export const Route = createFileRoute("/wholesale")({
   head: () => ({
     meta: [
@@ -33,7 +41,7 @@ export const Route = createFileRoute("/wholesale")({
       {
         name: "description",
         content:
-          "Wholesale KOFENOT for retail resale, coffee shops, gift shops, coworking spaces, custom logos, corporate gifts, events, white label, and licensing.",
+          "Wholesale KOFENOT for resale, retail-ready packaging, coffee shops, gift shops, coworking spaces, custom logos, corporate gifts, events, white label, and licensing.",
       },
     ],
   }),
@@ -76,6 +84,56 @@ const customPrograms = [
   "Licensing opportunities",
 ];
 
+const retailImages = [
+  {
+    img: retailSipSafe,
+    title: "SIP SAFE",
+    copy: "Retail-ready package.",
+  },
+  {
+    img: retailPlanet,
+    title: "I 💚 Planet Earth",
+    copy: "Retail-ready package.",
+  },
+  {
+    img: retailDad,
+    title: "I ❤️ Dad",
+    copy: "Retail-ready package.",
+  },
+];
+
+const productImages = [
+  {
+    img: bareKofenot,
+    title: "Bare Product",
+    copy: "KOFENOT™ shown outside the retail package.",
+  },
+];
+
+const packageImages = [
+  {
+    img: packageFront,
+    title: "Package Front",
+    copy: "Front retail packaging.",
+  },
+  {
+    img: packageBack,
+    title: "Package Back",
+    copy: "Back retail packaging.",
+  },
+];
+
+const specs = [
+  ["Product", "KOFENOT™ laptop wedge"],
+  ["Trademark line", "KOFENOT™: Make Your Laptop Coffee Shop-Friendly"],
+  ["Bare unit size", '2.4" W × 3.4" H × 0.4" D'],
+  ["Bare unit weight", "0.9 oz"],
+  ["Retail pack weight", "2.1 oz"],
+  ["Wholesale minimum", "30 units"],
+  ["Retail-ready formats", "Retail Pack and Retail Box"],
+  ["Custom programs", "Quote only"],
+];
+
 const b2bPaths = [
   {
     icon: Store,
@@ -99,24 +157,6 @@ const b2bPaths = [
   },
 ];
 
-const retailKitFeatures = [
-  "Retail-ready hanging package",
-  "Works on peg hooks, counters, shelves, and gift racks",
-  "Clear customer story on the package",
-  "Designed for coffee shops, coworking spaces, gift shops, bookstores, campus stores, and travel retail",
-];
-
-const specs = [
-  ["Product", "KOFENOT™ laptop wedge"],
-  ["Trademark line", "KOFENOT™: Make Your Laptop Coffee Shop-Friendly"],
-  ["Bare unit size", '2.4" W × 3.4" H × 0.4" D'],
-  ["Bare unit weight", "0.9 oz"],
-  ["Retail pack weight", "2.1 oz"],
-  ["Wholesale minimum", "30 units"],
-  ["Retail-ready formats", "Retail Pack and Retail Box"],
-  ["Custom programs", "Quote only"],
-];
-
 const merchandising = [
   {
     icon: Coffee,
@@ -135,7 +175,7 @@ const merchandising = [
   },
 ];
 
-const images = [
+const displayImages = [
   { img: coffeeShopHero, label: "Coffee shop use" },
   { img: coffeeShopDisplay, label: "Counter display" },
   { img: giftBox, label: "Retail box" },
@@ -209,7 +249,7 @@ function HeroSection() {
           </h1>
 
           <p className="hero-copy">
-            Everything B2B in one place: resale pricing, retail-ready packaging,
+            Everything B2B in one place: resale pricing, retail-ready images,
             product specs, custom logo programs, corporate gifts, white label,
             and licensing.
           </p>
@@ -222,12 +262,12 @@ function HeroSection() {
               </Button>
             </a>
 
-            <a href={quoteEmail}>
+            <a href="#retail-kit">
               <Button
                 variant="outline"
                 className="h-12 border-[rgba(0,255,0,0.55)] px-7 hover:bg-[rgba(0,255,0,0.08)] hover:text-[color:var(--neon)]"
               >
-                Request Quote
+                Retail Kit Images
               </Button>
             </a>
           </div>
@@ -258,7 +298,9 @@ function PricingSection() {
     <section id="pricing" className="section-band">
       <div className="page-section">
         <p className="section-kicker">Wholesale pricing</p>
-        <h2 className="section-title">Public prices for resale. Quote for custom.</h2>
+        <h2 className="section-title">
+          Public prices for resale. Quote for custom.
+        </h2>
 
         <div className="mt-8 grid gap-5 lg:grid-cols-2">
           <div>
@@ -315,45 +357,34 @@ function PricingSection() {
 function RetailKitSection() {
   return (
     <section id="retail-kit" className="page-section">
-      <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
-        <div className="flex flex-col justify-center">
-          <p className="section-kicker">Retail Kit</p>
+      <p className="section-kicker">Retail kit</p>
+      <h2 className="section-title neon-text">Downloadable Retail Images</h2>
 
-          <h2 className="section-title">
-            Retail-ready packaging for easy resale.
-          </h2>
+      <div className="mt-8 grid gap-4 md:grid-cols-3">
+        {retailImages.map((item) => (
+          <DownloadCard key={item.title} item={item} />
+        ))}
+      </div>
 
-          <p className="mt-5 text-lg text-muted-foreground">
-            KOFENOT ships in a retail-ready hanging package designed for coffee
-            shops, gift shops, bookstores, coworking spaces, campus stores, and
-            travel retail.
-          </p>
+      <div className="mt-12 border-t border-[rgba(0,255,0,0.18)] pt-10">
+        <p className="section-kicker">Product image</p>
+        <h2 className="section-title neon-text">Bare KOFENOT™</h2>
 
-          <div className="mt-7 grid gap-3">
-            {retailKitFeatures.map((item) => (
-              <div key={item} className="flex gap-3 text-lg font-bold">
-                <Check className="mt-1 h-5 w-5 shrink-0 text-[color:var(--neon)]" />
-                {item}
-              </div>
-            ))}
-          </div>
-
-          <a href={quoteEmail} className="mt-8 inline-flex">
-            <Button
-              variant="outline"
-              className="h-12 border-[rgba(0,255,0,0.55)] px-7 hover:bg-[rgba(0,255,0,0.08)] hover:text-[color:var(--neon)]"
-            >
-              Request Retail Kit Assets
-              <Download className="ml-2 h-4 w-4" />
-            </Button>
-          </a>
+        <div className="mt-8 grid gap-4 md:grid-cols-3">
+          {productImages.map((item) => (
+            <DownloadCard key={item.title} item={item} />
+          ))}
         </div>
+      </div>
 
-        <div className="grid gap-4 sm:grid-cols-2">
-          <ImageCard item={{ img: giftBox, label: "Retail box" }} />
-          <ImageCard item={{ img: wholesalePack, label: "Wholesale pack" }} />
-          <ImageCard item={{ img: coffeeShopDisplay, label: "Counter display" }} />
-          <ImageCard item={{ img: coffeeShopHero, label: "Coffee shop use" }} />
+      <div className="mt-12 border-t border-[rgba(0,255,0,0.18)] pt-10">
+        <p className="section-kicker">Packaging</p>
+        <h2 className="section-title neon-text">Package Front + Back</h2>
+
+        <div className="mt-8 grid gap-4 md:grid-cols-2">
+          {packageImages.map((item) => (
+            <DownloadCard key={item.title} item={item} />
+          ))}
         </div>
       </div>
     </section>
@@ -389,11 +420,6 @@ function SpecsSection() {
             </tbody>
           </table>
         </div>
-
-        <p className="mt-5 text-sm text-muted-foreground">
-          Shipping, case quantities, UPC, print method, packaging, and custom
-          fulfillment details can be confirmed by quote.
-        </p>
       </div>
     </section>
   );
@@ -442,7 +468,7 @@ function MerchandisingSection() {
         </div>
 
         <div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-          {images.map((item) => (
+          {displayImages.map((item) => (
             <ImageCard key={item.label} item={item} />
           ))}
         </div>
@@ -529,11 +555,6 @@ function OrderSection() {
           Checkout for resale. Email for custom programs.
         </h2>
 
-        <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
-          Use checkout for retail-ready wholesale units. Use quote for logos,
-          packaging, fulfillment, white label, licensing, or larger quantities.
-        </p>
-
         <div className="mt-7 flex flex-wrap justify-center gap-3">
           <a href={retailPackCheckoutUrl}>
             <Button className="h-12 bg-[color:var(--neon)] px-8 font-black text-black hover:bg-[color:var(--neon-dim)]">
@@ -560,6 +581,49 @@ function OrderSection() {
         </div>
       </div>
     </section>
+  );
+}
+
+function DownloadCard({
+  item,
+}: {
+  item: {
+    img: string;
+    title: string;
+    copy: string;
+  };
+}) {
+  return (
+    <article className="panel overflow-hidden rounded-sm">
+      <img src={item.img} alt={item.title} className="w-full bg-white object-contain" />
+
+      <div className="border-t border-[rgba(0,255,0,0.18)] p-4">
+        <h3 className="font-black italic text-[color:var(--neon)]">
+          {item.title}
+        </h3>
+
+        <p className="mt-2 text-sm text-muted-foreground">{item.copy}</p>
+
+        <div className="mt-4 grid grid-cols-2 gap-2">
+          <a href={item.img} target="_blank" rel="noreferrer">
+            <Button
+              variant="outline"
+              className="h-10 w-full border-[rgba(255,255,255,0.18)] text-xs font-black tracking-[0.18em]"
+            >
+              <Eye className="mr-2 h-3 w-3" />
+              Open
+            </Button>
+          </a>
+
+          <a href={item.img} download>
+            <Button className="h-10 w-full bg-red-600 text-xs font-black tracking-[0.18em] text-white hover:bg-red-700">
+              <Download className="mr-2 h-3 w-3" />
+              File
+            </Button>
+          </a>
+        </div>
+      </div>
+    </article>
   );
 }
 
