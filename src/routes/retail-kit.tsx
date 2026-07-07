@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { ArrowRight, Download, Eye, FileSpreadsheet } from "lucide-react";
+import { Download, Eye, FileSpreadsheet } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 
@@ -16,11 +16,11 @@ export const Route = createFileRoute("/retail-kit")({
 const productDescription =
   "Pocket-size laptop wedge that improves typing comfort, helps redirect accidental spills away from the keyboard, increases airflow beneath the laptop, and doubles as a phone stand.";
 
-const csv = `Image,SKU,Product Name,Brand,Category,Description,Print Options,MSRP,Wholesale Price,Case Pack,Country of Origin,Inventory,Product URL
-kofenot-retail-pack-03.jpg,KFN-001,KOFENOT™ Laptop Wedge,KOFENOT™,Laptop Accessories,"${productDescription}","SIP SAFE, I 💚 Planet Earth, I ❤️ Dad. Mixed assortments available.",15.00,,30,China,4500,https://kofenot.com
+const csv = `Image,SKU,Product Name,Trademark,Brand,Category,Description,Print Options,MSRP,Wholesale Price,Case Pack,Mixed Assortment,Product Size,Product Weight,Retail Pack Weight,Country of Origin,Inventory,Product URL
+kofenot-retail-pack-03.jpg,KFN-001,KOFENOT™ Laptop Wedge,"KOFENOT™: Make Your Laptop Coffee Shop-Friendly",KOFENOT™,Laptop Accessories,"${productDescription}","SIP SAFE, I 💚 Planet Earth, I ❤️ Dad",15.00,,30,Yes,"2.4 in W x 3.4 in H x 0.4 in D",0.9 oz,2.1 oz,China,4500,https://kofenot.com
 `;
 
-const retailPrints = [
+const retailDesigns = [
   {
     title: "SIP SAFE",
     image: retailPackSipSafeFront,
@@ -38,7 +38,7 @@ const retailPrints = [
   },
 ];
 
-const productViews = [
+const productImages = [
   {
     title: "Bare Product",
     image: bareProduct,
@@ -46,15 +46,34 @@ const productViews = [
   },
 ];
 
-const packaging = [
+const packageImages = [
   {
     title: "Package Front",
     image: retailPackSipSafeFront,
+    description: "Front retail packaging.",
   },
   {
     title: "Package Back",
     image: retailPackSipSafeBack,
+    description: "Back retail packaging.",
   },
+];
+
+const specs = [
+  ["Product", "KOFENOT™ Laptop Wedge"],
+  ["Trademark", "KOFENOT™: Make Your Laptop Coffee Shop-Friendly"],
+  ["SKU", "KFN-001"],
+  ["Brand", "KOFENOT™"],
+  ["Category", "Laptop Accessories"],
+  ["MSRP", "$15.00"],
+  ["Case Pack", "30 units"],
+  ["Mixed Assortment", "Yes"],
+  ["Retail Designs", "SIP SAFE · I 💚 Planet Earth · I ❤️ Dad"],
+  ["Product Size", '2.4" W × 3.4" H × 0.4" D'],
+  ["Product Weight", "0.9 oz"],
+  ["Retail Pack Weight", "2.1 oz"],
+  ["Inventory", "4,500 units"],
+  ["Country of Origin", "China"],
 ];
 
 function downloadCsv() {
@@ -78,7 +97,7 @@ function AssetCard({
 }: {
   title: string;
   image: string;
-  description?: string;
+  description: string;
 }) {
   return (
     <article className="overflow-hidden rounded-sm border border-white/10 bg-[#080908]">
@@ -96,15 +115,11 @@ function AssetCard({
       </a>
 
       <div className="border-t border-white/10 p-4">
-        <h3 className="text-lg font-black italic leading-tight text-white">
+        <h3 className="text-lg font-black italic leading-tight text-[color:var(--neon)]">
           {title}
         </h3>
 
-        {description ? (
-          <p className="mt-2 min-h-[40px] text-sm leading-5 text-white/60">
-            {description}
-          </p>
-        ) : null}
+        <p className="mt-2 text-sm leading-5 text-white/60">{description}</p>
 
         <div className="mt-4 grid grid-cols-2 gap-2">
           <a
@@ -134,208 +149,101 @@ function AssetCard({
 function RetailKit() {
   return (
     <main className="page-shell">
-      {/* HERO */}
-      <section className="relative overflow-hidden border-b border-[rgba(0,255,0,0.14)]">
-        <div className="absolute inset-0">
-          <img
-            src={retailPackSipSafeFront}
-            alt=""
-            className="h-full w-full object-cover object-center opacity-20"
-          />
-          <div className="absolute inset-0 bg-black/85" />
-        </div>
+      <section className="mx-auto max-w-[1320px] px-6 py-16 lg:px-10">
+        <p className="section-kicker">Retail Buyer Assets</p>
 
-        <div className="relative z-10 mx-auto grid min-h-[78vh] max-w-[1320px] items-center gap-10 px-6 py-20 lg:grid-cols-[1fr_420px] lg:px-10">
+        <div className="mt-5 grid gap-8 lg:grid-cols-[1fr_360px] lg:items-end">
           <div>
-            <p className="section-kicker">Retail Buyer Assets</p>
-
-            <h1 className="mt-5 text-[52px] font-black italic leading-[0.9] tracking-tight neon-text md:text-[86px] lg:text-[108px]">
+            <h1 className="text-[52px] font-black italic leading-[0.9] tracking-tight neon-text md:text-[86px] lg:text-[104px]">
               KOFENOT™
               <br />
               Retail Kit
             </h1>
 
-            <p className="mt-7 max-w-2xl text-lg font-semibold leading-8 text-white/80">
-              Retail-ready assets, product photography, packaging, and buyer
-              information.
+            <p className="mt-6 max-w-2xl text-lg font-semibold leading-8 text-white/75">
+              CSV, product specifications, downloadable retail images, and
+              packaging assets.
             </p>
-
-            <p className="mt-5 max-w-xl text-2xl font-black italic leading-tight text-white">
-              One product. Three retail designs.
-            </p>
-
-            <div className="mt-8 flex flex-wrap gap-3">
-              <Button
-                type="button"
-                onClick={downloadCsv}
-                className="h-12 bg-[color:var(--neon)] px-7 font-black text-black hover:bg-[color:var(--neon-dim)]"
-              >
-                <FileSpreadsheet className="mr-2 h-5 w-5" />
-                Download CSV
-              </Button>
-
-              <a href="#retail-prints">
-                <Button className="h-12 bg-red-600 px-7 font-black text-white hover:bg-red-500">
-                  View Assets
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-              </a>
-            </div>
           </div>
 
-          <div className="hidden rounded-sm bg-white p-3 shadow-2xl lg:block">
+          <div className="rounded-sm bg-white p-3 shadow-2xl">
             <img
               src={retailPackSipSafeFront}
               alt="KOFENOT SIP SAFE retail package"
-              className="aspect-[4/5] w-full rounded-sm object-contain"
+              className="aspect-[4/5] w-full object-contain"
             />
           </div>
         </div>
-      </section>
 
-      {/* PRODUCT DETAILS */}
-      <section className="mx-auto max-w-[1320px] px-6 py-14 lg:px-10">
-        <div className="grid gap-5 lg:grid-cols-[0.9fr_1.1fr]">
-          <div className="panel rounded-sm p-7">
-            <h2 className="text-4xl font-black italic leading-none text-white">
-              Product Details
-            </h2>
-
-            <div className="mt-6 grid gap-3 text-sm leading-6 text-white/75 sm:grid-cols-2">
-              <p>
-                <strong className="text-white">Product:</strong>
-                <br />
-                KOFENOT™ Laptop Wedge
-              </p>
-              <p>
-                <strong className="text-white">SKU:</strong>
-                <br />
-                KFN-001
-              </p>
-              <p>
-                <strong className="text-white">Brand:</strong>
-                <br />
-                KOFENOT™
-              </p>
-              <p>
-                <strong className="text-white">Category:</strong>
-                <br />
-                Laptop Accessories
-              </p>
-              <p>
-                <strong className="text-white">MSRP:</strong>
-                <br />
-                $15.00
-              </p>
-              <p>
-                <strong className="text-white">Case Pack:</strong>
-                <br />
-                30 units
-              </p>
-              <p>
-                <strong className="text-white">Inventory:</strong>
-                <br />
-                4,500 units
-              </p>
-              <p>
-                <strong className="text-white">Country:</strong>
-                <br />
-                China
-              </p>
-            </div>
-          </div>
-
-          <div className="panel rounded-sm p-7">
-            <h2 className="text-4xl font-black italic leading-none text-white">
-              Product Description
-            </h2>
-
-            <p className="mt-5 text-base leading-7 text-white/75">
-              {productDescription}
-            </p>
-
-            <div className="mt-6 rounded-sm border border-white/10 bg-black/25 p-5">
-              <h3 className="text-lg font-black italic text-white">
-                Available Retail Designs
-              </h3>
-
-              <p className="mt-3 text-sm leading-6 text-white/70">
-                SIP SAFE · I 💚 Planet Earth · I ❤️ Dad
-              </p>
-
-              <p className="mt-3 text-sm font-bold text-[color:var(--neon)]">
-                Mixed assortments available.
-              </p>
-            </div>
-
-            <button
-              type="button"
-              onClick={downloadCsv}
-              className="mt-7 inline-flex h-12 items-center rounded-sm bg-[color:var(--neon)] px-7 text-sm font-black uppercase tracking-[0.16em] text-black hover:bg-[color:var(--neon-dim)]"
-            >
-              <Download className="mr-2 h-5 w-5" />
-              Download Product CSV
-            </button>
-          </div>
+        <div className="mt-8 flex flex-wrap gap-3">
+          <Button
+            type="button"
+            onClick={downloadCsv}
+            className="h-12 bg-[color:var(--neon)] px-7 font-black text-black hover:bg-[color:var(--neon-dim)]"
+          >
+            <FileSpreadsheet className="mr-2 h-5 w-5" />
+            Download CSV
+          </Button>
         </div>
       </section>
 
-      {/* RETAIL PRINTS */}
-      <section
-        id="retail-prints"
-        className="mx-auto max-w-[1320px] border-t border-[rgba(0,255,0,0.14)] px-6 py-14 lg:px-10"
-      >
-        <p className="section-kicker">Available Retail Designs</p>
+      <section className="mx-auto max-w-[1320px] border-t border-[rgba(0,255,0,0.14)] px-6 py-12 lg:px-10">
+        <p className="section-kicker">Product Specifications</p>
+
+        <div className="mt-6 grid gap-3 md:grid-cols-2 lg:grid-cols-3">
+          {specs.map(([label, value]) => (
+            <div
+              key={label}
+              className="rounded-sm border border-white/10 bg-[#080908] p-4"
+            >
+              <p className="text-xs font-black uppercase tracking-[0.18em] text-white/40">
+                {label}
+              </p>
+              <p className="mt-2 text-base font-bold leading-6 text-white">
+                {value}
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-[1320px] border-t border-[rgba(0,255,0,0.14)] px-6 py-12 lg:px-10">
+        <p className="section-kicker">Retail Designs</p>
 
         <h2 className="section-title">
-          One Product. <span className="neon-text">Three Designs.</span>
+          Downloadable <span className="neon-text">Retail Images</span>
         </h2>
 
-        <p className="mt-4 max-w-3xl text-white/70">
-          KOFENOT™ is available in three retail-ready editions. Mixed
-          assortments are available.
-        </p>
-
-        <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {retailPrints.map((item) => (
+        <div className="mt-8 grid gap-5 md:grid-cols-3">
+          {retailDesigns.map((item) => (
             <AssetCard key={item.title} {...item} />
           ))}
         </div>
       </section>
 
-      {/* PRODUCT VIEW */}
-      <section className="mx-auto max-w-[1320px] border-t border-[rgba(0,255,0,0.14)] px-6 py-14 lg:px-10">
-        <p className="section-kicker">Product View</p>
+      <section className="mx-auto max-w-[1320px] border-t border-[rgba(0,255,0,0.14)] px-6 py-12 lg:px-10">
+        <p className="section-kicker">Product Image</p>
 
         <h2 className="section-title">
-          <span className="neon-text">Bare Product</span>
+          Bare <span className="neon-text">KOFENOT™</span>
         </h2>
-
-        <p className="mt-4 max-w-3xl text-white/70">
-          KOFENOT™ shown outside the retail package.
-        </p>
 
         <div className="mt-8 max-w-sm">
-          {productViews.map((item) => (
+          {productImages.map((item) => (
             <AssetCard key={item.title} {...item} />
           ))}
         </div>
       </section>
 
-      {/* PACKAGING */}
-      <section className="mx-auto max-w-[1320px] border-t border-[rgba(0,255,0,0.14)] px-6 py-14 lg:px-10">
-        <p className="section-kicker">Retail Packaging</p>
+      <section className="mx-auto max-w-[1320px] border-t border-[rgba(0,255,0,0.14)] px-6 py-12 lg:px-10">
+        <p className="section-kicker">Packaging</p>
 
         <h2 className="section-title">
           Package <span className="neon-text">Front + Back</span>
         </h2>
 
-        <p className="mt-4 max-w-3xl text-white/70">
-          Retail packaging shown front and back.
-        </p>
-
         <div className="mt-8 grid gap-5 md:grid-cols-2">
-          {packaging.map((item) => (
+          {packageImages.map((item) => (
             <AssetCard key={item.title} {...item} />
           ))}
         </div>
