@@ -31,6 +31,9 @@ import bareProduct from "@/assets/kofenot-retail-pack-02.jpg";
 import retailPackSipSafeFront from "@/assets/kofenot-retail-pack-03.jpg";
 import retailPackPlanet from "@/assets/kofenot-retail-pack-04.jpg";
 import yourLogoHere from "@/assets/kofenot-your-logo-here.jpeg";
+import coffeeShop from "@/assets/coffee-shop.jpg";
+import coworkingCustomLogo from "@/assets/kofenot-your-logo-here-00.jpg";
+import customLogoDisplay from "@/assets/kofenot-your-logo-here-01.jpg";
 
 export const Route = createFileRoute("/wholesale")({
   head: () => ({
@@ -137,23 +140,27 @@ const specs = [
 const b2bPaths = [
   {
     icon: Store,
-    title: "Resale",
-    copy: "Retail-ready KOFENOT for counters, shelves, gift shops, coffee shops, bookstores, and campus stores.",
+    title: "Coffee Shops & Cafés",
+    image: coffeeShop,
+    copy: "Sell KOFENOT™ at the counter, bundle it with drinks, or offer it as a practical impulse purchase.",
   },
   {
     icon: Tag,
-    title: "Custom Logo",
-    copy: "Put your logo on KOFENOT for companies, events, universities, and promotional product programs.",
+    title: "Coworking Spaces & Shared Workplaces",
+    image: coworkingCustomLogo,
+    copy: "Customize every KOFENOT™ with your logo for coworking spaces, libraries, universities, innovation hubs, and other shared work environments.",
   },
   {
     icon: Gift,
     title: "Corporate Gifts",
-    copy: "A practical desk gift for employees, clients, remote teams, and new-hire kits.",
+    image: corpGift,
+    copy: "A practical desk gift for employees, clients, remote teams, executive welcome kits, and customer appreciation programs.",
   },
   {
     icon: Presentation,
-    title: "Events",
-    copy: "A compact conference and trade-show product people keep using after the event.",
+    title: "Events & Conferences",
+    image: expo,
+    copy: "A branded giveaway attendees actually keep using long after conferences, trade shows, and company events.",
   },
 ];
 
