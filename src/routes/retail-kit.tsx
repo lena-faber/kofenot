@@ -17,7 +17,7 @@ const productDescription =
   "Pocket-size laptop wedge that improves typing comfort, helps redirect accidental spills away from the keyboard, increases airflow beneath the laptop, and doubles as a phone stand.";
 
 const csv = `Image,SKU,Product Name,Trademark,Brand,Category,Description,Print Options,MSRP,Wholesale Price,Case Pack,Mixed Assortment,Product Size,Product Weight,Retail Pack Weight,Country of Origin,Inventory,Product URL
-kofenot-retail-pack-03.jpg,KFN-001,KOFENOT™ Laptop Wedge,"KOFENOT™: Make Your Laptop Coffee Shop-Friendly",KOFENOT™,Laptop Accessories,"${productDescription}","SIP SAFE, I 💚 Planet Earth, I ❤️ Dad",15.00,,30,Yes,"2.4 in W x 3.4 in H x 0.4 in D",0.9 oz,2.1 oz,China,4500,https://kofenot.com
+kofenot-retail-pack-03.jpg,KFN-001,KOFENOT™ Laptop Wedge,"KOFENOT: Make Your Laptop Coffee Shop-Friendly™",KOFENOT™,Laptop Accessories,"${productDescription}","SIP SAFE, I 💚 Planet Earth, I ❤️ Dad",15.00,,30,Yes,"2.4 in W x 3.4 in H x 0.4 in D",0.9 oz,2.1 oz,China,4500,https://kofenot.com
 `;
 
 const retailDesigns = [
