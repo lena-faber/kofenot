@@ -13,19 +13,19 @@ import {
 } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
-import wholesalePack from "@/assets/kofenot-wholesale-pack.jpeg";
+
+import coffeeShopHero from "@/assets/kofenot-coffee-shop.jpeg";
+import coffeeShopDisplay from "@/assets/coffee-shop.jpg";
 import giftBox from "@/assets/kofenot-gift-box.jpeg";
+import wholesalePack from "@/assets/kofenot-wholesale-pack.jpeg";
 import brand from "@/assets/kofeenot-brand.jpg";
 import corpGift from "@/assets/kofenot-corp-gift.jpeg";
 import expo from "@/assets/kofenot-expo.jpeg";
-import coffeeShopDisplay from "@/assets/coffee-shop.jpg";
 
 export const Route = createFileRoute("/wholesale")({
   head: () => ({
     meta: [
-      {
-        title: "KOFENOT Wholesale | Bulk, Custom Logo & Licensing",
-      },
+      { title: "KOFENOT Wholesale | Bulk, Custom Logo & Corporate Orders" },
       {
         name: "description",
         content:
@@ -47,23 +47,23 @@ const quoteEmail =
 const programs = [
   {
     icon: Store,
-    title: "Resale Inventory",
-    copy: "Retail-ready KOFENOT units for stores, counters, gift shops, and coworking spaces.",
+    title: "Resale",
+    copy: "Retail-ready KOFENOT for counters, shelves, gift shops, coffee shops, and coworking spaces.",
   },
   {
     icon: Tag,
     title: "Custom Logo",
-    copy: "Blank units for businesses that want their logo on a useful laptop accessory.",
+    copy: "Blank KOFENOT units for businesses, events, universities, and promotional product programs.",
   },
   {
     icon: Gift,
     title: "Corporate Gifts",
-    copy: "Practical desk gifts for employees, clients, new hires, and remote teams.",
+    copy: "A practical desk gift for employees, clients, remote teams, and new-hire kits.",
   },
   {
     icon: Presentation,
     title: "Events",
-    copy: "A compact conference, trade-show, and promotional product people can actually use.",
+    copy: "A compact conference and trade-show product people keep using after the event.",
   },
 ];
 
@@ -86,38 +86,38 @@ const bulkPricing = [
   {
     product: "Blank 100-Pack",
     price: "$600.00 USD",
-    use: "Custom logos, events, gifts, and promotional programs",
+    use: "For custom logos, events, gifts, and promotional programs",
     url: blank100CheckoutUrl,
   },
   {
     product: "Blank 400-Unit Master Case",
     price: "$2,000.00 USD",
-    use: "White label, licensing, larger programs, and bulk customization",
+    use: "For white label, licensing, and larger custom programs",
     url: blank400CheckoutUrl,
   },
 ];
 
 const scope = [
-  "Retail-ready resale units",
+  "Retail-ready resale inventory",
   "Blank units for custom logos",
-  "Corporate gift programs",
-  "Conference and trade-show orders",
+  "Corporate gift orders",
+  "Conference and trade-show programs",
   "White-label and licensing conversations",
 ];
 
 const images = [
-  { img: wholesalePack, label: "Wholesale pack" },
+  { img: coffeeShopHero, label: "Coffee shop use" },
+  { img: coffeeShopDisplay, label: "Counter display" },
   { img: giftBox, label: "Retail box" },
   { img: brand, label: "Logo area" },
   { img: corpGift, label: "Corporate gift" },
   { img: expo, label: "Event order" },
-  { img: coffeeShopDisplay, label: "Counter display" },
 ];
 
 const faq = [
   [
-    "What is this page for?",
-    "Wholesale, resale, bulk, custom logo, corporate gift, white-label, and licensing orders.",
+    "What is wholesale?",
+    "Wholesale is for resale, bulk orders, corporate gifts, custom logo programs, white label, and licensing.",
   ],
   [
     "What should I buy for resale?",
@@ -125,15 +125,15 @@ const faq = [
   ],
   [
     "What should I buy for custom logo?",
-    "Choose blank units or request a quote if you need printing, packaging, or fulfillment included.",
+    "Choose blank units, or request a quote if you need printing, packaging, or fulfillment.",
   ],
   [
     "What is white label?",
-    "White label means KOFENOT can be supplied for another company to sell or distribute under its own brand program.",
+    "White label means KOFENOT is supplied for another company to sell or distribute under its own brand program.",
   ],
   [
     "What is licensing?",
-    "Licensing means another company wants permission to use the KOFENOT product, design, phrase, brand, or sales rights under agreed terms.",
+    "Licensing means permission to use the KOFENOT product, design, phrase, brand, or sales rights under agreed terms.",
   ],
 ];
 
@@ -156,8 +156,8 @@ function HeroSection() {
   return (
     <section className="page-hero">
       <img
-        src={wholesalePack}
-        alt="KOFENOT wholesale packaging"
+        src={coffeeShopHero}
+        alt="KOFENOT in a coffee shop"
         className="absolute inset-0 h-full w-full object-cover"
       />
       <div className="hero-overlay" />
@@ -167,20 +167,20 @@ function HeroSection() {
           <p className="section-kicker">Wholesale orders</p>
 
           <h1 className="hero-title">
-            BULK, CUSTOM LOGO
+            RETAIL,
             <br />
-            <span className="neon-text">& LICENSING</span>
+            <span className="neon-text">CUSTOM & BULK</span>
           </h1>
 
           <p className="hero-copy">
-            Order KOFENOT for resale, corporate gifts, events, custom logos,
+            Order KOFENOT for resale, branded gifts, custom logos, events,
             white-label programs, and licensing.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3">
             <a href="#pricing">
               <Button className="h-12 bg-[color:var(--neon)] px-7 font-black text-black hover:bg-[color:var(--neon-dim)]">
-                See Pricing
+                See Wholesale Pricing
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </a>
@@ -207,6 +207,7 @@ function SectionNav() {
         <a href="#programs">Programs</a>
         <a href="#pricing">Pricing</a>
         <a href="#scope">Scope</a>
+        <a href="#formats">Formats</a>
         <a href="#faq">FAQ</a>
         <a href="#order">Order</a>
         <Link to="/referrals">Referral Program</Link>
@@ -219,7 +220,7 @@ function ProgramsSection() {
   return (
     <section id="programs" className="page-section">
       <p className="section-kicker">B2B options</p>
-      <h2 className="section-title">Choose the wholesale path that fits.</h2>
+      <h2 className="section-title">One product. Several wholesale paths.</h2>
 
       <div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
         {programs.map((item) => (
@@ -241,9 +242,7 @@ function PricingSection() {
     <section id="pricing" className="section-band">
       <div className="page-section">
         <p className="section-kicker">Pricing</p>
-        <h2 className="section-title">
-          Resale units and blank bulk units.
-        </h2>
+        <h2 className="section-title">Wholesale prices by order type.</h2>
 
         <div className="mt-8 grid gap-5 lg:grid-cols-2">
           <div>
@@ -253,7 +252,7 @@ function PricingSection() {
 
             <div className="grid gap-4">
               {resalePricing.map((item) => (
-                <ResaleCard key={item.format} item={item} />
+                <PriceCard key={item.format} item={item} />
               ))}
             </div>
           </div>
@@ -314,7 +313,7 @@ function PricingSection() {
                 variant="outline"
                 className="h-11 border-[rgba(0,255,0,0.55)] px-6 hover:bg-[rgba(0,255,0,0.08)] hover:text-[color:var(--neon)]"
               >
-                Need print or packaging?
+                Need print, packaging, or licensing?
               </Button>
             </a>
           </div>
@@ -338,7 +337,7 @@ function ScopeSection() {
       <div className="flex flex-col justify-center">
         <p className="section-kicker">Order scope</p>
         <h2 className="section-title">
-          Standard checkout for simple orders. Quote for anything custom.
+          Buy standard quantities now. Quote anything custom.
         </h2>
 
         <div className="mt-6 grid gap-3">
@@ -356,13 +355,13 @@ function ScopeSection() {
 
 function GallerySection() {
   return (
-    <section className="section-band">
+    <section id="formats" className="section-band">
       <div className="page-section">
         <div className="flex flex-wrap items-end justify-between gap-5">
           <div>
             <p className="section-kicker">Formats</p>
             <h2 className="section-title">
-              Packaged, blank, branded, gifted, or displayed.
+              Coffee shop, counter, retail, brand, gift, event.
             </h2>
           </div>
 
@@ -374,6 +373,11 @@ function GallerySection() {
             <ImageCard key={item.label} item={item} />
           ))}
         </div>
+
+        <p className="mt-5 text-sm font-bold text-muted-foreground">
+          Standard checkout covers listed quantities. Printing, packaging,
+          fulfillment, white label, licensing, and special timelines require a quote.
+        </p>
       </div>
     </section>
   );
@@ -408,18 +412,25 @@ function OrderSection() {
         <p className="section-kicker mt-5">Order</p>
 
         <h2 className="section-title">
-          Buy standard quantities or request a program quote.
+          Checkout for standard orders. Email for custom programs.
         </h2>
 
         <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
-          Use checkout for ready options. Use quote for logo printing,
-          packaging, fulfillment, white label, licensing, or larger quantities.
+          Use checkout for resale or blank units. Use quote for logos, packaging,
+          fulfillment, white label, licensing, or larger quantities.
         </p>
 
         <div className="mt-7 flex flex-wrap justify-center gap-3">
           <a href={retailPackCheckoutUrl}>
             <Button className="h-12 bg-[color:var(--neon)] px-8 font-black text-black hover:bg-[color:var(--neon-dim)]">
               Retail Pack
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Button>
+          </a>
+
+          <a href={retailBoxCheckoutUrl}>
+            <Button className="h-12 bg-[color:var(--neon)] px-8 font-black text-black hover:bg-[color:var(--neon-dim)]">
+              Retail Box
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
           </a>
@@ -445,7 +456,7 @@ function OrderSection() {
   );
 }
 
-function ResaleCard({
+function PriceCard({
   item,
 }: {
   item: {
