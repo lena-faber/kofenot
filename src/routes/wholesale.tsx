@@ -3,7 +3,6 @@ import {
   ArrowRight,
   BriefcaseBusiness,
   Check,
-  Coffee,
   Download,
   Eye,
   Gift,
@@ -13,23 +12,24 @@ import {
   Ruler,
   Store,
   Tag,
+  Truck,
 } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 
-import coffeeShopHero from "@/assets/kofenot-coffee-shop.jpeg";
-import coffeeShopDisplay from "@/assets/coffee-shop.jpg";
 import giftBox from "@/assets/kofenot-gift-box.jpeg";
 import wholesalePack from "@/assets/kofenot-wholesale-pack.jpeg";
 import brand from "@/assets/kofeenot-brand.jpg";
 import corpGift from "@/assets/kofenot-corp-gift.jpeg";
 import expo from "@/assets/kofenot-expo.jpeg";
+import shipping from "@/assets/kofeenot-shipping.jpeg";
 
 import retailPackSipSafeBack from "@/assets/kofenot-retail-pack-00.jpg";
 import retailPackDad from "@/assets/kofenot-retail-pack-01.jpg";
 import bareProduct from "@/assets/kofenot-retail-pack-02.jpg";
 import retailPackSipSafeFront from "@/assets/kofenot-retail-pack-03.jpg";
 import retailPackPlanet from "@/assets/kofenot-retail-pack-04.jpg";
+import yourLogoHere from "@/assets/kofenot-your-logo-here.jpeg";
 
 export const Route = createFileRoute("/wholesale")({
   head: () => ({
@@ -72,13 +72,11 @@ const wholesalePrices = [
 ];
 
 const customPrograms = [
-  "Coffee shops",
+  "Custom logo printing",
   "Corporate gifts",
-  "Conferences & trade shows",
-  "Coworking spaces",
-  "Universities",
-  "Promotional products",
+  "Conference and trade-show orders",
   "Employee welcome kits",
+  "Promotional product programs",
   "White-label programs",
   "Licensing opportunities",
 ];
@@ -107,9 +105,15 @@ const retailImages = [
 const productImages = [
   {
     img: bareProduct,
-    title: "Bare Product",
-    copy: "KOFENOT™ shown outside the retail package.",
+    title: "Bare KOFENOT™",
+    copy: "Product outside the retail package.",
     filename: "kofenot-bare-product.jpg",
+  },
+  {
+    img: yourLogoHere,
+    title: "Your Logo Here",
+    copy: "Example surface for custom branding.",
+    filename: "kofenot-your-logo-here.jpg",
   },
 ];
 
@@ -162,11 +166,13 @@ const b2bPaths = [
   },
 ];
 
+const shippingOptions = [
+  "Small wholesale orders ship as retail-ready packs or boxes.",
+  "Bulk and custom orders can be quoted by destination, timeline, and packaging format.",
+  "Shipping destination must be included in custom quote requests.",
+];
+
 const faq = [
-  [
-    "What is wholesale?",
-    "Wholesale is for resale inventory, bulk orders, corporate gifts, custom logo programs, white label, and licensing.",
-  ],
   [
     "What should I buy for resale?",
     "Choose Retail Pack or Retail Box. Both start at 30 units.",
@@ -199,6 +205,7 @@ function Wholesale() {
       <SpecsSection />
       <ProgramsSection />
       <CustomSection />
+      <ShippingSection />
       <FaqSection />
       <OrderSection />
     </main>
@@ -209,8 +216,8 @@ function HeroSection() {
   return (
     <section className="page-hero">
       <img
-        src={coffeeShopHero}
-        alt="KOFENOT in a coffee shop"
+        src={brand}
+        alt="KOFENOT wholesale"
         className="absolute inset-0 h-full w-full object-cover"
       />
       <div className="hero-overlay" />
@@ -220,14 +227,15 @@ function HeroSection() {
           <p className="section-kicker">Wholesale</p>
 
           <h1 className="hero-title">
-            RETAIL KIT,
+            STANDARD WHOLESALE
             <br />
-            <span className="neon-text">CUSTOM & CORPORATE</span>
+            <span className="neon-text">OR CUSTOM QUOTE</span>
           </h1>
 
           <p className="hero-copy">
-            Resale pricing, retail-ready packaging, downloadable product images,
-            custom logo programs, corporate gifts, white label, and licensing.
+            Buy retail-ready KOFENOT™ for resale now. Request a quote for logos,
+            custom packaging, corporate gifts, white label, licensing, or larger
+            quantities.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3">
@@ -238,12 +246,12 @@ function HeroSection() {
               </Button>
             </a>
 
-            <a href="#retail-kit">
+            <a href={quoteEmail}>
               <Button
                 variant="outline"
                 className="h-12 border-[rgba(0,255,0,0.55)] px-7 hover:bg-[rgba(0,255,0,0.08)] hover:text-[color:var(--neon)]"
               >
-                Retail Kit Images
+                Request Quote
               </Button>
             </a>
           </div>
@@ -261,6 +269,7 @@ function SectionNav() {
         <a href="#retail-kit">Retail Kit</a>
         <a href="#specs">Specs</a>
         <a href="#custom">Custom</a>
+        <a href="#shipping">Shipping</a>
         <a href="#faq">FAQ</a>
         <a href="#order">Order</a>
         <Link to="/referrals">Referral Program</Link>
@@ -274,31 +283,25 @@ function PricingSection() {
     <section id="pricing" className="section-band">
       <div className="page-section">
         <p className="section-kicker">Wholesale pricing</p>
-        <h2 className="section-title">Public prices for resale. Quote for custom.</h2>
+        <h2 className="section-title">Buy standard wholesale now.</h2>
 
         <div className="mt-8 grid gap-5 lg:grid-cols-2">
-          <div>
-            <h3 className="mb-4 text-2xl font-black uppercase">
-              Retail-ready resale
-            </h3>
-
-            <div className="grid gap-4">
-              {wholesalePrices.map((item) => (
-                <PriceCard key={item.format} item={item} />
-              ))}
-            </div>
+          <div className="grid gap-4">
+            {wholesalePrices.map((item) => (
+              <PriceCard key={item.format} item={item} />
+            ))}
           </div>
 
           <div className="neon-border rounded-sm bg-[rgba(0,255,0,0.05)] p-8">
-            <p className="section-kicker">Custom Programs</p>
+            <p className="section-kicker">Custom Quote</p>
 
             <h3 className="text-3xl font-black uppercase">
-              Beyond standard wholesale
+              Quote anything custom.
             </h3>
 
             <p className="mt-4 text-muted-foreground">
-              Put your brand on KOFENOT™ or create a custom wholesale program
-              tailored to your business.
+              Logos, private packaging, corporate gifts, fulfillment, white
+              label, licensing, and larger quantities are quoted by project.
             </p>
 
             <div className="mt-8 grid gap-4">
@@ -310,14 +313,9 @@ function PricingSection() {
               ))}
             </div>
 
-            <p className="mt-8 text-sm text-muted-foreground">
-              Minimum quantities apply. Contact us for pricing and program
-              details.
-            </p>
-
             <a href={quoteEmail} className="mt-8 inline-flex">
               <Button className="h-12 bg-[color:var(--neon)] px-8 font-black text-black hover:bg-[color:var(--neon-dim)]">
-                Request a Quote
+                Request Quote
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </a>
@@ -332,15 +330,16 @@ function RetailKitSection() {
   return (
     <section id="retail-kit" className="page-section">
       <p className="section-kicker">Retail Kit</p>
-      <h2 className="section-title">Downloadable retail images.</h2>
+      <h2 className="section-title">Downloadable product images.</h2>
 
       <p className="mt-5 max-w-3xl text-lg text-muted-foreground">
-        Retail-ready product images for wholesale buyers, coffee shops, gift shops,
-        coworking spaces, campus stores, bookstores, and promotional partners.
+        Images for wholesale buyers, coffee shops, gift shops, coworking spaces,
+        campus stores, bookstores, corporate buyers, and promotional partners.
       </p>
 
       <div className="mt-10">
         <p className="section-kicker">Retail package images</p>
+
         <div className="mt-4 grid gap-4 md:grid-cols-3">
           {retailImages.map((item) => (
             <DownloadCard key={item.title} item={item} />
@@ -349,12 +348,13 @@ function RetailKitSection() {
       </div>
 
       <div className="mt-12 border-t border-[rgba(0,255,0,0.18)] pt-10">
-        <p className="section-kicker">Product image</p>
+        <p className="section-kicker">Product + Custom Logo</p>
+
         <h3 className="mt-2 text-4xl font-black italic neon-text">
-          Bare KOFENOT™
+          Bare KOFENOT™ + Your Logo Here
         </h3>
 
-        <div className="mt-5 grid gap-4 md:grid-cols-3">
+        <div className="mt-5 grid gap-4 md:grid-cols-2">
           {productImages.map((item) => (
             <DownloadCard key={item.title} item={item} />
           ))}
@@ -363,6 +363,7 @@ function RetailKitSection() {
 
       <div className="mt-12 border-t border-[rgba(0,255,0,0.18)] pt-10">
         <p className="section-kicker">Packaging</p>
+
         <h3 className="mt-2 text-4xl font-black italic neon-text">
           Package Front + Back
         </h3>
@@ -383,6 +384,7 @@ function SpecsSection() {
       <div className="page-section-narrow">
         <div className="flex items-center gap-3">
           <Ruler className="h-8 w-8 text-[color:var(--neon)]" />
+
           <div>
             <p className="section-kicker">Product specifications</p>
             <h2 className="section-title">Wholesale buyer details.</h2>
@@ -400,17 +402,13 @@ function SpecsSection() {
                   <th className="w-1/3 bg-[rgba(0,255,0,0.06)] px-4 py-4 text-[color:var(--neon)] sm:px-5">
                     {label}
                   </th>
+
                   <td className="px-4 py-4 font-semibold sm:px-5">{value}</td>
                 </tr>
               ))}
             </tbody>
           </table>
         </div>
-
-        <p className="mt-5 text-sm text-muted-foreground">
-          Shipping, case quantities, UPC, print method, packaging, and custom
-          fulfillment details can be confirmed by quote.
-        </p>
       </div>
     </section>
   );
@@ -426,7 +424,9 @@ function ProgramsSection() {
         {b2bPaths.map((item) => (
           <article key={item.title} className="panel panel-hover rounded-sm p-6">
             <item.icon className="h-7 w-7 text-[color:var(--neon)]" />
+
             <h3 className="mt-5 text-xl font-black uppercase">{item.title}</h3>
+
             <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
               {item.copy}
             </p>
@@ -434,9 +434,7 @@ function ProgramsSection() {
         ))}
       </div>
 
-      <div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-        <ImageCard item={{ img: coffeeShopHero, label: "Coffee shop use" }} />
-        <ImageCard item={{ img: coffeeShopDisplay, label: "Counter display" }} />
+      <div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
         <ImageCard item={{ img: giftBox, label: "Retail box" }} />
         <ImageCard item={{ img: wholesalePack, label: "Wholesale pack" }} />
         <ImageCard item={{ img: corpGift, label: "Corporate gift" }} />
@@ -452,29 +450,27 @@ function CustomSection() {
       <div className="page-section grid gap-8 lg:grid-cols-2">
         <div className="panel overflow-hidden rounded-sm">
           <img
-            src={brand}
-            alt="KOFENOT custom logo surface"
+            src={yourLogoHere}
+            alt="Your logo on KOFENOT"
             className="h-full min-h-[420px] w-full object-cover"
           />
         </div>
 
         <div className="flex flex-col justify-center">
-          <p className="section-kicker">Custom, white label, licensing</p>
+          <p className="section-kicker">Custom</p>
 
           <h2 className="section-title">
-            Buy standard wholesale now. Quote anything custom.
+            Your logo, your event, your program.
           </h2>
 
+          <p className="mt-5 text-lg text-muted-foreground">
+            Standard wholesale has checkout pricing. Anything with logo,
+            packaging, fulfillment, white label, licensing, or special quantity
+            needs a quote.
+          </p>
+
           <div className="mt-6 grid gap-3">
-            {[
-              "Custom logo printing",
-              "Corporate gifts",
-              "Employee welcome kits",
-              "Conference and trade-show orders",
-              "Promotional product programs",
-              "White-label opportunities",
-              "Licensing conversations",
-            ].map((item) => (
+            {customPrograms.map((item) => (
               <div key={item} className="flex gap-3 text-lg font-bold">
                 <Handshake className="mt-1 h-5 w-5 shrink-0 text-[color:var(--neon)]" />
                 {item}
@@ -494,21 +490,66 @@ function CustomSection() {
   );
 }
 
+function ShippingSection() {
+  return (
+    <section id="shipping" className="page-section">
+      <div className="grid gap-8 lg:grid-cols-2">
+        <div className="flex flex-col justify-center">
+          <Truck className="h-9 w-9 text-[color:var(--neon)]" />
+
+          <p className="section-kicker mt-5">Shipping</p>
+
+          <h2 className="section-title">Shipping options by order type.</h2>
+
+          <div className="mt-6 grid gap-4">
+            {shippingOptions.map((item) => (
+              <div key={item} className="flex gap-3 text-lg font-bold">
+                <PackageCheck className="mt-1 h-5 w-5 shrink-0 text-[color:var(--neon)]" />
+                {item}
+              </div>
+            ))}
+          </div>
+
+          <a href={quoteEmail} className="mt-8 inline-flex">
+            <Button
+              variant="outline"
+              className="h-12 border-[rgba(0,255,0,0.55)] px-8 hover:bg-[rgba(0,255,0,0.08)] hover:text-[color:var(--neon)]"
+            >
+              Ask Shipping Quote
+            </Button>
+          </a>
+        </div>
+
+        <div className="panel overflow-hidden rounded-sm">
+          <img
+            src={shipping}
+            alt="KOFENOT shipping options"
+            className="aspect-square w-full object-cover"
+          />
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function FaqSection() {
   return (
-    <section id="faq" className="page-section-narrow">
-      <h2 className="section-title">FAQ</h2>
+    <section id="faq" className="section-band">
+      <div className="page-section-narrow">
+        <h2 className="section-title">FAQ</h2>
 
-      <div className="mt-7 divide-y divide-[rgba(0,255,0,0.18)] border-y border-[rgba(0,255,0,0.18)]">
-        {faq.map(([question, answer]) => (
-          <div
-            key={question}
-            className="grid gap-2 py-6 md:grid-cols-[0.8fr_1.2fr]"
-          >
-            <h3 className="text-lg font-black uppercase">{question}</h3>
-            <p className="text-sm text-muted-foreground">{answer}</p>
-          </div>
-        ))}
+        <div className="mt-7 divide-y divide-[rgba(0,255,0,0.18)] border-y border-[rgba(0,255,0,0.18)]">
+          {faq.map(([question, answer]) => (
+            <div
+              key={question}
+              className="grid gap-2 py-6 md:grid-cols-[0.8fr_1.2fr]"
+            >
+              <h3 className="text-lg font-black uppercase">{question}</h3>
+
+              <p className="text-sm text-muted-foreground">{answer}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
@@ -523,12 +564,13 @@ function OrderSection() {
         <p className="section-kicker mt-5">Order</p>
 
         <h2 className="section-title">
-          Checkout for resale. Email for custom programs.
+          Checkout for resale. Email for custom.
         </h2>
 
         <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
-          Use checkout for retail-ready wholesale units. Use quote for logos,
-          packaging, fulfillment, white label, licensing, or larger quantities.
+          Retail Pack and Retail Box have public wholesale checkout. Logos,
+          custom packaging, fulfillment, white label, licensing, and larger
+          quantities are quoted.
         </p>
 
         <div className="mt-7 flex flex-wrap justify-center gap-3">
@@ -604,7 +646,11 @@ function DownloadCard({
 }) {
   return (
     <article className="panel overflow-hidden rounded-sm">
-      <img src={item.img} alt={item.title} className="aspect-square w-full object-contain bg-white" />
+      <img
+        src={item.img}
+        alt={item.title}
+        className="aspect-square w-full bg-white object-contain"
+      />
 
       <div className="p-4">
         <h3 className="font-black italic text-[color:var(--neon)]">
