@@ -73,7 +73,10 @@ const specs = [
   ["Product Weight", "0.9 oz"],
   ["Retail Pack Weight", "2.1 oz"],
   ["Inventory", "4,500 units"],
-  ["Country of Origin", "China"],
+  ["Designed In", "CA, USA"],
+  ["Manufactured In", "China"],
+  ["Ships From", "Santa Clara, CA"],
+  ["Processing Time", "1–2 business days"],
 ];
 
 function downloadCsv() {
