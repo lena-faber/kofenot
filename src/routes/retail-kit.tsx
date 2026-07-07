@@ -61,12 +61,12 @@ const packageImages = [
 
 const specs = [
   ["Product", "KOFENOT™ Laptop Wedge"],
-  ["Trademark", "KOFENOT™: Make Your Laptop Coffee Shop-Friendly"],
+  ["Trademark", "KOFENOT: Make Your Laptop Coffee Shop-Friendly™"],
   ["SKU", "KFN-001"],
   ["Brand", "KOFENOT™"],
   ["Category", "Laptop Accessories"],
   ["MSRP", "$15.00"],
-  ["Case Pack", "30 units"],
+  ["Minimum Wholesale Order", "30 units (mixed designs available)"],
   ["Mixed Assortment", "Yes"],
   ["Retail Designs", "SIP SAFE · I 💚 Planet Earth · I ❤️ Dad"],
   ["Product Size", '2.4" W × 3.4" H × 0.4" D'],
