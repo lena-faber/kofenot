@@ -18,6 +18,7 @@ import {
 import { Button } from "@/components/ui/button";
 
 import coffeeShopHero from "@/assets/kofenot-coffee-shop.jpeg";
+import coffeeShopDisplay from "@/assets/coffee-shop.jpg";
 import giftBox from "@/assets/kofenot-gift-box.jpeg";
 import wholesalePack from "@/assets/kofenot-wholesale-pack.jpeg";
 import corpGift from "@/assets/kofenot-corp-gift.jpeg";
@@ -421,7 +422,7 @@ function ProgramsSection() {
 
       <div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
         <ImageCard item={{ img: giftBox, label: "Retail box" }} />
-        <ImageCard item={{ img: wholesalePack, label: "Wholesale pack" }} />
+        <ImageCard item={{ img: coffeeShopDisplay, label: "Coffee Shop Use" }} />
         <ImageCard item={{ img: corpGift, label: "Corporate gift" }} />
         <ImageCard item={{ img: expo, label: "Event order" }} />
       </div>
