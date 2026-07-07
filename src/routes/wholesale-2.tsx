@@ -17,7 +17,7 @@ import coffeeShopHero from "@/assets/kofenot-coffee-shop.jpeg";
 import coffeeShopDisplay from "@/assets/coffee-shop.jpg";
 import giftBox from "@/assets/kofenot-gift-box.jpeg";
 import wholesalePack from "@/assets/kofenot-wholesale-pack.jpeg";
-import brand from "@/assets/kofeenot-brand.jpg";
+import brand from "@/assets/kofenot-your-logo-here.jpeg";
 import corpGift from "@/assets/kofenot-corp-gift.jpeg";
 import expo from "@/assets/kofenot-expo.jpeg";
 
