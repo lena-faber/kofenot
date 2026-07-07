@@ -443,7 +443,7 @@ function CustomSection() {
       <div className="page-section grid gap-8 lg:grid-cols-2">
         <div className="panel overflow-hidden rounded-sm">
           <img
-            src={yourLogoHere}
+            src={customLogoDisplay}
             alt="Your logo on KOFENOT"
             className="h-full min-h-[420px] w-full object-cover"
           />
