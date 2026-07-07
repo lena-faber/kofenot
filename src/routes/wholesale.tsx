@@ -141,7 +141,7 @@ const b2bPaths = [
   {
     icon: Store,
     title: "Coffee Shops & Cafés",
-    image: coffeeShop,
+    image: coworkingCustomLogo,
     copy: "Sell KOFENOT™ at the counter, bundle it with drinks, or offer it as a practical impulse purchase.",
   },
   {
