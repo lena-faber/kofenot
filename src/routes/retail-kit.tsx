@@ -196,7 +196,7 @@ function RetailKit() {
               key={label}
               className="rounded-sm border border-white/10 bg-[#080908] p-4"
             >
-              <p className="text-xs font-black uppercase tracking-[0.18em] text-white/40">
+              <p className="text-xs font-black uppercase tracking-[0.18em] text-[color:var(--neon)]">
                 {label}
               </p>
               <p className="mt-2 text-base font-bold leading-6 text-white">
