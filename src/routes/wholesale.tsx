@@ -428,8 +428,8 @@ function ProgramsSection() {
       </div>
 
       <div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-        <ImageCard item={{ img: giftBox, label: "Retail box" }} />
         <ImageCard item={{ img: coffeeShopDisplay, label: "Coffee Shop Use" }} />
+        <ImageCard item={{ img: coworkingCustomLogo, label: "Coworking spaces Use" }} />
         <ImageCard item={{ img: corpGift, label: "Corporate gift" }} />
         <ImageCard item={{ img: expo, label: "Event order" }} />
       </div>
