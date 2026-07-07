@@ -22,7 +22,7 @@ import giftBox from "@/assets/kofenot-gift-box.jpeg";
 import wholesalePack from "@/assets/kofenot-wholesale-pack.jpeg";
 import corpGift from "@/assets/kofenot-corp-gift.jpeg";
 import expo from "@/assets/kofenot-expo.jpeg";
-import shipping from "@/assets/kofeenot-shipping.jpeg";
+import shipping from "@/assets/kofenot-shipping.jpeg";
 
 import retailPackSipSafeBack from "@/assets/kofenot-retail-pack-00.jpg";
 import retailPackDad from "@/assets/kofenot-retail-pack-01.jpg";
