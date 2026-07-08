@@ -104,7 +104,7 @@ function PressPage() {
 
 function HeroSection() {
   return (
-    <section className="relative min-h-[72svh] overflow-hidden bg-black text-white">
+    <section className="relative min-h-[72svh] overflow-hidden bg-black text-black">
       <img
         src={heroImage}
         alt="Lena Faber designing KOFENOT with a laptop and coffee cup"
@@ -126,7 +126,7 @@ function HeroSection() {
           One-way Ticket to Silicon Valley.
         </h1>
 
-        <p className="mt-6 max-w-2xl text-xl leading-snug text-white/90">
+        <p className="mt-6 max-w-2xl text-xl leading-snug text-black/90">
           The accidental story behind a pocket-size laptop wedge that helps
           make laptops more coffee shop-friendly.
         </p>
@@ -143,7 +143,7 @@ function HeroSection() {
             asChild
             size="lg"
             variant="outline"
-            className="rounded-sm border-white bg-white/10 font-black text-white hover:bg-white hover:text-black"
+            className="rounded-sm border-white bg-white/10 font-black text-black hover:bg-white hover:text-black"
           >
             <a href="/media/kofenot-press-release.pdf" download>
               Press Release PDF
