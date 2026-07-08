@@ -194,33 +194,49 @@ const mediaKit = [
   },
 ];
 
-const shippingPoints = [
-  "Retail Pack and Retail Box orders ship as ready-to-sell products.",
-  "Custom, private-label, licensing, and distributor orders are quoted by quantity, packaging, destination, and timeline.",
-  "Send company name, use case, quantity, logo needs, deadline, and shipping destination.",
-];
-
-const faq = [
-  [
-    "What should I buy for resale?",
-    "Retail Pack or Retail Box. Both start at 30 units.",
-  ],
-  [
-    "Can I put my logo on it?",
-    "Yes. Logo printing, packaging, and fulfillment are quoted by order.",
-  ],
-  [
-    "Can I sell it under my own brand?",
-    "Yes. That is private label. It is quoted separately.",
-  ],
-  [
-    "Do you offer licensing?",
-    "Yes. Licensing and distribution are discussed individually.",
-  ],
-  [
-    "Why no public custom price?",
-    "Because custom price depends on quantity, print method, packaging, timeline, and shipping destination.",
-  ],
+const shippingSections = [
+  {
+    title: "Lead Time",
+    items: [
+      "Standard wholesale orders ship from available inventory when in stock.",
+      "Custom logo, private label, and licensing orders are scheduled individually.",
+    ],
+  },
+  {
+    title: "Production",
+    items: [
+      "Retail Pack and Retail Box are standard wholesale products.",
+      "Custom printing and packaging require production before shipment.",
+    ],
+  },
+  {
+    title: "Shipping Methods",
+    items: [
+      "Small wholesale orders ship by parcel carrier.",
+      "Larger orders may ship by freight.",
+    ],
+  },
+  {
+    title: "International Shipping",
+    items: [
+      "Worldwide shipping available.",
+      "Shipping costs, duties, taxes, and import fees depend on destination.",
+    ],
+  },
+  {
+    title: "Packaging Options",
+    items: [
+      "Retail Pack",
+      "Retail Box",
+      "Custom packaging available for qualifying orders.",
+    ],
+  },
+  {
+    title: "Requesting a Quote",
+    items: [
+      "Please include company name, quantity, intended use, branding requirements, delivery deadline, and shipping destination.",
+    ],
+  },
 ];
 
 type Program = {
@@ -465,28 +481,50 @@ function MediaKitSection() {
 
 function ShippingSection() {
   return (
-    <section id="shipping" className="section-band">
-      <div className="page-section grid gap-8 lg:grid-cols-2">
-        <div className="flex flex-col justify-center">
+    <section id="shipping" className="page-section">
+      <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr]">
+        <div>
           <Truck className="h-9 w-9 text-[color:var(--neon)]" />
 
-          <h2 className="section-title">Shipping</h2>
+          <p className="section-kicker mt-5">
+            Shipping &amp; Production
+          </p>
 
-          <div className="mt-6 grid gap-4">
-            {shippingPoints.map((item) => (
-              <div key={item} className="flex gap-3 text-lg font-bold">
-                <PackageCheck className="mt-1 h-5 w-5 shrink-0 text-[color:var(--neon)]" />
-                {item}
+          <h2 className="section-title">
+            Lead Times, Shipping &amp; Fulfillment
+          </h2>
+
+          <div className="mt-10 space-y-8">
+            {shippingSections.map((section) => (
+              <div key={section.title}>
+                <h3 className="mb-3 text-xl font-black uppercase text-[color:var(--neon)]">
+                  {section.title}
+                </h3>
+
+                <div className="space-y-3">
+                  {section.items.map((item) => (
+                    <div
+                      key={item}
+                      className="flex items-start gap-3"
+                    >
+                      <PackageCheck className="mt-1 h-5 w-5 shrink-0 text-[color:var(--neon)]" />
+
+                      <p className="text-base leading-relaxed text-muted-foreground">
+                        {item}
+                      </p>
+                    </div>
+                  ))}
+                </div>
               </div>
             ))}
           </div>
 
-          <a href={quoteEmail} className="mt-8 inline-flex">
+          <a href={quoteEmail} className="mt-10 inline-flex">
             <Button
-              variant="outline"
-              className="h-12 border-[rgba(0,255,0,0.55)] px-8 hover:bg-[rgba(0,255,0,0.08)] hover:text-[color:var(--neon)]"
+              className="h-12 bg-[color:var(--neon)] px-8 font-black text-black hover:bg-[color:var(--neon-dim)]"
             >
-              Ask Shipping Quote
+              Request Shipping Quote
+              <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
           </a>
         </div>
@@ -494,8 +532,8 @@ function ShippingSection() {
         <div className="panel overflow-hidden rounded-sm">
           <img
             src={shipping}
-            alt="KOFENOT shipping options"
-            className="aspect-square w-full object-cover"
+            alt="KOFENOT wholesale shipping"
+            className="h-full w-full object-cover"
           />
         </div>
       </div>
