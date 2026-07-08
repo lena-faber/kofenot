@@ -239,6 +239,29 @@ const shippingSections = [
   },
 ];
 
+const faq = [
+  [
+    "What should I buy for resale?",
+    "Retail Pack or Retail Box. Both start at 30 units.",
+  ],
+  [
+    "Can I put my logo on KOFENOT™?",
+    "Yes. Custom logo printing, packaging, and fulfillment are available by quote.",
+  ],
+  [
+    "Can I sell KOFENOT™ under my own brand?",
+    "Yes. Private-label programs are available for qualifying quantities.",
+  ],
+  [
+    "Do you offer licensing?",
+    "Yes. Licensing and distribution opportunities are discussed individually.",
+  ],
+  [
+    "Why aren't custom prices listed?",
+    "Custom pricing depends on quantity, printing, packaging, production, and shipping destination.",
+  ],
+];
+
 type Program = {
   icon: ComponentType<{ className?: string }>;
   title: string;
