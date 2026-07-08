@@ -171,10 +171,6 @@ const b2bPaths = [
 ];
 
 const customPrograms = [
-  "Custom logo printing",
-  "Corporate gifts",
-  "Employee welcome kits",
-  "Conference and trade-show orders",
   "Promotional product programs",
   "White-label opportunities",
   "Licensing conversations",
