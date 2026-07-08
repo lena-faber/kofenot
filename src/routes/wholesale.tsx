@@ -109,6 +109,12 @@ const productImages = [
     copy: "Custom logo example.",
     filename: "kofenot-your-logo-here.jpg",
   },
+  {
+    img: customLogoDisplay,
+    title: "3D Logo View",
+    copy: "Custom logo 3D display example.",
+    filename: "kofenot-your-logo-here-01.jpg",
+  },
 ];
 
 const packagingImages = [
@@ -347,7 +353,7 @@ function RetailKitSection() {
           Bare KOFENOT™ + Your Logo Here
         </h3>
 
-        <div className="mt-5 grid gap-4 md:grid-cols-2">
+        <div className="mt-5 grid gap-4 md:grid-cols-3">
           {productImages.map((item) => (
             <DownloadCard key={item.title} item={item} />
           ))}
