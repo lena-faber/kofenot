@@ -602,12 +602,10 @@ function FinalCta() {
 
         <p className="section-kicker mt-5">Order</p>
 
-        <h2 className="section-title">Ready to sell KOFENOT™?</h2>
+        <h2 className="section-title">Ready to order KOFENOT™?</h2>
 
         <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
-          Buy standard wholesale now, or request a quote for custom logo,
-          private label, licensing, distribution, corporate gifts, and larger
-          orders.
+          Wholesale checkout for resale. Custom quotes for corporate gifts, logo printing, white label, licensing, and large orders.
         </p>
 
         <div className="mt-7 flex flex-wrap justify-center gap-3">
