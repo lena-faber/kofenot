@@ -1,8 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import type { ComponentType } from "react";
 import {
   ArrowRight,
   BriefcaseBusiness,
-  Check,
   Download,
   Eye,
   Gift,
@@ -20,7 +20,6 @@ import { Button } from "@/components/ui/button";
 import coffeeShopHero from "@/assets/kofenot-coffee-shop.jpeg";
 import coffeeShopDisplay from "@/assets/coffee-shop.jpg";
 import giftBox from "@/assets/kofenot-gift-box.jpeg";
-import wholesalePack from "@/assets/kofenot-wholesale-pack.jpeg";
 import corpGift from "@/assets/kofenot-corp-gift.jpeg";
 import expo from "@/assets/kofenot-expo.jpeg";
 import shipping from "@/assets/kofenot-shipping.jpeg";
@@ -31,22 +30,19 @@ import bareProduct from "@/assets/kofenot-retail-pack-02.jpg";
 import retailPackSipSafeFront from "@/assets/kofenot-retail-pack-03.jpg";
 import retailPackPlanet from "@/assets/kofenot-retail-pack-04.jpg";
 import yourLogoHere from "@/assets/kofenot-your-logo-here.jpeg";
-import coffeeShop from "@/assets/coffee-shop.jpg";
-import coworkingCustomLogo from "@/assets/kofenot-your-logo-here-00.jpg";
 import customLogoDisplay from "@/assets/kofenot-your-logo-here-01.jpg";
 import francisco from "@/assets/i-love-sf.png";
-
 
 export const Route = createFileRoute("/wholesale")({
   head: () => ({
     meta: [
       {
-        title: "KOFENOT Wholesale | Retail Kit, Custom Logo & Corporate Orders",
+        title: "KOFENOT Wholesale | Retail, Custom Logo, Private Label",
       },
       {
         name: "description",
         content:
-          "Wholesale KOFENOT for resale, retail-ready packaging, custom logos, corporate gifts, events, white label, and licensing.",
+          "Wholesale KOFENOT for resale, retail-ready packaging, custom logos, corporate gifts, private label, licensing, and distribution.",
       },
     ],
   }),
@@ -60,77 +56,77 @@ const retailBoxCheckoutUrl =
   "https://buy.stripe.com/3cI7sK86y1hWeYMgcsdUY0L";
 
 const quoteEmail =
-  "mailto:info@kofenot.com?subject=KOFENOT%20Wholesale%20Quote&body=Company%3A%0AUse%20case%3A%0AQuantity%3A%0AResale%2C%20custom%20logo%2C%20white%20label%2C%20or%20licensing%3A%0ALogo%20or%20design%20needs%3A%0ANeed-by%20date%3A%0AShipping%20destination%3A%0A";
+  "mailto:info@kofenot.com?subject=KOFENOT%20Wholesale%20Quote&body=Company%3A%0AUse%20case%3A%0AQuantity%3A%0AResale%2C%20custom%20logo%2C%20private%20label%2C%20licensing%2C%20or%20distribution%3A%0ALogo%20or%20design%20needs%3A%0ANeed-by%20date%3A%0AShipping%20destination%3A%0A";
 
-const wholesalePrices = [
+const pricing = [
   {
-    format: "Retail Pack",
-    quantity: "30 units minimum",
-    price: "$8 each",
+    title: "Retail Pack",
+    price: "$8",
+    note: "each",
+    detail: "30 units minimum",
+    cta: "Buy Retail Pack",
     url: retailPackCheckoutUrl,
   },
   {
-    format: "Retail Box",
-    quantity: "30 units minimum",
-    price: "$8 each",
+    title: "Retail Box",
+    price: "$8",
+    note: "each",
+    detail: "30 units minimum",
+    cta: "Buy Retail Box",
     url: retailBoxCheckoutUrl,
   },
-];
-
-const retailImages = [
   {
-    img: retailPackSipSafeFront,
-    title: "SIP SAFE",
-    copy: "Retail-ready package.",
-    filename: "kofenot-retail-pack-sip-safe-front.jpg",
-  },
-  {
-    img: retailPackPlanet,
-    title: "I 💚 Planet Earth",
-    copy: "Retail-ready package.",
-    filename: "kofenot-retail-pack-planet-earth.jpg",
-  },
-  {
-    img: retailPackDad,
-    title: "I ❤️ Dad",
-    copy: "Retail-ready package.",
-    filename: "kofenot-retail-pack-dad.jpg",
+    title: "Custom / Bulk",
+    price: "Quote",
+    note: "",
+    detail: "Logo, private label, licensing, distribution",
+    cta: "Request Quote",
+    url: quoteEmail,
   },
 ];
 
-const productImages = [
+const programs: Program[] = [
   {
-    img: bareProduct,
-    title: "Bare KOFENOT™",
-    copy: "Product outside the retail package.",
-    filename: "kofenot-bare-product.jpg",
+    icon: Store,
+    title: "Retail Wholesale",
+    image: coffeeShopDisplay,
+    copy:
+      "For coffee shops, bookstores, campus stores, museum shops, gift shops, and office stores.",
   },
   {
-    img: yourLogoHere,
-    title: "Your Logo Here",
-    copy: "Custom logo example.",
-    filename: "kofenot-your-logo-here.jpg",
+    icon: Tag,
+    title: "Custom Logo",
+    image: yourLogoHere,
+    copy:
+      "For conferences, coworking spaces, universities, employee kits, client gifts, and branded campaigns.",
   },
   {
-    img: customLogoDisplay,
-    title: "3D Logo View",
-    copy: "Custom logo 3D display example.",
-    filename: "kofenot-your-logo-here-01.jpg",
-  },
-];
-
-const packagingImages = [
-  {
-    img: retailPackSipSafeFront,
-    title: "Package Front",
-    copy: "Front retail packaging.",
-    filename: "kofenot-package-front.jpg",
+    icon: Gift,
+    title: "Corporate Gifts",
+    image: corpGift,
+    copy:
+      "A practical desk gift for employees, clients, executive welcome kits, and remote teams.",
   },
   {
-    img: retailPackSipSafeBack,
-    title: "Package Back",
-    copy: "Back retail packaging.",
-    filename: "kofenot-package-back.jpg",
+    icon: Presentation,
+    title: "Events",
+    image: expo,
+    copy:
+      "A useful giveaway people keep after trade shows, expos, conferences, and company events.",
+  },
+  {
+    icon: BriefcaseBusiness,
+    title: "Private Label",
+    image: customLogoDisplay,
+    copy:
+      "KOFENOT™ supplied for your brand program, with custom logo and packaging options.",
+  },
+  {
+    icon: Handshake,
+    title: "Licensing",
+    image: giftBox,
+    copy:
+      "For regional distribution, international partners, manufacturing conversations, and larger B2B deals.",
   },
 ];
 
@@ -141,71 +137,98 @@ const specs = [
   ["Bare unit weight", "0.9 oz"],
   ["Retail pack weight", "2.1 oz"],
   ["Wholesale minimum", "30 units"],
-  ["Retail-ready formats", "Retail Pack and Retail Box"],
+  ["Retail formats", "Retail Pack and Retail Box"],
   ["Custom programs", "Quote only"],
 ];
 
-const b2bPaths = [
+const mediaKit = [
   {
-    icon: Store,
-    title: "Coffee Shops & Cafés",
-    image: coffeeShop,
-    copy: "Sell KOFENOT™ at the counter, bundle it with drinks, or offer it as a practical impulse purchase.",
+    group: "Retail Packaging",
+    images: [
+      {
+        img: retailPackSipSafeFront,
+        title: "SIP SAFE Front",
+        file: "kofenot-retail-pack-sip-safe-front.jpg",
+      },
+      {
+        img: retailPackSipSafeBack,
+        title: "SIP SAFE Back",
+        file: "kofenot-retail-pack-sip-safe-back.jpg",
+      },
+      {
+        img: retailPackPlanet,
+        title: "Planet Earth Pack",
+        file: "kofenot-retail-pack-planet-earth.jpg",
+      },
+      {
+        img: retailPackDad,
+        title: "Dad Pack",
+        file: "kofenot-retail-pack-dad.jpg",
+      },
+    ],
   },
   {
-    icon: Tag,
-    title: "Coworking Spaces & Shared Workplaces",
-    image: coworkingCustomLogo,
-    copy: "Customize every KOFENOT™ with your logo for coworking spaces, libraries, universities, innovation hubs, and other shared work environments.",
-  },
-  {
-    icon: Gift,
-    title: "Corporate Gifts",
-    image: corpGift,
-    copy: "A practical desk gift for employees, clients, remote teams, executive welcome kits, and customer appreciation programs.",
-  },
-  {
-    icon: Presentation,
-    title: "Events & Conferences",
-    image: expo,
-    copy: "A branded giveaway attendees actually keep using long after conferences, trade shows, and company events.",
+    group: "Product + Custom Examples",
+    images: [
+      {
+        img: bareProduct,
+        title: "Bare KOFENOT™",
+        file: "kofenot-bare-product.jpg",
+      },
+      {
+        img: yourLogoHere,
+        title: "Your Logo Here",
+        file: "kofenot-your-logo-here.jpg",
+      },
+      {
+        img: customLogoDisplay,
+        title: "3D Logo View",
+        file: "kofenot-custom-logo-3d.jpg",
+      },
+      {
+        img: francisco,
+        title: "I ♥ SF",
+        file: "kofenot-i-love-sf.png",
+      },
+    ],
   },
 ];
 
-const customPrograms = [
-  "Promotional product programs",
-  "White-label opportunities",
-  "Licensing conversations",
-];
-
-const shippingOptions = [
-  "Small wholesale orders ship as retail-ready packs or boxes.",
-  "Custom and bulk orders are quoted by destination, quantity, packaging, and timeline.",
-  "Add your shipping destination when requesting a quote.",
+const shippingPoints = [
+  "Retail Pack and Retail Box orders ship as ready-to-sell products.",
+  "Custom, private-label, licensing, and distributor orders are quoted by quantity, packaging, destination, and timeline.",
+  "Send company name, use case, quantity, logo needs, deadline, and shipping destination.",
 ];
 
 const faq = [
   [
     "What should I buy for resale?",
-    "Choose Retail Pack or Retail Box. Both start at 30 units.",
+    "Retail Pack or Retail Box. Both start at 30 units.",
   ],
   [
-    "Can I put my logo on KOFENOT?",
-    "Yes. Request a quote for logo printing, packaging, fulfillment, or larger quantities.",
+    "Can I put my logo on it?",
+    "Yes. Logo printing, packaging, and fulfillment are quoted by order.",
   ],
   [
-    "Why are custom prices not public?",
-    "Custom pricing depends on quantity, print method, packaging, timeline, and shipping destination.",
+    "Can I sell it under my own brand?",
+    "Yes. That is private label. It is quoted separately.",
   ],
   [
-    "What is white label?",
-    "White label means KOFENOT is supplied for another company to sell or distribute under its own brand program.",
+    "Do you offer licensing?",
+    "Yes. Licensing and distribution are discussed individually.",
   ],
   [
-    "What is licensing?",
-    "Licensing means permission to use the KOFENOT product, design, phrase, brand, or sales rights under agreed terms.",
+    "Why no public custom price?",
+    "Because custom price depends on quantity, print method, packaging, timeline, and shipping destination.",
   ],
 ];
+
+type Program = {
+  icon: ComponentType<{ className?: string }>;
+  title: string;
+  image: string;
+  copy: string;
+};
 
 function Wholesale() {
   return (
@@ -213,13 +236,12 @@ function Wholesale() {
       <HeroSection />
       <SectionNav />
       <PricingSection />
-      <RetailKitSection />
-      <SpecsSection />
       <ProgramsSection />
-      <CustomSection />
+      <SpecsSection />
+      <MediaKitSection />
       <ShippingSection />
       <FaqSection />
-      <OrderSection />
+      <FinalCta />
     </main>
   );
 }
@@ -229,24 +251,25 @@ function HeroSection() {
     <section className="page-hero">
       <img
         src={coffeeShopHero}
-        alt="KOFENOT in a coffee shop"
+        alt="KOFENOT wholesale display in a coffee shop"
         className="absolute inset-0 h-full w-full object-cover"
       />
+
       <div className="hero-overlay" />
 
       <div className="page-hero-inner">
-        <div className="max-w-3xl">
+        <div className="max-w-4xl">
           <p className="section-kicker">Wholesale</p>
 
           <h1 className="hero-title">
-            WHOLESALE
+            SELL KOFENOT.
             <br />
-            <span className="neon-text">& CUSTOM BRANDING</span>
+            <span className="neon-text">BRAND IT YOUR WAY.</span>
           </h1>
 
           <p className="hero-copy">
-            Retail-ready KOFENOT™ for resale, plus custom logos, corporate
-            gifts, white label, licensing, and larger orders by quote.
+            Retail-ready KOFENOT™ for resale, custom logos, corporate gifts,
+            private label, licensing, and distributor programs.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3">
@@ -277,9 +300,9 @@ function SectionNav() {
     <nav className="section-nav">
       <div className="section-nav-inner">
         <a href="#pricing">Pricing</a>
-        <a href="#retail-kit">Retail Kit</a>
+        <a href="#programs">Programs</a>
         <a href="#specs">Specs</a>
-        <a href="#custom">Custom</a>
+        <a href="#media">Media Kit</a>
         <a href="#shipping">Shipping</a>
         <a href="#faq">FAQ</a>
         <a href="#order">Order</a>
@@ -293,83 +316,84 @@ function PricingSection() {
   return (
     <section id="pricing" className="section-band">
       <div className="page-section">
-        <p className="section-kicker">Wholesale pricing</p>
+        <p className="section-kicker">Pricing</p>
+
         <h2 className="section-title">
-          Buy standard wholesale now. Quote anything custom.
+          Standard wholesale is simple. Custom work is quoted.
         </h2>
 
         <div className="mt-8 grid gap-5 lg:grid-cols-3">
-          {wholesalePrices.map((item) => (
-            <PriceCard key={item.format} item={item} />
+          {pricing.map((item) => (
+            <article
+              key={item.title}
+              className="neon-border rounded-sm bg-[rgba(0,255,0,0.05)] p-6"
+            >
+              <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground">
+                {item.title}
+              </p>
+
+              <div className="mt-3 flex items-end gap-2">
+                <span className="text-5xl font-black neon-text">
+                  {item.price}
+                </span>
+
+                {item.note && (
+                  <span className="pb-2 text-sm font-black uppercase text-white">
+                    {item.note}
+                  </span>
+                )}
+              </div>
+
+              <p className="mt-3 text-sm font-black uppercase tracking-[0.12em] text-white">
+                {item.detail}
+              </p>
+
+              <a href={item.url} className="mt-6 inline-flex">
+                <Button className="h-11 bg-[color:var(--neon)] px-6 font-black text-black hover:bg-[color:var(--neon-dim)]">
+                  {item.cta}
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </a>
+            </article>
           ))}
-
-          <article className="neon-border rounded-sm bg-[rgba(0,255,0,0.05)] p-6">
-            <div className="text-xs uppercase tracking-[0.18em] text-muted-foreground">
-              Custom
-            </div>
-
-            <div className="mt-3 text-4xl font-black neon-text">Quote</div>
-
-            <p className="mt-2 text-sm font-black uppercase tracking-[0.12em] text-white">
-              Logo, packaging, white label, licensing, bulk
-            </p>
-
-            <a href={quoteEmail} className="mt-6 inline-flex">
-              <Button className="h-11 bg-[color:var(--neon)] px-6 font-black text-black hover:bg-[color:var(--neon-dim)]">
-                Quote
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-            </a>
-          </article>
         </div>
       </div>
     </section>
   );
 }
 
-function RetailKitSection() {
+function ProgramsSection() {
   return (
-    <section id="retail-kit" className="page-section">
-      <p className="section-kicker">Retail Kit</p>
-      <h2 className="section-title">Downloadable product images.</h2>
+    <section id="programs" className="page-section">
+      <p className="section-kicker">Programs</p>
 
-      <p className="mt-5 max-w-3xl text-lg text-muted-foreground">
-        Retail-ready images for buyers, shops, bookstores, coworking spaces,
-        campus stores, corporate buyers, and promotional partners.
-      </p>
+      <h2 className="section-title">Choose the path. Same product.</h2>
 
-      <div className="mt-10 grid gap-4 md:grid-cols-3">
-        {retailImages.map((item) => (
-          <DownloadCard key={item.title} item={item} />
+      <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+        {programs.map((item) => (
+          <article
+            key={item.title}
+            className="panel panel-hover overflow-hidden rounded-sm"
+          >
+            <img
+              src={item.image}
+              alt={item.title}
+              className="h-[260px] w-full object-cover"
+            />
+
+            <div className="p-6">
+              <item.icon className="h-7 w-7 text-[color:var(--neon)]" />
+
+              <h3 className="mt-5 text-xl font-black uppercase">
+                {item.title}
+              </h3>
+
+              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                {item.copy}
+              </p>
+            </div>
+          </article>
         ))}
-      </div>
-
-      <div className="mt-12 border-t border-[rgba(0,255,0,0.18)] pt-10">
-        <p className="section-kicker">Product + Custom Logo</p>
-
-        <h3 className="mt-2 text-4xl font-black italic neon-text">
-          Bare KOFENOT™ + Your Logo Here
-        </h3>
-
-        <div className="mt-5 grid gap-4 md:grid-cols-3">
-          {productImages.map((item) => (
-            <DownloadCard key={item.title} item={item} />
-          ))}
-        </div>
-      </div>
-
-      <div className="mt-12 border-t border-[rgba(0,255,0,0.18)] pt-10">
-        <p className="section-kicker">Packaging</p>
-
-        <h3 className="mt-2 text-4xl font-black italic neon-text">
-          Package Front + Back
-        </h3>
-
-        <div className="mt-5 grid gap-4 md:grid-cols-2">
-          {packagingImages.map((item) => (
-            <DownloadCard key={item.title} item={item} />
-          ))}
-        </div>
       </div>
     </section>
   );
@@ -383,8 +407,8 @@ function SpecsSection() {
           <Ruler className="h-8 w-8 text-[color:var(--neon)]" />
 
           <div>
-            <p className="section-kicker">Product specifications</p>
-            <h2 className="section-title">Wholesale buyer details.</h2>
+            <p className="section-kicker">Specs</p>
+            <h2 className="section-title">Buyer details.</h2>
           </div>
         </div>
 
@@ -411,102 +435,32 @@ function SpecsSection() {
   );
 }
 
-function ProgramsSection() {
+function MediaKitSection() {
   return (
-    <section className="page-section">
-      <p className="section-kicker">B2B options</p>
-      <h2 className="section-title">One product. Several wholesale paths.</h2>
+    <section id="media" className="page-section">
+      <p className="section-kicker">Media kit</p>
 
-      <div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-        {b2bPaths.map((item) => (
-          <article key={item.title} className="panel panel-hover rounded-sm p-6">
-            <item.icon className="h-7 w-7 text-[color:var(--neon)]" />
+      <h2 className="section-title">Product images for buyers and partners.</h2>
 
-            <h3 className="mt-5 text-xl font-black uppercase">{item.title}</h3>
+      <p className="mt-5 max-w-3xl text-lg text-muted-foreground">
+        Download images for retail review, internal approval, wholesale listings,
+        custom logo planning, and promotional presentations.
+      </p>
 
-            <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-              {item.copy}
-            </p>
-          </article>
+      <div className="mt-10 grid gap-12">
+        {mediaKit.map((group) => (
+          <div key={group.group}>
+            <h3 className="text-3xl font-black italic neon-text">
+              {group.group}
+            </h3>
+
+            <div className="mt-5 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+              {group.images.map((item) => (
+                <DownloadCard key={item.title} item={item} />
+              ))}
+            </div>
+          </div>
         ))}
-      </div>
-
-      <div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-        <ImageCard item={{ img: coffeeShopDisplay, label: "Coffee Shop Use" }} />
-        <ImageCard item={{ img: coworkingCustomLogo, label: "Coworking spaces Use" }} />
-        <ImageCard item={{ img: corpGift, label: "Corporate gift" }} />
-        <ImageCard item={{ img: expo, label: "Event order" }} />
-      </div>
-    </section>
-  );
-  }
-function CustomSection() {
-  return (
-    <section id="custom" className="section-band">
-      <div className="page-section grid gap-8 lg:grid-cols-2">
-        <div className="panel overflow-hidden rounded-sm">
-  <div className="bg-white p-8">
-    <img
-      src={francisco}
-      alt="I Love SF custom KOFENOT"
-      className="mx-auto h-[340px] w-auto object-contain"
-    />
-  </div>
-
-  <div className="p-5">
-    <h3 className="font-black italic text-[color:var(--neon)]">
-      I ♥ SF
-    </h3>
-
-    <p className="mt-1 text-sm text-muted-foreground">
-      Example of a custom printed KOFENOT™.
-    </p>
-
-    <div className="mt-4 grid grid-cols-2 gap-2">
-      <a href={francisco} target="_blank" rel="noreferrer">
-        <Button
-          variant="outline"
-          className="h-10 w-full border-white/20 text-xs font-black uppercase tracking-[0.18em]"
-        >
-          <Eye className="mr-2 h-4 w-4" />
-          Open
-        </Button>
-      </a>
-
-      <a href={francisco} download="kofenot-i-love-sf.png">
-        <Button className="h-10 w-full bg-red-600 text-xs font-black uppercase tracking-[0.18em] text-white hover:bg-red-700">
-          <Download className="mr-2 h-4 w-4" />
-          File
-        </Button>
-      </a>
-    </div>
-  </div>
-</div>
-
-        <div className="flex flex-col justify-center">
-          <p className="section-kicker">Custom logo</p>
-
-          <h2 className="section-title">
-            Show your brand where coffee happens.
-          </h2>
-
-          <p className="mt-5 text-lg text-muted-foreground">
-            KOFENOT™ can be made with your logo for cafés, coworking spaces,
-            campuses, events, employee kits, and corporate gifts.
-          </p>
-
-          <p className="mt-5 text-lg text-muted-foreground">
-            Send the logo, quantity, deadline, and shipping destination. We will
-            quote the print, packaging, and delivery.
-          </p>
-
-          <a href={quoteEmail} className="mt-8 inline-flex">
-            <Button className="h-12 bg-[color:var(--neon)] px-8 font-black text-black hover:bg-[color:var(--neon-dim)]">
-              Request Custom Quote
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
-          </a>
-        </div>
       </div>
     </section>
   );
@@ -514,17 +468,17 @@ function CustomSection() {
 
 function ShippingSection() {
   return (
-    <section id="shipping" className="page-section">
-      <div className="grid gap-8 lg:grid-cols-2">
+    <section id="shipping" className="section-band">
+      <div className="page-section grid gap-8 lg:grid-cols-2">
         <div className="flex flex-col justify-center">
           <Truck className="h-9 w-9 text-[color:var(--neon)]" />
 
           <p className="section-kicker mt-5">Shipping</p>
 
-          <h2 className="section-title">Shipping options by order type.</h2>
+          <h2 className="section-title">Quoted by order type.</h2>
 
           <div className="mt-6 grid gap-4">
-            {shippingOptions.map((item) => (
+            {shippingPoints.map((item) => (
               <div key={item} className="flex gap-3 text-lg font-bold">
                 <PackageCheck className="mt-1 h-5 w-5 shrink-0 text-[color:var(--neon)]" />
                 {item}
@@ -556,9 +510,11 @@ function ShippingSection() {
 
 function FaqSection() {
   return (
-    <section id="faq" className="section-band">
+    <section id="faq" className="page-section">
       <div className="page-section-narrow">
-        <h2 className="section-title">FAQ</h2>
+        <p className="section-kicker">FAQ</p>
+
+        <h2 className="section-title">Simple answers.</h2>
 
         <div className="mt-7 divide-y divide-[rgba(0,255,0,0.18)] border-y border-[rgba(0,255,0,0.18)]">
           {faq.map(([question, answer]) => (
@@ -576,7 +532,7 @@ function FaqSection() {
   );
 }
 
-function OrderSection() {
+function FinalCta() {
   return (
     <section id="order" className="mx-auto max-w-[1320px] px-4 pb-20 lg:px-6">
       <div className="neon-border bg-[rgba(0,255,0,0.05)] p-8 text-center neon-glow md:p-12">
@@ -584,14 +540,12 @@ function OrderSection() {
 
         <p className="section-kicker mt-5">Order</p>
 
-        <h2 className="section-title">
-          Checkout for resale. Email for custom.
-        </h2>
+        <h2 className="section-title">Ready to sell KOFENOT™?</h2>
 
         <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
-          Retail Pack and Retail Box have public wholesale checkout. Logos,
-          custom packaging, fulfillment, white label, licensing, larger
-          quantities, and shipping quotes go by email.
+          Buy standard wholesale now, or request a quote for custom logo,
+          private label, licensing, distribution, corporate gifts, and larger
+          orders.
         </p>
 
         <div className="mt-7 flex flex-wrap justify-center gap-3">
@@ -623,46 +577,13 @@ function OrderSection() {
   );
 }
 
-function PriceCard({
-  item,
-}: {
-  item: {
-    format: string;
-    quantity: string;
-    price: string;
-    url: string;
-  };
-}) {
-  return (
-    <article className="neon-border rounded-sm bg-[rgba(0,255,0,0.05)] p-6">
-      <div className="text-xs uppercase tracking-[0.18em] text-muted-foreground">
-        {item.format}
-      </div>
-
-      <div className="mt-3 text-4xl font-black neon-text">{item.price}</div>
-
-      <p className="mt-2 text-sm font-black uppercase tracking-[0.12em] text-white">
-        {item.quantity}
-      </p>
-
-      <a href={item.url} className="mt-6 inline-flex">
-        <Button className="h-11 bg-[color:var(--neon)] px-6 font-black text-black hover:bg-[color:var(--neon-dim)]">
-          Buy
-          <ArrowRight className="ml-2 h-4 w-4" />
-        </Button>
-      </a>
-    </article>
-  );
-}
-
 function DownloadCard({
   item,
 }: {
   item: {
     img: string;
     title: string;
-    copy: string;
-    filename: string;
+    file: string;
   };
 }) {
   return (
@@ -670,15 +591,13 @@ function DownloadCard({
       <img
         src={item.img}
         alt={item.title}
-        className="h-[360px] w-full bg-white object-contain p-10"
+        className="h-[340px] w-full bg-white object-contain p-8"
       />
 
       <div className="p-4">
         <h3 className="font-black italic text-[color:var(--neon)]">
           {item.title}
         </h3>
-
-        <p className="mt-1 text-sm text-muted-foreground">{item.copy}</p>
 
         <div className="mt-4 grid grid-cols-2 gap-2">
           <a href={item.img} target="_blank" rel="noreferrer">
@@ -691,7 +610,7 @@ function DownloadCard({
             </Button>
           </a>
 
-          <a href={item.img} download={item.filename}>
+          <a href={item.img} download={item.file}>
             <Button className="h-10 w-full bg-red-600 text-xs font-black uppercase tracking-[0.18em] text-white hover:bg-red-700">
               <Download className="mr-2 h-4 w-4" />
               File
@@ -700,28 +619,5 @@ function DownloadCard({
         </div>
       </div>
     </article>
-  );
-}
-
-function ImageCard({
-  item,
-}: {
-  item: {
-    img: string;
-    label: string;
-  };
-}) {
-  return (
-    <figure className="panel overflow-hidden rounded-sm">
-      <img
-        src={item.img}
-        alt={item.label}
-        className="aspect-square w-full object-cover"
-      />
-
-      <figcaption className="p-3 text-center text-xs uppercase tracking-[0.18em] text-muted-foreground">
-        {item.label}
-      </figcaption>
-    </figure>
   );
 }
