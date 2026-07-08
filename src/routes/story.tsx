@@ -126,7 +126,7 @@ function HeroSection() {
           One-way Ticket to Silicon Valley.
         </h1>
 
-        <p className="mt-6 max-w-2xl text-xl leading-snug text-black/90">
+        <p className="mt-6 max-w-2xl text-xl leading-snug text-white/90">
           The accidental story behind a pocket-size laptop wedge that helps
           make laptops more coffee shop-friendly.
         </p>
@@ -143,7 +143,7 @@ function HeroSection() {
             asChild
             size="lg"
             variant="outline"
-            className="rounded-sm border-white bg-white/10 font-black text-black hover:bg-white hover:text-black"
+            className="rounded-sm border-white bg-white/10 font-black text-white hover:bg-white hover:text-black"
           >
             <a href="/media/kofenot-press-release.pdf" download>
               Press Release PDF
@@ -272,7 +272,7 @@ function ProductFacts() {
             <p className="text-sm font-black uppercase tracking-[0.12em] text-black/50">
               {label}
             </p>
-            <p className="text-sm font-bold leading-snug">{value}</p>
+            <p className="text-sm font-bold leading-snug text-black">{value}</p>
           </div>
         ))}
       </div>
