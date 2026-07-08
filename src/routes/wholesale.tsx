@@ -501,64 +501,71 @@ function MediaKitSection() {
     </section>
   );
 }
-
 function ShippingSection() {
   return (
-    <section id="shipping" className="page-section">
-      <div className="grid gap-12 lg:grid-cols-[1.7fr_0.8fr] items-start">
-        <div>
-          <Truck className="h-9 w-9 text-[color:var(--neon)]" />
+    <section id="shipping" className="section-band">
+      <div className="page-section">
+        <div className="grid gap-8 lg:grid-cols-[1fr_340px]">
+          <div>
+            <div className="flex items-center gap-3">
+              <Truck className="h-8 w-8 text-[color:var(--neon)]" />
 
-          <p className="section-kicker mt-5">
-            Shipping &amp; Production
-          </p>
+              <h2 className="section-title">
+                Shipping &amp; Production
+              </h2>
+            </div>
 
-          <h2 className="section-title">
-            Lead Times, Shipping &amp; Fulfillment
-          </h2>
+            <div className="mt-8 grid gap-4 md:grid-cols-2">
+              {shippingSections.map((section) => (
+                <article
+                  key={section.title}
+                  className="panel rounded-sm p-5"
+                >
+                  <h3 className="text-lg font-black uppercase text-[color:var(--neon)]">
+                    {section.title}
+                  </h3>
 
-          <div className="mt-10 space-y-8">
-            {shippingSections.map((section) => (
-              <div key={section.title}>
-                <h3 className="mb-3 text-xl font-black uppercase text-[color:var(--neon)]">
-                  {section.title}
-                </h3>
-
-                <div className="space-y-3">
-                  {section.items.map((item) => (
-                    <div
-                      key={item}
-                      className="flex items-start gap-3"
-                    >
-                      <PackageCheck className="mt-1 h-5 w-5 shrink-0 text-[color:var(--neon)]" />
-
-                      <p className="text-base leading-relaxed text-muted-foreground">
-                        {item}
-                      </p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ))}
+                  <ul className="mt-4 space-y-3">
+                    {section.items.map((item) => (
+                      <li
+                        key={item}
+                        className="flex gap-3 text-sm leading-relaxed text-muted-foreground"
+                      >
+                        <PackageCheck className="mt-0.5 h-4 w-4 shrink-0 text-[color:var(--neon)]" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </article>
+              ))}
+            </div>
           </div>
 
-          <a href={quoteEmail} className="mt-10 inline-flex">
-            <Button
-              className="h-12 bg-[color:var(--neon)] px-8 font-black text-black hover:bg-[color:var(--neon-dim)]"
-            >
-              Request Shipping Quote
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
-          </a>
-        </div>
+          <aside className="panel overflow-hidden rounded-sm self-start">
+            <img
+              src={shipping}
+              alt="KOFENOT wholesale shipping"
+              className="aspect-square w-full object-cover"
+            />
 
-        <div className="panel overflow-hidden rounded-sm self-start">
-  <img
-    src={shipping}
-    alt="KOFENOT wholesale shipping"
-    className="w-full max-w-[420px] mx-auto object-cover"
-  />
-</div>
+            <div className="p-5">
+              <h3 className="text-xl font-black uppercase text-[color:var(--neon)]">
+                Need a shipping quote?
+              </h3>
+
+              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                Send quantity, destination, deadline, and packaging needs.
+              </p>
+
+              <a href={quoteEmail} className="mt-5 inline-flex">
+                <Button className="h-11 bg-[color:var(--neon)] px-6 font-black text-black hover:bg-[color:var(--neon-dim)]">
+                  Request Quote
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </a>
+            </div>
+          </aside>
+        </div>
       </div>
     </section>
   );
