@@ -108,7 +108,7 @@ function HeroSection() {
       <img
         src={heroImage}
         alt="Lena Faber designing KOFENOT with a laptop and coffee cup"
-        className="absolute inset-0 h-full w-full object-cover object-center"
+        className="absolute inset-0 h-full w-full object-cover object-right"
       />
 
       <div className="absolute inset-y-0 left-0 w-full bg-gradient-to-r from-black/70 via-black/35 to-transparent" />
