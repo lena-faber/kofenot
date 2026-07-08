@@ -541,7 +541,7 @@ function ShippingSection() {
             </div>
           </div>
 
-         <aside className="panel mt-[120px] overflow-hidden rounded-sm self-start">
+         <aside className="panel mt-[115px] overflow-hidden rounded-sm self-start">
             <img
               src={shipping}
               alt="KOFENOT wholesale shipping"
