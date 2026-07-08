@@ -177,7 +177,12 @@ function StorySection() {
         </p>
 
         <MediaFigure
+          
+          src={designImage00}
+          src={designImage01}
           src={designImage02}
+          src={designImage03}
+          src={designImage04}
           alt="Lena Faber working on KOFENOT at a desk"
           caption="Lena Faber designing KOFENOT™ in Silicon Valley."
         />
