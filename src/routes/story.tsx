@@ -91,7 +91,7 @@ const facts = [
 
 function PressPage() {
   return (
-    <main className="bg-[#f6f6f2] text-black">
+    <main className="bg-[#f6f6f2] text-[#111]">
       <HeroSection />
       <section className="mx-auto grid max-w-[1480px] gap-6 px-4 py-6 lg:grid-cols-[1fr_360px] lg:px-6">
         <StorySection />
@@ -104,7 +104,7 @@ function PressPage() {
 
 function HeroSection() {
   return (
-    <section className="relative min-h-[72svh] overflow-hidden bg-black text-black">
+    <section className="relative min-h-[72svh] overflow-hidden bg-black text-white">
       <img
         src={heroImage}
         alt="Lena Faber designing KOFENOT with a laptop and coffee cup"
@@ -162,7 +162,7 @@ function StorySection() {
         The Story Behind KOFENOT™
       </h2>
 
-      <div className="mt-6 grid gap-6 text-base leading-relaxed text-black/85">
+      <div className="mt-6 grid gap-6 text-base leading-relaxed text-black">
         <p>
           A cup of coffee on a Palisades Tahoe Tuesday afternoon ended the short
           life of a new MacBook Pro of a ski instructor, Lena Faber. At her lunch
