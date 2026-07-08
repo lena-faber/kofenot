@@ -364,7 +364,7 @@ function ProgramsSection() {
   return (
     <section id="programs" className="page-section">
 
-      <h2 className="section-title">Programs ^Use Cases</h2>
+      <h2 className="section-title">Programs &amp; Use Cases</h2>
 
       <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
         {programs.map((item) => (
