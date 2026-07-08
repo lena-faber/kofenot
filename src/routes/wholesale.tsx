@@ -315,10 +315,9 @@ function PricingSection() {
   return (
     <section id="pricing" className="section-band">
       <div className="page-section">
-        <p className="section-kicker">Pricing</p>
 
         <h2 className="section-title">
-          Standard wholesale is simple. Custom work is quoted.
+          Wholesale Pricing
         </h2>
 
         <div className="mt-8 grid gap-5 lg:grid-cols-3">
@@ -364,9 +363,8 @@ function PricingSection() {
 function ProgramsSection() {
   return (
     <section id="programs" className="page-section">
-      <p className="section-kicker">Programs</p>
 
-      <h2 className="section-title">Choose the path. Same product.</h2>
+      <h2 className="section-title">Programs ^Use Cases</h2>
 
       <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
         {programs.map((item) => (
@@ -472,9 +470,7 @@ function ShippingSection() {
         <div className="flex flex-col justify-center">
           <Truck className="h-9 w-9 text-[color:var(--neon)]" />
 
-          <p className="section-kicker mt-5">Shipping</p>
-
-          <h2 className="section-title">Quoted by order type.</h2>
+          <h2 className="section-title">Shipping</h2>
 
           <div className="mt-6 grid gap-4">
             {shippingPoints.map((item) => (
@@ -511,9 +507,8 @@ function FaqSection() {
   return (
     <section id="faq" className="page-section">
       <div className="page-section-narrow">
-        <p className="section-kicker">FAQ</p>
-
-        <h2 className="section-title">Simple answers.</h2>
+       
+        <h2 className="section-title">FAQ</h2>
 
         <div className="mt-7 divide-y divide-[rgba(0,255,0,0.18)] border-y border-[rgba(0,255,0,0.18)]">
           {faq.map(([question, answer]) => (
