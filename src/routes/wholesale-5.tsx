@@ -34,6 +34,8 @@ import yourLogoHere from "@/assets/kofenot-your-logo-here.jpeg";
 import coffeeShop from "@/assets/coffee-shop.jpg";
 import coworkingCustomLogo from "@/assets/kofenot-your-logo-here-00.jpg";
 import customLogoDisplay from "@/assets/kofenot-your-logo-here-01.jpg";
+import francisco from "@/assets/i-love-sf.png";
+
 
 export const Route = createFileRoute("/wholesale")({
   head: () => ({
@@ -109,6 +111,12 @@ const productImages = [
     copy: "Custom logo example.",
     filename: "kofenot-your-logo-here.jpg",
   },
+  {
+    img: customLogoDisplay,
+    title: "3D Logo View",
+    copy: "Custom logo 3D display example.",
+    filename: "kofenot-your-logo-here-01.jpg",
+  },
 ];
 
 const packagingImages = [
@@ -165,10 +173,6 @@ const b2bPaths = [
 ];
 
 const customPrograms = [
-  "Custom logo printing",
-  "Corporate gifts",
-  "Employee welcome kits",
-  "Conference and trade-show orders",
   "Promotional product programs",
   "White-label opportunities",
   "Licensing conversations",
@@ -235,9 +239,9 @@ function HeroSection() {
           <p className="section-kicker">Wholesale</p>
 
           <h1 className="hero-title">
-            BUY WHOLESALE.
+            WHOLESALE
             <br />
-            <span className="neon-text">QUOTE CUSTOM.</span>
+            <span className="neon-text">& CUSTOM BRANDING</span>
           </h1>
 
           <p className="hero-copy">
@@ -347,7 +351,7 @@ function RetailKitSection() {
           Bare KOFENOT™ + Your Logo Here
         </h3>
 
-        <div className="mt-5 grid gap-4 md:grid-cols-2">
+        <div className="mt-5 grid gap-4 md:grid-cols-3">
           {productImages.map((item) => (
             <DownloadCard key={item.title} item={item} />
           ))}
@@ -435,41 +439,66 @@ function ProgramsSection() {
       </div>
     </section>
   );
-}
-
+  }
 function CustomSection() {
   return (
     <section id="custom" className="section-band">
       <div className="page-section grid gap-8 lg:grid-cols-2">
         <div className="panel overflow-hidden rounded-sm">
-          <img
-            src={customLogoDisplay}
-            alt="Your logo on KOFENOT"
-            className="h-full min-h-[420px] w-full object-cover"
-          />
-        </div>
+  <div className="bg-white p-8">
+    <img
+      src={francisco}
+      alt="I Love SF custom KOFENOT"
+      className="mx-auto h-[340px] w-auto object-contain"
+    />
+  </div>
+
+  <div className="p-5">
+    <h3 className="font-black italic text-[color:var(--neon)]">
+      I ♥ SF
+    </h3>
+
+    <p className="mt-1 text-sm text-muted-foreground">
+      Example of a custom printed KOFENOT™.
+    </p>
+
+    <div className="mt-4 grid grid-cols-2 gap-2">
+      <a href={francisco} target="_blank" rel="noreferrer">
+        <Button
+          variant="outline"
+          className="h-10 w-full border-white/20 text-xs font-black uppercase tracking-[0.18em]"
+        >
+          <Eye className="mr-2 h-4 w-4" />
+          Open
+        </Button>
+      </a>
+
+      <a href={francisco} download="kofenot-i-love-sf.png">
+        <Button className="h-10 w-full bg-red-600 text-xs font-black uppercase tracking-[0.18em] text-white hover:bg-red-700">
+          <Download className="mr-2 h-4 w-4" />
+          File
+        </Button>
+      </a>
+    </div>
+  </div>
+</div>
 
         <div className="flex flex-col justify-center">
-          <p className="section-kicker">Custom</p>
+          <p className="section-kicker">Custom logo</p>
 
           <h2 className="section-title">
-            Your logo, your event, your program.
+            Show your brand where coffee happens.
           </h2>
 
           <p className="mt-5 text-lg text-muted-foreground">
-            Use checkout for standard resale inventory. Request a quote for any
-            logo, packaging, fulfillment, white label, licensing, or special
-            quantity order.
+            KOFENOT™ can be made with your logo for cafés, coworking spaces,
+            campuses, events, employee kits, and corporate gifts.
           </p>
 
-          <div className="mt-6 grid gap-3">
-            {customPrograms.map((item) => (
-              <div key={item} className="flex gap-3 text-lg font-bold">
-                <Handshake className="mt-1 h-5 w-5 shrink-0 text-[color:var(--neon)]" />
-                {item}
-              </div>
-            ))}
-          </div>
+          <p className="mt-5 text-lg text-muted-foreground">
+            Send the logo, quantity, deadline, and shipping destination. We will
+            quote the print, packaging, and delivery.
+          </p>
 
           <a href={quoteEmail} className="mt-8 inline-flex">
             <Button className="h-12 bg-[color:var(--neon)] px-8 font-black text-black hover:bg-[color:var(--neon-dim)]">
