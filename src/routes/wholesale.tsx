@@ -262,9 +262,8 @@ function HeroSection() {
           <p className="section-kicker">Wholesale</p>
 
           <h1 className="hero-title">
-            Resale. Private Label. Licensing.
-            <br />
-            <span className="neon-text">BRAND IT YOUR WAY.</span>
+            RESALE.<br />PRIVATE LABEL.<br />LICENSING.
+            
           </h1>
 
           <p className="hero-copy">
