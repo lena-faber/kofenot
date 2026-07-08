@@ -439,6 +439,7 @@ function ProgramsSection() {
       </div>
     </section>
   );
+  }
 function CustomSection() {
   return (
     <section id="custom" className="section-band">
