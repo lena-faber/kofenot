@@ -262,7 +262,7 @@ function HeroSection() {
           <p className="section-kicker">Wholesale</p>
 
           <h1 className="hero-title">
-            SELL KOFENOT.
+            Resale. Private Label. Licensing.
             <br />
             <span className="neon-text">BRAND IT YOUR WAY.</span>
           </h1>
