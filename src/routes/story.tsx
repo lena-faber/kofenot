@@ -16,12 +16,13 @@ import {
 import { Button } from "@/components/ui/button";
 
 import heroImage from "@/assets/kofenot-designer.jpg";
+import designImage00 from "@/assets/lena-faber-designing-kofenot-00.jpg";
 import designImage01 from "@/assets/lena-faber-designing-kofenot-01.jpg";
 import designImage02 from "@/assets/lena-faber-designing-kofenot-02.jpg";
 import designImage03 from "@/assets/lena-faber-designing-kofenot-03.jpg";
 import designImage04 from "@/assets/lena-faber-designing-kofenot-04.jpg";
 
-export const Route = createFileRoute("/press")({
+export const Route = createFileRoute("/story")({
   head: () => ({
     meta: [
       { title: "KOFENOT™ Press & Media Kit" },
