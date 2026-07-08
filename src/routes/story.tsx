@@ -4,7 +4,7 @@ import { Fingerprint, Hammer, Laptop, MapPin, Sparkles } from "lucide-react";
 import coffeeShop from "@/assets/kofenot-coffee-shop.jpeg";
 import corporate from "@/assets/kofenot-corp-gift.jpeg";
 import expo from "@/assets/kofenot-expo.jpeg";
-import inventor from "@/assets/kofenot-inventor.jpg";
+import inventor from "@/assets/kofenot-designer.jpg";
 import threeDevices from "@/assets/kofeenot-triad.jpg";
 
 export const Route = createFileRoute("/story")({
