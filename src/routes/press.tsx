@@ -177,15 +177,34 @@ function StorySection() {
         </p>
 
         <MediaFigure
-          
-          src={designImage00}
-          src={designImage01}
-          src={designImage02}
-          src={designImage03}
-          src={designImage04}
-          alt="Lena Faber working on KOFENOT at a desk"
-          caption="Lena Faber designing KOFENOT™ in Silicon Valley."
-        />
+  src={designImage00}
+  alt="Lena Faber designing KOFENOT"
+  caption="Lena Faber designing KOFENOT™ in Silicon Valley."
+/>
+
+<MediaFigure
+  src={designImage01}
+  alt="KOFENOT development"
+  caption="Developing the first KOFENOT™ prototypes."
+/>
+
+<MediaFigure
+  src={designImage02}
+  alt="Prototype testing"
+  caption="Testing the hinge-lifting design."
+/>
+
+<MediaFigure
+  src={designImage03}
+  alt="Design refinement"
+  caption="Refining the final product."
+/>
+
+<MediaFigure
+  src={designImage04}
+  alt="Finished KOFENOT"
+  caption="The finished KOFENOT™ ready for production."
+/>
 
         <p>
           On Friday night she bought a new car, moved to Silicon Valley, and
