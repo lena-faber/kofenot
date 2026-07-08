@@ -505,7 +505,7 @@ function MediaKitSection() {
 function ShippingSection() {
   return (
     <section id="shipping" className="page-section">
-      <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr]">
+      <div className="grid gap-12 lg:grid-cols-[1.7fr_0.8fr] items-start">
         <div>
           <Truck className="h-9 w-9 text-[color:var(--neon)]" />
 
@@ -552,13 +552,13 @@ function ShippingSection() {
           </a>
         </div>
 
-        <div className="panel overflow-hidden rounded-sm">
-          <img
-            src={shipping}
-            alt="KOFENOT wholesale shipping"
-            className="h-full w-full object-cover"
-          />
-        </div>
+        <div className="panel overflow-hidden rounded-sm self-start">
+  <img
+    src={shipping}
+    alt="KOFENOT wholesale shipping"
+    className="w-full max-w-[420px] mx-auto object-cover"
+  />
+</div>
       </div>
     </section>
   );
