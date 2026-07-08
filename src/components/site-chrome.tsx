@@ -9,15 +9,12 @@ const sampleCheckoutUrl = "https://buy.stripe.com/9B614m9aC2m0eYM2lCdUY0F";
 const navLinks = [
   { label: "Home", to: "/" },
   { label: "Wholesale", to: "/wholesale" },
-  { label: "Custom", to: "/custom" },
   { label: "The Story", to: "/story" },
-  { label: "Referral Program", to: "/referrals" },
 ] as const;
 
 const footerLinks = [
   { label: "About", href: "/#why" },
   { label: "Contact", href: "mailto:info@kofenot.com" },
-  { label: "Referral Program", href: "/referrals" },
   { label: "Patent & Trademark", href: "/spec" },
   { label: "Shipping", href: "/#faq" },
   { label: "Returns", href: "/#faq" },
@@ -30,7 +27,7 @@ const footerLinks = [
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
   const location = useLocation();
-  const isSamplePage = ["/wholesale", "/custom"].includes(location.pathname);
+  const isSamplePage = location.pathname === "/wholesale";
   const ctaHref = isSamplePage ? sampleCheckoutUrl : "/#pricing";
   const ctaLabel = isSamplePage ? "Buy Sample" : "Buy Now";
 
