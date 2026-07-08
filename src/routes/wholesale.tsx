@@ -641,7 +641,7 @@ function DownloadCard({
       <img
         src={item.img}
         alt={item.title}
-        className="aspect-square w-full bg-white object-contain"
+        className="h-[360px] w-full bg-white object-contain p-10"
       />
 
       <div className="p-4">
