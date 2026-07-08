@@ -34,6 +34,8 @@ import yourLogoHere from "@/assets/kofenot-your-logo-here.jpeg";
 import coffeeShop from "@/assets/coffee-shop.jpg";
 import coworkingCustomLogo from "@/assets/kofenot-your-logo-here-00.jpg";
 import customLogoDisplay from "@/assets/kofenot-your-logo-here-01.jpg";
+import francisco from "@/assets/i-love-sf.png";
+
 
 export const Route = createFileRoute("/wholesale")({
   head: () => ({
@@ -443,8 +445,8 @@ function CustomSection() {
       <div className="page-section grid gap-8 lg:grid-cols-2">
         <div className="panel overflow-hidden rounded-sm bg-white">
           <img
-            src={customLogoDisplay}
-            alt="Custom logo KOFENOT supporting a laptop"
+            src={francisco}
+            alt="Custom logo I love San Francisco"
             className="h-full min-h-[420px] w-full object-contain p-8"
           />
         </div>
