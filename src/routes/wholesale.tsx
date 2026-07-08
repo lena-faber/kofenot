@@ -444,13 +444,44 @@ function CustomSection() {
   return (
     <section id="custom" className="section-band">
       <div className="page-section grid gap-8 lg:grid-cols-2">
-        <div className="panel overflow-hidden rounded-sm bg-white">
-          <img
-            src={francisco}
-            alt="Custom logo I love San Francisco"
-            className="h-full min-h-[420px] w-full object-contain p-8"
-          />
-        </div>
+        <div className="panel overflow-hidden rounded-sm">
+  <div className="bg-white p-8">
+    <img
+      src={francisco}
+      alt="I Love SF custom KOFENOT"
+      className="mx-auto h-[340px] w-auto object-contain"
+    />
+  </div>
+
+  <div className="p-5">
+    <h3 className="font-black italic text-[color:var(--neon)]">
+      I ♥ SF
+    </h3>
+
+    <p className="mt-1 text-sm text-muted-foreground">
+      Example of a custom printed KOFENOT™.
+    </p>
+
+    <div className="mt-4 grid grid-cols-2 gap-2">
+      <a href={francisco} target="_blank" rel="noreferrer">
+        <Button
+          variant="outline"
+          className="h-10 w-full border-white/20 text-xs font-black uppercase tracking-[0.18em]"
+        >
+          <Eye className="mr-2 h-4 w-4" />
+          Open
+        </Button>
+      </a>
+
+      <a href={francisco} download="kofenot-i-love-sf.png">
+        <Button className="h-10 w-full bg-red-600 text-xs font-black uppercase tracking-[0.18em] text-white hover:bg-red-700">
+          <Download className="mr-2 h-4 w-4" />
+          File
+        </Button>
+      </a>
+    </div>
+  </div>
+</div>
 
         <div className="flex flex-col justify-center">
           <p className="section-kicker">Custom logo</p>
