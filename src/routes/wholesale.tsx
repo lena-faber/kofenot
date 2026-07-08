@@ -109,7 +109,7 @@ const programs: Program[] = [
   },
   {
     icon: Presentation,
-    title: "Events",
+    title: "Trade Shows",
     image: expo,
     copy:
       "A useful giveaway people keep after trade shows, expos, conferences, and company events.",
