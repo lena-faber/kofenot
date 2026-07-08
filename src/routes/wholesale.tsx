@@ -441,41 +441,34 @@ function ProgramsSection() {
       </div>
     </section>
   );
-}
-
 function CustomSection() {
   return (
     <section id="custom" className="section-band">
       <div className="page-section grid gap-8 lg:grid-cols-2">
-        <div className="panel overflow-hidden rounded-sm">
+        <div className="panel overflow-hidden rounded-sm bg-white">
           <img
             src={customLogoDisplay}
-            alt="Your logo on KOFENOT"
-            className="h-full min-h-[420px] w-full object-cover"
+            alt="Custom logo KOFENOT supporting a laptop"
+            className="h-full min-h-[420px] w-full object-contain p-8"
           />
         </div>
 
         <div className="flex flex-col justify-center">
-          <p className="section-kicker">Custom</p>
+          <p className="section-kicker">Custom logo</p>
 
           <h2 className="section-title">
-            Your logo, your event, your program.
+            Show your brand where coffee happens.
           </h2>
 
           <p className="mt-5 text-lg text-muted-foreground">
-            Use checkout for standard resale inventory. Request a quote for any
-            logo, packaging, fulfillment, white label, licensing, or special
-            quantity order.
+            KOFENOT™ can be made with your logo for cafés, coworking spaces,
+            campuses, events, employee kits, and corporate gifts.
           </p>
 
-          <div className="mt-6 grid gap-3">
-            {customPrograms.map((item) => (
-              <div key={item} className="flex gap-3 text-lg font-bold">
-                <Handshake className="mt-1 h-5 w-5 shrink-0 text-[color:var(--neon)]" />
-                {item}
-              </div>
-            ))}
-          </div>
+          <p className="mt-5 text-lg text-muted-foreground">
+            Send the logo, quantity, deadline, and shipping destination. We will
+            quote the print, packaging, and delivery.
+          </p>
 
           <a href={quoteEmail} className="mt-8 inline-flex">
             <Button className="h-12 bg-[color:var(--neon)] px-8 font-black text-black hover:bg-[color:var(--neon-dim)]">
