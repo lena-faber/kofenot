@@ -505,7 +505,7 @@ function ShippingSection() {
   return (
     <section id="shipping" className="section-band">
       <div className="page-section">
-        <div className="grid gap-8 lg:grid-cols-[1fr_340px]">
+        <div className="grid gap-8 lg:grid-cols-[1fr_340px] items-start">
           <div>
             <div className="flex items-center gap-3">
               <Truck className="h-8 w-8 text-[color:var(--neon)]" />
