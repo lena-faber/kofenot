@@ -37,50 +37,44 @@ export const Route = createFileRoute("/wholesale")({
   head: () => ({
     meta: [
       {
-        title: "KOFENOT Wholesale | Retail, Custom Logo, Private Label",
+        title: "KOFENOT Wholesale | Bare Bulk, Custom Logo, Private Label",
       },
       {
         name: "description",
         content:
-          "Wholesale KOFENOT for resale, retail-ready packaging, custom logos, corporate gifts, private label, licensing, and distribution.",
+          "Wholesale KOFENOT bare bulk packs, custom logos, corporate gifts, private label, licensing, and distribution.",
       },
     ],
   }),
   component: Wholesale,
 });
 
-const retailPackCheckoutUrl =
-  "https://buy.stripe.com/00w28qgD40dScQEgcsdUY0G";
-
-const retailBoxCheckoutUrl =
-  "https://buy.stripe.com/3cI7sK86y1hWeYMgcsdUY0L";
-
 const quoteEmail =
-  "mailto:info@kofenot.com?subject=KOFENOT%20Wholesale%20Quote&body=Company%3A%0AUse%20case%3A%0AQuantity%3A%0AResale%2C%20custom%20logo%2C%20private%20label%2C%20licensing%2C%20or%20distribution%3A%0ALogo%20or%20design%20needs%3A%0ANeed-by%20date%3A%0AShipping%20destination%3A%0A";
+  "mailto:info@kofenot.com?subject=KOFENOT%20Wholesale%20Quote&body=Company%3A%0AUse%20case%3A%0AQuantity%3A%0ABare%20bulk%2C%20custom%20logo%2C%20private%20label%2C%20licensing%2C%20or%20distribution%3A%0ALogo%20or%20design%20needs%3A%0ANeed-by%20date%3A%0AShipping%20destination%3A%0A";
 
 const pricing = [
   {
-    title: "Retail Pack",
-    price: "$8",
-    note: "each",
-    detail: "30 units minimum",
-    cta: "Buy Retail Pack",
-    url: retailPackCheckoutUrl,
-  },
-  {
-    title: "Retail Box",
-    price: "$8",
-    note: "each",
-    detail: "30 units minimum",
-    cta: "Buy Retail Box",
-    url: retailBoxCheckoutUrl,
-  },
-  {
-    title: "Custom / Bulk",
+    title: "Bare KOFENOT™",
     price: "Quote",
     note: "",
-    detail: "Logo, private label, licensing, distribution",
-    cta: "Request Quote",
+    detail: "100-unit minimum • 1 industrial bulk pack",
+    cta: "Request Bulk Quote",
+    url: quoteEmail,
+  },
+  {
+    title: "Master Carton",
+    price: "Quote",
+    note: "",
+    detail: "400 units • 4 industrial bulk packs",
+    cta: "Request Carton Quote",
+    url: quoteEmail,
+  },
+  {
+    title: "Custom / Private Label",
+    price: "Quote",
+    note: "",
+    detail: "Logo, packaging, licensing, distribution",
+    cta: "Request Custom Quote",
     url: quoteEmail,
   },
 ];
@@ -88,10 +82,10 @@ const pricing = [
 const programs: Program[] = [
   {
     icon: Store,
-    title: "Retail Wholesale",
-    image: coffeeShopDisplay,
+    title: "Bare Bulk Wholesale",
+    image: bareProduct,
     copy:
-      "For coffee shops, bookstores, campus stores, museum shops, gift shops, and office stores.",
+      "For buyers who need unpackaged KOFENOT™ units for resale, kits, events, custom packaging, or distribution.",
   },
   {
     icon: Tag,
@@ -133,11 +127,13 @@ const programs: Program[] = [
 const specs = [
   ["Product", "KOFENOT™ laptop wedge"],
   ["Trademark line", "KOFENOT™: Make Your Laptop Coffee Shop-Friendly"],
+  ["Wholesale format", "Bare KOFENOT™ units"],
+  ["Minimum order", "100 units"],
+  ["Industrial pack", "100 bare units"],
+  ["Master carton", "4 industrial packs / 400 units"],
   ["Bare unit size", '2.4" W × 3.4" H × 0.4" D'],
   ["Bare unit weight", "0.9 oz"],
   ["Retail pack weight", "2.1 oz"],
-  ["Wholesale minimum", "30 units"],
-  ["Retail formats", "Retail Pack and Retail Box"],
   ["Custom programs", "Quote only"],
 ];
 
@@ -196,6 +192,14 @@ const mediaKit = [
 
 const shippingSections = [
   {
+    title: "Bulk Packaging",
+    items: [
+      "Bare KOFENOT™ ships in industrial bulk packaging.",
+      "Minimum order: 100 bare units / 1 industrial pack.",
+      "Master carton: 4 industrial packs / 400 units.",
+    ],
+  },
+  {
     title: "Lead Time",
     items: [
       "Standard wholesale orders ship from available inventory when in stock.",
@@ -205,7 +209,7 @@ const shippingSections = [
   {
     title: "Production",
     items: [
-      "Retail Pack and Retail Box are standard wholesale products.",
+      "Bare KOFENOT™ is the standard wholesale product.",
       "Custom printing and packaging require production before shipment.",
     ],
   },
@@ -224,14 +228,6 @@ const shippingSections = [
     ],
   },
   {
-    title: "Packaging Options",
-    items: [
-      "Retail Pack",
-      "Retail Box",
-      "Custom packaging available for qualifying orders.",
-    ],
-  },
-  {
     title: "Requesting a Quote",
     items: [
       "Please include company name, quantity, intended use, branding requirements, delivery deadline, and shipping destination.",
@@ -241,8 +237,16 @@ const shippingSections = [
 
 const faq = [
   [
-    "What should I buy for resale?",
-    "Retail Pack or Retail Box. Both start at 30 units.",
+    "What is the wholesale minimum?",
+    "The minimum wholesale order is 100 bare KOFENOT™ units. That is one industrial bulk pack.",
+  ],
+  [
+    "How does the next quantity level ship?",
+    "The next standard bulk level is one master carton: 4 industrial packs / 400 units.",
+  ],
+  [
+    "Are these retail-packaged?",
+    "No. Bare wholesale KOFENOT™ ships unpackaged in industrial bulk packs. Retail packaging is separate or quoted for custom programs.",
   ],
   [
     "Can I put my logo on KOFENOT™?",
@@ -255,10 +259,6 @@ const faq = [
   [
     "Do you offer licensing?",
     "Yes. Licensing and distribution opportunities are discussed individually.",
-  ],
-  [
-    "Why aren't custom prices listed?",
-    "Custom pricing depends on quantity, printing, packaging, production, and shipping destination.",
   ],
 ];
 
@@ -301,13 +301,16 @@ function HeroSection() {
           <p className="section-kicker">Wholesale</p>
 
           <h1 className="hero-title">
-            RESALE.<br />PRIVATE LABEL.<br />LICENSING.
-            
+            BARE BULK.
+            <br />
+            CUSTOM LOGO.
+            <br />
+            PRIVATE LABEL.
           </h1>
 
           <p className="hero-copy">
-            Retail-ready KOFENOT™ for resale, custom logos, corporate gifts,
-            private label, licensing, and distributor programs.
+            KOFENOT™ ships wholesale as bare units in industrial bulk packs.
+            Minimum order: 100 units. Master carton: 4 packs / 400 units.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3">
@@ -354,10 +357,7 @@ function PricingSection() {
   return (
     <section id="pricing" className="section-band">
       <div className="page-section">
-
-        <h2 className="section-title">
-          Wholesale Pricing
-        </h2>
+        <h2 className="section-title">Wholesale Pricing</h2>
 
         <div className="mt-8 grid gap-5 lg:grid-cols-3">
           {pricing.map((item) => (
@@ -402,7 +402,6 @@ function PricingSection() {
 function ProgramsSection() {
   return (
     <section id="programs" className="page-section">
-
       <h2 className="section-title">Programs &amp; Use Cases</h2>
 
       <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
@@ -460,7 +459,9 @@ function SpecsSection() {
                     {label}
                   </th>
 
-                  <td className="px-4 py-4 font-semibold sm:px-5">{value}</td>
+                  <td className="px-4 py-4 font-semibold sm:px-5">
+                    {value}
+                  </td>
                 </tr>
               ))}
             </tbody>
@@ -476,11 +477,13 @@ function MediaKitSection() {
     <section id="media" className="page-section">
       <p className="section-kicker">Media kit</p>
 
-      <h2 className="section-title">Product images for buyers and partners.</h2>
+      <h2 className="section-title">
+        Product images for buyers and partners.
+      </h2>
 
       <p className="mt-5 max-w-3xl text-lg text-muted-foreground">
-        Download images for retail review, internal approval, wholesale listings,
-        custom logo planning, and promotional presentations.
+        Download images for retail review, internal approval, wholesale
+        listings, custom logo planning, and promotional presentations.
       </p>
 
       <div className="mt-10 grid gap-12">
@@ -501,26 +504,22 @@ function MediaKitSection() {
     </section>
   );
 }
+
 function ShippingSection() {
   return (
     <section id="shipping" className="section-band">
       <div className="page-section">
-        <div className="grid gap-8 lg:grid-cols-[1fr_340px] items-start">
+        <div className="grid items-start gap-8 lg:grid-cols-[1fr_340px]">
           <div>
             <div className="flex items-center gap-3">
               <Truck className="h-8 w-8 text-[color:var(--neon)]" />
 
-              <h2 className="section-title">
-                Shipping &amp; Production
-              </h2>
+              <h2 className="section-title">Shipping &amp; Production</h2>
             </div>
 
             <div className="mt-8 grid gap-4 md:grid-cols-2">
               {shippingSections.map((section) => (
-                <article
-                  key={section.title}
-                  className="panel rounded-sm p-5"
-                >
+                <article key={section.title} className="panel rounded-sm p-5">
                   <h3 className="text-lg font-black uppercase text-[color:var(--neon)]">
                     {section.title}
                   </h3>
@@ -541,7 +540,7 @@ function ShippingSection() {
             </div>
           </div>
 
-         <aside className="panel mt-[115px] overflow-hidden rounded-sm self-start">
+          <aside className="panel mt-[115px] self-start overflow-hidden rounded-sm">
             <img
               src={shipping}
               alt="KOFENOT wholesale shipping"
@@ -575,7 +574,6 @@ function FaqSection() {
   return (
     <section id="faq" className="page-section">
       <div className="page-section-narrow">
-       
         <h2 className="section-title">FAQ</h2>
 
         <div className="mt-7 divide-y divide-[rgba(0,255,0,0.18)] border-y border-[rgba(0,255,0,0.18)]">
@@ -602,23 +600,18 @@ function FinalCta() {
 
         <p className="section-kicker mt-5">Order</p>
 
-        <h2 className="section-title">Ready to order KOFENOT™?</h2>
+        <h2 className="section-title">Ready to order KOFENOT™ wholesale?</h2>
 
         <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
-          Wholesale checkout for resale. Custom quotes for corporate gifts, logo printing, white label, licensing, and large orders.
+          Bare KOFENOT™ starts at 100 units in one industrial bulk pack.
+          Master carton: 4 packs / 400 units. Custom logo, private label,
+          licensing, and distribution are quoted separately.
         </p>
 
         <div className="mt-7 flex flex-wrap justify-center gap-3">
-          <a href={retailPackCheckoutUrl}>
+          <a href={quoteEmail}>
             <Button className="h-12 bg-[color:var(--neon)] px-8 font-black text-black hover:bg-[color:var(--neon-dim)]">
-              Order Retail Pack
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
-          </a>
-
-          <a href={retailBoxCheckoutUrl}>
-            <Button className="h-12 bg-[color:var(--neon)] px-8 font-black text-black hover:bg-[color:var(--neon-dim)]">
-              Order Retail Box
+              Request Bulk Quote
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
           </a>
@@ -628,7 +621,7 @@ function FinalCta() {
               variant="outline"
               className="h-12 border-[rgba(0,255,0,0.55)] px-8 hover:bg-[rgba(0,255,0,0.08)] hover:text-[color:var(--neon)]"
             >
-              Request Quote
+              Request Custom Quote
             </Button>
           </a>
         </div>
