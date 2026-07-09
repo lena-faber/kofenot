@@ -366,7 +366,7 @@ function PricingSection() {
       <div className="page-section">
         <h2 className="section-title">Wholesale Pricing</h2>
 
-        <div className="mt-8 grid gap-5 lg:grid-cols-4">
+       <div className="mt-8 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
           {pricing.map((item) => (
             <article
               key={item.title}
@@ -562,6 +562,10 @@ function ShippingSection() {
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
                 Send quantity, destination, deadline, and packaging needs.
               </p>
+
+              <p const retailPackCheckoutUrl =
+  "https://buy.stripe.com/00w28qgD40dScQEgcsdUY0G";
+            </p>
 
               <a href={quoteEmail} className="mt-5 inline-flex">
                 <Button className="h-11 bg-[color:var(--neon)] px-6 font-black text-black hover:bg-[color:var(--neon-dim)]">
