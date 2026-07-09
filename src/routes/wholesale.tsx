@@ -51,29 +51,36 @@ export const Route = createFileRoute("/wholesale")({
 
 const quoteEmail =
   "mailto:info@kofenot.com?subject=KOFENOT%20Wholesale%20Quote&body=Company%3A%0AUse%20case%3A%0AQuantity%3A%0ABare%20bulk%2C%20custom%20logo%2C%20private%20label%2C%20licensing%2C%20or%20distribution%3A%0ALogo%20or%20design%20needs%3A%0ANeed-by%20date%3A%0AShipping%20destination%3A%0A";
-
 const pricing = [
   {
-    title: "Bare KOFENOT™",
-    price: "Quote",
-    note: "",
-    detail: "100-unit minimum • 1 industrial bulk pack",
-    cta: "Request Bulk Quote",
+    title: "Retail-Ready Packaged Units",
+    price: "$8",
+    note: "each",
+    detail: "30-unit minimum • Individually packaged • Ready to sell",
+    cta: "Buy Retail Wholesale",
+    url: retailPackCheckoutUrl,
+  },
+  {
+    title: "Bare Bulk Pack",
+    price: "$600",
+    note: "per pack",
+    detail: "100 blank units • Industrial bulk pack • $6 each",
+    cta: "Buy 100 Bare Units",
     url: quoteEmail,
   },
   {
-    title: "Master Carton",
-    price: "Quote",
-    note: "",
-    detail: "400 units • 4 industrial bulk packs",
-    cta: "Request Carton Quote",
+    title: "Bare Master Carton",
+    price: "$2,000",
+    note: "per carton",
+    detail: "400 blank units • 4 industrial packs • $5 each",
+    cta: "Buy 400 Bare Units",
     url: quoteEmail,
   },
   {
     title: "Custom / Private Label",
     price: "Quote",
     note: "",
-    detail: "Logo, packaging, licensing, distribution",
+    detail: "Logo, special packaging, licensing, distribution",
     cta: "Request Custom Quote",
     url: quoteEmail,
   },
@@ -359,7 +366,7 @@ function PricingSection() {
       <div className="page-section">
         <h2 className="section-title">Wholesale Pricing</h2>
 
-        <div className="mt-8 grid gap-5 lg:grid-cols-3">
+        <div className="mt-8 grid gap-5 lg:grid-cols-4">
           {pricing.map((item) => (
             <article
               key={item.title}
