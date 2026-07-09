@@ -37,23 +37,27 @@ export const Route = createFileRoute("/wholesale")({
   head: () => ({
     meta: [
       {
-        title: "KOFENOT Wholesale | Bare Bulk, Custom Logo, Private Label",
+        title: "KOFENOT Wholesale | Retail, Bare Bulk, Custom Logo",
       },
       {
         name: "description",
         content:
-          "Wholesale KOFENOT bare bulk packs, custom logos, corporate gifts, private label, licensing, and distribution.",
+          "Wholesale KOFENOT retail-ready packs, bare bulk industrial packs, custom logos, private label, licensing, and distribution.",
       },
     ],
   }),
   component: Wholesale,
 });
 
+const retailPackCheckoutUrl =
+  "https://buy.stripe.com/00w28qgD40dScQEgcsdUY0G";
+
 const quoteEmail =
-  "mailto:info@kofenot.com?subject=KOFENOT%20Wholesale%20Quote&body=Company%3A%0AUse%20case%3A%0AQuantity%3A%0ABare%20bulk%2C%20custom%20logo%2C%20private%20label%2C%20licensing%2C%20or%20distribution%3A%0ALogo%20or%20design%20needs%3A%0ANeed-by%20date%3A%0AShipping%20destination%3A%0A";
+  "mailto:info@kofenot.com?subject=KOFENOT%20Wholesale%20Quote&body=Company%3A%0AUse%20case%3A%0AQuantity%3A%0ARetail-ready%2C%20bare%20bulk%2C%20custom%20logo%2C%20private%20label%2C%20licensing%2C%20or%20distribution%3A%0ALogo%20or%20design%20needs%3A%0ANeed-by%20date%3A%0AShipping%20destination%3A%0A";
+
 const pricing = [
   {
-    title: "Retail-Ready Packaged Units",
+    title: "Retail-Ready Units",
     price: "$8",
     note: "each",
     detail: "30-unit minimum • Individually packaged • Ready to sell",
@@ -61,19 +65,19 @@ const pricing = [
     url: retailPackCheckoutUrl,
   },
   {
-    title: "Bare Bulk Pack",
+    title: "Bare Industrial Pack",
     price: "$600",
     note: "per pack",
-    detail: "100 blank units • Industrial bulk pack • $6 each",
-    cta: "Buy 100 Bare Units",
+    detail: "100 blank units • $6 each • Bulk packed",
+    cta: "Request 100 Units",
     url: quoteEmail,
   },
   {
     title: "Bare Master Carton",
     price: "$2,000",
     note: "per carton",
-    detail: "400 blank units • 4 industrial packs • $5 each",
-    cta: "Buy 400 Bare Units",
+    detail: "400 blank units • $5 each • 4 industrial packs",
+    cta: "Request 400 Units",
     url: quoteEmail,
   },
   {
@@ -89,10 +93,17 @@ const pricing = [
 const programs: Program[] = [
   {
     icon: Store,
+    title: "Retail Wholesale",
+    image: coffeeShopDisplay,
+    copy:
+      "Ready-to-sell KOFENOT™ units for coffee shops, bookstores, museum shops, campus stores, and gift shops.",
+  },
+  {
+    icon: PackageCheck,
     title: "Bare Bulk Wholesale",
     image: bareProduct,
     copy:
-      "For buyers who need unpackaged KOFENOT™ units for resale, kits, events, custom packaging, or distribution.",
+      "Blank unpackaged KOFENOT™ units for kits, events, custom packaging, resale, or distribution.",
   },
   {
     icon: Tag,
@@ -116,32 +127,24 @@ const programs: Program[] = [
       "A useful giveaway people keep after trade shows, expos, conferences, and company events.",
   },
   {
-    icon: BriefcaseBusiness,
-    title: "Private Label",
+    icon: Handshake,
+    title: "Private Label / Licensing",
     image: customLogoDisplay,
     copy:
-      "KOFENOT™ supplied for your brand program, with custom logo and packaging options.",
-  },
-  {
-    icon: Handshake,
-    title: "Licensing",
-    image: giftBox,
-    copy:
-      "For regional distribution, international partners, manufacturing conversations, and larger B2B deals.",
+      "For private label programs, licensing, regional distribution, and larger B2B deals.",
   },
 ];
 
 const specs = [
   ["Product", "KOFENOT™ laptop wedge"],
   ["Trademark line", "KOFENOT™: Make Your Laptop Coffee Shop-Friendly"],
-  ["Wholesale format", "Bare KOFENOT™ units"],
-  ["Minimum order", "100 units"],
-  ["Industrial pack", "100 bare units"],
-  ["Master carton", "4 industrial packs / 400 units"],
+  ["Retail-ready wholesale", "$8 each / 30-unit minimum"],
+  ["Bare industrial pack", "$600 / 100 blank units"],
+  ["Bare master carton", "$2,000 / 400 blank units"],
+  ["Custom logo / private label", "Quote only"],
   ["Bare unit size", '2.4" W × 3.4" H × 0.4" D'],
   ["Bare unit weight", "0.9 oz"],
   ["Retail pack weight", "2.1 oz"],
-  ["Custom programs", "Quote only"],
 ];
 
 const mediaKit = [
@@ -199,25 +202,26 @@ const mediaKit = [
 
 const shippingSections = [
   {
-    title: "Bulk Packaging",
+    title: "Retail Packaging",
     items: [
-      "Bare KOFENOT™ ships in industrial bulk packaging.",
-      "Minimum order: 100 bare units / 1 industrial pack.",
-      "Master carton: 4 industrial packs / 400 units.",
+      "Retail-ready KOFENOT™ units are individually packaged.",
+      "Wholesale retail minimum: 30 units.",
+      "Retail-ready units are priced at $8 each.",
     ],
   },
   {
-    title: "Lead Time",
+    title: "Bare Bulk Packaging",
     items: [
-      "Standard wholesale orders ship from available inventory when in stock.",
-      "Custom logo, private label, and licensing orders are scheduled individually.",
+      "Bare KOFENOT™ ships blank and unpackaged.",
+      "Industrial pack: 100 blank units for $600.",
+      "Master carton: 400 blank units for $2,000.",
     ],
   },
   {
     title: "Production",
     items: [
-      "Bare KOFENOT™ is the standard wholesale product.",
-      "Custom printing and packaging require production before shipment.",
+      "Retail-ready and bare bulk orders ship from available inventory when in stock.",
+      "Custom logo, private label, and licensing orders are scheduled individually.",
     ],
   },
   {
@@ -244,16 +248,20 @@ const shippingSections = [
 
 const faq = [
   [
-    "What is the wholesale minimum?",
-    "The minimum wholesale order is 100 bare KOFENOT™ units. That is one industrial bulk pack.",
+    "What should I buy for resale?",
+    "Retail-ready packaged units. They are $8 each with a 30-unit minimum.",
   ],
   [
-    "How does the next quantity level ship?",
-    "The next standard bulk level is one master carton: 4 industrial packs / 400 units.",
+    "What is the bare bulk option?",
+    "Bare KOFENOT™ ships blank and unpackaged in an industrial pack of 100 units for $600.",
   ],
   [
-    "Are these retail-packaged?",
-    "No. Bare wholesale KOFENOT™ ships unpackaged in industrial bulk packs. Retail packaging is separate or quoted for custom programs.",
+    "What is the master carton?",
+    "One master carton contains 4 industrial packs / 400 blank units for $2,000.",
+  ],
+  [
+    "Are bare units retail-packaged?",
+    "No. Bare units are blank and bulk packed. Retail-ready units are packaged individually.",
   ],
   [
     "Can I put my logo on KOFENOT™?",
@@ -262,10 +270,6 @@ const faq = [
   [
     "Can I sell KOFENOT™ under my own brand?",
     "Yes. Private-label programs are available for qualifying quantities.",
-  ],
-  [
-    "Do you offer licensing?",
-    "Yes. Licensing and distribution opportunities are discussed individually.",
   ],
 ];
 
@@ -308,21 +312,22 @@ function HeroSection() {
           <p className="section-kicker">Wholesale</p>
 
           <h1 className="hero-title">
+            RETAIL READY.
+            <br />
             BARE BULK.
             <br />
             CUSTOM LOGO.
-            <br />
-            PRIVATE LABEL.
           </h1>
 
           <p className="hero-copy">
-            KOFENOT™ ships wholesale as bare units in industrial bulk packs.
-            Minimum order: 100 units. Master carton: 4 packs / 400 units.
+            KOFENOT™ is available as retail-ready packaged units, bare
+            industrial bulk packs, master cartons, custom logo programs,
+            private label, and licensing.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3">
             <a href="#pricing">
-              <Button className="h-12 bg-[color:var(--neon)] px-7 font-black text-black hover:bg-[color:var(--neon-dim)]">
+              <Button className="h-12 bg-[var(--neon)] px-7 font-black text-black hover:bg-[var(--neon-dim)]">
                 Buy Wholesale
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
@@ -331,7 +336,7 @@ function HeroSection() {
             <a href={quoteEmail}>
               <Button
                 variant="outline"
-                className="h-12 border-[rgba(0,255,0,0.55)] px-7 hover:bg-[rgba(0,255,0,0.08)] hover:text-[color:var(--neon)]"
+                className="h-12 border-[rgba(0,255,0,0.55)] px-7 hover:bg-[rgba(0,255,0,0.08)] hover:text-[var(--neon)]"
               >
                 Request Quote
               </Button>
@@ -366,7 +371,7 @@ function PricingSection() {
       <div className="page-section">
         <h2 className="section-title">Wholesale Pricing</h2>
 
-       <div className="mt-8 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+        <div className="mt-8 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
           {pricing.map((item) => (
             <article
               key={item.title}
@@ -393,7 +398,7 @@ function PricingSection() {
               </p>
 
               <a href={item.url} className="mt-6 inline-flex">
-                <Button className="h-11 bg-[color:var(--neon)] px-6 font-black text-black hover:bg-[color:var(--neon-dim)]">
+                <Button className="h-11 bg-[var(--neon)] px-6 font-black text-black hover:bg-[var(--neon-dim)]">
                   {item.cta}
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
@@ -424,7 +429,7 @@ function ProgramsSection() {
             />
 
             <div className="p-6">
-              <item.icon className="h-7 w-7 text-[color:var(--neon)]" />
+              <item.icon className="h-7 w-7 text-[var(--neon)]" />
 
               <h3 className="mt-5 text-xl font-black uppercase">
                 {item.title}
@@ -446,7 +451,7 @@ function SpecsSection() {
     <section id="specs" className="section-band">
       <div className="page-section-narrow">
         <div className="flex items-center gap-3">
-          <Ruler className="h-8 w-8 text-[color:var(--neon)]" />
+          <Ruler className="h-8 w-8 text-[var(--neon)]" />
 
           <div>
             <p className="section-kicker">Specs</p>
@@ -462,7 +467,7 @@ function SpecsSection() {
                   key={label}
                   className="border-t border-[rgba(0,255,0,0.18)] first:border-t-0"
                 >
-                  <th className="w-1/3 bg-[rgba(0,255,0,0.06)] px-4 py-4 text-[color:var(--neon)] sm:px-5">
+                  <th className="w-1/3 bg-[rgba(0,255,0,0.06)] px-4 py-4 text-[var(--neon)] sm:px-5">
                     {label}
                   </th>
 
@@ -519,7 +524,7 @@ function ShippingSection() {
         <div className="grid items-start gap-8 lg:grid-cols-[1fr_340px]">
           <div>
             <div className="flex items-center gap-3">
-              <Truck className="h-8 w-8 text-[color:var(--neon)]" />
+              <Truck className="h-8 w-8 text-[var(--neon)]" />
 
               <h2 className="section-title">Shipping &amp; Production</h2>
             </div>
@@ -527,7 +532,7 @@ function ShippingSection() {
             <div className="mt-8 grid gap-4 md:grid-cols-2">
               {shippingSections.map((section) => (
                 <article key={section.title} className="panel rounded-sm p-5">
-                  <h3 className="text-lg font-black uppercase text-[color:var(--neon)]">
+                  <h3 className="text-lg font-black uppercase text-[var(--neon)]">
                     {section.title}
                   </h3>
 
@@ -537,7 +542,7 @@ function ShippingSection() {
                         key={item}
                         className="flex gap-3 text-sm leading-relaxed text-muted-foreground"
                       >
-                        <PackageCheck className="mt-0.5 h-4 w-4 shrink-0 text-[color:var(--neon)]" />
+                        <PackageCheck className="mt-0.5 h-4 w-4 shrink-0 text-[var(--neon)]" />
                         <span>{item}</span>
                       </li>
                     ))}
@@ -555,7 +560,7 @@ function ShippingSection() {
             />
 
             <div className="p-5">
-              <h3 className="text-xl font-black uppercase text-[color:var(--neon)]">
+              <h3 className="text-xl font-black uppercase text-[var(--neon)]">
                 Need a shipping quote?
               </h3>
 
@@ -563,12 +568,8 @@ function ShippingSection() {
                 Send quantity, destination, deadline, and packaging needs.
               </p>
 
-              <p const retailPackCheckoutUrl =
-  "https://buy.stripe.com/00w28qgD40dScQEgcsdUY0G";
-            </p>
-
               <a href={quoteEmail} className="mt-5 inline-flex">
-                <Button className="h-11 bg-[color:var(--neon)] px-6 font-black text-black hover:bg-[color:var(--neon-dim)]">
+                <Button className="h-11 bg-[var(--neon)] px-6 font-black text-black hover:bg-[var(--neon-dim)]">
                   Request Quote
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
@@ -607,22 +608,23 @@ function FinalCta() {
   return (
     <section id="order" className="mx-auto max-w-[1320px] px-4 pb-20 lg:px-6">
       <div className="neon-border bg-[rgba(0,255,0,0.05)] p-8 text-center neon-glow md:p-12">
-        <BriefcaseBusiness className="mx-auto h-9 w-9 text-[color:var(--neon)]" />
+        <BriefcaseBusiness className="mx-auto h-9 w-9 text-[var(--neon)]" />
 
         <p className="section-kicker mt-5">Order</p>
 
         <h2 className="section-title">Ready to order KOFENOT™ wholesale?</h2>
 
         <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
-          Bare KOFENOT™ starts at 100 units in one industrial bulk pack.
-          Master carton: 4 packs / 400 units. Custom logo, private label,
-          licensing, and distribution are quoted separately.
+          Retail-ready units are $8 each with a 30-unit minimum. Bare bulk
+          starts at 100 blank units for $600. Master carton: 400 blank units for
+          $2,000. Custom logo, private label, licensing, and distribution are
+          quoted separately.
         </p>
 
         <div className="mt-7 flex flex-wrap justify-center gap-3">
-          <a href={quoteEmail}>
-            <Button className="h-12 bg-[color:var(--neon)] px-8 font-black text-black hover:bg-[color:var(--neon-dim)]">
-              Request Bulk Quote
+          <a href={retailPackCheckoutUrl}>
+            <Button className="h-12 bg-[var(--neon)] px-8 font-black text-black hover:bg-[var(--neon-dim)]">
+              Buy Retail Wholesale
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
           </a>
@@ -630,9 +632,9 @@ function FinalCta() {
           <a href={quoteEmail}>
             <Button
               variant="outline"
-              className="h-12 border-[rgba(0,255,0,0.55)] px-8 hover:bg-[rgba(0,255,0,0.08)] hover:text-[color:var(--neon)]"
+              className="h-12 border-[rgba(0,255,0,0.55)] px-8 hover:bg-[rgba(0,255,0,0.08)] hover:text-[var(--neon)]"
             >
-              Request Custom Quote
+              Request Bulk / Custom Quote
             </Button>
           </a>
         </div>
@@ -659,7 +661,7 @@ function DownloadCard({
       />
 
       <div className="p-4">
-        <h3 className="font-black italic text-[color:var(--neon)]">
+        <h3 className="font-black italic text-[var(--neon)]">
           {item.title}
         </h3>
 
