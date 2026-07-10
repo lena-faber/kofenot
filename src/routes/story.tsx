@@ -10,7 +10,6 @@ import {
   Package,
   Ruler,
   Sparkles,
-  Weight,
 } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
@@ -25,7 +24,9 @@ import designImage04 from "@/assets/lena-faber-designing-kofenot-04.jpg";
 export const Route = createFileRoute("/story")({
   head: () => ({
     meta: [
-      { title: "KOFENOT™ Press & Media Kit" },
+      {
+        title: "KOFENOT™ Press & Media Kit",
+      },
       {
         name: "description",
         content:
@@ -89,18 +90,52 @@ const facts = [
   ["Origin", "Designed in California"],
 ];
 
+const mediaImages = [
+  {
+    src: designImage00,
+    alt: "Lena Faber designing KOFENOT",
+    caption: "Lena Faber designing KOFENOT™ in Silicon Valley.",
+  },
+  {
+    src: designImage01,
+    alt: "KOFENOT development",
+    caption: "Developing the first KOFENOT™ prototypes.",
+  },
+  {
+    src: designImage02,
+    alt: "KOFENOT prototype testing",
+    caption: "Testing the hinge-lifting design.",
+  },
+  {
+    src: designImage03,
+    alt: "KOFENOT design refinement",
+    caption: "Refining the final product geometry.",
+  },
+  {
+    src: designImage04,
+    alt: "Finished KOFENOT product",
+    caption: "The finished KOFENOT™ ready for production.",
+  },
+];
+
 function PressPage() {
   return (
-    <main className="bg-[#f6f6f2] text-[#111]">
+    <main className="bg-[#f6f6f2] text-black">
       <HeroSection />
-      <section className="mx-auto grid max-w-[1480px] gap-6 px-4 py-6 lg:grid-cols-[1fr_360px] lg:px-6">
+
+      <section className="mx-auto grid max-w-[1480px] items-start gap-6 px-4 py-6 lg:grid-cols-[minmax(0,1fr)_420px] lg:px-6">
         <StorySection />
-        <ProductFacts />
+        <ProductSidebar />
       </section>
+
       <BottomGrid />
     </main>
   );
 }
+
+/* =========================================================
+   HERO SECTION — UNCHANGED
+   ========================================================= */
 
 function HeroSection() {
   return (
@@ -155,14 +190,24 @@ function HeroSection() {
   );
 }
 
+/* =========================================================
+   FULL ARTICLE
+   ========================================================= */
+
 function StorySection() {
   return (
-    <article className="rounded-sm border border-black/10 bg-white p-5 shadow-sm lg:p-7">
-      <h2 className="text-3xl font-black tracking-tight">
-        The Story Behind KOFENOT™
-      </h2>
+    <article className="rounded-sm border border-black/10 bg-white p-5 text-black shadow-sm sm:p-7 lg:p-9">
+      <header className="border-b border-black/10 pb-6">
+        <p className="text-sm font-black uppercase tracking-[0.18em] text-black/50">
+          Founder Story
+        </p>
 
-      <div className="mt-6 grid gap-6 text-base leading-relaxed text-black">
+        <h2 className="mt-2 text-3xl font-black tracking-tight text-black sm:text-4xl">
+          The Story Behind KOFENOT™
+        </h2>
+      </header>
+
+      <div className="mt-7 space-y-6 text-[17px] leading-[1.8] text-black/85">
         <p>
           A cup of coffee on a Palisades Tahoe Tuesday afternoon ended the short
           life of a new MacBook Pro of a ski instructor, Lena Faber. At her lunch
@@ -177,36 +222,6 @@ function StorySection() {
           got zero injury. Because once she was a car racer.
         </p>
 
-        <MediaFigure
-  src={designImage00}
-  alt="Lena Faber designing KOFENOT"
-  caption="Lena Faber designing KOFENOT™ in Silicon Valley."
-/>
-
-<MediaFigure
-  src={designImage01}
-  alt="KOFENOT development"
-  caption="Developing the first KOFENOT™ prototypes."
-/>
-
-<MediaFigure
-  src={designImage02}
-  alt="Prototype testing"
-  caption="Testing the hinge-lifting design."
-/>
-
-<MediaFigure
-  src={designImage03}
-  alt="Design refinement"
-  caption="Refining the final product."
-/>
-
-<MediaFigure
-  src={designImage04}
-  alt="Finished KOFENOT"
-  caption="The finished KOFENOT™ ready for production."
-/>
-
         <p>
           On Friday night she bought a new car, moved to Silicon Valley, and
           paused her larger venture, The Here™, to first launch KOFENOT™,
@@ -214,7 +229,9 @@ function StorySection() {
           laptop hinge to deflect future spills.
         </p>
 
-        <p>The problem was carrying a coffee cup in a laptop bag.</p>
+        <p className="text-xl font-black leading-snug text-black">
+          The problem was carrying a coffee cup in a laptop bag.
+        </p>
 
         <p>
           When her upside-down eureka started to grab attention, she sketched a
@@ -223,12 +240,6 @@ function StorySection() {
           work with laptops, phones, and tablets, and use no pins, magnets, or
           adhesives.
         </p>
-
-        <MediaFigure
-          src={designImage03}
-          alt="KOFENOT sketches and prototypes"
-          caption="Early product development focused on a hinge-lifting mechanism requiring no magnets, clips, pins, or adhesives."
-        />
 
         <p>
           Then one engineer saw Lena struggling to beautify a piece of plastic
@@ -243,12 +254,6 @@ function StorySection() {
           few times, and then ask the same question: how does this thing work?
         </p>
 
-        <MediaFigure
-          src={designImage04}
-          alt="KOFENOT product in hand"
-          caption="KOFENOT™ evolved through support from engineers, neighbors, manufacturers, and friends across Silicon Valley."
-        />
-
         <p>
           KOFENOT™ is a 0.9 oz flat-folding laptop wedge that lifts a laptop at
           the hinge, helps improve posture, and helps deflect spills away from
@@ -261,44 +266,109 @@ function StorySection() {
   );
 }
 
-function ProductFacts() {
+/* =========================================================
+   PRODUCT FACTS + PHOTOS
+   ========================================================= */
+
+function ProductSidebar() {
   return (
-    <aside className="rounded-sm border border-black/10 bg-white p-5 shadow-sm lg:p-7">
-      <h2 className="text-2xl font-black tracking-tight">Product Facts</h2>
+    <aside className="space-y-6">
+      <section className="rounded-sm border border-black/10 bg-white p-5 text-black shadow-sm lg:p-7">
+        <h2 className="text-2xl font-black tracking-tight text-black">
+          Product Facts
+        </h2>
 
-      <div className="mt-6 grid gap-4">
-        {facts.map(([label, value]) => (
-          <div key={label} className="grid grid-cols-[120px_1fr] gap-4 border-b border-black/10 pb-3">
-            <p className="text-sm font-black uppercase tracking-[0.12em] text-black/50">
-              {label}
-            </p>
-            <p className="text-sm font-bold leading-snug text-black">{value}</p>
-          </div>
-        ))}
-      </div>
+        <div className="mt-6 grid gap-4">
+          {facts.map(([label, value]) => (
+            <div
+              key={label}
+              className="grid grid-cols-[120px_minmax(0,1fr)] gap-4 border-b border-black/10 pb-3"
+            >
+              <p className="text-sm font-black uppercase tracking-[0.1em] text-black/50">
+                {label}
+              </p>
 
-      <Button asChild variant="outline" className="mt-6 w-full rounded-sm font-black">
-        <a href="/media/kofenot-product-specifications.pdf" download>
-          <Ruler className="mr-2 h-4 w-4" />
-          Download Specs
-        </a>
-      </Button>
+              <p className="text-sm font-bold leading-snug text-black">
+                {value}
+              </p>
+            </div>
+          ))}
+        </div>
 
-      <Button asChild className="mt-3 w-full rounded-sm font-black">
-        <a href="/wholesale">
-          Wholesale Info
-          <ArrowRight className="ml-2 h-4 w-4" />
-        </a>
-      </Button>
+        <Button
+          asChild
+          variant="outline"
+          className="mt-6 w-full rounded-sm font-black"
+        >
+          <a href="/media/kofenot-product-specifications.pdf" download>
+            <Ruler className="mr-2 h-4 w-4" />
+            Download Specs
+          </a>
+        </Button>
+
+        <Button asChild className="mt-3 w-full rounded-sm font-black">
+          <a href="/wholesale">
+            Wholesale Info
+            <ArrowRight className="ml-2 h-4 w-4" />
+          </a>
+        </Button>
+      </section>
+
+      <MediaGallery />
     </aside>
   );
 }
 
+function MediaGallery() {
+  return (
+    <section className="rounded-sm border border-black/10 bg-white p-5 text-black shadow-sm lg:p-7">
+      <div className="border-b border-black/10 pb-4">
+        <p className="text-sm font-black uppercase tracking-[0.18em] text-black/50">
+          Media Gallery
+        </p>
+
+        <h2 className="mt-1 text-2xl font-black tracking-tight text-black">
+          KOFENOT™ Development
+        </h2>
+      </div>
+
+      <div className="mt-5 space-y-6">
+        {mediaImages.map((image) => (
+          <MediaFigure
+            key={image.src}
+            src={image.src}
+            alt={image.alt}
+            caption={image.caption}
+          />
+        ))}
+      </div>
+
+      <Button
+        asChild
+        variant="outline"
+        className="mt-6 w-full rounded-sm font-black"
+      >
+        <a href="/media/kofenot-photos.zip" download>
+          <Download className="mr-2 h-4 w-4" />
+          Download High-Resolution Photos
+        </a>
+      </Button>
+    </section>
+  );
+}
+
+/* =========================================================
+   BOTTOM INFORMATION GRID
+   ========================================================= */
+
 function BottomGrid() {
   return (
-    <section className="mx-auto grid max-w-[1480px] gap-6 px-4 pb-10 lg:grid-cols-[1fr_1fr_1fr] lg:px-6">
+    <section className="mx-auto grid max-w-[1480px] gap-6 px-4 pb-10 text-black lg:grid-cols-3 lg:px-6">
       <section className="rounded-sm border border-black/10 bg-white p-6 shadow-sm">
-        <h2 className="text-2xl font-black tracking-tight">About Lena Faber</h2>
+        <h2 className="text-2xl font-black tracking-tight text-black">
+          About Lena Faber
+        </h2>
+
         <p className="mt-4 leading-relaxed text-black/75">
           Lena Faber is a journalist, former university professor, car racer,
           ski instructor, Appalachian Trail thru-hiker, and World Masters
@@ -306,13 +376,19 @@ function BottomGrid() {
           lived through: coffee, laptops, and work happening at the same table.
         </p>
 
-        <Button asChild variant="outline" className="mt-6 rounded-sm font-black">
+        <Button
+          asChild
+          variant="outline"
+          className="mt-6 rounded-sm font-black"
+        >
           <a href="/story">Read Full Story</a>
         </Button>
       </section>
 
       <section className="rounded-sm border border-black/10 bg-white p-6 shadow-sm">
-        <h2 className="text-2xl font-black tracking-tight">Download Center</h2>
+        <h2 className="text-2xl font-black tracking-tight text-black">
+          Download Center
+        </h2>
 
         <div className="mt-5 grid gap-2">
           {downloadItems.map((item) => (
@@ -320,22 +396,25 @@ function BottomGrid() {
               key={`${item.title}-${item.type}`}
               href={item.href}
               download
-              className="flex items-center justify-between rounded-sm border border-black/10 px-3 py-3 text-sm font-bold hover:border-[color:var(--neon)] hover:bg-[rgba(0,255,0,0.08)]"
+              className="flex items-center justify-between rounded-sm border border-black/10 px-3 py-3 text-sm font-bold text-black transition hover:border-[color:var(--neon)] hover:bg-[rgba(0,255,0,0.08)]"
             >
               <span className="flex items-center gap-3">
                 <item.icon className="h-4 w-4 text-[color:var(--neon)]" />
                 {item.title}
               </span>
-              <span>{item.type}</span>
+
+              <span className="text-black/60">{item.type}</span>
             </a>
           ))}
         </div>
       </section>
 
       <section className="rounded-sm border border-black/10 bg-white p-6 shadow-sm">
-        <h2 className="text-2xl font-black tracking-tight">Media Contact</h2>
+        <h2 className="text-2xl font-black tracking-tight text-black">
+          Media Contact
+        </h2>
 
-        <div className="mt-5 grid gap-4 text-sm font-bold">
+        <div className="mt-5 grid gap-4 text-sm font-bold text-black">
           <p>
             Lena Faber
             <br />
@@ -344,7 +423,13 @@ function BottomGrid() {
 
           <p className="flex items-center gap-3">
             <Mail className="h-4 w-4 text-[color:var(--neon)]" />
-            <a href="mailto:press@kofenot.com">press@kofenot.com</a>
+
+            <a
+              href="mailto:press@kofenot.com"
+              className="text-black hover:underline"
+            >
+              press@kofenot.com
+            </a>
           </p>
 
           <p className="flex items-center gap-3">
@@ -363,6 +448,10 @@ function BottomGrid() {
   );
 }
 
+/* =========================================================
+   MEDIA FIGURE
+   ========================================================= */
+
 function MediaFigure({
   alt,
   caption,
@@ -373,13 +462,15 @@ function MediaFigure({
   src: string;
 }) {
   return (
-    <figure className="my-4">
+    <figure>
       <img
         src={src}
         alt={alt}
-        className="aspect-[16/10] w-full rounded-sm object-cover"
+        loading="lazy"
+        className="aspect-[4/3] w-full rounded-sm object-cover"
       />
-      <figcaption className="mt-2 text-sm leading-snug text-black/55">
+
+      <figcaption className="mt-2 text-sm leading-snug text-black/60">
         {caption}
       </figcaption>
     </figure>
