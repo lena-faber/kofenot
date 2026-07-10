@@ -389,7 +389,14 @@ function StoryHeading({ children }: { children: ReactNode }) {
   return (
     <h3
       className="border-t border-black/10 pt-8 text-2xl font-black leading-tight tracking-tight sm:text-3xl"
-      style={blackHeadingStyle}
+      style={{
+        color: "#000000",
+        WebkitTextFillColor: "#000000",
+        background: "none",
+        WebkitBackgroundClip: "initial",
+        backgroundClip: "initial",
+        textShadow: "none",
+      }}
     >
       {children}
     </h3>
