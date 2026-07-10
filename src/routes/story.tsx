@@ -379,16 +379,15 @@ function StorySection() {
   );
 }
 
-function StoryHeading({ children }: { children: React.ReactNode }) {
+function StoryHeading({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <h3
-      className="border-t border-black/10 pt-8 text-2xl font-black not-italic leading-tight tracking-tight !text-black ![text-shadow:none] ![filter:none] sm:text-3xl"
-      style={{
-        color: "#000000",
-        textShadow: "none",
-        filter: "none",
-        fontStyle: "normal",
-      }}
+      className="border-t border-black/10 pt-8 text-2xl font-black leading-tight tracking-tight sm:text-3xl"
+      style={{ color: "#000" }}
     >
       {children}
     </h3>
