@@ -446,7 +446,7 @@ function ProductFacts() {
       <Button
         asChild
         variant="outline"
-        className="mt-6 w-full rounded-sm font-black"
+        className="mt-6 w-full rounded-sm font-black text-white"
       >
         <a href="/media/kofenot-product-specifications.pdf" download>
           <Ruler className="mr-2 h-4 w-4" />
