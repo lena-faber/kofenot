@@ -202,9 +202,17 @@ function StorySection() {
           Founder Story
         </p>
 
-        <h2 className="mt-2 text-3xl font-black leading-tight tracking-tight sm:text-4xl">
-          One Dead Laptop. One Dead Car. One-way ticket to Silicon Valley.
-        </h2>
+        <h2
+  className="mt-2 text-3xl font-black not-italic leading-tight tracking-tight !text-black ![text-shadow:none] ![filter:none] sm:text-4xl"
+  style={{
+    color: "#000000",
+    textShadow: "none",
+    filter: "none",
+    fontStyle: "normal",
+  }}
+>
+  One Dead Laptop. One Dead Car. One-way ticket to Silicon Valley.
+</h2>
       </header>
 
       <div className="mt-8 space-y-6 text-[17px] leading-[1.85]">
