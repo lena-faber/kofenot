@@ -492,7 +492,7 @@ function MediaGallery() {
       <Button
         asChild
         variant="outline"
-        className="mt-6 w-full rounded-sm font-black"
+        className="mt-6 w-full rounded-sm font-black text-white"
       >
         <a href="/media/kofenot-photos.zip" download>
           <Download className="mr-2 h-4 w-4" />
@@ -526,7 +526,7 @@ function BottomGrid() {
         <Button
           asChild
           variant="outline"
-          className="mt-6 rounded-sm font-black"
+          className="mt-6 rounded-sm font-black text-white"
         >
           <a href="/wholesale">Wholesale Info</a>
         </Button>
