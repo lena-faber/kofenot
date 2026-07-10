@@ -109,7 +109,7 @@ const mediaImages = [
   {
     src: designImage03,
     alt: "KOFENOT design refinement",
-    caption: "Refining the final product geometry.",
+    caption: "Refining the final product.",
   },
   {
     src: designImage04,
@@ -120,10 +120,10 @@ const mediaImages = [
 
 function PressPage() {
   return (
-    <main className="bg-[#f6f6f2] text-black">
+    <main className="bg-[#f6f6f2] text-[#111111]">
       <HeroSection />
 
-      <section className="mx-auto grid max-w-[1480px] items-start gap-6 px-4 py-6 lg:grid-cols-[minmax(0,1fr)_420px] lg:px-6">
+      <section className="mx-auto grid max-w-[1480px] items-start gap-6 px-4 py-6 lg:grid-cols-[minmax(0,1fr)_390px] lg:px-6">
         <StorySection />
         <ProductSidebar />
       </section>
@@ -134,7 +134,7 @@ function PressPage() {
 }
 
 /* =========================================================
-   HERO SECTION — UNCHANGED
+   HERO SECTION — UNTOUCHED
    ========================================================= */
 
 function HeroSection() {
@@ -191,146 +191,266 @@ function HeroSection() {
 }
 
 /* =========================================================
-   FULL ARTICLE
+   COMPLETE STORY
    ========================================================= */
 
 function StorySection() {
   return (
-    <article className="rounded-sm border border-black/10 bg-white p-5 text-black shadow-sm sm:p-7 lg:p-9">
-      <header className="border-b border-black/10 pb-6">
-        <p className="text-sm font-black uppercase tracking-[0.18em] text-black/50">
+    <article className="rounded-sm border border-black/10 bg-white p-5 shadow-sm [&_a]:!text-black [&_h2]:!text-black [&_h3]:!text-black [&_p]:!text-[#111111] sm:p-7 lg:p-9">
+      <header className="border-b border-black/10 pb-7">
+        <p className="!text-sm !font-black !uppercase !tracking-[0.18em] !text-black/50">
           Founder Story
         </p>
 
-        <h2 className="mt-2 text-3xl font-black tracking-tight text-black sm:text-4xl">
-          The Story Behind KOFENOT™
+        <h2 className="mt-2 text-3xl font-black leading-tight tracking-tight sm:text-4xl">
+          One Dead Laptop. One Dead Car. One-way ticket to Silicon Valley.
         </h2>
       </header>
 
-      <div className="mt-7 space-y-6 text-[17px] leading-[1.8] text-black/85">
+      <div className="mt-8 space-y-6 text-[17px] leading-[1.85]">
         <p>
-          A cup of coffee on a Palisades Tahoe Tuesday afternoon ended the short
-          life of a new MacBook Pro of a ski instructor, Lena Faber. At her lunch
-          time she was building a Web3 space-time infrastructure for human
-          history. Because once she was a journalist.
+          A cup of coffee on a snowy afternoon at Palisades Tahoe ended the
+          short life of ski instructor Lena Faber's new MacBook Pro.
         </p>
 
         <p>
-          On a Thursday heavy storm, an elderly driver hit her car from the
-          side. And action: Lena’s car flew down a steep hill like in a movie,
-          bouncing over obstacles along the way. The car was killed, the driver
-          got zero injury. Because once she was a car racer.
+          That lunchtime, she was building a space-time cube of human history.
+          Because once she was a journalist.
         </p>
 
         <p>
-          On Friday night she bought a new car, moved to Silicon Valley, and
-          paused her larger venture, The Here™, to first launch KOFENOT™,
-          inspired by an upside-down coffee cup she always placed under her new
-          laptop hinge to deflect future spills.
-        </p>
-
-        <p className="text-xl font-black leading-snug text-black">
-          The problem was carrying a coffee cup in a laptop bag.
+          After this spill drama, she started putting an upside-down coffee cup
+          under the hinge of her new laptop to deflect future spills. She wanted
+          to stay out of the repair statistics showing that spilled drinks kill
+          millions of laptops every year.
         </p>
 
         <p>
-          When her upside-down eureka started to grab attention, she sketched a
-          wedge, filed a utility patent, and 3D printed an ugly prototype,
-          knowing that one day it had to look premium, feel good in the hand,
-          work with laptops, phones, and tablets, and use no pins, magnets, or
-          adhesives.
+          One stormy noon, she miraculously escaped a highway crash and pulled
+          onto the shoulder to catch her breath. The next second, an elderly
+          driver slammed into her car from the side, sending it down a steep
+          hill. She floored the accelerator and held the steering wheel dead
+          straight, fighting to keep the car from rolling over. Just before
+          reaching the bottom, she hit the brakes hard, instantly lifted off the
+          accelerator to keep the front bumper from digging into the ground,
+          then braked gently as the car slid into the muddy field. The car died.
+          She walked away uninjured. Because once she was a car racer.
         </p>
 
         <p>
-          Then one engineer saw Lena struggling to beautify a piece of plastic
-          and offered help. Lena raised the bar: the thing had to make a loud,
-          satisfying snap when it closed. Not just close. Snap.
+          That same day, she bought another car. The next day, she moved to
+          Silicon Valley to turn her space-time cube into a BI startup.
+        </p>
+
+        <StoryHeading>Folding Cars and Flying Wedge</StoryHeading>
+
+        <p>
+          Her upside-down eureka started attracting attention, so she sketched a
+          wedge, filed a utility patent, and 3D printed an ugly prototype.
         </p>
 
         <p>
-          It took countless 3D prints to figure out the precise geometry of the
-          opening and closing mechanism. Done. People stare at KOFENOT™ as if it
-          were a Rubik’s Cube, turn it around in their hands, open and close it a
-          few times, and then ask the same question: how does this thing work?
+          One engineer watching her struggle to beautify a piece of plastic
+          offered help. Lena raised the bar: the thing had to not just close -it
+          had to snap. Loud. The engineer laughed and drew it for manufacturing.
         </p>
 
         <p>
-          KOFENOT™ is a 0.9 oz flat-folding laptop wedge that lifts a laptop at
-          the hinge, helps improve posture, and helps deflect spills away from
+          Before then, it took countless 3D prints to figure out the precise
+          geometry of the opening and closing mechanism with no pins, no
+          magnets, and no adhesives either. 1 oz. Sharp. Oh, and snap!
+        </p>
+
+        <p>
+          She didn't know yet that the person patiently helping her was one of
+          the Valley's most senior industrial engineers in charge of designing
+          flying cars...
+        </p>
+
+        <p>
+          Done. People stare at KOFENOT™ as if it were a Rubik's Cube, turn it
+          around in their hands, open and close it a few times, and then ask the
+          same question: "How does this thing work?" Including engineers!
+        </p>
+
+        <p>
+          That was the first hint that the invention wasn’t quite as simple as
+          it lookes.
+        </p>
+
+        <StoryHeading>Silicon Valley, Unfiltered</StoryHeading>
+
+        <p>
+          Then came manufacturing... Felt like online gambling. Hours of video
+          calls with a girl from a massive Chinese factory, accustomed to
+          handling far larger orders yet explaining to Lena all the nuts and
+          bolts of manufacturing. Shipping at times when no one guaranteed the
+          product would arrive at all. Disclaimer: it did.
+        </p>
+
+        <p>
+          Meanwhile, Lena was still a few thousand dollars short of paying a
+          balance to the factory. She mentioned the situation to her new friends
+          in her new Los Gatos neighborhood. The next minute her phone dinged -
+          a few thousands dollars dropped to her Zelle… No question asked. No
+          paper signed. Just people who believed she would figure it out.
+        </p>
+
+        <p>
+          More obstacles later, and during a regular phone call from a friend
+          she’d known since hiking the Appalachian Trail realized she still
+          needed more money. And the next minute the same ding. No question
+          asked. No paper signed. Just trust accumulated over thousands of miles
+          of trail.
+        </p>
+
+        <p>
+          Then packaging became the bottleneck. The owner of a huge Santa Clara
+          printing facility looked at the KOFENOT™, punched two holes in the
+          piece of hard paper: “you figure out the rest; I'll print a bunch.” No
+          money asked, no paper signed...
+        </p>
+
+        <p>
+          A friend storing her inventory in his garage. A friend storing more
+          inventory in his office.
+        </p>
+
+        <p>
+          KOFENOT™ may have one inventor. But it has many fingerprints. It feels
+          like something an entire Silicon Valley neighborhood quietly decided
+          should exist.
+        </p>
+
+        <StoryHeading>About KOFENOT™</StoryHeading>
+
+        <p>
+          KOFENOT™ is a 1 oz, flat-folding laptop wedge that lifts a laptop at
+          the hinge to improve posture while helping deflect spills away from
           the keyboard. It also serves as a stand for phones and tablets and
-          has a front-facing area for custom branding, making it suitable for
-          corporate gifts, conferences, trade shows, and promotional campaigns.
+          features a front-facing area for custom branding, making it suitable
+          for corporate gifts, conferences, trade shows, and promotional
+          campaigns.
         </p>
+
+        <div className="border-t border-black/10 pt-7">
+          <p className="!font-black">###</p>
+        </div>
+
+        <StoryHeading>Media Contact</StoryHeading>
+
+        <div className="space-y-1">
+          <p>Lena Faber</p>
+          <p>Founder, KOFENOT™</p>
+
+          <p>
+            <a
+              href="mailto:info@kofenot.com"
+              className="font-bold underline decoration-black/30 underline-offset-4 hover:decoration-black"
+            >
+              info@kofenot.com
+            </a>
+          </p>
+
+          <p>
+            <a
+              href="https://kofenot.com"
+              className="font-bold underline decoration-black/30 underline-offset-4 hover:decoration-black"
+            >
+              kofenot.com
+            </a>
+          </p>
+        </div>
+
+        <div className="space-y-1 pt-3">
+          <p>High-resolution photos available upon request.</p>
+          <p>Product samples available for review.</p>
+        </div>
       </div>
     </article>
   );
 }
 
+function StoryHeading({ children }: { children: React.ReactNode }) {
+  return (
+    <h3 className="border-t border-black/10 pt-8 text-2xl font-black leading-tight tracking-tight sm:text-3xl">
+      {children}
+    </h3>
+  );
+}
+
 /* =========================================================
-   PRODUCT FACTS + PHOTOS
+   RIGHT SIDEBAR
    ========================================================= */
 
 function ProductSidebar() {
   return (
     <aside className="space-y-6">
-      <section className="rounded-sm border border-black/10 bg-white p-5 text-black shadow-sm lg:p-7">
-        <h2 className="text-2xl font-black tracking-tight text-black">
-          Product Facts
-        </h2>
-
-        <div className="mt-6 grid gap-4">
-          {facts.map(([label, value]) => (
-            <div
-              key={label}
-              className="grid grid-cols-[120px_minmax(0,1fr)] gap-4 border-b border-black/10 pb-3"
-            >
-              <p className="text-sm font-black uppercase tracking-[0.1em] text-black/50">
-                {label}
-              </p>
-
-              <p className="text-sm font-bold leading-snug text-black">
-                {value}
-              </p>
-            </div>
-          ))}
-        </div>
-
-        <Button
-          asChild
-          variant="outline"
-          className="mt-6 w-full rounded-sm font-black"
-        >
-          <a href="/media/kofenot-product-specifications.pdf" download>
-            <Ruler className="mr-2 h-4 w-4" />
-            Download Specs
-          </a>
-        </Button>
-
-        <Button asChild className="mt-3 w-full rounded-sm font-black">
-          <a href="/wholesale">
-            Wholesale Info
-            <ArrowRight className="ml-2 h-4 w-4" />
-          </a>
-        </Button>
-      </section>
-
+      <ProductFacts />
       <MediaGallery />
     </aside>
   );
 }
 
+/* =========================================================
+   PRODUCT FACTS
+   ========================================================= */
+
+function ProductFacts() {
+  return (
+    <section className="rounded-sm border border-black/10 bg-white p-5 shadow-sm lg:p-7">
+      <h2 className="text-2xl font-black tracking-tight text-black">
+        Product Facts
+      </h2>
+
+      <div className="mt-6 grid gap-4">
+        {facts.map(([label, value]) => (
+          <div
+            key={label}
+            className="grid grid-cols-[105px_minmax(0,1fr)] gap-4 border-b border-black/10 pb-3"
+          >
+            <p className="!text-sm !font-black !uppercase !tracking-[0.12em] !text-black/50">
+              {label}
+            </p>
+
+            <p className="!text-sm !font-bold !leading-snug !text-black">
+              {value}
+            </p>
+          </div>
+        ))}
+      </div>
+
+      <Button
+        asChild
+        variant="outline"
+        className="mt-6 w-full rounded-sm font-black"
+      >
+        <a href="/media/kofenot-product-specifications.pdf" download>
+          <Ruler className="mr-2 h-4 w-4" />
+          Download Specs
+        </a>
+      </Button>
+
+      <Button asChild className="mt-3 w-full rounded-sm font-black">
+        <a href="/wholesale">
+          Wholesale Info
+          <ArrowRight className="ml-2 h-4 w-4" />
+        </a>
+      </Button>
+    </section>
+  );
+}
+
+/* =========================================================
+   PHOTOS BELOW WHOLESALE INFORMATION
+   ========================================================= */
+
 function MediaGallery() {
   return (
-    <section className="rounded-sm border border-black/10 bg-white p-5 text-black shadow-sm lg:p-7">
-      <div className="border-b border-black/10 pb-4">
-        <p className="text-sm font-black uppercase tracking-[0.18em] text-black/50">
-          Media Gallery
-        </p>
-
-        <h2 className="mt-1 text-2xl font-black tracking-tight text-black">
-          KOFENOT™ Development
-        </h2>
-      </div>
+    <section className="rounded-sm border border-black/10 bg-white p-5 shadow-sm lg:p-6">
+      <h2 className="text-2xl font-black tracking-tight text-black">
+        Media Photos
+      </h2>
 
       <div className="mt-5 space-y-6">
         {mediaImages.map((image) => (
@@ -358,22 +478,20 @@ function MediaGallery() {
 }
 
 /* =========================================================
-   BOTTOM INFORMATION GRID
+   BOTTOM GRID
    ========================================================= */
 
 function BottomGrid() {
   return (
-    <section className="mx-auto grid max-w-[1480px] gap-6 px-4 pb-10 text-black lg:grid-cols-3 lg:px-6">
+    <section className="mx-auto grid max-w-[1480px] gap-6 px-4 pb-10 lg:grid-cols-3 lg:px-6">
       <section className="rounded-sm border border-black/10 bg-white p-6 shadow-sm">
         <h2 className="text-2xl font-black tracking-tight text-black">
-          About Lena Faber
+          KOFENOT™
         </h2>
 
-        <p className="mt-4 leading-relaxed text-black/75">
-          Lena Faber is a journalist, former university professor, car racer,
-          ski instructor, Appalachian Trail thru-hiker, and World Masters
-          Athletics silver medalist. KOFENOT™ is her answer to a problem she
-          lived through: coffee, laptops, and work happening at the same table.
+        <p className="mt-4 !leading-relaxed !text-black/75">
+          KOFENOT™ is a flat-folding laptop wedge and stand for laptops, phones,
+          and tablets.
         </p>
 
         <Button
@@ -381,7 +499,7 @@ function BottomGrid() {
           variant="outline"
           className="mt-6 rounded-sm font-black"
         >
-          <a href="/story">Read Full Story</a>
+          <a href="/wholesale">Wholesale Info</a>
         </Button>
       </section>
 
@@ -414,32 +532,27 @@ function BottomGrid() {
           Media Contact
         </h2>
 
-        <div className="mt-5 grid gap-4 text-sm font-bold text-black">
-          <p>
+        <div className="mt-5 grid gap-4 text-sm font-bold">
+          <p className="!text-black">
             Lena Faber
             <br />
             Founder, KOFENOT™
           </p>
 
-          <p className="flex items-center gap-3">
+          <p className="flex items-center gap-3 !text-black">
             <Mail className="h-4 w-4 text-[color:var(--neon)]" />
 
-            <a
-              href="mailto:press@kofenot.com"
-              className="text-black hover:underline"
-            >
-              press@kofenot.com
-            </a>
+            <a href="mailto:info@kofenot.com">info@kofenot.com</a>
           </p>
 
-          <p className="flex items-center gap-3">
+          <p className="flex items-center gap-3 !text-black">
             <MapPin className="h-4 w-4 text-[color:var(--neon)]" />
             Silicon Valley, California
           </p>
         </div>
 
         <Button asChild className="mt-6 w-full rounded-sm font-black">
-          <a href="mailto:press@kofenot.com?subject=KOFENOT%20Media%20Inquiry">
+          <a href="mailto:info@kofenot.com?subject=KOFENOT%20Media%20Inquiry">
             Contact for Interview
           </a>
         </Button>
@@ -470,7 +583,7 @@ function MediaFigure({
         className="aspect-[4/3] w-full rounded-sm object-cover"
       />
 
-      <figcaption className="mt-2 text-sm leading-snug text-black/60">
+      <figcaption className="mt-2 !text-sm !leading-snug !text-black/60">
         {caption}
       </figcaption>
     </figure>
