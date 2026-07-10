@@ -215,7 +215,11 @@ function StorySection() {
         <p className="!text-sm !font-black !uppercase !tracking-[0.18em] !text-black/60">
           Founder Story
         </p>
-
+<h2
+          
+        >
+          One Dead Laptop. One Dead Car. One-way ticket to Silicon Valley.
+        </h2>
         
       </header>
 
