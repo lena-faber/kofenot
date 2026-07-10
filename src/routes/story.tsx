@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import type { ReactNode } from "react";
 import {
   ArrowRight,
   Download,
@@ -118,6 +119,13 @@ const mediaImages = [
   },
 ];
 
+const blackHeadingStyle = {
+  color: "#000000",
+  textShadow: "none",
+  filter: "none",
+  fontStyle: "normal",
+};
+
 function PressPage() {
   return (
     <main className="bg-[#f6f6f2] text-[#111111]">
@@ -134,7 +142,7 @@ function PressPage() {
 }
 
 /* =========================================================
-   HERO SECTION — UNTOUCHED
+   HERO SECTION
    ========================================================= */
 
 function HeroSection() {
@@ -153,7 +161,13 @@ function HeroSection() {
           KOFENOT™ Media Kit
         </p>
 
-        <h1 className="text-5xl font-black leading-[0.92] tracking-tight md:text-7xl">
+        <h1
+          className="text-5xl font-black leading-[0.92] tracking-tight text-[color:var(--neon)] md:text-7xl"
+          style={{
+            textShadow: "none",
+            filter: "none",
+          }}
+        >
           One Dead Laptop.
           <br />
           One Dead Car.
@@ -196,23 +210,18 @@ function HeroSection() {
 
 function StorySection() {
   return (
-    <article className="rounded-sm border border-black/10 bg-white p-5 shadow-sm [&_a]:!text-black [&_h2]:!text-black [&_h3]:!text-black [&_p]:!text-[#111111] sm:p-7 lg:p-9">
+    <article className="rounded-sm border border-black/10 bg-white p-5 shadow-sm [&_a]:!text-black [&_p]:!text-[#111111] sm:p-7 lg:p-9">
       <header className="border-b border-black/10 pb-7">
-        <p className="!text-sm !font-black !uppercase !tracking-[0.18em] !text-black/50">
+        <p className="!text-sm !font-black !uppercase !tracking-[0.18em] !text-black/60">
           Founder Story
         </p>
 
         <h2
-  className="mt-2 text-3xl font-black not-italic leading-tight tracking-tight !text-black ![text-shadow:none] ![filter:none] sm:text-4xl"
-  style={{
-    color: "#000000",
-    textShadow: "none",
-    filter: "none",
-    fontStyle: "normal",
-  }}
->
-  One Dead Laptop. One Dead Car. One-way ticket to Silicon Valley.
-</h2>
+          className="mt-2 text-3xl font-black leading-tight tracking-tight sm:text-4xl"
+          style={blackHeadingStyle}
+        >
+          One Dead Laptop. One Dead Car. One-way ticket to Silicon Valley.
+        </h2>
       </header>
 
       <div className="mt-8 space-y-6 text-[17px] leading-[1.85]">
@@ -379,15 +388,11 @@ function StorySection() {
   );
 }
 
-function StoryHeading({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+function StoryHeading({ children }: { children: ReactNode }) {
   return (
     <h3
       className="border-t border-black/10 pt-8 text-2xl font-black leading-tight tracking-tight sm:text-3xl"
-      style={{ color: "#000" }}
+      style={blackHeadingStyle}
     >
       {children}
     </h3>
@@ -415,16 +420,12 @@ function ProductFacts() {
   return (
     <section className="rounded-sm border border-black/10 bg-white p-5 shadow-sm lg:p-7">
       <h2
-  className="text-2xl font-black not-italic tracking-tight !text-black ![text-shadow:none] ![filter:none]"
-  style={{
-    color: "#000000",
-    textShadow: "none",
-    filter: "none",
-    fontStyle: "normal",
-  }}
->
-  Product Facts
-</h2>
+        className="text-2xl font-black tracking-tight"
+        style={blackHeadingStyle}
+      >
+        Product Facts
+      </h2>
+
       <div className="mt-6 grid gap-4">
         {facts.map(([label, value]) => (
           <div
@@ -464,13 +465,16 @@ function ProductFacts() {
 }
 
 /* =========================================================
-   PHOTOS BELOW WHOLESALE INFORMATION
+   MEDIA PHOTOS
    ========================================================= */
 
 function MediaGallery() {
   return (
     <section className="rounded-sm border border-black/10 bg-white p-5 shadow-sm lg:p-6">
-      <h2 className="text-2xl font-black tracking-tight text-black">
+      <h2
+        className="text-2xl font-black tracking-tight"
+        style={blackHeadingStyle}
+      >
         Media Photos
       </h2>
 
@@ -507,7 +511,10 @@ function BottomGrid() {
   return (
     <section className="mx-auto grid max-w-[1480px] gap-6 px-4 pb-10 lg:grid-cols-3 lg:px-6">
       <section className="rounded-sm border border-black/10 bg-white p-6 shadow-sm">
-        <h2 className="text-2xl font-black tracking-tight text-black">
+        <h2
+          className="text-2xl font-black tracking-tight"
+          style={blackHeadingStyle}
+        >
           KOFENOT™
         </h2>
 
@@ -526,7 +533,10 @@ function BottomGrid() {
       </section>
 
       <section className="rounded-sm border border-black/10 bg-white p-6 shadow-sm">
-        <h2 className="text-2xl font-black tracking-tight text-black">
+        <h2
+          className="text-2xl font-black tracking-tight"
+          style={blackHeadingStyle}
+        >
           Download Center
         </h2>
 
@@ -550,7 +560,10 @@ function BottomGrid() {
       </section>
 
       <section className="rounded-sm border border-black/10 bg-white p-6 shadow-sm">
-        <h2 className="text-2xl font-black tracking-tight text-black">
+        <h2
+          className="text-2xl font-black tracking-tight"
+          style={blackHeadingStyle}
+        >
           Media Contact
         </h2>
 
