@@ -9,6 +9,7 @@ const sampleCheckoutUrl = "https://buy.stripe.com/9B614m9aC2m0eYM2lCdUY0F";
 const navLinks = [
   { label: "Home", to: "/" },
   { label: "Wholesale", to: "/wholesale" },
+  { label: "Downloads", to: "/downloads" },
   { label: "The Story", to: "/story" },
 ] as const;
 
