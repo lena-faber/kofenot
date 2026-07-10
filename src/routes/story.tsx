@@ -217,7 +217,7 @@ function StorySection() {
         </p>
 
         <h2
-          className="mt-2 text-3xl font-black leading-tight tracking-tight sm:text-4xl"
+          className="mt-2 text-3xl font-black leading-tight tracking-tight sm:text-4xl text-black"
           style={blackHeadingStyle}
         >
           One Dead Laptop. One Dead Car. One-way ticket to Silicon Valley.
