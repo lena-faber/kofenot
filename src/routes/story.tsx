@@ -128,7 +128,7 @@ const blackHeadingStyle = {
 
 function PressPage() {
   return (
-    <main className="bg-[#f6f6f2] text-[#111111] [&_h2]:!text-black [&_h3]:!text-black">
+    <main className="min-h-screen">
       <HeroSection />
 
       <section className="mx-auto grid max-w-[1480px] items-start gap-6 px-4 py-6 lg:grid-cols-[minmax(0,1fr)_390px] lg:px-6">
@@ -140,7 +140,6 @@ function PressPage() {
     </main>
   );
 }
-
 /* =========================================================
    HERO SECTION
    ========================================================= */
