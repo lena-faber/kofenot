@@ -415,7 +415,7 @@ function ProductSidebar() {
 function ProductFacts() {
   return (
     <section className="rounded-sm border border-black/10 bg-white p-5 shadow-sm lg:p-7">
-      <<h2
+      <h2
   className="text-2xl font-black not-italic tracking-tight !text-black ![text-shadow:none] ![filter:none]"
   style={{
     color: "#000000",
