@@ -124,9 +124,9 @@
   h4 *,
   h5 *,
   h6 * {
-    color: #00ff00 !important;
-    text-shadow: 0 0 18px rgba(0, 255, 0, 0.45);
-  }
+  color: inherit;
+  text-shadow: none;
+}
 
   h1,
   h2,
