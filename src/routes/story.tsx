@@ -219,7 +219,8 @@ function StorySection() {
           
         >
           One Dead Laptop. One Dead Car. One-way ticket to Silicon Valley.
-        </h2>
+        </h2>className="mt-2 text-3xl font-black leading-tight tracking-tight sm:text-4xl text-black"
+          style={blackHeadingStyle}
         
       </header>
 
