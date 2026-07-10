@@ -210,14 +210,14 @@ function HeroSection() {
 
 function StorySection() {
   return (
-    <article className="rounded-sm border border-black/10 bg-white p-5 shadow-sm [&_a]:!text-black [&_p]:!text-[#111111] sm:p-7 lg:p-9">
+    <article className="rounded-sm border border-black/10 bg-white p-5 shadow-sm [&_a]:!text-black [&_p]:!text-[#111111] sm:p-7 lg:p-9 [&_h2]:text-black [&_h3]:text-black">
       <header className="border-b border-black/10 pb-7">
         <p className="!text-sm !font-black !uppercase !tracking-[0.18em] !text-black/60">
           Founder Story
         </p>
 <h2
   className="mt-2 text-3xl font-black leading-tight tracking-tight text-black sm:text-4xl"
-  style={blackHeadingStyle}
+  
 >
   One Dead Laptop. One Dead Car. One-way ticket to Silicon Valley.
 </h2>
