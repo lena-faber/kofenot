@@ -110,7 +110,7 @@ const mediaImages = [
   {
     src: designImage02,
     alt: "KOFENOT geometry testing",
-    caption: "Geometry and Ergonomics checking.",
+    caption: "Checking geometry and ergonomics.",
   },
   {
     src: designImage03,
