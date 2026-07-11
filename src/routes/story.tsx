@@ -435,7 +435,7 @@ function ProductFacts() {
             key={label}
             className="grid grid-cols-[105px_minmax(0,1fr)] gap-4 border-b border-black/10 pb-3"
           >
-            <p className="!text-sm !font-black !uppercase !tracking-[0.12em] !text-black/50">
+            <p className="!text-sm !font-black !uppercase !tracking-[0.12em] !text-white/80">
               {label}
             </p>
 
@@ -549,14 +549,14 @@ function BottomGrid() {
               key={`${item.title}-${item.type}`}
               href={item.href}
               download
-              className="flex items-center justify-between rounded-sm border border-black/10 px-3 py-3 text-sm font-bold text-black transition hover:border-[color:var(--neon)] hover:bg-[rgba(0,255,0,0.08)]"
+              className="flex items-center justify-between rounded-sm border border-black/10 px-3 py-3 text-sm font-bold text-white transition hover:border-[color:var(--neon)] hover:bg-[rgba(0,255,0,0.08)]"
             >
               <span className="flex items-center gap-3">
                 <item.icon className="h-4 w-4 text-[color:var(--neon)]" />
                 {item.title}
               </span>
 
-              <span className="text-black/60">{item.type}</span>
+              <span className="text-white/80">{item.type}</span>
             </a>
           ))}
         </div>
