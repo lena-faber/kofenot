@@ -100,17 +100,17 @@ const mediaImages = [
   {
     src: designImage00,
     alt: "Laptop wedge Eureka",
-    caption: "Laptop wedge Eureka in Silicon Valley.",
+    caption: "Laptop wedge Eureka.",
   },
   {
     src: designImage01,
     alt: "KOFENOT development",
-    caption: "Laptop wedge eureka.",
+    caption: "As simple as upside-down coffee cup.",
   },
   {
     src: designImage02,
     alt: "KOFENOT geometry testing",
-    caption: "Simplicity is the key.",
+    caption: "Geometry and Ergonomics testing.",
   },
   {
     src: designImage03,
@@ -120,7 +120,7 @@ const mediaImages = [
   {
     src: designImage04,
     alt: "Finished KOFENOT product",
-    caption: "Checking stability and ergonomics.",
+    caption: "The eedge on the hinge. Ready for manufacturing",
   },
 ];
 
