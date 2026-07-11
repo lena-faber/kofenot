@@ -381,7 +381,6 @@ function StorySection() {
         </div>
 
         <div className="space-y-1 pt-3">
-          <p>High-resolution photos available upon request.</p>
           <p>Product samples available for review.</p>
         </div>
       </div>
