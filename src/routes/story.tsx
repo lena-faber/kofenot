@@ -621,7 +621,7 @@ function MediaFigure({
         className="aspect-[4/3] w-full rounded-sm object-cover"
       />
 
-      <figcaption className="mt-2 !text-sm !leading-snug !text-black/60">
+      <figcaption className="mt-2 !text-sm !leading-snug !text-white/80">
         {caption}
       </figcaption>
     </figure>
