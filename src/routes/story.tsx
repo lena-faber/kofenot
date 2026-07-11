@@ -513,7 +513,7 @@ function MediaGallery() {
 function BottomGrid() {
   return (
     <section className="mx-auto grid max-w-[1480px] gap-6 px-4 pb-10 lg:grid-cols-3 lg:px-6">
-      <section className="rounded-sm border border-black/10 bg-white p-6 shadow-sm">
+      <section className="p-6">
         <h2
           className="text-2xl font-black tracking-tight"
           style={blackHeadingStyle}
@@ -521,7 +521,7 @@ function BottomGrid() {
           KOFENOT™
         </h2>
 
-        <p className="mt-4 !leading-relaxed !text-black/75">
+        <p className="mt-4 !leading-relaxed !text-white/80">
           KOFENOT™ is a flat-folding laptop wedge and stand for laptops, phones,
           and tablets.
         </p>
@@ -535,7 +535,7 @@ function BottomGrid() {
         </Button>
       </section>
 
-      <section className="rounded-sm border border-black/10 bg-white p-6 shadow-sm">
+      <section className="p-6">
         <h2
           className="text-2xl font-black tracking-tight"
           style={blackHeadingStyle}
@@ -562,7 +562,7 @@ function BottomGrid() {
         </div>
       </section>
 
-      <section className="rounded-sm border border-black/10 bg-white p-6 shadow-sm">
+      <section className="p-6">
         <h2
           className="text-2xl font-black tracking-tight"
           style={blackHeadingStyle}
@@ -571,19 +571,19 @@ function BottomGrid() {
         </h2>
 
         <div className="mt-5 grid gap-4 text-sm font-bold">
-          <p className="!text-black">
+          <p className="!text-white">
             Lena Faber
             <br />
             Founder, KOFENOT™
           </p>
 
-          <p className="flex items-center gap-3 !text-black">
+          <p className="flex items-center gap-3 !text-white">
             <Mail className="h-4 w-4 text-[color:var(--neon)]" />
 
             <a href="mailto:info@kofenot.com">info@kofenot.com</a>
           </p>
 
-          <p className="flex items-center gap-3 !text-black">
+          <p className="flex items-center gap-3 !text-white">
             <MapPin className="h-4 w-4 text-[color:var(--neon)]" />
             Silicon Valley, California
           </p>
@@ -591,7 +591,7 @@ function BottomGrid() {
 
         <Button asChild className="mt-6 w-full rounded-sm font-black">
           <a href="mailto:info@kofenot.com?subject=KOFENOT%20Media%20Inquiry">
-            Contact for Interview
+            Contact
           </a>
         </Button>
       </section>
