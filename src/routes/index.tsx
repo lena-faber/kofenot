@@ -270,14 +270,21 @@ function BenefitsSection() {
       <SectionHeader eyebrow="Small Wedge. Big Difference." title="Why People Buy KOFENOT™" />
 
       <div
-        className="pointer-events-none absolute right-[7%] top-[105px] z-0 hidden -rotate-12 select-none text-right font-black italic uppercase leading-[0.78] tracking-tight neon-text lg:block"
-        aria-hidden="true"
-      >
-        <div className="text-[25px] xl:text-[86px]">$1,000+</div>
-        <div className="text-[35px] xl:text-[45px]">Saved</div>
-        <div className="text-[20px] tracking-[0.16em] xl:text-[24px]">Per Spill</div>
-      </div>
+  className="pointer-events-none absolute right-[7%] top-[105px] z-0 hidden -rotate-12 select-none text-right font-black italic uppercase tracking-tight neon-text lg:block"
+  aria-hidden="true"
+>
+  <div className="text-[25px] leading-[0.82] xl:text-[86px]">
+    $1,000+
+  </div>
 
+  <div className="mt-1 text-[35px] leading-none xl:text-[45px]">
+    Saved
+  </div>
+
+  <div className="mt-2 text-[20px] leading-none tracking-[0.16em] xl:text-[24px]">
+    Per Spill
+  </div>
+</div>
       <div
         className={cx(
           layout.content,
