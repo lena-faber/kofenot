@@ -95,7 +95,7 @@ const mediaImages = [
  {
     src: heroImage,
     alt: "One second before killing a laptop",
-    caption: "Lena restoring a spill drama behind the KOFENOT™ inventoion.",
+    caption: "Restoring a spill drama behind the KOFENOT™ inventoion.",
   },
   {
     src: designImage00,
@@ -110,17 +110,17 @@ const mediaImages = [
   {
     src: designImage02,
     alt: "KOFENOT geometry testing",
-    caption: "Geometry and Ergonomics testing.",
+    caption: "Geometry and Ergonomics checking.",
   },
   {
     src: designImage03,
     alt: "KOFENOT sound refinement",
-    caption: "Checking the snap of the finished KOFENOT™.",
+    caption: "Making sure the snap is loud.",
   },
   {
     src: designImage04,
     alt: "Finished KOFENOT product",
-    caption: "The eedge on the hinge. Ready for manufacturing",
+    caption: "The hinge on the wedge. Ready for manufacturing",
   },
 ];
 
