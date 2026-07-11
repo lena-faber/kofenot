@@ -95,32 +95,32 @@ const mediaImages = [
  {
     src: heroImage,
     alt: "One second before killing a laptop",
-    caption: "Lena Faber restores a spill drama behind the KOFENOT™ inventoion.",
+    caption: "Lena restoring a spill drama behind the KOFENOT™ inventoion.",
   },
   {
     src: designImage00,
-    alt: "Lena Faber designing KOFENOT",
-    caption: "Lena Faber designing KOFENOT™ in Silicon Valley.",
+    alt: "Laptop wedge Eureka",
+    caption: "Laptop wedge Eureka in Silicon Valley.",
   },
   {
     src: designImage01,
     alt: "KOFENOT development",
-    caption: "Developing the first KOFENOT™ prototypes.",
+    caption: "Laptop wedge eureka.",
   },
   {
     src: designImage02,
-    alt: "KOFENOT prototype testing",
-    caption: "Testing the hinge-lifting design.",
+    alt: "KOFENOT geometry testing",
+    caption: "Simplicity is the key.",
   },
   {
     src: designImage03,
-    alt: "KOFENOT design refinement",
-    caption: "Refining the final product.",
+    alt: "KOFENOT sound refinement",
+    caption: "Checking the snap of the finished KOFENOT™.",
   },
   {
     src: designImage04,
     alt: "Finished KOFENOT product",
-    caption: "The finished KOFENOT™ ready for production.",
+    caption: "Checking stability and ergonomics.",
   },
 ];
 
