@@ -79,7 +79,7 @@ const downloadItems = [
 
 const facts = [
   ["Product", "KOFENOT™"],
-  ["Trademark", "KOFENOT™: Make Your Laptop Coffee Shop-Friendly."],
+  ["Trademark", "KOFENOT: Make Your Laptop Coffee Shop-Friendly™."],
   ["Category", "Laptop wedge / phone stand"],
   ["Bare weight", "0.9 oz"],
   ["Retail pack weight", "2.1 oz"],
@@ -92,6 +92,11 @@ const facts = [
 ];
 
 const mediaImages = [
+ {
+    src: heroImage,
+    alt: "One second before killing a laptop",
+    caption: "Lena Faber restores a spill drama behind the KOFENOT™ inventoion.",
+  },
   {
     src: designImage00,
     alt: "Lena Faber designing KOFENOT",
@@ -175,8 +180,8 @@ function HeroSection() {
         </h1>
 
         <p className="mt-6 max-w-2xl text-xl leading-snug text-white/90">
-          The accidental story behind a pocket-size laptop wedge that helps
-          make laptops more coffee shop-friendly.
+          The coffee accident behind KOFENOT™ that helps
+          make laptops survive coffee.
         </p>
 
         <div className="mt-8 flex flex-wrap gap-3">
