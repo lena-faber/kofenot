@@ -439,7 +439,7 @@ function ProductFacts() {
               {label}
             </p>
 
-            <p className="!text-sm !font-bold !leading-snug !text-black">
+            <p className="!text-sm !font-bold !leading-snug !text-white/80">
               {value}
             </p>
           </div>
