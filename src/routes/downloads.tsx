@@ -115,9 +115,6 @@ function DownloadsHero() {
           partners.
         </p>
 
-        <p className="mt-5 max-w-3xl font-black text-[var(--neon)]">
-          KOFENOT™: Make Your Laptop Coffee-Shop Friendly™
-        </p>
       </div>
     </section>
   );
