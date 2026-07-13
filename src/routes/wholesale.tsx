@@ -51,6 +51,11 @@ export const Route = createFileRoute("/wholesale")({
 
 const retailPackCheckoutUrl =
   "https://buy.stripe.com/00w28qgD40dScQEgcsdUY0G";
+const industrialPackCheckoutUrl =
+  "https://buy.stripe.com/8x25kC4UmgcQ7wkaS8dUY0I";
+
+const masterCartonCheckoutUrl =
+  "https://buy.stripe.com/9B6fZgfz07Gk5ocbWcdUY0J";
 
 const quoteEmail =
   "mailto:info@kofenot.com?subject=KOFENOT%20Wholesale%20Quote&body=Company%3A%0AUse%20case%3A%0AQuantity%3A%0ARetail-ready%2C%20bare%20bulk%2C%20custom%20logo%2C%20private%20label%2C%20licensing%2C%20or%20distribution%3A%0ALogo%20or%20design%20needs%3A%0ANeed-by%20date%3A%0AShipping%20destination%3A%0A";
@@ -69,16 +74,16 @@ const pricing = [
     price: "$600",
     note: "per pack",
     detail: "100 blank units • $6 each • Bulk packed",
-    cta: "Request 100 Units",
-    url: quoteEmail,
+    cta: "Buy 100 Units",
+    url: industrialPackCheckoutUrl,
   },
   {
     title: "Bare Master Carton",
     price: "$2,000",
     note: "per carton",
     detail: "400 blank units • $5 each • 4 industrial packs",
-    cta: "Request 400 Units",
-    url: quoteEmail,
+    cta: "Buy 400 Units",
+    url: masterCartonCheckoutUrl,
   },
   {
     title: "Custom / Private Label",
