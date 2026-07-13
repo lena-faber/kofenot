@@ -28,9 +28,12 @@ const footerLinks = [
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
   const location = useLocation();
-  const isSamplePage = location.pathname === "/wholesale";
-  const ctaHref = isSamplePage ? sampleCheckoutUrl : "/#pricing";
-  const ctaLabel = isSamplePage ? "Buy Sample" : "Buy Now";
+  const isSamplePage =
+  location.pathname === "/wholesale" ||
+  location.pathname === "/downloads";
+
+const ctaHref = isSamplePage ? sampleCheckoutUrl : "/#pricing";
+const ctaLabel = isSamplePage ? "Buy Sample" : "Buy Now";
 
   return (
     <header className="sticky top-0 z-[100] isolate overflow-x-hidden border-b border-white/5 bg-black/35 text-white backdrop-blur-md">
