@@ -430,14 +430,7 @@ function TestimonialQuotes({ openCheckout }: { openCheckout: (url?: string) => v
         ))}
       </div>
 
-      <Button
-        type="button"
-        onClick={() => openCheckout()}
-        className="mt-6 h-12 bg-[color:var(--neon)] px-10 font-black text-black hover:bg-[color:var(--neon-dim)]"
-      >
-        Buy Now
-        <ArrowRight className="ml-2 h-4 w-4" />
-      </Button>
+      
     </div>
   );
 }
