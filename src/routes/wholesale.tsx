@@ -335,14 +335,14 @@ function HeroSection() {
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3">
-            <a href={sampleCheckoutUrl}>
+         <a href="#pricing">
               <Button className="h-12 bg-[var(--neon)] px-7 font-black text-black hover:bg-[var(--neon-dim)]">
                 Buy Wholesale
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </a>
 
-            <a href="#pricing">
+            <a href={quoteEmail}>
               <Button
                 variant="outline"
                 className="h-12 border-[rgba(0,255,0,0.55)] px-7 hover:bg-[rgba(0,255,0,0.08)] hover:text-[var(--neon)]"
