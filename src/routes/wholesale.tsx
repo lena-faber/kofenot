@@ -321,11 +321,9 @@ function HeroSection() {
           <p className="section-kicker">Wholesale</p>
 
           <h1 className="hero-title">
-            RETAIL READY.
+            BULK.
             <br />
-            BARE BULK.
-            <br />
-            CUSTOM LOGO.
+            CUSTOM.
           </h1>
 
           <p className="hero-copy">
