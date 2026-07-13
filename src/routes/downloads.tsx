@@ -99,7 +99,7 @@ function DownloadsPage() {
 function DownloadsHero() {
   return (
     <section className="section-band">
-      <div className="page-section py-8 md:py-24">  
+      <div className="page-section py-16 md:py-16">  
 
         <p className="section-kicker mt-10">Partner resources</p>
 
