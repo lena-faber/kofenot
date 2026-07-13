@@ -98,24 +98,20 @@ function DownloadsPage() {
 
 function DownloadsHero() {
   return (
-    <section>
-      <div className="page-section py-5 md:py-5">  
+    <section className="mx-auto max-w-[1320px] px-4 pb-8 pt-8 lg:px-6">
+      <p className="section-kicker">Partner resources</p>
 
-        <p className="section-kicker mt-10">Partner resources</p>
+      <h1 className="mt-4 max-w-5xl text-5xl font-black uppercase leading-[0.95] tracking-tight md:text-7xl">
+        KOFENOT™
+        <br />
+        Resources
+      </h1>
 
-        <h1 className="mt-4 max-w-5xl text-5xl font-black uppercase leading-[0.95] tracking-tight md:text-7xl">
-          KOFENOT™
-          <br />
-          Resources
-        </h1>
-
-        <p className="mt-7 max-w-3xl text-lg leading-relaxed text-muted-foreground md:text-xl">
-          Sales presentations, product specifications, media assets, logos,
-          and product data for retailers, corporations, distributors, and
-          partners.
-        </p>
-
-      </div>
+      <p className="mt-6 max-w-3xl text-lg leading-relaxed text-muted-foreground md:text-xl">
+        Sales presentations, product specifications, media assets, logos,
+        and product data for retailers, corporations, distributors, and
+        partners.
+      </p>
     </section>
   );
 }
