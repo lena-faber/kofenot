@@ -342,7 +342,7 @@ function HeroSection() {
               </Button>
             </a>
 
-            <a href={quoteEmail}>
+            <a href="#pricing">
               <Button
                 variant="outline"
                 className="h-12 border-[rgba(0,255,0,0.55)] px-7 hover:bg-[rgba(0,255,0,0.08)] hover:text-[var(--neon)]"
