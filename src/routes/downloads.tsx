@@ -106,7 +106,7 @@ function DownloadsHero() {
         <h1 className="mt-4 max-w-5xl text-5xl font-black uppercase leading-[0.95] tracking-tight md:text-7xl">
           KOFENOT™
           <br />
-          Downloads
+          Resources
         </h1>
 
         <p className="mt-7 max-w-3xl text-lg leading-relaxed text-muted-foreground md:text-xl">
