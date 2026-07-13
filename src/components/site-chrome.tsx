@@ -31,7 +31,6 @@ export function SiteHeader() {
   const isSamplePage =
   location.pathname === "/wholesale" ||
   location.pathname === "/downloads"; 
-  location.pathname === "/referrals";
 
 const ctaHref = isSamplePage ? sampleCheckoutUrl : "/#pricing";
 const ctaLabel = isSamplePage ? "Buy Sample" : "Buy Now";
