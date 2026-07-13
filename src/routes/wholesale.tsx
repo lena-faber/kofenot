@@ -321,14 +321,14 @@ function HeroSection() {
           <p className="section-kicker">Wholesale</p>
 
           <h1 className="hero-title">
-            BULK.
+            RETAIL READY.
             <br />
             CUSTOM.
           </h1>
 
           <p className="hero-copy">
-            KOFENOT™ is available as retail-ready packaged units, bare
-            industrial bulk packs, master cartons, custom logo programs,
+            Retail-ready packaged units, bare
+            bulk packs, master cartons, custom programs,
             private label, and licensing.
           </p>
 
