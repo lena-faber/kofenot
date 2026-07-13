@@ -98,13 +98,11 @@ function DownloadsPage() {
 
 function DownloadsHero() {
   return (
-    <section className="mx-auto max-w-[1320px] px-4 pb-8 pt-8 lg:px-6">
+    <section className="mx-auto max-w-[1320px] px-4 pb-5 pt-10 lg:px-6">
       <p className="section-kicker">Partner resources</p>
 
       <h1 className="mt-4 max-w-5xl text-5xl font-black uppercase leading-[0.95] tracking-tight md:text-7xl">
-        KOFENOT™
-        <br />
-        Resources
+        KOFENOT™ Resources
       </h1>
 
       <p className="mt-6 max-w-3xl text-lg leading-relaxed text-muted-foreground md:text-xl">
