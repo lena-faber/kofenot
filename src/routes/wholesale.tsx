@@ -90,7 +90,7 @@ const pricing = [
     price: "Quote",
     note: "",
     detail: "Logo, special packaging, licensing, distribution",
-    cta: "Request Custom Quote",
+    cta: "Request Quote",
     url: quoteEmail,
   },
 ];
