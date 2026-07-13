@@ -101,7 +101,7 @@ function DownloadsHero() {
     <section className="mx-auto max-w-[1320px] px-4 pb-1 pt-15 lg:px-6">
      
       <h1 className="mt-4 max-w-5xl text-5xl font-black uppercase leading-[0.95] tracking-tight md:text-7xl">
-        KOFENOT™ Resources Center
+        KOFENOT™ Resource Center
       </h1>
 
       <p className="mt-6 max-w-3xl text-lg leading-relaxed text-muted-foreground md:text-xl">
