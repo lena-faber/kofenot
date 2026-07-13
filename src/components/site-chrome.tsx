@@ -30,7 +30,7 @@ export function SiteHeader() {
   const location = useLocation();
   const isSamplePage =
   location.pathname === "/wholesale" ||
-  location.pathname === "/downloads";
+  location.pathname === "/downloads"; ||
   location.pathname === "/referrals";
 
 const ctaHref = isSamplePage ? sampleCheckoutUrl : "/#pricing";
