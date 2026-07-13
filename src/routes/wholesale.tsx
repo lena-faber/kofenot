@@ -42,7 +42,7 @@ export const Route = createFileRoute("/wholesale")({
       {
         name: "description",
         content:
-          "Wholesale KOFENOT retail-ready packs, bare bulk industrial packs, custom logos, private label, licensing, and distribution.",
+          "Wholesale KOFENOT retail-ready packs, bare bulk packs, custom logos, private label, licensing, and distribution.",
       },
     ],
   }),
@@ -74,7 +74,7 @@ const pricing = [
     url: retailPackCheckoutUrl,
   },
   {
-    title: "Bare Industrial Pack",
+    title: "Bare Pack",
     price: "$600",
     note: "per pack",
     detail: "100 blank units • $6 each • Bulk packed",
@@ -85,7 +85,7 @@ const pricing = [
     title: "Bare Master Carton",
     price: "$2,000",
     note: "per carton",
-    detail: "400 blank units • $5 each • 4 industrial packs",
+    detail: "400 blank units • $5 each • 4 bare packs",
     cta: "Buy 400 Units",
     url: masterCartonCheckoutUrl,
   },
@@ -222,7 +222,7 @@ const shippingSections = [
     title: "Bare Bulk Packaging",
     items: [
       "Bare KOFENOT™ ships blank and unpackaged.",
-      "Industrial pack: 100 blank units for $600.",
+      "Bare pack: 100 blank units for $600.",
       "Master carton: 400 blank units for $2,000.",
     ],
   },
@@ -262,11 +262,11 @@ const faq = [
   ],
   [
     "What is the bare bulk option?",
-    "Bare KOFENOT™ ships blank and unpackaged in an industrial pack of 100 units for $600.",
+    "Bare KOFENOT™ ships blank and unpackaged in an bare pack of 100 units for $600.",
   ],
   [
     "What is the master carton?",
-    "One master carton contains 4 industrial packs / 400 blank units for $2,000.",
+    "One master carton contains 4 bare packs / 400 blank units for $2,000.",
   ],
   [
     "Are bare units retail-packaged?",
