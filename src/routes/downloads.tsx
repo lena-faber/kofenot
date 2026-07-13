@@ -99,14 +99,7 @@ function DownloadsPage() {
 function DownloadsHero() {
   return (
     <section className="section-band">
-      <div className="page-section py-16 md:py-24">
-        <Link
-          to="/wholesale"
-          className="inline-flex items-center gap-2 text-sm font-black uppercase tracking-[0.16em] text-[var(--neon)]"
-        >
-          <ArrowLeft className="h-4 w-4" />
-          Wholesale
-        </Link>
+      <div className="page-section py-16 md:py-24">  
 
         <p className="section-kicker mt-10">Partner resources</p>
 
