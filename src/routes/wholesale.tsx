@@ -49,8 +49,12 @@ export const Route = createFileRoute("/wholesale")({
   component: Wholesale,
 });
 
+const sampleCheckoutUrl =
+  "https://buy.stripe.com/9B614m9aC2m0eYM2lCdUY0F";
+
 const retailPackCheckoutUrl =
   "https://buy.stripe.com/00w28qgD40dScQEgcsdUY0G";
+
 const industrialPackCheckoutUrl =
   "https://buy.stripe.com/8x25kC4UmgcQ7wkaS8dUY0I";
 
@@ -331,9 +335,9 @@ function HeroSection() {
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3">
-            <a href="#pricing">
+            <a href={sampleCheckoutUrl}>
               <Button className="h-12 bg-[var(--neon)] px-7 font-black text-black hover:bg-[var(--neon-dim)]">
-                Buy Wholesale
+                Buy Sample
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </a>
