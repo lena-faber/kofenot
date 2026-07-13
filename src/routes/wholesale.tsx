@@ -77,7 +77,7 @@ const pricing = [
     title: "Bare Pack",
     price: "$600",
     note: "per pack",
-    detail: "100 blank units • $6 each • Bulk packed",
+    detail: "100 bare units • $6 each • Bulk packed",
     cta: "Buy 100 Units",
     url: industrialPackCheckoutUrl,
   },
@@ -85,7 +85,7 @@ const pricing = [
     title: "Bare Master Carton",
     price: "$2,000",
     note: "per carton",
-    detail: "400 blank units • $5 each • 4 bare packs",
+    detail: "400 bare units • $5 each • 4 bare packs",
     cta: "Buy 400 Units",
     url: masterCartonCheckoutUrl,
   },
@@ -112,7 +112,7 @@ const programs: Program[] = [
     title: "Bare Bulk Wholesale",
     image: bareProduct,
     copy:
-      "Blank unpackaged KOFENOT™ units for kits, events, custom packaging, resale, or distribution.",
+      "Bare unpackaged KOFENOT™ units for kits, events, custom packaging, resale, or distribution.",
   },
   {
     icon: Tag,
@@ -148,8 +148,8 @@ const specs = [
   ["Product", "KOFENOT™ laptop wedge"],
   ["Trademark line", "KOFENOT™: Make Your Laptop Coffee Shop-Friendly"],
   ["Retail-ready wholesale", "$8 each / 30-unit minimum"],
-  ["Bare industrial pack", "$600 / 100 blank units"],
-  ["Bare master carton", "$2,000 / 400 blank units"],
+  ["Bare industrial pack", "$600 / 100 bare units"],
+  ["Bare master carton", "$2,000 / 400 bare units"],
   ["Custom logo / private label", "Quote only"],
   ["Bare unit size", '2.4" W × 3.4" H × 0.4" D'],
   ["Bare unit weight", "0.9 oz"],
@@ -221,9 +221,9 @@ const shippingSections = [
   {
     title: "Bare Bulk Packaging",
     items: [
-      "Bare KOFENOT™ ships blank and unpackaged.",
-      "Bare pack: 100 blank units for $600.",
-      "Master carton: 400 blank units for $2,000.",
+      "Bare KOFENOT™ ships bare and unpackaged.",
+      "Bare pack: 100 bare units for $600.",
+      "Master carton: 400 bare units for $2,000.",
     ],
   },
   {
@@ -266,11 +266,11 @@ const faq = [
   ],
   [
     "What is the master carton?",
-    "One master carton contains 4 bare packs / 400 blank units for $2,000.",
+    "One master carton contains 4 bare packs / 400 bare units for $2,000.",
   ],
   [
     "Are bare units retail-packaged?",
-    "No. Bare units are blank and bulk packed. Retail-ready units are packaged individually.",
+    "No. Bare units are bare and bulk packed. Retail-ready units are packaged individually.",
   ],
   [
     "Can I put my logo on KOFENOT™?",
@@ -623,7 +623,7 @@ function FinalCta() {
 
         <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
           Retail-ready units are $8 each with a 30-unit minimum. Bare bulk
-          starts at 100 blank units for $600. Master carton: 400 blank units for
+          starts at 100 bare units for $600. Master carton: 400 bare units for
           $2,000. Custom logo, private label, licensing, and distribution are
           quoted separately.
         </p>
