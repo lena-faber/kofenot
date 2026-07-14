@@ -12,7 +12,8 @@ import { LeadProvider } from "@/components/lead-provider";
 import { SiteFooter, SiteHeader } from "@/components/site-chrome";
 import appCss from "../styles.css?url";
 import { Home } from "./index";
-
+{ rel: "stylesheet", href: appCss },
+      
 const siteTitle =
   "KOFENOT™ | Custom Logo Laptop Wedge for Corporate Gifts & IT Teams";
 
