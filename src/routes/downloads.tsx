@@ -1,8 +1,6 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 import {
-  ArrowLeft,
   Download,
-  FileArchive,
   FileSpreadsheet,
   FileText,
   Images,
@@ -20,7 +18,7 @@ export const Route = createFileRoute("/downloads")({
       {
         name: "description",
         content:
-          "Download KOFENOT retail, corporate, and distribution sales decks, product specifications, product images, logos, and CSV product data.",
+          "Download KOFENOT retail, corporate, and distribution sales decks, product specifications, product images, and CSV product data.",
       },
     ],
   }),
@@ -57,7 +55,7 @@ const downloads = [
     format: "PDF",
     description:
       "Product dimensions, weight, packaging, pricing, minimum quantities, production, shipping, private label, and licensing information.",
-    file: "/downloads/kofenot-product-specifications.pdf",
+    file: "/downloads/KOFENOT_Product_Specifications.pdf",
     icon: FileText,
   },
   {
@@ -69,19 +67,11 @@ const downloads = [
     icon: Images,
   },
   {
-    title: "Logo Package",
-    format: "ZIP",
-    description:
-      "KOFENOT logos and approved brand assets for retail listings, presentations, press, and partner materials.",
-    file: "/downloads/kofenot-logo-package.zip",
-    icon: FileArchive,
-  },
-  {
     title: "CSV Product Data",
     format: "CSV",
     description:
       "Structured product information for retailer, distributor, inventory, and e-commerce systems.",
-    file: "/downloads/kofenot-product-data.csv",
+    file: "/downloads/Product%20Data%20Sheet.csv",
     icon: FileSpreadsheet,
   },
 ];
@@ -99,15 +89,13 @@ function DownloadsPage() {
 function DownloadsHero() {
   return (
     <section className="mx-auto max-w-[1320px] px-4 pb-1 pt-15 lg:px-6">
-     
       <h1 className="mt-4 max-w-5xl text-5xl font-black uppercase leading-[0.95] tracking-tight md:text-7xl">
         KOFENOT™ Resource Center
       </h1>
 
       <p className="mt-6 max-w-3xl text-lg leading-relaxed text-muted-foreground md:text-xl">
-        Sales presentations, product specifications, media assets, logos,
-        and product data for retailers, corporations, distributors, and
-        partners.
+        Sales presentations, product specifications, media assets, and product
+        data for retailers, corporations, distributors, and partners.
       </p>
     </section>
   );
@@ -143,11 +131,7 @@ function DownloadsGrid() {
                 {item.description}
               </p>
 
-              <a
-                href={item.file}
-                download
-                className="mt-7 block"
-              >
+              <a href={item.file} download className="mt-7 block">
                 <Button className="h-12 w-full bg-[var(--neon)] font-black uppercase tracking-[0.12em] text-black hover:bg-[var(--neon-dim)]">
                   <Download className="mr-2 h-4 w-4" />
                   Download {item.format}
