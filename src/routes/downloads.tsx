@@ -58,14 +58,7 @@ const downloads = [
     file: "/downloads/KOFENOT_Product_Specifications.pdf",
     icon: FileText,
   },
-  {
-    title: "Product Images",
-    format: "ZIP",
-    description:
-      "High-resolution product, retail packaging, lifestyle, custom branding, and promotional images.",
-    file: "https://raw.githubusercontent.com/lena-faber/kofenot/main/public/downloads/KOFENOT_Product_Images.zip",
-    icon: Images,
-  },
+ 
   {
     title: "CSV Product Data",
     format: "CSV",
