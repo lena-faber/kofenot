@@ -263,7 +263,7 @@ const faq = [
   ],
   [
     "What is the bare bulk option?",
-    "Bare KOFENOT™ ships blank and unpackaged in an bare pack of 100 units for $600.",
+    "Bare KOFENOT™ ships blank and unpackaged in a bare pack of 100 units for $600.",
   ],
   [
     "What is the master carton?",
