@@ -1,0 +1,4 @@
+product_name,SKU,quantity_units,unit_price_usd,total_price_usd,bare_unit_dimensions_in,bare_unit_weight_oz,package_dimensions_in,package_weight_lb
+KOFENOT™ Laptop Wedge (Retail package),KFN-RP,30,8.00,240.00,2.4 x 3.4 x 0.4,0.9,7 x 1.3,0.13
+KOFENOT™ Laptop Wedge (Bare pack),KFN-BP,100,6.00,600.00,2.4 x 3.4 x 0.4,0.9,,6.25
+KOFENOT™ Laptop Wedge (Master carton),KFN-MC,400,5.00,2000.00,2.4 x 3.4 x 0.4,0.9,9.5 x 15.5 x 8,25
