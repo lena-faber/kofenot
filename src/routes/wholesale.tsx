@@ -146,14 +146,15 @@ const programs: Program[] = [
 
 const specs = [
   ["Product", "KOFENOT™ laptop wedge"],
-  ["Trademark line", "KOFENOT™: Make Your Laptop Coffee Shop-Friendly"],
+  ["Trademark line", "KOFENOT: Make Your Laptop Coffee Shop-Friendly™"],
   ["Retail-ready wholesale", "$8 each / 30-unit minimum"],
   ["Bare industrial pack", "$600 / 100 bare units"],
   ["Bare master carton", "$2,000 / 400 bare units"],
-  ["Custom logo / private label", "Quote only"],
+  ["Custom logo / private label", "quote"],
   ["Bare unit size", '2.4" W × 3.4" H × 0.4" D'],
   ["Bare unit weight", "0.9 oz"],
   ["Retail pack weight", "2.1 oz"],
+   ["Retail pack dimensions", "13 x 7""],
 ];
 
 const mediaKit = [
