@@ -154,7 +154,7 @@ const specs = [
   ["Bare unit size", '2.4" W × 3.4" H × 0.4" D'],
   ["Bare unit weight", "0.9 oz"],
   ["Retail pack weight", "2.1 oz"],
-   ["Retail pack dimensions", "13 x 7""],
+  ["Retail pack dimensions", "7" W x 13" H"],
 ];
 
 const mediaKit = [
