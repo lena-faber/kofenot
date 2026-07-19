@@ -502,7 +502,14 @@ function ProductDetailsSection() {
   const details = [
     ["Size", "3.4 × 2.4 × 0.4 in"],
     ["Weight", "0.9 oz"],
-    ["Material", "Made from durable ABS plastic<br/>tested by SGS for compliance with EU RoHS restricted-substance limits."],
+    [
+      "Material",
+      <>
+        Made from durable ABS plastic
+        <br />
+        tested by SGS for compliance with EU RoHS restricted-substance limits.
+      </>,
+    ],
     ["Attachment", "No magnets, clips, or adhesives"],
     ["Devices", "Laptops, phones, and tablets"],
   ];
@@ -512,34 +519,35 @@ function ProductDetailsSection() {
       id="product-details"
       className={cx(layout.section, layout.standard)}
     >
-      <SectionHeader
-        title={
-          <>
-            Product <span className="neon-text">Details</span>
-          </>
-        }
-      />
+      <div className="grid items-start gap-8 lg:grid-cols-2">
+        <div>
+          <SectionHeader
+            title={
+              <>
+                Product <span className="neon-text">Details</span>
+              </>
+            }
+          />
 
-      <div className="mt-6 grid items-center gap-8 lg:grid-cols-2">
+          <Reveal delay={0.08}>
+            <div className="mt-6 overflow-hidden border-y border-[rgba(0,255,0,0.18)]">
+              {details.map(([label, value]) => (
+                <div
+                  key={label}
+                  className="grid gap-2 border-b border-[rgba(0,255,0,0.12)] py-5 last:border-b-0 sm:grid-cols-[190px_1fr]"
+                >
+                  <div className="text-sm font-black uppercase tracking-[0.08em] text-white">
+                    {label}
+                  </div>
 
-        <Reveal delay={0.08}>
-          <div className="overflow-hidden border-y border-[rgba(0,255,0,0.18)]">
-            {details.map(([label, value]) => (
-              <div
-                key={label}
-                className="grid gap-2 border-b border-[rgba(0,255,0,0.12)] py-5 last:border-b-0 sm:grid-cols-[190px_1fr]"
-              >
-                <div className="text-sm font-black uppercase tracking-[0.08em] text-white">
-                  {label}
+                  <div className="text-sm leading-relaxed text-muted-foreground">
+                    {value}
+                  </div>
                 </div>
-
-                <div className="text-sm leading-relaxed text-muted-foreground">
-                  {value}
-                </div>
-              </div>
-            ))}
-          </div>
-        </Reveal>
+              ))}
+            </div>
+          </Reveal>
+        </div>
 
         <Reveal>
           <div className="overflow-hidden rounded-sm bg-white">
@@ -550,7 +558,6 @@ function ProductDetailsSection() {
             />
           </div>
         </Reveal>
-        
       </div>
     </section>
   );
