@@ -502,7 +502,7 @@ function ProductDetailsSection() {
   const details = [
     ["Size", "3.4 × 2.4 × 0.4 in"],
     ["Weight", "0.9 oz"],
-    ["Material", "Made from durable ABS plastic tested by SGS for compliance with EU RoHS restricted-substance limits."],
+    ["Material", "Made from durable ABS plastic<br/>tested by SGS for compliance with EU RoHS restricted-substance limits."],
     ["Attachment", "No magnets, clips, or adhesives"],
     ["Devices", "Laptops, phones, and tablets"],
   ];
