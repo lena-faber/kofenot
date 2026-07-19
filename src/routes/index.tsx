@@ -171,6 +171,7 @@ export function Home() {
       <HowItWorksSection />
       <ReviewsSection openCheckout={openCheckout} />
       <PricingSection openCheckout={openCheckout} />
+      <ProductDetailsSection />
       <FaqSection />
 
       <Dialog open={videoOpen} onOpenChange={setVideoOpen}>
@@ -494,6 +495,44 @@ function PricingCard({
         <ArrowRight className="ml-2 h-4 w-4" />
       </Button>
     </article>
+  );
+}
+
+function ProductDetailsSection() {
+  const details = [
+    ["Size", "3.4 × 2.4 × 0.4 in"],
+    ["Weight", "0.9 oz"],
+    ["Material", "Durable ABS plastic"],
+    ["Material Testing", "SGS tested for compliance with EU RoHS restricted-substance limits"],
+    ["Attachment", "No magnets, clips, or adhesives"],
+    ["Devices", "Laptops, phones, and tablets"],
+  ];
+
+  return (
+    <section id="product-details" className={cx(layout.section, layout.narrow)}>
+      <SectionHeader
+        title={
+          <>
+            Product <span className="neon-text">Details</span>
+          </>
+        }
+      />
+
+      <div className="mt-5 overflow-hidden border-y border-[rgba(0,255,0,0.18)]">
+        {details.map(([label, value]) => (
+          <div
+            key={label}
+            className="grid gap-2 border-b border-[rgba(0,255,0,0.12)] py-4 last:border-b-0 md:grid-cols-[220px_1fr]"
+          >
+            <div className="text-sm font-black uppercase tracking-[0.08em] text-white">
+              {label}
+            </div>
+
+            <div className="text-sm text-muted-foreground">{value}</div>
+          </div>
+        ))}
+      </div>
+    </section>
   );
 }
 
