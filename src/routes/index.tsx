@@ -22,6 +22,7 @@ import fidget from "@/assets/kofeenot-fidget.jpg";
 import giftBox from "@/assets/kofenot-gift-box.jpeg";
 import neck from "@/assets/kofeenot-neck.jpg";
 import safeSpill from "@/assets/safe-spill.jpeg";
+import spillSafeProduct from "@/assets/spill-safe.jpeg";
 import threeDevices from "@/assets/kofenot-3-devices.jpg";
 
 export const Route = createFileRoute("/")({ component: Home });
@@ -497,19 +498,24 @@ function PricingCard({
     </article>
   );
 }
-
 function ProductDetailsSection() {
   const details = [
     ["Size", "3.4 × 2.4 × 0.4 in"],
     ["Weight", "0.9 oz"],
     ["Material", "Durable ABS plastic"],
-    ["Material Testing", "SGS tested for compliance with EU RoHS restricted-substance limits"],
+    [
+      "Material Testing",
+      "SGS tested for compliance with EU RoHS restricted-substance limits",
+    ],
     ["Attachment", "No magnets, clips, or adhesives"],
     ["Devices", "Laptops, phones, and tablets"],
   ];
 
   return (
-    <section id="product-details" className={cx(layout.section, layout.narrow)}>
+    <section
+      id="product-details"
+      className={cx(layout.section, layout.standard)}
+    >
       <SectionHeader
         title={
           <>
@@ -518,19 +524,35 @@ function ProductDetailsSection() {
         }
       />
 
-      <div className="mt-5 overflow-hidden border-y border-[rgba(0,255,0,0.18)]">
-        {details.map(([label, value]) => (
-          <div
-            key={label}
-            className="grid gap-2 border-b border-[rgba(0,255,0,0.12)] py-4 last:border-b-0 md:grid-cols-[220px_1fr]"
-          >
-            <div className="text-sm font-black uppercase tracking-[0.08em] text-white">
-              {label}
-            </div>
-
-            <div className="text-sm text-muted-foreground">{value}</div>
+      <div className="mt-6 grid items-center gap-8 lg:grid-cols-2">
+        <Reveal>
+          <div className="overflow-hidden rounded-sm bg-white">
+            <img
+              src={spillSafeProduct}
+              alt="KOFENOT™ SPILL SAFE laptop wedge"
+              className="aspect-square h-full w-full object-contain"
+            />
           </div>
-        ))}
+        </Reveal>
+
+        <Reveal delay={0.08}>
+          <div className="overflow-hidden border-y border-[rgba(0,255,0,0.18)]">
+            {details.map(([label, value]) => (
+              <div
+                key={label}
+                className="grid gap-2 border-b border-[rgba(0,255,0,0.12)] py-5 last:border-b-0 sm:grid-cols-[190px_1fr]"
+              >
+                <div className="text-sm font-black uppercase tracking-[0.08em] text-white">
+                  {label}
+                </div>
+
+                <div className="text-sm leading-relaxed text-muted-foreground">
+                  {value}
+                </div>
+              </div>
+            ))}
+          </div>
+        </Reveal>
       </div>
     </section>
   );
