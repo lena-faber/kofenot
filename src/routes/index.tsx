@@ -525,15 +525,6 @@ function ProductDetailsSection() {
       />
 
       <div className="mt-6 grid items-center gap-8 lg:grid-cols-2">
-        <Reveal>
-          <div className="overflow-hidden rounded-sm bg-white">
-            <img
-              src={spillSafeProduct}
-              alt="KOFENOT™ SPILL SAFE laptop wedge"
-              className="aspect-square h-full w-full object-contain"
-            />
-          </div>
-        </Reveal>
 
         <Reveal delay={0.08}>
           <div className="overflow-hidden border-y border-[rgba(0,255,0,0.18)]">
@@ -553,6 +544,17 @@ function ProductDetailsSection() {
             ))}
           </div>
         </Reveal>
+
+        <Reveal>
+          <div className="overflow-hidden rounded-sm bg-white">
+            <img
+              src={spillSafeProduct}
+              alt="KOFENOT™ SPILL SAFE laptop wedge"
+              className="aspect-square h-full w-full object-contain"
+            />
+          </div>
+        </Reveal>
+        
       </div>
     </section>
   );
