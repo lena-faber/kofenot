@@ -560,7 +560,7 @@ function MediaKitSection() {
       <div className="mt-10 grid gap-12">
         {mediaKit.map((group) => (
           <div key={group.group}>
-            <h3 className="text-3xl font-black italic neon-text">
+            <h3 className="text-3xl font-black neon-text">
               {group.group}
             </h3>
 
@@ -720,7 +720,7 @@ function DownloadCard({
       />
 
       <div className="p-4">
-        <h3 className="font-black italic text-[var(--neon)]">
+        <h3 className="font-black text-[var(--neon)]">
           {item.title}
         </h3>
 
