@@ -353,7 +353,7 @@ function StepCard({
   return (
     <article className="panel relative h-full rounded-sm p-7">
       <div className="text-6xl font-black leading-none neon-text">{number}</div>
-      <h3 className="mt-4 text-xl font-bold">{title}</h3>
+      <h3>{title}</h3>
       <p className="mt-2 text-sm text-muted-foreground">{description}</p>
       <div className="absolute right-7 top-7 h-1 w-12 bg-[color:var(--neon)]" />
     </article>
@@ -572,7 +572,7 @@ function FaqSection() {
       >
         {faq.map(([question, answer]) => (
           <div key={question} className="grid gap-2 py-6 md:grid-cols-[.8fr_1.2fr]">
-            <h3 className="text-lg font-black uppercase">{question}</h3>
+            <h3>{title}</h3>
             <p className={text.body}>{answer}</p>
           </div>
         ))}
