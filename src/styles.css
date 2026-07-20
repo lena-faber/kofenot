@@ -1,7 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800;900&display=swap");
-@import "tailwindcss" source(none); 
+@import "tailwindcss" source(none);
 @source "../src";
 @import "tw-animate-css";
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
@@ -73,7 +74,11 @@
     max-width: 100%;
     overflow-x: hidden;
     background:
-      radial-gradient(circle, rgba(0, 255, 0, 0.22) 1px, transparent 1.4px),
+      radial-gradient(
+        circle,
+        rgba(0, 255, 0, 0.22) 1px,
+        transparent 1.4px
+      ),
       #000;
     background-size: 16px 16px, auto;
     color: var(--foreground);
@@ -91,8 +96,8 @@
   }
 
   * {
-    border-color: var(--color-border);
     box-sizing: border-box;
+    border-color: var(--color-border);
   }
 
   img,
@@ -110,78 +115,65 @@
     touch-action: manipulation;
   }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin-top: 1.5rem;
-  color: var(--neon) !important;
-  font-family: var(--font-display);
-  font-weight: 800;
-  font-style: normal;
-  line-height: 0.9;
-  text-shadow: 0 0 18px rgba(0, 255, 0, 0.45);
-}
-
-h1 {
-  font-size: 64px;
-  letter-spacing: -0.025em; /* tracking-tight */
-}
-
-h2 {
-  font-size: 48px;
-  letter-spacing: 0;
-}
-
-h3 {
-  font-size: 36px;
-  letter-spacing: 0;
-}
-
-h4 {
-  font-size: 30px;
-  letter-spacing: 0;
-}
-
-h5 {
-  font-size: 24px;
-  letter-spacing: 0;
-}
-
-h6 {
-  font-size: 20px;
-  letter-spacing: 0;
-}
-
-@media (min-width: 768px) {
-  h1 {
-    font-size: 96px;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-top: 1.5rem;
+    color: var(--neon) !important;
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-style: normal;
+    line-height: 0.9;
+    text-shadow: 0 0 18px rgba(0, 255, 0, 0.45);
   }
 
-  h2 {
+  h1 {
     font-size: 64px;
-  }
-
-  h3 {
-    font-size: 48px;
-  }
-}
-
-@media (min-width: 1024px) {
-  h1 {
-    font-size: 128px;
+    letter-spacing: -0.025em;
   }
 
   h2 {
-    font-size: 72px;
+    font-size: 48px;
+    letter-spacing: -0.025em;
   }
 
   h3 {
-    font-size: 52px;
+    font-size: 36px;
+    letter-spacing: -0.025em;
   }
-}
+
+  h4 {
+    font-size: 30px;
+    letter-spacing: -0.025em;
+  }
+
+  h5 {
+    font-size: 24px;
+    letter-spacing: -0.025em;
+  }
+
+  h6 {
+    font-size: 20px;
+    letter-spacing: -0.025em;
+  }
+
+  h1 *,
+  h2 *,
+  h3 *,
+  h4 *,
+  h5 *,
+  h6 * {
+    color: inherit !important;
+    font-family: inherit;
+    font-weight: inherit;
+    font-style: inherit;
+    letter-spacing: inherit;
+    text-shadow: inherit;
+  }
+
   p {
     color: oklch(0.95 0 0);
   }
@@ -242,35 +234,23 @@ h6 {
     text-transform: uppercase;
   }
 
-  .section-title {
-  margin-top: 0.75rem;
-  font-size: clamp(2.25rem, 6vw, 3.75rem);
-  font-weight: 700;
-  line-height: 0.92;
-  letter-spacing: -0.035em;
-  text-transform: uppercase;
-}
-
-  .hero-title {
-    margin-top: 1.25rem;
-    font-size: clamp(3.75rem, 13vw, 8rem);
-    font-weight: 700;
-    line-height: 0.88;
-    letter-spacing: 0;
-  }
-
   .hero-copy {
     margin-top: 1.75rem;
     max-width: 42rem;
+    color: #fff;
     font-size: 1.25rem;
     line-height: 1.625;
-    color: #fff;
   }
 
   .hero-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5), transparent);
+    background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.9),
+      rgba(0, 0, 0, 0.5),
+      transparent
+    );
   }
 
   .section-nav {
@@ -311,11 +291,6 @@ h6 {
     vertical-align: top;
   }
 
-  .neon-text {
-    color: #00ff00;
-    text-shadow: 0 0 18px rgba(0, 255, 0, 0.45);
-  }
-
   .neon-border {
     border: 1px solid rgba(0, 255, 0, 0.45);
     box-shadow:
@@ -347,11 +322,15 @@ h6 {
     background: linear-gradient(
       180deg,
       transparent 0%,
-      rgba(0, 255, 0, 0.10) 50%,
+      rgba(0, 255, 0, 0.1) 50%,
       transparent 100%
     );
     mix-blend-mode: screen;
     animation: scan 6s linear infinite;
+  }
+
+  .marquee {
+    animation: marquee 40s linear infinite;
   }
 
   @keyframes scan {
@@ -362,10 +341,6 @@ h6 {
     100% {
       transform: translateY(100%);
     }
-  }
-
-  .marquee {
-    animation: marquee 40s linear infinite;
   }
 
   @keyframes marquee {
@@ -379,7 +354,33 @@ h6 {
   }
 }
 
+@media (min-width: 768px) {
+  h1 {
+    font-size: 96px;
+  }
+
+  h2 {
+    font-size: 64px;
+  }
+
+  h3 {
+    font-size: 48px;
+  }
+}
+
 @media (min-width: 1024px) {
+  h1 {
+    font-size: 128px;
+  }
+
+  h2 {
+    font-size: 72px;
+  }
+
+  h3 {
+    font-size: 52px;
+  }
+
   .page-hero-inner,
   .page-section,
   .page-section-narrow,
