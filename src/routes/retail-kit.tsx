@@ -118,7 +118,7 @@ function AssetCard({
       </a>
 
       <div className="border-t border-white/10 p-4">
-        <h3 className="text-lg font-black italic leading-tight text-[color:var(--neon)]">
+        <h3 className="text-lg font-black leading-tight text-[color:var(--neon)]">
           {title}
         </h3>
 
@@ -157,7 +157,7 @@ function RetailKit() {
 
         <div className="mt-5 grid gap-8 lg:grid-cols-[1fr_360px] lg:items-end">
           <div>
-            <h1 className="text-[52px] font-black italic leading-[0.9] tracking-tight neon-text md:text-[86px] lg:text-[104px]">
+            <h1 className="text-[52px] font-black leading-[0.9] tracking-tight neon-text md:text-[86px] lg:text-[104px]">
               KOFENOT™
               <br />
               Retail Kit
