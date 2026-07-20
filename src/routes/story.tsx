@@ -166,7 +166,7 @@ function HeroSection() {
         </p>
 
         <h1
-          className="text-5xl leading-[0.92] tracking-tight text-[color:var(--neon)] md:text-7xl"
+          className="text-5xl leading-[0.92] tracking-tight text-[color:black] md:text-7xl"
           style={{
             textShadow: "none",
             filter: "none",
