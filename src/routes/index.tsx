@@ -199,13 +199,13 @@ function HeroSection({ openDemo }: { openDemo: () => void }) {
       <div className="relative z-10 mx-auto max-w-[1480px] px-6 pt-7 lg:px-10">
         <div className="min-h-[calc(100svh-4rem)] pb-44">
           <Reveal delay={0.08}>
-            <p className="mt-2 text-lg font-semibold italic uppercase tracking-[0.18em] text-white md:text-xl lg:ml-6">
+            <p className="mt-2 text-lg font-semibold uppercase tracking-[0.18em] text-white md:text-xl lg:ml-6">
               COFFEE HAPPENS. BE READY.
             </p>
           </Reveal>
 
           <Reveal delay={0.05}>
-            <h1 className="mt-6 text-[64px] font-black italic leading-[0.9] tracking-tight neon-text md:text-[96px] lg:text-[128px]">
+            <h1 className="mt-6 text-[64px] font-black leading-[0.9] tracking-tight neon-text md:text-[96px] lg:text-[128px]">
               ULTIMATE
               <br />
               LAPTOP
@@ -311,7 +311,7 @@ function BenefitCard({ card, featured }: { card: BenefitCard; featured: boolean 
       </div>
 
       <div className="flex-1 border-t border-white/10 bg-[#080908] p-5">
-        <h3 className={cx("font-black italic leading-none text-white", featured ? "text-4xl md:text-5xl" : "text-2xl md:text-3xl")}>
+        <h3 className={cx("font-black leading-none text-white", featured ? "text-4xl md:text-5xl" : "text-2xl md:text-3xl")}>
           {card.title}
         </h3>
 
