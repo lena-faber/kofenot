@@ -294,7 +294,7 @@ function BenefitsSection() {
       >
         {benefitModes.map((card, index) => (
           <Reveal key={card.title} delay={index * 0.055} className={card.tileClass}>
-            <BenefitCard card={card} featured={index === 0} />
+            <BenefitCard card={card} />
           </Reveal>
         ))}
       </div>
@@ -302,7 +302,7 @@ function BenefitsSection() {
   );
 }
 
-function BenefitCard({ card, featured }: { card: BenefitCard; featured: boolean }) {
+function BenefitCard({ card }: { card: BenefitCard }) {
   return (
     <article className="group flex h-full flex-col overflow-hidden bg-black transition duration-300 hover:-translate-y-2">
       <div className="aspect-square overflow-hidden bg-black">
