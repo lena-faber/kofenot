@@ -34,7 +34,7 @@
   --radius-md: var(--radius);
   --radius-lg: calc(var(--radius) + 2px);
   --radius-xl: calc(var(--radius) + 4px);
-  --font-display: "Barlow Condensed", "Oswald", "Bebas Neue", "Segoe UI", system-ui, sans-serif;
+  --font-display: "League Spartan", system-ui, sans-serif;
   --font-body: "League Spartan", system-ui, sans-serif;
 }
 
@@ -137,7 +137,6 @@
   h5,
   h6 {
     font-family: var(--font-display);
-    font-stretch: condensed;
     font-weight: 800;
     letter-spacing: 0;
   }
