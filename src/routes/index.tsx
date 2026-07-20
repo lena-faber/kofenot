@@ -205,7 +205,7 @@ function HeroSection({ openDemo }: { openDemo: () => void }) {
           </Reveal>
 
           <Reveal delay={0.05}>
-            <h1 className="mt-6 text-[64px] leading-[0.9] tracking-tight neon-text md:text-[96px] lg:text-[128px]">
+            <h1>
               ULTIMATE
               <br />
               LAPTOP
