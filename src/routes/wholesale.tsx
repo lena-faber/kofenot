@@ -461,8 +461,6 @@ function BrandDeservesBetterSection() {
       <div className="page-section">
         <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
           <div>
-            <p className="section-kicker">Custom Branding</p>
-
             <h2 className="section-title">
               YOUR BRAND DESERVES BETTER THAN{" "}
               <span className="neon-text">THROWAWAY MERCH.</span>
