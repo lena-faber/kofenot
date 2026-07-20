@@ -45,7 +45,6 @@ const layout = {
 
 const text = {
   eyebrow: "section-kicker",
-  title: "section-title",
   body: "text-sm text-muted-foreground",
 };
 
@@ -649,7 +648,7 @@ function SectionHeader({
     <Reveal>
       <div>
         {eyebrow && <p className={text.eyebrow}>{eyebrow}</p>}
-        <h2 className={text.title}>{title}</h2>
+        <h2>{title}</h2>
         {body && <p className="mt-3 text-muted-foreground">{body}</p>}
       </div>
     </Reveal>
