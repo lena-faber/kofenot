@@ -172,10 +172,6 @@ function HeroSection() {
             filter: "none",
           }}
         >
-          One Dead Laptop.
-          <br />
-          One Dead Car.
-          <br />
           One-way Ticket to Silicon Valley.
         </h1>
 
