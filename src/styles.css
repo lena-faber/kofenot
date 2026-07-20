@@ -111,41 +111,29 @@
   }
 
   h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  h1 *,
-  h2 *,
-  h3 *,
-  h4 *,
-  h5 *,
-  h6 * {
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: #00ff00 !important;
- 
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-style: normal;
+  letter-spacing: 0;
   text-shadow: none;
 }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-family: var(--font-display);
-    font-weight: 800;
-    letter-spacing: 0;
-  }
-
-  h1,
-  h2 
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-style: normal;
-  }
+h1 *,
+h2 *,
+h3 *,
+h4 *,
+h5 *,
+h6 * {
+  color: inherit !important;
+  font-style: inherit;
+  text-shadow: inherit;
+}
 
   p {
     color: oklch(0.95 0 0);
