@@ -310,10 +310,7 @@ function BenefitCard({ card, featured }: { card: BenefitCard; featured: boolean 
       </div>
 
       <div className="flex-1 border-t border-white/10 bg-[#080908] p-5">
-        <h3 className={cx("font-black leading-none text-white", featured ? "text-4xl md:text-5xl" : "text-2xl md:text-3xl")}>
-          {card.title}
-        </h3>
-
+        <h3>{card.title}</h3>
         <p className="mt-3 text-sm font-semibold leading-snug text-white/70 md:text-base">
           {card.body}
         </p>
