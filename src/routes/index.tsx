@@ -572,7 +572,7 @@ function FaqSection() {
       >
         {faq.map(([question, answer]) => (
           <div key={question} className="grid gap-2 py-6 md:grid-cols-[.8fr_1.2fr]">
-            <h3>{title}</h3>
+            <h3>{question}</h3>
             <p className={text.body}>{answer}</p>
           </div>
         ))}
