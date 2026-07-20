@@ -297,6 +297,7 @@ function Wholesale() {
       <SectionNav />
       <PricingSection />
       <ProgramsSection />
+      <BrandDeservesBetterSection />
       <SpecsSection />
       <MediaKitSection />
       <ShippingSection />
@@ -449,6 +450,58 @@ function ProgramsSection() {
             </div>
           </article>
         ))}
+      </div>
+    </section>
+  );
+}
+
+function BrandDeservesBetterSection() {
+  return (
+    <section className="section-band">
+      <div className="page-section">
+        <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
+          <div>
+            <p className="section-kicker">Custom Branding</p>
+
+            <h2 className="section-title">
+              YOUR BRAND DESERVES BETTER THAN{" "}
+              <span className="neon-text">THROWAWAY MERCH.</span>
+            </h2>
+
+            <a href={quoteEmail} className="mt-8 inline-flex">
+              <Button className="h-12 bg-[var(--neon)] px-7 font-black text-black hover:bg-[var(--neon-dim)]">
+                Put Your Logo Here
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </a>
+          </div>
+
+          <div className="space-y-5 border-l border-[rgba(0,255,0,0.28)] pl-7 text-lg leading-relaxed text-white/80">
+            <p>
+              Your brand, printed on a cheap hat or T-shirt no one wants to be
+              seen wearing, ends up in thrift stores—which may not align with
+              your brand image.
+            </p>
+
+            <p>
+              More expensive electronic merchandise with cables that don’t fit
+              anyone’s devices gets thrown directly into trade-show trash
+              bins—and that’s not where your brand belongs.
+            </p>
+
+            <p className="font-bold text-white">
+              Put your logo on an original accessory engineered for both
+              precision and aesthetics—something people will appreciate and
+              use.
+            </p>
+
+            <p className="font-semibold text-[var(--neon)]">
+              Choose thoughtful, original design with a personal touch and a
+              story behind it over generic merchandise that ends up filling
+              trash bins and polluting the planet.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
   );
