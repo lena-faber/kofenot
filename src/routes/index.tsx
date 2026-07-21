@@ -446,7 +446,6 @@ function PricingSection({ openCheckout }: { openCheckout: (url?: string) => void
             Buy <span className="neon-text">KOFENOT</span>
           </>
         }
-        body="Ready to Ship. Secure Stripe Checkout"
       />
 
       <div className={cx(layout.content, "grid gap-4 lg:grid-cols-[1fr_1fr_1.1fr]")}>
