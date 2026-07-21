@@ -82,11 +82,11 @@ function DownloadsPage() {
 function DownloadsHero() {
   return (
     <section className="mx-auto max-w-[1320px] px-4 pb-1 pt-15 lg:px-6">
-      <h1 className="mt-4 max-w-5xl text-5xl font-black uppercase leading-[0.95] tracking-tight md:text-7xl">
+      <h1>
         KOFENOT™ Resource Center
       </h1>
 
-      <p className="mt-6 max-w-3xl text-lg leading-relaxed text-muted-foreground md:text-xl">
+      <p>
         Sales presentations, product specifications, media assets, and product
         data for retailers, corporations, distributors, and partners.
       </p>
@@ -144,7 +144,7 @@ function DownloadsContact() {
       <div className="neon-border bg-[rgba(0,255,0,0.05)] p-8 text-center neon-glow md:p-12">
         <p className="section-kicker">Need something else?</p>
 
-        <h2 className="section-title mt-4">
+        <h2>
           Request additional KOFENOT™ materials.
         </h2>
 
