@@ -629,7 +629,7 @@ function HeroStat({
       </div>
 
       <div>
-        <div className="text-sm font-black uppercase text-white">{title}</div>
+        <div className="text-sm font-black uppercase neon-text">{title}</div>
         <div className="mt-1 text-base leading-6 text-white/80">{children}</div>
       </div>
     </div>
