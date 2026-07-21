@@ -116,7 +116,7 @@ function DownloadsGrid() {
                 </span>
               </div>
 
-              <h2 className="mt-7 text-2xl font-black uppercase leading-tight">
+              <h2>
                 {item.title}
               </h2>
 
