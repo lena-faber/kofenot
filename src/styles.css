@@ -270,6 +270,19 @@
   border: 1px solid rgba(0, 255, 0, 0.22);
   background: rgba(0, 255, 0, 0.035);
 }
+
+  .panel:has(> img) {
+  padding: 0;
+  overflow: hidden;
+}
+
+.panel:has(> img) > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+  
   .panel-hover:hover {
     border-color: rgba(0, 255, 0, 0.55);
     background: rgba(0, 255, 0, 0.08);
