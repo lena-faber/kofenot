@@ -359,7 +359,6 @@ function StepCard({
     </article>
   );
 }
-
 function ReviewsSection({ openCheckout }: { openCheckout: (url?: string) => void }) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -376,7 +375,9 @@ function ReviewsSection({ openCheckout }: { openCheckout: (url?: string) => void
 
       <Reveal delay={0.1}>
         <div className={cx(layout.content, "mx-auto max-w-[980px]")}>
-          <div className="relative">
+          <TestimonialQuotes openCheckout={openCheckout} />
+
+          <div className="relative mt-6">
             <video
               ref={videoRef}
               src={`${testimonialVideo}#t=0.1`}
@@ -404,8 +405,6 @@ function ReviewsSection({ openCheckout }: { openCheckout: (url?: string) => void
               </button>
             )}
           </div>
-
-          <TestimonialQuotes openCheckout={openCheckout} />
         </div>
       </Reveal>
     </section>
