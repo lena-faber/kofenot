@@ -189,6 +189,10 @@
     padding: 5rem 1rem;
   }
 
+.page-shell > .page-section:last-of-type {
+  padding-bottom: 5rem;
+}
+  
   .section-band {
     border-block: 1px solid rgba(0, 255, 0, 0.18);
     background: rgba(0, 255, 0, 0.025);
