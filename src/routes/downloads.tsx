@@ -83,7 +83,7 @@ function DownloadsHero() {
   return (
     <section className="mx-auto max-w-[1320px] px-4 pb-1 pt-15 lg:px-6">
       <h1>
-        KOFENOT™ Resource Center
+        Resource Center
       </h1>
 
       <p>
