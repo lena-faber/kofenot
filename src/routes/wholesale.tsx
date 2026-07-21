@@ -320,7 +320,7 @@ function HeroSection() {
 
       <div className="page-hero-inner">
         <div className="max-w-4xl">
-          <p className="section-kicker">Wholesale</p>
+          <h3>Wholesale</h3>
 
           <h1 className="hero-title">
             RETAIL READY.
