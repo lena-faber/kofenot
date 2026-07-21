@@ -120,8 +120,8 @@
     letter-spacing: 0.12em;
     text-transform: uppercase;
   }
-
- body {
+  
+body {
   max-width: 100%;
   overflow-x: hidden;
   background:
@@ -132,7 +132,7 @@
     ),
     #000000;
   background-size: 16px 16px;
-  color: rgba(255, 255, 255, 0.8);
+  color: #ffffff;
   font-family: "League Spartan", system-ui, sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -145,13 +145,24 @@
 p,
 li,
 blockquote,
+td,
+dd,
 footer,
 footer * {
   margin: 0;
-  color: inherit !important;
-  font: inherit !important;
-  letter-spacing: inherit !important;
+  color: #ffffff !important;
+  font-family: "League Spartan", system-ui, sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  font-style: normal !important;
+  line-height: 1.5 !important;
+  letter-spacing: 0 !important;
   text-transform: none !important;
+}
+
+.text-muted-foreground,
+[class*="text-white/"] {
+  color: #ffffff !important;
 }
 
   #root,
