@@ -334,6 +334,9 @@
   h1 {
     font-size: 128px;
   }
+  body {
+    font-size: 14px;
+  }
 
   h2 {
     font-size: 56px;
