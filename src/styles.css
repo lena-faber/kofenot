@@ -266,6 +266,7 @@
   .panel {
   height: auto;
   min-height: 0;
+  align-self: start;
   padding: 0 !important;
   overflow: hidden;
   border: 1px solid rgba(0, 255, 0, 0.22);
