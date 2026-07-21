@@ -116,9 +116,9 @@ function DownloadsGrid() {
                 </span>
               </div>
 
-              <h2>
+              <h3 className="section-kicker">
                 {item.title}
-              </h2>
+              </h3>
 
               <p className="mt-4 flex-1 text-sm leading-relaxed text-muted-foreground">
                 {item.description}
