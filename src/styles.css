@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700;800;900&display=swap");
 @import "tailwindcss" source(none);
 @source "../src";
 @import "tw-animate-css";
@@ -28,10 +28,12 @@
   --color-neon: var(--neon);
   --color-neon-dim: var(--neon-dim);
   --color-panel: var(--panel);
+
   --radius-sm: calc(var(--radius) - 2px);
   --radius-md: var(--radius);
   --radius-lg: calc(var(--radius) + 2px);
   --radius-xl: calc(var(--radius) + 4px);
+
   --font-display: "League Spartan", system-ui, sans-serif;
   --font-body: "League Spartan", system-ui, sans-serif;
 }
@@ -39,31 +41,46 @@
 :root,
 .dark {
   --radius: 2px;
-  --background: oklch(0.13 0 0);
-  --foreground: oklch(0.97 0 0);
+
+  --background: #000000;
+  --foreground: #ffffff;
+
   --card: oklch(0.16 0 0);
-  --card-foreground: oklch(0.97 0 0);
+  --card-foreground: #ffffff;
+
   --popover: oklch(0.13 0 0);
-  --popover-foreground: oklch(0.97 0 0);
-  --primary: oklch(0.88 0.27 142);
-  --primary-foreground: oklch(0.13 0 0);
+  --popover-foreground: #ffffff;
+
+  --primary: #00ff00;
+  --primary-foreground: #000000;
+
   --secondary: oklch(0.2 0 0);
-  --secondary-foreground: oklch(0.97 0 0);
+  --secondary-foreground: #ffffff;
+
   --muted: oklch(0.2 0 0);
-  --muted-foreground: oklch(0.92 0 0);
-  --accent: oklch(0.88 0.27 142);
-  --accent-foreground: oklch(0.13 0 0);
+  --muted-foreground: #ffffff;
+
+  --accent: #00ff00;
+  --accent-foreground: #000000;
+
   --destructive: oklch(0.6 0.22 25);
-  --destructive-foreground: oklch(0.97 0 0);
-  --border: oklch(0.88 0.27 142 / 0.28);
-  --input: oklch(0.88 0.27 142 / 0.28);
-  --ring: oklch(0.88 0.27 142);
+  --destructive-foreground: #ffffff;
+
+  --border: rgba(0, 255, 0, 0.28);
+  --input: rgba(0, 255, 0, 0.28);
+  --ring: #00ff00;
+
   --neon: #00ff00;
   --neon-dim: #00cc00;
   --panel: rgba(0, 255, 0, 0.05);
 }
 
 @layer base {
+  * {
+    box-sizing: border-box;
+    border-color: var(--color-border);
+  }
+
   html {
     max-width: 100%;
     overflow-x: clip;
@@ -79,9 +96,9 @@
         rgba(0, 255, 0, 0.22) 1px,
         transparent 1.4px
       ),
-      #000;
-    background-size: 16px 16px, auto;
-    color: var(--foreground);
+      #000000;
+    background-size: 16px 16px;
+    color: #ffffff;
     font-family: var(--font-body);
     font-weight: 400;
     -webkit-font-smoothing: antialiased;
@@ -93,11 +110,6 @@
   header,
   footer {
     max-width: 100%;
-  }
-
-  * {
-    box-sizing: border-box;
-    border-color: var(--color-border);
   }
 
   img,
@@ -116,39 +128,27 @@
   }
 
   h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
+  h2 {
     margin-top: 1.5rem;
-    color: var(--neon) !important;
-    font-family: var(--font-display);
+    color: #00ff00 !important;
     font-weight: 700;
     font-style: normal;
     line-height: 0.9;
+    letter-spacing: -0.025em;
     text-transform: uppercase;
   }
 
   h1 {
     font-size: 64px;
-    letter-spacing: -0.025em;
   }
 
   h2 {
     font-size: 42px;
-    letter-spacing: -0.025em;
   }
 
-  
-
- p,
-li,
-td,
-.text-muted-foreground {
-  color: #ffffff !important;
-  font-weight: 400;
-}
+  .text-muted-foreground {
+    color: #ffffff !important;
+  }
 }
 
 @layer utilities {
@@ -162,7 +162,7 @@ td,
     margin-top: -4rem;
     min-height: 86svh;
     overflow: hidden;
-    background: #000;
+    background: #000000;
     padding-top: 4rem;
   }
 
@@ -195,19 +195,20 @@ td,
   }
 
   .section-kicker {
-  color: #00ff00 !important;
-  font-size: 14px;
-  font-weight: 900;
-  line-height: 1;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-}
+    color: #00ff00 !important;
+    font-size: 14px;
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
 
   .hero-copy {
     margin-top: 1.75rem;
     max-width: 42rem;
-    color: #fff;
+    color: #ffffff;
     font-size: 1.25rem;
+    font-weight: 400;
     line-height: 1.625;
   }
 
@@ -245,7 +246,7 @@ td,
   }
 
   .section-nav-inner a:hover {
-    color: var(--neon);
+    color: #00ff00;
   }
 
   .responsive-table {
@@ -266,6 +267,7 @@ td,
       0 0 30px rgba(0, 255, 0, 0.08),
       inset 0 0 30px rgba(0, 255, 0, 0.04);
   }
+
   .panel {
     border: 1px solid rgba(0, 255, 0, 0.22);
     background: rgba(0, 255, 0, 0.035);
@@ -277,9 +279,9 @@ td,
   }
 
   .scanline::after {
-    pointer-events: none;
     position: absolute;
     inset: 0;
+    pointer-events: none;
     content: "";
     background: linear-gradient(
       180deg,
@@ -296,21 +298,21 @@ td,
   }
 
   @keyframes scan {
-    0% {
+    from {
       transform: translateY(-100%);
     }
 
-    100% {
+    to {
       transform: translateY(100%);
     }
   }
 
   @keyframes marquee {
-    0% {
+    from {
       transform: translateX(0);
     }
 
-    100% {
+    to {
       transform: translateX(-50%);
     }
   }
@@ -320,6 +322,7 @@ td,
   h1 {
     font-size: 96px;
   }
+
   h2 {
     font-size: 38px;
   }
@@ -329,6 +332,7 @@ td,
   h1 {
     font-size: 128px;
   }
+
   h2 {
     font-size: 56px;
   }
