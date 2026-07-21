@@ -642,9 +642,9 @@ function SectionHeader({
   return (
     <Reveal>
       <div>
-        {sectionKicker && <p className="section-kicker">{sectionKicker}</p>}
+        {sectionKicker && <h3>{sectionKicker}</h3>}
         <h2>{title}</h2>
-        {body && <p className="mt-3 text-muted-foreground">{body}</p>}
+        {body && <p>{body}</p>}
       </div>
     </Reveal>
   );
