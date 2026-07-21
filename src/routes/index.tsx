@@ -16,44 +16,31 @@ import { Dialog, DialogContent } from "@/components/ui/dialog";
 import corp from "@/assets/kofenot-corp.jpeg";
 import deadSpill from "@/assets/dead-spill.jpg";
 import demoVideo from "@/assets/kofeenot-demo.mp4";
-import testimonialPoster from "@/assets/kofenot-testimonials.jpg";
-import testimonialVideo from "@/assets/kofenot-testimonials.mp4";
 import fidget from "@/assets/kofeenot-fidget.jpg";
 import giftBox from "@/assets/kofenot-gift-box.jpeg";
 import neck from "@/assets/kofeenot-neck.jpg";
 import safeSpill from "@/assets/safe-spill.jpeg";
 import spillSafeProduct from "@/assets/spill-safe.jpeg";
+import testimonialPoster from "@/assets/kofenot-testimonials.jpg";
+import testimonialVideo from "@/assets/kofenot-testimonials.mp4";
 import threeDevices from "@/assets/kofenot-3-devices.jpg";
 
 export const Route = createFileRoute("/")({ component: Home });
 
-const retailCheckoutUrl = "https://buy.stripe.com/fZu7sKfz0gcQ7wk6BSdUY0E";
-const twoUnitCheckoutUrl = "https://buy.stripe.com/eVq00i3Qi9Os9EsbWcdUY0M";
+const retailCheckoutUrl =
+  "https://buy.stripe.com/fZu7sKfz0gcQ7wk6BSdUY0E";
+
+const twoUnitCheckoutUrl =
+  "https://buy.stripe.com/eVq00i3Qi9Os9EsbWcdUY0M";
 
 function cx(...classes: Array<string | false | undefined>) {
   return classes.filter(Boolean).join(" ");
 }
 
-const layout = {
-  section: "border-t border-[rgba(0,255,0,0.12)] py-10",
-  sectionLast: "pb-12 pt-8",
-  standard: "mx-auto max-w-[1320px] px-6 lg:px-8",
-  wide: "mx-auto max-w-[1760px] px-6 lg:px-8",
-  narrow: "mx-auto max-w-[980px] px-6 lg:px-8",
-  content: "mt-5",
-};
-
-const text = {
-  eyebrow: "section-kicker",
-  body: "text-sm text-muted-foreground",
-};
-
 type BenefitCard = {
   image: string;
-  mode: string;
   title: string;
   body: string;
-  tileClass: string;
 };
 
 type PurchaseOption = {
@@ -67,40 +54,29 @@ type PurchaseOption = {
 const benefitModes: BenefitCard[] = [
   {
     image: deadSpill,
-    mode: "Spill deflection",
     title: "Coffee",
     body: "60% of laptop damage starts with a spilled drink. Coffee leads the list.",
-    tileClass: "lg:mt-10",
   },
   {
     image: safeSpill,
-    mode: "Save your laptop",
     title: "Golden minute",
     body:
-      "KOFENOT™ creates an escape angle that helps redirect spills away " +
-      "from the critical components beneath the keyboard.",
-    tileClass: "lg:mt-16",
+      "KOFENOT™ creates an escape angle that helps redirect spills away from the critical components beneath the keyboard.",
   },
   {
     image: neck,
-    mode: "Better posture",
     title: "Tilt laptop, not neck",
     body: "Lifting the screen and tilting it back reduces tech-neck strain.",
-    tileClass: "lg:mt-44",
   },
   {
     image: threeDevices,
-    mode: "Stand",
     title: "Flips to hold 3 devices",
     body: "Quietly turns coffee shops, airports, and gyms into your office.",
-    tileClass: "lg:mt-24",
   },
   {
     image: fidget,
-    mode: "Fidget",
     title: "Snap. Shut. Repeat.",
     body: "KOFENOT™'s satisfying snap keeps restless fingers busy.",
-    tileClass: "lg:mt-40",
   },
 ];
 
@@ -111,7 +87,11 @@ const howItWorksSteps = [
     "Rest Rear Hinge on Wedge",
     "Works with open-trench hinges. Flip wedge for closed-angle hinges.",
   ],
-  ["03", "Snap Shut", "A satisfying mechanical click users keep repeating."],
+  [
+    "03",
+    "Snap Shut",
+    "A satisfying mechanical click users keep repeating.",
+  ],
 ];
 
 const testimonials = [
@@ -145,14 +125,22 @@ const purchaseOptions: PurchaseOption[] = [
     eyebrow: "1 unit in Retail Box",
     price: "$15",
     title: "One KOFENOT™ laptop wedge in retail box.",
-    items: ["free shipping in the US", "In Stock. Ships from California", "3-5 business days"],
+    items: [
+      "Free shipping in the US",
+      "In Stock. Ships from California",
+      "3–5 business days",
+    ],
     url: retailCheckoutUrl,
   },
   {
     eyebrow: "2 units in Retail Box",
     price: "$25",
     title: "Two KOFENOT™ laptop wedges in retail box.",
-    items: ["free shipping in the US", "In Stock. Ships from California", "3-5 business days"],
+    items: [
+      "Free shipping in the US",
+      "In Stock. Ships from California",
+      "3–5 business days",
+    ],
     url: twoUnitCheckoutUrl,
   },
 ];
@@ -169,13 +157,13 @@ export function Home() {
       <HeroSection openDemo={() => setVideoOpen(true)} />
       <BenefitsSection />
       <HowItWorksSection />
-      <ReviewsSection openCheckout={openCheckout} />
+      <ReviewsSection />
       <PricingSection openCheckout={openCheckout} />
       <ProductDetailsSection />
       <FaqSection />
 
       <Dialog open={videoOpen} onOpenChange={setVideoOpen}>
-        <DialogContent className="max-w-3xl bg-black p-2 neon-border">
+        <DialogContent className="neon-border max-w-3xl bg-black p-2">
           <video
             src={demoVideo}
             controls
@@ -197,13 +185,13 @@ function HeroSection({ openDemo }: { openDemo: () => void }) {
 
       <div className="relative z-10 mx-auto max-w-[1480px] px-6 pt-7 lg:px-10">
         <div className="min-h-[calc(100svh-4rem)] pb-44">
-          <Reveal delay={0.08}>
-            <p className="mt-2 text-lg font-semibold uppercase tracking-[0.18em] text-white md:text-xl lg:ml-6">
+          <Reveal>
+            <p className="section-kicker lg:ml-6">
               COFFEE HAPPENS. BE READY.
             </p>
           </Reveal>
 
-          <Reveal delay={0.05}>
+          <Reveal>
             <h1>
               ULTIMATE
               <br />
@@ -213,7 +201,7 @@ function HeroSection({ openDemo }: { openDemo: () => void }) {
             </h1>
           </Reveal>
 
-          <Reveal delay={0.15}>
+          <Reveal>
             <div className="mt-8 flex flex-wrap gap-3 lg:ml-6">
               <SetupButton onClick={openDemo} />
               <BuyButton href="#pricing" />
@@ -229,8 +217,16 @@ function HeroSection({ openDemo }: { openDemo: () => void }) {
 
 function HeroBackground() {
   return (
-    <div className="pointer-events-none absolute inset-0 z-0" aria-hidden="true">
-      <img src={corp} alt="" className="absolute inset-0 h-full w-full object-cover object-center" />
+    <div
+      className="pointer-events-none absolute inset-0 z-0"
+      aria-hidden="true"
+    >
+      <img
+        src={corp}
+        alt=""
+        className="absolute inset-0 h-full w-full object-cover object-center"
+      />
+
       <div className="hero-overlay" />
     </div>
   );
@@ -263,37 +259,33 @@ function BenefitsSection() {
   return (
     <section
       id="benefits"
-      className={cx(
-        "relative overflow-hidden border-t border-[rgba(0,255,0,0.12)] pt-20 pb-5",
-        layout.wide,
-      )}
+      className="page-section relative overflow-hidden"
     >
-      <SectionHeader eyebrow="Small Wedge. Big Difference." title="Why People Buy KOFENOT™" />
+      <SectionHeader
+        eyebrow="Small Wedge. Big Difference."
+        title="Why People Buy KOFENOT™"
+      />
 
       <div
-  className="pointer-events-none absolute right-[7%] top-[105px] z-0 hidden -rotate-12 select-none text-right font-black italic uppercase tracking-tight neon-text lg:block"
-  aria-hidden="true"
->
-  <div className="text-[25px] leading-[0.82] xl:text-[86px]">
-    $1,000+
-  </div>
-
-  <div className="mt-1 text-[35px] leading-none xl:text-[45px]">
-    Saved
-  </div>
-
-  <div className="mt-2 text-[20px] leading-none tracking-[0.16em] xl:text-[24px]">
-    Per Spill
-  </div>
-</div>
-      <div
-        className={cx(
-          layout.content,
-          "relative z-10 grid gap-4 md:grid-cols-2 lg:min-h-[620px] lg:grid-cols-[25fr_17fr_16fr_20fr_17fr] lg:items-start",
-        )}
+        className="neon-text pointer-events-none absolute right-[7%] top-[105px] z-0 hidden -rotate-12 select-none text-right font-black italic uppercase tracking-tight lg:block"
+        aria-hidden="true"
       >
-        {benefitModes.map((card, index) => (
-          <Reveal key={card.title} delay={index * 0.055} className={card.tileClass}>
+        <div className="text-[25px] leading-[0.82] xl:text-[86px]">
+          $1,000+
+        </div>
+
+        <div className="mt-1 text-[35px] leading-none xl:text-[45px]">
+          Saved
+        </div>
+
+        <div className="mt-2 text-[20px] leading-none tracking-[0.16em] xl:text-[24px]">
+          Per Spill
+        </div>
+      </div>
+
+      <div className="relative z-10 mt-5 grid gap-4 md:grid-cols-2 lg:grid-cols-[25fr_17fr_16fr_20fr_17fr] lg:items-start">
+        {benefitModes.map((card) => (
+          <Reveal key={card.title}>
             <BenefitCard card={card} />
           </Reveal>
         ))}
@@ -304,16 +296,18 @@ function BenefitsSection() {
 
 function BenefitCard({ card }: { card: BenefitCard }) {
   return (
-    <article className="group flex h-full flex-col overflow-hidden bg-black transition duration-300 hover:-translate-y-2">
+    <article className="panel panel-hover group overflow-hidden transition duration-300 hover:-translate-y-2">
       <div className="aspect-square overflow-hidden bg-black">
-        <img src={card.image} alt={card.title} className="h-full w-full object-cover transition duration-500" />
+        <img
+          src={card.image}
+          alt={card.title}
+          className="h-full w-full object-cover transition duration-500"
+        />
       </div>
 
-      <div className="flex-1 border-t border-white/10 bg-[#080908] p-5">
-        <h3>{card.title}</h3>
-        <p className="mt-3 text-sm font-semibold leading-snug text-white/70 md:text-base">
-          {card.body}
-        </p>
+      <div className="border-t border-white/10 bg-[#080908] pt-5">
+        <p className="section-kicker">{card.title}</p>
+        <p className="mt-3">{card.body}</p>
       </div>
     </article>
   );
@@ -321,19 +315,24 @@ function BenefitCard({ card }: { card: BenefitCard }) {
 
 function HowItWorksSection() {
   return (
-    <section id="how-it-works" className={cx(layout.section, layout.standard)}>
+    <section id="how-it-works" className="page-section">
       <SectionHeader
         title={
           <>
-            How It Works: <span className="neon-text">Open / Rest / Snap</span>
+            How It Works:{" "}
+            <span className="neon-text">Open / Rest / Snap</span>
           </>
         }
       />
 
-      <div className={cx(layout.content, "grid gap-5 md:grid-cols-3")}>
-        {howItWorksSteps.map(([number, title, description], index) => (
-          <Reveal key={number} delay={index * 0.1}>
-            <StepCard number={number} title={title} description={description} />
+      <div className="mt-5 grid gap-5 md:grid-cols-3">
+        {howItWorksSteps.map(([number, title, description]) => (
+          <Reveal key={number}>
+            <StepCard
+              number={number}
+              title={title}
+              description={description}
+            />
           </Reveal>
         ))}
       </div>
@@ -351,21 +350,25 @@ function StepCard({
   description: string;
 }) {
   return (
-    <article className="panel relative h-full rounded-sm p-7">
-      <div className="text-6xl font-black leading-none neon-text">{number}</div>
-      <h3>{title}</h3>
-      <p className="mt-2 text-sm text-muted-foreground">{description}</p>
+    <article className="panel panel-hover relative rounded-sm">
+      <div className="neon-text text-6xl font-black leading-none">
+        {number}
+      </div>
+
+      <p className="section-kicker">{title}</p>
+      <p className="mt-3">{description}</p>
+
       <div className="absolute right-7 top-7 h-1 w-12 bg-[color:var(--neon)]" />
     </article>
   );
 }
 
-function ReviewsSection({ openCheckout }: { openCheckout: (url?: string) => void }) {
+function ReviewsSection() {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
 
   return (
-    <section id="reviews" className={cx(layout.section, layout.standard)}>
+    <section id="reviews" className="page-section">
       <SectionHeader
         title={
           <>
@@ -374,8 +377,8 @@ function ReviewsSection({ openCheckout }: { openCheckout: (url?: string) => void
         }
       />
 
-      <Reveal delay={0.1}>
-        <div className={cx(layout.content, "mx-auto max-w-[980px]")}>
+      <Reveal>
+        <div className="mx-auto mt-5 max-w-[900px]">
           <div className="relative">
             <video
               ref={videoRef}
@@ -405,37 +408,38 @@ function ReviewsSection({ openCheckout }: { openCheckout: (url?: string) => void
             )}
           </div>
 
-          <TestimonialQuotes openCheckout={openCheckout} />
+          <TestimonialQuotes />
         </div>
       </Reveal>
     </section>
   );
 }
 
-function TestimonialQuotes({ openCheckout }: { openCheckout: (url?: string) => void }) {
+function TestimonialQuotes() {
   return (
     <div className="mt-6 text-center">
-      <div className="text-2xl leading-none text-[color:var(--neon)]">★★★★★</div>
+      <div className="text-2xl leading-none text-[color:var(--neon)]">
+        ★★★★★
+      </div>
 
       <div className="mt-5 grid gap-3 md:grid-cols-4">
         {testimonials.map((quote) => (
-          <blockquote
-            key={quote}
-            className="border border-[rgba(0,255,0,0.18)] bg-black/30 p-4 text-sm font-semibold leading-snug text-white"
-          >
+          <blockquote key={quote} className="panel">
             “{quote}”
           </blockquote>
         ))}
       </div>
-
-      
     </div>
   );
 }
 
-function PricingSection({ openCheckout }: { openCheckout: (url?: string) => void }) {
+function PricingSection({
+  openCheckout,
+}: {
+  openCheckout: (url?: string) => void;
+}) {
   return (
-    <section id="pricing" className={cx(layout.section, layout.standard)}>
+    <section id="pricing" className="page-section">
       <SectionHeader
         title={
           <>
@@ -445,16 +449,20 @@ function PricingSection({ openCheckout }: { openCheckout: (url?: string) => void
         body="Ready to Ship. Secure Stripe Checkout"
       />
 
-      <div className={cx(layout.content, "grid gap-4 lg:grid-cols-[1fr_1fr_1.1fr]")}>
+      <div className="mt-5 grid gap-4 lg:grid-cols-[1fr_1fr_1.1fr]">
         {purchaseOptions.map((option) => (
-          <PricingCard key={option.eyebrow} option={option} openCheckout={openCheckout} />
+          <PricingCard
+            key={option.eyebrow}
+            option={option}
+            openCheckout={openCheckout}
+          />
         ))}
 
         <div className="panel overflow-hidden rounded-sm">
           <img
             src={giftBox}
             alt="KOFENOT retail packaging"
-            className="h-full min-h-[360px] w-full object-cover"
+            className="w-full object-cover"
           />
         </div>
       </div>
@@ -470,15 +478,16 @@ function PricingCard({
   openCheckout: (url?: string) => void;
 }) {
   return (
-    <article className="neon-border neon-glow flex flex-col rounded-sm bg-[rgba(0,255,0,0.06)] p-6">
-      <div className="text-xs uppercase tracking-[0.18em] text-muted-foreground">
-        {option.eyebrow}
+    <article className="panel neon-border flex flex-col rounded-sm">
+      <div className="section-kicker">{option.eyebrow}</div>
+
+      <div className="neon-text mt-3 text-5xl font-black">
+        {option.price}
       </div>
 
-      <div className="mt-3 text-5xl font-black neon-text">{option.price}</div>
-      <p className="mt-3 text-sm">{option.title}</p>
+      <p className="mt-3">{option.title}</p>
 
-      <ul className="mt-5 space-y-2 text-sm">
+      <ul className="mt-5 space-y-2">
         {option.items.map((item) => (
           <PricingItem key={item}>{item}</PricingItem>
         ))}
@@ -494,6 +503,7 @@ function PricingCard({
     </article>
   );
 }
+
 function ProductDetailsSection() {
   const details = [
     ["Size", "3.4 × 2.4 × 0.4 in"],
@@ -503,7 +513,8 @@ function ProductDetailsSection() {
       <>
         Made from durable ABS plastic
         <br />
-        tested by SGS for compliance with EU RoHS restricted-substance limits.
+        tested by SGS for compliance with EU RoHS restricted-substance
+        limits.
       </>,
     ],
     ["Attachment", "No magnets, clips, or adhesives"],
@@ -511,10 +522,7 @@ function ProductDetailsSection() {
   ];
 
   return (
-    <section
-      id="product-details"
-      className={cx(layout.section, layout.standard)}
-    >
+    <section id="product-details" className="page-section">
       <div className="grid items-start gap-8 lg:grid-cols-2">
         <div>
           <SectionHeader
@@ -525,20 +533,15 @@ function ProductDetailsSection() {
             }
           />
 
-          <Reveal delay={0.08}>
+          <Reveal>
             <div className="mt-6 overflow-hidden border-y border-[rgba(0,255,0,0.18)]">
               {details.map(([label, value]) => (
                 <div
                   key={label}
                   className="grid gap-2 border-b border-[rgba(0,255,0,0.12)] py-5 last:border-b-0 sm:grid-cols-[190px_1fr]"
                 >
-                  <div className="text-sm font-black uppercase tracking-[0.08em] text-white">
-                    {label}
-                  </div>
-
-                  <div className="text-sm leading-relaxed text-muted-foreground">
-                    {value}
-                  </div>
+                  <div className="section-kicker">{label}</div>
+                  <div>{value}</div>
                 </div>
               ))}
             </div>
@@ -561,19 +564,17 @@ function ProductDetailsSection() {
 
 function FaqSection() {
   return (
-    <section id="faq" className={cx(layout.sectionLast, layout.narrow)}>
+    <section id="faq" className="page-section page-section-narrow">
       <SectionHeader title="FAQ" />
 
-      <div
-        className={cx(
-          layout.content,
-          "divide-y divide-[rgba(0,255,0,0.18)] border-y border-[rgba(0,255,0,0.18)]",
-        )}
-      >
+      <div className="mt-5 divide-y divide-[rgba(0,255,0,0.18)] border-y border-[rgba(0,255,0,0.18)]">
         {faq.map(([question, answer]) => (
-          <div key={question} className="grid gap-2 py-6 md:grid-cols-[.8fr_1.2fr]">
-            <h3>{question}</h3>
-            <p className={text.body}>{answer}</p>
+          <div
+            key={question}
+            className="grid gap-2 py-6 md:grid-cols-[.8fr_1.2fr]"
+          >
+            <p className="section-kicker">{question}</p>
+            <p>{answer}</p>
           </div>
         ))}
       </div>
@@ -584,21 +585,38 @@ function FaqSection() {
 function HeroStats() {
   return (
     <div className="absolute inset-x-0 bottom-10 z-20 hidden lg:block">
-      <Reveal delay={0.2}>
+      <Reveal>
         <div className="grid min-h-[70px] grid-cols-4 border-t border-white/20 bg-black/10 backdrop-blur-sm">
-          <HeroStat icon={<span className="text-4xl font-black neon-text">0</span>} title="Zero">
+          <HeroStat
+            icon={
+              <span className="neon-text text-4xl font-black">0</span>
+            }
+            title="Zero"
+          >
             Magnets, Clips, Adhesives
           </HeroStat>
 
-          <HeroStat icon={<Feather className="h-7 w-7 stroke-[1.5]" />} title="1 OZ">
+          <HeroStat
+            icon={<Feather className="h-7 w-7 stroke-[1.5]" />}
+            title="1 OZ"
+          >
             Pocket-Flat-Folding
           </HeroStat>
 
-          <HeroStat icon={<Trophy className="h-7 w-7 stroke-[1.5]" />} title="2 WINS">
+          <HeroStat
+            icon={<Trophy className="h-7 w-7 stroke-[1.5]" />}
+            title="2 WINS"
+          >
             Spill Deflection / Better Posture
           </HeroStat>
 
-          <HeroStat icon={<MonitorSmartphone className="h-7 w-7 stroke-[1.5]" />} title="3 DEVICES" last>
+          <HeroStat
+            icon={
+              <MonitorSmartphone className="h-7 w-7 stroke-[1.5]" />
+            }
+            title="3 DEVICES"
+            last
+          >
             Laptops / Phones / Tablets
           </HeroStat>
         </div>
@@ -619,14 +637,19 @@ function HeroStat({
   last?: boolean;
 }) {
   return (
-    <div className={cx("flex items-center gap-7 px-8", !last && "border-r border-white/20")}>
+    <div
+      className={cx(
+        "flex items-center gap-7 px-8",
+        !last && "border-r border-white/20",
+      )}
+    >
       <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border-2 border-[color:var(--neon)] text-[color:var(--neon)]">
         {icon}
       </div>
 
       <div>
-        <div className="text-sm font-black uppercase text-white">{title}</div>
-        <div className="mt-1 text-base leading-6 text-white/80">{children}</div>
+        <div className="section-kicker">{title}</div>
+        <div className="mt-1">{children}</div>
       </div>
     </div>
   );
@@ -644,9 +667,9 @@ function SectionHeader({
   return (
     <Reveal>
       <div>
-        {eyebrow && <p className={text.eyebrow}>{eyebrow}</p>}
+        {eyebrow && <p className="section-kicker">{eyebrow}</p>}
         <h2>{title}</h2>
-        {body && <p className="mt-3 text-muted-foreground">{body}</p>}
+        {body && <p className="mt-3">{body}</p>}
       </div>
     </Reveal>
   );
@@ -663,20 +686,24 @@ function PricingItem({ children }: { children: React.ReactNode }) {
 
 function Reveal({
   children,
-  delay = 0,
   className = "",
 }: {
   children: React.ReactNode;
-  delay?: number;
   className?: string;
 }) {
   return (
     <motion.div
-      className={cx("relative z-10 pointer-events-auto h-full w-full", className)}
+      className={cx(
+        "pointer-events-auto relative z-10 w-full",
+        className,
+      )}
       initial={{ opacity: 1, y: 0 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-60px" }}
-      transition={{ duration: 0.6, delay, ease: [0.22, 1, 0.36, 1] }}
+      transition={{
+        duration: 0.6,
+        ease: [0.22, 1, 0.36, 1],
+      }}
     >
       {children}
     </motion.div>
