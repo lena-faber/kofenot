@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useRef, useState } from "react";
+import { motion } from "motion/react";
 import {
   ArrowRight,
   Check,
@@ -15,19 +16,22 @@ import { Dialog, DialogContent } from "@/components/ui/dialog";
 import corp from "@/assets/kofenot-corp.jpeg";
 import deadSpill from "@/assets/dead-spill.jpg";
 import demoVideo from "@/assets/kofeenot-demo.mp4";
-import testimonialPoster from "@/assets/kofenot-testimonials.jpg";
-import testimonialVideo from "@/assets/kofenot-testimonials.mp4";
 import fidget from "@/assets/kofeenot-fidget.jpg";
 import giftBox from "@/assets/kofenot-gift-box.jpeg";
 import neck from "@/assets/kofeenot-neck.jpg";
 import safeSpill from "@/assets/safe-spill.jpeg";
 import spillSafeProduct from "@/assets/spill-safe.jpeg";
+import testimonialPoster from "@/assets/kofenot-testimonials.jpg";
+import testimonialVideo from "@/assets/kofenot-testimonials.mp4";
 import threeDevices from "@/assets/kofenot-3-devices.jpg";
 
 export const Route = createFileRoute("/")({ component: Home });
 
-const retailCheckoutUrl = "https://buy.stripe.com/fZu7sKfz0gcQ7wk6BSdUY0E";
-const twoUnitCheckoutUrl = "https://buy.stripe.com/eVq00i3Qi9Os9EsbWcdUY0M";
+const retailCheckoutUrl =
+  "https://buy.stripe.com/fZu7sKfz0gcQ7wk6BSdUY0E";
+
+const twoUnitCheckoutUrl =
+  "https://buy.stripe.com/eVq00i3Qi9Os9EsbWcdUY0M";
 
 function cx(...classes: Array<string | false | undefined>) {
   return classes.filter(Boolean).join(" ");
@@ -35,7 +39,6 @@ function cx(...classes: Array<string | false | undefined>) {
 
 type BenefitCard = {
   image: string;
-  mode: string;
   title: string;
   body: string;
 };
@@ -51,33 +54,27 @@ type PurchaseOption = {
 const benefitModes: BenefitCard[] = [
   {
     image: deadSpill,
-    mode: "Spill deflection",
     title: "Coffee",
     body: "60% of laptop damage starts with a spilled drink. Coffee leads the list.",
   },
   {
     image: safeSpill,
-    mode: "Save your laptop",
     title: "Golden minute",
     body:
-      "KOFENOT™ creates an escape angle that helps redirect spills away " +
-      "from the critical components beneath the keyboard.",
+      "KOFENOT™ creates an escape angle that helps redirect spills away from the critical components beneath the keyboard.",
   },
   {
     image: neck,
-    mode: "Better posture",
     title: "Tilt laptop, not neck",
     body: "Lifting the screen and tilting it back reduces tech-neck strain.",
   },
   {
     image: threeDevices,
-    mode: "Stand",
     title: "Flips to hold 3 devices",
     body: "Quietly turns coffee shops, airports, and gyms into your office.",
   },
   {
     image: fidget,
-    mode: "Fidget",
     title: "Snap. Shut. Repeat.",
     body: "KOFENOT™'s satisfying snap keeps restless fingers busy.",
   },
@@ -90,7 +87,11 @@ const howItWorksSteps = [
     "Rest Rear Hinge on Wedge",
     "Works with open-trench hinges. Flip wedge for closed-angle hinges.",
   ],
-  ["03", "Snap Shut", "A satisfying mechanical click users keep repeating."],
+  [
+    "03",
+    "Snap Shut",
+    "A satisfying mechanical click users keep repeating.",
+  ],
 ];
 
 const testimonials = [
@@ -124,14 +125,22 @@ const purchaseOptions: PurchaseOption[] = [
     eyebrow: "1 unit in Retail Box",
     price: "$15",
     title: "One KOFENOT™ laptop wedge in retail box.",
-    items: ["free shipping in the US", "In Stock. Ships from California", "3-5 business days"],
+    items: [
+      "Free shipping in the US",
+      "In Stock. Ships from California",
+      "3–5 business days",
+    ],
     url: retailCheckoutUrl,
   },
   {
     eyebrow: "2 units in Retail Box",
     price: "$25",
     title: "Two KOFENOT™ laptop wedges in retail box.",
-    items: ["free shipping in the US", "In Stock. Ships from California", "3-5 business days"],
+    items: [
+      "Free shipping in the US",
+      "In Stock. Ships from California",
+      "3–5 business days",
+    ],
     url: twoUnitCheckoutUrl,
   },
 ];
@@ -154,7 +163,7 @@ export function Home() {
       <FaqSection />
 
       <Dialog open={videoOpen} onOpenChange={setVideoOpen}>
-        <DialogContent className="max-w-3xl bg-black p-2 neon-border">
+        <DialogContent className="neon-border max-w-3xl bg-black p-2">
           <video
             src={demoVideo}
             controls
@@ -176,20 +185,28 @@ function HeroSection({ openDemo }: { openDemo: () => void }) {
 
       <div className="relative z-10 mx-auto max-w-[1480px] px-6 pt-7 lg:px-10">
         <div className="min-h-[calc(100svh-4rem)] pb-44">
-          <p className="section-kicker lg:ml-6">COFFEE HAPPENS. BE READY.</p>
+          <Reveal>
+            <p className="section-kicker lg:ml-6">
+              COFFEE HAPPENS. BE READY.
+            </p>
+          </Reveal>
 
-          <h1>
-            ULTIMATE
-            <br />
-            LAPTOP
-            <br />
-            WEDGE
-          </h1>
+          <Reveal>
+            <h1>
+              ULTIMATE
+              <br />
+              LAPTOP
+              <br />
+              WEDGE
+            </h1>
+          </Reveal>
 
-          <div className="mt-8 flex flex-wrap gap-3 lg:ml-6">
-            <SetupButton onClick={openDemo} />
-            <BuyButton href="#pricing" />
-          </div>
+          <Reveal>
+            <div className="mt-8 flex flex-wrap gap-3 lg:ml-6">
+              <SetupButton onClick={openDemo} />
+              <BuyButton href="#pricing" />
+            </div>
+          </Reveal>
         </div>
       </div>
 
@@ -200,8 +217,16 @@ function HeroSection({ openDemo }: { openDemo: () => void }) {
 
 function HeroBackground() {
   return (
-    <div className="pointer-events-none absolute inset-0 z-0" aria-hidden="true">
-      <img src={corp} alt="" className="absolute inset-0 h-full w-full object-cover object-center" />
+    <div
+      className="pointer-events-none absolute inset-0 z-0"
+      aria-hidden="true"
+    >
+      <img
+        src={corp}
+        alt=""
+        className="absolute inset-0 h-full w-full object-cover object-center"
+      />
+
       <div className="hero-overlay" />
     </div>
   );
@@ -236,29 +261,33 @@ function BenefitsSection() {
       id="benefits"
       className="page-section relative overflow-hidden"
     >
-      <SectionHeader eyebrow="Small Wedge. Big Difference." title="Why People Buy KOFENOT™" />
+      <SectionHeader
+        eyebrow="Small Wedge. Big Difference."
+        title="Why People Buy KOFENOT™"
+      />
 
       <div
-  className="pointer-events-none absolute right-[7%] top-[105px] z-0 hidden -rotate-12 select-none text-right font-black italic uppercase tracking-tight neon-text lg:block"
-  aria-hidden="true"
->
-  <div className="text-[25px] leading-[0.82] xl:text-[86px]">
-    $1,000+
-  </div>
-
-  <div className="mt-1 text-[35px] leading-none xl:text-[45px]">
-    Saved
-  </div>
-
-  <div className="mt-2 text-[20px] leading-none tracking-[0.16em] xl:text-[24px]">
-    Per Spill
-  </div>
-</div>
-      <div
-        className="relative z-10 mt-5 grid gap-4 md:grid-cols-2 lg:grid-cols-[25fr_17fr_16fr_20fr_17fr] lg:items-start"
+        className="neon-text pointer-events-none absolute right-[7%] top-[105px] z-0 hidden -rotate-12 select-none text-right font-black italic uppercase tracking-tight lg:block"
+        aria-hidden="true"
       >
+        <div className="text-[25px] leading-[0.82] xl:text-[86px]">
+          $1,000+
+        </div>
+
+        <div className="mt-1 text-[35px] leading-none xl:text-[45px]">
+          Saved
+        </div>
+
+        <div className="mt-2 text-[20px] leading-none tracking-[0.16em] xl:text-[24px]">
+          Per Spill
+        </div>
+      </div>
+
+      <div className="relative z-10 mt-5 grid gap-4 md:grid-cols-2 lg:grid-cols-[25fr_17fr_16fr_20fr_17fr] lg:items-start">
         {benefitModes.map((card) => (
-          <BenefitCard key={card.title} card={card} />
+          <Reveal key={card.title}>
+            <BenefitCard card={card} />
+          </Reveal>
         ))}
       </div>
     </section>
@@ -269,14 +298,16 @@ function BenefitCard({ card }: { card: BenefitCard }) {
   return (
     <article className="panel panel-hover group overflow-hidden transition duration-300 hover:-translate-y-2">
       <div className="aspect-square overflow-hidden bg-black">
-        <img src={card.image} alt={card.title} className="h-full w-full object-cover transition duration-500" />
+        <img
+          src={card.image}
+          alt={card.title}
+          className="h-full w-full object-cover transition duration-500"
+        />
       </div>
 
       <div className="border-t border-white/10 bg-[#080908] pt-5">
         <p className="section-kicker">{card.title}</p>
-        <p className="mt-3">
-          {card.body}
-        </p>
+        <p className="mt-3">{card.body}</p>
       </div>
     </article>
   );
@@ -288,14 +319,21 @@ function HowItWorksSection() {
       <SectionHeader
         title={
           <>
-            How It Works: <span className="neon-text">Open / Rest / Snap</span>
+            How It Works:{" "}
+            <span className="neon-text">Open / Rest / Snap</span>
           </>
         }
       />
 
       <div className="mt-5 grid gap-5 md:grid-cols-3">
         {howItWorksSteps.map(([number, title, description]) => (
-          <StepCard key={number} number={number} title={title} description={description} />
+          <Reveal key={number}>
+            <StepCard
+              number={number}
+              title={title}
+              description={description}
+            />
+          </Reveal>
         ))}
       </div>
     </section>
@@ -313,9 +351,13 @@ function StepCard({
 }) {
   return (
     <article className="panel panel-hover relative rounded-sm">
-      <div className="text-6xl font-black leading-none neon-text">{number}</div>
+      <div className="neon-text text-6xl font-black leading-none">
+        {number}
+      </div>
+
       <p className="section-kicker">{title}</p>
       <p className="mt-3">{description}</p>
+
       <div className="absolute right-7 top-7 h-1 w-12 bg-[color:var(--neon)]" />
     </article>
   );
@@ -335,7 +377,8 @@ function ReviewsSection() {
         }
       />
 
-      <div className="mx-auto mt-5 max-w-[900px]">
+      <Reveal>
+        <div className="mx-auto mt-5 max-w-[900px]">
           <div className="relative">
             <video
               ref={videoRef}
@@ -366,7 +409,8 @@ function ReviewsSection() {
           </div>
 
           <TestimonialQuotes />
-      </div>
+        </div>
+      </Reveal>
     </section>
   );
 }
@@ -374,7 +418,9 @@ function ReviewsSection() {
 function TestimonialQuotes() {
   return (
     <div className="mt-6 text-center">
-      <div className="text-2xl leading-none text-[color:var(--neon)]">★★★★★</div>
+      <div className="text-2xl leading-none text-[color:var(--neon)]">
+        ★★★★★
+      </div>
 
       <div className="mt-5 grid gap-3 md:grid-cols-4">
         {testimonials.map((quote) => (
@@ -383,13 +429,15 @@ function TestimonialQuotes() {
           </blockquote>
         ))}
       </div>
-
-      
     </div>
   );
 }
 
-function PricingSection({ openCheckout }: { openCheckout: (url?: string) => void }) {
+function PricingSection({
+  openCheckout,
+}: {
+  openCheckout: (url?: string) => void;
+}) {
   return (
     <section id="pricing" className="page-section">
       <SectionHeader
@@ -403,7 +451,11 @@ function PricingSection({ openCheckout }: { openCheckout: (url?: string) => void
 
       <div className="mt-5 grid gap-4 lg:grid-cols-[1fr_1fr_1.1fr]">
         {purchaseOptions.map((option) => (
-          <PricingCard key={option.eyebrow} option={option} openCheckout={openCheckout} />
+          <PricingCard
+            key={option.eyebrow}
+            option={option}
+            openCheckout={openCheckout}
+          />
         ))}
 
         <div className="panel overflow-hidden rounded-sm">
@@ -427,11 +479,12 @@ function PricingCard({
 }) {
   return (
     <article className="panel neon-border flex flex-col rounded-sm">
-      <div className="section-kicker">
-        {option.eyebrow}
+      <div className="section-kicker">{option.eyebrow}</div>
+
+      <div className="neon-text mt-3 text-5xl font-black">
+        {option.price}
       </div>
 
-      <div className="mt-3 text-5xl font-black neon-text">{option.price}</div>
       <p className="mt-3">{option.title}</p>
 
       <ul className="mt-5 space-y-2">
@@ -450,6 +503,7 @@ function PricingCard({
     </article>
   );
 }
+
 function ProductDetailsSection() {
   const details = [
     ["Size", "3.4 × 2.4 × 0.4 in"],
@@ -459,7 +513,8 @@ function ProductDetailsSection() {
       <>
         Made from durable ABS plastic
         <br />
-        tested by SGS for compliance with EU RoHS restricted-substance limits.
+        tested by SGS for compliance with EU RoHS restricted-substance
+        limits.
       </>,
     ],
     ["Attachment", "No magnets, clips, or adhesives"],
@@ -467,10 +522,7 @@ function ProductDetailsSection() {
   ];
 
   return (
-    <section
-      id="product-details"
-      className="page-section"
-    >
+    <section id="product-details" className="page-section">
       <div className="grid items-start gap-8 lg:grid-cols-2">
         <div>
           <SectionHeader
@@ -481,31 +533,30 @@ function ProductDetailsSection() {
             }
           />
 
-          <div className="mt-6 overflow-hidden border-y border-[rgba(0,255,0,0.18)]">
+          <Reveal>
+            <div className="mt-6 overflow-hidden border-y border-[rgba(0,255,0,0.18)]">
               {details.map(([label, value]) => (
                 <div
                   key={label}
                   className="grid gap-2 border-b border-[rgba(0,255,0,0.12)] py-5 last:border-b-0 sm:grid-cols-[190px_1fr]"
                 >
-                  <div className="section-kicker">
-                    {label}
-                  </div>
-
-                  <div>
-                    {value}
-                  </div>
+                  <div className="section-kicker">{label}</div>
+                  <div>{value}</div>
                 </div>
               ))}
-          </div>
+            </div>
+          </Reveal>
         </div>
 
-        <div className="overflow-hidden rounded-sm bg-white">
+        <Reveal>
+          <div className="overflow-hidden rounded-sm bg-white">
             <img
               src={spillSafeProduct}
               alt="KOFENOT™ SPILL SAFE laptop wedge"
               className="aspect-square h-full w-full object-contain"
             />
-        </div>
+          </div>
+        </Reveal>
       </div>
     </section>
   );
@@ -516,11 +567,12 @@ function FaqSection() {
     <section id="faq" className="page-section page-section-narrow">
       <SectionHeader title="FAQ" />
 
-      <div
-        className="mt-5 divide-y divide-[rgba(0,255,0,0.18)] border-y border-[rgba(0,255,0,0.18)]"
-      >
+      <div className="mt-5 divide-y divide-[rgba(0,255,0,0.18)] border-y border-[rgba(0,255,0,0.18)]">
         {faq.map(([question, answer]) => (
-          <div key={question} className="grid gap-2 py-6 md:grid-cols-[.8fr_1.2fr]">
+          <div
+            key={question}
+            className="grid gap-2 py-6 md:grid-cols-[.8fr_1.2fr]"
+          >
             <p className="section-kicker">{question}</p>
             <p>{answer}</p>
           </div>
@@ -533,23 +585,42 @@ function FaqSection() {
 function HeroStats() {
   return (
     <div className="absolute inset-x-0 bottom-10 z-20 hidden lg:block">
-      <div className="grid min-h-[70px] grid-cols-4 border-t border-white/20 bg-black/10 backdrop-blur-sm">
-          <HeroStat icon={<span className="text-4xl font-black neon-text">0</span>} title="Zero">
+      <Reveal>
+        <div className="grid min-h-[70px] grid-cols-4 border-t border-white/20 bg-black/10 backdrop-blur-sm">
+          <HeroStat
+            icon={
+              <span className="neon-text text-4xl font-black">0</span>
+            }
+            title="Zero"
+          >
             Magnets, Clips, Adhesives
           </HeroStat>
 
-          <HeroStat icon={<Feather className="h-7 w-7 stroke-[1.5]" />} title="1 OZ">
+          <HeroStat
+            icon={<Feather className="h-7 w-7 stroke-[1.5]" />}
+            title="1 OZ"
+          >
             Pocket-Flat-Folding
           </HeroStat>
 
-          <HeroStat icon={<Trophy className="h-7 w-7 stroke-[1.5]" />} title="2 WINS">
+          <HeroStat
+            icon={<Trophy className="h-7 w-7 stroke-[1.5]" />}
+            title="2 WINS"
+          >
             Spill Deflection / Better Posture
           </HeroStat>
 
-          <HeroStat icon={<MonitorSmartphone className="h-7 w-7 stroke-[1.5]" />} title="3 DEVICES" last>
+          <HeroStat
+            icon={
+              <MonitorSmartphone className="h-7 w-7 stroke-[1.5]" />
+            }
+            title="3 DEVICES"
+            last
+          >
             Laptops / Phones / Tablets
           </HeroStat>
-      </div>
+        </div>
+      </Reveal>
     </div>
   );
 }
@@ -566,7 +637,12 @@ function HeroStat({
   last?: boolean;
 }) {
   return (
-    <div className={cx("flex items-center gap-7 px-8", !last && "border-r border-white/20")}>
+    <div
+      className={cx(
+        "flex items-center gap-7 px-8",
+        !last && "border-r border-white/20",
+      )}
+    >
       <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border-2 border-[color:var(--neon)] text-[color:var(--neon)]">
         {icon}
       </div>
@@ -589,11 +665,13 @@ function SectionHeader({
   body?: string;
 }) {
   return (
-    <div>
-      {eyebrow && <p className="section-kicker">{eyebrow}</p>}
-      <h2>{title}</h2>
-      {body && <p className="mt-3">{body}</p>}
-    </div>
+    <Reveal>
+      <div>
+        {eyebrow && <p className="section-kicker">{eyebrow}</p>}
+        <h2>{title}</h2>
+        {body && <p className="mt-3">{body}</p>}
+      </div>
+    </Reveal>
   );
 }
 
@@ -603,5 +681,31 @@ function PricingItem({ children }: { children: React.ReactNode }) {
       <Check className="h-4 w-4 text-[color:var(--neon)]" />
       {children}
     </li>
+  );
+}
+
+function Reveal({
+  children,
+  className = "",
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) {
+  return (
+    <motion.div
+      className={cx(
+        "pointer-events-auto relative z-10 w-full",
+        className,
+      )}
+      initial={{ opacity: 1, y: 0 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-60px" }}
+      transition={{
+        duration: 0.6,
+        ease: [0.22, 1, 0.36, 1],
+      }}
+    >
+      {children}
+    </motion.div>
   );
 }
