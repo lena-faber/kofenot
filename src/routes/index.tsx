@@ -441,12 +441,13 @@ function PricingSection({ openCheckout }: { openCheckout: (url?: string) => void
   return (
     <section id="pricing" className={cx(layout.section, layout.standard)}>
       <SectionHeader
-        title={
-          <>
-            Buy <span className="neon-text">KOFENOT</span>
-          </>
-        }
-      />
+  sectionKicker="Ready to Ship. Secure Stripe Checkout"
+  title={
+    <>
+      Choose Your <span className="neon-text">KOFENOT™</span>
+    </>
+  }
+/>
 
       <div className={cx(layout.content, "grid gap-4 lg:grid-cols-[1fr_1fr_1.1fr]")}>
         {purchaseOptions.map((option) => (
