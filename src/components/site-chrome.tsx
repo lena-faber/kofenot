@@ -46,7 +46,7 @@ const ctaLabel = isSamplePage ? "Buy Sample" : "Buy Now";
           <span className="shrink-0 text-xl font-black tracking-[0.18em] text-[color:var(--neon)] group-hover:text-[color:var(--neon-dim)]">
             KOFENOT
           </span>
-          <span className="hidden min-w-0 truncate text-[11px] font-bold uppercase tracking-[0.18em] text-[color:var(--neon)] sm:block">
+          <span className="hidden min-w-0 truncate text-[11px] font-bold uppercase tracking-[0.18em] text-[white] sm:block">
             Make your laptop coffeeshop-friendly™
           </span>
         </Link>
