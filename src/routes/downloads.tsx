@@ -31,7 +31,7 @@ const downloads = [
     format: "PDF",
     description:
       "For coffee shops, bookstores, office supply stores, campus stores, museum shops, airport stores, and other retailers.",
-    file: "/downloads/kofenot-retail-sales-deck.pdf",
+    file: "/downloads/KOFENOT_Retail_Sales_Deck.pdf",
     icon: Presentation,
   },
   {
@@ -39,7 +39,7 @@ const downloads = [
     format: "PDF",
     description:
       "For employee programs, client gifts, conferences, expos, trade shows, universities, custom branding, and promotional products.",
-    file: "/downloads/kofenot-corporate-programs-deck.pdf",
+    file: "/downloads/KOFENOT_Corporate_Programs_Deck.pdf",
     icon: Presentation,
   },
   {
@@ -47,7 +47,7 @@ const downloads = [
     format: "PDF",
     description:
       "For distributors, importers, private-label partners, licensing partners, and large-volume buyers.",
-    file: "/downloads/kofenot-distribution-deck.pdf",
+    file: "/downloads/KOFENOT_Distribution_Deck.pdf",
     icon: Presentation,
   },
   {
