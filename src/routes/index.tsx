@@ -257,67 +257,52 @@ function BuyButton({ href }: { href: string }) {
     </a>
   );
 }
-
 function BenefitsSection() {
   return (
-    <section
-      id="benefits"
-      className={cx(
-        "relative overflow-hidden border-t border-[rgba(0,255,0,0.12)] pt-20 pb-5",
-        layout.wide,
-      )}
-    >
-      <SectionHeader sectionKicker="Small Wedge. Big Difference." title="Why People Buy KOFENOT™" />
+    <section className={cx("relative overflow-hidden", layout.section)}>
+      <div className={layout.wide}>
+        <SectionHeader
+          sectionKicker="Small Wedge. Big Difference."
+          title="Why People Buy KOFENOT™"
+        />
 
-      <div
-  className="pointer-events-none absolute right-[7%] top-[105px] z-0 hidden -rotate-12 select-none text-right font-black italic uppercase tracking-tight neon-text lg:block"
-  aria-hidden="true"
->
-  <div className="text-[25px] leading-[0.82] xl:text-[86px]">
-    $1,000+
-  </div>
+        <div
+          className="pointer-events-none absolute right-[7%] top-[105px] z-0 hidden -rotate-12 select-none text-right font-black italic uppercase tracking-tight neon-text lg:block"
+          aria-hidden="true"
+        >
+          <div className="text-[25px] leading-[0.82] xl:text-[86px]">
+            $1,000+
+          </div>
 
-  <div className="mt-1 text-[35px] leading-none xl:text-[45px]">
-    Saved
-  </div>
+          <div className="mt-1 text-[35px] leading-none xl:text-[45px]">
+            Saved
+          </div>
 
-  <div className="mt-2 text-[20px] leading-none tracking-[0.16em] xl:text-[24px]">
-    Per Spill
-  </div>
-</div>
-      <div
-        className={cx(
-          layout.content,
-          "relative z-10 grid gap-4 md:grid-cols-2 lg:min-h-[620px] lg:grid-cols-[25fr_17fr_16fr_20fr_17fr] lg:items-start",
-        )}
-      >
-        {benefitModes.map((card, index) => (
-          <Reveal key={card.title} delay={index * 0.055} className={card.tileClass}>
-            <BenefitCard card={card} />
-          </Reveal>
-        ))}
+          <div className="mt-2 text-[20px] leading-none tracking-[0.16em] xl:text-[24px]">
+            Per Spill
+          </div>
+        </div>
+
+        <div
+          className={cx(
+            layout.content,
+            "relative z-10 grid gap-4 md:grid-cols-2 lg:grid-cols-[25fr_17fr_16fr_20fr_17fr] lg:items-start",
+          )}
+        >
+          {benefitModes.map((card, index) => (
+            <Reveal
+              key={card.title}
+              delay={index * 0.055}
+              className={card.tileClass}
+            >
+              <BenefitCard card={card} />
+            </Reveal>
+          ))}
+        </div>
       </div>
     </section>
   );
 }
-
-function BenefitCard({ card }: { card: BenefitCard }) {
-  return (
-    <article className="group flex h-full flex-col overflow-hidden bg-black transition duration-300 hover:-translate-y-2">
-      <div className="aspect-square overflow-hidden bg-black">
-        <img src={card.image} alt={card.title} className="h-full w-full object-cover transition duration-500" />
-      </div>
-
-      <div className="flex-1 border-t border-white/10 bg-[#080908] p-5">
-        <h3>{card.title}</h3>
-        <p className="mt-3 text-sm font-semibold leading-snug text-white/70 md:text-base">
-          {card.body}
-        </p>
-      </div>
-    </article>
-  );
-}
-
 function HowItWorksSection() {
   return (
     <section id="how-it-works" className={cx(layout.section, layout.standard)}>
