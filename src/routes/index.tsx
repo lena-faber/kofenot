@@ -198,8 +198,6 @@ function HeroSection({ openDemo }: { openDemo: () => void }) {
         <div className="min-h-[calc(100svh-4rem)] pb-44">
           <Reveal delay={0.08}>
             <<p className="section-kicker">COFFEE HAPPENS. BE READY.</p>
-              
-            </p>
           </Reveal>
 
           <Reveal delay={0.05}>
