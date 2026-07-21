@@ -334,12 +334,14 @@
   h1 {
     font-size: 128px;
   }
-  body {
-    font-size: 14px;
-  }
 
   h2 {
     font-size: 56px;
+  }
+
+  p {
+    font-size: 28px;
+    line-height: 1.4;
   }
 
   .page-hero-inner,
