@@ -142,14 +142,14 @@ const faq = [
 
 const purchaseOptions: PurchaseOption[] = [
   {
-    eyebrow: "1 unit in Retail Box",
+    sectionKicker: "1 unit in Retail Box",
     price: "$15",
     title: "One KOFENOT™ laptop wedge in retail box.",
     items: ["free shipping in the US", "In Stock. Ships from California", "3-5 business days"],
     url: retailCheckoutUrl,
   },
   {
-    eyebrow: "2 units in Retail Box",
+    sectionKicker: "2 units in Retail Box",
     price: "$25",
     title: "Two KOFENOT™ laptop wedges in retail box.",
     items: ["free shipping in the US", "In Stock. Ships from California", "3-5 business days"],
@@ -268,7 +268,7 @@ function BenefitsSection() {
         layout.wide,
       )}
     >
-      <SectionHeader eyebrow="Small Wedge. Big Difference." title="Why People Buy KOFENOT™" />
+      <SectionHeader sectionKicker="Small Wedge. Big Difference." title="Why People Buy KOFENOT™" />
 
       <div
   className="pointer-events-none absolute right-[7%] top-[105px] z-0 hidden -rotate-12 select-none text-right font-black italic uppercase tracking-tight neon-text lg:block"
@@ -446,7 +446,7 @@ function PricingSection({ openCheckout }: { openCheckout: (url?: string) => void
 
       <div className={cx(layout.content, "grid gap-4 lg:grid-cols-[1fr_1fr_1.1fr]")}>
         {purchaseOptions.map((option) => (
-          <PricingCard key={option.eyebrow} option={option} openCheckout={openCheckout} />
+          <PricingCard key={option.sectionKicker} option={option} openCheckout={openCheckout} />
         ))}
 
         <div className="panel overflow-hidden rounded-sm">
@@ -471,7 +471,7 @@ function PricingCard({
   return (
     <article className="neon-border neon-glow flex flex-col rounded-sm bg-[rgba(0,255,0,0.06)] p-6">
       <div className="text-xs uppercase tracking-[0.18em] text-muted-foreground">
-        {option.eyebrow}
+        {option.sectionKicker}
       </div>
 
       <div className="mt-3 text-5xl font-black neon-text">{option.price}</div>
@@ -632,18 +632,18 @@ function HeroStat({
 }
 
 function SectionHeader({
-  eyebrow,
+  sectionKicker,
   title,
   body,
 }: {
-  eyebrow?: string;
+  sectionKicker?: string;
   title: React.ReactNode;
   body?: string;
 }) {
   return (
     <Reveal>
       <div>
-        {eyebrow && <p className={text.eyebrow}>{eyebrow}</p>}
+        {sectionKicker && <p className={text.sectionKicker}>{sectionKicker}</p>}
         <h2>{title}</h2>
         {body && <p className="mt-3 text-muted-foreground">{body}</p>}
       </div>
