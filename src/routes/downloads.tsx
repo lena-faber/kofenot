@@ -144,9 +144,9 @@ function DownloadsContact() {
       <div className="neon-border bg-[rgba(0,255,0,0.05)] p-8 text-center neon-glow md:p-12">
         <p className="section-kicker">Need something else?</p>
 
-        <h2>
+        <h3 className="section-kicker">
           Request additional KOFENOT™ materials.
-        </h2>
+        </h3>
 
         <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
           Contact us for custom quotations, samples, artwork templates,
