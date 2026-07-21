@@ -107,10 +107,11 @@
   }
 
   p {
-    font-size: 28px;
-    line-height: 1.4;
-  }
-
+  margin: 0;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.4;
+}
   #root,
   main,
   section,
