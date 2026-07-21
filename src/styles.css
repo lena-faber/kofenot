@@ -266,9 +266,16 @@
   .panel {
   height: auto;
   min-height: 0;
-  padding: 1rem;
+  padding: 0 !important;
+  overflow: hidden;
   border: 1px solid rgba(0, 255, 0, 0.22);
   background: rgba(0, 255, 0, 0.035);
+}
+
+.panel > img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
   
   .panel-hover:hover {
