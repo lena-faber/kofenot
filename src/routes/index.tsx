@@ -303,6 +303,29 @@ function BenefitsSection() {
     </section>
   );
 }
+
+function BenefitCard({ card }: { card: BenefitCard }) {
+  return (
+    <article className="group flex h-full flex-col overflow-hidden bg-black transition duration-300 hover:-translate-y-2">
+      <div className="aspect-square overflow-hidden bg-black">
+        <img
+          src={card.image}
+          alt={card.title}
+          className="h-full w-full object-cover transition duration-500"
+        />
+      </div>
+
+      <div className="flex-1 border-t border-white/10 bg-[#080908] p-5">
+        <h3>{card.title}</h3>
+
+        <p className="mt-3 text-sm font-semibold leading-snug text-white/70 md:text-base">
+          {card.body}
+        </p>
+      </div>
+    </article>
+  );
+}
+
 function HowItWorksSection() {
   return (
     <section id="how-it-works" className={cx(layout.section, layout.standard)}>
