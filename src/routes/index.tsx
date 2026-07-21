@@ -197,8 +197,8 @@ function HeroSection({ openDemo }: { openDemo: () => void }) {
       <div className="relative z-10 mx-auto max-w-[1480px] px-6 pt-7 lg:px-10">
         <div className="min-h-[calc(100svh-4rem)] pb-44">
           <Reveal delay={0.08}>
-            <p className="mt-2 text-lg font-semibold uppercase tracking-[0.18em] text-white md:text-xl lg:ml-6">
-              COFFEE HAPPENS. BE READY.
+            <<p className="section-kicker">COFFEE HAPPENS. BE READY.</p>
+              
             </p>
           </Reveal>
 
