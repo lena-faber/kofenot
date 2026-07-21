@@ -274,9 +274,7 @@ function BenefitsSection() {
   aria-hidden="true"
 >
   <div className="text-[25px] leading-[0.82] xl:text-[86px]">
-    $1,000+<p className="section-kicker">
-  {purchaseOption.sectionKicker}
-</p>
+    $1,000+
   </div>
 
   <div className="mt-1 text-[35px] leading-none xl:text-[45px]">
