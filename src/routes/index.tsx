@@ -316,9 +316,9 @@ function BenefitCard({ card }: { card: BenefitCard }) {
       <div className="flex-1 border-t border-white/10 bg-[#080908] p-5">
         <h3>{card.title}</h3>
 
-        <p className="mt-3 text-sm font-semibold leading-snug text-white/70 md:text-base">
-          {card.body}
-        </p>
+        <p className="mt-1 text-base leading-6 text-white/80">
+  {card.body}
+</p>
       </div>
     </article>
   );
