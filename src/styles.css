@@ -100,6 +100,8 @@
     background-size: 16px 16px;
     color: #ffffff;
     font-family: var(--font-body);
+    font-size: 12px;
+  line-height: 1.6;
     font-weight: 400;
     -webkit-font-smoothing: antialiased;
   }
