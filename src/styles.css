@@ -222,13 +222,13 @@ footer * {
   .page-section {
     margin-inline: auto;
     max-width: 1320px;
-    padding: 5rem 1rem;
+    padding: 2.5rem 1rem;
   }
 
   .page-section-narrow {
     margin-inline: auto;
     max-width: 900px;
-    padding: 5rem 1rem;
+    padding: 2.5rem 1rem;
   }
 
   .section-band {
