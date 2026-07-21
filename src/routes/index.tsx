@@ -124,14 +124,22 @@ const purchaseOptions: PurchaseOption[] = [
     eyebrow: "1 unit in Retail Box",
     price: "$15",
     title: "One KOFENOT™ laptop wedge in retail box.",
-    items: ["free shipping in the US", "In Stock. Ships from California", "3-5 business days"],
+    items: [
+      "free shipping in the US",
+      "In Stock. Ships from California",
+      "3-5 business days",
+    ],
     url: retailCheckoutUrl,
   },
   {
     eyebrow: "2 units in Retail Box",
     price: "$25",
     title: "Two KOFENOT™ laptop wedges in retail box.",
-    items: ["free shipping in the US", "In Stock. Ships from California", "3-5 business days"],
+    items: [
+      "free shipping in the US",
+      "In Stock. Ships from California",
+      "3-5 business days",
+    ],
     url: twoUnitCheckoutUrl,
   },
 ];
@@ -171,12 +179,12 @@ export function Home() {
 
 function HeroSection({ openDemo }: { openDemo: () => void }) {
   return (
-    <section className="page-hero min-h-[100svh]">
+    <section className="page-hero">
       <HeroBackground />
 
-      <div className="relative z-10 mx-auto max-w-[1480px] px-6 pt-7 lg:px-10">
-        <div className="min-h-[calc(100svh-4rem)] pb-44">
-          <p className="section-kicker lg:ml-6">COFFEE HAPPENS. BE READY.</p>
+      <div className="page-hero-inner">
+        <div className="max-w-4xl">
+          <p className="section-kicker">COFFEE HAPPENS. BE READY.</p>
 
           <h1>
             ULTIMATE
@@ -186,7 +194,7 @@ function HeroSection({ openDemo }: { openDemo: () => void }) {
             WEDGE
           </h1>
 
-          <div className="mt-8 flex flex-wrap gap-3 lg:ml-6">
+          <div className="mt-8 flex flex-wrap gap-3">
             <SetupButton onClick={openDemo} />
             <BuyButton href="#pricing" />
           </div>
@@ -201,7 +209,11 @@ function HeroSection({ openDemo }: { openDemo: () => void }) {
 function HeroBackground() {
   return (
     <div className="pointer-events-none absolute inset-0 z-0" aria-hidden="true">
-      <img src={corp} alt="" className="absolute inset-0 h-full w-full object-cover object-center" />
+      <img
+        src={corp}
+        alt=""
+        className="absolute inset-0 h-full w-full object-cover object-center"
+      />
       <div className="hero-overlay" />
     </div>
   );
@@ -212,7 +224,7 @@ function SetupButton({ onClick }: { onClick: () => void }) {
     <button
       type="button"
       onClick={onClick}
-      className="group inline-flex h-10 w-fit items-center gap-4 rounded-lg bg-red-600 px-6 text-sm font-black uppercase tracking-[0.18em] text-white shadow-[0_0_34px_rgba(220,38,38,0.55)] transition hover:bg-red-500"
+      className="inline-flex h-10 w-fit items-center gap-4 rounded-sm bg-red-600 px-6 text-sm font-black uppercase tracking-[0.18em] text-white transition hover:bg-red-500"
     >
       <Play className="h-7 w-7 shrink-0 fill-white text-white" />
       2-SEC SETUP
@@ -223,40 +235,20 @@ function SetupButton({ onClick }: { onClick: () => void }) {
 function BuyButton({ href }: { href: string }) {
   return (
     <a href={href}>
-      <Button className="h-10 bg-[color:var(--neon)] px-7 font-black text-black hover:bg-[color:var(--neon-dim)]">
-        Buy Now
-      </Button>
+      <Button className="h-10 px-7 font-black text-black">Buy Now</Button>
     </a>
   );
 }
 
 function BenefitsSection() {
   return (
-    <section
-      id="benefits"
-      className="page-section relative overflow-hidden"
-    >
-      <SectionHeader eyebrow="Small Wedge. Big Difference." title="Why People Buy KOFENOT™" />
+    <section id="benefits" className="page-section">
+      <SectionHeader
+        eyebrow="Small Wedge. Big Difference."
+        title="Why People Buy KOFENOT™"
+      />
 
-      <div
-  className="pointer-events-none absolute right-[7%] top-[105px] z-0 hidden -rotate-12 select-none text-right font-black italic uppercase tracking-tight neon-text lg:block"
-  aria-hidden="true"
->
-  <div className="text-[25px] leading-[0.82] xl:text-[86px]">
-    $1,000+
-  </div>
-
-  <div className="mt-1 text-[35px] leading-none xl:text-[45px]">
-    Saved
-  </div>
-
-  <div className="mt-2 text-[20px] leading-none tracking-[0.16em] xl:text-[24px]">
-    Per Spill
-  </div>
-</div>
-      <div
-        className="relative z-10 mt-5 grid gap-4 md:grid-cols-2 lg:grid-cols-[25fr_17fr_16fr_20fr_17fr] lg:items-start"
-      >
+      <div className="mt-5 grid gap-4 md:grid-cols-2 lg:grid-cols-[25fr_17fr_16fr_20fr_17fr] lg:items-start">
         {benefitModes.map((card) => (
           <BenefitCard key={card.title} card={card} />
         ))}
@@ -267,16 +259,19 @@ function BenefitsSection() {
 
 function BenefitCard({ card }: { card: BenefitCard }) {
   return (
-    <article className="panel panel-hover group overflow-hidden transition duration-300 hover:-translate-y-2">
+    <article className="panel panel-hover overflow-hidden transition duration-300 hover:-translate-y-2">
       <div className="aspect-square overflow-hidden bg-black">
-        <img src={card.image} alt={card.title} className="h-full w-full object-cover transition duration-500" />
+        <img
+          src={card.image}
+          alt={card.title}
+          className="h-full w-full object-cover transition duration-500"
+        />
       </div>
 
-      <div className="border-t border-white/10 bg-[#080908] pt-5">
-        <p className="section-kicker">{card.title}</p>
-        <p className="mt-3">
-          {card.body}
-        </p>
+      <div className="border-t border-white/10 pt-5">
+        <p className="section-kicker">{card.mode}</p>
+        <h3 className="mt-3 text-xl font-black uppercase">{card.title}</h3>
+        <p className="mt-3">{card.body}</p>
       </div>
     </article>
   );
@@ -288,14 +283,19 @@ function HowItWorksSection() {
       <SectionHeader
         title={
           <>
-            How It Works: <span className="neon-text">Open / Rest / Snap</span>
+            How It Works: <span className="text-primary">Open / Rest / Snap</span>
           </>
         }
       />
 
       <div className="mt-5 grid gap-5 md:grid-cols-3">
         {howItWorksSteps.map(([number, title, description]) => (
-          <StepCard key={number} number={number} title={title} description={description} />
+          <StepCard
+            key={number}
+            number={number}
+            title={title}
+            description={description}
+          />
         ))}
       </div>
     </section>
@@ -313,10 +313,12 @@ function StepCard({
 }) {
   return (
     <article className="panel panel-hover relative rounded-sm">
-      <div className="text-6xl font-black leading-none neon-text">{number}</div>
+      <div className="text-6xl font-black leading-none text-primary">
+        {number}
+      </div>
       <p className="section-kicker">{title}</p>
       <p className="mt-3">{description}</p>
-      <div className="absolute right-7 top-7 h-1 w-12 bg-[color:var(--neon)]" />
+      <div className="absolute right-7 top-7 h-1 w-12 bg-primary" />
     </article>
   );
 }
@@ -330,42 +332,42 @@ function ReviewsSection() {
       <SectionHeader
         title={
           <>
-            Watch <span className="neon-text">Real Reactions</span>
+            Watch <span className="text-primary">Real Reactions</span>
           </>
         }
       />
 
       <div className="mx-auto mt-5 max-w-[900px]">
-          <div className="relative">
-            <video
-              ref={videoRef}
-              src={`${testimonialVideo}#t=0.1`}
-              poster={testimonialPoster}
-              controls={isPlaying}
-              preload="auto"
-              playsInline
-              className="block w-full rounded-sm"
-            />
+        <div className="relative">
+          <video
+            ref={videoRef}
+            src={`${testimonialVideo}#t=0.1`}
+            poster={testimonialPoster}
+            controls={isPlaying}
+            preload="auto"
+            playsInline
+            className="block w-full rounded-sm"
+          />
 
-            {!isPlaying && (
-              <button
-                type="button"
-                onClick={() => {
-                  videoRef.current?.play();
-                  setIsPlaying(true);
-                }}
-                className="absolute inset-0 flex items-center justify-center"
-                aria-label="Play testimonials video"
-              >
-                <Play
-                  className="h-24 w-24 fill-red-600 text-red-600 drop-shadow-[0_0_30px_rgba(220,38,38,.8)]"
-                  strokeWidth={0}
-                />
-              </button>
-            )}
-          </div>
+          {!isPlaying && (
+            <button
+              type="button"
+              onClick={() => {
+                videoRef.current?.play();
+                setIsPlaying(true);
+              }}
+              className="absolute inset-0 flex items-center justify-center"
+              aria-label="Play testimonials video"
+            >
+              <Play
+                className="h-24 w-24 fill-red-600 text-red-600 drop-shadow-[0_0_30px_rgba(220,38,38,.8)]"
+                strokeWidth={0}
+              />
+            </button>
+          )}
+        </div>
 
-          <TestimonialQuotes />
+        <TestimonialQuotes />
       </div>
     </section>
   );
@@ -374,7 +376,7 @@ function ReviewsSection() {
 function TestimonialQuotes() {
   return (
     <div className="mt-6 text-center">
-      <div className="text-2xl leading-none text-[color:var(--neon)]">★★★★★</div>
+      <div className="text-2xl leading-none text-primary">★★★★★</div>
 
       <div className="mt-5 grid gap-3 md:grid-cols-4">
         {testimonials.map((quote) => (
@@ -383,8 +385,6 @@ function TestimonialQuotes() {
           </blockquote>
         ))}
       </div>
-
-      
     </div>
   );
 }
@@ -395,7 +395,7 @@ function PricingSection({ openCheckout }: { openCheckout: (url?: string) => void
       <SectionHeader
         title={
           <>
-            Buy <span className="neon-text">KOFENOT</span>
+            Buy <span className="text-primary">KOFENOT</span>
           </>
         }
         body="Ready to Ship. Secure Stripe Checkout"
@@ -403,7 +403,11 @@ function PricingSection({ openCheckout }: { openCheckout: (url?: string) => void
 
       <div className="mt-5 grid gap-4 lg:grid-cols-[1fr_1fr_1.1fr]">
         {purchaseOptions.map((option) => (
-          <PricingCard key={option.eyebrow} option={option} openCheckout={openCheckout} />
+          <PricingCard
+            key={option.eyebrow}
+            option={option}
+            openCheckout={openCheckout}
+          />
         ))}
 
         <div className="panel overflow-hidden rounded-sm">
@@ -427,11 +431,11 @@ function PricingCard({
 }) {
   return (
     <article className="panel neon-border flex flex-col rounded-sm">
-      <div className="section-kicker">
-        {option.eyebrow}
-      </div>
+      <div className="section-kicker">{option.eyebrow}</div>
 
-      <div className="mt-3 text-5xl font-black neon-text">{option.price}</div>
+      <div className="mt-3 text-5xl font-black text-primary">
+        {option.price}
+      </div>
       <p className="mt-3">{option.title}</p>
 
       <ul className="mt-5 space-y-2">
@@ -442,7 +446,7 @@ function PricingCard({
 
       <Button
         onClick={() => openCheckout(option.url)}
-        className="mt-auto h-12 bg-[color:var(--neon)] font-black text-black hover:bg-[color:var(--neon-dim)]"
+        className="mt-auto h-12 font-black text-black"
       >
         Buy Now
         <ArrowRight className="ml-2 h-4 w-4" />
@@ -450,6 +454,7 @@ function PricingCard({
     </article>
   );
 }
+
 function ProductDetailsSection() {
   const details = [
     ["Size", "3.4 × 2.4 × 0.4 in"],
@@ -467,44 +472,36 @@ function ProductDetailsSection() {
   ];
 
   return (
-    <section
-      id="product-details"
-      className="page-section"
-    >
+    <section id="product-details" className="page-section">
       <div className="grid items-start gap-8 lg:grid-cols-2">
         <div>
           <SectionHeader
             title={
               <>
-                Product <span className="neon-text">Details</span>
+                Product <span className="text-primary">Details</span>
               </>
             }
           />
 
-          <div className="mt-6 overflow-hidden border-y border-[rgba(0,255,0,0.18)]">
-              {details.map(([label, value]) => (
-                <div
-                  key={label}
-                  className="grid gap-2 border-b border-[rgba(0,255,0,0.12)] py-5 last:border-b-0 sm:grid-cols-[190px_1fr]"
-                >
-                  <div className="section-kicker">
-                    {label}
-                  </div>
-
-                  <div>
-                    {value}
-                  </div>
-                </div>
-              ))}
+          <div className="mt-6 overflow-hidden border-y border-border">
+            {details.map(([label, value]) => (
+              <div
+                key={label}
+                className="grid gap-2 border-b border-border py-5 last:border-b-0 sm:grid-cols-[190px_1fr]"
+              >
+                <div className="section-kicker">{label}</div>
+                <div>{value}</div>
+              </div>
+            ))}
           </div>
         </div>
 
         <div className="overflow-hidden rounded-sm bg-white">
-            <img
-              src={spillSafeProduct}
-              alt="KOFENOT™ SPILL SAFE laptop wedge"
-              className="aspect-square h-full w-full object-contain"
-            />
+          <img
+            src={spillSafeProduct}
+            alt="KOFENOT™ SPILL SAFE laptop wedge"
+            className="aspect-square h-full w-full object-contain"
+          />
         </div>
       </div>
     </section>
@@ -513,14 +510,15 @@ function ProductDetailsSection() {
 
 function FaqSection() {
   return (
-    <section id="faq" className="page-section page-section-narrow">
+    <section id="faq" className="page-section-narrow">
       <SectionHeader title="FAQ" />
 
-      <div
-        className="mt-5 divide-y divide-[rgba(0,255,0,0.18)] border-y border-[rgba(0,255,0,0.18)]"
-      >
+      <div className="mt-5 divide-y divide-border border-y border-border">
         {faq.map(([question, answer]) => (
-          <div key={question} className="grid gap-2 py-6 md:grid-cols-[.8fr_1.2fr]">
+          <div
+            key={question}
+            className="grid gap-2 py-6 md:grid-cols-[.8fr_1.2fr]"
+          >
             <p className="section-kicker">{question}</p>
             <p>{answer}</p>
           </div>
@@ -534,21 +532,21 @@ function HeroStats() {
   return (
     <div className="absolute inset-x-0 bottom-10 z-20 hidden lg:block">
       <div className="grid min-h-[70px] grid-cols-4 border-t border-white/20 bg-black/10 backdrop-blur-sm">
-          <HeroStat icon={<span className="text-4xl font-black neon-text">0</span>} title="Zero">
-            Magnets, Clips, Adhesives
-          </HeroStat>
+        <HeroStat icon={<span className="text-4xl font-black text-primary">0</span>} title="Zero">
+          Magnets, Clips, Adhesives
+        </HeroStat>
 
-          <HeroStat icon={<Feather className="h-7 w-7 stroke-[1.5]" />} title="1 OZ">
-            Pocket-Flat-Folding
-          </HeroStat>
+        <HeroStat icon={<Feather className="h-7 w-7 stroke-[1.5]" />} title="1 OZ">
+          Pocket-Flat-Folding
+        </HeroStat>
 
-          <HeroStat icon={<Trophy className="h-7 w-7 stroke-[1.5]" />} title="2 WINS">
-            Spill Deflection / Better Posture
-          </HeroStat>
+        <HeroStat icon={<Trophy className="h-7 w-7 stroke-[1.5]" />} title="2 WINS">
+          Spill Deflection / Better Posture
+        </HeroStat>
 
-          <HeroStat icon={<MonitorSmartphone className="h-7 w-7 stroke-[1.5]" />} title="3 DEVICES" last>
-            Laptops / Phones / Tablets
-          </HeroStat>
+        <HeroStat icon={<MonitorSmartphone className="h-7 w-7 stroke-[1.5]" />} title="3 DEVICES" last>
+          Laptops / Phones / Tablets
+        </HeroStat>
       </div>
     </div>
   );
@@ -567,7 +565,7 @@ function HeroStat({
 }) {
   return (
     <div className={cx("flex items-center gap-7 px-8", !last && "border-r border-white/20")}>
-      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border-2 border-[color:var(--neon)] text-[color:var(--neon)]">
+      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border-2 border-primary text-primary">
         {icon}
       </div>
 
@@ -600,7 +598,7 @@ function SectionHeader({
 function PricingItem({ children }: { children: React.ReactNode }) {
   return (
     <li className="flex gap-2">
-      <Check className="h-4 w-4 text-[color:var(--neon)]" />
+      <Check className="h-4 w-4 text-primary" />
       {children}
     </li>
   );
