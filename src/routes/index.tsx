@@ -44,8 +44,7 @@ const layout = {
 };
 
 const text = {
-  eyebrow: "section-kicker",
-  body: "text-sm text-muted-foreground",
+  body: "text-muted-foreground",
 };
 
 type BenefitCard = {
@@ -57,7 +56,7 @@ type BenefitCard = {
 };
 
 type PurchaseOption = {
-  eyebrow: string;
+  sectionKicker: string;
   price: string;
   title: string;
   items: string[];
@@ -268,7 +267,7 @@ function BenefitsSection() {
         layout.wide,
       )}
     >
-      <SectionHeader section-Kicker="Small Wedge. Big Difference." title="Why People Buy KOFENOT™" />
+      <SectionHeader sectionKicker="Small Wedge. Big Difference." title="Why People Buy KOFENOT™" />
 
       <div
   className="pointer-events-none absolute right-[7%] top-[105px] z-0 hidden -rotate-12 select-none text-right font-black italic uppercase tracking-tight neon-text lg:block"
@@ -471,10 +470,10 @@ function PricingCard({
   openCheckout: (url?: string) => void;
 }) {
   return (
-    <article className="neon-border neon-glow flex flex-col rounded-sm bg-[rgba(0,255,0,0.06)] p-6">
-      <div className="text-xs uppercase tracking-[0.18em] text-muted-foreground">
-        {option.sectionKicker}
-      </div>
+    <article className="neon-border flex flex-col rounded-sm bg-[rgba(0,255,0,0.06)] p-6">
+      <p className="section-kicker">
+  {option.sectionKicker}
+</p>
 
       <div className="mt-3 text-5xl font-black neon-text">{option.price}</div>
       <p className="mt-3 text-sm">{option.title}</p>
@@ -645,7 +644,7 @@ function SectionHeader({
   return (
     <Reveal>
       <div>
-        {sectionKicker && <p className={text.sectionKicker}>{sectionKicker}</p>}
+        {sectionKicker && <p className="section-kicker">{sectionKicker}</p>}
         <h2>{title}</h2>
         {body && <p className="mt-3 text-muted-foreground">{body}</p>}
       </div>
