@@ -133,7 +133,7 @@ function HeroSection() {
             <br />
             <span className="neon-text">KOFENOT</span>
           </h1>
-          <p className="hero-copy">
+          <p className="hero-copy body-copy body-copy-compact">
             For businesses, events, conferences, coffee shops, coworking spaces,
             promotional product companies, and corporate gifts.
           </p>
@@ -167,7 +167,7 @@ function AudiencesSection() {
     <section className="page-section">
       <p className="section-kicker">Put your logo on KOFENOT</p>
       <h2 className="section-title">A branded desk tool people actually use.</h2>
-      <p className="mt-5 max-w-3xl text-lg text-muted-foreground">
+      <p className="body-copy body-copy-compact mt-5 max-w-3xl">
         KOFENOT gives your logo a daily-use surface on a compact laptop wedge
         built for coffee-shop work, events, gifting, and shared workspaces.
       </p>
@@ -178,7 +178,7 @@ function AudiencesSection() {
             <h3 className="mt-5 text-xl font-black uppercase">
               {item.title}
             </h3>
-            <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+            <p className="body-copy body-copy-compact mt-3">
               {item.copy}
             </p>
           </article>
@@ -221,7 +221,7 @@ function ProgramScopeSection() {
         </h2>
         <div className="mt-6 grid gap-3">
           {programScope.map((item) => (
-            <div key={item} className="flex gap-3 text-lg font-bold">
+            <div key={item} className="body-copy body-copy-compact flex gap-3">
               <Handshake className="mt-1 h-5 w-5 shrink-0 text-[color:var(--neon)]" />
               {item}
             </div>
@@ -242,15 +242,9 @@ function PricingSection() {
         <table className="responsive-table text-left text-sm sm:text-lg">
           <thead className="bg-[rgba(0,255,0,0.08)]">
             <tr>
-              <th className="px-4 py-4 text-[color:var(--neon)] sm:px-5">
-                Product
-              </th>
-              <th className="px-4 py-4 text-[color:var(--neon)] sm:px-5">
-                Price
-              </th>
-              <th className="px-4 py-4 text-[color:var(--neon)] sm:px-5">
-                Order
-              </th>
+              <th className="section-kicker px-4 py-4 sm:px-5">Product</th>
+              <th className="section-kicker px-4 py-4 sm:px-5">Price</th>
+              <th className="section-kicker px-4 py-4 sm:px-5">Order</th>
             </tr>
           </thead>
           <tbody>
@@ -259,10 +253,10 @@ function PricingSection() {
                 key={item.product}
                 className="border-t border-[rgba(0,255,0,0.18)]"
               >
-                <td className="px-4 py-4 font-black sm:px-5">
+                <td className="body-copy body-copy-compact px-4 py-4 sm:px-5">
                   {item.product}
                 </td>
-                <td className="px-4 py-4 font-black sm:px-5">
+                <td className="body-copy body-copy-compact px-4 py-4 sm:px-5">
                   {item.price}
                 </td>
                 <td className="px-4 py-4 sm:px-5">
@@ -292,7 +286,7 @@ function FaqSection() {
             className="grid gap-2 py-6 md:grid-cols-[.8fr_1.2fr]"
           >
             <h3 className="text-lg font-black uppercase">{question}</h3>
-            <p className="text-sm text-muted-foreground">{answer}</p>
+            <p className="body-copy body-copy-compact">{answer}</p>
           </div>
         ))}
       </div>
@@ -307,7 +301,7 @@ function RequestSection() {
         <BriefcaseBusiness className="mx-auto h-9 w-9 text-[color:var(--neon)]" />
         <p className="section-kicker mt-5">Request quote</p>
         <h2 className="section-title">Tell us your logo, quantity, and timeline.</h2>
-        <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
+        <p className="body-copy body-copy-compact mx-auto mt-4 max-w-2xl">
           We will quote print, packaging, delivery, and merchandising options
           based on your program.
         </p>
@@ -337,7 +331,7 @@ function ImageCard({
         alt={item.label}
         className="aspect-square w-full object-cover"
       />
-      <figcaption className="p-3 text-center text-xs uppercase tracking-[0.18em] text-muted-foreground">
+      <figcaption className="section-kicker p-3 text-center">
         {item.label}
       </figcaption>
     </figure>
