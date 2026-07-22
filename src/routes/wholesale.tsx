@@ -19,7 +19,6 @@ import { Button } from "@/components/ui/button";
 
 import coffeeShopHero from "@/assets/kofenot-coffee-shop.jpeg";
 import coffeeShopDisplay from "@/assets/coffee-shop.jpg";
-import giftBox from "@/assets/kofenot-gift-box.jpeg";
 import corpGift from "@/assets/kofenot-corp-gift.jpeg";
 import expo from "@/assets/kofenot-expo.jpeg";
 import shipping from "@/assets/kofenot-shipping.jpeg";
@@ -48,9 +47,6 @@ export const Route = createFileRoute("/wholesale")({
   }),
   component: Wholesale,
 });
-
-const sampleCheckoutUrl =
-  "https://buy.stripe.com/9B614m9aC2m0eYM2lCdUY0F";
 
 const retailPackCheckoutUrl =
   "https://buy.stripe.com/00w28qgD40dScQEgcsdUY0G";
@@ -328,14 +324,13 @@ function HeroSection() {
             CUSTOM.
           </h1>
 
-          <p className="hero-copy">
-            Retail-ready packaged units, bare
-            bulk packs, master cartons, custom programs,
-            private label, and licensing.
+          <p className="hero-copy body-copy body-copy-compact">
+            Retail-ready packaged units, bare bulk packs, master cartons,
+            custom programs, private label, and licensing.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3">
-         <a href="#pricing">
+            <a href="#pricing">
               <Button className="h-12 bg-[var(--neon)] px-7 font-black text-black hover:bg-[var(--neon-dim)]">
                 Buy Wholesale
                 <ArrowRight className="ml-2 h-4 w-4" />
@@ -444,7 +439,7 @@ function ProgramsSection() {
                 {item.title}
               </h3>
 
-              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+              <p className="body-copy body-copy-compact mt-3">
                 {item.copy}
               </p>
             </div>
@@ -474,14 +469,14 @@ function BrandDeservesBetterSection() {
             </a>
           </div>
 
-          <div className="space-y-5 border-l border-[rgba(0,255,0,0.28)] pl-7 text-lg leading-relaxed text-white/80">
-            <p>
+          <div className="space-y-5 border-l border-[rgba(0,255,0,0.28)] pl-7">
+            <p className="body-copy body-copy-compact">
               Your brand, printed on a cheap hat or T-shirt no one wants to be
               seen wearing, ends up in thrift stores—which may not align with
               your brand image.
             </p>
 
-            <p>
+            <p className="body-copy body-copy-compact">
               More expensive electronic merchandise with cables that don’t fit
               anyone’s devices gets thrown directly into trade-show trash
               bins—and that’s not where your brand belongs.
@@ -552,7 +547,7 @@ function MediaKitSection() {
         Product images for buyers and partners.
       </h2>
 
-      <p className="mt-5 max-w-3xl text-lg text-muted-foreground">
+      <p className="body-copy body-copy-compact mt-5 max-w-3xl">
         Download images for retail review, internal approval, wholesale
         listings, custom logo planning, and promotional presentations.
       </p>
@@ -599,7 +594,7 @@ function ShippingSection() {
                     {section.items.map((item) => (
                       <li
                         key={item}
-                        className="flex gap-3 text-sm leading-relaxed text-muted-foreground"
+                        className="body-copy body-copy-compact flex gap-3"
                       >
                         <PackageCheck className="mt-0.5 h-4 w-4 shrink-0 text-[var(--neon)]" />
                         <span>{item}</span>
@@ -623,7 +618,7 @@ function ShippingSection() {
                 Need a shipping quote?
               </h3>
 
-              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+              <p className="body-copy body-copy-compact mt-3">
                 Send quantity, destination, deadline, and packaging needs.
               </p>
 
@@ -654,7 +649,7 @@ function FaqSection() {
               className="grid gap-2 py-6 md:grid-cols-[0.8fr_1.2fr]"
             >
               <h3 className="text-lg font-black uppercase">{question}</h3>
-              <p className="text-sm text-muted-foreground">{answer}</p>
+              <p className="body-copy body-copy-compact">{answer}</p>
             </div>
           ))}
         </div>
@@ -673,7 +668,7 @@ function FinalCta() {
 
         <h2 className="section-title">Ready to order KOFENOT™ wholesale?</h2>
 
-        <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
+        <p className="body-copy body-copy-compact mx-auto mt-4 max-w-2xl">
           Retail-ready units are $8 each with a 30-unit minimum. Bare bulk
           starts at 100 bare units for $600. Master carton: 400 bare units for
           $2,000. Custom logo, private label, licensing, and distribution are
