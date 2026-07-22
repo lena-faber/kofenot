@@ -313,9 +313,7 @@
 
   .body-copy-compact {
     color: #ffffff !important;
-    font-size: 18px !important;
     font-weight: 300 !important;
-    line-height: 28px !important;
   }
 
   .body-copy :where(a, span, strong, em, li),
