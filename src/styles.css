@@ -173,37 +173,6 @@
     touch-action: manipulation;
   }
 
-  main :where(p, li, blockquote, dd, td),
-  footer :where(p, li, blockquote, dd, td),
-  .body-copy,
-  .normal-text {
-    margin: 0;
-    color: var(--body-copy-color) !important;
-    font-family: "League Spartan", system-ui, sans-serif !important;
-    font-size: var(--body-copy-size) !important;
-    font-weight: var(--body-copy-weight) !important;
-    font-style: normal !important;
-    line-height: var(--body-copy-line-height) !important;
-    letter-spacing: 0 !important;
-    text-transform: none !important;
-    text-decoration: none !important;
-  }
-
-  main :where(p, li, blockquote, dd, td) :where(a, span, strong, em),
-  footer :where(p, li, blockquote, dd, td) :where(a, span, strong, em),
-  .body-copy :where(a, span, strong, em, li),
-  .normal-text :where(a, span, strong, em, li) {
-    color: inherit !important;
-    font-family: inherit !important;
-    font-size: inherit !important;
-    font-weight: inherit !important;
-    font-style: inherit !important;
-    line-height: inherit !important;
-    letter-spacing: inherit !important;
-    text-transform: inherit !important;
-    text-decoration: inherit !important;
-  }
-
   .text-muted-foreground,
   [class*="text-white/"] {
     color: #ffffff !important;
@@ -322,6 +291,37 @@
   .panel-hover:hover {
     border-color: rgba(0, 255, 0, 0.55);
     background: rgba(0, 255, 0, 0.08);
+  }
+
+  main :where(p, li, blockquote, dd, td),
+  footer :where(p, li, blockquote, dd, td),
+  .body-copy,
+  .normal-text {
+    margin: 0;
+    color: var(--body-copy-color) !important;
+    font-family: "League Spartan", system-ui, sans-serif !important;
+    font-size: var(--body-copy-size) !important;
+    font-weight: var(--body-copy-weight) !important;
+    font-style: normal !important;
+    line-height: var(--body-copy-line-height) !important;
+    letter-spacing: 0 !important;
+    text-transform: none !important;
+    text-decoration: none !important;
+  }
+
+  main :where(p, li, blockquote, dd, td) :where(a, span, strong, em),
+  footer :where(p, li, blockquote, dd, td) :where(a, span, strong, em),
+  .body-copy :where(a, span, strong, em, li),
+  .normal-text :where(a, span, strong, em, li) {
+    color: inherit !important;
+    font-family: inherit !important;
+    font-size: inherit !important;
+    font-weight: inherit !important;
+    font-style: inherit !important;
+    line-height: inherit !important;
+    letter-spacing: inherit !important;
+    text-transform: inherit !important;
+    text-decoration: inherit !important;
   }
 
   .scanline::after {
