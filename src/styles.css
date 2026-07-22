@@ -312,16 +312,12 @@
     color: inherit !important;
     font-family: inherit !important;
     font-size: inherit !important;
+    font-weight: inherit !important;
     font-style: inherit !important;
     line-height: inherit !important;
     letter-spacing: inherit !important;
     text-transform: inherit !important;
     text-decoration: inherit !important;
-  }
-
-  .body-copy strong,
-  .normal-text strong {
-    font-weight: 700 !important;
   }
 
   .body-list {
