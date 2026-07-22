@@ -108,7 +108,7 @@ function HeroSection() {
         <div className="max-w-4xl">
           <p className="section-kicker">Referral partner program</p>
           <h1 className="hero-title">INTRODUCE US</h1>
-          <div className="hero-copy body-copy body-copy-compact space-y-4">
+          <div className="hero-copy body-copy space-y-4">
             <p>
               Know a company that could use branded KOFENOT™ units for corporate
               gifts, trade shows, employee welcome kits, coffee shops, coworking
@@ -137,7 +137,7 @@ function HowItWorksSection() {
         {steps.map(([label, text]) => (
           <article key={label} className="panel panel-hover rounded-sm p-7">
             <div className="section-kicker">{label}</div>
-            <p className="body-copy body-copy-compact mt-6">{text}</p>
+            <p className="body-copy mt-6">{text}</p>
           </article>
         ))}
       </div>
@@ -177,7 +177,7 @@ function FaqSection() {
             className="grid gap-2 py-6 md:grid-cols-[.85fr_1.15fr]"
           >
             <h3 className="text-lg font-black uppercase">Q: {question}</h3>
-            <p className="body-copy body-copy-compact">A: {answer}</p>
+            <p className="body-copy">A: {answer}</p>
           </div>
         ))}
       </div>
@@ -201,7 +201,7 @@ function FooterNote() {
     <section className="mx-auto max-w-[1320px] px-4 pb-16 text-center lg:px-6">
       <div className="border-t border-[rgba(0,255,0,0.18)] pt-8">
         <Users className="mx-auto h-7 w-7 text-[color:var(--neon)]" />
-        <p className="body-copy body-copy-compact mx-auto mt-4 max-w-3xl">
+        <p className="body-copy mx-auto mt-4 max-w-3xl">
           KOFENOT™ is available for custom branding, white-label programs,
           trade shows, conferences, promotional products, and corporate gifting.
         </p>
@@ -215,7 +215,7 @@ function ContactIntro() {
     <div className="neon-border bg-[rgba(0,255,0,0.05)] p-8 neon-glow md:p-10">
       <Handshake className="h-9 w-9 text-[color:var(--neon)]" />
       <h2 className="section-title">Let&apos;s Talk</h2>
-      <p className="body-copy body-copy-compact mt-4">
+      <p className="body-copy mt-4">
         Tell us who you know and how KOFENOT might fit their business.
       </p>
       <a
