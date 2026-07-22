@@ -53,7 +53,6 @@ type BenefitCardData = {
   mode: string;
   title: string;
   body: string;
-  tileClass: string;
 };
 
 type PurchaseOption = {
@@ -70,7 +69,6 @@ const benefitModes: BenefitCardData[] = [
     mode: "Spill deflection",
     title: "Coffee",
     body: "60% of laptop damage starts with a spilled drink. Coffee leads the list.",
-    tileClass: "lg:mt-10",
   },
   {
     image: safeSpill,
@@ -78,7 +76,6 @@ const benefitModes: BenefitCardData[] = [
     title: "Golden minute",
     body:
       "KOFENOT™ creates an escape angle that helps redirect spills away from the critical components beneath the keyboard.",
-    tileClass: "lg:mt-16",
   },
   {
     image: neck,
@@ -86,7 +83,6 @@ const benefitModes: BenefitCardData[] = [
     title: "Tilt laptop, not neck",
     body:
       "Lifting the screen and tilting it back reduces tech-neck strain.",
-    tileClass: "lg:mt-44",
   },
   {
     image: threeDevices,
@@ -94,7 +90,6 @@ const benefitModes: BenefitCardData[] = [
     title: "Flips to hold 3 devices",
     body:
       "Quietly turns coffee shops, airports, and gyms into your office.",
-    tileClass: "lg:mt-24",
   },
   {
     image: fidget,
@@ -102,7 +97,6 @@ const benefitModes: BenefitCardData[] = [
     title: "Snap. Shut. Repeat.",
     body:
       "KOFENOT™'s satisfying snap keeps restless fingers busy.",
-    tileClass: "lg:mt-40",
   },
 ];
 
@@ -307,15 +301,11 @@ function BenefitsSection() {
         <div
           className={cx(
             layout.content,
-            "relative z-10 grid gap-4 md:grid-cols-2 lg:grid-cols-[25fr_17fr_16fr_20fr_17fr] lg:items-start",
+            "relative z-10 grid gap-4 md:grid-cols-2 xl:grid-cols-5 xl:items-stretch",
           )}
         >
           {benefitModes.map((card, index) => (
-            <Reveal
-              key={card.title}
-              delay={index * 0.055}
-              className={card.tileClass}
-            >
+            <Reveal key={card.title} delay={index * 0.055}>
               <BenefitCard card={card} />
             </Reveal>
           ))}
@@ -327,7 +317,7 @@ function BenefitsSection() {
 
 function BenefitCard({ card }: { card: BenefitCardData }) {
   return (
-    <article className="group flex h-full flex-col overflow-hidden bg-black transition duration-300 hover:-translate-y-2">
+    <article className="group flex h-full min-h-0 flex-col overflow-hidden bg-black transition duration-300 hover:-translate-y-2">
       <div className="aspect-square overflow-hidden bg-black">
         <img
           src={card.image}
@@ -336,7 +326,7 @@ function BenefitCard({ card }: { card: BenefitCardData }) {
         />
       </div>
 
-      <div className="flex-1 border-t border-white/10 bg-[#080908] p-5">
+      <div className="flex min-h-[176px] flex-1 flex-col border-t border-white/10 bg-[#080908] p-5">
         <h3>{card.title}</h3>
         <p className="body-copy mt-1">{card.body}</p>
       </div>
