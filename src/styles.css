@@ -73,6 +73,11 @@
   --neon: #00ff00;
   --neon-dim: #00cc00;
   --panel: rgba(0, 255, 0, 0.05);
+
+  --body-copy-color: #ffffff;
+  --body-copy-size: 16px;
+  --body-copy-weight: 400;
+  --body-copy-line-height: 24px;
 }
 
 @layer base {
@@ -100,10 +105,10 @@
     background-size: 16px 16px;
     color: #ffffff;
     font-family: "League Spartan", system-ui, sans-serif;
-    font-size: 16px;
-    font-weight: 400;
+    font-size: var(--body-copy-size);
+    font-weight: var(--body-copy-weight);
     font-style: normal;
-    line-height: 24px;
+    line-height: var(--body-copy-line-height);
     letter-spacing: 0;
     -webkit-font-smoothing: antialiased;
   }
@@ -288,6 +293,70 @@
     background: rgba(0, 255, 0, 0.08);
   }
 
+  .body-copy,
+  .normal-text {
+    margin: 0;
+    color: var(--body-copy-color) !important;
+    font-family: "League Spartan", system-ui, sans-serif !important;
+    font-size: var(--body-copy-size) !important;
+    font-weight: var(--body-copy-weight) !important;
+    font-style: normal !important;
+    line-height: var(--body-copy-line-height) !important;
+    letter-spacing: 0 !important;
+    text-transform: none !important;
+    text-decoration: none !important;
+  }
+
+  .body-copy :where(a, span, strong, em),
+  .normal-text :where(a, span, strong, em) {
+    color: inherit !important;
+    font-family: inherit !important;
+    font-size: inherit !important;
+    font-style: inherit !important;
+    line-height: inherit !important;
+    letter-spacing: inherit !important;
+    text-transform: inherit !important;
+    text-decoration: inherit !important;
+  }
+
+  .body-copy strong,
+  .normal-text strong {
+    font-weight: 700 !important;
+  }
+
+  .body-list {
+    margin: 0;
+    padding: 0;
+    color: var(--body-copy-color) !important;
+    font-family: "League Spartan", system-ui, sans-serif !important;
+    font-size: var(--body-copy-size) !important;
+    font-weight: var(--body-copy-weight) !important;
+    font-style: normal !important;
+    line-height: var(--body-copy-line-height) !important;
+    letter-spacing: 0 !important;
+    text-transform: none !important;
+    list-style: none;
+  }
+
+  .body-list li {
+    color: inherit !important;
+    font: inherit !important;
+    letter-spacing: inherit !important;
+    text-transform: inherit !important;
+  }
+
+  .body-quote {
+    margin: 0;
+    color: var(--body-copy-color) !important;
+    font-family: "League Spartan", system-ui, sans-serif !important;
+    font-size: var(--body-copy-size) !important;
+    font-weight: var(--body-copy-weight) !important;
+    font-style: normal !important;
+    line-height: var(--body-copy-line-height) !important;
+    letter-spacing: 0 !important;
+    text-transform: none !important;
+  }
+
   .scanline::after {
     position: absolute;
     inset: 0;
@@ -353,30 +422,4 @@
   .section-nav-inner {
     padding-inline: 1.5rem;
   }
-}
-
-.normal-text,
-.normal-text *,
-p,
-p *,
-li,
-li *,
-blockquote,
-blockquote *,
-td,
-td *,
-dd,
-dd *,
-footer,
-footer * {
-  margin: 0;
-  color: #ffffff !important;
-  font-family: "League Spartan", system-ui, sans-serif !important;
-  font-size: 16px !important;
-  font-weight: 400 !important;
-  font-style: normal !important;
-  line-height: 24px !important;
-  letter-spacing: 0 !important;
-  text-transform: none !important;
-  text-decoration: none !important;
 }
