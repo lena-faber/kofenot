@@ -525,7 +525,7 @@ function SpecsSection() {
                     {label}
                   </th>
 
-                  <td className="px-4 py-4 font-semibold sm:px-5">
+                  <td className="body-copy body-copy-compact px-4 py-4 sm:px-5">
                     {value}
                   </td>
                 </tr>
