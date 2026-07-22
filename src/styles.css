@@ -388,6 +388,16 @@
     text-shadow: inherit !important;
   }
 
+  .body-copy.body-copy-compact,
+  .body-copy-compact {
+    font-weight: 300 !important;
+  }
+
+  .body-copy.body-copy-compact :where(a, span, strong, em, li),
+  .body-copy-compact :where(a, span, strong, em, li) {
+    font-weight: inherit !important;
+  }
+
   .body-copy :where(a, span, strong, em, li),
   .normal-text :where(a, span, strong, em, li),
   .body-copy-compact :where(a, span, strong, em, li) {
