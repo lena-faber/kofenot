@@ -151,6 +151,26 @@
     text-transform: uppercase;
   }
 
+  p:not(.section-kicker) {
+    color: var(--body-copy-color) !important;
+    font-family: "League Spartan", system-ui, sans-serif !important;
+    font-size: var(--body-copy-size) !important;
+    font-weight: var(--body-copy-weight) !important;
+    font-style: normal !important;
+    font-variant: normal !important;
+    line-height: var(--body-copy-line-height) !important;
+    letter-spacing: 0 !important;
+    text-transform: none !important;
+    text-decoration: none !important;
+    text-shadow: none !important;
+    font-feature-settings: "kern" 1;
+    text-rendering: geometricPrecision;
+  }
+
+  p.body-copy-strong {
+    font-weight: 700 !important;
+  }
+
   #root,
   main,
   section,
@@ -335,6 +355,7 @@
 
   .body-copy :where(a, span, strong, em, li),
   .normal-text :where(a, span, strong, em, li),
+  .body-copy-strong :where(a, span, strong, em, li),
   .body-copy-compact :where(a, span, strong, em, li) {
     color: inherit !important;
     font-family: inherit !important;
@@ -351,6 +372,7 @@
 
   .body-copy sup,
   .normal-text sup,
+  .body-copy-strong sup,
   .body-copy-compact sup {
     font-size: inherit !important;
     line-height: inherit !important;
