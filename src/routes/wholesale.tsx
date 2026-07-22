@@ -540,7 +540,6 @@ function SpecsSection() {
 function MediaKitSection() {
   return (
     <section id="media" className="page-section">
-
       <h2 className="section-title">
         Product images for buyers and partners
       </h2>
@@ -553,9 +552,9 @@ function MediaKitSection() {
       <div className="mt-10 grid gap-12">
         {mediaKit.map((group) => (
           <div key={group.group}>
-            <h3 className="text-3xl font-black neon-text">
+            <p className="section-kicker">
               {group.group}
-            </h3>
+            </p>
 
             <div className="mt-5 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
               {group.images.map((item) => (
