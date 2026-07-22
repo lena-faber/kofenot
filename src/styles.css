@@ -324,6 +324,10 @@
     text-rendering: geometricPrecision;
   }
 
+  .body-copy-strong {
+    font-weight: 700 !important;
+  }
+
   .body-copy-compact {
     color: #ffffff !important;
     font-weight: 300 !important;
