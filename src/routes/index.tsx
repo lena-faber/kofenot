@@ -307,7 +307,7 @@ function BenefitsSection() {
         <div
           className={cx(
             layout.content,
-            "relative z-10 grid gap-4 md:grid-cols-2 lg:grid-cols-[25fr_17fr_16fr_20fr_17fr] lg:items-start",
+            "relative z-10 grid gap-4 md:grid-cols-2 lg:grid-cols-5 lg:items-start",
           )}
         >
           {benefitModes.map((card, index) => (
