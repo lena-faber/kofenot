@@ -223,6 +223,19 @@
     background: rgba(0, 255, 0, 0.025);
   }
 
+  .section-kicker {
+    color: var(--neon) !important;
+    font-family: "League Spartan", system-ui, sans-serif !important;
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    font-style: normal !important;
+    line-height: 1 !important;
+    letter-spacing: 0.12em !important;
+    text-transform: uppercase !important;
+    text-decoration: none !important;
+    text-shadow: none !important;
+  }
+
   .hero-copy {
     margin-top: 1.75rem;
     max-width: 42rem;
