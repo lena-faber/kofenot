@@ -338,7 +338,7 @@ function BenefitCard({ card }: { card: BenefitCardData }) {
 
       <div className="flex-1 border-t border-white/10 bg-[#080908] p-5">
         <h3>{card.title}</h3>
-        <p className="body-copy mt-1">{card.body}</p>
+        <p className="body-copy body-copy-compact mt-1">{card.body}</p>
       </div>
     </article>
   );
