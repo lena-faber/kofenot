@@ -316,6 +316,65 @@
     font-weight: 300 !important;
   }
 
+  :where(.page-shell, main.min-h-screen)
+    :where(
+      .hero-copy,
+      .page-section p,
+      .page-section li,
+      .page-section-narrow p,
+      .page-section-narrow li,
+      .section-band p,
+      .section-band li,
+      .panel p,
+      .panel li,
+      .panel dd,
+      figure figcaption
+    ):not(.section-kicker):not(.section-title):not(.hero-title):not(.neon-text):not([class*="uppercase"]):not([class*="font-black"]):not([class*="font-bold"]),
+  main.min-h-screen
+    :where(aside p, aside figcaption, section > p)
+    :not([class*="uppercase"]):not([class*="font-black"]):not([class*="font-bold"]) {
+    color: var(--body-copy-color) !important;
+    font-family: "League Spartan", system-ui, sans-serif !important;
+    font-size: var(--body-copy-size) !important;
+    font-weight: var(--body-copy-weight) !important;
+    font-style: normal !important;
+    font-variant: normal !important;
+    line-height: var(--body-copy-line-height) !important;
+    letter-spacing: 0 !important;
+    text-transform: none !important;
+    text-decoration: none !important;
+    text-shadow: none !important;
+    font-feature-settings: "kern" 1;
+    text-rendering: geometricPrecision;
+  }
+
+  :where(.page-shell, main.min-h-screen)
+    :where(
+      .hero-copy,
+      .page-section p,
+      .page-section li,
+      .page-section-narrow p,
+      .page-section-narrow li,
+      .section-band p,
+      .section-band li,
+      .panel p,
+      .panel li,
+      .panel dd,
+      figure figcaption
+    ):not(.section-kicker):not(.section-title):not(.hero-title):not(.neon-text):not([class*="uppercase"]):not([class*="font-black"]):not([class*="font-bold"])
+    :where(a, span, strong, em),
+  main.min-h-screen
+    :where(aside p, aside figcaption, section > p)
+    :not([class*="uppercase"]):not([class*="font-black"]):not([class*="font-bold"])
+    :where(a, span, strong, em) {
+    color: inherit !important;
+    font: inherit !important;
+    letter-spacing: inherit !important;
+    text-transform: inherit !important;
+    text-decoration: inherit !important;
+    text-shadow: inherit !important;
+  }
+
   .body-copy :where(a, span, strong, em, li),
   .normal-text :where(a, span, strong, em, li),
   .body-copy-compact :where(a, span, strong, em, li) {
