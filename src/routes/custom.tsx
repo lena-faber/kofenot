@@ -127,7 +127,7 @@ function HeroSection() {
 
       <div className="page-hero-inner">
         <div className="max-w-3xl">
-          <p className="section-kicker">Custom logo programs</p>
+          <h3>Custom logo programs</h3>
           <h1 className="hero-title">
             PUT YOUR LOGO ON
             <br />
@@ -165,7 +165,7 @@ function SectionNav() {
 function AudiencesSection() {
   return (
     <section className="page-section">
-      <p className="section-kicker">Put your logo on KOFENOT</p>
+      <h3>Put your logo on KOFENOT</h3>
       <h2 className="section-title">A branded desk tool people actually use.</h2>
       <p className="body-copy mt-5 max-w-3xl">
         KOFENOT gives your logo a daily-use surface on a compact laptop wedge
@@ -175,12 +175,8 @@ function AudiencesSection() {
         {audiences.map((item) => (
           <article key={item.title} className="panel panel-hover rounded-sm p-6">
             <item.icon className="h-7 w-7 text-[color:var(--neon)]" />
-            <h3 className="mt-5 text-xl font-black uppercase">
-              {item.title}
-            </h3>
-            <p className="body-copy mt-3">
-              {item.copy}
-            </p>
+            <h3 className="mt-5">{item.title}</h3>
+            <p className="body-copy mt-3">{item.copy}</p>
           </article>
         ))}
       </div>
@@ -192,7 +188,7 @@ function ExamplesSection() {
   return (
     <section id="examples" className="section-band">
       <div className="page-section">
-        <p className="section-kicker">Custom design examples</p>
+        <h3>Custom design examples</h3>
         <h2 className="section-title">Coffee, expo, corporate, coworking.</h2>
         <div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
           {examples.map((item) => (
@@ -215,7 +211,7 @@ function ProgramScopeSection() {
         />
       </div>
       <div className="flex flex-col justify-center">
-        <p className="section-kicker">Custom program scope</p>
+        <h3>Custom program scope</h3>
         <h2 className="section-title">
           Built for promotional product companies and brand teams.
         </h2>
@@ -242,9 +238,9 @@ function PricingSection() {
         <table className="responsive-table text-left text-sm sm:text-lg">
           <thead className="bg-[rgba(0,255,0,0.08)]">
             <tr>
-              <th className="section-kicker px-4 py-4 sm:px-5">Product</th>
-              <th className="section-kicker px-4 py-4 sm:px-5">Price</th>
-              <th className="section-kicker px-4 py-4 sm:px-5">Order</th>
+              <th className="px-4 py-4 sm:px-5"><h3>Product</h3></th>
+              <th className="px-4 py-4 sm:px-5"><h3>Price</h3></th>
+              <th className="px-4 py-4 sm:px-5"><h3>Order</h3></th>
             </tr>
           </thead>
           <tbody>
@@ -253,12 +249,8 @@ function PricingSection() {
                 key={item.product}
                 className="border-t border-[rgba(0,255,0,0.18)]"
               >
-                <td className="body-copy px-4 py-4 sm:px-5">
-                  {item.product}
-                </td>
-                <td className="body-copy px-4 py-4 sm:px-5">
-                  {item.price}
-                </td>
+                <td className="body-copy px-4 py-4 sm:px-5">{item.product}</td>
+                <td className="body-copy px-4 py-4 sm:px-5">{item.price}</td>
                 <td className="px-4 py-4 sm:px-5">
                   <a href={item.url}>
                     <Button className="h-10 bg-[color:var(--neon)] px-5 font-black text-black hover:bg-[color:var(--neon-dim)]">
@@ -285,7 +277,7 @@ function FaqSection() {
             key={question}
             className="grid gap-2 py-6 md:grid-cols-[.8fr_1.2fr]"
           >
-            <h3 className="text-lg font-black uppercase">{question}</h3>
+            <h3>{question}</h3>
             <p className="body-copy">{answer}</p>
           </div>
         ))}
@@ -299,7 +291,7 @@ function RequestSection() {
     <section id="request" className="mx-auto max-w-[1320px] px-4 pb-20 lg:px-6">
       <div className="neon-border bg-[rgba(0,255,0,0.05)] p-8 text-center neon-glow md:p-12">
         <BriefcaseBusiness className="mx-auto h-9 w-9 text-[color:var(--neon)]" />
-        <p className="section-kicker mt-5">Request quote</p>
+        <h3 className="mt-5">Request quote</h3>
         <h2 className="section-title">Tell us your logo, quantity, and timeline.</h2>
         <p className="body-copy mx-auto mt-4 max-w-2xl">
           We will quote print, packaging, delivery, and merchandising options
@@ -331,9 +323,7 @@ function ImageCard({
         alt={item.label}
         className="aspect-square w-full object-cover"
       />
-      <figcaption className="section-kicker p-3 text-center">
-        {item.label}
-      </figcaption>
+      <h3 className="p-3 text-center">{item.label}</h3>
     </figure>
   );
 }
