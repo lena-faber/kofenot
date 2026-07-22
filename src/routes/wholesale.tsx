@@ -458,7 +458,7 @@ function BrandDeservesBetterSection() {
           <div>
             <h2 className="section-title">
               YOUR BRAND DESERVES BETTER THAN{" "}
-              <span className="neon-text">THROWAWAY MERCH.</span>
+              <span className="neon-text">THROWAWAY MERCH</span>
             </h2>
 
             <a href={quoteEmail} className="mt-2 inline-flex">
@@ -508,8 +508,7 @@ function SpecsSection() {
           <Ruler className="h-8 w-8 text-[var(--neon)]" />
 
           <div>
-            <p className="section-kicker">Specs</p>
-            <h2 className="section-title">Buyer details.</h2>
+            <h2 className="section-title">Buyer Specs</h2>
           </div>
         </div>
 
@@ -541,10 +540,9 @@ function SpecsSection() {
 function MediaKitSection() {
   return (
     <section id="media" className="page-section">
-      <p className="section-kicker">Media kit</p>
 
       <h2 className="section-title">
-        Product images for buyers and partners.
+        Product images for buyers and partners
       </h2>
 
       <p className="body-copy body-copy-compact mt-5 max-w-3xl">
