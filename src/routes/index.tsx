@@ -338,7 +338,7 @@ function BenefitCard({ card }: { card: BenefitCardData }) {
 
       <div className="flex-1 border-t border-white/10 bg-[#080908] p-5">
         <h3>{card.title}</h3>
-        <p className="body-copy body-copy-compact mt-1">{card.body}</p>
+        <p className="body-copy mt-1">{card.body}</p>
       </div>
     </article>
   );
@@ -393,7 +393,7 @@ function StepCard({
 
       <h3>{title}</h3>
 
-      <p className="body-copy body-copy-compact mt-2">{description}</p>
+      <p className="body-copy mt-2">{description}</p>
 
       <div className="absolute right-7 top-7 h-1 w-12 bg-[color:var(--neon)]" />
     </article>
@@ -471,7 +471,7 @@ function TestimonialQuotes() {
         {testimonials.map((quote) => (
           <blockquote
             key={quote}
-            className="body-copy body-copy-compact border border-[rgba(0,255,0,0.18)] bg-black/30 p-4 text-center"
+            className="body-copy border border-[rgba(0,255,0,0.18)] bg-black/30 p-4 text-center"
           >
             “{quote}”
           </blockquote>
@@ -542,11 +542,11 @@ function PricingCard({
         {option.price}
       </div>
 
-      <p className="body-copy body-copy-compact mt-3">
+      <p className="body-copy mt-3">
         {option.title}
       </p>
 
-      <ul className="body-copy body-copy-compact mt-5 list-none space-y-2 p-0">
+      <ul className="body-copy mt-5 list-none space-y-2 p-0">
         {option.items.map((item) => (
           <PricingItem key={item}>{item}</PricingItem>
         ))}
@@ -607,7 +607,7 @@ function ProductDetailsSection() {
                     {label}
                   </div>
 
-                  <div className="body-copy body-copy-compact">
+                  <div className="body-copy">
                     {value}
                   </div>
                 </div>
@@ -650,7 +650,7 @@ function FaqSection() {
             className="grid gap-2 py-6 md:grid-cols-[.8fr_1.2fr]"
           >
             <h3>{question}</h3>
-            <p className="body-copy body-copy-compact">{answer}</p>
+            <p className="body-copy">{answer}</p>
           </div>
         ))}
       </div>
