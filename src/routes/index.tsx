@@ -471,7 +471,7 @@ function TestimonialQuotes() {
         {testimonials.map((quote) => (
           <blockquote
             key={quote}
-            className="body-quote border border-[rgba(0,255,0,0.18)] bg-black/30 p-4 text-center"
+            className="body-copy border border-[rgba(0,255,0,0.18)] bg-black/30 p-4 text-center"
           >
             “{quote}”
           </blockquote>
@@ -546,7 +546,7 @@ function PricingCard({
         {option.title}
       </p>
 
-      <ul className="body-list mt-5 space-y-2">
+      <ul className="body-copy mt-5 list-none space-y-2 p-0">
         {option.items.map((item) => (
           <PricingItem key={item}>{item}</PricingItem>
         ))}
