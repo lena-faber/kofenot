@@ -461,7 +461,7 @@ function BrandDeservesBetterSection() {
               <span className="neon-text">THROWAWAY MERCH.</span>
             </h2>
 
-            <a href={quoteEmail} className="mt-8 inline-flex">
+            <a href={quoteEmail} className="mt-2 inline-flex">
               <Button className="h-12 bg-[var(--neon)] px-7 font-black text-black hover:bg-[var(--neon-dim)]">
                 Put Your Logo Here
                 <ArrowRight className="ml-2 h-4 w-4" />
