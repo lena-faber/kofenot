@@ -125,7 +125,7 @@ export function SiteFooter() {
           Patent Pending. Made in California.
         </p>
 
-        <nav className="mt-5 flex flex-wrap justify-center gap-x-6 gap-y-2 text-[28px] leading-[48px]">
+        <nav className="mt-5 flex flex-wrap justify-center gap-x-6 gap-y-2">
           {footerLinks.map((link) => (
             <a
               key={link.label}
