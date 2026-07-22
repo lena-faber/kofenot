@@ -712,11 +712,7 @@ function DownloadCard({
       />
 
       <div className="p-4">
-        <h3 className="font-black text-[var(--neon)]">
-          {item.title}
-        </h3>
-
-        <div className="mt-4 grid grid-cols-2 gap-2">
+        <div className="grid grid-cols-2 gap-2">
           <a href={item.img} target="_blank" rel="noreferrer">
             <Button
               variant="outline"
