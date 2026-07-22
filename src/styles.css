@@ -307,8 +307,8 @@
     text-decoration: none !important;
   }
 
-  .body-copy :where(a, span, strong, em),
-  .normal-text :where(a, span, strong, em) {
+  .body-copy :where(a, span, strong, em, li),
+  .normal-text :where(a, span, strong, em, li) {
     color: inherit !important;
     font-family: inherit !important;
     font-size: inherit !important;
@@ -318,40 +318,6 @@
     letter-spacing: inherit !important;
     text-transform: inherit !important;
     text-decoration: inherit !important;
-  }
-
-  .body-list {
-    margin: 0;
-    padding: 0;
-    color: var(--body-copy-color) !important;
-    font-family: "League Spartan", system-ui, sans-serif !important;
-    font-size: var(--body-copy-size) !important;
-    font-weight: var(--body-copy-weight) !important;
-    font-style: normal !important;
-    line-height: var(--body-copy-line-height) !important;
-    letter-spacing: 0 !important;
-    text-transform: none !important;
-    list-style: none;
-  }
-
-  .body-list li,
-  .body-list span {
-    color: inherit !important;
-    font: inherit !important;
-    letter-spacing: inherit !important;
-    text-transform: inherit !important;
-  }
-
-  .body-quote {
-    margin: 0;
-    color: var(--body-copy-color) !important;
-    font-family: "League Spartan", system-ui, sans-serif !important;
-    font-size: var(--body-copy-size) !important;
-    font-weight: var(--body-copy-weight) !important;
-    font-style: normal !important;
-    line-height: var(--body-copy-line-height) !important;
-    letter-spacing: 0 !important;
-    text-transform: none !important;
   }
 
   .scanline::after {
