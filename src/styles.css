@@ -330,7 +330,7 @@
 
   .body-copy-compact {
     color: #ffffff !important;
-    font-weight: 300 !important;
+    font-weight: var(--body-copy-weight) !important;
   }
 
   .body-copy :where(a, span, strong, em, li),
