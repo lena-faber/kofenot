@@ -73,7 +73,7 @@ function HeroSection() {
         <div className="max-w-4xl">
           <p className="section-kicker">Spec Sheet 2026</p>
           <h1 className="hero-title">KOFENOT TECHNICAL & COMMERCIAL</h1>
-          <p className="hero-copy body-copy body-copy-compact">
+          <p className="hero-copy body-copy">
             One-page reference for procurement, promotional agencies, OEM
             partners, and enterprise buyers.
           </p>
@@ -99,7 +99,7 @@ function SummarySection() {
             <h2 className="mt-5 text-3xl font-black tracking-tight">
               {item.title}
             </h2>
-            <p className="body-copy body-copy-compact mt-3">{item.copy}</p>
+            <p className="body-copy mt-3">{item.copy}</p>
           </article>
         ))}
       </div>
@@ -123,7 +123,7 @@ function ProcurementSection() {
     <section className="page-section-narrow pt-0 text-center">
       <FileText className="mx-auto h-8 w-8 text-[color:var(--neon)]" />
       <h2 className="section-title">Need procurement details?</h2>
-      <p className="body-copy body-copy-compact mx-auto mt-4 max-w-2xl">
+      <p className="body-copy mx-auto mt-4 max-w-2xl">
         Download the PDF for a compact buyer-facing sheet, or contact KOFENOT
         for custom branding, wholesale, OEM, or licensing requirements.
       </p>
@@ -141,7 +141,7 @@ function TechnicalSpecsPanel() {
         {technicalSpecs.map(([key, value]) => (
           <div key={key} className="grid gap-2 py-3 sm:grid-cols-[140px,1fr]">
             <dt className="section-kicker">{key}</dt>
-            <dd className="body-copy body-copy-compact">{value}</dd>
+            <dd className="body-copy">{value}</dd>
           </div>
         ))}
       </dl>
@@ -163,7 +163,7 @@ function PricingTiersPanel() {
           >
             <div>
               <h3>{name}</h3>
-              <p className="body-copy body-copy-compact mt-1">
+              <p className="body-copy mt-1">
                 {description}
               </p>
             </div>
@@ -171,7 +171,7 @@ function PricingTiersPanel() {
           </article>
         ))}
       </div>
-      <p className="body-copy body-copy-compact mt-4">
+      <p className="body-copy mt-4">
         24-48h dispatch | FOB SF Bay Area, CA, US | info@kofenot.com
       </p>
     </section>
