@@ -154,7 +154,7 @@ const purchaseOptions: PurchaseOption[] = [
     items: [
       "Free shipping in the US",
       "In Stock. Ships from California",
-      "3-5 business days",
+      "3–5 business days",
     ],
     url: retailCheckoutUrl,
   },
@@ -165,7 +165,7 @@ const purchaseOptions: PurchaseOption[] = [
     items: [
       "Free shipping in the US",
       "In Stock. Ships from California",
-      "3-5 business days",
+      "3–5 business days",
     ],
     url: twoUnitCheckoutUrl,
   },
@@ -565,7 +565,7 @@ function PricingCard({
 
 function ProductDetailsSection() {
   const details = [
-    ["Size", "3.4 x 2.4 x 0.4 in"],
+    ["Size", "3.4 × 2.4 × 0.4 in"],
     ["Weight", "0.9 oz"],
     [
       "Material",
