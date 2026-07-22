@@ -75,9 +75,9 @@
   --panel: rgba(0, 255, 0, 0.05);
 
   --body-copy-color: #ffffff;
-  --body-copy-size: 28px;
+  --body-copy-size: 20px;
   --body-copy-weight: 400;
-  --body-copy-line-height: 48px;
+  --body-copy-line-height: 30px;
 }
 
 @layer base {
@@ -296,7 +296,6 @@
 
   .body-copy,
   .normal-text {
-    margin: 0;
     color: var(--body-copy-color) !important;
     font-family: "League Spartan", system-ui, sans-serif !important;
     font-size: var(--body-copy-size) !important;
