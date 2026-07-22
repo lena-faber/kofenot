@@ -482,13 +482,13 @@ function BrandDeservesBetterSection() {
               bins—and that’s not where your brand belongs.
             </p>
 
-            <p className="body-copy">
+            <p className="body-copy font-bold">
               Put your logo on an original accessory engineered for both
               precision and aesthetics—something people will appreciate and
               use.
             </p>
 
-            <p className="body-copy">
+            <p className="body-copy font-bold">
               Choose thoughtful, original design with a personal touch and a
               story behind it over generic merchandise that ends up filling
               trash bins and polluting the planet.
