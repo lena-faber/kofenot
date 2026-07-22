@@ -469,26 +469,26 @@ function BrandDeservesBetterSection() {
             </a>
           </div>
 
-          <div className="space-y-5 border-l border-[rgba(0,255,0,0.28)] pl-7">
-            <p className="body-copy body-copy-compact">
+          <div className="space-y-5">
+            <p className="body-copy">
               Your brand, printed on a cheap hat or T-shirt no one wants to be
               seen wearing, ends up in thrift stores—which may not align with
               your brand image.
             </p>
 
-            <p className="body-copy body-copy-compact">
+            <p className="body-copy">
               More expensive electronic merchandise with cables that don’t fit
               anyone’s devices gets thrown directly into trade-show trash
               bins—and that’s not where your brand belongs.
             </p>
 
-            <p className="body-copy body-copy-compact">
+            <p className="body-copy">
               Put your logo on an original accessory engineered for both
               precision and aesthetics—something people will appreciate and
               use.
             </p>
 
-            <p className="body-copy body-copy-compact">
+            <p className="body-copy">
               Choose thoughtful, original design with a personal touch and a
               story behind it over generic merchandise that ends up filling
               trash bins and polluting the planet.
