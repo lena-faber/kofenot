@@ -381,7 +381,7 @@ function PricingSection() {
               key={item.title}
               className="neon-border rounded-sm bg-[rgba(0,255,0,0.05)] p-6"
             >
-              <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground">
+              <p className="section-kicker">
                 {item.title}
               </p>
 
