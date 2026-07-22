@@ -75,9 +75,9 @@
   --panel: rgba(0, 255, 0, 0.05);
 
   --body-copy-color: #ffffff;
-  --body-copy-size: 16px;
+  --body-copy-size: 28px;
   --body-copy-weight: 400;
-  --body-copy-line-height: 24px;
+  --body-copy-line-height: 48px;
 }
 
 @layer base {
@@ -105,10 +105,10 @@
     background-size: 16px 16px;
     color: #ffffff;
     font-family: "League Spartan", system-ui, sans-serif;
-    font-size: var(--body-copy-size);
-    font-weight: var(--body-copy-weight);
+    font-size: 16px;
+    font-weight: 400;
     font-style: normal;
-    line-height: var(--body-copy-line-height);
+    line-height: 24px;
     letter-spacing: 0;
     -webkit-font-smoothing: antialiased;
   }
@@ -338,7 +338,8 @@
     list-style: none;
   }
 
-  .body-list li {
+  .body-list li,
+  .body-list span {
     color: inherit !important;
     font: inherit !important;
     letter-spacing: inherit !important;
@@ -394,6 +395,14 @@
     to {
       transform: translateX(-50%);
     }
+  }
+}
+
+@media (max-width: 767px) {
+  :root,
+  .dark {
+    --body-copy-size: 24px;
+    --body-copy-line-height: 38px;
   }
 }
 
