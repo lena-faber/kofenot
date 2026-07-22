@@ -75,9 +75,9 @@
   --panel: rgba(0, 255, 0, 0.05);
 
   --body-copy-color: #ffffff;
-  --body-copy-size: 28px;
+  --body-copy-size: 16px;
   --body-copy-weight: 400;
-  --body-copy-line-height: 48px;
+  --body-copy-line-height: 24px;
 }
 
 @layer base {
@@ -391,14 +391,6 @@
     to {
       transform: translateX(-50%);
     }
-  }
-}
-
-@media (max-width: 767px) {
-  :root,
-  .dark {
-    --body-copy-size: 24px;
-    --body-copy-line-height: 38px;
   }
 }
 
