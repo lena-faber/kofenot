@@ -111,6 +111,7 @@
     line-height: 24px;
     letter-spacing: 0;
     -webkit-font-smoothing: antialiased;
+    text-rendering: geometricPrecision;
   }
 
   h1 {
@@ -293,8 +294,6 @@
     background: rgba(0, 255, 0, 0.08);
   }
 
-  main :where(p, li, blockquote, dd, td),
-  footer :where(p, li, blockquote, dd, td),
   .body-copy,
   .normal-text {
     margin: 0;
@@ -303,14 +302,16 @@
     font-size: var(--body-copy-size) !important;
     font-weight: var(--body-copy-weight) !important;
     font-style: normal !important;
+    font-variant: normal !important;
     line-height: var(--body-copy-line-height) !important;
     letter-spacing: 0 !important;
     text-transform: none !important;
     text-decoration: none !important;
+    text-shadow: none !important;
+    font-feature-settings: "kern" 1;
+    text-rendering: geometricPrecision;
   }
 
-  main :where(p, li, blockquote, dd, td) :where(a, span, strong, em),
-  footer :where(p, li, blockquote, dd, td) :where(a, span, strong, em),
   .body-copy :where(a, span, strong, em, li),
   .normal-text :where(a, span, strong, em, li) {
     color: inherit !important;
@@ -318,10 +319,19 @@
     font-size: inherit !important;
     font-weight: inherit !important;
     font-style: inherit !important;
+    font-variant: inherit !important;
     line-height: inherit !important;
     letter-spacing: inherit !important;
     text-transform: inherit !important;
     text-decoration: inherit !important;
+    text-shadow: inherit !important;
+  }
+
+  .body-copy sup,
+  .normal-text sup {
+    font-size: inherit !important;
+    line-height: inherit !important;
+    vertical-align: baseline !important;
   }
 
   .scanline::after {
