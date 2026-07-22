@@ -73,7 +73,7 @@ function HeroSection() {
         <div className="max-w-4xl">
           <p className="section-kicker">Spec Sheet 2026</p>
           <h1 className="hero-title">KOFENOT TECHNICAL & COMMERCIAL</h1>
-          <p className="hero-copy">
+          <p className="hero-copy body-copy body-copy-compact">
             One-page reference for procurement, promotional agencies, OEM
             partners, and enterprise buyers.
           </p>
@@ -99,7 +99,7 @@ function SummarySection() {
             <h2 className="mt-5 text-3xl font-black tracking-tight">
               {item.title}
             </h2>
-            <p className="mt-3 text-sm text-muted-foreground">{item.copy}</p>
+            <p className="body-copy body-copy-compact mt-3">{item.copy}</p>
           </article>
         ))}
       </div>
@@ -123,7 +123,7 @@ function ProcurementSection() {
     <section className="page-section-narrow pt-0 text-center">
       <FileText className="mx-auto h-8 w-8 text-[color:var(--neon)]" />
       <h2 className="section-title">Need procurement details?</h2>
-      <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
+      <p className="body-copy body-copy-compact mx-auto mt-4 max-w-2xl">
         Download the PDF for a compact buyer-facing sheet, or contact KOFENOT
         for custom branding, wholesale, OEM, or licensing requirements.
       </p>
@@ -134,14 +134,14 @@ function ProcurementSection() {
 function TechnicalSpecsPanel() {
   return (
     <section className="panel rounded-sm p-6">
-      <h2 className="border-b border-[rgba(0,255,0,0.25)] pb-2 text-xs font-bold uppercase tracking-[0.2em] text-[color:var(--neon)]">
+      <h2 className="section-kicker border-b border-[rgba(0,255,0,0.25)] pb-2">
         Technical Specifications
       </h2>
-      <dl className="mt-4 divide-y divide-[rgba(0,255,0,0.1)] text-sm">
+      <dl className="mt-4 divide-y divide-[rgba(0,255,0,0.1)]">
         {technicalSpecs.map(([key, value]) => (
           <div key={key} className="grid gap-2 py-3 sm:grid-cols-[140px,1fr]">
-            <dt className="text-muted-foreground">{key}</dt>
-            <dd>{value}</dd>
+            <dt className="section-kicker">{key}</dt>
+            <dd className="body-copy body-copy-compact">{value}</dd>
           </div>
         ))}
       </dl>
@@ -152,7 +152,7 @@ function TechnicalSpecsPanel() {
 function PricingTiersPanel() {
   return (
     <section className="panel rounded-sm p-6">
-      <h2 className="border-b border-[rgba(0,255,0,0.25)] pb-2 text-xs font-bold uppercase tracking-[0.2em] text-[color:var(--neon)]">
+      <h2 className="section-kicker border-b border-[rgba(0,255,0,0.25)] pb-2">
         Pricing Tiers
       </h2>
       <div className="mt-4 grid gap-3">
@@ -162,8 +162,8 @@ function PricingTiersPanel() {
             className="grid gap-4 rounded-sm border border-[rgba(0,255,0,0.3)] p-4 sm:grid-cols-[1fr_auto]"
           >
             <div>
-              <h3 className="font-bold">{name}</h3>
-              <p className="mt-1 text-xs text-muted-foreground">
+              <h3>{name}</h3>
+              <p className="body-copy body-copy-compact mt-1">
                 {description}
               </p>
             </div>
@@ -171,7 +171,7 @@ function PricingTiersPanel() {
           </article>
         ))}
       </div>
-      <p className="mt-4 text-xs text-muted-foreground">
+      <p className="body-copy body-copy-compact mt-4">
         24-48h dispatch | FOB SF Bay Area, CA, US | info@kofenot.com
       </p>
     </section>
