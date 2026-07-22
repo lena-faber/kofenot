@@ -662,7 +662,7 @@ function HeroStats() {
   return (
     <div className="absolute inset-x-0 bottom-10 z-20 hidden lg:block">
       <Reveal delay={0.2}>
-        <div className="grid min-h-[70px] grid-cols-4 border-t border-white/20 bg-black">
+        <div className="grid min-h-[70px] grid-cols-4 border-t border-white/20 bg-black/10 backdrop-blur-sm">
           <HeroStat
             icon={
               <span className="text-4xl font-black !text-[color:var(--neon)]">
