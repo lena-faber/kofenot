@@ -29,11 +29,11 @@ export function SiteHeader() {
   const [open, setOpen] = useState(false);
   const location = useLocation();
   const isSamplePage =
-  location.pathname === "/wholesale" ||
-  location.pathname === "/downloads"; 
+    location.pathname === "/wholesale" ||
+    location.pathname === "/downloads";
 
-const ctaHref = isSamplePage ? sampleCheckoutUrl : "/#pricing";
-const ctaLabel = isSamplePage ? "Buy Sample" : "Buy Now";
+  const ctaHref = isSamplePage ? sampleCheckoutUrl : "/#pricing";
+  const ctaLabel = isSamplePage ? "Buy Sample" : "Buy Now";
 
   return (
     <header className="sticky top-0 z-[100] isolate overflow-x-hidden border-b border-white/5 bg-black/35 text-white backdrop-blur-md">
@@ -117,15 +117,15 @@ const ctaLabel = isSamplePage ? "Buy Sample" : "Buy Now";
 export function SiteFooter() {
   return (
     <footer className="mt-20 overflow-x-hidden border-t border-[rgba(0,255,0,0.18)]">
-      <div className="mx-auto max-w-[1320px] px-4 py-10 text-center text-sm text-muted-foreground lg:px-6">
-        <p className="text-foreground">
+      <div className="mx-auto max-w-[1320px] px-4 py-10 text-center lg:px-6">
+        <p className="body-copy">
           <strong>
             © 2026 KOFENOT: Make Your Laptop Coffee Shop-Friendly.
           </strong>{" "}
           Patent Pending. Made in California.
         </p>
 
-        <nav className="mt-5 flex flex-wrap justify-center gap-x-6 gap-y-2">
+        <nav className="mt-5 flex flex-wrap justify-center gap-x-6 gap-y-2 text-[28px] leading-[48px]">
           {footerLinks.map((link) => (
             <a
               key={link.label}
@@ -137,7 +137,7 @@ export function SiteFooter() {
           ))}
         </nav>
 
-        <p className="mt-4 text-xs">
+        <p className="body-copy mt-4">
           RoHS Compliant | Patent Pending | KOFENOT™ Trademark
         </p>
       </div>
