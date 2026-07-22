@@ -311,6 +311,11 @@
     text-rendering: geometricPrecision;
   }
 
+  .body-copy-compact {
+    font-size: 18px !important;
+    line-height: 28px !important;
+  }
+
   .body-copy :where(a, span, strong, em, li),
   .normal-text :where(a, span, strong, em, li) {
     color: inherit !important;
