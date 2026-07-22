@@ -75,9 +75,9 @@
   --panel: rgba(0, 255, 0, 0.05);
 
   --body-copy-color: #ffffff;
-  --body-copy-size: 20px;
+  --body-copy-size: 28px;
   --body-copy-weight: 400;
-  --body-copy-line-height: 30px;
+  --body-copy-line-height: 48px;
 }
 
 @layer base {
