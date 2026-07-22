@@ -324,7 +324,7 @@ function HeroSection() {
             CUSTOM.
           </h1>
 
-          <p className="hero-copy body-copy body-copy-compact">
+          <p className="hero-copy body-copy">
             Retail-ready packaged units, bare bulk packs, master cartons,
             custom programs, private label, and licensing.
           </p>
@@ -439,7 +439,7 @@ function ProgramsSection() {
                 {item.title}
               </h3>
 
-              <p className="body-copy body-copy-compact mt-3">
+              <p className="body-copy mt-3">
                 {item.copy}
               </p>
             </div>
@@ -524,7 +524,7 @@ function SpecsSection() {
                     {label}
                   </th>
 
-                  <td className="body-copy body-copy-compact px-4 py-4 sm:px-5">
+                  <td className="body-copy px-4 py-4 sm:px-5">
                     {value}
                   </td>
                 </tr>
@@ -544,7 +544,7 @@ function MediaKitSection() {
         Product images for buyers and partners
       </h2>
 
-      <p className="body-copy body-copy-compact mt-5 max-w-3xl">
+      <p className="body-copy mt-5 max-w-3xl">
         Download images for retail review, internal approval, wholesale
         listings, custom logo planning, and promotional presentations.
       </p>
@@ -591,7 +591,7 @@ function ShippingSection() {
                     {section.items.map((item) => (
                       <li
                         key={item}
-                        className="body-copy body-copy-compact flex gap-3"
+                        className="body-copy flex gap-3"
                       >
                         <PackageCheck className="mt-0.5 h-4 w-4 shrink-0 text-[var(--neon)]" />
                         <span>{item}</span>
@@ -615,7 +615,7 @@ function ShippingSection() {
                 Need a shipping quote?
               </h3>
 
-              <p className="body-copy body-copy-compact mt-3">
+              <p className="body-copy mt-3">
                 Send quantity, destination, deadline, and packaging needs.
               </p>
 
@@ -646,7 +646,7 @@ function FaqSection() {
               className="grid gap-2 py-6 md:grid-cols-[0.8fr_1.2fr]"
             >
               <h3 className="text-lg font-black uppercase">{question}</h3>
-              <p className="body-copy body-copy-compact">{answer}</p>
+              <p className="body-copy">{answer}</p>
             </div>
           ))}
         </div>
@@ -665,7 +665,7 @@ function FinalCta() {
 
         <h2 className="section-title">Ready to order KOFENOT™ wholesale?</h2>
 
-        <p className="body-copy body-copy-compact mx-auto mt-4 max-w-2xl">
+        <p className="body-copy mx-auto mt-4 max-w-2xl">
           Retail-ready units are $8 each with a 30-unit minimum. Bare bulk
           starts at 100 bare units for $600. Master carton: 400 bare units for
           $2,000. Custom logo, private label, licensing, and distribution are
