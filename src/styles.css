@@ -312,13 +312,15 @@
   }
 
   .body-copy-compact {
+    color: #ffffff !important;
     font-size: 18px !important;
     font-weight: 300 !important;
     line-height: 28px !important;
   }
 
   .body-copy :where(a, span, strong, em, li),
-  .normal-text :where(a, span, strong, em, li) {
+  .normal-text :where(a, span, strong, em, li),
+  .body-copy-compact :where(a, span, strong, em, li) {
     color: inherit !important;
     font-family: inherit !important;
     font-size: inherit !important;
@@ -333,7 +335,8 @@
   }
 
   .body-copy sup,
-  .normal-text sup {
+  .normal-text sup,
+  .body-copy-compact sup {
     font-size: inherit !important;
     line-height: inherit !important;
     vertical-align: baseline !important;
