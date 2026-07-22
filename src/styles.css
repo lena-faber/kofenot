@@ -89,6 +89,7 @@
   * {
     box-sizing: border-box;
     border-color: var(--color-border);
+    font-family: "League Spartan" !important;
   }
 
   html {
