@@ -79,10 +79,10 @@
   --body-copy-weight: 400;
   --body-copy-line-height: 30px;
 
-  --kicker-size: 18px;
-  --kicker-weight: 700;
-  --kicker-line-height: 1;
-  --kicker-letter-spacing: 0.12em;
+  --h3-size: 18px;
+  --h3-weight: 700;
+  --h3-line-height: 1;
+  --h3-letter-spacing: 0.12em;
 }
 
 @layer base {
@@ -145,23 +145,22 @@
     text-transform: uppercase;
   }
 
-  h3,
-  .section-kicker {
+  h3 {
     margin: 0 0 1rem;
     color: var(--neon) !important;
     font-family: "League Spartan" !important;
-    font-size: var(--kicker-size) !important;
-    font-weight: var(--kicker-weight) !important;
+    font-size: var(--h3-size) !important;
+    font-weight: var(--h3-weight) !important;
     font-style: normal !important;
     font-variant: normal !important;
-    line-height: var(--kicker-line-height) !important;
-    letter-spacing: var(--kicker-letter-spacing) !important;
+    line-height: var(--h3-line-height) !important;
+    letter-spacing: var(--h3-letter-spacing) !important;
     text-transform: uppercase !important;
     text-decoration: none !important;
     text-shadow: none !important;
   }
 
-  p:not(.section-kicker) {
+  p {
     color: var(--body-copy-color) !important;
     font-family: "League Spartan" !important;
     font-size: var(--body-copy-size) !important;
@@ -175,10 +174,6 @@
     text-shadow: none !important;
     font-feature-settings: "kern" 1;
     text-rendering: geometricPrecision;
-  }
-
-  p.body-copy-strong {
-    font-weight: 700 !important;
   }
 
   #root,
@@ -207,12 +202,12 @@
   button,
   [role="button"] {
     font-family: "League Spartan" !important;
-    font-size: var(--kicker-size) !important;
-    font-weight: var(--kicker-weight) !important;
+    font-size: var(--h3-size) !important;
+    font-weight: var(--h3-weight) !important;
     font-style: normal !important;
     font-variant: normal !important;
-    line-height: var(--kicker-line-height) !important;
-    letter-spacing: var(--kicker-letter-spacing) !important;
+    line-height: var(--h3-line-height) !important;
+    letter-spacing: var(--h3-letter-spacing) !important;
     text-transform: uppercase !important;
     text-decoration: none !important;
     text-shadow: none !important;
@@ -355,10 +350,6 @@
     text-rendering: geometricPrecision;
   }
 
-  .body-copy-strong {
-    font-weight: 700 !important;
-  }
-
   .body-copy-compact {
     color: #ffffff !important;
     font-weight: var(--body-copy-weight) !important;
@@ -366,7 +357,6 @@
 
   .body-copy :where(a, span, strong, em, li),
   .normal-text :where(a, span, strong, em, li),
-  .body-copy-strong :where(a, span, strong, em, li),
   .body-copy-compact :where(a, span, strong, em, li) {
     color: inherit !important;
     font-family: inherit !important;
@@ -383,7 +373,6 @@
 
   .body-copy sup,
   .normal-text sup,
-  .body-copy-strong sup,
   .body-copy-compact sup {
     font-size: inherit !important;
     line-height: inherit !important;
