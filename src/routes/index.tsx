@@ -154,7 +154,7 @@ const purchaseOptions: PurchaseOption[] = [
     items: [
       "Free shipping in the US",
       "In Stock. Ships from California",
-      "3–5 business days",
+      "3-5 business days",
     ],
     url: retailCheckoutUrl,
   },
@@ -165,7 +165,7 @@ const purchaseOptions: PurchaseOption[] = [
     items: [
       "Free shipping in the US",
       "In Stock. Ships from California",
-      "3–5 business days",
+      "3-5 business days",
     ],
     url: twoUnitCheckoutUrl,
   },
@@ -338,7 +338,7 @@ function BenefitCard({ card }: { card: BenefitCardData }) {
 
       <div className="flex-1 border-t border-white/10 bg-[#080908] p-5">
         <h3>{card.title}</h3>
-        <div className="normal-text mt-1">{card.body}</div>
+        <p className="body-copy mt-1">{card.body}</p>
       </div>
     </article>
   );
@@ -393,7 +393,7 @@ function StepCard({
 
       <h3>{title}</h3>
 
-      <div className="normal-text mt-2">{description}</div>
+      <p className="body-copy mt-2">{description}</p>
 
       <div className="absolute right-7 top-7 h-1 w-12 bg-[color:var(--neon)]" />
     </article>
@@ -471,7 +471,7 @@ function TestimonialQuotes() {
         {testimonials.map((quote) => (
           <blockquote
             key={quote}
-            className="normal-text border border-[rgba(0,255,0,0.18)] bg-black/30 p-4 text-center"
+            className="body-quote border border-[rgba(0,255,0,0.18)] bg-black/30 p-4 text-center"
           >
             “{quote}”
           </blockquote>
@@ -542,11 +542,11 @@ function PricingCard({
         {option.price}
       </div>
 
-      <div className="normal-text mt-3">
+      <p className="body-copy mt-3">
         {option.title}
-      </div>
+      </p>
 
-      <ul className="normal-text mt-5 space-y-2">
+      <ul className="body-list mt-5 space-y-2">
         {option.items.map((item) => (
           <PricingItem key={item}>{item}</PricingItem>
         ))}
@@ -565,7 +565,7 @@ function PricingCard({
 
 function ProductDetailsSection() {
   const details = [
-    ["Size", "3.4 × 2.4 × 0.4 in"],
+    ["Size", "3.4 x 2.4 x 0.4 in"],
     ["Weight", "0.9 oz"],
     [
       "Material",
@@ -607,7 +607,7 @@ function ProductDetailsSection() {
                     {label}
                   </div>
 
-                  <div className="normal-text">
+                  <div className="body-copy">
                     {value}
                   </div>
                 </div>
@@ -650,7 +650,7 @@ function FaqSection() {
             className="grid gap-2 py-6 md:grid-cols-[.8fr_1.2fr]"
           >
             <h3>{question}</h3>
-            <div className="normal-text">{answer}</div>
+            <p className="body-copy">{answer}</p>
           </div>
         ))}
       </div>
@@ -730,9 +730,9 @@ function HeroStat({
           {title}
         </div>
 
-        <div className="normal-text mt-1">
+        <p className="body-copy mt-1">
           {children}
-        </div>
+        </p>
       </div>
     </div>
   );
