@@ -36,7 +36,7 @@ export function SiteHeader() {
   const ctaLabel = isSamplePage ? "Buy Sample" : "Buy Now";
 
   return (
-    <header className="sticky top-0 z-[100] isolate overflow-x-hidden border-b border-white/5 text-white backdrop-blur-md">
+    <header className="sticky top-0 z-[100] isolate overflow-x-hidden bg-black/40 backdrop-blur-md text-white">
       <div className="mx-auto flex h-16 max-w-[1320px] items-center gap-3 px-4 lg:px-6">
         <Link
           to="/"
