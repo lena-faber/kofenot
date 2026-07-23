@@ -409,21 +409,9 @@ function ReviewsSection() {
       id="reviews"
       className={cx(layout.section, layout.standard)}
     >
-      <SectionHeader
-        title={
-          <>
-            Watch <span className="neon-text">Real Reactions</span>
-          </>
-        }
-      />
-
+      
       <Reveal delay={0.1}>
-        <div
-          className={cx(
-            layout.content,
-            "mx-auto max-w-[980px]",
-          )}
-        >
+        <div className="mx-auto max-w-[980px]">
           <TestimonialQuotes />
 
           <div className="relative mt-6">
