@@ -122,7 +122,7 @@ const howItWorksSteps = [
 
 const testimonials = [
   "I'm known for spilling drinks on my laptop, so I'll take KOFENOT™ with me everywhere.",
-  "KOFENOT™ has a nice lifting angle that's still easy to type on. It's a rel replacement for my office setup when I'm traveling.",
+  "KOFENOT™ has a nice lifting angle that's still easy to type on. It's my office setup replacement when I'm traveling.",
   "It's two things in one: a stand and protection for my laptop. And it's also a fidget with satisfying sound.",
 ];
 
