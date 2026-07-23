@@ -428,15 +428,14 @@ function ReviewsSection() {
 
           <div className="relative mt-6">
             <video
-              ref={videoRef}
-              src={`${testimonialVideo}#t=0.1`}
-              poster={testimonialPoster}
-              controls={isPlaying}
-              preload="auto"
-              playsInline
-              className="block w-full rounded-sm"
-            />
-
+  ref={videoRef}
+  src={testimonialVideo}
+  poster={testimonialPoster}
+  controls={isPlaying}
+  preload="metadata"
+  playsInline
+  className="block aspect-video w-full rounded-sm object-cover"
+/>
             {!isPlaying && (
               <button
                 type="button"
