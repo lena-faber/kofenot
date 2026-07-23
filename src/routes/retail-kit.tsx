@@ -118,11 +118,9 @@ function AssetCard({
       </a>
 
       <div className="border-t border-white/10 p-4">
-        <h3 className="text-lg font-black leading-tight text-[color:var(--neon)]">
-          {title}
-        </h3>
+        <h3>{title}</h3>
 
-        <p className="mt-2 text-sm leading-5 text-white/60">{description}</p>
+        <p className="mt-2">{description}</p>
 
         <div className="mt-4 grid grid-cols-2 gap-2">
           <a
@@ -153,7 +151,7 @@ function RetailKit() {
   return (
     <main className="page-shell">
       <section className="mx-auto max-w-[1320px] px-6 py-16 lg:px-10">
-        <p className="section-kicker">Retail Buyer Assets</p>
+        <h3>Retail Buyer Assets</h3>
 
         <div className="mt-5 grid gap-8 lg:grid-cols-[1fr_360px] lg:items-end">
           <div>
@@ -163,7 +161,7 @@ function RetailKit() {
               Retail Kit
             </h1>
 
-            <p className="mt-6 max-w-2xl text-lg font-semibold leading-8 text-white/75">
+            <p className="mt-6 max-w-2xl">
               CSV, product specifications, downloadable retail images, and
               packaging assets.
             </p>
@@ -191,7 +189,7 @@ function RetailKit() {
       </section>
 
       <section className="mx-auto max-w-[1320px] border-t border-[rgba(0,255,0,0.14)] px-6 py-12 lg:px-10">
-        <p className="section-kicker">Product Specifications</p>
+        <h3>Product Specifications</h3>
 
         <div className="mt-6 grid gap-3 md:grid-cols-2 lg:grid-cols-3">
           {specs.map(([label, value]) => (
@@ -199,19 +197,15 @@ function RetailKit() {
               key={label}
               className="rounded-sm border border-white/10 bg-[#080908] p-4"
             >
-              <p className="text-xs font-black uppercase tracking-[0.18em] text-[color:var(--neon)]">
-                {label}
-              </p>
-              <p className="mt-2 text-base font-bold leading-6 text-white">
-                {value}
-              </p>
+              <h3>{label}</h3>
+              <p className="mt-2">{value}</p>
             </div>
           ))}
         </div>
       </section>
 
       <section className="mx-auto max-w-[1320px] border-t border-[rgba(0,255,0,0.14)] px-6 py-12 lg:px-10">
-        <p className="section-kicker">Retail Designs</p>
+        <h3>Retail Designs</h3>
 
         <h2 className="section-title">
           Downloadable <span className="neon-text">Retail Images</span>
@@ -225,7 +219,7 @@ function RetailKit() {
       </section>
 
       <section className="mx-auto max-w-[1320px] border-t border-[rgba(0,255,0,0.14)] px-6 py-12 lg:px-10">
-        <p className="section-kicker">Product Image</p>
+        <h3>Product Image</h3>
 
         <h2 className="section-title">
           Bare <span className="neon-text">KOFENOT™</span>
@@ -239,7 +233,7 @@ function RetailKit() {
       </section>
 
       <section className="mx-auto max-w-[1320px] border-t border-[rgba(0,255,0,0.14)] px-6 py-12 lg:px-10">
-        <p className="section-kicker">Packaging</p>
+        <h3>Packaging</h3>
 
         <h2 className="section-title">
           Package <span className="neon-text">Front + Back</span>
