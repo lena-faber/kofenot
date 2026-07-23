@@ -36,7 +36,7 @@ export function SiteHeader() {
   const ctaLabel = isSamplePage ? "Buy Sample" : "Buy Now";
 
   return (
-    <header className="sticky top-0 z-[100] isolate overflow-x-hidden border-b border-white/5 bg-black/35 text-white backdrop-blur-md">
+    <header className="sticky top-0 z-[100] isolate overflow-x-hidden border-b border-white/5 text-white backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-[1320px] items-center gap-3 px-4 lg:px-6">
         <Link
           to="/"
@@ -90,7 +90,7 @@ export function SiteHeader() {
       </div>
 
       <div
-        className={`grid bg-black transition-[grid-template-rows,opacity] duration-300 ease-out md:hidden ${
+        className={`grid transition-[grid-template-rows,opacity] duration-300 ease-out md:hidden ${
           open
             ? "grid-rows-[1fr] opacity-100"
             : "pointer-events-none grid-rows-[0fr] opacity-0"
