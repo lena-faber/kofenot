@@ -411,10 +411,11 @@ function ReviewsSection() {
     >
       
       <Reveal delay={0.1}>
-        <div className="mx-auto max-w-[980px]">
-          <TestimonialQuotes />
+  <TestimonialQuotes />
 
-          <div className="relative mt-6">
+  <div className="mx-auto mt-6 max-w-[980px]">
+    <div className="relative">
+            
             <video
   ref={videoRef}
   src={testimonialVideo}
