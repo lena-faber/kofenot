@@ -190,7 +190,7 @@ function HeroSection() {
 
 function StorySection() {
   return (
-   <article className="rounded-sm border border-black/10 bg-white p-5 shadow-sm [&_a]:!text-black [&_p]:!text-[#000000] [&_h2]:!text-black [&_h3]:!text-black sm:p-7 lg:p-9">
+   <article className="rounded-sm border border-black/10 bg-white text-black p-5 shadow-sm sm:p-7 lg:p-9">
   <header className="border-b border-black/10 pb-7">
     <p className="text-sm font-black uppercase tracking-[0.18em] text-black/60">
       Founder Story
