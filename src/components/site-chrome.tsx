@@ -65,7 +65,8 @@ export function SiteHeader() {
 
         <div className="ml-auto flex shrink-0 items-center gap-2 md:ml-4">
           <a
-            href={ctaHref} target="_blank" rel="noopener noreferrer"
+            href={ctaHref} target={isSamplePage ? "_blank" : undefined} rel={isSamplePage ? "noopener noreferrer" : undefined}
+            
             className="inline-flex items-center justify-center whitespace-nowrap rounded-md bg-[color:var(--neon)] px-4 py-2 text-sm font-bold text-black transition-colors hover:bg-[color:var(--neon-dim)] sm:px-6"
           >
             {ctaLabel}
