@@ -3,7 +3,6 @@ import {
   Download,
   FileSpreadsheet,
   FileText,
-  Images,
   Presentation,
 } from "lucide-react";
 
@@ -58,7 +57,6 @@ const downloads = [
     file: "/downloads/KOFENOT_Product_Specifications.pdf",
     icon: FileText,
   },
- 
   {
     title: "CSV Product Data",
     format: "CSV",
@@ -82,9 +80,7 @@ function DownloadsPage() {
 function DownloadsHero() {
   return (
     <section className="mx-auto max-w-[1320px] px-4 pb-1 pt-15 lg:px-6">
-      <h1>
-        Resource Center
-      </h1>
+      <h1>Resource Center</h1>
 
       <p>
         Sales presentations, product specifications, media assets, and product
@@ -116,9 +112,7 @@ function DownloadsGrid() {
                 </span>
               </div>
 
-              <h3 className="section-kicker">
-                {item.title}
-              </h3>
+              <h3>{item.title}</h3>
 
               <p className="mt-4 flex-1 text-sm leading-relaxed text-muted-foreground">
                 {item.description}
@@ -142,11 +136,9 @@ function DownloadsContact() {
   return (
     <section className="mx-auto max-w-[1320px] px-4 pb-20 pt-6 lg:px-6">
       <div className="neon-border bg-[rgba(0,255,0,0.05)] p-8 text-center neon-glow md:p-12">
-        <p className="section-kicker">Need something else?</p>
+        <h3>Need something else?</h3>
 
-        <h3 className="section-kicker">
-          Request additional KOFENOT™ materials.
-        </h3>
+        <h3>Request additional KOFENOT™ materials.</h3>
 
         <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
           Contact us for custom quotations, samples, artwork templates,
