@@ -124,13 +124,6 @@ const mediaImages = [
   },
 ];
 
-const blackHeadingStyle = {
-  color: "#000000",
-  textShadow: "none",
-  filter: "none",
-  fontStyle: "normal",
-};
-
 function PressPage() {
   return (
     <main className="min-h-screen">
@@ -145,9 +138,6 @@ function PressPage() {
     </main>
   );
 }
-/* =========================================================
-   HERO SECTION
-   ========================================================= */
 
 function HeroSection() {
   return (
@@ -165,13 +155,7 @@ function HeroSection() {
           KOFENOT™ Media Kit
         </p>
 
-        <h1
-          className="text-5xl leading-[0.92] tracking-tight text-[color:black] md:text-7xl"
-          style={{
-            textShadow: "none",
-            filter: "none",
-          }}
-        >
+        <h1 className="text-5xl leading-[0.92] tracking-tight text-[color:black] md:text-7xl">
           One-way Ticket to Silicon Valley.
         </h1>
 
@@ -203,10 +187,6 @@ function HeroSection() {
     </section>
   );
 }
-
-/* =========================================================
-   COMPLETE STORY
-   ========================================================= */
 
 function StorySection() {
   return (
@@ -386,25 +366,11 @@ function StorySection() {
 
 function StoryHeading({ children }: { children: ReactNode }) {
   return (
-    <h3
-      className="border-t border-black/10 pt-8 text-2xl font-black leading-tight tracking-tight sm:text-3xl"
-      style={{
-        color: "#000000",
-        WebkitTextFillColor: "#000000",
-        background: "none",
-        WebkitBackgroundClip: "initial",
-        backgroundClip: "initial",
-        textShadow: "none",
-      }}
-    >
+    <h3 className="border-t border-black/10 pt-8 text-2xl font-black leading-tight tracking-tight sm:text-3xl">
       {children}
     </h3>
   );
 }
-
-/* =========================================================
-   RIGHT SIDEBAR
-   ========================================================= */
 
 function ProductSidebar() {
   return (
@@ -415,17 +381,10 @@ function ProductSidebar() {
   );
 }
 
-/* =========================================================
-   PRODUCT FACTS
-   ========================================================= */
-
 function ProductFacts() {
   return (
     <section className="p-5 lg:p-7">
-      <h2
-        className="text-2xl font-black tracking-tight"
-        style={blackHeadingStyle}
-      >
+      <h2 className="text-2xl font-black tracking-tight">
         Product Facts
       </h2>
 
@@ -467,17 +426,10 @@ function ProductFacts() {
   );
 }
 
-/* =========================================================
-   MEDIA PHOTOS
-   ========================================================= */
-
 function MediaGallery() {
   return (
     <section className="p-5 lg:p-6">
-      <h2
-        className="text-2xl font-black tracking-tight"
-        style={blackHeadingStyle}
-      >
+      <h2 className="text-2xl font-black tracking-tight">
         Media Photos
       </h2>
 
@@ -506,18 +458,11 @@ function MediaGallery() {
   );
 }
 
-/* =========================================================
-   BOTTOM GRID
-   ========================================================= */
-
 function BottomGrid() {
   return (
     <section className="mx-auto grid max-w-[1480px] gap-6 px-4 pb-10 lg:grid-cols-3 lg:px-6">
       <section className="p-6">
-        <h2
-          className="text-2xl font-black tracking-tight"
-          style={blackHeadingStyle}
-        >
+        <h2 className="text-2xl font-black tracking-tight">
           KOFENOT™
         </h2>
 
@@ -536,10 +481,7 @@ function BottomGrid() {
       </section>
 
       <section className="p-6">
-        <h2
-          className="text-2xl font-black tracking-tight"
-          style={blackHeadingStyle}
-        >
+        <h2 className="text-2xl font-black tracking-tight">
           Download Center
         </h2>
 
@@ -563,10 +505,7 @@ function BottomGrid() {
       </section>
 
       <section className="p-6">
-        <h2
-          className="text-2xl font-black tracking-tight"
-          style={blackHeadingStyle}
-        >
+        <h2 className="text-2xl font-black tracking-tight">
           Media Contact
         </h2>
 
@@ -598,10 +537,6 @@ function BottomGrid() {
     </section>
   );
 }
-
-/* =========================================================
-   MEDIA FIGURE
-   ========================================================= */
 
 function MediaFigure({
   alt,
