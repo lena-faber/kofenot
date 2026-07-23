@@ -207,7 +207,7 @@ function RetailKit() {
       <section className="mx-auto max-w-[1320px] border-t border-[rgba(0,255,0,0.14)] px-6 py-12 lg:px-10">
         <h3>Retail Designs</h3>
 
-        <h2 className="section-title">
+        <h2>
           Downloadable <span className="neon-text">Retail Images</span>
         </h2>
 
@@ -222,7 +222,7 @@ function RetailKit() {
         <h3>Product Image</h3>
 
         <h2>
-          Bare <span className="neon-text">KOFENOT™</span>
+        KOFENOT™
         </h2>
 
         <div className="mt-8 max-w-sm">
@@ -236,7 +236,7 @@ function RetailKit() {
         <h3>Packaging</h3>
 
         <h2>
-          Package <span className="neon-text">Front + Back</span>
+          Package Front + Back
         </h2>
 
         <div className="mt-8 grid gap-5 md:grid-cols-2">
