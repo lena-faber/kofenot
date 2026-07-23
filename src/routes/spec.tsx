@@ -72,7 +72,7 @@ function HeroSection() {
       <div className="page-hero-inner">
         <div className="max-w-4xl">
           <h3>Spec Sheet 2026</h3>
-          <h1 className="hero-title">KOFENOT TECHNICAL & COMMERCIAL</h1>
+          <h1>KOFENOT TECHNICAL & COMMERCIAL</h1>
           <p className="hero-copy body-copy">
             One-page reference for procurement, promotional agencies, OEM
             partners, and enterprise buyers.
