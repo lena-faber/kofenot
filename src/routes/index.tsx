@@ -189,7 +189,7 @@ export function Home() {
       <FaqSection />
 
       <Dialog open={videoOpen} onOpenChange={setVideoOpen}>
-        <DialogContent className="neon-border max-w-3xl bg-black p-2">
+        <DialogContent className="neon-border max-w-3xl p-2">
           <video
             src={demoVideo}
             controls
@@ -327,8 +327,8 @@ function BenefitsSection() {
 
 function BenefitCard({ card }: { card: BenefitCardData }) {
   return (
-    <article className="group flex h-full flex-col overflow-hidden bg-black transition duration-300 hover:-translate-y-2">
-      <div className="aspect-square overflow-hidden bg-black">
+    <article className="group flex h-full flex-col overflow-hidden transition duration-300 hover:-translate-y-2">
+      <div className="aspect-square overflow-hidden">
         <img
           src={card.image}
           alt={card.title}
@@ -471,7 +471,7 @@ function TestimonialQuotes() {
         {testimonials.map((quote) => (
           <blockquote
             key={quote}
-            className="body-copy border border-[rgba(0,255,0,0.18)] bg-black/30 p-4 text-center"
+            className="body-copy border border-[rgba(0,255,0,0.18)] p-4 text-center"
           >
             “{quote}”
           </blockquote>
@@ -662,7 +662,7 @@ function HeroStats() {
   return (
     <div className="absolute inset-x-0 bottom-10 z-20 hidden lg:block">
       <Reveal delay={0.2}>
-        <div className="grid min-h-[70px] grid-cols-4 border-t border-white/20 bg-black/10 backdrop-blur-sm">
+        <div className="grid min-h-[70px] grid-cols-4 border-t border-white/20 backdrop-blur-sm">
           <HeroStat
             icon={
               <span className="text-4xl font-black !text-[color:var(--neon)]">
