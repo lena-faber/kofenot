@@ -318,7 +318,7 @@ function HeroSection() {
         <div className="max-w-4xl">
           <h3>Wholesale</h3>
 
-          <h1 className="hero-title">
+          <h1">
             RETAIL READY.
             <br />
             CUSTOM.
