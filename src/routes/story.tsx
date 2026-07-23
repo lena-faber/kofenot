@@ -150,7 +150,7 @@ function HeroSection() {
 
       <div className="absolute inset-y-0 left-0 w-full bg-gradient-to-r from-black/70 via-black/35 to-transparent" />
 
-      <div className="relative z-10 flex min-h-[72svh] max-w-4xl flex-col justify-end px-6 pb-12 pt-15 lg:px-10">
+      <div className="relative z-10 flex min-h-[72svh] max-w-4xl flex-col justify-end px-6 pb-12 pt-8 lg:px-10">
         <h3>
           KOFENOT™ Media Kit
         </h>
