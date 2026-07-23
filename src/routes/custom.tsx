@@ -291,7 +291,7 @@ function RequestSection() {
     <section id="request" className="mx-auto max-w-[1320px] px-4 pb-20 lg:px-6">
       <div className="neon-border bg-[rgba(0,255,0,0.05)] p-8 text-center neon-glow md:p-12">
         <BriefcaseBusiness className="mx-auto h-9 w-9 text-[color:var(--neon)]" />
-        <h3 className="mt-5">Request quote</h3>
+        <h3>Request quote</h3>
         <h2>Tell us your logo, quantity, and timeline.</h2>
         <p className="body-copy mx-auto mt-4 max-w-2xl">
           We will quote print, packaging, delivery, and merchandising options
