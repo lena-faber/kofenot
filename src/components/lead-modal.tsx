@@ -61,7 +61,7 @@ function Shell({
 }) {
   return (
     <Dialog open={open} onOpenChange={(v) => { onOpenChange(v); if (!v) setTimeout(onReset, 250); }}>
-      <DialogContent className="max-w-lg bg-black neon-border text-foreground max-h-[90vh] overflow-y-auto">
+      <DialogContent className="max-w-lg neon-border text-foreground max-h-[90vh] overflow-y-auto">
         <DialogHeader>
           <DialogTitle className="text-2xl font-bold tracking-tight">{title}</DialogTitle>
           <DialogDescription className="text-muted-foreground">{description}</DialogDescription>
