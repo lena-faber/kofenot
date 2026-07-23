@@ -42,7 +42,7 @@
 .dark {
   --radius: 2px;
 
-  --background: #000000;
+  --background: #212121;
   --foreground: #ffffff;
 
   --card: oklch(0.16 0 0);
@@ -107,7 +107,7 @@
         rgba(0, 255, 0, 0.22) 1px,
         transparent 1.4px
       ),
-      #000000;
+      #212121;
     background-size: 16px 16px;
     color: #ffffff;
     font-family: "League Spartan";
@@ -230,7 +230,7 @@
     margin-top: -4rem;
     min-height: 86svh;
     overflow: hidden;
-    background: #000000;
+    background: #212121;
     padding-top: 4rem;
   }
 
