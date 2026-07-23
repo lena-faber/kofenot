@@ -196,7 +196,7 @@ function StorySection() {
       Founder Story
     </p>
 
-    <h2 style={{ color: "#000" }}>
+    <h2 className="!text-black">
       One Dead Laptop. One Dead Car. One-way Ticket to Silicon Valley.
     </h2>
   </header>
