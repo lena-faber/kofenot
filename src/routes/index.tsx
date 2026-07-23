@@ -173,9 +173,9 @@ const purchaseOptions: PurchaseOption[] = [
 export function Home() {
   const [videoOpen, setVideoOpen] = useState(false);
 
-  const openCheckout = (url = retailCheckoutUrl) => {
-    window.location.href = url;
-  };
+const openCheckout = (url = retailCheckoutUrl) => {
+  window.open(url, "_blank", "noopener,noreferrer");
+};
 
   return (
     <main className="page-shell">
