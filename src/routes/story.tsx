@@ -196,7 +196,7 @@ function StorySection() {
       Founder Story
     </p>
 
-    <h2 className="mt-2 text-3xl font-black leading-tight tracking-tight text-black sm:text-4xl">
+    <h2>
       One Dead Laptop. One Dead Car. One-way Ticket to Silicon Valley.
     </h2>
   </header>
