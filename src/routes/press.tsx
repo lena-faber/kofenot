@@ -118,7 +118,7 @@ function HeroSection() {
       Media Kit
       </h3>
 
-        <h1 className="text-5xl font-black leading-[0.92] tracking-tight md:text-7xl">
+        <h1>
           One Dead Laptop.
           <br />
           One Dead Car.
@@ -158,7 +158,7 @@ function HeroSection() {
 function StorySection() {
   return (
     <article className="rounded-sm border border-black/10 bg-white p-5 shadow-sm lg:p-7">
-      <h2 className="text-3xl font-black tracking-tight">
+      <h2>
         The Story Behind KOFENOT™
       </h2>
 
@@ -264,7 +264,7 @@ function StorySection() {
 function ProductFacts() {
   return (
     <aside className="rounded-sm border border-black/10 bg-white p-5 shadow-sm lg:p-7">
-      <h2 className="text-2xl font-black tracking-tight">Product Facts</h2>
+      <h2>Product Facts</h2>
 
       <div className="mt-6 grid gap-4">
         {facts.map(([label, value]) => (
@@ -298,7 +298,7 @@ function BottomGrid() {
   return (
     <section className="mx-auto grid max-w-[1480px] gap-6 px-4 pb-10 lg:grid-cols-[1fr_1fr_1fr] lg:px-6">
       <section className="rounded-sm border border-black/10 bg-white p-6 shadow-sm">
-        <h2 className="text-2xl font-black tracking-tight">About Lena Faber</h2>
+        <h2>About Lena Faber</h2>
         <p className="mt-4 leading-relaxed text-black/75">
           Lena Faber is a journalist, former university professor, car racer,
           ski instructor, Appalachian Trail thru-hiker, and World Masters
@@ -312,7 +312,7 @@ function BottomGrid() {
       </section>
 
       <section className="rounded-sm border border-black/10 bg-white p-6 shadow-sm">
-        <h2 className="text-2xl font-black tracking-tight">Download Center</h2>
+        <h2>Download Center</h2>
 
         <div className="mt-5 grid gap-2">
           {downloadItems.map((item) => (
@@ -333,7 +333,7 @@ function BottomGrid() {
       </section>
 
       <section className="rounded-sm border border-black/10 bg-white p-6 shadow-sm">
-        <h2 className="text-2xl font-black tracking-tight">Media Contact</h2>
+        <h2>Media Contact</h2>
 
         <div className="mt-5 grid gap-4 text-sm font-bold">
           <p>
