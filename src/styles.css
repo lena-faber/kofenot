@@ -329,7 +329,6 @@
     background: #212121 !important;
   }
 
-  [class*="bg-black"],
   [class*="bg-[#080908]"],
   [class*="bg-[rgba(0,255,0"],
   [class*="bg-[rgba(0, 255, 0"] {
