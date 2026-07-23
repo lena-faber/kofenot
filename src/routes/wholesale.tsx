@@ -397,7 +397,8 @@ function PricingSection() {
 
               <p className="mt-3">{item.detail}</p>
 
-              <a href={item.url} className="mt-6 inline-flex">
+              <a href={item.url} target="_blank" rel="noopener noreferrer" className="mt-6 inline-flex">
+                
                 <Button className="h-11 bg-[var(--neon)] px-6 font-black text-black hover:bg-[var(--neon-dim)]">
                   {item.cta}
                   <ArrowRight className="ml-2 h-4 w-4" />
@@ -649,14 +650,15 @@ function FinalCta() {
         </p>
 
         <div className="mt-7 flex flex-wrap justify-center gap-3">
-          <a href={retailPackCheckoutUrl}>
+          <a href={retailPackCheckoutUrl} >
             <Button className="h-12 bg-[var(--neon)] px-8 font-black text-black hover:bg-[var(--neon-dim)]">
               Buy Retail Wholesale
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
           </a>
 
-          <a href={quoteEmail}>
+          <a href={quoteEmail} target="_blank" rel="noopener noreferrer"></a>
+            
             <Button
               variant="outline"
               className="h-12 border-[rgba(0,255,0,0.55)] px-8 hover:bg-[rgba(0,255,0,0.08)] hover:text-[var(--neon)]"
