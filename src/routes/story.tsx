@@ -151,7 +151,7 @@ function PressPage() {
 
 function HeroSection() {
   return (
-    <section className="relative min-h-[72svh] overflow-hidden bg-black text-white">
+    <section className="relative min-h-[72svh] overflow-hidden text-white">
       <img
         src={heroImage}
         alt="Lena Faber designing KOFENOT with a laptop and coffee cup"
