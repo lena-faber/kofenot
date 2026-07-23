@@ -155,7 +155,7 @@ function HeroSection() {
           KOFENOT™ Media Kit
         </p>
 
-        <h1 className="text-5xl leading-[0.92] tracking-tight text-[color:black] md:text-7xl">
+        <h1>
           One-way Ticket to Silicon Valley.
         </h1>
 
