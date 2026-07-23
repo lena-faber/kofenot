@@ -121,9 +121,9 @@ const howItWorksSteps = [
 ];
 
 const testimonials = [
-  "I can take it with me everywhere. And I like the sound.",
-  "It's a greate lifting angle still easy to type.",
-  "It's two things in one: a stand and protection for your laptop.",
+  "I'm known for spilling drinks on my laptop, so I'll take KOFENOT™ with me everywhere.",
+  "KOFENOT™ has a nice lifting angle that's still easy to type on. It's a rel replacement for my office setup when I'm traveling.",
+  "It's two things in one: a stand and protection for my laptop. And it's also a fidget with satisfying sound.",
 ];
 
 const faq = [
