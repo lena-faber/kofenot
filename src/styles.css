@@ -45,19 +45,19 @@
   --background: #212121;
   --foreground: #ffffff;
 
-  --card: oklch(0.16 0 0);
+  --card: #212121;
   --card-foreground: #ffffff;
 
-  --popover: oklch(0.13 0 0);
+  --popover: #212121;
   --popover-foreground: #ffffff;
 
   --primary: #00ff00;
   --primary-foreground: #000000;
 
-  --secondary: oklch(0.2 0 0);
+  --secondary: #212121;
   --secondary-foreground: #ffffff;
 
-  --muted: oklch(0.2 0 0);
+  --muted: #212121;
   --muted-foreground: #ffffff;
 
   --accent: #00ff00;
@@ -72,7 +72,7 @@
 
   --neon: #00ff00;
   --neon-dim: #00cc00;
-  --panel: rgba(0, 255, 0, 0.05);
+  --panel: #212121;
 
   --body-copy-color: #ffffff;
   --body-copy-size: 20px;
@@ -101,14 +101,7 @@
   body {
     max-width: 100%;
     overflow-x: hidden;
-    background:
-      radial-gradient(
-        circle,
-        rgba(0, 255, 0, 0.22) 1px,
-        transparent 1.4px
-      ),
-      #212121;
-    background-size: 16px 16px;
+    background: #212121;
     color: #ffffff;
     font-family: "League Spartan";
     font-size: 16px;
@@ -259,7 +252,7 @@
 
   .section-band {
     border-block: 1px solid rgba(0, 255, 0, 0.18);
-    background: rgba(0, 255, 0, 0.025);
+    background: #212121 !important;
   }
 
   .hero-copy {
@@ -283,7 +276,7 @@
     top: 4rem;
     z-index: 40;
     border-block: 1px solid rgba(0, 255, 0, 0.18);
-    background: rgba(0, 0, 0, 0.6);
+    background: #212121 !important;
     backdrop-filter: blur(12px);
   }
 
@@ -308,16 +301,19 @@
     width: 100%;
     table-layout: fixed;
     border-collapse: collapse;
+    background: #212121 !important;
   }
 
   .responsive-table th,
   .responsive-table td {
     overflow-wrap: anywhere;
     vertical-align: top;
+    background: #212121 !important;
   }
 
   .neon-border {
     border: 1px solid rgba(0, 255, 0, 0.45);
+    background: #212121 !important;
   }
 
   .panel {
@@ -325,12 +321,19 @@
     min-height: 0;
     overflow: hidden;
     border: 1px solid rgba(0, 255, 0, 0.22);
-    background: rgba(0, 255, 0, 0.035);
+    background: #212121 !important;
   }
 
   .panel-hover:hover {
     border-color: rgba(0, 255, 0, 0.55);
-    background: rgba(0, 255, 0, 0.08);
+    background: #212121 !important;
+  }
+
+  [class*="bg-black"],
+  [class*="bg-[#080908]"],
+  [class*="bg-[rgba(0,255,0"],
+  [class*="bg-[rgba(0, 255, 0"] {
+    background-color: #212121 !important;
   }
 
   .body-copy,
