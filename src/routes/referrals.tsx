@@ -104,7 +104,7 @@ function HeroSection() {
       <div className="page-hero-inner">
         <div className="max-w-4xl">
           <h3>Referral partner program</h3>
-          <h1 className="hero-title">INTRODUCE US</h1>
+          <h1>INTRODUCE US</h1>
           <div className="hero-copy body-copy space-y-4">
             <p>
               Know a company that could use branded KOFENOT™ units for corporate
@@ -129,7 +129,7 @@ function HowItWorksSection() {
   return (
     <section className="page-section">
       <h3>How it works</h3>
-      <h2 className="section-title">A warm introduction. We handle the rest.</h2>
+      <h2>A warm introduction. We handle the rest.</h2>
       <div className="mt-10 grid gap-4 md:grid-cols-3">
         {steps.map(([label, text]) => (
           <article key={label} className="panel panel-hover rounded-sm p-7">
@@ -147,7 +147,7 @@ function IntroductionsSection() {
     <section className="section-band">
       <div className="page-section">
         <h3>Ideal introductions</h3>
-        <h2 className="section-title">High-value buyers and channels.</h2>
+        <h2>High-value buyers and channels.</h2>
         <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {introductions.map((item) => (
             <article key={item.title} className="panel panel-hover rounded-sm p-6">
@@ -164,7 +164,7 @@ function IntroductionsSection() {
 function FaqSection() {
   return (
     <section className="page-section-narrow">
-      <h2 className="section-title">FAQ</h2>
+      <h2>FAQ</h2>
       <div className="mt-7 divide-y divide-[rgba(0,255,0,0.18)] border-y border-[rgba(0,255,0,0.18)]">
         {faqs.map(([question, answer]) => (
           <div
@@ -209,7 +209,7 @@ function ContactIntro() {
   return (
     <div className="neon-border bg-[rgba(0,255,0,0.05)] p-8 neon-glow md:p-10">
       <Handshake className="h-9 w-9 text-[color:var(--neon)]" />
-      <h2 className="section-title">Let&apos;s Talk</h2>
+      <h2>Let&apos;s Talk</h2>
       <p className="body-copy mt-4">
         Tell us who you know and how KOFENOT might fit their business.
       </p>
