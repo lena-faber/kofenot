@@ -156,7 +156,7 @@ function HeroSection() {
         </h>
 
         <h1>
-          One-way Ticket to Silicon Valley.
+          One-way Ticket to Silicon Valley
         </h1>
 
         <p className="mt-6 max-w-2xl text-xl leading-snug text-white/90">
