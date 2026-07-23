@@ -63,7 +63,7 @@ const faqs = [
 const inputClass = [
   "h-12",
   "border border-[rgba(0,255,0,0.3)]",
-  "bg-black px-4",
+  "bg-background px-4",
   "text-base text-white",
   "outline-none focus:border-[color:var(--neon)]",
 ].join(" ");
@@ -71,7 +71,7 @@ const inputClass = [
 const textareaClass = [
   "resize-none",
   "border border-[rgba(0,255,0,0.3)]",
-  "bg-black p-4",
+  "bg-background p-4",
   "text-base text-white",
   "outline-none focus:border-[color:var(--neon)]",
 ].join(" ");
