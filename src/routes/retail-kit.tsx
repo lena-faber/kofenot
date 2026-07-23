@@ -155,7 +155,7 @@ function RetailKit() {
 
         <div className="mt-5 grid gap-8 lg:grid-cols-[1fr_360px] lg:items-end">
           <div>
-            <h1 className="text-[52px] font-black leading-[0.9] tracking-tight neon-text md:text-[86px] lg:text-[104px]">
+            <h1>
               KOFENOT™
               <br />
               Retail Kit
@@ -221,7 +221,7 @@ function RetailKit() {
       <section className="mx-auto max-w-[1320px] border-t border-[rgba(0,255,0,0.14)] px-6 py-12 lg:px-10">
         <h3>Product Image</h3>
 
-        <h2 className="section-title">
+        <h2>
           Bare <span className="neon-text">KOFENOT™</span>
         </h2>
 
@@ -235,7 +235,7 @@ function RetailKit() {
       <section className="mx-auto max-w-[1320px] border-t border-[rgba(0,255,0,0.14)] px-6 py-12 lg:px-10">
         <h3>Packaging</h3>
 
-        <h2 className="section-title">
+        <h2>
           Package <span className="neon-text">Front + Back</span>
         </h2>
 
