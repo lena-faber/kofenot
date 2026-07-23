@@ -384,7 +384,7 @@ function ProductSidebar() {
 function ProductFacts() {
   return (
     <section className="p-5 lg:p-7">
-      <h2 className="text-2xl font-black tracking-tight">
+      <h2>
         Product Facts
       </h2>
 
@@ -429,7 +429,7 @@ function ProductFacts() {
 function MediaGallery() {
   return (
     <section className="p-5 lg:p-6">
-      <h2 className="text-2xl font-black tracking-tight">
+      <h2>
         Media Photos
       </h2>
 
@@ -462,7 +462,7 @@ function BottomGrid() {
   return (
     <section className="mx-auto grid max-w-[1480px] gap-6 px-4 pb-10 lg:grid-cols-3 lg:px-6">
       <section className="p-6">
-        <h2 className="text-2xl font-black tracking-tight">
+        <h2>
           KOFENOT™
         </h2>
 
@@ -481,7 +481,7 @@ function BottomGrid() {
       </section>
 
       <section className="p-6">
-        <h2 className="text-2xl font-black tracking-tight">
+        <h2>
           Download Center
         </h2>
 
@@ -505,7 +505,7 @@ function BottomGrid() {
       </section>
 
       <section className="p-6">
-        <h2 className="text-2xl font-black tracking-tight">
+        <h2>
           Media Contact
         </h2>
 
