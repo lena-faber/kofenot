@@ -446,19 +446,18 @@ function ReviewsSection() {
     </section>
   );
 }
-
 function TestimonialQuotes() {
   return (
-    <div className="mt-6 text-center">
+    <div className="text-center">
       <div className="text-2xl leading-none text-[color:var(--neon)]">
         ★★★★★
       </div>
 
-      <div className="mt-5 grid gap-3 md:grid-cols-4">
+      <div className="mt-5 grid overflow-hidden border border-[rgba(0,255,0,0.18)] md:grid-cols-4">
         {testimonials.map((quote) => (
           <blockquote
             key={quote}
-            className="body-copy border border-[rgba(0,255,0,0.18)] p-4 text-center"
+            className="body-copy flex min-h-[88px] items-center justify-center border-b border-[rgba(0,255,0,0.18)] px-5 py-4 text-center md:border-b-0 md:border-r md:last:border-r-0"
           >
             “{quote}”
           </blockquote>
@@ -467,7 +466,6 @@ function TestimonialQuotes() {
     </div>
   );
 }
-
 function PricingSection({
   openCheckout,
 }: {
