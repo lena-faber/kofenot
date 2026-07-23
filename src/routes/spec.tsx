@@ -36,7 +36,7 @@ const technicalSpecs = [
   ["Branding Area", "2.0 in L x 1.6 in W, front-facing"],
   ["Construction", "Pure mechanical, zero adhesives or magnets"],
   ["Compatibility", "Most laptops, tablets, and phones"],
-  ["Ergonomics", "Posture support and spill deflection"],
+  ["Eronomics", "Posture support and spill deflection"],
   ["Production", "FOB California, OEM-ready"],
   ["IP Status", "Utility patent pending, trademark pending"],
 ];
@@ -66,7 +66,7 @@ function Spec() {
 function HeroSection() {
   return (
     <section className="page-hero">
-      <div className="absolute inset-0 bg-black" />
+      <div className="absolute inset-0 bg-background" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(0,255,0,0.18),transparent_30%),radial-gradient(circle_at_80%_10%,rgba(255,255,255,0.08),transparent_22%)]" />
 
       <div className="page-hero-inner">
