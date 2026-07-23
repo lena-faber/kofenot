@@ -381,9 +381,7 @@ function PricingSection() {
               key={item.title}
               className="neon-border rounded-sm bg-[rgba(0,255,0,0.05)] p-6"
             >
-              <p className="section-kicker">
-                {item.title}
-              </p>
+              <h3>{item.title}</h3>
 
               <div className="mt-3 flex items-end gap-2">
                 <span className="text-5xl font-black neon-text">
@@ -397,9 +395,7 @@ function PricingSection() {
                 )}
               </div>
 
-              <p className="mt-3 text-sm font-black uppercase tracking-[0.12em] text-white">
-                {item.detail}
-              </p>
+              <p className="mt-3">{item.detail}</p>
 
               <a href={item.url} className="mt-6 inline-flex">
                 <Button className="h-11 bg-[var(--neon)] px-6 font-black text-black hover:bg-[var(--neon-dim)]">
@@ -434,14 +430,8 @@ function ProgramsSection() {
 
             <div className="p-6">
               <item.icon className="h-7 w-7 text-[var(--neon)]" />
-
-              <h3 className="mt-5 text-xl font-black uppercase">
-                {item.title}
-              </h3>
-
-              <p className="body-copy mt-3">
-                {item.copy}
-              </p>
+              <h3 className="mt-5">{item.title}</h3>
+              <p className="body-copy mt-3">{item.copy}</p>
             </div>
           </article>
         ))}
@@ -482,13 +472,13 @@ function BrandDeservesBetterSection() {
               bins—and that’s not where your brand belongs.
             </p>
 
-            <p className="body-copy body-copy-strong">
+            <p className="body-copy">
               Put your logo on an original accessory engineered for both
               precision and aesthetics—something people will appreciate and
               use.
             </p>
 
-            <p className="body-copy body-copy-strong">
+            <p className="body-copy">
               Choose thoughtful, original design with a personal touch and a
               story behind it over generic merchandise that ends up filling
               trash bins and polluting the planet.
@@ -506,10 +496,7 @@ function SpecsSection() {
       <div className="page-section-narrow">
         <div className="flex items-center gap-3">
           <Ruler className="h-8 w-8 text-[var(--neon)]" />
-
-          <div>
-            <h2 className="section-title">Buyer Specs</h2>
-          </div>
+          <h2 className="section-title">Buyer Specs</h2>
         </div>
 
         <div className="mt-8 overflow-hidden border border-[rgba(0,255,0,0.22)]">
@@ -520,8 +507,8 @@ function SpecsSection() {
                   key={label}
                   className="border-t border-[rgba(0,255,0,0.18)] first:border-t-0"
                 >
-                  <th className="w-1/3 bg-[rgba(0,255,0,0.06)] px-4 py-4 text-[var(--neon)] sm:px-5">
-                    {label}
+                  <th className="w-1/3 bg-[rgba(0,255,0,0.06)] px-4 py-4 sm:px-5">
+                    <h3>{label}</h3>
                   </th>
 
                   <td className="body-copy px-4 py-4 sm:px-5">
@@ -552,9 +539,7 @@ function MediaKitSection() {
       <div className="mt-10 grid gap-12">
         {mediaKit.map((group) => (
           <div key={group.group}>
-            <p className="section-kicker">
-              {group.group}
-            </p>
+            <h3>{group.group}</h3>
 
             <div className="mt-5 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
               {group.images.map((item) => (
@@ -576,23 +561,17 @@ function ShippingSection() {
           <div>
             <div className="flex items-center gap-3">
               <Truck className="h-8 w-8 text-[var(--neon)]" />
-
               <h2 className="section-title">Shipping &amp; Production</h2>
             </div>
 
             <div className="mt-8 grid gap-4 md:grid-cols-2">
               {shippingSections.map((section) => (
                 <article key={section.title} className="panel rounded-sm p-5">
-                  <h3 className="text-lg font-black uppercase text-[var(--neon)]">
-                    {section.title}
-                  </h3>
+                  <h3>{section.title}</h3>
 
                   <ul className="mt-4 space-y-3">
                     {section.items.map((item) => (
-                      <li
-                        key={item}
-                        className="body-copy flex gap-3"
-                      >
+                      <li key={item} className="body-copy flex gap-3">
                         <PackageCheck className="mt-0.5 h-4 w-4 shrink-0 text-[var(--neon)]" />
                         <span>{item}</span>
                       </li>
@@ -611,9 +590,7 @@ function ShippingSection() {
             />
 
             <div className="p-5">
-              <h3 className="text-xl font-black uppercase text-[var(--neon)]">
-                Need a shipping quote?
-              </h3>
+              <h3>Need a shipping quote?</h3>
 
               <p className="body-copy mt-3">
                 Send quantity, destination, deadline, and packaging needs.
@@ -645,7 +622,7 @@ function FaqSection() {
               key={question}
               className="grid gap-2 py-6 md:grid-cols-[0.8fr_1.2fr]"
             >
-              <h3 className="text-lg font-black uppercase">{question}</h3>
+              <h3>{question}</h3>
               <p className="body-copy">{answer}</p>
             </div>
           ))}
@@ -660,8 +637,7 @@ function FinalCta() {
     <section id="order" className="mx-auto max-w-[1320px] px-4 pb-20 lg:px-6">
       <div className="neon-border bg-[rgba(0,255,0,0.05)] p-8 text-center neon-glow md:p-12">
         <BriefcaseBusiness className="mx-auto h-9 w-9 text-[var(--neon)]" />
-
-        <p className="section-kicker mt-5">Order</p>
+        <h3 className="mt-5">Order</h3>
 
         <h2 className="section-title">Ready to order KOFENOT™ wholesale?</h2>
 
