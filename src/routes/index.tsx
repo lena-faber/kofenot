@@ -121,10 +121,9 @@ const howItWorksSteps = [
 ];
 
 const testimonials = [
-  "Why doesn't Apple include this?",
-  "I immediately bought one.",
-  "This is genius.",
-  "I've never seen anything like this.",
+  "I can take it with me everywhere. And I like the sound.",
+  "It's a greate lifting angle still easy to type.",
+  "It's two things in one: a stand and protection for your laptop.",
 ];
 
 const faq = [
@@ -454,7 +453,7 @@ function TestimonialQuotes() {
         ★★★★★
       </div>
 
-      <div className="mt-5 grid overflow-hidden border border-[rgba(0,255,0,0.18)] md:grid-cols-4">
+      <div className="mt-5 grid overflow-hidden border border-[rgba(0,255,0,0.18)] md:grid-cols-3">
         {testimonials.map((quote) => (
           <blockquote
             key={quote}
