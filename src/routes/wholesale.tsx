@@ -373,7 +373,7 @@ function PricingSection() {
   return (
     <section id="pricing" className="section-band">
       <div className="page-section">
-        <h2 className="section-title">Wholesale Pricing</h2>
+        <h2>Wholesale Pricing</h2>
 
         <div className="mt-8 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
           {pricing.map((item) => (
@@ -414,7 +414,7 @@ function PricingSection() {
 function ProgramsSection() {
   return (
     <section id="programs" className="page-section">
-      <h2 className="section-title">Programs &amp; Use Cases</h2>
+      <h2>Programs &amp; Use Cases</h2>
 
       <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
         {programs.map((item) => (
@@ -446,7 +446,7 @@ function BrandDeservesBetterSection() {
       <div className="page-section">
         <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
           <div>
-            <h2 className="section-title">
+            <h2>
               YOUR BRAND DESERVES BETTER THAN{" "}
               <span className="neon-text">THROWAWAY MERCH</span>
             </h2>
@@ -496,7 +496,7 @@ function SpecsSection() {
       <div className="page-section-narrow">
         <div className="flex items-center gap-3">
           <Ruler className="h-8 w-8 text-[var(--neon)]" />
-          <h2 className="section-title">Buyer Specs</h2>
+          <h2>Buyer Specs</h2>
         </div>
 
         <div className="mt-8 overflow-hidden border border-[rgba(0,255,0,0.22)]">
@@ -527,7 +527,7 @@ function SpecsSection() {
 function MediaKitSection() {
   return (
     <section id="media" className="page-section">
-      <h2 className="section-title">
+      <h2>
         Product images for buyers and partners
       </h2>
 
@@ -561,7 +561,7 @@ function ShippingSection() {
           <div>
             <div className="flex items-center gap-3">
               <Truck className="h-8 w-8 text-[var(--neon)]" />
-              <h2 className="section-title">Shipping &amp; Production</h2>
+              <h2>Shipping &amp; Production</h2>
             </div>
 
             <div className="mt-8 grid gap-4 md:grid-cols-2">
@@ -614,7 +614,7 @@ function FaqSection() {
   return (
     <section id="faq" className="page-section">
       <div className="page-section-narrow">
-        <h2 className="section-title">FAQ</h2>
+        <h2>FAQ</h2>
 
         <div className="mt-7 divide-y divide-[rgba(0,255,0,0.18)] border-y border-[rgba(0,255,0,0.18)]">
           {faq.map(([question, answer]) => (
@@ -639,7 +639,7 @@ function FinalCta() {
         <BriefcaseBusiness className="mx-auto h-9 w-9 text-[var(--neon)]" />
         <h3 className="mt-5">Order</h3>
 
-        <h2 className="section-title">Ready to order KOFENOT™ wholesale?</h2>
+        <h2>Ready to order KOFENOT™ wholesale?</h2>
 
         <p className="body-copy mx-auto mt-4 max-w-2xl">
           Retail-ready units are $8 each with a 30-unit minimum. Bare bulk
