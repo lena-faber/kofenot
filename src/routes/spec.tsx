@@ -71,7 +71,7 @@ function HeroSection() {
 
       <div className="page-hero-inner">
         <div className="max-w-4xl">
-          <p className="section-kicker">Spec Sheet 2026</p>
+          <h3>Spec Sheet 2026</h3>
           <h1 className="hero-title">KOFENOT TECHNICAL & COMMERCIAL</h1>
           <p className="hero-copy body-copy">
             One-page reference for procurement, promotional agencies, OEM
@@ -134,13 +134,13 @@ function ProcurementSection() {
 function TechnicalSpecsPanel() {
   return (
     <section className="panel rounded-sm p-6">
-      <h2 className="section-kicker border-b border-[rgba(0,255,0,0.25)] pb-2">
+      <h3 className="border-b border-[rgba(0,255,0,0.25)] pb-2">
         Technical Specifications
-      </h2>
+      </h3>
       <dl className="mt-4 divide-y divide-[rgba(0,255,0,0.1)]">
         {technicalSpecs.map(([key, value]) => (
           <div key={key} className="grid gap-2 py-3 sm:grid-cols-[140px,1fr]">
-            <dt className="section-kicker">{key}</dt>
+            <dt><h3>{key}</h3></dt>
             <dd className="body-copy">{value}</dd>
           </div>
         ))}
@@ -152,9 +152,9 @@ function TechnicalSpecsPanel() {
 function PricingTiersPanel() {
   return (
     <section className="panel rounded-sm p-6">
-      <h2 className="section-kicker border-b border-[rgba(0,255,0,0.25)] pb-2">
+      <h3 className="border-b border-[rgba(0,255,0,0.25)] pb-2">
         Pricing Tiers
-      </h2>
+      </h3>
       <div className="mt-4 grid gap-3">
         {pricingTiers.map(([name, price, description]) => (
           <article
@@ -163,9 +163,7 @@ function PricingTiersPanel() {
           >
             <div>
               <h3>{name}</h3>
-              <p className="body-copy mt-1">
-                {description}
-              </p>
+              <p className="body-copy mt-1">{description}</p>
             </div>
             <div className="neon-text text-xl font-black">{price}</div>
           </article>
