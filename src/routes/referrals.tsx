@@ -76,10 +76,7 @@ const textareaClass = [
   "outline-none focus:border-[color:var(--neon)]",
 ].join(" ");
 
-const labelClass = [
-  "grid gap-2",
-  "section-kicker",
-].join(" ");
+const labelClass = "grid gap-2";
 
 function Referrals() {
   return (
@@ -106,7 +103,7 @@ function HeroSection() {
 
       <div className="page-hero-inner">
         <div className="max-w-4xl">
-          <p className="section-kicker">Referral partner program</p>
+          <h3>Referral partner program</h3>
           <h1 className="hero-title">INTRODUCE US</h1>
           <div className="hero-copy body-copy space-y-4">
             <p>
@@ -114,7 +111,7 @@ function HeroSection() {
               gifts, trade shows, employee welcome kits, coffee shops, coworking
               spaces, conferences, or promotional campaigns?
             </p>
-            <p className="section-kicker">Introduce us.</p>
+            <h3>Introduce us.</h3>
             <p>Receive 10% of the first order, capped at $5,000.</p>
           </div>
           <a href="#contact" className="mt-8 inline-block">
@@ -131,12 +128,12 @@ function HeroSection() {
 function HowItWorksSection() {
   return (
     <section className="page-section">
-      <p className="section-kicker">How it works</p>
+      <h3>How it works</h3>
       <h2 className="section-title">A warm introduction. We handle the rest.</h2>
       <div className="mt-10 grid gap-4 md:grid-cols-3">
         {steps.map(([label, text]) => (
           <article key={label} className="panel panel-hover rounded-sm p-7">
-            <div className="section-kicker">{label}</div>
+            <h3>{label}</h3>
             <p className="body-copy mt-6">{text}</p>
           </article>
         ))}
@@ -149,15 +146,13 @@ function IntroductionsSection() {
   return (
     <section className="section-band">
       <div className="page-section">
-        <p className="section-kicker">Ideal introductions</p>
+        <h3>Ideal introductions</h3>
         <h2 className="section-title">High-value buyers and channels.</h2>
         <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {introductions.map((item) => (
             <article key={item.title} className="panel panel-hover rounded-sm p-6">
               <item.icon className="h-7 w-7 text-[color:var(--neon)]" />
-              <h3 className="mt-5 text-xl font-black uppercase leading-tight">
-                {item.title}
-              </h3>
+              <h3 className="mt-5">{item.title}</h3>
             </article>
           ))}
         </div>
@@ -176,7 +171,7 @@ function FaqSection() {
             key={question}
             className="grid gap-2 py-6 md:grid-cols-[.85fr_1.15fr]"
           >
-            <h3 className="text-lg font-black uppercase">Q: {question}</h3>
+            <h3>Q: {question}</h3>
             <p className="body-copy">A: {answer}</p>
           </div>
         ))}
@@ -239,11 +234,11 @@ function ReferralForm() {
     >
       <div className="grid gap-5 md:grid-cols-2">
         <label className={labelClass}>
-          Name
+          <h3>Name</h3>
           <input name="name" required className={inputClass} />
         </label>
         <label className={labelClass}>
-          Email
+          <h3>Email</h3>
           <input
             name="email"
             type="email"
@@ -254,12 +249,12 @@ function ReferralForm() {
       </div>
 
       <label className={`mt-5 ${labelClass}`}>
-        Company
+        <h3>Company</h3>
         <input name="company" className={inputClass} />
       </label>
 
       <label className={`mt-5 ${labelClass}`}>
-        Message
+        <h3>Message</h3>
         <textarea
           name="message"
           required
