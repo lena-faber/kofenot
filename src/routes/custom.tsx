@@ -128,7 +128,7 @@ function HeroSection() {
       <div className="page-hero-inner">
         <div className="max-w-3xl">
           <h3>Custom logo programs</h3>
-          <h1 className="hero-title">
+          <h1>
             PUT YOUR LOGO ON
             <br />
             <span className="neon-text">KOFENOT</span>
@@ -166,7 +166,7 @@ function AudiencesSection() {
   return (
     <section className="page-section">
       <h3>Put your logo on KOFENOT</h3>
-      <h2 className="section-title">A branded desk tool people actually use.</h2>
+      <h2>A branded desk tool people actually use.</h2>
       <p className="body-copy mt-5 max-w-3xl">
         KOFENOT gives your logo a daily-use surface on a compact laptop wedge
         built for coffee-shop work, events, gifting, and shared workspaces.
@@ -189,7 +189,7 @@ function ExamplesSection() {
     <section id="examples" className="section-band">
       <div className="page-section">
         <h3>Custom design examples</h3>
-        <h2 className="section-title">Coffee, expo, corporate, coworking.</h2>
+        <h2>Coffee, expo, corporate, coworking.</h2>
         <div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
           {examples.map((item) => (
             <ImageCard key={item.label} item={item} />
@@ -212,7 +212,7 @@ function ProgramScopeSection() {
       </div>
       <div className="flex flex-col justify-center">
         <h3>Custom program scope</h3>
-        <h2 className="section-title">
+        <h2>
           Built for promotional product companies and brand teams.
         </h2>
         <div className="mt-6 grid gap-3">
@@ -231,8 +231,8 @@ function ProgramScopeSection() {
 function PricingSection() {
   return (
     <section id="pricing" className="page-section-narrow">
-      <h2 className="section-title">
-        Custom <span className="neon-text">Pricing</span>
+      <h2>
+      Pricing
       </h2>
       <div className="mt-8 overflow-hidden border border-[rgba(0,255,0,0.22)]">
         <table className="responsive-table text-left text-sm sm:text-lg">
@@ -270,7 +270,7 @@ function PricingSection() {
 function FaqSection() {
   return (
     <section id="faq" className="page-section-narrow">
-      <h2 className="section-title">FAQ</h2>
+      <h2>FAQ</h2>
       <div className="mt-7 divide-y divide-[rgba(0,255,0,0.18)] border-y border-[rgba(0,255,0,0.18)]">
         {faq.map(([question, answer]) => (
           <div
@@ -292,7 +292,7 @@ function RequestSection() {
       <div className="neon-border bg-[rgba(0,255,0,0.05)] p-8 text-center neon-glow md:p-12">
         <BriefcaseBusiness className="mx-auto h-9 w-9 text-[color:var(--neon)]" />
         <h3 className="mt-5">Request quote</h3>
-        <h2 className="section-title">Tell us your logo, quantity, and timeline.</h2>
+        <h2>Tell us your logo, quantity, and timeline.</h2>
         <p className="body-copy mx-auto mt-4 max-w-2xl">
           We will quote print, packaging, delivery, and merchandising options
           based on your program.
