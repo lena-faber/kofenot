@@ -36,7 +36,7 @@ const technicalSpecs = [
   ["Branding Area", "2.0 in L x 1.6 in W, front-facing"],
   ["Construction", "Pure mechanical, zero adhesives or magnets"],
   ["Compatibility", "Most laptops, tablets, and phones"],
-  ["Eronomics", "Posture support and spill deflection"],
+  ["Ergonomics", "Posture support and spill deflection"],
   ["Production", "FOB California, OEM-ready"],
   ["IP Status", "Utility patent pending, trademark pending"],
 ];
