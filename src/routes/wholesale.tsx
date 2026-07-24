@@ -658,7 +658,7 @@ function FinalCta() {
   rel="noopener noreferrer"
 >
             <Button className="h-12 bg-[var(--neon)] px-8 font-black text-black hover:bg-[var(--neon-dim)]">
-              Buy Retail Wholesale
+              Buy Wholesale
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
           </a>
