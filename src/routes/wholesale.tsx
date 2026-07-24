@@ -28,8 +28,8 @@ import retailPackDad from "@/assets/kofenot-retail-pack-01.jpg";
 import bareProduct from "@/assets/kofenot-retail-pack-02.jpg";
 import retailPackSipSafeFront from "@/assets/kofenot-retail-pack-03.jpg";
 import retailPackPlanet from "@/assets/kofenot-retail-pack-04.jpg";
-import yourLogoHere from "@/assets/kofenot-your-logo-here.jpeg";
-import customLogoDisplay from "@/assets/kofenot-your.jpg";
+
+import yourLogoHere from "@/assets/kofenot-your.jpg";
 import francisco from "@/assets/i-love-sf.png";
 import spillSafeProduct from "@/assets/spill-safe.png";
 
