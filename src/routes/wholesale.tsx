@@ -457,7 +457,7 @@ function BrandDeservesBetterSection() {
         THROWAWAY
       </h2>
 
-      <div className="mt-8 max-w-[760px] space-y-6">
+      <div className="mt-6 max-w-[760px] space-y-4">
         <p>
           Your brand, printed on a cheap hat or T-shirt no one wants to be
           seen wearing, ends up in thrift stores—which may not align with
