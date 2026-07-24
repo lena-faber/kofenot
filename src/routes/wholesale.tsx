@@ -445,9 +445,9 @@ function ProgramsSection() {
 }
 function BrandDeservesBetterSection() {
   return (
-    <section className="border-t border-[rgba(0,255,0,0.22)]">
-      <div className="mx-auto grid max-w-[1760px] lg:grid-cols-2">
-        <div className="flex flex-col justify-center px-6 py-14 lg:px-8 lg:py-20">
+    <section className="border-t border-[rgba(0,255,0,0.22)] py-14 lg:py-20">
+      <div className="mx-auto grid max-w-[1760px] items-center lg:grid-cols-2">
+        <div className="flex flex-col px-6 lg:px-8">
           <h2>
             YOUR BRAND.
             <br />
@@ -466,8 +466,8 @@ function BrandDeservesBetterSection() {
             </p>
 
             <p>
-              Choose a thoughtfully designed accessory, engineered for precision
-              and aesthetics, with a story behind it, over generic merchandise
+              Choose a thoughtfully designed accessory with a story behind it,
+              engineered for precision and aesthetics, over generic merchandise
               that pollutes the planet.
             </p>
           </div>
@@ -481,11 +481,11 @@ function BrandDeservesBetterSection() {
           </a>
         </div>
 
-        <div className="relative hidden overflow-hidden lg:block">
+        <div className="hidden h-full items-center justify-center overflow-hidden lg:flex">
           <img
             src={spillSafeProduct}
             alt="KOFENOT Spill Safe"
-            className="absolute inset-0 h-full w-full object-contain object-left"
+            className="max-h-full w-auto max-w-full object-contain"
           />
         </div>
       </div>
