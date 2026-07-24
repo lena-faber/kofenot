@@ -446,7 +446,7 @@ function ProgramsSection() {
 function BrandDeservesBetterSection() {
   return (
     <section className="border-t border-[rgba(0,255,0,0.22)]">
-      <div className="mx-auto grid max-w-[1760px] items-stretch lg:grid-cols-2">
+      <div className="mx-auto grid max-w-[1760px] lg:grid-cols-2">
         <div className="flex flex-col justify-center px-6 py-14 lg:px-8 lg:py-20">
           <h2>
             YOUR BRAND.
@@ -481,13 +481,13 @@ function BrandDeservesBetterSection() {
           </a>
         </div>
 
-  <div className="hidden lg:flex items-center">
-  <img
-    src={spillSafeProduct}
-    alt="KOFENOT Spill Safe"
-    className="w-full max-h-[520px] object-contain object-left"
-  />
-</div>
+        <div className="relative hidden overflow-hidden lg:block">
+          <img
+            src={spillSafeProduct}
+            alt="KOFENOT Spill Safe"
+            className="absolute inset-0 h-full w-full object-contain object-left"
+          />
+        </div>
       </div>
     </section>
   );
