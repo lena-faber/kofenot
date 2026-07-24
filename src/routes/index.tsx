@@ -588,9 +588,7 @@ function ProductDetailsSection() {
                   key={label}
                   className="grid gap-2 border-b border-[rgba(0,255,0,0.12)] py-5 last:border-b-0 sm:grid-cols-[190px_1fr]"
                 >
-                  <div className="text-sm font-black uppercase tracking-[0.08em] text-white">
-                    {label}
-                  </div>
+                  <h3>{label}</h3>
 
                   <div className="body-copy">
                     {value}
