@@ -445,51 +445,62 @@ function ProgramsSection() {
 
 function BrandDeservesBetterSection() {
   return (
-    <section className="section-band">
-      <div className="page-section">
-        <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
-          <div>
-            <h2>
-              YOUR BRAND DESERVES BETTER THAN{" "}
-              <span className="neon-text">THROWAWAY MERCH</span>
-            </h2>
+   <section className="border-t border-[rgba(0,255,0,0.22)]">
+  <div className="mx-auto grid max-w-[1760px] lg:grid-cols-[1fr_auto]">
+    <div className="flex flex-col justify-center px-6 py-14 lg:px-8 lg:py-20">
+      <h2>
+        YOUR BRAND
+        <br />
+        DESERVES BETTER
+        <br />
+        THAN THROWAWAY
+        <br />
+        MERCH
+      </h2>
 
-            <a href={quoteEmail} className="mt-2 inline-flex">
-              <Button className="h-12 bg-[var(--neon)] px-7 font-black text-black hover:bg-[var(--neon-dim)]">
-                Request branding/packaging
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-            </a>
-          </div>
+      <div className="mt-8 max-w-[760px] space-y-6">
+        <p>
+          Your brand, printed on a cheap hat or T-shirt no one wants to be
+          seen wearing, ends up in thrift stores—which may not align with
+          your brand image.
+        </p>
 
-          <div className="space-y-5">
-            <p className="body-copy">
-              Your brand, printed on a cheap hat or T-shirt no one wants to be
-              seen wearing, ends up in thrift stores—which may not align with
-              your brand image.
-            </p>
+        <p>
+          More expensive electronic merchandise with cables that don’t fit
+          anyone’s devices gets thrown directly into trade-show trash
+          bins—and that’s not where your brand belongs.
+        </p>
 
-            <p className="body-copy">
-              More expensive electronic merchandise with cables that don’t fit
-              anyone’s devices gets thrown directly into trade-show trash
-              bins—and that’s not where your brand belongs.
-            </p>
+        <p>
+          Put your logo on an original accessory engineered for both
+          precision and aesthetics—something people will appreciate and use.
+        </p>
 
-            <p className="body-copy">
-              Put your logo on an original accessory engineered for both
-              precision and aesthetics—something people will appreciate and
-              use.
-            </p>
-
-            <p className="body-copy">
-              Choose thoughtful, original design with a personal touch and a
-              story behind it over generic merchandise that ends up filling
-              trash bins and polluting the planet.
-            </p>
-          </div>
-        </div>
+        <p>
+          Choose thoughtful, original design with a personal touch and a
+          story behind it over generic merchandise that ends up filling
+          trash bins and polluting the planet.
+        </p>
       </div>
-    </section>
+
+      <a
+        href="#contact"
+        className="mt-10 inline-flex w-fit items-center gap-8 bg-[#00ff00] px-8 py-4 font-bold uppercase tracking-[0.12em] text-black"
+      >
+        Request Branding / Packaging
+        <span aria-hidden="true">→</span>
+      </a>
+    </div>
+
+    <div className="hidden h-full min-h-[720px] items-stretch justify-end lg:flex">
+      <img
+        src="/images/spill-safe.png"
+        alt="KOFENOT Spill Safe laptop wedge"
+        className="block h-full w-auto max-w-none object-contain object-right"
+      />
+    </div>
+  </div>
+</section>
   );
 }
 
