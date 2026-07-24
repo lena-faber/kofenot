@@ -447,7 +447,8 @@ function ProgramsSection() {
 function BrandDeservesBetterSection() {
   return (
     <section className="border-t border-[rgba(0,255,0,0.22)] py-14 lg:py-20">
-      <div className="mx-auto grid max-w-[1760px] lg:grid-cols-2">
+      <div className="mx-auto max-w-[1320px] px-6 lg:px-8">
+  <div className="grid lg:grid-cols-2">
         <div className="flex flex-col px-6 lg:px-8">
           <h2>
             YOUR BRAND.
@@ -489,6 +490,7 @@ function BrandDeservesBetterSection() {
           />
         </div>
       </div>
+          </div>
     </section>
   );
 }
