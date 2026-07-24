@@ -452,11 +452,9 @@ function BrandDeservesBetterSection() {
       <h2>
         YOUR BRAND
         <br />
-        DESERVES BETTER
+        WON'T BE
         <br />
-        THAN THROWAWAY
-        <br />
-        MERCH
+        THROWAWAY
       </h2>
 
       <div className="mt-8 max-w-[760px] space-y-6">
