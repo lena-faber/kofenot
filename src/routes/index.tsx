@@ -602,7 +602,7 @@ function ProductDetailsSection() {
         </div>
 
         <Reveal>
-          <div className="overflow-hidden rounded-sm bg-white">
+          <div>
             <img
               src={spillSafeProduct}
               alt="KOFENOT™ SPILL SAFE laptop wedge"
