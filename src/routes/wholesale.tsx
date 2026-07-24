@@ -467,7 +467,7 @@ function BrandDeservesBetterSection() {
             </p>
 
             <p className="font-bold">
-              Help keep the <span className="text-[#00ff00]">planet cleaner</span> by choosing a thoughtfully designed accessory with a story, crafted for precision
+              Help keep the <span className="text-[#00ff00]">planet cleaner</span> by choosing a <span className="text-[#00ff00]">thoughtfully designed</span> accessory with a story, crafted for precision
               and aesthetics, instead of generic merchandise that pollutes it.
             </p>
           </div>
