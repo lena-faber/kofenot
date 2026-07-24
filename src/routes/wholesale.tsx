@@ -66,7 +66,7 @@ const pricing = [
     price: "$8",
     note: "each",
     detail: "30-unit minimum • Individually packaged • Ready to sell",
-    cta: "Buy Retail Wholesale",
+    cta: "Buy Retail",
     url: retailPackCheckoutUrl,
   },
   {
@@ -332,7 +332,7 @@ function HeroSection() {
           <div className="mt-8 flex flex-wrap gap-3">
             <a href="#pricing">
               <Button className="h-12 bg-[var(--neon)] px-7 font-black text-black hover:bg-[var(--neon-dim)]">
-                Buy Wholesale
+                Buy Retail
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </a>
