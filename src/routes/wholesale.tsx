@@ -443,52 +443,55 @@ function ProgramsSection() {
     </section>
   );
 }
+function BrandDeservesBetterSection() {
+  return (
+    <section className="border-t border-[rgba(0,255,0,0.22)]">
+      <div className="mx-auto grid max-w-[1760px] items-stretch lg:grid-cols-2">
+        <div className="flex flex-col justify-center px-6 py-14 lg:px-8 lg:py-20">
+          <h2>
+            YOUR BRAND.
+            <br />
+            ON EVERY DESK.
+          </h2>
 
-<section className="border-t border-[rgba(0,255,0,0.22)]">
-  <div className="mx-auto grid max-w-[1760px] items-stretch lg:grid-cols-2">
-    <div className="flex flex-col justify-center px-6 py-14 lg:px-8 lg:py-20">
-      <h2>
-        YOUR BRAND.
-        <br />
-        ON EVERY DESK.
-      </h2>
+          <div className="mt-2 max-w-[760px] space-y-6">
+            <p>
+              Too many branded hats and T-shirts end up in thrift stores instead
+              of reaching the people you wanted to reach.
+            </p>
 
-      <div className="mt-2 max-w-[760px] space-y-6">
-        <p>
-          Too many branded hats and T-shirts end up in thrift stores instead
-          of reaching the people you wanted to reach.
-        </p>
+            <p>
+              Electronic gadgets often come with incompatible ports and end up
+              in the trash right at the trade show.
+            </p>
 
-        <p>
-          Electronic gadgets often come with incompatible ports and end up
-          in the trash right at the trade show.
-        </p>
+            <p>
+              Choose a thoughtfully designed accessory, engineered for precision
+              and aesthetics, with a story behind it, over generic merchandise
+              that pollutes the planet.
+            </p>
+          </div>
 
-        <p>
-          Choose a thoughtfully designed accessory, engineered for precision
-          and aesthetics, with a story behind it, over generic merchandise
-          that pollutes the planet.
-        </p>
+          <a
+            href={quoteEmail}
+            className="mt-10 inline-flex w-fit items-center gap-8 bg-[#00ff00] px-8 py-4 font-bold uppercase tracking-[0.12em] text-black"
+          >
+            Request Branding / Packaging
+            <span aria-hidden="true">→</span>
+          </a>
+        </div>
+
+        <div className="relative hidden min-h-[620px] lg:block">
+          <img
+            src={spillSafeProduct}
+            alt="KOFENOT Spill Safe"
+            className="absolute inset-0 h-full w-full object-contain object-left"
+          />
+        </div>
       </div>
-
-      <a
-        href="#contact"
-        className="mt-10 inline-flex w-fit items-center gap-8 bg-[#00ff00] px-8 py-4 font-bold uppercase tracking-[0.12em] text-black"
-      >
-        Request Branding / Packaging
-        <span aria-hidden="true">→</span>
-      </a>
-    </div>
-
-    <div className="relative hidden lg:block">
-      <img
-        src={spillSafeProduct}
-        alt="KOFENOT Spill Safe"
-        className="absolute inset-0 h-full w-full object-contain object-left"
-      />
-    </div>
-  </div>
-</section>
+    </section>
+  );
+}
 
 function SpecsSection() {
   return (
