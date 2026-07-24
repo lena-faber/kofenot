@@ -372,7 +372,7 @@ function SectionNav() {
 
 function BrandDeservesBetterSection() {
   return (
-    <section className="border-t border-[rgba(0,255,0,0.22)] py-14 lg:py-20">
+    <section className="border-t border-[rgba(0,255,0,0.22)] py-10 lg:py-14">
       <div className="mx-auto max-w-[1320px] px-6 lg:px-8">
   <div className="grid lg:grid-cols-2">
         <div className="flex flex-col px-6 lg:px-8">
