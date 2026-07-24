@@ -14,13 +14,10 @@ const navLinks = [
 ] as const;
 
 const footerLinks = [
-  { label: "About", href: "/#why" },
   { label: "Contact", href: "mailto:info@kofenot.com" },
-  { label: "Patent & Trademark", href: "/spec" },
   { label: "Shipping", href: "/#faq" },
-  { label: "Returns", href: "/#faq" },
-  {
-    label: "Privacy",
+  { label: "Terms & Conditions", href: "/#faq" },
+  { label: "Privacy",
     href: "mailto:info@kofenot.com?subject=KOFENOT%20Privacy",
   },
 ];
