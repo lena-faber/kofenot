@@ -452,7 +452,7 @@ function BrandDeservesBetterSection() {
           <h2>
             YOUR BRAND.
             <br />
-            ON EVERY DESK.
+            LESS WASTE.
           </h2>
 
           <div className="mt-2 max-w-[760px] space-y-6">
