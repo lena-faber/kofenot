@@ -467,9 +467,7 @@ function BrandDeservesBetterSection() {
             </p>
 
             <p className="font-bold">
-              Choose a thoughtfully designed accessory with a story behind it,
-              engineered for precision and aesthetics, over generic merchandise
-              that pollutes the planet.
+              Help keep the planet cleaner by choosing a thoughtfully designed accessory with a story, crafted for precision and aesthetics, instead of generic merchandise that pollutes it.
             </p>
           </div>
 
