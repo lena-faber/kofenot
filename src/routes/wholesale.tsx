@@ -648,24 +648,18 @@ function FinalCta() {
           $2,000. Custom logo, private label, licensing, and distribution are
           quoted separately.
         </p>
-
-        <div className="mt-7 flex flex-wrap justify-center gap-3">
-          <a href={retailPackCheckoutUrl} >
-            <Button className="h-12 bg-[var(--neon)] px-8 font-black text-black hover:bg-[var(--neon-dim)]">
-              Buy Retail Wholesale
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
-          </a>
-
-          <a href={quoteEmail} target="_blank" rel="noopener noreferrer"></a>
-            
-            <Button
-              variant="outline"
-              className="h-12 border-[rgba(0,255,0,0.55)] px-8 hover:bg-[rgba(0,255,0,0.08)] hover:text-[var(--neon)]"
-            >
-              Request Bulk / Custom Quote
-            </Button>
-          </a>
+<a
+  href={quoteEmail}
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <Button
+    variant="outline"
+    className="h-12 border-[rgba(0,255,0,0.55)] px-8 hover:bg-[rgba(0,255,0,0.08)] hover:text-[var(--neon)]"
+  >
+    Request Bulk / Custom Quote
+  </Button>
+</a>
         </div>
       </div>
     </section>
