@@ -444,10 +444,8 @@ function ProgramsSection() {
   );
 }
 
-function BrandDeservesBetterSection() {
-  return (
-   <section className="border-t border-[rgba(0,255,0,0.22)]">
-  <div className="mx-auto grid max-w-[1760px] lg:grid-cols-2">
+<section className="border-t border-[rgba(0,255,0,0.22)]">
+  <div className="mx-auto grid max-w-[1760px] items-stretch lg:grid-cols-2">
     <div className="flex flex-col justify-center px-6 py-14 lg:px-8 lg:py-20">
       <h2>
         YOUR BRAND.
@@ -457,15 +455,19 @@ function BrandDeservesBetterSection() {
 
       <div className="mt-2 max-w-[760px] space-y-6">
         <p>
-          Too many branded hats and T-shirts end up in thrift stores instead of reaching the people you wanted to reach..
+          Too many branded hats and T-shirts end up in thrift stores instead
+          of reaching the people you wanted to reach.
         </p>
 
         <p>
-          Electronic gadgets often come with incompatible ports and end up in the trash right at the trade show.
+          Electronic gadgets often come with incompatible ports and end up
+          in the trash right at the trade show.
         </p>
 
         <p>
-     Choose a thoughtfully designed accessory, engineered for precision and aesthetics, with a story behind it, over generic merchandise that pollutes the planet.
+          Choose a thoughtfully designed accessory, engineered for precision
+          and aesthetics, with a story behind it, over generic merchandise
+          that pollutes the planet.
         </p>
       </div>
 
@@ -478,17 +480,15 @@ function BrandDeservesBetterSection() {
       </a>
     </div>
 
-    <div className="hidden lg:flex min-h-[720px] items-center justify-center">
-  <img
-    src={spillSafeProduct}
-    alt="KOFENOT Spill Safe"
-    className="max-h-[720px] h-full w-auto"
-  />
-</div>
+    <div className="relative hidden lg:block">
+      <img
+        src={spillSafeProduct}
+        alt="KOFENOT Spill Safe"
+        className="absolute inset-0 h-full w-full object-contain object-left"
+      />
+    </div>
   </div>
 </section>
-  );
-}
 
 function SpecsSection() {
   return (
