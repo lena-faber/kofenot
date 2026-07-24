@@ -456,7 +456,7 @@ function BrandDeservesBetterSection() {
 
             <a href={quoteEmail} className="mt-2 inline-flex">
               <Button className="h-12 bg-[var(--neon)] px-7 font-black text-black hover:bg-[var(--neon-dim)]">
-                Put Your Logo Here
+                Request branding/packaging
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </a>
