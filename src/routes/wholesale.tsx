@@ -451,7 +451,7 @@ function BrandDeservesBetterSection() {
   <div className="grid lg:grid-cols-2">
         <div className="flex flex-col px-6 lg:px-8">
           <h2>
-            BRAND. NO THROWAWAYS.
+            BRAND. <br/>NO THROWAWAYS.
           </h2>
 
           <div className="mt-2 max-w-[760px] space-y-6">
