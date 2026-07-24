@@ -116,13 +116,6 @@ export function SiteFooter() {
   return (
     <footer className="mt-20 overflow-x-hidden border-t border-[rgba(0,255,0,0.18)]">
       <div className="mx-auto max-w-[1320px] px-4 py-10 text-center lg:px-6">
-        <p className="body-copy">
-          <strong>
-            © 2026 KOFENOT: Make Your Laptop Coffee Shop-Friendly™.
-          </strong>{" "}
-          Patent Pending. Designed in California.
-        </p>
-
         <nav className="mt-5 flex flex-wrap justify-center gap-x-6 gap-y-2">
           {footerLinks.map((link) => (
             <a
@@ -135,8 +128,8 @@ export function SiteFooter() {
           ))}
         </nav>
 
-        <p className="body-copy mt-4">
-          RoHS Compliant | Patent Pending | Trademark
+        <p>
+          © 2026 KOFENOT: Make Your Laptop Coffee Shop-Friendly™ | Patent Pending | Trademark
         </p>
       </div>
     </footer>
