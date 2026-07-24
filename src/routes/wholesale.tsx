@@ -370,6 +370,55 @@ function SectionNav() {
   );
 }
 
+function BrandDeservesBetterSection() {
+  return (
+    <section className="border-t border-[rgba(0,255,0,0.22)] py-14 lg:py-20">
+      <div className="mx-auto max-w-[1320px] px-6 lg:px-8">
+  <div className="grid lg:grid-cols-2">
+        <div className="flex flex-col px-6 lg:px-8">
+          <h2>
+            BRAND. <br/>NO THROWAWAYS.
+          </h2>
+
+          <div className="mt-2 max-w-[760px] space-y-6">
+            <p>
+              Too many branded hats and T-shirts end up in thrift stores instead
+              of reaching the people you wanted to reach.
+            </p>
+
+            <p>
+              Electronic gadgets often come with incompatible ports and end up
+              in the trash right at the trade show.
+            </p>
+
+            <p className="font-bold">
+              Help keep the <span className="text-[#00ff00]">planet cleaner</span> with a <span className="text-[#00ff00]">thoughtfully crafted accessory </span>
+              instead of generic merchandise that often ends up in the trash.
+            </p>
+          </div>
+
+          <a
+            href={quoteEmail}
+            className="mt-10 inline-flex w-fit items-center gap-8 bg-[#00ff00] px-8 py-4 font-bold uppercase tracking-[0.12em] text-black"
+          >
+            Request Branding / Packaging
+            <span aria-hidden="true">→</span>
+          </a>
+        </div>
+
+        <div className="relative hidden overflow-hidden lg:block">
+          <img
+            src={spillSafeProduct}
+            alt="KOFENOT Spill Safe"
+            className="absolute left-1/2 top-1/2 h-full w-auto max-w-full -translate-x-1/2 -translate-y-1/2 object-contain"
+          />
+        </div>
+      </div>
+          </div>
+    </section>
+  );
+}
+
 function PricingSection() {
   return (
     <section id="pricing" className="section-band">
@@ -440,55 +489,6 @@ function ProgramsSection() {
           </article>
         ))}
       </div>
-    </section>
-  );
-}
-
-function BrandDeservesBetterSection() {
-  return (
-    <section className="border-t border-[rgba(0,255,0,0.22)] py-14 lg:py-20">
-      <div className="mx-auto max-w-[1320px] px-6 lg:px-8">
-  <div className="grid lg:grid-cols-2">
-        <div className="flex flex-col px-6 lg:px-8">
-          <h2>
-            BRAND. <br/>NO THROWAWAYS.
-          </h2>
-
-          <div className="mt-2 max-w-[760px] space-y-6">
-            <p>
-              Too many branded hats and T-shirts end up in thrift stores instead
-              of reaching the people you wanted to reach.
-            </p>
-
-            <p>
-              Electronic gadgets often come with incompatible ports and end up
-              in the trash right at the trade show.
-            </p>
-
-            <p className="font-bold">
-              Help keep the <span className="text-[#00ff00]">planet cleaner</span> with a <span className="text-[#00ff00]">thoughtfully crafted accessory </span>
-              instead of generic merchandise that often ends up in the trash.
-            </p>
-          </div>
-
-          <a
-            href={quoteEmail}
-            className="mt-10 inline-flex w-fit items-center gap-8 bg-[#00ff00] px-8 py-4 font-bold uppercase tracking-[0.12em] text-black"
-          >
-            Request Branding / Packaging
-            <span aria-hidden="true">→</span>
-          </a>
-        </div>
-
-        <div className="relative hidden overflow-hidden lg:block">
-          <img
-            src={spillSafeProduct}
-            alt="KOFENOT Spill Safe"
-            className="absolute left-1/2 top-1/2 h-full w-auto max-w-full -translate-x-1/2 -translate-y-1/2 object-contain"
-          />
-        </div>
-      </div>
-          </div>
     </section>
   );
 }
