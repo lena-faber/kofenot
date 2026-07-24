@@ -457,15 +457,11 @@ function BrandDeservesBetterSection() {
 
       <div className="mt-2 max-w-[760px] space-y-6">
         <p>
-          Your brand, printed on a cheap hat or T-shirt no one wants to be
-          seen wearing, ends up in thrift stores—which may not align with
-          your brand image.
+          Too many branded hats and T-shirts end up in thrift stores instead of reaching the people you wanted to reach..
         </p>
 
         <p>
-          More expensive electronic merchandise with cables that don’t fit
-          anyone’s devices gets thrown directly into trade-show trash
-          bins—and that’s not where your brand belongs.
+          Electronic gadgets often come with incompatible ports and end up in the trash right at the trade show.
         </p>
 
         <p>
