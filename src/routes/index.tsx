@@ -22,7 +22,7 @@ import fidget from "@/assets/kofeenot-fidget.jpg";
 import giftBox from "@/assets/kofenot-gift-box.jpeg";
 import neck from "@/assets/kofeenot-neck.jpg";
 import safeSpill from "@/assets/safe-spill.jpeg";
-import spillSafeProduct from "@/assets/spill-safe.jpeg";
+import spillSafeProduct from "@/assets/spill-safe.png";
 import threeDevices from "@/assets/kofenot-3-devices.jpg";
 
 export const Route = createFileRoute("/")({
