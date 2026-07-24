@@ -375,7 +375,7 @@ function BrandDeservesBetterSection() {
     <section className="border-t border-[rgba(0,255,0,0.22)] py-10 lg:py-14">
       <div className="mx-auto max-w-[1320px] px-6 lg:px-8">
   <div className="grid lg:grid-cols-2">
-        <div className="flex flex-col px-4 lg:px-6">
+        <div className="flex flex-col px-2 lg:px-4">
           <h2>
             BRAND. <br/>NO THROWAWAYS.
           </h2>
