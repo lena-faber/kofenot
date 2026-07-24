@@ -465,14 +465,7 @@ function BrandDeservesBetterSection() {
         </p>
 
         <p>
-          Put your logo on an original accessory engineered for both
-          precision and aesthetics—something people will appreciate and use.
-        </p>
-
-        <p>
-          Choose thoughtful, original design with a personal touch and a
-          story behind it over generic merchandise that ends up filling
-          trash bins and polluting the planet.
+     Choose a thoughtfully designed accessory, engineered for precision and aesthetics, with a story behind it, over generic merchandise that pollutes the planet.
         </p>
       </div>
 
