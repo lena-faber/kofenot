@@ -493,11 +493,11 @@ function BrandDeservesBetterSection() {
       </a>
     </div>
 
-    <div className="hidden lg:flex h-full min-h-[720px] items-center justify-end overflow-hidden">
+    <div className="hidden lg:flex min-h-[720px] items-center justify-center">
   <img
-    src="/images/spill-safe.png"
+    src={spillSafeProduct}
     alt="KOFENOT Spill Safe"
-    className="h-full w-auto object-contain object-right"
+    className="max-h-[720px] h-full w-auto"
   />
 </div>
   </div>
