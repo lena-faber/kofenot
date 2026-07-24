@@ -481,13 +481,13 @@ function BrandDeservesBetterSection() {
           </a>
         </div>
 
-        <div className="relative hidden min-h-[620px] lg:block">
-          <img
-            src={spillSafeProduct}
-            alt="KOFENOT Spill Safe"
-            className="absolute inset-0 h-full w-full object-contain object-left"
-          />
-        </div>
+        <div className="hidden lg:flex items-stretch justify-start">
+  <img
+    src={spillSafeProduct}
+    alt="KOFENOT Spill Safe"
+    className="h-full w-auto object-contain"
+  />
+</div>
       </div>
     </section>
   );
