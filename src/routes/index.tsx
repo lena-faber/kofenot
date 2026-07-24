@@ -13,7 +13,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 
-import corp from ""@/assets/spill-safe.png";
+import corp from "@/assets/spill-safe.png";
 import deadSpill from "@/assets/dead-spill.jpg";
 import demoVideo from "@/assets/kofeenot-demo.mp4";
 import testimonialPoster from "@/assets/kofenot-testimonials.jpg";
