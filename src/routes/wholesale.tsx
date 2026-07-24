@@ -292,9 +292,9 @@ function Wholesale() {
     <main className="page-shell">
       <HeroSection />
       <SectionNav />
+      <BrandDeservesBetterSection />
       <PricingSection />
       <ProgramsSection />
-      <BrandDeservesBetterSection />
       <SpecsSection />
       <MediaKitSection />
       <ShippingSection />
