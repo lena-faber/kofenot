@@ -450,11 +450,9 @@ function BrandDeservesBetterSection() {
   <div className="mx-auto grid max-w-[1760px] lg:grid-cols-2">
     <div className="flex flex-col justify-center px-6 py-14 lg:px-8 lg:py-20">
       <h2>
-        YOUR BRAND
+        YOUR BRAND.
         <br />
-        WON'T BE
-        <br />
-        THROWAWAY
+        ON EVERY DESK.
       </h2>
 
       <div className="mt-2 max-w-[760px] space-y-6">
