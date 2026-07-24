@@ -466,10 +466,10 @@ function BrandDeservesBetterSection() {
               in the trash right at the trade show.
             </p>
 
-            <p><strong>
+            <<p className="font-bold">
               Choose a thoughtfully designed accessory with a story behind it,
               engineered for precision and aesthetics, over generic merchandise
-              that pollutes the planet.</strong>strong>
+              that pollutes the planet.
             </p>
           </div>
 
