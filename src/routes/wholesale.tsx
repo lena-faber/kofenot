@@ -24,7 +24,7 @@ import expo from "@/assets/kofenot-expo.jpeg";
 import shipping from "@/assets/kofenot-shipping.jpeg";
 import retailPackSipSafeBack from "@/assets/kofenot-retail-pack-00.jpg";
 import retailPackDad from "@/assets/kofenot-retail-pack-01.jpg";
-import bareProduct from "@/assets/kofenot-blank-siluette.png";
+import bareProduct from "@/assets/kofenot-blank.jpg";
 import retailPackSipSafeFront from "@/assets/kofenot-retail-pack-03.jpg";
 import retailPackPlanet from "@/assets/kofenot-retail-pack-04.jpg";
 import yourLogoHere from "@/assets/kofenot-your.jpg";
