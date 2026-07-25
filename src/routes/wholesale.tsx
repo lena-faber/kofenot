@@ -113,7 +113,7 @@ const programs: Program[] = [
   {
     icon: Tag,
     title: "Custom Logo",
-    image: yourLogoHere,
+    image: francisco,
     copy:
       "For conferences, coworking spaces, universities, employee kits, client gifts, and branded campaigns.",
   },
