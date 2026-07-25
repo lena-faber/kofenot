@@ -16,8 +16,9 @@ const navLinks = [
 const footerLinks = [
   { label: "Contact", href: "mailto:info@kofenot.com" },
   { label: "Terms & Conditions", href: "/downloads/terms.pdf" },
-  { label: "Privacy",
-    href: "/downloads/KofeNot_Privacy_Policy.pdf" }",
+  {
+    label: "Privacy",
+    href: "/downloads/KofeNot_Privacy_Policy.pdf",
   },
 ];
 
@@ -118,12 +119,14 @@ export function SiteFooter() {
         <nav className="mt-5 flex flex-wrap justify-center gap-x-6 gap-y-2">
           {footerLinks.map((link) => (
             <a
-              key={link.label}
-              href={link.href}
-              className="text-[color:var(--neon)] hover:underline"
-            >
-              {link.label}
-            </a>
+  key={link.label}
+  href={link.href}
+  target={link.href.endsWith(".pdf") ? "_blank" : undefined}
+  rel={link.href.endsWith(".pdf") ? "noopener noreferrer" : undefined}
+  className="text-[color:var(--neon)] hover:underline"
+>
+  {link.label}
+</a>
           ))}
         </nav>
 
