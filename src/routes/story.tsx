@@ -166,11 +166,11 @@ function HeroSection() {
 
         <div className="mt-8 flex flex-wrap gap-3">
           <Button asChild size="lg" className="rounded-sm font-black">
-            <a href="/media/kofenot-media-kit.zip" download>
-              <Download className="mr-2 h-5 w-5" />
-              Download Story
-            </a>
-          </Button>
+  <a href="/downloads/press-release.pdf" download>
+    <Download className="mr-2 h-5 w-5" />
+    Download Press Release
+  </a>
+</Button>
 
         </div>
       </div>
