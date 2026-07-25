@@ -26,12 +26,12 @@ export const Route = createFileRoute("/story")({
   head: () => ({
     meta: [
       {
-        title: "KOFENOT™ Press & Media Kit",
+        title: "KOFENOT™ Press Kit",
       },
       {
         name: "description",
         content:
-          "Download the KOFENOT press release, media kit, product facts, high-resolution photos, and founder information.",
+          "Download the KOFENOT press release, product facts, high-resolution photos, and founder information.",
       },
     ],
   }),
@@ -42,13 +42,13 @@ const downloadItems = [
   {
     title: "Press Release",
     type: "PDF",
-    href: "/media/kofenot-press-release.pdf",
+    href: "/downloads/press-release.pdf",
     icon: FileText,
   },
   {
     title: "Press Release",
     type: "DOCX",
-    href: "/media/kofenot-press-release.docx",
+    href: "/downloads/kofenot-press-release.docx",
     icon: FileText,
   },
   {
@@ -72,7 +72,7 @@ const downloadItems = [
   {
     title: "Product Specifications",
     type: "PDF",
-    href: "/media/kofenot-product-specifications.pdf",
+    href: "/downloads/kofenot-product-specifications.pdf",
     icon: Package,
   },
 ];
