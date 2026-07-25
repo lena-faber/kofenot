@@ -27,7 +27,7 @@ import retailPackDad from "@/assets/kofenot-retail-pack-01.jpg";
 import bareProduct from "@/assets/kofenot-blank-siluette.png";
 import retailPackSipSafeFront from "@/assets/kofenot-retail-pack-03.jpg";
 import retailPackPlanet from "@/assets/kofenot-retail-pack-04.jpg";
-import yourLogoHere from "@/assets/kofenot-your.jpg";
+import yourLogoHere from "@/assets/kofenot-blank.jpg";
 import francisco from "@/assets/i-love-sf.png";
 import customLogoDisplay from "@/assets/referral.jpeg";
 import spillSafeProduct from "@/assets/spill-safe.png";
