@@ -26,12 +26,12 @@ export const Route = createFileRoute("/story")({
   head: () => ({
     meta: [
       {
-        title: "KOFENOT™ Press Kit",
+        title: "KOFENOT™ Invention Story",
       },
       {
         name: "description",
         content:
-          "Download the KOFENOT press release, product facts, high-resolution photos, and founder information.",
+          "Download the KOFENOT™ invention story, product facts, high-resolution photos, and founder information.",
       },
     ],
   }),
@@ -152,7 +152,7 @@ function HeroSection() {
 
       <div className="relative z-10 flex min-h-[72svh] max-w-4xl flex-col justify-end px-6 pb-12 pt-8 lg:px-10">
         <h3>
-          KOFENOT™ Media Kit
+          KOFENOT™ Invention Story
         </h3>
 
         <h1>
@@ -168,20 +168,10 @@ function HeroSection() {
           <Button asChild size="lg" className="rounded-sm font-black">
             <a href="/media/kofenot-media-kit.zip" download>
               <Download className="mr-2 h-5 w-5" />
-              Download Media Kit
+              Download Story
             </a>
           </Button>
 
-          <Button
-            asChild
-            size="lg"
-            variant="outline"
-            className="rounded-sm border-white bg-white/10 font-black text-white hover:bg-white hover:text-black"
-          >
-            <a href="/media/kofenot-press-release.pdf" download>
-              Press Release PDF
-            </a>
-          </Button>
         </div>
       </div>
     </section>
