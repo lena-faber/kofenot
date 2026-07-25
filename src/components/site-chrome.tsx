@@ -15,9 +15,9 @@ const navLinks = [
 
 const footerLinks = [
   { label: "Contact", href: "mailto:info@kofenot.com" },
-  { label: "Terms & Conditions", href: "/#faq" },
+  { label: "Terms & Conditions", href: "/downloads/terms.pdf" },
   { label: "Privacy",
-    href: "mailto:info@kofenot.com?subject=KOFENOT%20Privacy",
+    href: "/downloads/KofeNot_Privacy_Policy.pdf" }",
   },
 ];
 
