@@ -686,13 +686,14 @@ function DownloadCard({
   };
 }) {
   return (
-   <div className="flex-1 overflow-hidden">
-  <img
-    src={item.img}
-    alt={item.title}
-    className="h-full w-full object-contain"
-  />
-</div>
+   <article className="panel overflow-hidden rounded-sm flex flex-col">
+  <div className="flex-1 overflow-hidden">
+    <img
+      src={item.img}
+      alt={item.title}
+      className="h-full object-contain"
+    />
+  </div>
 
       <div className="p-4">
         <div className="grid grid-cols-2 gap-2">
