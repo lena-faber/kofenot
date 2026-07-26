@@ -105,10 +105,10 @@ const programs: Program[] = [
   },
   {
     icon: PackageCheck,
-    title: "Bare Bulk Wholesale",
+    title: "Bare Bulk for Customzation",
     image: bareProduct,
     copy:
-      "Bare unpackaged KOFENOT™ units for kits, events, custom packaging, resale, or distribution.",
+      "Bulk unbranded KOFENOT™ units ready for custom logo printing, private labels, custom packaging, corporate gifts, conferences, employee kits, events, resale, and distribution.",
   },
   {
     icon: Tag,
