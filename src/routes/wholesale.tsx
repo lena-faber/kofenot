@@ -109,7 +109,7 @@ const programs: Program[] = [
     title: "Bare Bulk for Customzation",
     image: bareProduct,
     copy:
-      "Bulk unbranded KOFENOT™ units ready for custom logo printing, private labels, custom packaging, corporate gifts, conferences, employee kits, events, resale, and distribution.",
+      "Bulk unbranded KOFENOT™ units ready for custom printing and packaging, private labels, resale, and distribution.",
   },
   {
     icon: Tag,
