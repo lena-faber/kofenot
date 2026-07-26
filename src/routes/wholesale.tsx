@@ -31,6 +31,7 @@ import yourLogoHere from "@/assets/kofenot-your.jpg";
 import francisco from "@/assets/i-love-sf.png";
 import customLogoDisplay from "@/assets/referral.jpeg";
 import spillSafeProduct from "@/assets/spill-safe.png";
+import exposure from "@/assets/kofenot-your-logo-here-00.jpg";
 
 export const Route = createFileRoute("/wholesale")({
   head: () => ({
@@ -112,10 +113,10 @@ const programs: Program[] = [
   },
   {
     icon: Tag,
-    title: "Custom Logo",
-    image: francisco,
+    title: "Brand Exposure",
+    image: exposure,
     copy:
-      "For conferences, coworking spaces, universities, employee kits, client gifts, and branded campaigns.",
+      "Put your logo where people actually work. Perfect for conferences, coworking spaces, universities, cafés, aeroports, and libraries.",
   },
   {
     icon: Gift,
