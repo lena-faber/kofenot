@@ -189,7 +189,7 @@ const mediaKit = [
         file: "kofenot-bare-product.jpg",
       },
       {
-        img: yourLogo,
+        img: yourlogo,
         title: "Your Logo Here",
         file: "your-logo.jpg",
       },
