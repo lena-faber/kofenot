@@ -31,6 +31,7 @@ import yourLogoHere from "@/assets/kofenot-your.jpg";
 import francisco from "@/assets/i-love-sf.png";
 import customLogoDisplay from "@/assets/referral.jpeg";
 import spillSafeProduct from "@/assets/spill-safe.png";
+import yourlogo from "@/assets/your-logo.jpg";
 import exposure from "@/assets/kofenot-your-logo-here-00.jpg";
 
 export const Route = createFileRoute("/wholesale")({
@@ -189,9 +190,9 @@ const mediaKit = [
         file: "kofenot-bare-product.jpg",
       },
       {
-        img: yourLogoHere,
+        img: yourLogo,
         title: "Your Logo Here",
-        file: "kofenot-your-logo-here.jpg",
+        file: "your-logo.jpg",
       },
       {
         img: customLogoDisplay,
