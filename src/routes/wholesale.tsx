@@ -690,7 +690,7 @@ function DownloadCard({
       <img
         src={item.img}
         alt={item.title}
-        className="h-[340px] w-full bg-white object-contain p-8"
+        className="h-[340px] w-full object-contain p-0"
       />
 
       <div className="p-4">
