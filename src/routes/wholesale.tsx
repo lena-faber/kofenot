@@ -691,7 +691,7 @@ function DownloadCard({
     <img
       src={item.img}
       alt={item.title}
-      className="h-full object-contain"
+      className="h-full object-cover"
     />
   </div>
 
