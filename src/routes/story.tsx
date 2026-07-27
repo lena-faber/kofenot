@@ -45,34 +45,11 @@ const downloadItems = [
     href: "/downloads/press-release.pdf",
     icon: FileText,
   },
-  {
-    title: "Press Release",
-    type: "DOCX",
-    href: "/downloads/kofenot-press-release.docx",
-    icon: FileText,
-  },
-  {
-    title: "Full Media Kit",
-    type: "ZIP",
-    href: "/media/kofenot-media-kit.zip",
-    icon: FileArchive,
-  },
-  {
-    title: "High-Resolution Photos",
-    type: "ZIP",
-    href: "/media/kofenot-photos.zip",
-    icon: Image,
-  },
-  {
-    title: "Logos",
-    type: "ZIP",
-    href: "/media/kofenot-logos.zip",
-    icon: Sparkles,
-  },
+
   {
     title: "Product Specifications",
     type: "PDF",
-    href: "/downloads/kofenot-product-specifications.pdf",
+    href: "/downloads/KOFENOT_Product_Specifications.pdf",
     icon: Package,
   },
 ];
