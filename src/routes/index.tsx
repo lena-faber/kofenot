@@ -358,6 +358,26 @@ function HowItWorksSection() {
         }
       />
 
+<div className="mt-6 grid gap-px bg-[rgba(0,255,0,0.15)] md:grid-cols-5">
+  {[
+    "Fits most laptops up to 16″",
+    "Open & closed hinge designs",
+    "No magnets",
+    "No adhesive",
+    "2-second setup",
+  ].map((item) => (
+    <div
+      key={item}
+      className="flex items-center justify-center bg-[#080908] px-4 py-5 text-center"
+    >
+      <Check className="mr-2 h-5 w-5 shrink-0 text-[color:var(--neon)]" />
+      <span className="text-sm font-bold uppercase leading-tight text-white">
+        {item}
+      </span>
+    </div>
+  ))}
+</div>
+      
       <div className={cx(layout.content, "grid gap-5 md:grid-cols-3")}>
         {howItWorksSteps.map(
           ([number, title, description], index) => (
