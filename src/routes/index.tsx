@@ -360,7 +360,7 @@ function HowItWorksSection() {
 
 <div className="mt-6 grid gap-px bg-[rgba(0,255,0,0.15)] md:grid-cols-4">
   {[
-    "Works with a rear hinge gap when open",
+    "Uses laptop's rear hinge gap when open",
     "No magnets",
     "No adhesive",
     "No clips",
