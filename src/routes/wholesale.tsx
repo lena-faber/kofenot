@@ -593,10 +593,11 @@ function ShippingSection() {
             />
 
             <div className="p-5">
-              <h3>Need a shipping quote?</h3>
+              <h3>Need a freight quote?</h3>
 
               <p className="body-copy mt-3">
-                Send quantity, destination, deadline, and packaging needs.
+                Send quantity, destination, deadline, and packaging requirements.
+We can also ship using your UPS, FedEx, or DHL account.
               </p>
 
               <a href={quoteEmail} className="mt-5 inline-flex">
