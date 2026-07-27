@@ -30,7 +30,7 @@ import retailPackPlanet from "@/assets/kofenot-retail-pack-04.jpg";
 import francisco from "@/assets/i-love-sf.png";
 import customLogoDisplay from "@/assets/referral.jpeg";
 import spillSafeProduct from "@/assets/spill-safe.png";
-import yourlogo from "@/assets/your-logo.jpg";
+import yourlogo from "@/assets/your-logo.png";
 import exposure from "@/assets/kofenot-your-logo-here-00.jpg";
 
 export const Route = createFileRoute("/wholesale")({
