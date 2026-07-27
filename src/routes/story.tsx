@@ -500,11 +500,6 @@ function BottomGrid() {
         </h2>
 
         <div className="mt-5 grid gap-4 text-sm font-bold">
-          <p className="!text-white">
-            Lena Faber
-            <br />
-            Founder, KOFENOT™
-          </p>
 
           <p className="flex items-center gap-3 !text-white">
             <Mail className="h-4 w-4 text-[color:var(--neon)]" />
