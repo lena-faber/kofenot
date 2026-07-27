@@ -367,7 +367,7 @@ function HowItWorksSection() {
   ].map((sectionKicker) => (
     <div
       key={sectionKicker}
-      className="flex items-center gap-2 rounded border border-[rgba(0,255,0,0.15)] bg-[#080908] px-4 py-5"
+      className="flex items-start gap-2 rounded border border-[rgba(0,255,0,0.15)] bg-[#080908] px-4 py-5"
     >
       <Check className="h-5 w-5 shrink-0 text-[color:var(--neon)]" />
       <h3>{sectionKicker}</h3>
