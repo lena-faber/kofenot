@@ -358,19 +358,19 @@ function HowItWorksSection() {
         }
       />
 
-<div className="mt-6 grid gap-px md:grid-cols-4">
+<div className="mt-6 grid gap-4 md:grid-cols-4">
   {[
-    "Uses laptop's rear hinge gap when open",
-    "No magnets",
-    "No adhesive",
-    "No clips",
-  ].map((item) => (
+    "Uses Laptop's Rear Hinge Gap When Open",
+    "No Magnets",
+    "No Adhesive",
+    "No Clips",
+  ].map((sectionKicker) => (
     <div
       key={sectionKicker}
-      className="flex items-center justify-center bg-[#080908] px-4 py-5 text-center"
+      className="flex items-center gap-2 rounded border border-[rgba(0,255,0,0.15)] bg-[#080908] px-4 py-5"
     >
-      <Check className="mr-2 h-5 w-5 shrink-0 text-[color:var(--neon)]" />
-      <h3>{item}</h3>
+      <Check className="h-5 w-5 shrink-0 text-[color:var(--neon)]" />
+      <h3>{sectionKicker}</h3>
     </div>
   ))}
 </div>
