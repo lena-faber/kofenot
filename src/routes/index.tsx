@@ -358,7 +358,7 @@ function HowItWorksSection() {
         }
       />
 
-<div className="mt-6 grid gap-px bg-[rgba(0,255,0,0.15)] md:grid-cols-4">
+<div className="mt-6 grid gap-px md:grid-cols-4">
   {[
     "Uses laptop's rear hinge gap when open",
     "No magnets",
@@ -366,7 +366,7 @@ function HowItWorksSection() {
     "No clips",
   ].map((item) => (
     <div
-      key={item}
+      key={sectionKicker}
       className="flex items-center justify-center bg-[#080908] px-4 py-5 text-center"
     >
       <Check className="mr-2 h-5 w-5 shrink-0 text-[color:var(--neon)]" />
