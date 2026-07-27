@@ -107,11 +107,11 @@ const benefitModes: BenefitCardData[] = [
 ];
 
 const howItWorksSteps = [
-  ["01", "Open Laptop All the Way", "Feel for the rear hinge."],
+  ["01", "Open Laptop All the Way", "Feel for the rear hinge gap."],
   [
     "02",
-    "Rest Rear Hinge on Wedge",
-    "Works with open-trench hinges. Flip wedge for closed-angle hinges.",
+    "Rest Hinge Gap on Wedge",
+    "Turn the wedge around if needed to match your laptop's hinge gap.",
   ],
   [
     "03",
@@ -360,11 +360,10 @@ function HowItWorksSection() {
 
 <div className="mt-6 grid gap-px bg-[rgba(0,255,0,0.15)] md:grid-cols-5">
   {[
-    "Fits most laptops up to 16″",
-    "Open & closed hinge designs",
+    "Works with laptops that have a rear hinge gap",
     "No magnets",
     "No adhesive",
-    "2-second setup",
+    "No clips",
   ].map((item) => (
     <div
       key={item}
