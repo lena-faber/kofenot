@@ -370,9 +370,7 @@ function HowItWorksSection() {
       className="flex items-center justify-center bg-[#080908] px-4 py-5 text-center"
     >
       <Check className="mr-2 h-5 w-5 shrink-0 text-[color:var(--neon)]" />
-      <span className="text-sm font-bold uppercase leading-tight text-white">
-        {item}
-      </span>
+      <h3>{item}</h3>
     </div>
   ))}
 </div>
