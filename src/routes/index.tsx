@@ -24,6 +24,7 @@ import neck from "@/assets/kofeenot-neck.jpg";
 import safeSpill from "@/assets/safe-spill.jpeg";
 import spillSafeProduct from "@/assets/spill-safe.png";
 import threeDevices from "@/assets/kofenot-3-devices.jpg";
+import jpGraphicsLogo from "@/assets/jp-graphics-logo.png";
 
 export const Route = createFileRoute("/")({
   component: Home,
@@ -185,6 +186,7 @@ const openCheckout = (url = retailCheckoutUrl) => {
       <ReviewsSection />
       <PricingSection openCheckout={openCheckout} />
       <ProductDetailsSection />
+      <PrintingPartnerSection />
       <FaqSection />
 
       <Dialog open={videoOpen} onOpenChange={setVideoOpen}>
@@ -626,6 +628,54 @@ function ProductDetailsSection() {
           </div>
         </Reveal>
       </div>
+    </section>
+  );
+}
+
+function PrintingPartnerSection() {
+  return (
+    <section className={cx(layout.section, layout.standard)}>
+      <Reveal>
+        <div className="text-center">
+          <h3>FEATURED BY OUR PRINTING PARTNER</h3>
+
+          <blockquote className="mx-auto mt-5 max-w-4xl">
+            <p className="text-xl font-semibold italic leading-relaxed text-white md:text-2xl">
+              “J P Graphics is proud to support Silicon Valley businesses...”
+            </p>
+          </blockquote>
+
+          <div className="mx-auto mt-7 h-px w-20 bg-[color:var(--neon)]" />
+
+          <a
+            href="https://jp-graphics.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Visit J P Graphics, Inc."
+            className="mx-auto mt-7 block w-fit transition duration-300 hover:scale-105"
+          >
+            <img
+              src={jpGraphicsLogo}
+              alt="J P Graphics, Inc."
+              className="h-auto w-[110px]"
+            />
+          </a>
+
+          <p className="body-copy mx-auto mt-6 max-w-3xl">
+            Packaging and custom branding for{" "}
+            <strong className="text-white">KOFENOT™</strong> are produced by{" "}
+            <a
+              href="https://jp-graphics.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-bold text-[color:var(--neon)] hover:underline"
+            >
+              J P Graphics, Inc.
+            </a>
+            , our Silicon Valley printing partner.
+          </p>
+        </div>
+      </Reveal>
     </section>
   );
 }
