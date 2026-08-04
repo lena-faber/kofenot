@@ -24,7 +24,7 @@ import neck from "@/assets/kofeenot-neck.jpg";
 import safeSpill from "@/assets/safe-spill.jpeg";
 import spillSafeProduct from "@/assets/spill-safe.png";
 import threeDevices from "@/assets/kofenot-3-devices.jpg";
-import jpGraphicsLogo from "@/assets/jp-graphics-logo.png";
+import jpGraphicsLogo from "@/assets/JP-Graphics-Logo.png";
 
 export const Route = createFileRoute("/")({
   component: Home,
