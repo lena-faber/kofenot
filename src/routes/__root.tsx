@@ -5,6 +5,7 @@ import {
   Scripts,
   createRootRouteWithContext,
   useRouter,
+  useRouterState,
 } from "@tanstack/react-router";
 import { Toaster } from "sonner";
 
@@ -135,6 +136,27 @@ export const Route = createRootRouteWithContext<{
 });
 
 function NotFoundComponent() {
+  const pathname = useRouterState({ select: (state) => state.location.pathname });
+
+  if (pathname.startsWith("/os")) {
+    return (
+      <div className="flex min-h-screen items-center justify-center bg-[#0a0a0b] px-4 text-white">
+        <div className="max-w-md text-center">
+          <h1 className="text-xl font-semibold">Revenue OS page not found</h1>
+          <p className="mt-2 text-sm text-white/60">
+            That OS route does not exist. Go back to the dashboard.
+          </p>
+          <a
+            href="/os"
+            className="mt-6 inline-flex items-center justify-center rounded-md bg-white px-4 py-2 text-sm font-medium text-black hover:bg-white/90"
+          >
+            Open dashboard
+          </a>
+        </div>
+      </div>
+    );
+  }
+
   return <Home />;
 }
 
@@ -197,6 +219,18 @@ function RootShell({ children }: { children: React.ReactNode }) {
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
+  const isOsRoute = useRouterState({
+    select: (state) => state.location.pathname.startsWith("/os"),
+  });
+
+  if (isOsRoute) {
+    return (
+      <QueryClientProvider client={queryClient}>
+        <Outlet />
+        <Toaster theme="dark" position="bottom-right" richColors />
+      </QueryClientProvider>
+    );
+  }
 
   return (
     <QueryClientProvider client={queryClient}>
