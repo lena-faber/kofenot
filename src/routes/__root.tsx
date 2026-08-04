@@ -201,7 +201,7 @@ function RootComponent() {
   return (
     <QueryClientProvider client={queryClient}>
       <LeadProvider>
-        <div className="flex min-h-screen flex-col overflow-x-hidden">
+        <div id="site-root" className="flex min-h-screen flex-col overflow-x-hidden">
           <SiteHeader />
           <main className="flex-1 overflow-x-hidden">
             <Outlet />

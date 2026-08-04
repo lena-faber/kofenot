@@ -1,0 +1,73 @@
+/* Revenue OS — self-contained typography (marketing styles scoped to #site-root) */
+.os-theme.os-isolate {
+  --os-bg: #0a0a0b;
+  --os-sidebar: #111113;
+  --os-card: #141416;
+  --os-hover: #1a1a1e;
+  --os-border: #27272a;
+  --os-fg: #ffffff;
+  --os-accent: #00ff00;
+  --os-text: 12px;
+
+  --color-os-bg: var(--os-bg);
+  --color-os-sidebar: var(--os-sidebar);
+  --color-os-card: var(--os-card);
+  --color-os-hover: var(--os-hover);
+  --color-os-border: var(--os-border);
+  --color-os-fg: var(--os-fg);
+  --color-os-muted: var(--os-fg);
+  --color-os-accent: var(--os-accent);
+
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #ffffff;
+}
+
+.os-theme.os-isolate,
+.os-theme.os-isolate p,
+.os-theme.os-isolate li,
+.os-theme.os-isolate span,
+.os-theme.os-isolate a,
+.os-theme.os-isolate div,
+.os-theme.os-isolate td,
+.os-theme.os-isolate th,
+.os-theme.os-isolate label,
+.os-theme.os-isolate button,
+.os-theme.os-isolate input,
+.os-theme.os-isolate select,
+.os-theme.os-isolate textarea {
+  color: #ffffff;
+  font-size: 12px;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-transform: none;
+}
+
+.os-theme.os-isolate .os-title,
+.os-theme.os-isolate .os-section-label,
+.os-theme.os-isolate .text-os-accent {
+  color: #00ff00;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.os-theme.os-isolate .os-section-label {
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.os-theme.os-isolate .os-body {
+  color: #ffffff;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.os-theme.os-isolate .prose-email {
+  white-space: pre-wrap;
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, monospace !important;
+}
+
+.os-theme.os-isolate ::selection {
+  background: rgba(0, 255, 0, 0.2);
+}
