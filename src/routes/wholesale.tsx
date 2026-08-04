@@ -32,7 +32,7 @@ import customLogoDisplay from "@/assets/referral.jpeg";
 import spillSafeProduct from "@/assets/spill-safe.png";
 import yourlogo from "@/assets/your-logo.png";
 import exposure from "@/assets/kofenot-your-logo-here-00.jpg";
-import jpGraphicsLogo from "@/assets/jp-graphics-logo.png";
+import jpGraphicsLogo from "@/assets/JP-Graphics-Logo.png";
 
 export const Route = createFileRoute("/wholesale")({
   head: () => ({
