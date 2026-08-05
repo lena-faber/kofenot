@@ -263,7 +263,7 @@ type FaqGroup = {
 
 const faqGroups: FaqGroup[] = [
   {
-    label: "BUYING & BULK ORDERS",
+    label: "BUYING BULK",
     items: [
       [
         "What should I buy for resale?",
@@ -288,11 +288,11 @@ const faqGroups: FaqGroup[] = [
     items: [
       [
         "Can you print our logo on KOFENOT™?",
-        "Yes. Custom logo printing is available for corporate gifts, retail, coffee shops, universities, conferences, and promotional campaigns.",
+        "Yes. Customization is available for corporates, retail, coffee shops, universities, conferences, and promotional campaigns.",
       ],
       [
         "Can you create custom retail packaging?",
-        "Yes. We create custom retail packaging, private-label packaging, branded inserts, and retail-ready displays tailored to your brand.",
+        "Yes. We create custom, retail and private-label packaging, branded inserts, and retail-ready displays",
       ],
       [
         "Who handles printing and packaging?",
