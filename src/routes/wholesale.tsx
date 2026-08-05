@@ -620,56 +620,74 @@ function PrintingPartnerSection() {
   return (
     <section className="section-band">
       <div className="page-section-narrow">
-        <h3>FEATURED IN OUR PRINTING PARTNER’S NEWSLETTER</h3>
+        <h3>FEATURED IN OUR PRINTING PARTNER&apos;S NEWSLETTER</h3>
 
         <h2>
           KOFENOT™ × <span className="neon-text">J P Graphics</span>
         </h2>
 
-        <div className="panel mt-8 rounded-sm p-8 text-center md:p-10">
-          <a
-            href="https://jp-graphics.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mx-auto block w-fit transition hover:scale-105"
-            aria-label="Visit J P Graphics, Inc."
-          >
-            <img
-              src={jpGraphicsLogo}
-              alt="J P Graphics, Inc."
-              className="mx-auto h-auto w-[115px]"
-            />
-          </a>
-
-          <blockquote className="mx-auto mt-7 max-w-3xl">
-            <p className="text-xl italic leading-relaxed text-white md:text-2xl">
-              “J P Graphics is proud to support Silicon Valley businesses with high-quality packaging and printing services”
-            </p>
-          </blockquote>
-
-          <p className="body-copy mx-auto mt-7 max-w-3xl">
-          "We're featuring founder of KOFENOT™, and the clever laptop wedge she invented.
-          When local packaging became a bottleneck, we were happy to step in,{" "}
+        <div className="panel mt-8 overflow-visible rounded-sm border-l-4 border-l-[var(--neon)] p-8 md:p-10">
+          <div className="flex flex-col items-center gap-8 md:flex-row md:items-start md:gap-10">
             <a
               href="https://jp-graphics.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="font-bold text-[var(--neon)] hover:underline"
+              className="shrink-0 rounded-sm bg-white p-5 shadow-[0_0_24px_rgba(0,255,0,0.12)] transition hover:scale-[1.02]"
+              aria-label="Visit J P Graphics, Inc."
             >
-              J P Graphics, Inc.
+              <img
+                src={jpGraphicsLogo}
+                alt="J P Graphics, Inc."
+                className="mx-auto h-auto w-[120px]"
+              />
             </a>
-            , our Silicon Valley printing partner.
-          </p>
 
-          <a
-            href="https://createsend.com/t/i-72387891A36D50542540EF23F30FEDED"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-8 inline-flex items-center gap-3 bg-[var(--neon)] px-7 py-4 font-black uppercase tracking-[0.12em] text-black transition hover:bg-[var(--neon-dim)]"
-          >
-            Read the Newsletter Feature
-            <ArrowRight className="h-4 w-4" />
-          </a>
+            <div className="min-w-0 flex-1 text-center md:text-left">
+              <blockquote className="relative mx-auto max-w-2xl md:mx-0">
+                <span
+                  className="pointer-events-none absolute -left-1 -top-3 select-none font-serif text-6xl leading-none text-[var(--neon)] opacity-70 md:-left-3"
+                  aria-hidden="true"
+                >
+                  &ldquo;
+                </span>
+                <p className="relative pl-6 text-lg italic leading-relaxed text-white md:pl-8 md:text-xl">
+                  J P Graphics is proud to support Silicon Valley businesses
+                  with high-quality packaging and printing services.
+                </p>
+                <footer className="mt-5 pl-6 text-sm font-bold uppercase tracking-[0.1em] text-[var(--neon)] md:pl-8">
+                  <cite className="not-italic">
+                    <a
+                      href="https://jp-graphics.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:underline"
+                    >
+                      J P Graphics, Inc.
+                    </a>
+                  </cite>
+                </footer>
+              </blockquote>
+
+              <div className="mx-auto mt-6 max-w-2xl border-t border-[rgba(0,255,0,0.18)] pt-6 md:mx-0">
+                <p className="body-copy max-w-none text-left">
+                  In their newsletter, they featured the founder of KOFENOT™ and
+                  the clever laptop wedge she invented—and shared how they
+                  stepped in when local packaging became a bottleneck for our
+                  Silicon Valley production run.
+                </p>
+              </div>
+
+              <a
+                href="https://createsend.com/t/i-72387891A36D50542540EF23F30FEDED"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-8 inline-flex items-center gap-3 bg-[var(--neon)] px-7 py-4 font-black uppercase tracking-[0.12em] text-black transition hover:bg-[var(--neon-dim)]"
+              >
+                Read the Newsletter Feature
+                <ArrowRight className="h-4 w-4" />
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
