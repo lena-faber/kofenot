@@ -718,22 +718,20 @@ function PrintingPartnerSection() {
 function FaqSection() {
   return (
     <section id="faq" className="page-section">
-      <div className="page-section-narrow">
-        <h2>FAQ</h2>
+      <h2>FAQ</h2>
 
-        <div className="mt-7 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-          {faq.map(([question, answer]) => (
-            <article
-              key={question}
-              className="flex h-full flex-col rounded-sm border border-[rgba(0,255,0,0.22)] bg-[#212121] p-6 transition-colors hover:border-[rgba(0,255,0,0.55)] md:p-8"
-            >
-              <h3 className="text-xs font-bold uppercase tracking-[0.12em] text-[#00ff00]">
-                {question}
-              </h3>
-              <div className="body-copy mt-4 flex-1 text-white">{answer}</div>
-            </article>
-          ))}
-        </div>
+      <div className="mt-7 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+        {faq.map(([question, answer]) => (
+          <article
+            key={question}
+            className="flex h-full flex-col rounded-sm border border-[rgba(0,255,0,0.22)] bg-[#212121] p-6 transition-colors hover:border-[rgba(0,255,0,0.55)] md:p-8"
+          >
+            <h3 className="text-xs font-bold uppercase tracking-[0.12em] text-[#00ff00]">
+              {question}
+            </h3>
+            <div className="body-copy mt-4 flex-1 text-white">{answer}</div>
+          </article>
+        ))}
       </div>
     </section>
   );
