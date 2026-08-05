@@ -135,7 +135,7 @@ export function SiteFooter() {
             Designed in Silicon Valley
           </p>
           <p className="body-copy max-w-xl text-sm text-white/80">
-            Packaging and custom branding by our Silicon Valley printing partner,{" "}
+            Packaging and custom branding by our Silicon Valley partner,{" "}
             <a
               href="https://jp-graphics.com"
               target="_blank"

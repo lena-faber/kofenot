@@ -273,11 +273,11 @@ const faq: [string, ReactNode][] = [
   ],
   [
     "Can you print our logo on KOFENOT™?",
-    "Yes. We offer custom logo printing on KOFENOT™ for promotional products, corporate gifts, conferences, universities, coffee shops, retailers, and branded merchandise. Contact us for minimum quantities and pricing.",
+    "Yes. Custom logo printing is available for corporate gifts, retail, coffee shops, universities, conferences, and promotional campaigns.",
   ],
   [
     "Can you create custom retail packaging?",
-    "Yes. We can produce custom retail packaging featuring your branding, messaging, colors, and artwork. Whether you need private-label packaging, event giveaways, or retail-ready displays, we'll work with you to create packaging that fits your brand.",
+    "Yes. We create custom retail packaging, private-label packaging, branded inserts, and retail-ready displays tailored to your brand.",
   ],
   [
     "Who handles printing and packaging?",
@@ -291,7 +291,7 @@ const faq: [string, ReactNode][] = [
       >
         J P Graphics, Inc.
       </a>
-      , our Silicon Valley printing and packaging partner. KOFENOT™ was also
+      , our Silicon Valley partner. KOFENOT™ was
       featured in the{" "}
       <a
         href="https://createsend.com/t/i-72387891A36D50542540EF23F30FEDED"
@@ -301,7 +301,6 @@ const faq: [string, ReactNode][] = [
       >
         J P Graphics newsletter
       </a>
-      , highlighting our collaboration and production capabilities.
     </>,
   ],
   [
