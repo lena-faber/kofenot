@@ -634,7 +634,7 @@ function FaqSection() {
   return (
     <section
       id="faq"
-      className={cx(layout.sectionLast, layout.narrow)}
+      className={cx(layout.sectionLast, layout.standard)}
     >
       <SectionHeader title="FAQ" />
 
