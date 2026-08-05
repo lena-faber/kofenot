@@ -620,7 +620,7 @@ function PrintingPartnerSection() {
   return (
     <section className="section-band">
       <div className="page-section-narrow">
-        <h3>FEATURED IN OUR PRINTING PARTNER&apos;S NEWSLETTER</h3>
+        <h3>FEATURED IN PARTNER&apos;S NEWSLETTER</h3>
 
         <h2>
           Our Printing & Packaging Partner
