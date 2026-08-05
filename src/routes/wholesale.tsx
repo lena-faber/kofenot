@@ -664,19 +664,9 @@ function PrintingPartnerSection() {
                   >
                     featuring
                   </a>{" "}
-                  founder of KOFENOT™, and the clever laptop wedge she invented.
-                  When local packaging became a bottleneck, we were happy to step
-                  in,{" "}
-                  <a
-                    href="https://jp-graphics.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="font-bold text-[var(--neon)] not-italic hover:underline"
-                  >
-                    J P Graphics, Inc.
-                  </a>
-                  , our Silicon Valley printing partner.
-                </p>
+                  the founder of KOFENOT™, and the clever laptop wedge she invented.
+                  We were happy to step in as a printing partner,{" "}
+                  
                 <footer className="mt-5 pl-6 text-sm font-bold uppercase tracking-[0.1em] text-[var(--neon)] md:pl-8">
                   <cite className="not-italic">
                     <a
