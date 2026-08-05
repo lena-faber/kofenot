@@ -724,7 +724,7 @@ function PrintingPartnerSection() {
 
 function FaqSection() {
   return (
-    <section id="faq" className="w-full max-w-none p-0">
+    <section id="faq" className="page-section">
       <h2>FAQ</h2>
 
       <div className="mt-7 flex flex-col gap-12">
@@ -734,7 +734,7 @@ function FaqSection() {
               {group.label}
             </p>
 
-            <div className="mt-4 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+            <div className="mt-4 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
               {group.items.map(([question, answer]) => (
                 <article key={question} className="flex h-full flex-col">
                   <h3 className="text-[10px] font-bold uppercase leading-snug tracking-[0.1em] text-[#00ff00]">
