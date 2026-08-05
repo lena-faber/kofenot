@@ -134,10 +134,10 @@ export function SiteFooter() {
 
         <div className="mt-8 flex flex-col items-center gap-3">
           <p className="text-sm font-bold uppercase tracking-[0.14em] text-[color:var(--neon)]">
-            Made in Silicon Valley
+            Designed in Silicon Valley
           </p>
           <p className="body-copy text-sm text-white/80">
-            Packaging and custom branding by
+            Our local printing partner
           </p>
           <a
             href="https://jp-graphics.com"
