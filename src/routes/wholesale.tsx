@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import type { ComponentType } from "react";
+import type { ComponentType, ReactNode } from "react";
 import {
   ArrowRight,
   BriefcaseBusiness,
@@ -254,7 +254,7 @@ const shippingSections = [
   },
 ];
 
-const faq = [
+const faq: [string, ReactNode][] = [
   [
     "What should I buy for resale?",
     "Retail-ready packaged units. They are $8 each with a 30-unit minimum.",
@@ -272,8 +272,37 @@ const faq = [
     "No. Bare units are bare and bulk packed. Retail-ready units are packaged individually.",
   ],
   [
-    "Can I put my logo on KOFENOT™?",
-    "Yes. Custom logo printing, packaging, and fulfillment are available by quote.",
+    "Can you print our logo on KOFENOT™?",
+    "Yes. We offer custom logo printing on KOFENOT™ for promotional products, corporate gifts, conferences, universities, coffee shops, retailers, and branded merchandise. Contact us for minimum quantities and pricing.",
+  ],
+  [
+    "Can you create custom retail packaging?",
+    "Yes. We can produce custom retail packaging featuring your branding, messaging, colors, and artwork. Whether you need private-label packaging, event giveaways, or retail-ready displays, we'll work with you to create packaging that fits your brand.",
+  ],
+  [
+    "Who handles printing and packaging?",
+    <>
+      Custom printing and retail packaging are produced in partnership with{" "}
+      <a
+        href="https://jp-graphics.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="font-bold text-[color:var(--neon)] hover:underline"
+      >
+        J P Graphics, Inc.
+      </a>
+      , our Silicon Valley printing and packaging partner. KOFENOT™ was also
+      featured in the{" "}
+      <a
+        href="https://createsend.com/t/i-72387891A36D50542540EF23F30FEDED"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="font-bold text-[color:var(--neon)] hover:underline"
+      >
+        J P Graphics newsletter
+      </a>
+      , highlighting our collaboration and production capabilities.
+    </>,
   ],
   [
     "Can I sell KOFENOT™ under my own brand?",
