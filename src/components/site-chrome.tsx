@@ -143,13 +143,13 @@ export function SiteFooter() {
             href="https://jp-graphics.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-sm bg-white p-3 transition hover:scale-[1.02]"
+            className="inline-block transition hover:opacity-90"
             aria-label="Visit J P Graphics, Inc."
           >
             <img
               src={jpGraphicsLogo}
               alt="J P Graphics, Inc."
-              className="h-auto w-[100px]"
+              className="block h-auto w-[100px]"
             />
           </a>
         </div>
