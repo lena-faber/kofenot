@@ -307,7 +307,7 @@ function StorySection() {
           <p>
             <a
               href="mailto:info@kofenot.com"
-              className="font-bold underline decoration-black/30 underline-offset-4 hover:decoration-black"
+              className="font-bold text-[color:var(--neon)]"
             >
               info@kofenot.com
             </a>
@@ -316,7 +316,7 @@ function StorySection() {
           <p>
             <a
               href="https://kofenot.com"
-              className="font-bold underline decoration-black/30 underline-offset-4 hover:decoration-black"
+              className="font-bold text-[color:var(--neon)]"
             >
               kofenot.com
             </a>

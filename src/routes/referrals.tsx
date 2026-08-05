@@ -215,7 +215,7 @@ function ContactIntro() {
       </p>
       <a
         href={referralEmail}
-        className="mt-7 inline-flex items-center gap-2 text-sm font-black uppercase tracking-[0.18em] text-[color:var(--neon)] hover:underline"
+        className="mt-7 inline-flex items-center gap-2 text-sm font-black uppercase tracking-[0.18em] text-[color:var(--neon)]"
       >
         info@kofenot.com
         <Send className="h-4 w-4" />

@@ -287,7 +287,7 @@ const faq: [string, ReactNode][] = [
         href="https://jp-graphics.com"
         target="_blank"
         rel="noopener noreferrer"
-        className="font-bold text-[color:var(--neon)] hover:underline"
+        className="font-bold text-[color:var(--neon)]"
       >
         J P Graphics, Inc.
       </a>
@@ -675,7 +675,7 @@ function PrintingPartnerSection() {
                     href="https://createsend.com/t/i-72387891A36D50542540EF23F30FEDED"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="font-bold text-[var(--neon)] not-italic hover:underline"
+                    className="font-bold text-[var(--neon)] not-italic"
                   >
                     featuring
                   </a>{" "}
@@ -690,7 +690,7 @@ function PrintingPartnerSection() {
                       href="https://jp-graphics.com"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="hover:underline"
+                      className="text-[color:var(--neon)]"
                     >
                       J P Graphics, Inc.
                     </a>

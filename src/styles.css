@@ -191,8 +191,7 @@
       :has(button)
     ):not(:has([role="button"])) {
     color: #00ff00 !important;
-    text-decoration: underline !important;
-    text-underline-offset: 3px;
+    text-decoration: none !important;
   }
 
   button,

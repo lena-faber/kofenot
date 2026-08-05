@@ -123,7 +123,7 @@ export function SiteFooter() {
   href={link.href}
   target={link.href.endsWith(".pdf") ? "_blank" : undefined}
   rel={link.href.endsWith(".pdf") ? "noopener noreferrer" : undefined}
-  className="text-[color:var(--neon)] hover:underline"
+  className="text-[color:var(--neon)]"
 >
   {link.label}
 </a>
@@ -140,7 +140,7 @@ export function SiteFooter() {
               href="https://jp-graphics.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="font-bold text-[color:var(--neon)] hover:underline"
+              className="font-bold text-[color:var(--neon)]"
             >
               J P Graphics, Inc.
             </a>
