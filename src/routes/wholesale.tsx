@@ -675,7 +675,7 @@ function PrintingPartnerSection() {
                     href="https://createsend.com/t/i-72387891A36D50542540EF23F30FEDED"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="font-bold text-[var(--neon)] not-italic"
+                    className="text-[var(--neon)] not-italic"
                   >
                     featuring
                   </a>{" "}
