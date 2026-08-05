@@ -623,7 +623,7 @@ function PrintingPartnerSection() {
         <h3>FEATURED IN OUR PRINTING PARTNER&apos;S NEWSLETTER</h3>
 
         <h2>
-          KOFENOT™ × <span className="neon-text">J P Graphics</span>
+          Our Printing & Packaging Partner
         </h2>
 
         <div className="panel mt-8 overflow-visible rounded-sm border-l-4 border-l-[var(--neon)] p-8 md:p-10">
