@@ -655,9 +655,18 @@ function PrintingPartnerSection() {
                   with high-quality packaging and printing services
                 </p>
                 <p className="relative mt-5 pl-6 text-lg italic leading-relaxed text-white md:pl-8 md:text-xl">
-                  We&apos;re featuring founder of KOFENOT™, and the clever
-                  laptop wedge she invented. When local packaging became a
-                  bottleneck, we were happy to step in,{" "}
+                  We&apos;re{" "}
+                  <a
+                    href="https://createsend.com/t/i-72387891A36D50542540EF23F30FEDED"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-bold text-[var(--neon)] not-italic hover:underline"
+                  >
+                    featuring
+                  </a>{" "}
+                  founder of KOFENOT™, and the clever laptop wedge she invented.
+                  When local packaging became a bottleneck, we were happy to step
+                  in,{" "}
                   <a
                     href="https://jp-graphics.com"
                     target="_blank"
@@ -681,16 +690,6 @@ function PrintingPartnerSection() {
                   </cite>
                 </footer>
               </blockquote>
-
-              <a
-                href="https://createsend.com/t/i-72387891A36D50542540EF23F30FEDED"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-8 inline-flex items-center gap-3 bg-[var(--neon)] px-7 py-4 font-black uppercase tracking-[0.12em] text-black transition hover:bg-[var(--neon-dim)]"
-              >
-                Read the Newsletter Feature
-                <ArrowRight className="h-4 w-4" />
-              </a>
             </div>
           </div>
         </div>
