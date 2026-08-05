@@ -650,10 +650,6 @@ function PrintingPartnerSection() {
                 >
                   &ldquo;
                 </span>
-                <p className="relative pl-6 text-lg italic leading-relaxed text-white md:pl-8 md:text-xl">
-                  J P Graphics is proud to support Silicon Valley businesses
-                  with high-quality packaging and printing services
-                </p>
                 <p className="relative mt-5 pl-6 text-lg italic leading-relaxed text-white md:pl-8 md:text-xl">
                   We&apos;re{" "}
                   <a
@@ -665,7 +661,8 @@ function PrintingPartnerSection() {
                     featuring
                   </a>{" "}
                   the founder of KOFENOT™, and the clever laptop wedge she invented.
-                  We were happy to step in as a printing partner.
+                  We were happy to step in as a printing partner. J P Graphics is proud to support Silicon Valley businesses
+                  with high-quality packaging and printing services
                 </p>
                 <footer className="mt-5 pl-6 text-sm font-bold uppercase tracking-[0.1em] text-[var(--neon)] md:pl-8">
                   <cite className="not-italic">
