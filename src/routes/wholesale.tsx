@@ -643,13 +643,13 @@ function PrintingPartnerSection() {
 
           <blockquote className="mx-auto mt-7 max-w-3xl">
             <p className="text-xl italic leading-relaxed text-white md:text-2xl">
-              “J P Graphics is proud to support Silicon Valley businesses...”
+              “J P Graphics is proud to support Silicon Valley businesses with high-quality packaging and printing services”
             </p>
           </blockquote>
 
           <p className="body-copy mx-auto mt-7 max-w-3xl">
-            KOFENOT™ was featured in the J P Graphics newsletter. Packaging
-            and custom branding for KOFENOT™ are produced by{" "}
+          "We're featuring founder of KOFENOT™, and the clever laptop wedge she invented.
+          When local packaging became a bottleneck, we were happy to step in,{" "}
             <a
               href="https://jp-graphics.com"
               target="_blank"
