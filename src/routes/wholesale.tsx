@@ -632,13 +632,13 @@ function PrintingPartnerSection() {
               href="https://jp-graphics.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex shrink-0 items-center justify-center rounded-sm bg-white p-4 shadow-[0_0_24px_rgba(0,255,0,0.12)] transition hover:scale-[1.02]"
+              className="inline-flex shrink-0 items-center justify-center transition hover:opacity-90"
               aria-label="Visit J P Graphics, Inc."
             >
               <img
                 src={jpGraphicsLogo}
                 alt="J P Graphics, Inc."
-                className="h-auto w-[110px]"
+                className="block h-auto w-[110px]"
               />
             </a>
 
