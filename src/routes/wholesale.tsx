@@ -724,35 +724,30 @@ function PrintingPartnerSection() {
 
 function FaqSection() {
   return (
-    <section id="faq" className="page-section">
-      <div className="page-section-narrow">
-        <h2>FAQ</h2>
+    <section id="faq" className="w-full max-w-none p-0">
+      <h2>FAQ</h2>
 
-        <div className="mt-7 flex flex-col gap-12">
-          {faqGroups.map((group) => (
-            <div key={group.label}>
-              <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#00ff00]">
-                {group.label}
-              </p>
+      <div className="mt-7 flex flex-col gap-12">
+        {faqGroups.map((group) => (
+          <div key={group.label}>
+            <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#00ff00]">
+              {group.label}
+            </p>
 
-              <div className="mt-4 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-                {group.items.map(([question, answer]) => (
-                  <article
-                    key={question}
-                    className="flex h-full flex-col rounded-sm border border-[rgba(0,255,0,0.22)] bg-[#212121] p-5 transition-colors hover:border-[rgba(0,255,0,0.55)] md:p-6"
-                  >
-                    <h3 className="text-[10px] font-bold uppercase leading-snug tracking-[0.1em] text-[#00ff00]">
-                      {question}
-                    </h3>
-                    <div className="body-copy mt-3 flex-1 leading-relaxed text-white">
-                      {answer}
-                    </div>
-                  </article>
-                ))}
-              </div>
+            <div className="mt-4 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+              {group.items.map(([question, answer]) => (
+                <article key={question} className="flex h-full flex-col">
+                  <h3 className="text-[10px] font-bold uppercase leading-snug tracking-[0.1em] text-[#00ff00]">
+                    {question}
+                  </h3>
+                  <div className="body-copy mt-3 flex-1 leading-relaxed text-white">
+                    {answer}
+                  </div>
+                </article>
+              ))}
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
     </section>
   );
