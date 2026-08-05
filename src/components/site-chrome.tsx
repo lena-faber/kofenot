@@ -137,7 +137,7 @@ export function SiteFooter() {
             Designed in Silicon Valley
           </p>
           <p className="body-copy text-sm text-white/80">
-            Our local printing partner
+          Our Local Printing & Packaging Partner
           </p>
           <a
             href="https://jp-graphics.com"
