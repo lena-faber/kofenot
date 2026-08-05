@@ -53,7 +53,7 @@ export function SiteHeader() {
             <Link
               key={item.label}
               to={item.to}
-              className="font-semibold transition-colors hover:text-[color:var(--neon)]"
+              className="font-semibold text-white transition-colors hover:text-[color:var(--neon)]"
             >
               {item.label}
             </Link>
@@ -101,6 +101,7 @@ export function SiteHeader() {
                 key={item.label}
                 to={item.to}
                 onClick={() => setOpen(false)}
+                className="font-semibold text-white transition-colors hover:text-[color:var(--neon)]"
               >
                 {item.label}
               </Link>
