@@ -721,15 +721,17 @@ function FaqSection() {
       <div className="page-section-narrow">
         <h2>FAQ</h2>
 
-        <div className="mt-7 divide-y divide-[rgba(0,255,0,0.18)] border-y border-[rgba(0,255,0,0.18)]">
+        <div className="mt-7 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
           {faq.map(([question, answer]) => (
-            <div
+            <article
               key={question}
-              className="grid gap-2 py-6 md:grid-cols-[0.8fr_1.2fr]"
+              className="flex h-full flex-col rounded-sm border border-[rgba(0,255,0,0.22)] bg-[#212121] p-6 transition-colors hover:border-[rgba(0,255,0,0.55)] md:p-8"
             >
-              <h3>{question}</h3>
-              <p className="body-copy">{answer}</p>
-            </div>
+              <h3 className="text-xs font-bold uppercase tracking-[0.12em] text-[#00ff00]">
+                {question}
+              </h3>
+              <div className="body-copy mt-4 flex-1 text-white">{answer}</div>
+            </article>
           ))}
         </div>
       </div>
