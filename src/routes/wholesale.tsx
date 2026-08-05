@@ -620,39 +620,36 @@ function PrintingPartnerSection() {
   return (
     <section className="section-band">
       <div className="page-section-narrow">
-
-        <h3>FEATURED BY OUR PRINTING PARTNER</h3>
+        <h3>FEATURED IN OUR PRINTING PARTNER’S NEWSLETTER</h3>
 
         <h2>
-          Trusted Production <span className="neon-text">Partner</span>
+          KOFENOT™ × <span className="neon-text">J P Graphics</span>
         </h2>
 
-        <div className="panel mt-8 rounded-sm p-10 text-center">
+        <div className="panel mt-8 rounded-sm p-8 text-center md:p-10">
+          <a
+            href="https://jp-graphics.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mx-auto block w-fit transition hover:scale-105"
+            aria-label="Visit J P Graphics, Inc."
+          >
+            <img
+              src={jpGraphicsLogo}
+              alt="J P Graphics, Inc."
+              className="mx-auto h-auto w-[115px]"
+            />
+          </a>
 
-          <blockquote className="mx-auto max-w-3xl">
+          <blockquote className="mx-auto mt-7 max-w-3xl">
             <p className="text-xl italic leading-relaxed text-white md:text-2xl">
               “J P Graphics is proud to support Silicon Valley businesses...”
             </p>
           </blockquote>
 
-          <div className="mx-auto mt-7 h-px w-20 bg-[var(--neon)]" />
-
-          <a
-            href="https://jp-graphics.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mx-auto mt-8 block w-fit transition hover:scale-105"
-          >
-            <img
-              src={jpGraphicsLogo}
-              alt="J P Graphics, Inc."
-              className="mx-auto w-[115px]"
-            />
-          </a>
-
-          <p className="body-copy mx-auto mt-8 max-w-3xl">
-            Packaging, custom branding, and retail production for{" "}
-            <strong>KOFENOT™</strong> are produced in partnership with{" "}
+          <p className="body-copy mx-auto mt-7 max-w-3xl">
+            KOFENOT™ was featured in the J P Graphics newsletter. Packaging
+            and custom branding for KOFENOT™ are produced by{" "}
             <a
               href="https://jp-graphics.com"
               target="_blank"
@@ -664,8 +661,16 @@ function PrintingPartnerSection() {
             , our Silicon Valley printing partner.
           </p>
 
+          <a
+            href="https://createsend.com/t/i-72387891A36D50542540EF23F30FEDED"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-8 inline-flex items-center gap-3 bg-[var(--neon)] px-7 py-4 font-black uppercase tracking-[0.12em] text-black transition hover:bg-[var(--neon-dim)]"
+          >
+            Read the Newsletter Feature
+            <ArrowRight className="h-4 w-4" />
+          </a>
         </div>
-
       </div>
     </section>
   );
