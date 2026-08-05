@@ -288,7 +288,7 @@ const faqGroups: FaqGroup[] = [
     items: [
       [
         "Can you print our logo on KOFENOT™?",
-        "Yes. Customization is available for corporates, retail, coffee shops, universities, conferences, and promotional campaigns.",
+        "Yes. Custom logo printing is available for retail, corporate gifts, events, and promotions.",
       ],
       [
         "Can you create custom retail packaging?",
