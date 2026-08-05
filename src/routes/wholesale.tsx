@@ -645,7 +645,7 @@ function PrintingPartnerSection() {
             <div className="min-w-0 flex-1 text-center md:text-left">
               <blockquote className="relative mx-auto max-w-2xl md:mx-0">
                 <span
-                  className="pointer-events-none absolute -left-1 -top-3 select-none font-serif text-6xl leading-none text-[var(--neon)] opacity-70 md:-left-3"
+                  className="pointer-events-none absolute -left-1 -top-3 select-none font-serif text-6xl leading-none text-neon md:-left-3"
                   aria-hidden="true"
                 >
                   &ldquo;
@@ -665,8 +665,8 @@ function PrintingPartnerSection() {
                     featuring
                   </a>{" "}
                   the founder of KOFENOT™, and the clever laptop wedge she invented.
-                  We were happy to step in as a printing partner,{" "}
-                  
+                  We were happy to step in as a printing partner.
+                </p>
                 <footer className="mt-5 pl-6 text-sm font-bold uppercase tracking-[0.1em] text-[var(--neon)] md:pl-8">
                   <cite className="not-italic">
                     <a
