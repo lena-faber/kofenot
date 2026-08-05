@@ -186,6 +186,15 @@
     touch-action: manipulation;
   }
 
+  #site-root
+    a[href]:not([class*="bg-"]):not([class*="group flex"]):not(
+      :has(button)
+    ):not(:has([role="button"])) {
+    color: #00ff00 !important;
+    text-decoration: underline !important;
+    text-underline-offset: 3px;
+  }
+
   button,
   [role="button"] {
     font-family: "League Spartan" !important;
