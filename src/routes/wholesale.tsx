@@ -627,30 +627,30 @@ function PrintingPartnerSection() {
         </h2>
 
         <div className="panel mt-8 overflow-visible rounded-sm border-l-4 border-l-[var(--neon)] p-8 md:p-10">
-          <div className="flex flex-col items-center gap-8 md:flex-row md:items-start md:gap-10">
+          <div className="flex flex-col items-center gap-8 md:flex-row md:items-center md:gap-10">
             <a
               href="https://jp-graphics.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="shrink-0 rounded-sm bg-white p-5 shadow-[0_0_24px_rgba(0,255,0,0.12)] transition hover:scale-[1.02]"
+              className="flex shrink-0 items-center justify-center rounded-sm bg-white p-4 shadow-[0_0_24px_rgba(0,255,0,0.12)] transition hover:scale-[1.02]"
               aria-label="Visit J P Graphics, Inc."
             >
               <img
                 src={jpGraphicsLogo}
                 alt="J P Graphics, Inc."
-                className="mx-auto h-auto w-[120px]"
+                className="h-auto w-[110px]"
               />
             </a>
 
             <div className="min-w-0 flex-1 text-center md:text-left">
               <blockquote className="relative mx-auto max-w-2xl md:mx-0">
                 <span
-                  className="pointer-events-none absolute -left-1 -top-3 select-none font-serif text-6xl leading-none text-neon md:-left-3"
+                  className="pointer-events-none absolute -left-1 top-0 select-none font-serif text-6xl leading-none text-neon md:-left-3"
                   aria-hidden="true"
                 >
                   &ldquo;
                 </span>
-                <p className="relative mt-5 pl-6 text-lg italic leading-relaxed text-white md:pl-8 md:text-xl">
+                <p className="relative pl-6 text-lg italic leading-relaxed text-white md:pl-8 md:text-xl">
                   We&apos;re{" "}
                   <a
                     href="https://createsend.com/t/i-72387891A36D50542540EF23F30FEDED"
