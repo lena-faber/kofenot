@@ -4,8 +4,6 @@ import { useState } from "react";
 import { Link, useLocation } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
 
-import jpGraphicsLogo from "@/assets/JP-Graphics-Logo.png";
-
 const sampleCheckoutUrl = "https://buy.stripe.com/9B614m9aC2m0eYM2lCdUY0F";
 
 const navLinks = [
@@ -136,22 +134,17 @@ export function SiteFooter() {
           <p className="text-sm font-bold uppercase tracking-[0.14em] text-[color:var(--neon)]">
             Designed in Silicon Valley
           </p>
-          <p className="body-copy text-sm text-white/80">
-          Our Local Printing & Packaging Partner
+          <p className="body-copy max-w-xl text-sm text-white/80">
+            Packaging and custom branding by our Silicon Valley printing partner,{" "}
+            <a
+              href="https://jp-graphics.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-bold text-[color:var(--neon)] hover:underline"
+            >
+              J P Graphics, Inc.
+            </a>
           </p>
-          <a
-            href="https://jp-graphics.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block transition hover:opacity-90"
-            aria-label="Visit J P Graphics, Inc."
-          >
-            <img
-              src={jpGraphicsLogo}
-              alt="J P Graphics, Inc."
-              className="block h-auto w-[100px]"
-            />
-          </a>
         </div>
 
         <p className="mt-8">
