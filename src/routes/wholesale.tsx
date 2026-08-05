@@ -291,16 +291,7 @@ const faq: [string, ReactNode][] = [
       >
         J P Graphics, Inc.
       </a>
-      , our Silicon Valley partner. KOFENOT™ was
-      featured in the{" "}
-      <a
-        href="https://createsend.com/t/i-72387891A36D50542540EF23F30FEDED"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="font-bold text-[color:var(--neon)] hover:underline"
-      >
-        J P Graphics newsletter
-      </a>
+      , our Silicon Valley partner. 
     </>,
   ],
   [
