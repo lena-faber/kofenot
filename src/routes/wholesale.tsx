@@ -652,7 +652,21 @@ function PrintingPartnerSection() {
                 </span>
                 <p className="relative pl-6 text-lg italic leading-relaxed text-white md:pl-8 md:text-xl">
                   J P Graphics is proud to support Silicon Valley businesses
-                  with high-quality packaging and printing services.
+                  with high-quality packaging and printing services
+                </p>
+                <p className="relative mt-5 pl-6 text-lg italic leading-relaxed text-white md:pl-8 md:text-xl">
+                  We&apos;re featuring founder of KOFENOT™, and the clever
+                  laptop wedge she invented. When local packaging became a
+                  bottleneck, we were happy to step in,{" "}
+                  <a
+                    href="https://jp-graphics.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-bold text-[var(--neon)] not-italic hover:underline"
+                  >
+                    J P Graphics, Inc.
+                  </a>
+                  , our Silicon Valley printing partner.
                 </p>
                 <footer className="mt-5 pl-6 text-sm font-bold uppercase tracking-[0.1em] text-[var(--neon)] md:pl-8">
                   <cite className="not-italic">
@@ -667,15 +681,6 @@ function PrintingPartnerSection() {
                   </cite>
                 </footer>
               </blockquote>
-
-              <div className="mx-auto mt-6 max-w-2xl border-t border-[rgba(0,255,0,0.18)] pt-6 md:mx-0">
-                <p className="body-copy max-w-none text-left">
-                  In their newsletter, they featured the founder of KOFENOT™ and
-                  the clever laptop wedge she invented—and shared how they
-                  stepped in when local packaging became a bottleneck for our
-                  Silicon Valley production run.
-                </p>
-              </div>
 
               <a
                 href="https://createsend.com/t/i-72387891A36D50542540EF23F30FEDED"
