@@ -641,18 +641,17 @@ function FaqSection() {
       <div
         className={cx(
           layout.content,
-          "grid grid-cols-1 gap-4 md:grid-cols-2",
+          "grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4",
         )}
       >
         {faq.map(([question, answer]) => (
-          <article
-            key={question}
-            className="flex h-full flex-col rounded-sm border border-[rgba(0,255,0,0.22)] bg-[#212121] p-6 transition-colors hover:border-[rgba(0,255,0,0.55)] md:p-8"
-          >
-            <h3 className="text-xs font-bold uppercase tracking-[0.12em] text-[#00ff00]">
+          <article key={question} className="flex h-full flex-col">
+            <h3 className="text-[10px] font-bold uppercase leading-snug tracking-[0.1em] text-[#00ff00]">
               {question}
             </h3>
-            <div className="body-copy mt-4 flex-1 text-white">{answer}</div>
+            <div className="body-copy mt-3 flex-1 leading-relaxed text-white">
+              {answer}
+            </div>
           </article>
         ))}
       </div>
