@@ -254,50 +254,67 @@ const shippingSections = [
   },
 ];
 
-const faq: [string, ReactNode][] = [
-  [
-    "What should I buy for resale?",
-    "Retail-ready packaged units. They are $8 each with a 30-unit minimum.",
-  ],
-  [
-    "What is the bare bulk option?",
-    "Bare KOFENOT™ ships blank and unpackaged in a bare pack of 100 units for $600.",
-  ],
-  [
-    "What is the master carton?",
-    "One master carton contains 4 bare packs / 400 bare units for $2,000.",
-  ],
-  [
-    "Are bare units retail-packaged?",
-    "No. Bare units are bare and bulk packed. Retail-ready units are packaged individually.",
-  ],
-  [
-    "Can you print our logo on KOFENOT™?",
-    "Yes. Custom logo printing is available for corporate gifts, retail, coffee shops, universities, conferences, and promotional campaigns.",
-  ],
-  [
-    "Can you create custom retail packaging?",
-    "Yes. We create custom retail packaging, private-label packaging, branded inserts, and retail-ready displays tailored to your brand.",
-  ],
-  [
-    "Who handles printing and packaging?",
-    <>
-      Custom printing and retail packaging are produced in partnership with{" "}
-      <a
-        href="https://jp-graphics.com"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="font-bold text-[color:var(--neon)]"
-      >
-        J P Graphics, Inc.
-      </a>
-      , our Silicon Valley partner. 
-    </>,
-  ],
-  [
-    "Can I sell KOFENOT™ under my own brand?",
-    "Yes. Private-label programs are available for qualifying quantities.",
-  ],
+type FaqItem = [string, ReactNode];
+
+type FaqGroup = {
+  label: string;
+  items: FaqItem[];
+};
+
+const faqGroups: FaqGroup[] = [
+  {
+    label: "BUYING & BULK ORDERS",
+    items: [
+      [
+        "What should I buy for resale?",
+        "Retail-ready packaged units. They are $8 each with a 30-unit minimum.",
+      ],
+      [
+        "What is the bare bulk option?",
+        "Bare KOFENOT™ ships blank and unpackaged in a bare pack of 100 units for $600.",
+      ],
+      [
+        "What is the master carton?",
+        "One master carton contains 4 bare packs / 400 bare units for $2,000.",
+      ],
+      [
+        "Are bare units retail-packaged?",
+        "No. Bare units are bare and bulk packed. Retail-ready units are packaged individually.",
+      ],
+    ],
+  },
+  {
+    label: "CUSTOM BRANDING",
+    items: [
+      [
+        "Can you print our logo on KOFENOT™?",
+        "Yes. Custom logo printing is available for corporate gifts, retail, coffee shops, universities, conferences, and promotional campaigns.",
+      ],
+      [
+        "Can you create custom retail packaging?",
+        "Yes. We create custom retail packaging, private-label packaging, branded inserts, and retail-ready displays tailored to your brand.",
+      ],
+      [
+        "Who handles printing and packaging?",
+        <>
+          Custom printing and retail packaging are produced in partnership with{" "}
+          <a
+            href="https://jp-graphics.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-bold text-[color:var(--neon)]"
+          >
+            J P Graphics, Inc.
+          </a>
+          , our Silicon Valley partner.{" "}
+        </>,
+      ],
+      [
+        "Can I sell KOFENOT™ under my own brand?",
+        "Yes. Private-label programs are available for qualifying quantities.",
+      ],
+    ],
+  },
 ];
 
 type Program = {
@@ -708,20 +725,34 @@ function PrintingPartnerSection() {
 function FaqSection() {
   return (
     <section id="faq" className="page-section">
-      <h2>FAQ</h2>
+      <div className="page-section-narrow">
+        <h2>FAQ</h2>
 
-      <div className="mt-7 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-        {faq.map(([question, answer]) => (
-          <article
-            key={question}
-            className="flex h-full flex-col rounded-sm border border-[rgba(0,255,0,0.22)] bg-[#212121] p-6 transition-colors hover:border-[rgba(0,255,0,0.55)] md:p-8"
-          >
-            <h3 className="text-xs font-bold uppercase tracking-[0.12em] text-[#00ff00]">
-              {question}
-            </h3>
-            <div className="body-copy mt-4 flex-1 text-white">{answer}</div>
-          </article>
-        ))}
+        <div className="mt-7 flex flex-col gap-12">
+          {faqGroups.map((group) => (
+            <div key={group.label}>
+              <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#00ff00]">
+                {group.label}
+              </p>
+
+              <div className="mt-4 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+                {group.items.map(([question, answer]) => (
+                  <article
+                    key={question}
+                    className="flex h-full flex-col rounded-sm border border-[rgba(0,255,0,0.22)] bg-[#212121] p-5 transition-colors hover:border-[rgba(0,255,0,0.55)] md:p-6"
+                  >
+                    <h3 className="text-[10px] font-bold uppercase leading-snug tracking-[0.1em] text-[#00ff00]">
+                      {question}
+                    </h3>
+                    <div className="body-copy mt-3 flex-1 leading-relaxed text-white">
+                      {answer}
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
